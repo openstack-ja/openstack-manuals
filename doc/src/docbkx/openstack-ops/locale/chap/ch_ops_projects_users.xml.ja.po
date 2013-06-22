@@ -1,0 +1,947 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-21 08:33+0000\n"
+"Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:15
+msgid "Managing Projects and Users"
+msgstr "プロジェクトおよびユーザーの管理"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:16
+msgid ""
+"An OpenStack cloud does not have much value without users. This chapter "
+"covers topics that relate to managing users, projects, and quotas."
+msgstr ""
+"OpenStack クラウドはユーザーがいないと、あまり価値がありません。本章はユー"
+"ザー、プロジェクトおよびクォータの管理に関する話題を説明します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:20
+msgid "Projects or Tenants?"
+msgstr "プロジェクトかテナントか?"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:21
+msgid ""
+"In OpenStack user interfaces and documentation, a group of users is referred "
+"to as a <glossterm>project</glossterm> or <glossterm>tenant</glossterm>. "
+"These terms are interchangeable."
+msgstr ""
+"OpenStack のユーザーインターフェースおよびドキュメントにおいて、ユーザーのグ"
+"ループは<glossterm>プロジェクト</glossterm>または<glossterm>テナント</"
+"glossterm>と呼ばれます。これらの語は同じ意味で用いられます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:26
+msgid ""
+"The initial implementation of the OpenStack Compute Service (nova) had its "
+"own authentication system and used the term <literal>project</literal>. When "
+"authentication moved into the OpenStack Identity Service (keystone) project, "
+"it used the term <literal>tenant</literal> to refer to a group of users. "
+"Because of this legacy, some of the OpenStack tools refer to projects and "
+"some refer to tenants."
+msgstr ""
+"OpenStack Compute サービス (Nova) の初期実装は独自の認証システムを持ち、"
+"<literal>プロジェクト</literal>という用語を使用していました。認証が "
+"OpenStack Identity サービス (Keystone) プロジェクトに移行したとき、ユーザーの"
+"グループを参照するために<literal>テナント</literal>という用語が使用されまし"
+"た。このような経緯のため、いくつかの OpenStack ツールはプロジェクトを使用し、"
+"いくつかはテナントを使用します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:34
+msgid ""
+"This guide uses the term <literal>project</literal>, unless an example shows "
+"interaction with a tool that uses the term <literal>tenant</literal>."
+msgstr ""
+"このガイドは<literal>プロジェクト</literal>という用語を使用します。<literal>"
+"テナント</literal>という用語を使用するツールとやりとりする例もあります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:39
+msgid "Managing Projects"
+msgstr "プロジェクトの管理"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:40
+msgid ""
+"Users must be associated with at least one project, though they may belong "
+"to many. Therefore, you should add at least one project before adding users."
+msgstr ""
+"ユーザーは少なくとも一つのプロジェクトに割り当てられる必要があります。複数に"
+"所属することもできます。そのため、ユーザーを追加する前に、少なくとも一つのプ"
+"ロジェクトを追加する必要があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:44
+msgid "Adding Projects"
+msgstr "プロジェクトの追加"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:45
+msgid "To create a project through the dashboard:"
+msgstr "ダッシュボードからプロジェクトを追加するには:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:48
+msgid "Log in as an administrative user."
+msgstr "管理ユーザーとしてログインします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:51
+msgid "Select the \"Projects\" link in the left hand navigation bar."
+msgstr "左側のナビゲーションバーにある \"プロジェクト\" リンクを選択します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:55
+msgid "Click on the \"Create Project\" button at the top right."
+msgstr "右上にある \"プロジェクトの作成\" ボタンをクリックします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:59
+msgid ""
+"You are prompted for a project name and an optional, but recommended, "
+"description. Select the check box at the bottom of the form to enable this "
+"project. By default, this is enabled."
+msgstr ""
+"プロジェクト名の入力が求められます。また、説明の入力は任意ですが、推奨されま"
+"す。このプロジェクトを有効化するには、フォームの下にあるチェックボックスを選"
+"択します。これは標準で有効になっています。"
+
+#. <informalfigure>
+#.                 <mediaobject>
+#.                     <imageobject>
+#.                         <imagedata width="5in"
+#.                             fileref="figures/horizon-add-project.png"
+#.                         />
+#.                     </imageobject>
+#.                 </mediaobject>
+#.             </informalfigure>
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:72
+msgid ""
+"It is also possible to add project members and adjust the project quotas. "
+"We'll discuss those later, but in practice it can be quite convenient to "
+"deal with all these operations at one time."
+msgstr ""
+"プロジェクトメンバーを追加し、プロジェクトのクォータを調整することもできま"
+"す。後ほど議論しますが、これらの操作を一度にすべて処理するほうが、現実的に非"
+"常に便利です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:77
+msgid "To create a project through the command-line interface (CLI):"
+msgstr "コマンドラインインターフェース (CLI) からプロジェクトを作成するには:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:79
+msgid ""
+"To add a project through the command line, you must use the keystone "
+"utility, which uses \"tenant\" in place of \"project\": "
+msgstr ""
+"コマンドラインからプロジェクトを追加するには、keystone ユーティリティを使用す"
+"る必要があります。ここで \"プロジェクト\" の代わりに \"テナント\" を使用しま"
+"す: "
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:83
+msgid ""
+"This command creates a project named \"demo\". Optionally, you can add a "
+"description string by appending <code>--description &lt;tenant-"
+"description&gt;,</code> which can be very useful. You can also create a "
+"group in a disabled state by appending <code>--enabled false</code> to the "
+"command. By default, projects are created in an enabled state."
+msgstr ""
+"このコマンドは \"demo\" という名前のプロジェクトを作成します。オプションとし"
+"て、<code>--description &lt;tenant-description&gt;,</code> を追加することによ"
+"り、説明の文字列を追加できます。これは非常に便利です。コマンドに <code>--"
+"enabled false</code> を追加することにより、無効状態のグループを作成できます。"
+"標準で、プロジェクトは有効状態で作成されます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:95
+msgid "Quotas"
+msgstr "クォータ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:96
+msgid ""
+"OpenStack provides a number of quotas which are all enforced at the project "
+"(rather than user) level. As an administrative user in the Dashboard you can "
+"see (but not edit) the default quotas using the \"Quotas\" link in the "
+"navigation sidebar. These default project quotas are specified in the "
+"<code>nova.conf</code> file on your cloud controller."
+msgstr ""
+"OpenStack は (ユーザーではなく) プロジェクト単位に適用できる、数多くのクォー"
+"タがあります。ダッシュボードにおいて管理者として、ナビゲーションサイドバーに"
+"ある \"クォータ\" リンクを使用して、既定のクォータを参照できます (編集できま"
+"せん)。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:103
+msgid ""
+"If you do not make quota-related changes, the system uses the following "
+"defaults."
+msgstr ""
+"クォータ関連の変更を指定しなければ、システムは以下の既定値を使用します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:106
+msgid "Description of nova.conf file configuration options for quotas"
+msgstr "nova.conf ファイルのクォータ関連の設定オプションに関する説明"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:119
+msgid "Configuration option=Default value"
+msgstr "設定オプション=規定値"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:120
+msgid "(Type) Description"
+msgstr "(形式) 説明"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:126
+msgid "quota_cores=20"
+msgstr "quota_cores=20"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:129
+msgid "(IntOpt) number of instance cores allowed per project (tenant)"
+msgstr ""
+"(整数オプション) プロジェクト (テナント) ごとに許可されるインスタンスのコア数"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:135
+msgid "quota_floating_ips=10"
+msgstr "quota_floating_ips=10"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:138
+msgid "(IntOpt) number of floating ips allowed per project (tenant)"
+msgstr ""
+"(整数オプション) プロジェクト (テナント) ごとに許可される Floating IP 数"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:144
+msgid "quota_fixed_ips=-1"
+msgstr "quota_fixed_ips=-1"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:147
+msgid ""
+"(IntOpt) number of floating ips allowed per project (this should be at least "
+"the number of instances allowed). -1 is unlimited"
+msgstr ""
+"(整数オプション) プロジェクトごとに許可される Floating IP 数 (少なくとも許可"
+"されたインスタンスの数にすべきです)。-1 は無制限です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:155
+msgid "quota_gigabytes=1000"
+msgstr "quota_gigabytes=1000"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:158
+msgid "(IntOpt) number of volume gigabytes allowed per project (tenant)"
+msgstr ""
+"(整数オプション) プロジェクト (テナント) ごとに許可されるボリュームのギガバイ"
+"ト容量"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:164
+msgid "quota_injected_file_content_bytes=10240"
+msgstr "quota_injected_file_content_bytes=10240"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:167
+msgid "(IntOpt) number of bytes allowed per injected file"
+msgstr "(整数オプション) injected file ごとに許可されるバイト数"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:173
+msgid "quota_injected_file_path_bytes=255"
+msgstr "quota_injected_file_path_bytes=255"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:176
+msgid "(IntOpt) number of bytes allowed per injected file path"
+msgstr "(整数オプション) injected file パスごとに許可されるバイト数"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:182
+msgid "quota_injected_files=5"
+msgstr "quota_injected_files=5"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:185
+msgid "(IntOpt) number of injected files allowed"
+msgstr "(整数オプション) 許可される injected file 数"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:191
+msgid "quota_instances=10"
+msgstr "quota_instances=10"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:194
+msgid "(IntOpt) number of instances allowed per project (tenant)"
+msgstr ""
+"(整数オプション) プロジェクト (テナント) ごとに許可されるインスタンス数"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:200
+msgid "quota_key_pairs=100"
+msgstr "quota_key_pairs=100"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:203
+msgid "(IntOpt) number of key pairs allowed per user"
+msgstr "(整数オプション) ユーザーごとに許可されるキーペア数"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:209
+msgid "quota_metadata_items=128"
+msgstr "quota_metadata_items=128"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:212
+msgid "(IntOpt) number of metadata items allowed per instance"
+msgstr "(整数オプション) インスタンスごとに許可されるメタデータ項目数"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:218
+msgid "quota_ram=51200"
+msgstr "quota_ram=51200"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:221
+msgid "(IntOpt) megabytes of instance ram allowed per project (tenant)"
+msgstr ""
+"(整数オプション) プロジェクト (テナント) ごとに許可されるインスタンスの RAM "
+"のメガバイト容量"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:227
+msgid "quota_security_group_rules=20"
+msgstr "quota_security_group_rules=20"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:230
+msgid "(IntOpt) number of security rules per security group"
+msgstr "(整数オプション) セキュリティグループごとのセキュリティルール数"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:236
+msgid "quota_security_groups=10"
+msgstr "quota_security_groups=10"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:239
+msgid "(IntOpt) number of security groups per project (tenant)"
+msgstr ""
+"(整数オプション) プロジェクト (テナント) ごとに許可されるセキュリティグループ"
+"数"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:245
+msgid "quota_volumes=10"
+msgstr "quota_volumes=10"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:248
+msgid "(IntOpt) number of volumes allowed per project (tenant)"
+msgstr "(整数オプション) プロジェクト (テナント) ごとに許可されるボリューム数"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:254
+msgid ""
+"Configuration table excerpted from http://docs.openstack.org/folsom/"
+"openstack-compute/admin/content/list-of-compute-config-options.html."
+msgstr ""
+"設定の表は from http://docs.openstack.org/folsom/openstack-compute/admin/"
+"content/list-of-compute-config-options.html から抜粋されています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:255
+msgid ""
+"The simplest way to change the default project quotas is to edit the "
+"<code>nova.conf</code> file on your cloud controller. Quotas are enforced by "
+"the <code>nova-scheduler</code> service, so you must restart that service "
+"once you change these options."
+msgstr ""
+"プロジェクトの規定のクォータを変更する最も簡単な方法は、クラウドコントロー"
+"ラーにおいて <code>nova.conf</code> ファイルを編集することです。クォータは "
+"<code>nova-scheduler</code> サービスにより強制されます。そのため、これらのオ"
+"プションを変更すると、そのサービスを再起動する必要があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:260
+msgid ""
+"If your site implementation varies from our example architecture, ensure any "
+"changes you make to quota default options in <code>/etc/nova/nova.conf</"
+"code> are applied to the host(s) running the <code>nova-scheduler</code> "
+"service. It is critical for consistent quota enforcement that all schedulers "
+"have identical quotas. Assuming you are following the best practices "
+"recommended in this guide, your configuration management system will "
+"automatically ensure all your schedulers have consistent configurations."
+msgstr ""
+"あなたのサイトの実装がこの例のアーキテクチャーと異なるならば、<code>/etc/"
+"nova/nova.conf</code> において既定のクォータのオプションに対するすべての変更"
+"が <code>nova-scheduler</code> サービスを実行しているホストに適用されているこ"
+"とを確認します。一貫性のあるクォータ設定のために、すべてのスケジューラーが同"
+"じクォータを持つことが非常に重要です。このガイドにおいて推奨されているベスト"
+"プラクティスに従っていると仮定して、お使いの設定管理システムが自動的にすべて"
+"のスケジューラーが一貫性のある設定を持っていることを確実にします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:270
+msgid ""
+"To view and edit quotas for an individual project through the Dashboard:"
+msgstr "各プロジェクトのクォータをダッシュボードから表示および編集するには:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:274
+msgid ""
+"Use the \"Projects\" navigation link to get a list of your existing projects."
+msgstr ""
+"既存のプロジェクトの一覧を取得するには \"プロジェクト\" ナビゲーションリンク"
+"を使用します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:278
+msgid ""
+"Locate the project you want to modify and select \"Modify Quotas\" from the "
+"\"Actions\" drop down menu a the end of the line.  "
+msgstr ""
+"変更したいプロジェクトに移動し、\"アクション\" ドロップダウンメニューの最終行"
+"にある \"クォータの変更\" を選択します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:283
+msgid ""
+"To view and edit quotas for an individual project through the CLI, follow "
+"these steps:"
+msgstr ""
+"各プロジェクトのクォータを CLI から表示および編集するには、以下の手順に従いま"
+"す:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:285
+msgid ""
+"You can access and modify quotas from the command line but it is a bit "
+"complicated. This is done using Keystone to get the ID and then <code>nova-"
+"manage.</code>"
+msgstr ""
+"コマンドラインからクォータの確認および変更をできますが、少しだけ複雑です。ID "
+"を取得するために Keystone を使用し、<code>nova-manage</code> を実行します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:290
+msgid ""
+"To list a project's quota, you must first find its ID using the Keystone CLI "
+"tool."
+msgstr ""
+"プロジェクトのクォータを一覧表示するには、まず Keystone CLI ツールを使用して "
+"ID を確認する必要があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:296
+msgid ""
+"Recall that the Keystone CLI tool uses \"tenant\" where the Nova CLI tool "
+"uses \"project\" for the same concept."
+msgstr ""
+"Nova CLI ツールが \"プロジェクト\" を使用するところで、Keystone CLI ツールは"
+"同じ意味で \"テナント\" を使用することを思い出してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:299
+msgid ""
+"To show the quota for the project, for the example above, we must use the ID "
+"<code>98333a1a28e746fa8c629c83a818ad57</code>:"
+msgstr ""
+"上の例に対して、プロジェクトのクォータを表示するには、ID "
+"<code>98333a1a28e746fa8c629c83a818ad57</code> を使用する必要があります:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:315
+msgid ""
+"Confusingly, <code>nova-manage project quota</code> silently accepts any "
+"string at the end of the command and reports the default quotas. In "
+"particular, if you enter the project name rather than the ID, <code>nova-"
+"manage</code> does not complain, it just lies."
+msgstr ""
+"ややこしいことに、 <code>nova-manage project quota</code> はコマンドの最後に"
+"どんな文字列でも受け付けますが、既定のクォータを報告します。とくに、ID の代わ"
+"りにプロジェクトの名前を入力しても、<code>nova-manage</code> は何も警告せず、"
+"単に嘘をつきます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:323
+msgid ""
+"To change these values you append <code>--key</code> and <code>--value</"
+"code> flags to the above command. To increase the tenant quota of Floating "
+"IPs from 10 to 20:"
+msgstr ""
+"これらの値を変更するには、上のコマンドに <code>--key</code> および <code>--"
+"value</code> フラグを追加します。プロジェクトの Floating IP のクォータを 10 "
+"から 20 に増やすには:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:343
+msgid "User Management"
+msgstr "ユーザー管理"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:344
+msgid ""
+"The command line tools for managing users are inconvenient to use directly. "
+"They require issuing multiple commands to complete a single task, and they "
+"use UUIDs rather than symbolic names for many items. In practice, humans "
+"typically do not use these tools directly. Fortunately, the OpenStack "
+"Dashboard provides a reasonable interface to this. In addition, many sites "
+"write custom tools for local needs to enforce local policies and provide "
+"levels of self service to users that aren't currently available with "
+"packaged tools."
+msgstr ""
+"ユーザーを管理するために直接コマンドラインツールを用いることは不便です。一つ"
+"の作業を完了するために、複数のコマンドを実行する必要があります。多くの項目に"
+"対して、シンボル名の代わりに UUID を使用します。現実的に、人間はこれらのツー"
+"ルをそのまま使用しません。幸運なことに、OpenStack ダッシュボードが便利なイン"
+"ターフェースを提供しています。さらに、多くのサイトは個別のポリシーを適用する"
+"ために個別の要求を満たす独自ツールを作成しています。現在パッケージ化された"
+"ツールを利用できないユーザーに対して、さまざまなレベルのセルフサービスを提供"
+"します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:356
+msgid "Creating New Users"
+msgstr "新規ユーザーの作成"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:357
+msgid "To create a user, you need the following information:"
+msgstr "ユーザーを作成するには、以下の情報が必要です:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:361
+msgid "Username"
+msgstr "ユーザー名"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:364
+msgid "Email address"
+msgstr "電子メールアドレス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:367
+msgid "Password"
+msgstr "パスワード"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:370
+msgid "Primary project"
+msgstr "主プロジェクト"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:373
+msgid "Role"
+msgstr "役割"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:376
+msgid ""
+"Username and email address are self-explanatory, though your site may have "
+"local conventions you should observe. Setting and changing passwords in the "
+"Identity Service requires administrative privileges. As of the Folsom "
+"release, users cannot change their own passwords. This is a large driver for "
+"creating local custom tools, and must be kept in mind when assigning and "
+"distributing passwords. The primary project is simply the first project the "
+"user is associated with and must exist prior to creating the user. Role is "
+"almost always going to be \"member\". Out of the box, OpenStack comes with "
+"two roles defined:"
+msgstr ""
+"ユーザー名と電子メールアドレスは見たとおりです。あなたのサイトは従うべき独自"
+"ルールがあるかもしれません。Identity サービスにおいてパスワードを設定および変"
+"更するには、管理者権限が必要です。Folsom リリースまでは、ユーザーが自分のパス"
+"ワードを変更できません。これは独自のツールを作成するための大きな要因になりま"
+"す。また、パスワードを割り当ておよび配布するときに気をつける必要があります。"
+"主プロジェクトは単にユーザーが割り当てられる最初のプロジェクトです。ユーザー"
+"を作成する前に存在している必要があります。役割は多くの場合ずっと \"メンバー"
+"\" のままになります。標準の状態で、OpenStack は次の 2 つの役割が定義されてい"
+"ます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:389
+msgid "\"member\":  a typical user."
+msgstr "\"member\":  一般的なユーザー。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:392
+msgid ""
+"\"admin\":  an administrative super user which has full permissions across "
+"all projects and should be used with great care."
+msgstr ""
+"\"admin\":  すべてのプロジェクトにわたり全権限を持つ管理ユーザー。非常に注意"
+"して使用する必要があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:397
+msgid "It is possible to define other roles, but doing so is uncommon."
+msgstr "他の役割を定義できますが、一般的にはそうしません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:399
+msgid ""
+"Once you've gathered this information, creating the user in the Dashboard is "
+"just another web form similar to what we've seen before and can be found on "
+"the \"Users\" link in the \"Admin\" navigation bar and then clicking the "
+"\"Create User\" button at the top right."
+msgstr ""
+"一度この情報を収集すると、ダッシュボードにおいてユーザーを作成することは、こ"
+"れまでに見てきた他の Web フォームと同じです。\"管理\" ナビゲーションバーの "
+"\"ユーザー\" リンクにあります。そして、右上にある \"ユーザーの作成\" ボタンを"
+"クリックします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:404
+msgid ""
+"Modifying users is also done from this \"Users\" page. If you have a large "
+"number of users, this page can get quite crowded. The \"Filter\" search box "
+"at the top of the page can be used to limit the users listing. A form very "
+"similar to the user creation dialog can be pulled up by selecting \"Edit\" "
+"from the actions drop down menu at the end of the line for the user you are "
+"modifying."
+msgstr ""
+"ユーザーを変更することは、この \"ユーザー” ページから実行することもできます。"
+"かなり多くのユーザーがいるならば、このページは混み合っているかもしれません。"
+"ページの上部にある \"フィルター\" 検索ボックスがユーザーの一覧を制限するため"
+"に使用できます。変更しようとしているユーザーの行末にあるアクションドロップダ"
+"ウンメニューの ”編集” を選択することにより、ユーザー作成ダイアログと非常に似"
+"ているフォームを表示できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:413
+msgid "Associating Users with Projects"
+msgstr "プロジェクトへのユーザーの割り当て"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:414
+msgid ""
+"Many sites run with users being associated with only one project. This is a "
+"more conservative and simpler choice both for administration and for users. "
+"Administratively if a user reports a problem with an instance or quota it is "
+"obvious which project this relates to as well. Users needn't worry about "
+"what project they are acting in if they are only in one project. However, "
+"note that, by default, any user can affect the resources of any other user "
+"within their project. It is also possible to associate users with multiple "
+"projects if that makes sense for your organization."
+msgstr ""
+"多くのサイトは一つのプロジェクトのみに割り当てられているユーザーで実行してい"
+"ます。これはより保守的で、管理者とユーザーのための選択がより簡単です。管理的"
+"に、ユーザーがインスタンスまたはクォータとともに問題を報告するならば、これが"
+"関連するプロジェクトが明確です。ユーザーが一つのプロジェクトにのみ所属してい"
+"るならば、実行しているプロジェクトについて気にする必要がありません。しかしな"
+"がら、標準状態で、すべてのユーザーがプロジェクトの中にいる他のユーザーのリ"
+"ソースに影響を与えることができることに注意してください。あなたの組織にとって"
+"意味があるならば、ユーザーを複数のプロジェクトに割り当てることも可能です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:425
+msgid ""
+"Associating existing users with an additional project or removing them from "
+"an older project is done from the \"Projects\" page of the Dashboard by "
+"selecting the \"Modify Users\" from the \"Actions\" column:"
+msgstr ""
+"既存のユーザーを追加のプロジェクトに割り当てる、または古いプロジェクトから削"
+"除することは、ダッシュボードの ”プロジェクト” ページから、\"アクション\" 列"
+"の \"ユーザーの変更\" を選択することにより実行できます:"
+
+#. When image changes, this message will be marked fuzzy or untranslated for
+#. you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:433
+msgid ""
+"@@image: 'figures/horizon-user-project.png'; "
+"md5=73cb16964f410444bb8e27b694d2afd1"
+msgstr ""
+"@@image: 'figures/horizon-user-project.png'; "
+"md5=73cb16964f410444bb8e27b694d2afd1"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:437
+msgid ""
+"From this view you can do a number of useful and a few dangerous things."
+msgstr "このビューから、多くの有用な操作、いくつかの危険な操作を実行できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:439
+msgid ""
+"The first column of this form, titled \"All Users\", will include a list of "
+"all the users in your cloud who are not already associated with this project "
+"and the second all the users who are. These can be quite long, but can be "
+"limited by typing a substring of the user name you are looking for in the "
+"filter field at the top of the column."
+msgstr ""
+"このフォームの最初の列、\"すべてのユーザー\" という見出しは、このプロジェクト"
+"にまだ割り当てられていない、クラウドにいるすべてのユーザーの一覧を含みます。"
+"2 列目は割り当てられているすべてのユーザーが含まれます。これらは非常に長い可"
+"能性があります。しかし、列の上部にあるフィルターフィールドにおいて、探してい"
+"るユーザー名の部分文字列を入力することにより、これを制限することができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:446
+msgid ""
+"From here, click the <guiicon>+</guiicon> icon to add users to the project. "
+"Click the <guiicon>-</guiicon> to remove them."
+msgstr ""
+"ここから、プロジェクトにユーザーを追加するには <guiicon>+</guiicon> アイコン"
+"をクリックします。削除するには <guiicon>-</guiicon> をクリックします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:449
+msgid ""
+"The dangerous possibility comes in the ability to change member roles. This "
+"is the drop down list after the user name in the \"Project Members\" list. "
+"In virtually all cases this value should be set to \"Member\". This example "
+"purposefully show and administrative user where this value is \"admin\"."
+msgstr ""
+"危険な可能性は、メンバーの役割を変更する機能があることです。これは \"プロジェ"
+"クトメンバー\" 一覧のユーザー名の後ろにあるドロップダウンリストです。実質的に"
+"すべての場合において、この値は \"メンバー\" に設定されています。この例は意図"
+"的に、この値が \"管理者\" になっている管理ユーザーを示しています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:454
+msgid ""
+"The \"admin\" is global not per project so granting a user the admin role in "
+"any project gives the administrative rights across the whole cloud."
+msgstr ""
+"\"管理者\" はプロジェクトごとではなく、グローバルです。そのため、ユーザーに管"
+"理者の役割を与えることにより、クラウド全体にわたる管理者権限を与えることにな"
+"ります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:457
+msgid ""
+"Typical use is to only create administrative users in a single project, by "
+"convention the \"admin\" project which is created by default during cloud "
+"setup. If your administrative users also use the cloud to launch and manage "
+"instances it is strongly recommended that you use separate user accounts for "
+"administrative access and normal operations and that they be in distinct "
+"projects."
+msgstr ""
+"一般的な使用法は一つのプロジェクトにおける管理ユーザーのみを作成することで"
+"す。慣例により、\"admin\" プロジェクトがクラウド環境のセットアップ中に標準で"
+"作成されます。管理ユーザーもインスタンスを起動および管理するためにクラウドを"
+"使用するならば、管理アクセスと一般アクセスのためのユーザーアカウントを使用"
+"し、それらのユーザーを別々のプロジェクトにすることが強く推奨されます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:466
+msgid "Customizing Authorization"
+msgstr "権限のカスタマイズ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:467
+msgid ""
+"The default <glossterm>authorization</glossterm> settings only allow "
+"administrative users to create resources on behalf of a different project. "
+"OpenStack handles two kind of authorization policies:"
+msgstr ""
+"<glossterm>認可</glossterm>の標準設定は、管理ユーザーのみが他のプロジェクトに"
+"代わり、リソースを作成できます。OpenStack は 2 種類の認可ポリシーを取り扱いま"
+"す:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:473
+msgid ""
+"<emphasis role=\"bold\">Operation-based</emphasis>: policies specify access "
+"criteria for specific operations, possibly with fine-grained control over "
+"specific attributes."
+msgstr ""
+"<emphasis role=\"bold\">操作ベース</emphasis>: 特定の操作に対するアクセス基準"
+"を指定するポリシー。特定の属性により精細な制御を実現できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:481
+msgid ""
+"<emphasis role=\"bold\">Resource-based</emphasis>: whether access to a "
+"specific resource might be granted or not according to the permissions "
+"configured for the resource (currently available only for the network "
+"resource). The actual authorization policies enforced in an OpenStack "
+"service vary from deployment to deployment."
+msgstr ""
+"<emphasis role=\"bold\">リソースベース</emphasis>: リソース (今のところネット"
+"ワークリソースのみ利用可能) に対して設定されたパーミッションにより、特性のリ"
+"ソースに対するアクセスが許可されるかどうか。OpenStack により強制される実際の"
+"認可ポリシーは、導入の仕方により異なります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:492
+msgid ""
+"The policy engine reads entries from the <code>policy.json</code> file. The "
+"actual location of this file might vary from distribution to distribution, "
+"for nova it is typically in <code>/etc/nova/policy.json</code>. You can "
+"update entries while the system is running, and you do not have to restart "
+"services. Currently the only way to update such policies is to edit the "
+"policy file."
+msgstr ""
+"ポリシーエンジンは <code>policy.json</code> ファイルから項目を読み込みます。"
+"このファイルの実際の位置はディストリビューションにより異なります。一般的に "
+"Nova 向けは <code>/etc/nova/policy.json</code> にあります。システムが実行して"
+"いる項目を更新でき、サービスを再起動する必要がありません。そのようなポリシー"
+"を更新する唯一の方法は今のところポリシーファイルを編集することです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:501
+msgid ""
+"The OpenStack service's policy engine matches a policy directly. A rule "
+"indicates evaluation of the elements of such policies. For instance, in a "
+"<code>compute:create: [[\"rule:admin_or_owner\"]]</code> statement, the "
+"policy is <code>compute:create</code>, and the rule is <code>admin_or_owner</"
+"code>."
+msgstr ""
+"OpenStack サービスのポリシーエンジンが直接ポリシーと対応します。ルールはその"
+"ようなポリシーの要素の評価を意味します。たとえば、<code>compute:create: "
+"[[\"rule:admin_or_owner\"]]</code> 文において、ポリシーは <code>compute:"
+"create</code> で、ルールは <code>admin_or_owner</code> です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:508
+msgid ""
+"Policies are triggered by an OpenStack policy engine whenever one of them "
+"matches an OpenStack API operation or a specific attribute being used in a "
+"given operation. For instance, the engine tests the <code>create:compute</"
+"code> policy every time a user sends a <code>POST /v2/{tenant_id}servers</"
+"code> request to the OpenStack Compute API server. Policies can be also "
+"related to specific <glossterm>API extension</glossterm>s. For instance, if "
+"a user needs an extension like <code>compute_extension:rescue</code> the "
+"attributes defined by the provider extensions trigger the rule test for that "
+"operation."
+msgstr ""
+"ポリシーのどれかが OpenStack API 操作に一致するとき、または特定の属性が与えら"
+"れた操作において使用されるときに必ず、ポリシーが OpenStack ポリシーエンジンに"
+"より呼び出されます。たとえば、ユーザーが <code>POST /v2/{tenant_id}servers</"
+"code> リクエストを  OpenStack Compute API サーバーに送信するときに必ず、エン"
+"ジンが <code>create:compute</code> ポリシーを確認します。ポリシーは特定の "
+"<glossterm>API 拡張</glossterm>に関連づけることもできます。たとえば、ユーザー"
+"が <code>compute_extension:rescue</code> のような拡張を必要とするならば、プロ"
+"バイダー拡張により定義された属性は、その操作に対するルールテストを呼び出しま"
+"す。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:521
+msgid ""
+"An authorization policy can be composed by one or more rules. If more rules "
+"are specified, evaluation policy is successful if any of the rules evaluates "
+"successfully; if an API operation matches multiple policies, then all the "
+"policies must evaluate successfully. Also, authorization rules are "
+"recursive. Once a rule is matched, the rule(s) can be resolved to another "
+"rule, until a terminal rule is reached. These are the rules defined:"
+msgstr ""
+"認可ポリシーは、一つまたは複数のルールにより構成できます。より多くのルールを"
+"指定すると、すべてのルールが成功と評価されれば、評価エンジンが成功になりま"
+"す。API 操作が複数のポリシーに一致すると、すべてのポリシーが成功と評価される"
+"必要があります。認可ルールは再帰的にもできます。あるルールが一致すると、末端"
+"のルールに到達するまで、ルールは他のルールに分解できます。これらは定義された"
+"ルールです:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:533
+msgid ""
+"<emphasis role=\"bold\">Role-based rules</emphasis>: evaluate successfully "
+"if the user submitting the request has the specified role. For instance "
+"<code>\"role:admin\"</code>is successful if the user submitting the request "
+"is an administrator."
+msgstr ""
+"<emphasis role=\"bold\">役割に基づいたルール</emphasis>: リクエストを出してい"
+"るユーザーが指定された役割を持っていれば、成功と評価されます。たとえば、リク"
+"エストを出しているユーザーが管理者ならば、<code>\"role:admin\"</code> が成功"
+"します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:545
+msgid ""
+"<emphasis role=\"bold\">Field-based rules: </emphasis>evaluate successfully "
+"if a field of the resource specified in the current request matches a "
+"specific value. For instance <code>\"field:networks:shared=True\"</code> is "
+"successful if the attribute shared of the network resource is set to true."
+msgstr ""
+"<emphasis role=\"bold\">項目に基づいたルール</emphasis>: 現在のリクエストに指"
+"定されたリソースの項目が指定された値と一致すれば、成功と評価されます。たとえ"
+"ば、ネットワークリソースの共有属性が真に設定されていると、<code>\"field:"
+"networks:shared=True\"</code> が成功します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:557
+msgid ""
+"<emphasis role=\"bold\">Generic rules:</emphasis> compare an attribute in "
+"the resource with an attribute extracted from the user's security "
+"credentials and evaluates successfully if the comparison is successful. For "
+"instance <code>\"tenant_id:%(tenant_id)s\"</code> is successful if the "
+"tenant identifier in the resource is equal to the tenant identifier of the "
+"user submitting the request."
+msgstr ""
+"<emphasis role=\"bold\">一般的なルール</emphasis>: ユーザーのセキュリティクレ"
+"デンシャルから抽出された属性を持つリソースにある属性を比較し、比較が成功する"
+"と、成功と評価されます。たとえば、リソースにあるテナント識別子がリクエストを"
+"出しているユーザーのテナント識別子と一致すれば、<code>\"tenant_id:"
+"%(tenant_id)s\"</code> が成功します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:571
+msgid ""
+"Here are snippets of the default nova <filename>policy.json</filename> file:"
+msgstr "これは標準の nova <filename>policy.json</filename> ファイルの抜粋です:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:575
+msgid "[1]"
+msgstr "[1]"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:576
+msgid "[2]"
+msgstr "[2]"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:592
+msgid "[3]"
+msgstr "[3]"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:595
+msgid ""
+"[1] Shows a rule which evaluates successfully if the current user is an "
+"administrator or the owner of the resource specified in the request (tenant "
+"identifier is equal)."
+msgstr ""
+"[1] 現在のユーザーが、リクエストにおいて指定されたリソースの管理者または所有"
+"者であれば、成功であると評価されるルールを表します (テナント識別子が同じ)。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:599
+msgid ""
+"[2] Shows the default policy which is always evaluated if an API operation "
+"does not match any of the policies in <code>policy.json</code>."
+msgstr ""
+"[2] API 操作が <code>policy.json</code> におけるあらゆるポリシーと一致しなけ"
+"れば、必ず評価される規定のポリシーを表します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:602
+msgid ""
+"[3] Shows a policy restricting the ability of manipulating flavors to "
+"administrators using the Admin API only."
+msgstr ""
+"[3] 管理 API のみを使用する管理者にインスタンスタイプを操作する権限を制限する"
+"ポリシーを表します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:605
+msgid ""
+"In some cases, some operations should be restricted to administrators only. "
+"Therefore, as a further example, let us consider how this sample policy file "
+"could be modified in a scenario where we enable users to create their own "
+"flavors:"
+msgstr ""
+"いくつかの場合では、ある操作が管理者のみに制限されるべきです。そのため、さら"
+"なる例として、ユーザーが自身のインスタンスタイプを作成できるようにするシナリ"
+"オにおいて、このポリシーファイル例を変更する方法について検討していきます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:613
+msgid "Users that Disrupt Other Users"
+msgstr "他のユーザーを混乱させるユーザー"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:614
+msgid ""
+"Users on your cloud can disrupt other users, sometimes intentionally and "
+"maliciously and other times by accident. Understanding the situation allows "
+"you to make a better decision on how to handle the disruption."
+msgstr ""
+"クラウドにおけるユーザーは他のユーザーを混乱させることができます。ときどき、"
+"意図的あるいは悪意を持ってそうします。偶然の場合もあります。状況を理解するこ"
+"とにより、このような混乱に対処する方法について、よりよい判断をできるようにな"
+"ります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:619
+msgid ""
+"For example: A group of users have instances that are utilizing a large "
+"amount of compute resources for very compute-intensive tasks. This is "
+"driving the load up on compute nodes and affecting other users. In this "
+"situation, review your user use cases. You may find that high compute "
+"scenarios are common and should then plan for proper segregation in your "
+"cloud such as host aggregation or regions."
+msgstr ""
+"例: ユーザーのグループが非常に計算負荷の高い作業のために、数多くの Compute リ"
+"ソースを利用しているインスタンスを持っています。これにより、Compute ノードの"
+"負荷が高くなり、他のユーザーに影響を与えます。この状況では、ユーザーの使用法"
+"を確認します。計算負荷の高いシナリオは一般的です。そのため、ホスト集約やリー"
+"ジョンのように、クラウドにおいて適切に分割する計画を立てるべきです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:627
+msgid ""
+"Another example is a user consuming a very large amount of bandwidth. Again, "
+"the key is to understand what the user is doing. If they naturally need a "
+"high amount of bandwidth, you might have to limit their transmission rate as "
+"to not affect other users or move them to an area with more bandwidth "
+"available. On the other hand, maybe the user's instance has been hacked and "
+"is part of a botnet launching DDOS attacks. Resolution to this issue is the "
+"same as if any other server on your network has been hacked. Contact the "
+"user and give them time to respond. If they don't respond, shut the instance "
+"down."
+msgstr ""
+"別の例は、ユーザーが非常に多くの帯域を消費することです。繰り返しですが、ユー"
+"ザーが実行していることを理解することが重要です。必ず多くの帯域を使用する必要"
+"があれば、他のユーザーに影響を与えないように通信帯域を制限する、または、より"
+"多くの帯域を利用可能な別の領域に移動させる必要があるかもしれません。一方、"
+"ユーザーのインスタンスが侵入され、DDOS 攻撃のボットネットの一部になっているか"
+"もしれません。この問題の解決法は、ネットワークにある他のサーバーが侵入された"
+"場合と同じです。ユーザーに連絡し、応答する時間を与えます。応答がなければ、イ"
+"ンスタンスを停止します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:639
+msgid ""
+"A final example is if a user is hammering cloud resources repeatedly. "
+"Contact the user and learn what they are trying to do. Maybe they don't "
+"understand that what they're doing is inappropriate or maybe there is an "
+"issue with the resource they are trying to access that is causing their "
+"requests to queue or lag."
+msgstr ""
+"最後の例は、ユーザーがクラウドのリソースに繰り返し悪影響を与えることです。"
+"ユーザーと連絡をとり、何をしようとしているのか理解します。ユーザーが実行しよ"
+"うとしていることを正しく理解していない可能性があります。または、アクセスをし"
+"ようとしているリソースに問題が起きている可能性があります。これにより、リクエ"
+"ストがキュー待ちまたは時間差が発生します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:646
+msgid ""
+"One key element of systems administration that is often overlooked is that "
+"end users are the reason why systems administrators exist. Don't go the BOFH "
+"route and terminate every user who causes an alert to go off. Work with them "
+"to understand what they're trying to accomplish and see how your environment "
+"can better assist them in achieving their goals."
+msgstr ""
+"システム管理者が見過ごしやすい重要な要素の一つに、エンドユーザーはシステム管"
+"理者が存在する理由を見過ごしやすいことです。BOFH の道に入らず、警告を発生させ"
+"ているすべてのユーザーを停止させないでください。ユーザーが達成したいことを一"
+"緒になり理解し、あなたの環境が目的を達成するためにユーザーをより支援できる方"
+"法を確認してください。"
