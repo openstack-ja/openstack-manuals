@@ -1,0 +1,964 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-21 08:33+0000\n"
+"Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1412
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:71
+msgid "horizon"
+msgstr "horizon"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1709
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:63
+msgid "keystone"
+msgstr "keystone"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2616
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:385
+msgid "StackTach"
+msgstr "StackTach"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:16
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:88
+msgid "Compute Nodes"
+msgstr "コンピュートノード"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:226
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:307
+msgid "Swift"
+msgstr "Swift"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:16
+msgid "Logging and Monitoring"
+msgstr "ロギングと監視"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:17
+msgid ""
+"As an OpenStack cloud is composed of so many different services, there are a "
+"large number of log files. This section aims to assist you in locating and "
+"working with them, and other ways to track the status of your deployment."
+msgstr ""
+"OpenStackクラウドは、様々なサービスから構成されるため、多くのログファイルが存"
+"在します。このセクションでは、それぞれのログの場所と取り扱い、そしてシステム"
+"のさらなる監視方法について説明します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:23
+msgid "Where Are the Logs?"
+msgstr "ログの位置について説明します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:24
+msgid ""
+"On Ubuntu, most services use the convention of writing their log files to "
+"subdirectories of the <code>/var/log directory</code>."
+msgstr ""
+"Ubuntuでは、ほとんどのサービスでは<code>/var/log</code>ディレクトリ配下のログ"
+"ファイルを置いています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:28
+msgid "Cloud Controller"
+msgstr "クラウドコントローラー"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:32
+msgid "Service"
+msgstr "サービス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:33
+msgid "Log Location"
+msgstr "ログの位置"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:39
+msgid "nova-*"
+msgstr "nova-*"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:42
+msgid "/var/log/nova"
+msgstr "/var/log/nova"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:47
+msgid "glance-*"
+msgstr "glance-*"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:50
+msgid "/var/log/glance"
+msgstr "/var/log/glance"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:55
+msgid "cinder-*"
+msgstr "cinder-*"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:58
+msgid "/var/log/cinder"
+msgstr "/var/log/cinder"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:66
+msgid "/var/log/keystone"
+msgstr "/var/log/keystone"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:73
+msgid "/var/log/apache2/"
+msgstr "/var/log/apache2/"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:78
+msgid "misc (Swift, dnsmasq)"
+msgstr "その他 (Swift, dnsmasq)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:81
+msgid "/var/log/syslog"
+msgstr "/var/log/syslog"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:89
+msgid "libvirt: <code>/var/log/libvirt/libvirtd.log</code>"
+msgstr "libvirt: <code>/var/log/libvirt/libvirtd.log</code>"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:91
+msgid ""
+"Console (boot up messages) for VM instances: <code>/var/lib/nova/instances/"
+"instance-&lt;instance id&gt;/console.log</code>"
+msgstr ""
+"VMインスタンスのコンソール (ブートメッセージ):  <code>/var/lib/nova/"
+"instances/instance-&lt;instance id&gt;/console.log</code>"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:97
+msgid "Block Storage Nodes"
+msgstr "ブロックストレージ ノード"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:98
+msgid "cinder: <code>/var/log/cinder/cinder-volume.log</code>"
+msgstr "cinder: <code>/var/log/cinder/cinder-volume.log</code>"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:104
+msgid "How to Read the Logs"
+msgstr "ログの読み方"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:105
+msgid ""
+"OpenStack services use the standard logging levels, at increasing severity: "
+"DEBUG, INFO, AUDIT, WARNING, ERROR, CRITICAL, TRACE. That is, messages only "
+"appear in the logs if they are more \"severe\" than the particular log level "
+"with DEBUG allowing all log statements through. For example, TRACE is logged "
+"only if the software has a stack trace, while INFO is logged for every "
+"message including those that are only for information."
+msgstr ""
+"OpenStack サービスは標準のロギングレベルを利用しています。重要度順のレベルは"
+"次の通りです: DEBUG、INFO、AUDIT、WARNING、ERROR、CRTICAL、TRACE。特定のログ"
+"レベルより\"重要\"な場合のみメッセージはログ中に出力されます。DEBUGは全てのロ"
+"グが出力されます。例えば、TRACEはソフトウェアがスタックトレースを持つ場合にの"
+"みログに出力されます。一方INFOは情報のみのメッセージも含めて出力されます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:113
+msgid "To disable DEBUG-level logging, edit <code>/etc/nova/nova.conf</code>:"
+msgstr ""
+"DEBUG レベルを無効にするには <code>/etc/nova/nova.conf</code> を編集します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:116
+msgid ""
+"Keystone is handled a little differently. To modify the logging level, edit "
+"the <code>/etc/keystone/logging.conf</code> file and look at the "
+"<code>logger_root and handler_file</code> sections."
+msgstr ""
+"Keystoneは少し異なる動作をします。ロギングレベルを変更するためには、<code>/"
+"etc/keystone/logging.conf</code>を編集し、 <code>logger_root </code>と<code> "
+"handler_file</code> を修正する必要があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:121
+msgid ""
+"Logging for Horizon is configured in <code>/etc/openstack_dashboard/"
+"local_settings.py</code>. As Horizon is a Django web application, it follows "
+"the <link title=\"Django Logging\" href=\"https://docs.djangoproject.com/en/"
+"dev/topics/logging/\">Django Logging</link> (https://docs.djangoproject.com/"
+"en/dev/topics/logging/) framework conventions."
+msgstr ""
+"Horizon のロギング設定は <code>/etc/openstack_dashboard/local_settings.py</"
+"code> で行います。Horizon は Django web アプリケーションですので、<link "
+"title=\"Django Logging\" href=\"https://docs.djangoproject.com/en/dev/topics/"
+"logging/\">Django Logging</link> (https://docs.djangoproject.com/en/dev/"
+"topics/logging/) フレームワークの規約に従います。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:129
+msgid ""
+"The first step in finding the source of an error is typically to search for "
+"a CRITICAL, TRACE, or ERROR message in the log starting at the bottom of the "
+"log file."
+msgstr ""
+"エラーの原因を見つけるための典型的な最初のステップは、 CRTICAL、TRACE、ERROR"
+"などのメッセージがログファイルの終わりで出力されていないかを確認することで"
+"す。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:132
+msgid ""
+"An example of a CRITICAL log message, with the corresponding TRACE (Python "
+"traceback) immediately following:"
+msgstr ""
+"トレース(Pythonのコールスタック)付きのCRITICALなログメッセージの例は次の通り"
+"です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:165
+msgid ""
+"In this example, cinder-volumes failed to start and has provided a stack "
+"trace, since its volume back-end has been unable to setup the storage volume "
+"- probably because the LVM volume that is expected from the configuration "
+"does not exist."
+msgstr ""
+"この例において、cinder-volumesは起動に失敗し、スタックトレースを出力していま"
+"す。ボリュームのバックエンドがストレージボリュームとしてセットアップされてい"
+"ないためなので、おそらく、設定ファイルで指定されたLVMボリュームが存在しないと"
+"考えられます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:170
+msgid "An example error log:"
+msgstr "エラーログの例:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:173
+msgid ""
+"In this error, a nova service has failed to connect to the RabbitMQ server, "
+"because it got a connection refused error."
+msgstr ""
+"このエラーでは、novaサービスがRabbitMQへの接続に失敗していました。接続が拒否"
+"されたというエラーが出力されています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:178
+msgid "Tracing Instance Requests"
+msgstr "インスタンスリクエストの追跡"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:179
+msgid ""
+"When an instance fails to behave properly, you will often have to trace "
+"activity associated with that instance across the log files of various "
+"<code>nova-*</code> services, and across both the cloud controller and "
+"compute nodes."
+msgstr ""
+"インスタンスが正しく動作していない場合、インスタンスに関連したログを調べる必"
+"要があります。これらのログは複数の<code>nova-*</code>サービスが出力しており、"
+"クラウドコントローラーとComputeノードの両方に存在します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:184
+msgid ""
+"The typical way is to trace the UUID associated with an instance across the "
+"service logs."
+msgstr ""
+"一般的な方法はこれらのログインスタンスのUUIDをキーにして追跡することです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:186
+msgid "Consider the following example:"
+msgstr "次のような例を考えてみましょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:193
+msgid ""
+"Here the ID associated with the instance is <code>faf7ded8-4a46-413b-b113-"
+"f19590746ffe</code>. If you search for this string on the cloud controller "
+"in the <code>/var/log/nova-*.log</code> files, it appears in <code>nova-api."
+"log</code>, <code>nova-scheduler.log</code>. If you search for this on the "
+"compute nodes in <code>/var/log/nova-*.log</code>, it appears <code>nova-"
+"network.log</code> and <code>nova-compute.log</code>. If no ERROR or "
+"CRITICAL messages appear, the most recent log entry that reports this may "
+"provide a hint about what has gone wrong."
+msgstr ""
+"ここで、インスタンスのUUIDは <code>faf7ded8-4a46-413b-b113-f19590746ffe</"
+"code>です。クラウドコントローラー上の <code>/var/log/nova-*.log</code>ファイ"
+"ルをこの文字列で検索すると、<code>nova-api.log</code>と <code>nova-scheduler."
+"log</code>で見つかります。同様にComputeノードで検索した場合、<code>nova-"
+"network.log</code> と <code>nova-compute.log</code>で見つかります。もし、"
+"ERRORやCRITICALのメッセージが存在しないならば、最も最後のログエントリが、何が"
+"悪いかのヒントを示しているかもしれません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:207
+msgid "Adding Custom Logging Statements"
+msgstr "カスタムログの追加"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:208
+msgid ""
+"If there is not enough information in the existing logs, you may need to add "
+"your own custom logging statements to the <code>nova-*</code> services."
+msgstr ""
+"もし、ログに十分な情報がない場合、あなた自身でカスタマイズしたログを "
+"<code>nova-*</code>サービスに追加することができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:211
+msgid ""
+"The source files are located in <code>/usr/lib/python2.7/dist-packages/nova</"
+"code>"
+msgstr ""
+"ソースファイルは <code>/usr/lib/python2.7/dist-packages/nova</code>に存在しま"
+"す。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:214
+msgid ""
+"To add logging statements, the following line should be near the top of the "
+"file. For most files, these should already be there:"
+msgstr ""
+"ログステートメントを追加するには、次の行をファイルの戦闘に置きます。ほとんど"
+"のファイルでは、これらは既に存在します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:219
+msgid "To add a DEBUG logging statement, you would do:"
+msgstr "DEBUGログステートメントを追加するには次のようにします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:221
+msgid ""
+"You may notice that all of the existing logging messages are preceded by an "
+"underscore and surrounded by parentheses, for example:"
+msgstr ""
+"以下に例を示しますが、全てのログメッセージはアンダースコアで始まり、括弧で括"
+"られていることに気づいたでしょうか?"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:225
+msgid ""
+"This is used to support translation of logging messages into different "
+"languages using the <link href=\"http://docs.python.org/2/library/gettext."
+"html\">gettext</link> (http://docs.python.org/2/library/gettext.html) "
+"internationalization library. You don't need to do this for your own custom "
+"log messages. However, if you want to contribute the code back to the "
+"OpenStack project that includes logging statements, you must surround your "
+"log messages with underscore and parentheses."
+msgstr ""
+"これは、ログメッセージを異なる言語に翻訳するために<link href=\"http://docs."
+"python.org/2/library/gettext.html\">gettext</link> (http://docs.python.org/2/"
+"library/gettext.html) 国際化ライブラリ を利用しているためです。カスタムログに"
+"は必要ありませんが、もし、OpenStackプロジェクトにログステートメントを含むコー"
+"ドを提供する場合は、アンダースコアと括弧でログメッセージを囲わなければなりま"
+"せん。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:237
+msgid "RabbitMQ Web Management Interface or rabbitmqctl"
+msgstr "RabbitMQ Web管理インターフェイス および rabbitmqctl"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:239
+msgid ""
+"Aside from connection failures, RabbitMQ log files are generally not useful "
+"for debugging OpenStack related issues. Instead, we recommend you use the "
+"RabbitMQ web management interface. Enable it on your cloud controller:"
+msgstr ""
+"接続失敗の問題はさておき、RabbitMQログファイルはOpenStackに関連した問題のデ"
+"バッグにあまり有用ではありません。その代わりにRabbitMQ Web管理インターフェイ"
+"スを推奨します。 クラウドコントローラーにおいて、以下のコマンドで有効になりま"
+"す。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:246
+msgid ""
+"The RabbitMQ web management interface is accessible on your cloud controller "
+"at http://localhost:55672."
+msgstr ""
+"RabbitMQ Web管理インターフェイスは、クラウドコントローラーから <code> http://"
+"localhost:55672 </code>でアクセスできます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:249
+msgid ""
+"Ubuntu 12.04 installs RabbitMQ version 2.7.1, which uses port 55672. "
+"RabbitMQ versions 3.0 and above use port 15672 instead. You can check which "
+"version of RabbitMQ you have running on your local Ubuntu machine by doing:"
+msgstr ""
+"Ubuntu 12.04はRabiitMQのバージョン2.7.1を55672番ポートを使うようにインストー"
+"ルします。RabbitMQバージョン3.0以降では15672が利用されます。Ubuntuマシン上で"
+"どのバージョンのRabbitMQが実行されているかは次のように確認できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:257
+msgid ""
+"An alternative to enabling the RabbitMQ Web Management Interface is to use "
+"the <placeholder-1/> commands. For example, <placeholder-2/> displays any "
+"messages left in the queue. If there are, it's a possible sign that cinder "
+"services didn't connect properly to rabbitmq and might have to be restarted."
+msgstr ""
+"RabbitMQ Web 管理インターフェイスを有効にするもう一つの方法としては、"
+"<placeholder-1/> コマンドを利用します。例えば<placeholder-2/> は、キューに"
+"残っているメッセージを表示します。もしメッセージ存在する場合、Cinderサービス"
+"がRabbitMQに正しく接続できてない可能性があり、再起動が必要かもしれません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:264
+msgid ""
+"Items to monitor for RabbitMQ include the number of items in each of the "
+"queues and the processing time statistics for the server."
+msgstr ""
+"RabbitMQの監視すべき項目は、各キューでのアイテムの数と、サーバーでの処理時間"
+"の統計情報があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:269
+msgid "Centrally Managing Logs"
+msgstr "ログの集中管理"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:270
+msgid ""
+"Because your cloud is most likely composed of many servers, you must check "
+"logs on each of those servers to properly piece an event together. A better "
+"solution is to send the logs of all servers to a central location so they "
+"can all be accessed from the same area."
+msgstr ""
+"クラウドは多くのサーバーから構成されるため、各サーバー上にあるイベントログを"
+"繋ぎあわせて、ログをチェックしなければなりません。よい方法は全てのサーバーを"
+"一ヶ所にまとめ、全てのログを同じ場所で確認できるようにすることです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:275
+msgid ""
+"Ubuntu uses rsyslog as the default logging service. Since it is natively "
+"able to send logs to a remote location, you don't have to install anything "
+"extra to enable this feature, just modify the configuration file. In doing "
+"this, consider running your logging over a management network, or using an "
+"encrypted VPN to avoid interception."
+msgstr ""
+"Ubuntuはrsyslog をデフォルトのロギングサービスとして利用します。他に何かをイ"
+"ンストールすことなく、設定ファイルを変更するだけで、リモートへログを送ること"
+"ができます。リモート転送を実施する際は、盗聴を防ぐためにログが自身の管理ネッ"
+"トワーク上を通る、もしくは暗号化VPNを利用することを考慮する必要があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:283
+msgid "rsyslog Client Configuration"
+msgstr "rsyslog クライアント設定"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:284
+msgid ""
+"To begin, configure all OpenStack components to log to syslog in addition to "
+"their standard log file location. Also configure each component to log to a "
+"different syslog facility. This makes it easier to split the logs into "
+"individual components on the central server."
+msgstr ""
+"まず始めに、全てのOpenStackコンポーネントのログを標準ログに加えてsyslogに出力"
+"するように設定します。また、各コンポーネントが異なるsyslogファシリティになる"
+"ように設定します。これによりログサーバー上で、個々のコンポーネントのログを分"
+"離しやすくなります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:290
+msgid "<code>nova.conf</code>:"
+msgstr "<code>nova.conf</code>:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:294
+msgid "<code>glance-api.conf</code> and <code>glance-registry.conf</code>:"
+msgstr "<code>glance-api.conf</code> および <code>glance-registry.conf</code>:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:299
+msgid "<code>cinder.conf</code>:"
+msgstr "<code>cinder.conf</code>:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:303
+msgid "<code>keystone.conf</code>:"
+msgstr "<code>keystone.conf</code>:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:308
+msgid "By default, Swift logs to syslog."
+msgstr "デフォルトでSwiftはsyslogにログを出力します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:309
+msgid "Next, create /etc/rsyslog.d/client.conf with the following line:"
+msgstr "次に、<code> /etc/rsyslog.d/client.conf</code>に次の行を作成します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:312
+msgid ""
+"This instructs rsyslog to send all logs to the IP listed. In this example, "
+"the IP points to the Cloud Controller."
+msgstr ""
+"これは、rsyslogに全てのログを指定したIPに送るように命令しており、このIPはクラ"
+"ウドコントローラーを指定しています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:317
+msgid "rsyslog Server Configuration"
+msgstr "rsyslog サーバー設定"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:318
+msgid ""
+"Designate a server as the central logging server. The best practice is to "
+"choose a server that is solely dedicated to this purpose. Create a file "
+"called /etc/rsyslog.d/server.conf with the following contents:"
+msgstr ""
+"ログサーバーを指定して下さい。ログ専用のサーバーを利用するのが最も良いです。"
+"<code> /etc/rsyslog.d/server.conf </code>を次のように作成します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:346
+msgid ""
+"The above example configuration handles the nova service only. It first "
+"configures rsyslog to act as a server that runs on port 512. Next, it "
+"creates a series of logging templates. Logging templates control where "
+"received logs are stored. Using the example above, a nova log from c01."
+"example.com goes to the following locations:"
+msgstr ""
+"この設定例はnovaサービスのみを扱っています。はじめにUDP 514番ポートを利用する"
+"rsyslogがサーバーとを設定します。次に一連のログテンプレートを作成します。ログ"
+"テンプレートは受け取ったログをどこに保管するかを指定します。上記の例を用いる"
+"と、c01.example.comから送られるnovaのログは次の場所に保管されます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:356
+msgid "/var/log/rsyslog/c01.example.com/nova.log"
+msgstr "/var/log/rsyslog/c01.example.com/nova.log"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:361
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:375
+msgid "/var/log/rsyslog/nova.log"
+msgstr "/var/log/rsyslog/nova.log"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:365
+msgid "This is useful as logs from c02.example.com go to:"
+msgstr "c02.example.comから送られたログはこちらに保管されます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:370
+msgid "/var/log/rsyslog/c02.example.com/nova.log"
+msgstr "/var/log/rsyslog/c02.example.com/nova.log"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:379
+msgid ""
+"So you have an individual log file for each compute node as well as an "
+"aggregated log that contains nova logs from all nodes."
+msgstr ""
+"全てのノードからのnovaのログを含む集約されたログと同様に、個々のコンピュート"
+"ノードのログを持つことができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:386
+msgid ""
+"StackTach is a tool created by Rackspace to collect and report the "
+"notifications sent by <code>nova</code>. Notifications are essentially the "
+"same as logs, but can be much more detailed. A good overview of "
+"notifications can be found at <link title=\"StackTach GitHub repo\" href="
+"\"https://wiki.openstack.org/wiki/SystemUsageData\">System Usage Data</link> "
+"(https://wiki.openstack.org/wiki/SystemUsageData)."
+msgstr ""
+"StackTachはRackspaceによって作られたツールで、<code>nova</code>から送られた通"
+"知を収集してレポートします。通知は本質的にはログと同じですが、より詳細な情報"
+"を持ちます。通知の概要のよい資料は、<link title=\"StackTach GitHub repo\" "
+"href=\"https://wiki.openstack.org/wiki/SystemUsageData\">System Usage Data</"
+"link>(https://wiki.openstack.org/wiki/SystemUsageData).にあります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:394
+msgid ""
+"To enable nova to send notifications, add the following to <code>nova.conf</"
+"code>:"
+msgstr ""
+"novaで通知の送信を有効化するには次の行を <code>nova.conf</code>に追加します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:398
+msgid ""
+"Once <code>nova</code> is sending notifications, install and configure "
+"StackTach. Since StackTach is relatively new and constantly changing, "
+"installation instructions would quickly become outdated. Please refer to the "
+"<link href=\"https://github.com/rackerlabs/stacktach\">StackTach GitHub "
+"repo</link> (https://github.com/rackerlabs/stacktach) for instructions as "
+"well as a demo video."
+msgstr ""
+"<code>nova</code>が通知を送信するように設定後、StackTachをインストールしま"
+"す。StackTachは新しく、頻繁に更新されるので、インストール手順はすぐに古くなり"
+"ます。<link href=\"https://github.com/rackerlabs/stacktach\">StackTach "
+"GitHub repo</link> (https://github.com/rackerlabs/stacktach) とデモビデオを参"
+"照して下さい。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:408
+msgid "Monitoring"
+msgstr "監視"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:409
+msgid ""
+"There are two types of monitoring: watching for problems and watching usage "
+"trends. The former ensures that all services are up and running, creating a "
+"functional cloud. The latter involves monitoring resource usage over time in "
+"order to make informed decisions about potential bottlenecks and upgrades."
+msgstr ""
+"二つの監視のタイプがあります。問題の監視と、利用状況の監視です。前者は全ての"
+"サービスが動作していることを保証するものであり、後者は時間に沿ったリソース利"
+"用の監視をすることで、潜在的なボトルネックの発見とアップグレードのための情報"
+"を得るものです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:416
+msgid "Process Monitoring"
+msgstr "プロセス監視"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:417
+msgid ""
+"A basic type of alert monitoring is to simply check and see if a required "
+"process is running. For example, ensure that the <code>nova-api</code> "
+"service is running on the Cloud Controller:"
+msgstr ""
+"基本的なアラート監視は、単純に必要なプロセスが実行されているかどうかをチェッ"
+"クすることです。例えば、 <code>nova-api</code>サービスがクラウドコントロー"
+"ラーで動作していることを確認します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:428
+msgid ""
+"You can create automated alerts for critical processes by using Nagios and "
+"NRPE. For example, to ensure that the <code>nova-compute</code> process is "
+"running on compute nodes, create an alert on your Nagios server that looks "
+"like this:"
+msgstr ""
+"NagiosとNRPEを使って、クリティカルなプロセスの自動化されたアラートを作成する"
+"ことが可能です。<code>nova-compute</code> プロセスがコンピュートノードで動作"
+"していることを保証するために、次のようなアラートを作成します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:441
+msgid ""
+"Then on the actual compute node, create the following NRPE configuration:"
+msgstr ""
+"そして、対象のコンピュートノードにおいて、次のようなNPRE設定を作成します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:444
+msgid ""
+"Nagios checks that at least one nova-compute service is running at all times."
+msgstr ""
+"Nagiosは常に一つ以上の <code>nova-compute</code>サービスが動作しているかを"
+"チェックします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:448
+msgid "Resource Alerting"
+msgstr "リソースのアラート"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:449
+msgid ""
+"Resource alerting provides notifications when one or more resources are "
+"critically low. While the monitoring thresholds should be tuned to your "
+"specific OpenStack environment, monitoring resource usage is not specific to "
+"OpenStack at all – any generic type of alert will work fine."
+msgstr ""
+"リソースのアラートは、一つ以上のリソースが極めて少なくなった場合に通知するも"
+"のです。監視の閾値はインストールされたOpenStackの環境に合わせて設定すべきです"
+"が、リソース監視の利用方法は、OpenStackに固有の話ではなありません。一般的なア"
+"ラートのタイプが利用できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:455
+msgid "Some of the resources that you want to monitor include:"
+msgstr "監視項目に含む幾つかのリソースをあげます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:459
+msgid "Disk Usage"
+msgstr "ディスク使用量"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:462
+msgid "Server Load"
+msgstr "サーバー負荷"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:465
+msgid "Memory Usage"
+msgstr "メモリ使用量"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:468
+msgid "Network IO"
+msgstr "ネットワーク IO"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:471
+msgid "Available vCPUs"
+msgstr "利用可能な vCPU 数"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:474
+msgid ""
+"For example, to monitor disk capacity on a compute node with Nagios, add the "
+"following to your Nagios configuration:"
+msgstr ""
+"例として、コンピュートノード上のディスク容量をNagiosを使って監視する場合、次"
+"のようなNagios設定を追加します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:484
+msgid "On the compute node, add the following to your NRPE configuration:"
+msgstr "コンピュートノード上では、次のようなNRPE設定を追加します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:487
+msgid ""
+"Nagios alerts you with a WARNING when any disk on the compute node is 80% "
+"full and CRITICAL when 90% is full."
+msgstr ""
+"Naigosは、80%のディスク使用率でWARNING、90%でCRITICALを警告します。%i_dummy"
+"%f_dummy"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:492
+msgid "OpenStack-specific Resources"
+msgstr "OpenStack固有のリソース"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:493
+msgid ""
+"Resources such as memory, disk, and CPU are generic resources that all "
+"servers (even non-OpenStack servers) have and are important to the overall "
+"health of the server. When dealing with OpenStack specifically, these "
+"resources are important for a second reason: ensuring enough are available "
+"in order to launch instances. There are a few ways you can see OpenStack "
+"resource usage."
+msgstr ""
+"メモリ、ディスク、CPUのような一般的なリソースは、全てのサーバー(OpenStackに関"
+"連しないサーバーにも)に存在し、サーバーの状態監視に重要です。OpenStackの場"
+"合、これらのリソースは、インスタンスを起動するために十分利用可能であること保"
+"証するという点でも重要です。OpenStackのリソース利用を見るための幾つかの方法が"
+"あります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:501
+msgid "The first is through the <code>nova</code> command:"
+msgstr "最初は <code>nova</code> コマンドを利用した例です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:504
+msgid ""
+"This command displays a list of how many instances a tenant has running and "
+"some light usage statistics about the combined instances. This command is "
+"useful for a quick overview of your cloud, but doesn't really get into a lot "
+"of details."
+msgstr ""
+"このコマンドはテナント上で実行されるインスタンスのリストと、インスタンス全体"
+"の簡単な利用統計を表示します。クラウドの簡単な概要を得るのに便利なコマンドで"
+"すが、より詳細な情報については表示しません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:509
+msgid ""
+"Next, the <code>nova</code> database contains three tables that store usage "
+"information."
+msgstr ""
+"次に <code>nova</code> データベースは 利用情報に関して3つのテーブルを持ってい"
+"ます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:511
+msgid ""
+"The <code>nova.quotas</code> and <code>nova.quota_usages</code> tables store "
+"quota information. If a tenant's quota is different than the default quota "
+"settings, their quota is stored in <code>nova.quotas</code> table. For "
+"example:"
+msgstr ""
+"<code>nova.quotas</code>と <code>nova.quota_usages</code> テーブルはクォータ"
+"の情報が保管されています。もし、テナントのクォータがデフォルト設定と異なる場"
+"合、<code>nova.quotas</code>に保管されます。以下に例を示します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:531
+msgid ""
+"The <code>nova.quota_usages</code> table keeps track of how many resources "
+"the tenant currently has in use:"
+msgstr ""
+"<code>nova.quota_usages</code>テーブルはどのくらいリソースをテナントが利用し"
+"ているかを記録しています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:546
+msgid ""
+"By combining the resources used with the tenant's quota, you can figure out "
+"a usage percentage. For example, if this tenant is using 1 Floating IP out "
+"of 10, then they are using 10% of their Floating IP quota. You can take this "
+"procedure and turn it into a formatted report:"
+msgstr ""
+"リソース利用をテナントのクォータと結合することで、利用率を求めることが出来ま"
+"す。例えば、テナントが、10個のうち1つのFloating IPを利用しているとすると、10%"
+"のFloating クォータを利用することになります。これを行なうことで、レポートを作"
+"ることができます。%o_dummy"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:573
+msgid ""
+"The above was generated using a custom script which can be found on GitHub "
+"(https://github.com/cybera/novac/blob/dev/libexec/novac-quota-report)."
+msgstr ""
+"上記の出力はこのGithub (https://github.com/cybera/novac/blob/dev/libexec/"
+"novac-quota-report) 中のカスタムスクリプトを用いて作成しました。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:577
+msgid ""
+"This script is specific to a certain OpenStack installation and must be "
+"modified to fit your environment. However, the logic should easily be "
+"transferable."
+msgstr ""
+"このスクリプトは特定のOpenStackインストール環境向けなので、自身の環境に適用す"
+"る際には変更しなくてはいけませんが、ロジックは簡単に変更できるでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:584
+msgid "Intelligent Alerting"
+msgstr "インテリジェントなアラート"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:585
+msgid ""
+"Intelligent alerting can be thought of as a form of continuous integration "
+"for operations. For example, you can easily check to see if Glance is up and "
+"running by ensuring that the <code>glance-api</code> and <code>glance-"
+"registry</code> processes are running or by seeing if <code>glace-api</code> "
+"is responding on port 9292."
+msgstr ""
+"インテリジェントなアラートは継続的インテグレーションの要素の一つです。\n"
+"例えば、以下のような方法で簡単にGlanceが起動しているかを簡単に確認できます。"
+"<code>glance-api</code> と <code>glance-registry</code>プロセスが起動している"
+"ことの確認する、もしくは <code>glace-api</code>が9292ポートに応答するといった"
+"方法です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:592
+msgid ""
+"But how can you tell if images are being successfully uploaded to the Image "
+"Service? Maybe the disk that Image Service is storing the images on is full "
+"or the S3 back-end is down. You could naturally check this by doing a quick "
+"image upload:"
+msgstr ""
+"しかし、イメージサービスにイメージが正しくアップロードされたことをどのように"
+"知ればいいのでしょうか? もしかしたら、イメージサービスが保管しているイメージ"
+"のディスクが満杯、もしくはS3のバックエンドがダウンしているかもしれません。簡"
+"易的なイメージアップロードを行なうことでこれをチェックすることができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:607
+msgid ""
+"By taking this script and rolling it into an alert for your monitoring "
+"system (such as Nagios), you now have an automated way of ensuring image "
+"uploads to the Image Catalog are working."
+msgstr ""
+"このスクリプトを(Nagiosのような)監視システムに組込むことで、イメージカタログ"
+"のアップロードが動作していることを自動的に確認することができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:612
+msgid ""
+"You must remove the image after each test. Even better, test whether you can "
+"successfully delete an image from the Image Service."
+msgstr ""
+"毎回テスト後にイメージを削除する必要があります。イメージサービスからイメージ"
+"が削除できるかのテストにしてしまえば、さらによいです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:616
+msgid ""
+"Intelligent alerting takes a considerable more amount of time to plan and "
+"implement than the other alerts described in this chapter. A good outline to "
+"implement intelligent alerting is:"
+msgstr ""
+"インテリジェントなアラートは、この章で述べられているの他のアラートよりも時間"
+"をかけて、計画、実装のために考えます。インテリジェントなアラートを実装するた"
+"めのよいアウトラインは次の通りです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:622
+msgid "Review common actions in your cloud"
+msgstr "構築したクラウドにおいて一般的なアクションをレビューする"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:625
+msgid "Create ways to automatically test these actions"
+msgstr "それらのアクションに対して自動テストを作成する"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:629
+msgid "Roll these tests into an alerting system"
+msgstr "それらのテストをアラートシステムに組み込む"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:633
+msgid "Some other examples for Intelligent Alerting include:"
+msgstr "インテリジェントアラートのその他の例としては以下があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:637
+msgid "Can instances launch and destroyed?"
+msgstr "インスタンスの起動と削除が可能か?"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:640
+msgid "Can users be created?"
+msgstr "ユーザの作成は可能か?"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:643
+msgid "Can objects be stored and deleted?"
+msgstr "オブジェクトの保存と削除は可能か?"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:646
+msgid "Can volumes be created and destroyed?"
+msgstr "ボリュームの作成と削除は可能か?"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:651
+msgid "Trending"
+msgstr "トレンド"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:652
+msgid ""
+"Trending can give you great insight into how your cloud is performing day to "
+"day. For example, if a busy day was simply a rare occurrence or if you "
+"should start adding new compute nodes."
+msgstr ""
+"トレンドはどのようにクラウドが実行されているかの素晴しい見通しを与えてくれま"
+"す。例えば、負荷の高い日がめったに発生していかどうかや、新しいコンピュート"
+"ノードを追加すべきかどうか、などです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:656
+msgid ""
+"Trending takes a slightly different approach than alerting. While alerting "
+"is interested in a binary result (whether a check succeeds or fails), "
+"trending records the current state of something at a certain point in time. "
+"Once enough points in time have been recorded, you can see how the value has "
+"changed over time."
+msgstr ""
+"トレンドはアラートとは全く異なったアプローチです。アラートは二値の結果(チェッ"
+"クが成功するか失敗するか)に注目しているのに対して、トレンドはある時点での状態"
+"を定期的に記録します。十分な量が記録されれば、時系列でどのように値が変化する"
+"かを確認できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:663
+msgid ""
+"All of the alert types mentioned earlier can also be used for trend "
+"reporting. Some other trend examples include:"
+msgstr ""
+"以前に示した全てのアラートタイプは、トレンドレポートに利用可能です。その他の"
+"トレンドの例は以下の通りです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:668
+msgid "The number of instances on each compute node"
+msgstr "各コンピュートノード上のインスタンス数"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:672
+msgid "The types of flavors in use"
+msgstr "使用中のインスタンス種別 （flavor）"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:675
+msgid "The number of volumes in use"
+msgstr "使用中のボリューム数"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:678
+msgid "The number of Object Storage requests each hour"
+msgstr "1時間あたりの Object Storage リクエスト数"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:682
+msgid "The number of nova-api requests each hour"
+msgstr "1時間あたりの nova-api リクエスト数"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:686
+msgid "The I/O statistics of your storage services"
+msgstr "ストレージサービスの I/O の統計"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:690
+msgid ""
+"As an example, recording <code>nova-api</code> usage can allow you to track "
+"the need to scale your cloud controller. By keeping an eye on <code>nova-"
+"api</code> requests, you can determine if you need to spawn more nova-api "
+"processes or go as far as introducing an entirely new server to run "
+"<code>nova-api</code>. To get an approximate count of the requests, look for "
+"standard INFO messages in <code>/var/log/nova/nova-api.log</code>:"
+msgstr ""
+"例として、<code>nova-api</code>の使用を記録することでクラウドコントローラーを"
+"スケールする必要があるかを追跡できます。<code>nova-api</code>のリクエスト数に"
+"注目することにより、<code>nova-api</code>プロセスを追加するか、もしくは、"
+"<code>nova-api</code>を実行するための新しいサーバーを導入することまで行なうか"
+"を決定することができます。リクエストの概数を取得するには<code>/var/log/nova/"
+"nova-api.log</code>のINFOメッセージを検索します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:699
+msgid "# grep INFO /var/log/nova/nova-api.log | wc"
+msgstr "# grep INFO /var/log/nova/nova-api.log | wc"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:700
+msgid ""
+"You can obtain further statistics by looking for the number of successful "
+"requests:"
+msgstr "成功したリクエストを検索することで、更なる情報を取得できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:702
+msgid "# grep \" 200 \" /var/log/nova/nova-api.log | wc"
+msgstr "# grep \" 200 \" /var/log/nova/nova-api.log | wc"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:704
+msgid ""
+"By running this command periodically and keeping a record of the result, you "
+"can create a trending report over time that shows whether your <code>nova-"
+"api</code> usage is increasing, decreasing, or keeping steady."
+msgstr ""
+"このコマンドを定期的に実行し結果を記録することで、トレンドレポートを作ること"
+"ができます。これにより<code>/var/log/nova/nova-api.log</code>の使用量が増えて"
+"いるのか、減っているのかをしっかり判断することができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:709
+msgid ""
+"A tool such as collectd can be used to store this information. While "
+"collectd is out of the scope of this book, a good starting point would be to "
+"use collectd to store the result as a COUNTER data type. More information "
+"can be found in collectd's documentation (https://collectd.org/wiki/index."
+"php/Data_source)"
+msgstr ""
+"collectdのようなツールはこのような情報を保管することに利用できます。collectd"
+"はこの本のスコープから外れますが、collectdでCOUNTERデータ形として結果を保存す"
+"るのがよい出発点になります。より詳しい情報はcollectdのドキュメント (https://"
+"collectd.org/wiki/index.php/Data_source)を参照してください。"
