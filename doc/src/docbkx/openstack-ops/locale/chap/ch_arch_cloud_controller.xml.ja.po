@@ -1,0 +1,744 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-21 08:33+0000\n"
+"Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:319
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:267
+msgid "Application Programming Interface (API)"
+msgstr "Application Programming Interface (API)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:16
+msgid "Cloud Controller Design"
+msgstr "クラウドコントローラーの設計"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:17
+msgid ""
+"OpenStack is designed to be massively horizontally scalable, which allows "
+"all services to be distributed widely. However, to simplify this guide we "
+"have decided to discuss services of a more central nature using the concept "
+"of a single <emphasis>cloud controller</emphasis>."
+msgstr ""
+"OpenStack 非常に水平的にスケーラブルに設計されています。これにより、すべての"
+"サービスを広く分散させることができます。しかし、この話を単純にするために、こ"
+"のガイドでは単一の<emphasis>クラウド・コントローラー</emphasis>の概念を使い、"
+"より集中的な性質のサービスとして議論することにしました。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:22
+msgid ""
+"For more details about the overall architecture, see the <xref linkend="
+"\"example_architecture\"/>."
+msgstr ""
+"全体的なアーキテクチャの詳細については、<xref linkend=\"example_architecture"
+"\"/>の章を参照してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:24
+msgid ""
+"As described in this guide, the cloud controller is a single node that hosts "
+"the databases, message queue service, authentication and authorization "
+"service, image management service, user dashboard, and <glossterm>API "
+"endpoint</glossterm>s."
+msgstr ""
+"このガイドに記述されているように、クラウド・コントローラーは、データベース、"
+"メッセージキュー・サービス、認証・認可サービス、イメージ管理サービス、ユー"
+"ザー・ダッシュボード、そして<glossterm>API endpoint</glossterm>を収容する１台"
+"のノードです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:29
+msgid ""
+"The cloud controller provides the central management system for multi-node "
+"OpenStack deployments. Typically the cloud controller manages authentication "
+"and sends messaging to all the systems through a message queue."
+msgstr ""
+"クラウド・コントローラーは、複数ノードで構成されるOpenStackデプロイメントに対"
+"する集中管理機能を提供します。典型的には、クラウドコントローラーは認証およ"
+"び、メッセージ・キューを通じたメッセージのやりとりを管理します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:33
+msgid ""
+"For our example, the cloud controller has a collection of <code>nova-*</"
+"code> components that represent the global state of the cloud, talks to "
+"services such as authentication, maintains information about the cloud in a "
+"database, communicates to all compute nodes and storage <glossterm>worker</"
+"glossterm>s through a queue, and provides API access. Each service running "
+"on a designated cloud controller may be broken out into separate nodes for "
+"scalability or availability."
+msgstr ""
+"私たちの例では、クラウドコントローラーが <code>nova-*</code> コンポーネント群"
+"を持ちます。これは、クラウドのグローバルな状態を表し、認証のようなサービスと"
+"やりとりし、クラウドの情報をデータベースで維持し、メッセージ・キューを通して"
+"すべてのコンピュート・ノードとストレージ<glossterm>ワーカー</glossterm>と通信"
+"し、 API アクセスを提供します。可用性やスケーラビリティのために、あるクラウド"
+"コントローラーで動作するそれぞれのサービスを別々のノードに分離することができ"
+"ます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:44
+msgid "Hardware Considerations"
+msgstr "ハードウェアの考慮事項"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:45
+msgid ""
+"A cloud controller's hardware can be the same as a compute node, though you "
+"may want to further specify based on the size and type of cloud that you run."
+msgstr ""
+"クラウド・コントローラー用のハードウェアはコンピュート・ノードのものと同じで"
+"かまいませんが、運用するクラウドのサイズとタイプに基づいて、もっと指定したい"
+"かもしれません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:48
+msgid ""
+"It's also possible to use virtual machines for all or some of the services "
+"that the cloud controller manages, such as the message queuing. In this "
+"guide, we assume that all services are running directly on the cloud "
+"controller."
+msgstr ""
+"クラウド・コントローラーが管理するすべての、または一部のサービス、たとえば"
+"メッセージ・キューに対して仮想マシンを使うことも可能です。このガイドでは、す"
+"べてのサービスが直接クラウド・コントローラ上で実行されるものと仮定します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:53
+msgid ""
+"To size the server correctly, and determine whether to virtualize any part "
+"of it, you should estimate:"
+msgstr ""
+"クラウド・コントローラーのサーバーを正しくサイジングするため、および一部を仮"
+"想化するかどうか決定するため、以下を見積もるべきです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:57
+msgid "The number of instances that you expect to run"
+msgstr "予期されるインスタンス実行数"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:61
+msgid "The number of compute nodes that you have"
+msgstr "コンピュート・ノードの数"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:64
+msgid "The number of users who will access the compute or storage services"
+msgstr ""
+"コンピュート・サービスまたはストレージ・サービスにアクセスするユーザー数"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:68
+msgid ""
+"Whether users interact with your cloud through the REST API or the dashboard"
+msgstr "ユーザがクラウドへREST APIでアクセスするのかダッシュボードを使うのか"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:72
+msgid ""
+"Whether users authenticate against an external system (such as, LDAP or "
+"<glossterm>Active Directory</glossterm>)"
+msgstr ""
+"ユーザは外部のシステムに対して認証を行うのか (例えば、LDAP や "
+"<glossterm>Active Directory</glossterm>)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:77
+msgid "How long you expect single instances to run"
+msgstr "１つのインスタンスがどのくらい実行され続けるのか"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:86
+msgid "Consideration"
+msgstr "考慮事項"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:87
+msgid "Ramification"
+msgstr "派生問題"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:93
+msgid "How many instances will run at once?"
+msgstr "同時に何インスタンス実行されるか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:96
+msgid ""
+"Size your database server accordingly, and scale out beyond one cloud "
+"controller if many instances will report status at the same time and "
+"scheduling where a new instance starts up needs computing power."
+msgstr ""
+"データベースサーバーを負荷に応じてサイジングしてください。もし、多数のインス"
+"タンスが同時に状態を報告したり、CPU能力が必要な新規インスタンス起動のスケ"
+"ジューリングを行う場合は、１台のクラウド・コントローラーを超えてスケールアウ"
+"トしてください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:105
+msgid "How many compute nodes will run at once?"
+msgstr "同時にComputeノードが何ノード実行されますか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:108
+msgid ""
+"Ensure that your messaging queue handles requests successfully and size "
+"accordingly."
+msgstr ""
+"メッセージ・キューが正しくリクエストを処理することを保証し、適切にサイジング"
+"してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:114
+msgid "How many users will access the API?"
+msgstr "どのくらい多くのユーザがAPIにアクセスしますか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:117
+msgid ""
+"If many users will make multiple requests, make sure that the CPU load for "
+"the cloud controller can handle. it."
+msgstr ""
+"もし多数のユーザが複数のリクエストを発行するのであれば、クラウド・コントロー"
+"ラーがそれらを扱えるよう、CPU負荷を確認してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:124
+msgid "How many users will access the <glossterm>dashboard</glossterm>?"
+msgstr ""
+"どのくらい多くのユーザが <glossterm>ダッシュボード</glossterm>にアクセスしま"
+"すか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:127
+msgid ""
+"The dashboard makes many requests, even more than the API access, so add "
+"even more CPU if your dashboard is the main interface for your users."
+msgstr ""
+"ダッシュボードは、APIアクセスよりもさらに多くのリクエストを発行します。そのた"
+"め、もしユーザに対するインタフェースがダッシュボードなのであれば、より多くの"
+"CPUを追加してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:134
+msgid ""
+"How many <code>nova-api</code> services do you run at once for your cloud?"
+msgstr ""
+"あなたのクラウドのために、どのくらい多くの<code>nova-api</code>サービスを同時"
+"に実行しますか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:138
+msgid "You need to size the controller with a core per service."
+msgstr ""
+"サービスごとに１コア割り当ててコントローラーをサイジングする必要があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:143
+msgid "How long does a single instance run?"
+msgstr "１つのインスタンスがどのくらい実行され続けますか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:146
+msgid ""
+"Starting instances and deleting instances is demanding on the compute node "
+"but also demanding on the controller node because of all the API queries and "
+"scheduling needs."
+msgstr ""
+"インスタンスの起動と停止はComputeノードに負荷をかけますが、それだけでなく、す"
+"べてのAPI処理とスケジューリングの必要性のために、コントローラーノードにも負荷"
+"をかけます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:154
+msgid "Does your authentication system also verify externally?"
+msgstr "認証システムは外部に確認を行いますか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:157
+msgid ""
+"Ensure network connectivity between the cloud controller and external "
+"authentication system are good and that the cloud controller has the CPU "
+"power to keep up with requests."
+msgstr ""
+"クラウド・コントローラーと外部の認証システムの間のネットワーク接続性が良好で"
+"あることと、クラウド・コントローラーがリクエストを処理するのに十分なCPU能力が"
+"あることを確認してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:168
+msgid "Separation of Services"
+msgstr "サービスの分離"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:169
+msgid ""
+"While our example contains all central services in a single location, it is "
+"possible and indeed often a good idea to separate services onto different "
+"physical servers. The following is a list of deployment scenarios we've "
+"seen, and their justifications."
+msgstr ""
+"私たちの例には、一か所にすべての集中的なサービスが含まれていますが、サービス"
+"を異なる物理サーバーに分離するのは可能ですし、多くの場合、本当に良いアイデア"
+"です。以下は、私たちがみたデプロイメントのシナリオと、その妥当性です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:180
+msgid ""
+"Run <code>glance-*</code> servers on the <code>swift-proxy</code> server"
+msgstr ""
+"<code>glance-*</code> サーバーを、 <code>swift-proxy</code> サーバーの上で実"
+"行する"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:184
+msgid ""
+"This deployment felt the spare I/O on the Object Storage proxy server was "
+"sufficient, and the Image Delivery portion of Glance benefited from being on "
+"physical hardware and having good connectivity to the Object Storage back-"
+"end it was using."
+msgstr ""
+"このデプロイメントでは、オブジェクト・ストレージのプロキシサーバーの I/O の空"
+"きは十分でした。そして、Glance のイメージ配信部分は、それが利用しているオブ"
+"ジェクトストレージと同じ物理マシンの上にあり、バックエンドに対して良好な接続"
+"性をもつことにより、恩恵を得られました。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:196
+msgid "Run a central dedicated database server"
+msgstr "専用の中央データベース・サーバーを運用する"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:199
+msgid ""
+"This deployment made a central dedicated server to provide the databases for "
+"all services. This simplified operations by isolating database server "
+"updates, and allowed for the simple creation of slave database servers for "
+"failover."
+msgstr ""
+"このデプロイメントでは、すべてのサービスに対するデータベース・サービスを提供"
+"する専用サーバを設置しました。これにより、データベースサーバーのアップデート"
+"を分離でき、運用がシンプルになりました。また、フェイルオーバーのためのスレー"
+"ブ・データベース・サーバーの設置が単純になりました。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:209
+msgid "Run one VM per service"
+msgstr "サービスごとに１台のVMを動作させる"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:211
+msgid ""
+"This deployment ran central services on a set of servers running KVM. A "
+"dedicated VM was created for each service (nova-scheduler, rabbitmq, "
+"database etc). This assisted the deployment with scaling as they could tune "
+"the resources given to each virtual machine based on the load they received "
+"(something that was not well understood during installation)."
+msgstr ""
+"このデプロイメントでは、KVM を実行しているサーバー群において集中的なサービス"
+"群を動作させています。 各サービス (nova-scheduler、rabbitmq、データベース等) "
+"に対して専用 VM が作成さています。これにより、各仮想マシンごとに、かかった負"
+"荷 (構築中にはよくわからなかったこと) に応じてリソースをチューニングすること"
+"ができました。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:224
+msgid "Use an external load balancer"
+msgstr "外部ロードバランサーを使う"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:227
+msgid ""
+"This deployment had an expensive hardware load balancer in their "
+"organisation. They ran multiple <code>nova-api</code> and <code>swift-proxy</"
+"code> servers on different physical servers and used the load balancer to "
+"switch between them."
+msgstr ""
+"このデプロイメントでは、組織内に高価なハードウェア・ロードバランサーを持って"
+"いました。彼らは複数の <code>nova-api</code> と<code>swift-proxy</code> サー"
+"バーを異なる物理サーバーで動作させ、それらの間の振り分けにロードバランサーを"
+"使いました。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:239
+msgid ""
+"One choice that always comes up is whether to virtualize or not. Some "
+"services, such as nova-compute, swift-proxy and swift-object servers, should "
+"not be virtualized. However, control servers can often be happily "
+"virtualized - the performance penalty can usually be offset by simply "
+"running more of the service."
+msgstr ""
+"いつも問題になる一つの選択は、仮想化するかどうかです。nova-compute、swift-"
+"proxy そして swift-object といったサーバーは仮想化するべきではありません。し"
+"かし、コントローラーサーバーは問題なく仮想化することができます。通常、性能ペ"
+"ナルティは、単により多くのサービスを動作させることにより相殺することができま"
+"す。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:247
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:52
+msgid "Database"
+msgstr "データベース"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:248
+msgid ""
+"Most OpenStack Compute central services, and currently also the nova-compute "
+"nodes, use the database for stateful information. Loss of this ability leads "
+"to errors. As a result, we recommend that you cluster your databases in some "
+"way to make them failure tolerant."
+msgstr ""
+"OpenStack Compute のほとんどの中央サービスは、現在は nova-compute も含めて、"
+"状態の情報を保存するのにデータベースを利用します。この機能を喪失することはエ"
+"ラーにつながります。ですので、耐故障性のために、なんらかの方法でデータベース"
+"をクラスタ化することを推奨します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:255
+msgid "Message Queue"
+msgstr "メッセージキュー"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:256
+msgid ""
+"Most OpenStack Compute services communicate with each other using the "
+"Message Queue. In general, if the message queue fails or becomes "
+"inaccessible, the cluster grinds to a halt and ends up in a \"read only\" "
+"state, with information stuck at the point where the last message was sent. "
+"Accordingly, we recommend that you cluster the message queue - and RabbitMQ "
+"has in-build abilities to do this."
+msgstr ""
+"OpenStack Compute のほとんどのサーバーは、メッセージ・キューを利用してお互い"
+"に通信しあっています。一般論として、このメッセージ・キューが故障するかアクセ"
+"スできなくなると、Novaのクラスタは、最後のメッセージが送信されたところの情報"
+"でとどまったまま、ゆっくり停止し、「リード・オンリー」状態になります。した"
+"がって、メッセージ・キューもクラスタ化することを推奨します。RabbitMQ には、こ"
+"れを行う機能が組み込まれています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:268
+msgid ""
+"All public access, whether direct, through a command line client, or through "
+"the web-based dashboard, uses the API service. Find the API reference at "
+"<link href=\"http://api.openstack.org/\">http://api.openstack.org/</link>."
+msgstr ""
+"直接であっても、コマンドライン・クライアントであっても、Webベースのダッシュ"
+"ボードであっても、一般ユーザからのアクセスはAPIサービスを利用します。 API リ"
+"ファレンスは <link href=\"http://api.openstack.org/\">http://api.openstack."
+"org/</link> にあります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:273
+msgid ""
+"You must choose whether you want to support the Amazon EC2 compatibility "
+"APIs, or just the OpenStack APIs. One issue you might encounter when running "
+"both APIs is an inconsistent experience when referring to images and "
+"instances."
+msgstr ""
+"Amazon EC2 互換API をサポートしたいか、OpenStack API だけなのか、選択しなけれ"
+"ばなりません。両方の API を運用する場合、イメージとインスタンスを参照する際の"
+"見え方が違うことが一つの論点になります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:278
+msgid ""
+"For example, the EC2 API refers to instances using IDs that contain "
+"hexadecimal whereas the OpenStack API uses names and digits. Similarly, the "
+"EC2 API tends to rely on DNS aliases for contacting virtual machines, as "
+"opposed to OpenStack which typically lists IP addresses."
+msgstr ""
+"例えば、EC2 API では、16進数を含むIDを使ってインスタンスを参照するのに対し"
+"て、OpenStack API では名前と数値を使います。類似の話題として、EC2 API は仮想"
+"マシンに接続するのに DNS エイリアスに頼る傾向がありますが、OpenStack では典型"
+"的には IP アドレスを使います。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:283
+msgid ""
+"If OpenStack is not set up in the right way, it is simple to have scenarios "
+"where users are unable to contact their instances due to only having an "
+"incorrect DNS alias. Despite this, EC2 compatibility can assist users "
+"migrating to your cloud."
+msgstr ""
+"もし OpenStack が正しく設定されていなければ、不正な DNS エイリアスしか得られ"
+"ないことによりユーザがインスタンスに接続できないという事態が容易に発生しま"
+"す。こうした事情にもかかわらず、EC2 互換性はユーザーをお使いのクラウドに移行"
+"させるのに役立ちます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:288
+msgid ""
+"Like databases and message queues, having more than one <glossterm>API "
+"server</glossterm> is a good thing. Traditional HTTP load balancing "
+"techniques can be used to achieve a highly available <code>nova-api</code> "
+"service."
+msgstr ""
+"データベースやメッセージ・キューのように、１台より多くの <glossterm>API サー"
+"バー</glossterm> を置くのは良いことです。<code>nova-api</code>　サービスを高"
+"可用にするために、伝統的な HTTP 負荷分散技術を利用することができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:295
+msgid "Extensions"
+msgstr "API 拡張"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:296
+msgid ""
+"The <link title=\"API Specifications\" href=\"http://docs.openstack.org/api/"
+"api-specs.html\">API Specifications</link> (http://docs.openstack.org/api/"
+"api-specs.html) define the core actions, capabilities, and media-types of "
+"the OpenStack API. A client can always depend on the availability of this "
+"core API and implementers are always required to support it in its entirety. "
+"Requiring strict adherence to the core API allows clients to rely upon a "
+"minimal level of functionality when interacting with multiple "
+"implementations of the same API."
+msgstr ""
+"<link title=\"API Specifications\" href=\"http://docs.openstack.org/api/api-"
+"specs.html\">API Specifications</link> (http://docs.openstack.org/api/api-"
+"specs.html) に OpenStack API コアのアクション、ケーパビリティ、メディアタイプ"
+"が定義されています。クライアントはいつでもこのコアAPIが使えることに依存するこ"
+"とができますし、実装者はいつでも完全にサポートすることが求められます。コアAPI"
+"の厳守を要求することにより、クライアントは同じAPIの複数の実装とやりとりする際"
+"に、最小限のレベルの機能に依存することができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:307
+msgid ""
+"The OpenStack Compute API is extensible. An extension adds capabilities to "
+"an API beyond those defined in the core. The introduction of new features, "
+"MIME types, actions, states, headers, parameters, and resources can all be "
+"accomplished by means of extensions to the core API. This allows the "
+"introduction of new features in the API without requiring a version change "
+"and allows the introduction of vendor-specific niche functionality."
+msgstr ""
+"OpenStack Compute API は拡張可能です。ある拡張は、あるAPIにコア定義を超えた"
+"ケーパビリティを追加します。新機能、新しい MIME type、アクション、状態、ヘッ"
+"ダ、パラメータ、そしてリソースの導入は、コアAPIの拡張によって達成することがで"
+"きます。これにより、APIに対してバージョンを変更することなく新機能を導入するこ"
+"とができ、ベンダ固有の特定の機能を導入することもできます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:319
+msgid "Scheduler"
+msgstr "スケジューラー"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:320
+msgid ""
+"Fitting various sized virtual machines (different <emphasis>flavors</"
+"emphasis>) into different sized physical nova-compute nodes is a challenging "
+"problem - researched generically in Computer Science as a packing problem."
+msgstr ""
+"さまざまなサイズ(異なる <emphasis>フレーバー</emphasis>)の仮想マシンを、異な"
+"る能力の物理 nova-compute ノードに配置するのは、一般的にコンピュータ科学で "
+"packing problem として研究されている難しい問題です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:325
+msgid ""
+"You can use various techniques to handle this problem, one of which is to "
+"have flavor sizes scale linearly, be a proportional fraction of your "
+"physical node capacity, though solving this problem is out of the scope of "
+"this book. To support your scheduling choices, OpenStack Compute provides "
+"several different types of scheduling drivers, a full discussion of which is "
+"found in the <link title=\"API Specifications\" href=\"http://docs.openstack."
+"org/folsom/openstack-compute/admin/content/ch_scheduling.html\">reference "
+"manual</link> (http://docs.openstack.org/folsom/openstack-compute/admin/"
+"content/ch_scheduling.html)."
+msgstr ""
+"この問題に対しては様々なテクニックを使うことができます。ひとつの方法は、フ"
+"レーバーのサイズを線形にすること、つまり、物理ノードの容量に比例した割合にす"
+"ることですが、この問題を解くことは本書のスコープ外です。スケジューリングの選"
+"択肢の助けとなるために、OpenStack Compute はいくつかの異なるタイプのスケ"
+"ジューリング・ドライバを提供しており、この議論の全体は <link title=\"API "
+"Specifications\" href=\"http://docs.openstack.org/folsom/openstack-compute/"
+"admin/content/ch_scheduling.html\">リファレンス・マニュアル</link> (http://"
+"docs.openstack.org/folsom/openstack-compute/admin/content/ch_scheduling."
+"html) にあります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:336
+msgid ""
+"For availability purposes, or for very large or high-schedule frequency "
+"installations, you should consider running multiple nova-scheduler services. "
+"No special load balancing is required, as the nova-scheduler communicates "
+"entirely using the message queue."
+msgstr ""
+"可用性の目的のため、もしくは非常に大規模、もしくは非常に頻繁にスケジューラー"
+"が呼び出される環境のためには、複数の nova-scheduler サービスを動作させること"
+"を検討するべきです。nova-scheduler は完全にメッセージ・キューを使って通信を行"
+"うため、特別な負荷分散は必要ありません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:343
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:27
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:829
+msgid "Images"
+msgstr "イメージ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:344
+msgid ""
+"The OpenStack Image Catalog and Delivery service consists of two parts - "
+"<code>glance-api</code> and <code>glance-registry</code>. The former is "
+"responsible for the delivery of images and the compute node uses it to "
+"download images from the back-end. The latter maintains the metadata "
+"information associated with virtual machine images and requires a database."
+msgstr ""
+"OpenStack Image Catalog and Delivery サービスは、 <code>glance-api</code> と "
+"<code>glance-registry</code> の２つの部分から構成されています。前者は "
+"Compute ノードへのイメージの配送に責任を持ち、Compute ノードはバックエンドか"
+"らイメージをダウンロードするために使います。後者は、仮想マシンのイメージに関"
+"連するメタデータ情報を管理し、データベースを必要とします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:351
+msgid ""
+"The <code>glance-api</code> part is an abstraction layer that allows a "
+"choice of back-end. Currently, it supports:"
+msgstr ""
+"<code>glance-api</code> は、バックエンドの選択を可能にする抽象化レイヤであ"
+"り、現在は以下をサポートしています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:356
+msgid "OpenStack Object Storage. Allows you to store images as objects."
+msgstr ""
+"OpenStack Object Storage。イメージをオブジェクトとして保存することができま"
+"す。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:360
+msgid ""
+"File system. Uses any traditional file system to store the images as files."
+msgstr ""
+"ファイルシステム。イメージをファイルとして保存するのに、任意の伝統的なファイ"
+"ルシステムを使用します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:364
+msgid ""
+"S3. Allows you to fetch images from Amazon S3. You cannot write images by "
+"using this mode."
+msgstr ""
+"S3。Amazon S3 からイメージを取得することができます。このモードでは、イメージ"
+"の書き込みはできません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:368
+msgid ""
+"HTTP. Allows you to fetch images from a web server. You cannot write images "
+"by using this mode."
+msgstr ""
+"HTTP。Webサーバーからイメージを取得することができます。このモードでは、イメー"
+"ジの書き込みはできません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:373
+msgid ""
+"If you have an OpenStack Object Storage service, we recommend using this as "
+"a scalable place to store your images. Failing that, a file system with "
+"sufficient performance is the only real option - unless you do not need the "
+"ability to upload new images through OpenStack."
+msgstr ""
+"OpenStack Object Storage サービスがあるのであれば、イメージを保存するスケーラ"
+"ブルな場所として利用することを推奨します。そうでない場合は、OpenStackを通じて"
+"新しいイメージをアップロードする必要がない場合を除いて、充分な性能のあるファ"
+"イルシステムが唯一の選択肢です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:381
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:1001
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:382
+msgid ""
+"The OpenStack Dashboard is implemented as a Python web application that runs "
+"in <glossterm>Apache</glossterm><code>httpd</code>. Therefore, you may treat "
+"it the same as any other web application, provided it can reach the API "
+"servers (including their admin endpoints) over the network."
+msgstr ""
+"OpenStack ダッシュボードは、<glossterm>Apache</glossterm> <code>httpd</code>"
+"の中で実行される Python の Web アプリケーションとして実装されています。した"
+"がって、そこから ネットワーク経由で (admin エンドポイントを含む) API サーバー"
+"にアクセスできるという条件の下、他の任意の Web アプリケーションと同じように取"
+"り扱うことができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:391
+msgid "Authentication and Authorization"
+msgstr "認証および認可"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:392
+msgid ""
+"The concepts supporting OpenStack's authentication and authorization are "
+"derived from well understood and widely used systems of a similar nature. "
+"Users have credentials they can use to authenticate, and they can be a "
+"member of one or more groups (known as projects or tenants interchangeably)."
+msgstr ""
+"OpenStack の認証・認可を支える概念は、よく理解され、類似の性質のシステムで広"
+"く使用されているものから得られています。ユーザは、認証に使えるクレデンシャル"
+"を持ち、１つ以上のグループ(プロジェクトまたはテナントして知られています)のメ"
+"ンバとなることができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:398
+msgid ""
+"For example, a cloud administrator might be able to list all instances in "
+"the cloud, whereas a user can only see those in their current group. "
+"Resources quotas, such as the number of cores that can be used, disk space, "
+"and so on, are associated with a project."
+msgstr ""
+"例えば、クラウドのユーザは自分の現在のグループに属するインスタンスのみが見え"
+"るのに対して、クラウドの管理者はそのクラウドのすべてのインスタンスの一覧をと"
+"ることができるでしょう。利用可能なコア数、ディスク容量等のリソースのクォータ"
+"はプロジェクトに対して関連づけられています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:403
+msgid ""
+"The OpenStack Identity Service (Keystone) is the point that provides the "
+"authentication decisions and user attribute information, which is then used "
+"by the other OpenStack services to perform authorization. Policy is set in "
+"the policy.json file. For information on how to configure these, see <xref "
+"linkend=\"projects_users\"/>."
+msgstr ""
+"OpenStack Identity Service (Keystone) は、認証の判定とユーザの属性情報を提供"
+"する場となり、他の OpenStack サービスから認可のために使用されます。ポリシー"
+"は policy.json で記述されます。これらを設定するための情報については、<xref "
+"linkend=\"projects_users\"/> を参照してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:410
+msgid ""
+"The Identity Service supports different plugins for back-end authentication "
+"decisions, and storing information. These range from pure storage choices to "
+"external systems and currently include:"
+msgstr ""
+"Identity サービスは、バックエンド認証と情報保持のために種々のプラグインをサ"
+"ポートしています。これらの選択肢は、純粋なストレージの選択から、外部認証シス"
+"テムにわたり、現在は以下が含まれています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:416
+msgid "In-memory Key-Value Store"
+msgstr "インメモリ・キーバリュー・ストア"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:419
+msgid "SQL database"
+msgstr "SQLデータベース"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:422
+msgid "PAM"
+msgstr "PAM"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:425
+msgid "LDAP"
+msgstr "LDAP"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:428
+msgid ""
+"Many deployments use the SQL database, however LDAP is also a popular choice "
+"for those with existing authentication infrastructure that needs to be "
+"integrated."
+msgstr ""
+"多くのデプロイメントでSQLデータベースが使われていますが、既存の認証インフラと"
+"インテグレーションｓる必要のある環境では、LDAPもポピュラーな選択肢です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:435
+msgid "Network Considerations"
+msgstr "ネットワークの考慮事項"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:436
+msgid ""
+"Because the cloud controller handles so many different services, it must be "
+"able to handle the amount of traffic that hits it. For example, if you "
+"choose to host the OpenStack Imaging Service on the cloud controller, the "
+"cloud controller should be able to support the transferring of the images at "
+"an acceptable speed."
+msgstr ""
+"クラウド・コントローラーは非常に多くのサービスを取り扱うため、到来するトラ"
+"フィックを処理できなければなりません。例えば、クラウド・コントローラー上に "
+"OpenStack Image サービスを乗せることにした場合、そのクラウド・コントローラー"
+"は許容可能な速度でイメージの転送できなければなりません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:442
+msgid ""
+"As another example, if you choose to use single-host networking where the "
+"cloud controller is the network gateway for all instances, then the Cloud "
+"Controller must support the total amount of traffic that travels between "
+"your cloud and the public Internet."
+msgstr ""
+"他の例としては、クラウド・コントローラーがすべてのインスタンスの gateway とな"
+"るような単一ホスト・ネットワークモデルを使うことにした場合、クラウド・コント"
+"ローラーは外部インターネットとあなたのクラウドの間でやりとりされるすべてのト"
+"ラフィックを支えられなければなりません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:447
+msgid ""
+"We recommend that you use a fast NIC, such as 10 GB. You can also choose to "
+"use two 10 GB NICs and bond them together. While you might not be able to "
+"get a full bonded 20 GB speed, different transmission streams use different "
+"NICs. For example, if the Cloud Controller transfers two images, each image "
+"uses a different NIC and gets a full 10 GB of bandwidth."
+msgstr ""
+"10GbEのような高速なNICを使うことを推奨します。また、10GbE NICを2枚使って "
+"bonding することもできます。束ねられた 20Gbps の速度をフルに使うことはできな"
+"いかもしれませんが、異なる送信ストリームは異なるNICを使います。\n"
+"例えば、クラウド・コントローラーが2つのイメージを送信する場合、それぞれのイ"
+"メージが別のNICを使い、10Gbpsの帯域をフルに使うことができます。"
