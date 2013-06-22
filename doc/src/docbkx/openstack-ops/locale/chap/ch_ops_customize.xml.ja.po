@@ -1,0 +1,872 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-21 08:33+0000\n"
+"Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:161
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:262
+msgid "account"
+msgstr "アカウント"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:975
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:47
+msgid "DevStack"
+msgstr "DevStack"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2775
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:262
+msgid "token"
+msgstr "トークン"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:381
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:1001
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:16
+msgid "Customize"
+msgstr "カスタマイズ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:17
+msgid ""
+"OpenStack might not do everything you need it to do out of the box. In these "
+"cases, you can follow one of two major paths. First, you can learn <link "
+"href=\"https://wiki.openstack.org/wiki/How_To_Contribute\">How To "
+"Contribute</link> (https://wiki.openstack.org/wiki/How_To_Contribute), "
+"follow the <link href=\"https://wiki.openstack.org/wiki/GerritWorkflow"
+"\">Code Review Workflow</link> (https://wiki.openstack.org/wiki/"
+"GerritWorkflow), make your changes and contribute them back to the upstream "
+"OpenStack project. This path is recommended if the feature you need requires "
+"deep integration with an existing project. The community is always open to "
+"contributions and welcomes new functionality that follows the feature "
+"development guidelines."
+msgstr ""
+"OpenStack はあなたが必要とするすべてのことをしてくれるわけではないかもしれま"
+"せん。この場合、主に2つのやり方のうちのいずれかに従ってください。まず最初に、"
+"<link href=\"https://wiki.openstack.org/wiki/How_To_Contribute\">貢献するには"
+"</link> (https://wiki.openstack.org/wiki/How_To_Contribute) を学び、<link "
+"href=\"https://wiki.openstack.org/wiki/GerritWorkflow\">Code Review "
+"Workflow</link> (https://wiki.openstack.org/wiki/GerritWorkflow) に従って、あ"
+"なたの修正を上流の OpenStack プロジェクトへコントリビュートしてください。も"
+"し、あなたが必要な機能が既存のプロジェクトと密にインテグレーションする必要が"
+"ある場合、これが推奨される選択肢です。コミュニティは、いつでも貢献に対して開"
+"かれていますし、機能開発ガイドラインに従う新機能を歓迎します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:33
+msgid ""
+"Alternately, if the feature you need does not require deep integration, "
+"there are other ways to customize OpenStack. If the project where your "
+"feature would need to reside uses the Python Paste framework, you can create "
+"middleware for it and plug it in through configuration. There may also be "
+"specific ways of customizing an project such as creating a new scheduler for "
+"OpenStack Compute or a customized Dashboard. This chapter focuses on the "
+"second method of customizing OpenStack."
+msgstr ""
+"代替え案としては、もしあなたが必要とする機能が密なインテグレーションを必要と"
+"しないのであれば、OpenStack をカスタマイズする他の方法があります。もし、あな"
+"たの機能が必要とされるプロジェクトが Python Paste フレームワークを使っている"
+"のであれば、そのための ミドルウェアを作成し、環境設定を通じて組み込めばよいの"
+"です。例えば OpenStack Compute の新しいスケジューラーや、カスタマイズされた"
+"ダッシュボードを作成するといった、プロジェクトをカスタマイズする特定の方法も"
+"あるかもしれません。この章では、OpenStack をカスタマイズする後者の方法に"
+"フォーカスします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:42
+msgid ""
+"To customize OpenStack this way you'll need a development environment. The "
+"best way to get an environment up and running quickly is to run DevStack "
+"within your cloud."
+msgstr ""
+"OpenStack をこの方法でカスタマイズするためには、開発環境が必要です。開発環境"
+"を手軽に動作させる最良の方法は、クラウドの中で DevStack を動かすことです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:48
+msgid ""
+"You can find all of the documentation at the <link href=\"http://devstack."
+"org/\">DevStack</link> (http://devstack.org/) website. Depending on which "
+"project you would like to customize, either Object Storage (swift) or "
+"another project, you must configure DevStack differently. For the middleware "
+"example below, you must install with the Object Store enabled."
+msgstr ""
+"ドキュメンテーションはすべて <link href=\"http://devstack.org/\">DevStack</"
+"link> (http://devstack.org/) のウェブサイトにあります。 どのプロジェクトをカ"
+"スタマイズしたいかによって、つまり Object Storage (swift) なのか他のプロジェ"
+"クトなのかによって、DevStack の環境設定が異なります。以下の middleware の例で"
+"は、Object Storage を有効にしてインストールしなければなりません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:57
+msgid "To run DevStack for the stable Folsom branch on an instance:"
+msgstr "インスタンス上で、Folsom の安定版用の DevStack を動作させるためには："
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:61
+msgid ""
+"Boot an instance from the Dashboard or the nova command-line interface (CLI) "
+"with the following parameters."
+msgstr ""
+"ダッシュボード、または nova のコマンドラインインタフェース(CLI)から、以下のパ"
+"ラメータでインスタンスを起動してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:66
+msgid "Name: devstack"
+msgstr "名前: devstack"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:69
+msgid "Image: Ubuntu 12.04 LTS"
+msgstr "イメージ: Ubuntu 12.04 LTS"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:72
+msgid "Memory Size: 4 GB RAM (you could probably get away with 2 GB)"
+msgstr "メモリサイズ: 4 GB RAM (おそらく 2 GB でもなんとかなるでしょう)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:76
+msgid "Disk Size: minimum 5 GB"
+msgstr "ディスクサイズ: 最低 5 GB"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:79
+msgid ""
+"If you are using the <code>nova</code> client, specify <code>--flavor 6</"
+"code> on the <code>nova boot</code> command to get adequate memory and disk "
+"sizes."
+msgstr ""
+"<code>nova</code> コマンドを使っているのであれば、適切なメモリ量とDISKサイズ"
+"を得るために <code>nova boot</code> コマンドに <code>--flavor 6</code> を指定"
+"してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:85
+msgid ""
+"If your images have only a root user, you must create a \"stack\" user. "
+"Otherwise you run into permission issues with screen if you let <code>stack."
+"sh</code> create the \"stack\" user for you. If your images already have a "
+"user other than root, you can skip this step."
+msgstr ""
+"利用するイメージで root ユーザしか使えない場合、stack ユーザを作成しなければ"
+"なりません。でなければ、<code>stack.sh</code> スクリプトに stack ユーザを作成"
+"させる時に、screen に関するパーミッションの問題にぶつかります。利用するイメー"
+"ジに、既に root 以外のユーザがあるのであれば、このステップは省略できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:104
+msgid "Enter a new password at the prompt."
+msgstr "プロンプトに対して新しいパスワードを入力します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:137
+msgid "Now login as the stack user and set up DevStack."
+msgstr "stack ユーザとしてログインし、DevStack の設定を行います。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:146
+msgid "At the prompt, enter the password that you created for the stack user. "
+msgstr "プロンプトに対して、stack ユーザに作ったパスワードを入力します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:176
+msgid ""
+"For Swift only, used in the <emphasis role=\"bold\">Middleware Example</"
+"emphasis>, see the example <emphasis role=\"bold\">[1] Swift only localrc</"
+"emphasis> below"
+msgstr ""
+"Swift のみ、<emphasis role=\"bold\">Middleware Example</emphasis> で使用され"
+"た, 以下の <emphasis role=\"bold\">[1] Swift only localrc</emphasis> の例を参"
+"照してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:184
+msgid ""
+"For all other projects, used in the <emphasis role=\"bold\">Nova Scheduler "
+"Example</emphasis>, see the example <emphasis role=\"bold\">[2] All other "
+"projects localrc</emphasis> below"
+msgstr ""
+"他のすべてのプロジェクトについて、 <emphasis role=\"bold\">Nova Scheduler "
+"Example</emphasis> で使用された, 以下の <emphasis role=\"bold\">[2] All "
+"other projects localrc</emphasis> の例を参照してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:199
+msgid "<placeholder-1/> "
+msgstr "<placeholder-1/> "
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:206
+msgid ""
+"The <code>stack.sh</code> script takes a while to run. Perhaps take this "
+"opportunity to <link href=\"http://www.openstack.org/join/\">join the "
+"OpenStack foundation</link> (http://www.openstack.org/join/)."
+msgstr ""
+"<code>stack.sh</code> の実行には、しばらく時間がかかります。できれば、この時"
+"間を使って <link href=\"http://www.openstack.org/join/\">OpenStack ファウン"
+"デーションに参加</link>してください (http://www.openstack.org/join/)。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:215
+msgid ""
+"When you run <code>stack.sh</code>, you might see an error message that "
+"reads “ERROR: at least one RPC back-end must be enabled”. Don’t worry about "
+"it; swift and keystone do not need an RPC (AMQP) back-end. You can also "
+"ignore any <code>ImportErrors</code>."
+msgstr ""
+"<code>stack.sh</code> を実行する際、“ERROR: at least one RPC back-end must "
+"be enabled” というエラーメッセージが出るかもしれません。これは心配しないでく"
+"ださい。swift と keystone はRPC (AMQP) バックエンドを必要としないのです。同様"
+"に、<code>ImportErrors</code> はすべて無視できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:226
+msgid ""
+"Screen is a useful program for viewing many related services at once. For "
+"more information, see <link href=\"http://aperiodic.net/screen/"
+"quick_reference\">GNU screen quick reference</link>. (http://aperiodic.net/"
+"screen/quick_reference)"
+msgstr ""
+"Screen は、多くの関連するサービスを同時に見るための便利なプログラムです。"
+"<link href=\"http://aperiodic.net/screen/quick_reference\">GNU screen quick "
+"reference</link>. (http://aperiodic.net/screen/quick_reference) を参照してく"
+"ださい。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:239
+msgid ""
+"Now that you have an OpenStack development environment, you're free to hack "
+"around without worrying about damaging your production deployment. Proceed "
+"to either the <emphasis role=\"bold\">Middleware Example</emphasis> for a "
+"Swift-only environment, or the <emphasis role=\"bold\">Nova Scheduler "
+"Example</emphasis> for all other projects."
+msgstr ""
+"以上で OpenStack の開発環境を準備できましたので、運用環境にダメージを与えるこ"
+"とを心配せずに自由にハックできます。Swift のみの環境では <emphasis role="
+"\"bold\">Middleware Example</emphasis> に、‘他のすべてのプロジェクトでは "
+"<emphasis role=\"bold\">Nova Scheduler Example</emphasis> に進んでください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:248
+msgid "[1] Swift only localrc"
+msgstr "[1] Swift only localrc"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:270
+msgid "[2] All other projects localrc"
+msgstr "[2] All other projects localrc"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:302
+msgid "Middleware Example"
+msgstr "Middleware Example"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:303
+msgid ""
+"Most OpenStack projects are based on the Python <link href=\"http://"
+"pythonpaste.org/\">Paste</link>(http://pythonpaste.org/) framework. The best "
+"introduction to its architecture is <link href=\"http://pythonpaste.org/do-"
+"it-yourself-framework.html\">A Do-It-Yourself Framework</link> (http://"
+"pythonpaste.org/do-it-yourself-framework.html). Due to the use of this "
+"framework, you are able to add features to a project by placing some custom "
+"code in a project's pipeline without having to change any of the core code."
+msgstr ""
+"ほとんどの OpenStack プロジェクトは Python <link href=\"http://pythonpaste."
+"org/\">Paste</link>(http://pythonpaste.org/) フレームワークに基づいています。"
+"<link href=\"http://pythonpaste.org/do-it-yourself-framework.html\">A Do-It-"
+"Yourself Framework</link> (http://pythonpaste.org/do-it-yourself-framework."
+"html) は、このアーキテクチャの最良の紹介です。このフレームワークを使っている"
+"ため、コードに一切手をいれずに、プロジェクトの処理パイプラインになんらかのカ"
+"スタム・コードを入れて機能追加を行うことができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:314
+msgid ""
+"To demonstrate customizing OpenStack like this, we'll create a piece of "
+"middleware for swift that allows access to a container from only a set of IP "
+"addresses, as determined by the container's metadata items. Such an example "
+"could be useful in many contexts. For example, you might have public access "
+"to one of your containers, but what you really want to restrict it to is a "
+"set of IPs based on a whitelist."
+msgstr ""
+"このように OpenStack をカスタマイズすることを説明するため、Swift 用に、あるコ"
+"ンテナに対して、そのコンテナのメタデータで指定される一群のIPアドレスのみから"
+"アクセスできるようにする middleware を作成してみます。このような例は多くの状"
+"況で有用です。例えば、一般アクセス可能なコンテナを持っていますが、実際に行い"
+"たいことはホワイトリストに基づいた一群のIPアドレスにのみ制限したい場合です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:323
+msgid ""
+"This example is for illustrative purposes only. It should not be used as a "
+"container IP whitelist solution without further development and extensive "
+"security testing."
+msgstr ""
+"この例は実証目的のみのためにあります。さらなる作りこみと広範なセキュリティテ"
+"ストなしにコンテナのIPホワイトリスト・ソリューションとして使用するべきではあ"
+"りません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:328
+msgid ""
+"When you join the screen session that <code>stack.sh</code> starts with "
+"<code>screen -r stack</code>, you're greeted with three screens if you used "
+"the localrc file with just Swift installed."
+msgstr ""
+"<code>stack.sh</code> が <code>screen -r stack</code> で作成したセッションに "
+"join すると、Swift インストール用の localrc を使ったのであれば、3つの screen "
+"セッションが見えます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:333
+msgid "The asterisk * indicates which screen you are on."
+msgstr "* (アスタリスク)は、どの screen にいるのかを示します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:336
+msgid ""
+"<emphasis role=\"bold\"><code>0$ shell</code></emphasis>. A shell where you "
+"can get some work done."
+msgstr ""
+"<emphasis role=\"bold\"><code>0$ shell</code></emphasis>. 何か作業することが"
+"できる shell セッションです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:343
+msgid ""
+"<emphasis role=\"bold\"><code>1$ key</code></emphasis>. The keystone service."
+msgstr ""
+"<emphasis role=\"bold\"><code>1$ key</code></emphasis>. keystone サービス。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:349
+msgid ""
+"<emphasis role=\"bold\"><code>2$ swift</code></emphasis>. The swift proxy "
+"service."
+msgstr ""
+"<emphasis role=\"bold\"><code>2$ swift</code></emphasis>. swift proxy サービ"
+"ス。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:356
+msgid "To create the middleware and plug it in through Paste configuration:"
+msgstr "middleware を作成して Paste の環境設定を通して組み込むためには："
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:360
+msgid ""
+"All of the code for OpenStack lives in <code>/opt/stack</code>. Go to the "
+"swift directory in the shell screen and edit your middleware module."
+msgstr ""
+"すべての OpenStack のコードは <code>/opt/stack</code> にあります。shell セッ"
+"ションの screen の中で swift ディレクトリに移動し、あなたの middleware モ"
+"ジュールを編集してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:367
+msgid "cd /opt/stack/swift"
+msgstr "cd /opt/stack/swift"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:372
+msgid "vim swift/common/middleware/ip_whitelist.py"
+msgstr "vim swift/common/middleware/ip_whitelist.py"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:379
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:777
+msgid "Copy in the following code. When you're done, save and close the file."
+msgstr ""
+"以下のコードをコピーしてください。作業が終わったら、ファイルを保存して閉じて"
+"ください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:472
+msgid ""
+"There is a lot of useful information in <code>env</code> and <code>conf</"
+"code> that you can use to decide what to do with the request. To find out "
+"more about what properties are available, you can insert the following log "
+"statement into the <code>__init__</code> method"
+msgstr ""
+"<code>env</code> と <code>conf</code> には、リクエストについて何をするのか判"
+"断するのに使える有用な情報が多数含まれています。どんな property が利用可能な"
+"のかを知るには、以下のログ出力文を <code>__init__</code> メソッドに挿入してく"
+"ださい。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:480
+msgid "and the following log statement into the <code>__call__</code> method"
+msgstr ""
+"そして以下のログ出力分を <code>__call__</code> メソッドに挿入してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:485
+msgid ""
+"To plug this middleware into the Swift pipeline you'll need to edit one "
+"configuration file."
+msgstr ""
+"この middleware を Swift の pipeline に組み込むには、設定ファイルを1つ編集す"
+"る必要があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:490
+msgid ""
+"Find the <code>[filter:ratelimit]</code> section and copy in the following "
+"configuration section."
+msgstr ""
+"<code>[filter:ratelimit]</code> セクションを探し、以下の環境定義セクションを"
+"貼り付けてください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:504
+msgid ""
+"Find the <code>[pipeline:main]</code> section and add <code>ip_whitelist</"
+"code> to the list like so. When you're done, save and close the file."
+msgstr ""
+"<code>[pipeline:main]</code> セクションを探し、このように "
+"<code>ip_whitelist</code> リストを追加してください。完了したら、ファイルを保"
+"存して閉じてください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:512
+msgid ""
+"Restart the Swift Proxy service to make Swift use your middleware. Start by "
+"switching to the swift screen."
+msgstr ""
+"Swift にこの middleware を使わせるために、Swift Proxy サービスを再起動しま"
+"す。swift の screen セッションに切り替えてはじめてください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:517
+msgid ""
+"Press Ctrl-A followed by pressing 2, where 2 is the label of the screen. You "
+"can also press Ctrl-A followed by pressing n to go to the next screen."
+msgstr ""
+"Ctrl-A の後で 2 を押します。ここで、2 は screen セッションのラベルです。Ctrl-"
+"A の後で n を押し、次の screen セッションに切り替えることもできます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:523
+msgid "Press Ctrl-C to kill the service."
+msgstr "Ctrl-C を押し、サービスを終了させます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:526
+msgid "Press Up Arrow to bring up the last command."
+msgstr "上矢印キーを押し、最後のコマンドを表示させます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:530
+msgid "Press Enter to run it."
+msgstr "Enter キーを押し、実行します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:535
+msgid ""
+"Test your middleware with the Swift CLI. Start by switching to the shell "
+"screen and finish by switching back to the swift screen to check the log "
+"output."
+msgstr ""
+"Swift の CLI で middleware のテストをしてください。shell の screen セッション"
+"に切り替えてテストを開始し、swift の screen セッションにもどってログ出力を"
+"チェックして終了します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:541
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:937
+msgid "Press Ctrl-A followed by pressing 0"
+msgstr "Ctrl-A の後で 0 を押します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:546
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:942
+msgid "cd ~/devstack"
+msgstr "cd ~/devstack"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:551
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:947
+msgid "source openrc"
+msgstr "source openrc"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:556
+msgid "swift post middleware-test"
+msgstr "swift post middleware-test"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:560
+msgid "Press Ctrl-A followed by pressing 2"
+msgstr "Ctrl-A の後で 2 を押します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:566
+msgid "Among the log statements you'll see the lines."
+msgstr "ログの中に以下の行があるでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:571
+msgid ""
+"The first three statements basically have to do with the fact that "
+"middleware doesn't need to re-authenticate when it interacts with other "
+"Swift services. The last 2 statements are produced by our middleware and "
+"show that the request was sent from our DevStack instance and was allowed."
+msgstr ""
+"基本的に、最初の３行はこの middleware が Swift の他のサービスとやりとりする際"
+"に、再度認証を行う必要がないことを示しています。最後の２行は、この "
+"middleware によって出力されており、リクエストが DevStack インスタンスから送ら"
+"れており、許可されていることを示しています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:579
+msgid ""
+"Test the middleware from outside of DevStack on a remote machine that has "
+"access to your DevStack instance."
+msgstr ""
+" DevStack 環境の外の、DevStack 用インスタンスにアクセス可能なリモートマシンか"
+"ら middleware をテストします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:585
+msgid ""
+"swift --os-auth-url=http://203.0.113.68:5000/v2.0/ --os-region-"
+"name=RegionOne --os-username=demo:demo --os-password=devstack list "
+"middleware-test"
+msgstr ""
+"swift --os-auth-url=http://203.0.113.68:5000/v2.0/ --os-region-"
+"name=RegionOne --os-username=demo:demo --os-password=devstack list "
+"middleware-test"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:594
+msgid ""
+"Container GET failed: http://203.0.113.68:8080/v1/AUTH_.../middleware-test?"
+"format=json 403 Forbidden   You shall not pass!"
+msgstr ""
+"Container GET failed: http://203.0.113.68:8080/v1/AUTH_.../middleware-test?"
+"format=json 403 Forbidden   You shall not pass!"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:601
+msgid ""
+"Check the Swift log statements again and among the log statements you'll see "
+"the lines."
+msgstr "再び Swift のログをチェックすると、以下の行が見つかるでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:609
+msgid ""
+"Here we can see that the request was denied because the remote IP address "
+"wasn't in the set of allowed IPs."
+msgstr ""
+"ここで、リモートIPアドレスが、許可されたIPアドレスの中になかったため、リクエ"
+"ストが拒否されていることがわかります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:614
+msgid ""
+"Back on your DevStack instance add some metadata to your container to allow "
+"the request from the remote machine."
+msgstr ""
+"DevStack用インスタンスに戻り、リモートマシンからのリクエストを許可するような"
+"コンテナのメタデータを追加します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:619
+msgid "Press Ctrl-A followed by pressing 0"
+msgstr "Ctrl-A の後で 0 を押します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:623
+msgid "swift post --meta allow-dev:198.51.100.12 middleware-test"
+msgstr "swift post --meta allow-dev:198.51.100.12 middleware-test"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:631
+msgid ""
+"Now try the command from <xref linkend=\"test_middleware_step\"/> again and "
+"it succeeds."
+msgstr ""
+"<xref linkend=\"test_middleware_step\"/> に記載したコマンドをもう一度試すと、"
+"今度は成功します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:636
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:979
+msgid ""
+"Functional testing like this is not a replacement for proper unit and "
+"integration testing but it serves to get you started."
+msgstr ""
+"このような機能試験は、正しいユニットテストと結合テストの代わりになるものでは"
+"ありませんが、作業を開始することはできます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:639
+msgid ""
+"A similar pattern can be followed in all other projects that use the Python "
+"Paste framework. Simply create a middleware module and plug it in through "
+"configuration. The middleware runs in sequence as part of that project's "
+"pipeline and can call out to other services as necessary. No project core "
+"code is touched. Look for a <code>pipeline</code> value in the project's "
+"<code>conf</code> or <code>ini</code> configuration files in <code>/etc/&lt;"
+"project&gt;</code> to identify projects that use Paste."
+msgstr ""
+"Python Paste フレームワークを使う他のすべてのプロジェクトで、類似のパータンに"
+"従うことができます。単純に middleware モジュールを作成し、環境定義によって組"
+"み込んでください。その middleware はプロジェクトの pipeline の一部として順番"
+"に実行され、必要に応じて他のサービスを呼び出します。プロジェクトのコア・コー"
+"ドは一切修正しません。Paste を使っているプロジェクトを確認するには、<code>/"
+"etc/&lt;project&gt;</code> に格納されている、プロジェクトの <code>conf</"
+"code> または <code>ini</code> 環境定義ファイルの中で　<code>pipeline</code> "
+"変数を探してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:649
+msgid ""
+"When your middleware is done, we encourage you to open source it and let the "
+"community know on the OpenStack mailing list. Perhaps others need the same "
+"functionality. They can use your code, provide feedback, and possibly "
+"contribute. If enough support exists for it, perhaps you can propose that it "
+"be added to the official Swift <link href=\"https://github.com/openstack/"
+"swift/tree/master/swift/common/middleware\">middleware</link> (https://"
+"github.com/openstack/swift/tree/master/swift/common/middleware)."
+msgstr ""
+"あなたの middleware が完成したら、オープンソースにし、OpenStack メーリングリ"
+"ストでコミュニティに知らせることを薦めます。コミュニティの人々はあなたのコー"
+"ドを使い、フィードバックし、おそらくコントリビュートするでしょう。もし充分な"
+"指示があれば、もしかしたら公式なSwift <link href=\"https://github.com/"
+"openstack/swift/tree/master/swift/common/middleware\">middleware</link> "
+"(https://github.com/openstack/swift/tree/master/swift/common/middleware) して"
+"もよいでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:660
+msgid "Nova Scheduler Example"
+msgstr "Nova Scheduler Example"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:661
+msgid ""
+"Many OpenStack projects allow for customization of specific features using a "
+"driver architecture. You can write a driver that conforms to a particular "
+"interface and plug it in through configuration. For example, you can easily "
+"plug in a new scheduler for nova. The existing schedulers for nova are "
+"feature full and well documented at <link href=\"http://docs.openstack.org/"
+"folsom/openstack-compute/admin/content/ch_scheduling.html\">Scheduling</"
+"link> (http://docs.openstack.org/folsom/openstack-compute/admin/content/"
+"ch_scheduling.html). However, depending on your user's use cases, the "
+"existing schedulers might not meet your requirements. You might need to "
+"create a new scheduler."
+msgstr ""
+"多くの OpenStack のプロジェクトでは、ドライバ・アーキテクチャを使うことによっ"
+"て、特定の機能をカスタマイズすることができます。特定のインターフェースに適合"
+"するドライバを書き、環境定義によって組み込むことができます。例えば、簡単に "
+"nova に新しいスケジューラーを組み込むことができます。nova の既存のスケジュー"
+"ラーは、フル機能であり、<link href=\"http://docs.openstack.org/folsom/"
+"openstack-compute/admin/content/ch_scheduling.html\">スケジューリング</link> "
+"(http://docs.openstack.org/folsom/openstack-compute/admin/content/"
+"ch_scheduling.html) によくドキュメントされています。しかし、あなたのユーザの"
+"ユース・ケースに依存して、既存のスケジューラで要件が満たせないかもしれませ"
+"ん。この場合は、新しいスケジューラーを作成する必要があるでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:674
+msgid ""
+"To create a scheduler you must inherit from the class <code>nova.scheduler."
+"driver.Scheduler</code>. Of the five methods that you can override, you "
+"<emphasis>must</emphasis> override the two methods indicated with a \"*\" "
+"below."
+msgstr ""
+"スケジューラーを作成するには、<code>nova.scheduler.driver.Scheduler</code> ク"
+"ラスを継承しなければなりません。オーバーライド可能な５つのメソッドのうち、以"
+"下の \"*\" で示される２つのメソッドをオーバーライド<emphasis>しなければなりま"
+"せん</emphasis>。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:682
+msgid "update_service_capabilities"
+msgstr "update_service_capabilities"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:687
+msgid "hosts_up"
+msgstr "hosts_up"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:692
+msgid "schedule_live_migration"
+msgstr "schedule_live_migration"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:696
+msgid "* <code>schedule_prep_resize</code>"
+msgstr "* <code>schedule_prep_resize</code>"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:700
+msgid "* <code>schedule_run_instance</code>"
+msgstr "* <code>schedule_run_instance</code>"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:704
+msgid ""
+"To demonstrate customizing OpenStack, we'll create an example of a nova "
+"scheduler that randomly places an instance on a subset of hosts depending on "
+"the originating IP address of the request and the prefix of the hostname. "
+"Such an example could be useful when you have a group of users on a subnet "
+"and you want all of their instances to start within some subset of your "
+"hosts."
+msgstr ""
+"OpenStack のカスタマイズをデモするために、リクエストの送信元IPアドレスとホス"
+"ト名のプレフィックスに基づいてインスタンスを一部のホストにランダムに配置する"
+"ようなNova のスケジューラーの例を作成します。この例は、１つのユーザのグループ"
+"が１つのサブネットにおり、インスタンスをホスト群の中の一部のサブネットで起動"
+"したい場合に有用です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:712
+msgid ""
+"This example is for illustrative purposes only. It should not be used as a "
+"scheduler for Nova without further development and testing."
+msgstr ""
+"この例は実証目的のみのためにあります。さらなる作りこみと広範なテストなしに"
+"Novaのスケジューラーとして使用するべきではありません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:716
+msgid ""
+"When you join the screen session that <code>stack.sh</code> starts with "
+"<code>screen -r stack</code>, you are greeted with many screens."
+msgstr ""
+"<code>stack.sh</code> が <code>screen -r stack</code> で作成したセッションに "
+"join すると、多数の screen セッションが見えます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:723
+msgid ""
+"<emphasis role=\"bold\"><code>shell</code></emphasis>. A shell where you can "
+"get some work done."
+msgstr ""
+"<emphasis role=\"bold\"><code>0$ shell</code></emphasis>. 何か作業することが"
+"できる shell セッションです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:730
+msgid ""
+"<emphasis role=\"bold\"><code>key</code></emphasis>. The keystone service."
+msgstr ""
+"<emphasis role=\"bold\"><code>1$ key</code></emphasis>. keystone サービス。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:736
+msgid ""
+"<emphasis role=\"bold\"><code>g-*</code></emphasis>. The glance services."
+msgstr "<emphasis role=\"bold\"><code>g-*</code></emphasis>. glance サービス。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:742
+msgid "<emphasis role=\"bold\"><code>n-*</code></emphasis>. The nova services."
+msgstr "<emphasis role=\"bold\"><code>n-*</code></emphasis>. nova サービス。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:748
+msgid ""
+"<emphasis role=\"bold\"><code>n-sch</code></emphasis>. The nova scheduler "
+"service."
+msgstr ""
+"<emphasis role=\"bold\"><code>n-sch</code></emphasis>。nova スケジューラー"
+"サービス。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:756
+msgid "To create the scheduler and plug it in through configuration:"
+msgstr "スケジューラーを作成して、設定を通して組み込むためには："
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:760
+msgid ""
+"The code for OpenStack lives in <code>/opt/stack</code> so go to the nova "
+"directory and edit your scheduler module."
+msgstr ""
+"OpenStack のコードは <code>/opt/stack</code> にあるので、nova ディレクトリに"
+"移動してあなたのスケジューラーモジュールを編集します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:766
+msgid "cd /opt/stack/nova"
+msgstr "cd /opt/stack/nova"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:771
+msgid "vim nova/scheduler/ip_scheduler.py"
+msgstr "vim nova/scheduler/ip_scheduler.py"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:888
+msgid ""
+"There is a lot of useful information in <code>context</code>, "
+"<code>request_spec</code>, and <code>filter_properties</code> that you can "
+"use to decide where to schedule the instance. To find out more about what "
+"properties are available you can insert the following log statements into "
+"the <code>schedule_run_instance</code> method of the scheduler above."
+msgstr ""
+" <code>context</code> と <code>request_spec</code> と "
+"<code>filter_properties</code>には、どこにインスタンスをスケジュールするのか"
+"決定するのに使える有用な情報が多数含まれています。どんな property が利用可能"
+"なのかを知るには、以下のログ出力文を上記の <code>schedule_run_instance</"
+"code> メソッドに挿入してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:900
+msgid ""
+"To plug this scheduler into Nova you'll need to edit one configuration file."
+msgstr ""
+"このスケジューラーを Nova に組み込むには、設定ファイルを1つ編集する必要があり"
+"ます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:905
+msgid ""
+"Find the <code>compute_scheduler_driver</code> config and change it like so."
+msgstr ""
+"<code>compute_scheduler_driver</code> 設定を見つけ、このように変更してくださ"
+"い。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:910
+msgid ""
+"Restart the Nova scheduler service to make Nova use your scheduler. Start by "
+"switching to the <code>n-sch</code> screen."
+msgstr ""
+"Nova にこのスケジューラーを使わせるために、Nova スケジューラーサービスを再起"
+"動します。 <code>n-sch</code> screen セッションに切り替えてはじめてください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:915
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:964
+msgid "Press Ctrl-A followed by pressing 8"
+msgstr "Ctrl-A の後で 8 を押します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:919
+msgid "Press Ctrl-C to kill the service"
+msgstr "Ctrl-C を押し、サービスを終了させます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:922
+msgid "Press Up Arrow to bring up the last command"
+msgstr "上矢印キーを押し、最後のコマンドを表示させます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:926
+msgid "Press Enter to run it"
+msgstr "Enter キーを押し、実行します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:931
+msgid ""
+"Test your scheduler with the Nova CLI. Start by switching to the shell "
+"screen and finish by switching back to the <code>n-sch</code> screen to "
+"check the log output."
+msgstr ""
+"Nova の CLI でスケジューラーのテストをしてください。shell の screen セッショ"
+"ンに切り替えてテストを開始し、<code>n-sch</code>  screen セッションにもどって"
+"ログ出力をチェックして終了します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:952
+msgid ""
+"IMAGE_ID=`nova image-list | egrep cirros | egrep -v \"kernel|ramdisk\" | awk "
+"'{print $2}'`"
+msgstr ""
+"IMAGE_ID=`nova image-list | egrep cirros | egrep -v \"kernel|ramdisk\" | awk "
+"'{print $2}'`"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:959
+msgid "nova boot --flavor 1 --image $IMAGE_ID scheduler-test"
+msgstr "nova boot --flavor 1 --image $IMAGE_ID scheduler-test"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:970
+msgid "Among the log statements you'll see the line."
+msgstr "ログの中に以下の行があるでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:982
+msgid ""
+"A similar pattern can be followed in all other projects that use the driver "
+"architecture. Simply create a module and class that conform to the driver "
+"interface and plug it in through configuration. Your code runs when that "
+"feature is used and can call out to other services as necessary. No project "
+"core code is touched. Look for a \"driver\" value in the project's conf "
+"configuration files in <code>/etc/&lt;project&gt;</code> to identify "
+"projects that use a driver architecture."
+msgstr ""
+"ドライバ・アーキテクチャを使う他のすべてのプロジェクトで、類似のパータンに従"
+"うことができます。単純に、そのドライバ・インタフェースに従うモジュールとクラ"
+"スを作成し、環境定義によって組み込んでください。あなたのコードはその機能が使"
+"われた時に実行され、必要に応じて他のサービスを呼び出します。プロジェクトのコ"
+"ア・コードは一切修正しません。ドライバ・アーキテクチャを使っているプロジェク"
+"トを確認するには、<code>/etc/&lt;project&gt;</code> に格納されている、プロ"
+"ジェクトの環境定義ファイルの中で　<code>driver</code> 変数を探してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:991
+msgid ""
+"When your scheduler is done, we encourage you to open source it and let the "
+"community know on the OpenStack mailing list. Perhaps others need the same "
+"functionality. They can use your code, provide feedback, and possibly "
+"contribute. If enough support exists for it, perhaps you can propose that it "
+"be added to the official Nova <link href=\"https://github.com/openstack/nova/"
+"tree/master/nova/scheduler\">schedulers</link> (https://github.com/openstack/"
+"nova/tree/master/nova/scheduler)."
+msgstr ""
+"あなたのスケジューラーが完成したら、オープンソースにし、OpenStack メーリング"
+"リストでコミュニティに知らせることをお薦めします。もしかしたら他の人も同じ機"
+"能を必要としているかもしれません。彼らはあなたのコードを使い、フィードバック"
+"し、おそらくコントリビュートするでしょう。もし充分な指示があれば、もしかした"
+"ら公式なNova <link href=\"https://github.com/openstack/nova/tree/master/nova/"
+"scheduler\">スケジューラー</link> (https://github.com/openstack/nova/tree/"
+"master/nova/scheduler) への追加を提案してもよいでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:1002
+msgid ""
+"The Dashboard is based on the Python <link href=\"https://www.djangoproject."
+"com/\">Django</link> (https://www.djangoproject.com/) web application "
+"framework. The best guide to customizing it has already been written and can "
+"be found at <link href=\"http://docs.openstack.org/developer/horizon/topics/"
+"tutorial.html\">Build on Horizon</link> (http://docs.openstack.org/developer/"
+"horizon/topics/tutorial.html)."
+msgstr ""
+"ダッシュボードは、Python <link href=\"https://www.djangoproject.com/"
+"\">Django</link> (https://www.djangoproject.com/) Webアプリケーションフレーム"
+"ワークに基づいています。カスタマイズのための最良のガイドは既に執筆されてお"
+"り、 <link href=\"http://docs.openstack.org/developer/horizon/topics/"
+"tutorial.html\">Build on Horizon</link> (http://docs.openstack.org/developer/"
+"horizon/topics/tutorial.html) にあります。"
