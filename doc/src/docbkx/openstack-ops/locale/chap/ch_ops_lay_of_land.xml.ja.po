@@ -1,0 +1,646 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-21 08:33+0000\n"
+"Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:16
+msgid "Lay of the Land"
+msgstr "環境を把握する"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:17
+msgid ""
+"From this point forward in the guide, we assume that you have an OpenStack "
+"cloud up and running. This section helps you set up your working environment "
+"and use it to take a look around your cloud."
+msgstr ""
+"ここからは、あなたがOpenStackの実行環境を持っていると想定して進めます。この節"
+"は環境の構築と情報収集に役立つでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:22
+msgid "Client Command Line Tools"
+msgstr "クライアントコマンドラインツール"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:23
+msgid ""
+"We recommend using a combination of the OpenStack command line interface "
+"(CLI) client tools and the OpenStack Dashboard. Some users with a background "
+"in other cloud technologies may be using the EC2 Compatibility API, which "
+"uses somewhat different naming conventions from the native API. We highlight "
+"those differences."
+msgstr ""
+"OpenStack command line interface (CLI) クライアントツールとOpenStackダッシュ"
+"ボードを組み合わせて使うことをおすすめします。他のクラウド技術の経験を持つ"
+"ユーザは、EC2互換APIを使っているかも知れませんが、それとは命名規則が少々異な"
+"ります。それらの違いは必要に応じて補足します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:29
+msgid ""
+"We strongly suggest that you install the command-line clients from the <link "
+"href=\"https://pypi.python.org/\">Python Package Index</link>(PyPI) (https://"
+"pypi.python.org/) instead of from the Ubuntu or Fedora packages. The clients "
+"are under heavy development and it is very likely at any given time the "
+"version of the packages distributed by your operating system vendor are out "
+"of date."
+msgstr ""
+"コマンドラインツールは、UbuntuやFedoraのパッケージからではなく、<link href="
+"\"https://pypi.python.org/\">Python Package Index</link>(PyPI) (https://pypi."
+"python.org/) からの導入を強くおすすめします。クライアントツールは開発が活発で"
+"あり、OSベンダーが配布しているパッケージのバージョンが古くなりがちなためで"
+"す。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:37
+msgid ""
+"The \"pip\" utility is used to manage package installation from the PyPI "
+"archive and is available in the \"python-pip\" package in most Linux "
+"distributions. Each OpenStack project has its own client, so depending on "
+"which services your site runs, install some or all of the following packages:"
+msgstr ""
+"\"pip\"ユーティリティはPyPIアーカイブからパッケージを導入するために使われま"
+"す。そして、\"python-pip\"パッケージは多くのLinuxディストリビューションに含ま"
+"れています。各OpenStackプロジェクトはそれぞれクライアントを持ちますので、あな"
+"たが動かすサービスに合わせ、以下のパッケージを導入してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:45
+msgid "python-novaclient (<glossterm>nova</glossterm> CLI)"
+msgstr "python-novaclient (<glossterm>nova</glossterm> CLI)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:49
+msgid "python-glanceclient (<glossterm>glance</glossterm> CLI)"
+msgstr "python-glanceclient (<glossterm>glance</glossterm> CLI)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:53
+msgid "python-keystoneclient (<glossterm>keystone</glossterm> CLI)"
+msgstr "python-keystoneclient (<glossterm>keystone</glossterm> CLI)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:57
+msgid "python-cinderclient (<glossterm>cinder</glossterm> CLI)"
+msgstr "python-cinderclient (<glossterm>cinder</glossterm> CLI)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:61
+msgid "python-swiftclient (<glossterm>swift</glossterm> CLI)"
+msgstr "python-swiftclient (<glossterm>swift</glossterm> CLI)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:65
+msgid "python-quantumclient (<glossterm>quantum</glossterm> CLI)"
+msgstr "python-quantumclient (<glossterm>quantum</glossterm> CLI)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:70
+msgid "Installing the Tools"
+msgstr "ツールの導入"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:71
+msgid ""
+"To install (or upgrade) a package from the PyPI archive with pip, as root:"
+msgstr ""
+"PyPIアーカイブからpipを使ってパッケージをインストール (もしくはアップグレー"
+"ド)するには、rootとして、"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:74
+msgid "To remove the package:"
+msgstr "パッケージを削除するには、"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:76
+msgid ""
+"If you need even newer versions of the clients, pip can install directly "
+"from the upstream git repository using the <code>-e</code> flag. You must "
+"specify a name for the Python egg that is installed. For example:"
+msgstr ""
+"もし新しいバージョンのクライアントが必要な場合、<code>-e</code>フラグを指定す"
+"ることで、アップストリーム gitリポジトリから直接導入できます。その際は、"
+"Python egg名を指定しなければいけません。例えば、"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:82
+msgid ""
+"If you support the EC2 API on your cloud you should also install the "
+"\"euca2ools\" package or some other EC2 API tool so you can get the same "
+"view your users have. Using EC2 API based tools is mostly out of the scope "
+"of this guide, though we discuss getting credentials for use with it."
+msgstr ""
+"もしEC2 APIを使いたい場合、\"euca2ools\"パッケージなどのEC2 API対応ツールで実"
+"現できます。EC2 APIベースのツールはこのガイドの範囲外ですが、それを使うための"
+"認証情報の取得手段については触れることにします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:90
+msgid "Administrative Command Line Tools"
+msgstr "管理系コマンドラインツール"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:91
+msgid ""
+"There are also several <emphasis>*-</emphasis>manage command line tools:"
+msgstr ""
+"<emphasis>*-</emphasis>manageという名のコマンドラインツールがいくつかありま"
+"す。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:95
+msgid "nova-manage"
+msgstr "nova-manage"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:98
+msgid "glance-manage"
+msgstr "glance-manage"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:101
+msgid "keystone-manage"
+msgstr "keystone-manage"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:104
+msgid "cinder-manage"
+msgstr "cinder-manage"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:107
+msgid ""
+"Unlike the tools mentioned above, the <code>*-manage</code> tools must be "
+"run from the cloud controller, as root, because they need read access to the "
+"config files such as <code>/etc/nova/nova.conf</code> and make queries "
+"directly against the database rather than against the OpenStack "
+"<glossterm>API endpoint</glossterm>s."
+msgstr ""
+"前述のツールと違って、<code>*-manage</code>ツールはクラウドコントローラーから"
+"root権限で実行されなければいけません。なぜなら、それらのツールは<code>/etc/"
+"nova/nova.conf</code>などの構成ファイルを読み取り、また、OpenStack "
+"<glossterm>API endpoint</glossterm>ではなく、データベースに対し直接クエリーを"
+"発行する必要があるからです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:114
+msgid ""
+"The existence of the <code>*-manage</code> tools is a legacy issue. It is a "
+"goal of the OpenStack project to eventually migrate all of the remaining "
+"functionality in the <code>*-manage</code> tools into the regular client "
+"tools. Until that day, you need to SSH into the <glossterm>cloud controller "
+"node</glossterm> to perform some maintenance operations that require one of "
+"the <code>*-manage</code> tools."
+msgstr ""
+"<code>*-manage</code>ツールの存在は、時代に合わなくなっています。OpenStackプ"
+"ロジェクトは最終的に、<code>*-manage</code>の全機能を通常のクライアントツール"
+"へ移行する予定です。それまでは、<glossterm>cloud controller node</glossterm>"
+"へSSHし、必要な<code>*-manage</code>を使ってメンテナンス作業を行う必要があり"
+"ます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:126
+msgid "Getting Credentials"
+msgstr "認証情報の取得方法"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:127
+msgid ""
+"You must have the appropriate credentials if you wish to use the command "
+"line tools to make queries against your OpenStack cloud. By far the easiest "
+"way to obtain <glossterm>authentication</glossterm> credentials to use with "
+"command line clients is to use the horizon dashboard. From the top right "
+"navigation row, select the <guilabel>Settings</guilabel> link to access the "
+"user settings page where you can set your language and timezone preferences "
+"for the dashboard view. More importantly, this action changes the left hand "
+"navigation column to include <guilabel>OpenStack API</guilabel> and "
+"<guilabel>EC2 Credentials</guilabel> links, which let you to generate files "
+"you can source in your shell to populate the environment variables the "
+"command line tools need to know where your service endpoints are as well as "
+"your authentication information."
+msgstr ""
+"OpenStackクラウドに対してクエリを発行するためにコマンドラインツールを使いたい"
+"のであれば、適切な認証情報を持っている必要があります。コマンドラインツールで"
+"使う認証情報を得るための最も簡単な方法は、Horizonダッシュボードです。ユーザ設"
+"定ページを表示するには、ページ右上のナビゲーション、<guilabel>設定</guilabel>"
+"を選択します。ここから言語やタイムゾーンも設定できます。ここで重要なのは、こ"
+"のページ左側のナビゲーション<guilabel>OpenStack API</guilabel> と "
+"<guilabel>EC2 認証情報</guilabel> リンクです。このリンクから、あなたのサービ"
+"スエンドポイントや認証情報といった環境変数を設定するファイルを生成できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:144
+msgid ""
+"For using the OpenStack native tools follow the <guilabel>OpenStack API</"
+"guilabel> link. The top section lists the URLs of your service endpoints and "
+"below that is a section titled <guilabel>Download OpenStack RC File</"
+"guilabel>. For looking at the cloud as an administrator, you can choose "
+"admin from the drop-down menu. In this section select the project you wish "
+"to get credentials for and click <guibutton>Download RC</guibutton>. This "
+"generates a file called <code>openrc.sh</code>, which looks something like "
+"this:"
+msgstr ""
+"OpenStackネイティブのツールを使うには、 <guilabel>OpenStack API</guilabel> リ"
+"ンクを選択します。ページ上部にはサービスエンドポイントのURLリストが、その下に"
+"タイトル<guilabel>OpenStack RCファイルのダウンロード</guilabel>があります。管"
+"理者としてクラウドにアクセスする場合、ドロップダウンメニューから選択できま"
+"す。ここから認証情報を取得したいプロジェクトを選択し、<guibutton>RCファイルの"
+"ダウンロード</guibutton>をクリックします。以下のような、<code>openrc.sh</"
+"code>ファイルが生成されます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:180
+msgid ""
+"This does not save your password in plain text, which is a good thing. But "
+"when you source or run the script, it prompts for your password and then "
+"stores your response in the environment variable <code>OS_PASSWORD</code>. "
+"It is important to note that this does require interactivity. It is possible "
+"to store a value directly in the script if you require a non interactive "
+"operation, but you then need to be extremely cautious with the security and "
+"permissions of this file."
+msgstr ""
+"あなたのパスワードはプレーンテキストに保存されません。これはいいことです。こ"
+"のスクリプトを読み込み、実行する際、パスワードの入力が要求され、環境変数"
+"<code>OS_PASSWORD</code>に設定されます。対話式に要求することが重要です。もし"
+"あなたが非対話式に操作したいのであれば、値を直接スクリプトに書くことは可能で"
+"す。しかし、このファイルのセキュリティとパーミッションに極めて高い注意を払う"
+"必要があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:191
+msgid ""
+"EC2 compatibility credentials can be downloaded from the \"EC2 Credentials\" "
+"link in the left hand navigation bar, then selecting the project you want "
+"credentials for and clicking \"Download EC2 Credentials\". This generates a "
+"zip file with server x509 certificates and a shell script fragment. Create a "
+"new directory in a secure location as, unlike the default <code>openrc</"
+"code>, these are live credentials containing all the authentication "
+"information required to access your cloud identity. Extract the zip file "
+"here. You should have cacert.pem, cert.pem, ec2rc.sh and pk.pem. The "
+"<code>ec2rc.sh</code> is similar to this:"
+msgstr ""
+"EC2互換クレデンシャルは左側ナビゲーションバー内の \"EC2 認証情報\"リンクから"
+"ダウンロードできます。対象認証情報のプロジェクトを選択し、\"EC2 認証情報のダ"
+"ウンロード\"をクリックすると、x509証明書とシェルスクリプトを含むzipファイルが"
+"生成されます。クラウドにアクセスするために必要な認証情報を含んでいるため、"
+"<code>openrc</code>とは異なり、安全な場所へ新しいディレクトリを作り、そこへ"
+"zipファイルを展開してください。cacert.pem、 cert.pem、 ec2rc.sh そして pk.pem"
+"があるはずです。 <code>ec2rc.sh</code>を以下のようになるでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:220
+msgid ""
+"To put the EC2 credentials into your environment source the <code>ec2rc.sh</"
+"code> file."
+msgstr ""
+"EC2認証情報をあなたの環境に追加するには、<code>ec2rc.sh</code>ファイルを使い"
+"ます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:224
+msgid "Command Line Tricks and Traps"
+msgstr "コマンドラインのこつと罠"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:225
+msgid ""
+"The command line tools can be made to show the OpenStack API calls it's "
+"making by passing it the <code>--debug</code> flag for example:"
+msgstr ""
+"コマンドラインツールは、<code>--debug</code>フラグを渡すことでOpenStack API"
+"コールを表示することができます。例えば、"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:229
+msgid ""
+"This example shows the HTTP requests from the client and the responses from "
+"the endpoints, which can be helpful in creating custom tools written to the "
+"OpenStack API."
+msgstr ""
+"この例は、クライアントからのHTTPリクエストとエンドポイントからのレスポンスを"
+"表示しています。これはOpenStack APIを使ったカスタムツールを作る際に役立ちま"
+"す。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:233
+msgid ""
+"<link href=\"https://wiki.openstack.org/wiki/KeyringSupport\">Keyring "
+"Support</link> (https://wiki.openstack.org/wiki/KeyringSupport) can be a "
+"source of confusion to the point that, as of the time of this writing, there "
+"is a <link href=\"https://bugs.launchpad.net/python-novaclient/"
+"+bug/1020238\">bug report</link> (https://bugs.launchpad.net/python-"
+"novaclient/+bug/1020238) which has been open, closed as invalid, and "
+"reopened through a few cycles."
+msgstr ""
+"<link href=\"https://wiki.openstack.org/wiki/KeyringSupport\">Keyring "
+"Support</link> (https://wiki.openstack.org/wiki/KeyringSupport)は、このガイド"
+"の執筆時点では混乱の元になるかもしれません。この<link href=\"https://bugs."
+"launchpad.net/python-novaclient/+bug/1020238\">bug report</link> (https://"
+"bugs.launchpad.net/python-novaclient/+bug/1020238)はオープンされた後、不正に"
+"クローズされ、数サイクルを経て再度オープンされています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:244
+msgid ""
+"The issue is that under some conditions the command line tools try to use a "
+"Python keyring as a credential cache and, under a subset of those "
+"conditions, another condition can arise where the tools prompt for a keyring "
+"password on each use. If you find yourself in this unfortunate subset, "
+"adding the <code>--no-cache</code> flag or setting the environment variable "
+"<code>OS_NO_CACHE=1</code> avoids the credentials cache."
+msgstr ""
+"その問題とは、ある条件下でコマンドラインツールがPythonのkeyringを認証情報"
+"キャッシュとして使おうとし、さらにある条件が重なった時、使用するたびにツール"
+"がkeyringパスワードを要求することです。もしあなたが運悪くその現象に遭遇した場"
+"合、認証情報キャッシュを回避するため、<code>--no-cache</code>フラグを追加する"
+"か、<code>OS_NO_CACHE=1</code>を環境変数に設定してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:254
+msgid ""
+"This causes the command line tool to authenticate on each and every "
+"interaction with the cloud."
+msgstr ""
+"この問題は、コマンドラインツールがクラウドとやりとりするたびに発生します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:259
+msgid "cURL"
+msgstr "cURL"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:261
+msgid ""
+"Underlying the use of the command line tools is the OpenStack API, which is "
+"a RESTful API that runs over HTTP. There may be cases where you want to "
+"interact with the API directly or need to use it because of a suspected bug "
+"in one of the CLI tools. The best way to do this is use a combination "
+"of <link href=\"http://curl.haxx.se/\">cURL</link> (http://curl.haxx.se/) "
+"and another tool to parse the JSON, such as <link href=\"http://stedolan."
+"github.com/jq/\">jq</link> (http://stedolan.github.com/jq/), from the "
+"responses."
+msgstr ""
+"コマンドラインツールの内部では、HTTP RESTful APIであるOpenStack APIが使われて"
+"います。時に、APIと直接やりとりしたい、CLIツールのバグを疑っている、というこ"
+"とがあるでしょう。その際に最適な方法は、<link href=\"http://curl.haxx.se/"
+"\">cURL</link> (http://curl.haxx.se/)と、JSONレスポンスを解析する<link href="
+"\"http://stedolan.github.com/jq/\">jq</link> (http://stedolan.github.com/jq/)"
+"などのツールを組み合わせることです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:275
+msgid ""
+"The first thing you must do is authenticate with the cloud using your "
+"credentials to get an <glossterm>authentication token</glossterm>."
+msgstr ""
+"まずはじめに、クラウドの認証が必要です。あなたの認証情報を用いて認証トークン"
+"を入手してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:278
+msgid ""
+"Your credentials are a combination of username, password, and tenant "
+"(project). You can extract these values from the <code>openrc.sh</code> "
+"discussed above. The token allows you to interact with your other service "
+"endpoints without needing to re-authenticate for every request. Tokens are "
+"typically good for 24 hours, and when the token expires, you are alerted "
+"with a 401 (Unauthorized) response and you can request another token."
+msgstr ""
+"あなたの認証情報はユーザ名、パスワード、テナント(プロジェクト)の組み合わせで"
+"す。前述した<code>openrc.sh</code>で、それらの値を得ることができます。その"
+"トークンのおかげで、リクエストのたびに再認証することなく、サービスエンドポイ"
+"ントとやりとりすることができます。トークンは通常24時間有効です。失効の際は"
+"401 (Unauthorized)レスポンスにて警告されますが、別トークンを要求することがで"
+"きます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:291
+msgid "Look at your OpenStack service <glossterm>catalog</glossterm>:"
+msgstr ""
+"それではOpenStack service <glossterm>catalog</glossterm>を見てみましょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:298
+msgid ""
+"Read through the JSON response to get a feel for how the catalog is laid out."
+msgstr "JSONレスポンスを読むことで、カタログを把握することができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:301
+msgid ""
+"To make working with subsequent requests easier, store the token in an "
+"environment variable."
+msgstr "続くリクエストを楽にするため、トークンを環境変数へ設定します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:307
+msgid "Now you can refer to your token on the command line as $TOKEN."
+msgstr "コマンドラインから、トークンを$TOKENとして参照できるようになりました。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:311
+msgid ""
+"Pick a service endpoint from your service catalog, such as compute, and try "
+"out a request like listing instances (servers)."
+msgstr ""
+"あなたのサービスカタログからcomputeなどのエンドポイントを選び、試してみましょ"
+"う。例えば、(サーバー)インスタンスのリスト出力など。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:322
+msgid ""
+"To discover how API requests should be structured, read the <link href="
+"\"http://api.openstack.org/api-ref.html\">OpenStack API Reference</link> "
+"(http://api.openstack.org/api-ref.html). To chew through the responses using "
+"jq, see the <link href=\"http://stedolan.github.com/jq/manual/\">jq Manual</"
+"link> (http://stedolan.github.com/jq/manual/)."
+msgstr ""
+"APIリクエストがどう構造化されているかを知るには、<link href=\"http://api."
+"openstack.org/api-ref.html\">OpenStack API Reference</link> (http://api."
+"openstack.org/api-ref.html)を参照してください。また、jqを使ってレスポンスを理"
+"解するには、<link href=\"http://stedolan.github.com/jq/manual/\">jq Manual</"
+"link> (http://stedolan.github.com/jq/manual/)も参考になるでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:331
+msgid ""
+"The <code>-s flag</code> used in the cURL commands above are used to prevent "
+"the progress meter from being shown. If you are having trouble running cURL "
+"commands, you'll want to remove it. Likewise, to help you troubleshoot cURL "
+"commands you can include the <code>-v</code> flag to show you the verbose "
+"output. There are many more extremely useful features in cURL, refer to the "
+"man page for all of the options."
+msgstr ""
+"cURLの<code>-s</code>フラグを使うことで、プログレスメーター非表示にできます。"
+"もしcURLコマンドの実行に問題がある場合、それらを消したくなるでしょう。いっぽ"
+"う、<code>-v</code>フラグは詳細を出力するため、cURLコマンドのトラブル解決に役"
+"立ちます。非常に便利な機能がcURLには多くあるので、manページでそれらのオプショ"
+"ンを参照してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:343
+msgid "Servers and Services"
+msgstr "サーバーとサービス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:344
+msgid ""
+"As an administrator, there are a few ways to discover what your OpenStack "
+"cloud looks like simply by using the OpenStack tools available. This section "
+"gives you an idea of how to get an overview of your cloud, its shape, size, "
+"and current state."
+msgstr ""
+"管理者として、あなたのOpenStackクラウドがどのような状態か、ツールを使って把握"
+"する方法が、いくつかあります。この節では、あなたのクラウドの概要、形、大き"
+"さ、状態を得るアイデアをお伝えします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:349
+msgid ""
+"First, you can discover what servers belong to your OpenStack cloud by "
+"running:"
+msgstr ""
+"まず、あなたのOpenStackクラウドに属し、稼働しているサーバーを把握することがで"
+"きます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:352
+msgid "The output looks like the following:"
+msgstr "出力は以下のようになります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:363
+msgid ""
+"The output shows that there are five compute nodes and one cloud controller. "
+"You see a smiley face like <code>:-)</code> which indicates that the "
+"services are up and running and functional. If a service is no longer "
+"available, the <code>:-)</code> changes to an <code>XXX</code>. This is an "
+"indication that you should troubleshoot why the service is down."
+msgstr ""
+"この出力は、5つのcomputeノードと1つのクラウドコントローラーがあることを示して"
+"います。<code>:-)</code> のような笑顔は、サービスが起動、動作していることを表"
+"しています。もしサービスが動作していない場合、<code>:-)</code>は<code>XXX</"
+"code>へと変化します。なぜサービスがダウンしているのか、問題解決すべき表示で"
+"す。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:370
+msgid ""
+"If you are still using <code>nova-volume</code> (this service is deprecated "
+"after the Folsom release), you might also see entries for the nova-volume "
+"service."
+msgstr ""
+"もしあなたがまだ<code>nova-volume</code>を使っているのであれば、nova-volume"
+"サービスのエントリも見えるでしょう。 (nova-volumeはFolsomリリース以降、廃止予"
+"定です)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:374
+msgid ""
+"If you are using Cinder, run the following command to see a similar listing:"
+msgstr ""
+"Cinderを使っているのであれば、以下コマンドの実行で同様のリストが見られます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:386
+msgid ""
+"With these two tables, you now have a good overview of what servers and "
+"services make up your cloud."
+msgstr ""
+"これら2つの表で、どのサーバーとサービスがあなたのクラウドを構成しているのか、"
+"概要を知ることができました。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:389
+msgid ""
+"You can also use the Identity Service (Keystone), to see what services are "
+"available in your cloud as well as what endpoints have been configured for "
+"the services."
+msgstr ""
+"また、IDサービス (Keystone)を使い、あなたのクラウドでどのサービスが使えるの"
+"か、また、どのエンドポイントがサービス向けに構成されているか、知ることができ"
+"ます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:393
+msgid ""
+"The following commands require you to have your shell environment configured "
+"with the proper administrative variables."
+msgstr ""
+"下記コマンドを実行するには、あなたのシェル環境で正しく管理系の変数が設定され"
+"ている必要があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:408
+msgid "The output above shows that there are five services configured."
+msgstr "上記の出力は、5つのサービスが構成されていることを示しています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:410
+msgid "To see the endpoint of each service, run:"
+msgstr "サービスごとのエンドポイントを見るには、"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:421
+msgid ""
+"There should be a one-to-one mapping between a <emphasis>service</emphasis> "
+"and <emphasis>endpoint</emphasis>. Note the different URLs and ports between "
+"the public URL and the admin URL for some services."
+msgstr ""
+"<emphasis>service</emphasis> と <emphasis>endpoint</emphasis>は1対1でマッピン"
+"グされます。いくつかのサービスではパブリックURLと管理URLが異なるので注意して"
+"ください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:429
+msgid "Network"
+msgstr "ネットワーク"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:430
+msgid ""
+"Next, take a look at what Fixed IP networks are configured in your cloud. "
+"You can use the <placeholder-1/> command-line client to get the IP ranges."
+"<placeholder-2/>"
+msgstr ""
+"次に、あなたのクラウドで構成されている固定IPネットワークを見てみましょう。IP "
+"範囲を取得するために<placeholder-1/> コマンドラインクライアントを使用できま"
+"す。<placeholder-2/>"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:439
+msgid "The <placeholder-1/> tool can provide some additional details."
+msgstr "<placeholder-1/> ツールはいくつかの補足的な詳細を提供できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:445
+msgid ""
+"This output shows that two networks are configured, each network containing "
+"255 IPs (a /24 subnet). The first network has been assigned to a certain "
+"project while the second network is still open for assignment. You can "
+"assign this network manually or it is automatically assigned when a project "
+"launches their first instance."
+msgstr ""
+"この出力は、2つのネットワークが構成され、それぞれが255のIPアドレス (/24 サブ"
+"ネット)を持つことを表しています。1つ目のネットワークはあるプロジェクトに割り"
+"当てられており、2つ目はまだ割り当てられていません。手動で割り当てることもでき"
+"ますし、プロジェクトの1つ目のインスタンスを起動する際、自動的に割り当てること"
+"もできます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:452
+msgid "To find out if any floating IPs are available in your cloud, run:"
+msgstr "利用可能なフローティングIPを確認するには、"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:459
+msgid ""
+"Here, two floating IPs are available. The first has been allocated to a "
+"project while the other is unallocated."
+msgstr ""
+"2つのフローティングIPが利用可能であることがわかります。1つめはプロジェクトに"
+"割り当て済み、もうひとつは未割り当てです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:464
+msgid "Users and Projects"
+msgstr "ユーザおよびプロジェクト"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:465
+msgid "To see a list of projects that have been added to the cloud, run:"
+msgstr "クラウドに追加されたプロジェクトのリストを見るためには、"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:486
+msgid "To see a list of users, run:"
+msgstr "ユーザのリストを見るためには、"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:508
+msgid ""
+"Sometimes a user and a group have a one-to-one mapping. This happens for "
+"standard system accounts, such as cinder, glance, nova, and swift, or when "
+"only one user is ever part of a group."
+msgstr ""
+"ユーザとグループが1対1でマッピングされることもあります。これはcinder、"
+"glance、novaやswiftなどの標準システムアカウントなど、1ユーザのみのグループが"
+"あるためです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:515
+msgid "Running Instances"
+msgstr "稼働中インスタンス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:516
+msgid "To see a list of running instances, run:"
+msgstr "稼働中インスタンスのリストを見るためには、"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:531
+msgid ""
+"Unfortunately this command does not tell you various details about the "
+"running instances, such as what compute node the instance is running on, "
+"what flavor the instance is, and so on. You can use the following command to "
+"view details about individual instances:"
+msgstr ""
+"残念ながら、このコマンドは稼働中インスタンスの詳細を出力しません。例えば、ど"
+"のcomputeノードでインスタンスが動いているのか、フレーバーは何か、などなど。あ"
+"なたは以下のコマンドでインスタンス個別の詳細情報を得ることができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:539
+msgid "For example: <placeholder-1/><placeholder-2/>"
+msgstr "例えば、<placeholder-1/><placeholder-2/>"
