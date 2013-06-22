@@ -1,0 +1,88 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-21 08:33+0000\n"
+"Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_whats_next.xml:16
+msgid "What's Next?"
+msgstr "次はどうする？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_whats_next.xml:17
+msgid ""
+"Congratulations! By now, you should have a solid design for your cloud. We "
+"now recommend that you turn to the <link title=\"OpenStack Install and "
+"Deploy Manual - Ubuntu\" href=\"http://docs.openstack.org/folsom/openstack-"
+"compute/install/apt/content/\">OpenStack Install and Deploy Manual - Ubuntu</"
+"link> (http://docs.openstack.org/folsom/openstack-compute/install/apt/"
+"content/), which contains a step-by-step guide on how to manually install "
+"the OpenStack packages and dependencies on your cloud."
+msgstr ""
+"おめでとうございます！ ここまでで、あなたのクラウドのしっかりとした基本設計が"
+"できたことでしょう。ここまで来たら、<link title=\"OpenStack Install and "
+"Deploy Manual - Ubuntu\" href=\"http://docs.openstack.org/folsom/openstack-"
+"compute/install/apt/content/\">OpenStack Install and Deploy Manual - Ubuntu</"
+"link> (http://docs.openstack.org/folsom/openstack-compute/install/apt/"
+"content/) を見ることをお薦めします。このマニュアルには、OpenStack パッケージ"
+"と依存モジュールをあなたのクラウドに手動でインストールする方法がステップバイ"
+"ステップで説明されています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_whats_next.xml:25
+msgid ""
+"While it is important for an operator to be familiar with the steps involved "
+"in deploying OpenStack, we also strongly encourage you to evaluate "
+"configuration management tools such as <glossterm>Puppet</glossterm> or "
+"<glossterm>Chef</glossterm> that can help automate this deployment process."
+msgstr ""
+"運用者が OpenStack を構築する一つ一つの手順を詳しく知ることも大事ですが、 "
+"<glossterm>Puppet</glossterm> や <glossterm>Chef</glossterm> といった設定管理"
+"ツールを評価することを強くお薦めします。これらのツールは構築手順を自動化する"
+"上で助けとなることでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_whats_next.xml:31
+msgid ""
+"In the remainder of the guide, we assume that you have successfully deployed "
+"an OpenStack cloud and are able to perform basic operations such as adding "
+"images, booting instances, and attaching volumes."
+msgstr ""
+"このガイドの残りでは、OpenStack クラウドはうまく構築でき、イメージの追加、イ"
+"ンスタンスの起動、ボリュームの接続といった基本的な操作は実行できるものとして"
+"話を進めます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_whats_next.xml:35
+msgid ""
+"As your focus turns to stable operations, we recommend you do an initial "
+"skim of the remainder of the book to get a sense of the content. Some of "
+"this content is useful to read in advance, so that you can put best "
+"practices into effect to simplify your life in the long run. Other content "
+"is more useful as a reference that you might refer when an unexpected event "
+"occurs, such a power failure or troubleshooting a particular problem."
+msgstr ""
+"あなたの興味は安定した運用をどのように行うかに移っていると思いますので、この"
+"本の残りの部分にどんなことが書かれているかざっと眺めることをお薦めします。い"
+"くつかの内容は前もって読んでおくと役に立ちます。ベストプラクティスを実行する"
+"ことで、長い目で見ると運用が楽になることでしょう。他の内容は、電源故障や特定"
+"の問題のトラブルシューティングといった予期しない現象が起こったときに参考にな"
+"ります。"
