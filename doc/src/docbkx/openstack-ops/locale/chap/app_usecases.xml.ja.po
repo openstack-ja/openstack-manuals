@@ -235,7 +235,7 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/app_usecases.xml:135
 msgid "For Object Storage, each region has a Swift environment."
-msgstr "オブジェクトストレージ用に、各レジオンには Swift 環境があります。"
+msgstr "オブジェクトストレージ用に、各リージョンには Swift 環境があります。"
 
 #: doc/src/docbkx/openstack-ops/src/app_usecases.xml:137
 msgid ""
