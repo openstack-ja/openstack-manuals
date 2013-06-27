@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenStack Manuals\n"
 "POT-Creation-Date: 2013-05-08 15:45+0800\n"
-"PO-Revision-Date: 2013-06-27 12:33+0900\n"
+"PO-Revision-Date: 2013-06-27 19:40+0900\n"
 "Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
 "language/ja/)\n"
@@ -172,7 +172,8 @@ msgstr ""
 #: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:113
 msgid "To disable DEBUG-level logging, edit <code>/etc/nova/nova.conf</code>:"
 msgstr ""
-"DEBUG レベルのロギングを無効にするには、以下のように nova.conf を編集します。"
+"DEBUG レベルのロギングを無効にするには、以下のように <code>/etc/nova/nova."
+"conf</code> を編集します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:116
 msgid ""
