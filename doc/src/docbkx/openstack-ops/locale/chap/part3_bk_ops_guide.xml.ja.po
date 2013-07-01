@@ -1,0 +1,1025 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-21 08:33+0000\n"
+"Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1677
+msgid "J"
+msgstr "J"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1679
+msgid "JavaScript Object Notation (JSON)"
+msgstr "JavaScript Object Notation (JSON)"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1682
+msgid "One of the supported response formats for the OpenStack API."
+msgstr "OpenStack API 用にサポートされたレスポンスフォーマットの１つ。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1687
+msgid "Jenkins"
+msgstr "Jenkins"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1689
+msgid "Tool used for OpenStack development to run jobs automatically."
+msgstr "OpenStack 開発で自動的にジョブを実行するために使用されるツール。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1701
+msgid "K"
+msgstr "K"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1703
+msgid "kernel-based VM (KVM)"
+msgstr "kernel-based VM (KVM)"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1705
+msgid "An OpenStack-supported hypervisor"
+msgstr "OpenStack がサポートするハイパーバイザの１つ。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1709
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:63
+msgid "keystone"
+msgstr "keystone"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1711
+msgid "The project that provides OpenStack Identity services."
+msgstr "OpenStack Identity サービスを提供するプロジェクト。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1716
+msgid "Kickstart"
+msgstr "Kickstart"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1718
+msgid ""
+"A tool to automate system configuration and installation on Red Hat, Fedora, "
+"and CentOS based Linux distributions."
+msgstr ""
+"Red Hat、Fedora、CentOS ベースの Linux ディストリビューションのインストールと"
+"システム設定を自動化するツール。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1725
+msgid "L"
+msgstr "L"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1727
+msgid "large object"
+msgstr "ラージオブジェクト"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1729
+msgid "An object within swift that is larger than 5 GBs."
+msgstr "5GB より大きな Swift 中のオブジェクト。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1734
+msgid "Launchpad"
+msgstr "Launchpad"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1736
+msgid "The collaboration site for OpenStack."
+msgstr "OpenStack 用コラボレーションサイト。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1740
+msgid "Layer-2 network"
+msgstr "レイヤ2 ネットワーク"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1742
+msgid "Term used for OSI network architecture for the data link layer."
+msgstr ""
+"データリンクレイヤ用の OSI ネットワーク・アーキテクチャで使用される用語。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1747
+msgid "libvirt"
+msgstr "libvirt"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1749
+msgid ""
+"Virtualization API library used by OpenStack to interact with many of its "
+"supported hypervisors, including KVM, QEMU and LXC."
+msgstr ""
+"KVM、QEMU、LXC を含む多数の対応ハイパーバイザと通信する為の、OpenStack で使用"
+"される仮想化 API ライブラリ。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1756
+msgid "Linux bridge"
+msgstr "Linux ブリッジ"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1758
+msgid ""
+"Software used to allow multiple VMs to share a single physical NIC within "
+"nova."
+msgstr ""
+"Nova 中で、複数の VM が単一の物理 NIC を共用する事を可能にする為に使用される"
+"ソフトウェア。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1763
+msgid "Linux bridge quantum plug-in"
+msgstr "Linux ブリッジ Quantum プラグイン"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1765
+msgid ""
+"Plugin that allows a Linux bridge to understand a quantum port, interface "
+"attachment, and other abstractions."
+msgstr ""
+"Quantum ポート、インターフェース接続、その他抽象概念を理解する、Linux ブリッ"
+"ジ対応プラグイン"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1771
+msgid "Linux containers (LXC)"
+msgstr "Linux コンテナー （LXC）"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1773
+msgid "An OpenStack-supported hypervisor."
+msgstr "OpenStack がサポートするハイパーバイザーの１つ。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1777
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:118
+msgid "live migration"
+msgstr "ライブマイグレーション"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1779
+msgid ""
+"The ability within nova to move running virtual machine instances from one "
+"host to another with only a small service interruption during switch-over."
+msgstr ""
+"実行中の仮想マシンインスタンスを、切替時の短時間のサービス中断だけであるホス"
+"トから別ホストに移動させる為の、Nova 中の機能。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1793
+msgid "M"
+msgstr "M"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1795
+msgid "management API"
+msgstr "管理 API"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1797
+msgid "Alternative term for an admin API."
+msgstr "admin API の別名。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1801
+msgid "management network"
+msgstr "管理ネットワーク"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1803
+msgid ""
+"A network segment used for administration, not accessible to the public "
+"internet."
+msgstr ""
+"管理者が使用するネットワークセグメント（パブリックインターネットからはアクセ"
+"ス不可）。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1808
+msgid "manifest"
+msgstr "マニフェスト"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1810
+msgid "Used to track segments of a large object within swift."
+msgstr "Swift 中でラージオブジェクトのセグメントを追跡する為に使用される。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1815
+msgid "manifest object"
+msgstr "マニフェストオブジェクト"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1817
+msgid "A special swift object that contains the manifest for a large object."
+msgstr "ラージオブジェクトのマニフェストを含む特別な Swift オブジェクト。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1822
+msgid "membership"
+msgstr "メンバーシップ"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1824
+msgid ""
+"The association between a glance VM image and a tenant, allows images to be "
+"shared with specified tenant(s)."
+msgstr ""
+"Glance VM イメージとテナント間の関連付け。指定されたテナント間でイメージを共"
+"有できるようにする。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1830
+msgid "membership list"
+msgstr "メンバーシップリスト"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1832
+msgid ""
+"Contains a list of tenants that can access a given VM image within glance."
+msgstr ""
+"Glance 中で指定された VM イメージにアクセスできるテナントの一覧を含む。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1837
+msgid "memory overcommit"
+msgstr "メモリーオーバーコミット"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1839
+msgid ""
+"The ability to start new VM instances based on the actual memory usage of a "
+"host, as opposed to basing the decision on the amount of RAM each running "
+"instance thinks it has available. Also known as RAM overcommit."
+msgstr ""
+"実行中の各インスタンスが利用可能と考えている RAM 量に基づく判断をベースにする"
+"代わりに、ホスト上の実際のメモリ使用量をベースにした、新しい VM インスタンス"
+"を起動する機能。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1848
+msgid "message broker"
+msgstr "メッセージブローカー"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1850
+msgid ""
+"The software package used to provide AMQP messaging capabilities within "
+"nova, default is RabbitMQ."
+msgstr ""
+"Nova 中で AMQP メッセージ機能を提供する為に使用されるソフトウェア・パッケー"
+"ジ。デフォルトは RabbitMQ。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1856
+msgid "message bus"
+msgstr "メッセージバス"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1858
+msgid ""
+"The main virtual communication line used by all AMQP messages for inter-"
+"cloud communications within nova."
+msgstr ""
+"Nova 中でクラウド間通信用の全 AMQP メッセージに使用される主要な仮想通信線。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1864
+msgid "message queue"
+msgstr "メッセージキュー"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1866
+msgid ""
+"Passes requests from clients to the appropriate workers and returns the "
+"output to the client once the job is complete."
+msgstr ""
+"クライアントからのリクエストを適切なワーカーに渡し、ジョブが完了した際にクラ"
+"イアントに出力を返す。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1872
+msgid "migration"
+msgstr "マイグレーション"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1874
+msgid "The process of moving a VM instance from one host to another."
+msgstr "VM インスタンスをあるホストから別のホストに移動させる処理。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1879
+msgid "multinic"
+msgstr "マルチ NIC"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1881
+msgid ""
+"Facility in nova that allows each virtual machine instance to have more than "
+"one VIF connected to it."
+msgstr ""
+"各仮想マシンインスタンスが複数の VIF を持つことを可能にする Nova の機能。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1894
+msgid "N"
+msgstr "N"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1896
+msgid "network ID"
+msgstr "ネットワーク ID"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1898
+msgid "Unique ID assigned to each network segment within quantum."
+msgstr "Quantum 中で各ネットワークセグメントに割り当てられた一意な ID。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1903
+msgid "network manager"
+msgstr "ネットワークマネージャー"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1905
+msgid ""
+"The nova component that manages various network components, such as firewall "
+"rules, IP address allocation, and so on."
+msgstr ""
+"ファイアウォールルール、IP アドレス割り当て等の様々なネットワークコンポーネン"
+"トを管理する Nova のコンポーネント。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1911
+msgid "network node"
+msgstr "ネットワークノード"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1913
+msgid "Any nova node that runs the network worker daemon."
+msgstr "network ワーカーデーモンを実行する任意の Nova ノード。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1918
+msgid "network segment"
+msgstr "ネットワークセグメント"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1920
+msgid "Represents a virtual, isolated OSI layer 2 subnet in quantum."
+msgstr "Quantum 中の仮想の独立した OSI レイヤ２サブネットを表現する。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1925
+msgid "network UUID"
+msgstr "ネットワーク UUID"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1927
+msgid "Unique ID for a quantum network segment."
+msgstr "Quantum ネットワークセグメントの一意な ID。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1932
+msgid "network worker"
+msgstr "ネットワークワーカー"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1934
+msgid ""
+"The nova-network worker daemon, provides services such as giving an IP "
+"address to a booting nova instance."
+msgstr ""
+"nova-network ワーカーデーモン。起動中の Nova インスタンスに IP アドレスを付与"
+"する等のサービスを提供する。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1940
+msgid "non-persistent volume"
+msgstr "非永続ボリューム"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1942
+msgid "Alternative term for an ephemeral volume."
+msgstr "エフェメラルボリュームの別名。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1947
+msgid "nova"
+msgstr "nova"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1949
+msgid "The OpenStack project that provides compute services."
+msgstr "Compute サービスを提供する OpenStack プロジェクト。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1954
+msgid "nova API"
+msgstr "nova API"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1956
+msgid "Alternative term for the nova Compute API."
+msgstr "nova Compute API の別名。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1961
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:61
+msgid "nova-network"
+msgstr "nova-network"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1963
+msgid ""
+"A nova component that manages IP address allocation, firewalls, and other "
+"network-related tasks."
+msgstr ""
+"IP アドレス割り当て、ファイアウォール、その他ネットワーク関連タスクを管理す"
+"る Nova コンポーネント。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1970
+msgid "O"
+msgstr "O"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1972
+msgid "object"
+msgstr "オブジェクト"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1974
+msgid "A BLOB of data held by swift, can be in any format."
+msgstr "Swift が保持する BLOB データ。任意のフォーマットに変換可能。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1979
+msgid "Object API"
+msgstr "オブジェクト API"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1981
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2033
+msgid "Alternative term for the swift object API."
+msgstr "swift オブジェクト API の別名。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1986
+msgid "object auditor"
+msgstr "オブジェクトオーディター"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1988
+msgid ""
+"Opens all objects for an object server and verifies the MD5 hash, size, and "
+"metadata for each object."
+msgstr ""
+"あるオブジェクトサーバー用の全オブジェクトを開き、各オブジェクトの MD5 ハッ"
+"シュ、サイズ、メタデータを検証する。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1994
+msgid "object expiration"
+msgstr "オブジェクト有効期限"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1996
+msgid ""
+"A configurable option within swift to automatically delete objects after a "
+"specified amount of time has passed or a certain date is reached."
+msgstr ""
+"指定された時間経過後、又は指定日になった際に自動的にオブジェクトを削除するた"
+"めの Swift 中の設定オプション。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2003
+msgid "object hash"
+msgstr "オブジェクトハッシュ"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2005
+msgid "Uniquely ID for a swift object."
+msgstr "Swift オブジェクトの一意な ID。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2009
+msgid "object path hash"
+msgstr "オブジェクトパスハッシュ"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2011
+msgid ""
+"Used by swift to determine the location of an object in the ring. Maps "
+"objects to partitions."
+msgstr ""
+"リング中でオブジェクトの配置を決定する為に Swift が使用する。オブジェクトと"
+"パーティションの対応表。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2017
+msgid "object replicator"
+msgstr "オブジェクトレプリケーター"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2019
+msgid ""
+"Component of swift that copies and object to remote partitions for fault "
+"tolerance."
+msgstr ""
+"フォールトトレラント用にオブジェクトをリモートパーティションにコピーする "
+"Swift のコンポーネント。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2024
+msgid "object server"
+msgstr "オブジェクトサーバー"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2026
+msgid "Component of swift that is responsible for managing objects."
+msgstr "オブジェクト管理に責任を持つ Swift コンポーネント。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2031
+msgid "Object Service API"
+msgstr "Object サービス API"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2038
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:122
+msgid "object storage"
+msgstr "オブジェクトストレージ"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2040
+msgid ""
+"Provides eventually consistent and redundant storage and retrieval of fixed "
+"digital content."
+msgstr ""
+"結果整合性（eventually consistent）、ストレージ冗長化、固定のデジタルコンテン"
+"ツ取得を提供する。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2046
+msgid "object versioning"
+msgstr "オブジェクトバージョニング"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2048
+msgid ""
+"Allows a user to set a flag on a swift container so all objects within the "
+"container are versioned."
+msgstr ""
+"コンテナ中の全オブジェクトがバージョニングしている事を Swift コンテナ上でユー"
+"ザが示す為のフラグ設定を可能にする。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2054
+msgid "operator"
+msgstr "オペレーター"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2056
+msgid ""
+"The person responsible for planning and maintaining an OpenStack "
+"installation."
+msgstr "OpenStack インストールを計画し、管理する責任者。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2062
+msgid "P"
+msgstr "P"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2064
+msgid "parent cell"
+msgstr "親セル"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2066
+msgid ""
+"If a requested resource, such as CPU time, disk storage, or memory, is not "
+"available in the parent cell, the request is forwarded to associated child "
+"cells."
+msgstr ""
+"要求されたリソース（CPU時間、ディスクストレージ、メモリ）が親セルで利用不可の"
+"場合、そのリクエストは紐付けられた子セルに転送される。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2073
+msgid "partition"
+msgstr "パーティション"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2075
+msgid ""
+"A unit of storage within swift used to store objects, exists on top of "
+"devices, replicated for fault tolerance."
+msgstr ""
+"オブジェクトを保存し、デバイスの上位に位置し、フォールトトレラント用にレプリ"
+"ケーションされる、Swift 中のストレージ単位。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2081
+msgid "partition index"
+msgstr "パーティションインデックス"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2083
+msgid "Contains the locations of all swift partitions within the ring."
+msgstr "リング中で全 Swift パーティションの位置を含む。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2088
+msgid "partition shift value"
+msgstr "パーティションシフト値"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2090
+msgid "Used by swift to determine which partition data should reside on."
+msgstr ""
+"どのパーティションデータが配置されるべきかを決定する為に Swift に使用される。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2095
+msgid "pause"
+msgstr "ポーズ"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2097
+msgid ""
+"A VM state where no changes occur (no changes in memory, network "
+"communications stop, etc), the VM is frozen but not shut down."
+msgstr ""
+"VM の変更が発生しない VM 状態（メモリ変更なし、ネットワーク通信停止、他）。"
+"VM は停止しているがシャットダウンしていない。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2104
+msgid "persistent volume"
+msgstr "永続ボリューム"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2106
+msgid ""
+"Disk volumes that persist beyond the lifetime of individual virtual machine "
+"instances. Contrast with: ephemeral storage"
+msgstr ""
+"単独の仮想マシンインスタンスのライフタイムの後に永続するディスクボリューム。"
+"対比：一時ストレージ（ephemeral storage）"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2113
+msgid "plugin"
+msgstr "プラグイン"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2115
+msgid ""
+"Software component providing the actual implementation for quantum APIs, or "
+"for Compute APIs, depending on the context."
+msgstr ""
+"Quantum API 用、又は Compute API 用の実際の実装を提供するソフトウェアコンポー"
+"ネント。文脈に依存する。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2121
+msgid "policy service"
+msgstr "ポリシーサービス"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2123
+msgid ""
+"Component of keystone that provides a rule management interface and a rule "
+"based authorization engine."
+msgstr ""
+"ルール管理インターフェースとルールベースの認可エンジンを提供する Keystone コ"
+"ンポーネント。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2129
+msgid "port"
+msgstr "ポート"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2131
+msgid ""
+"A virtual network port within quantum, VIFs / vNICs are connected to a port."
+msgstr ""
+"quantum で定義される仮想ネットワークポート。仮想インターフェース / 仮想 NIC "
+"がポートに接続されます。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2136
+msgid "port UUID"
+msgstr "ポート UUID"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2138
+msgid "Unique ID for a quantum port."
+msgstr "quantum ポートの一意な ID。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2142
+msgid "preseed"
+msgstr "preseed"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2144
+msgid ""
+"A tool to automate system configuration and installation on Debian based "
+"Linux distributions."
+msgstr ""
+"Debian ベースの Linux ディストリビューションでシステム設定とインストールの自"
+"動化ツール。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2150
+msgid "private image"
+msgstr "プライベートイメージ"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2152
+msgid "A glance VM image that is only available to specified tenants."
+msgstr "特定のテナントだけが利用できる glance の VM イメージ。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2157
+msgid "project"
+msgstr "プロジェクト"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2159
+msgid ""
+"A logical grouping of users within nova, used to define quotas and access to "
+"VM images."
+msgstr ""
+"Nova におけるユーザーの論理的なグループ。仮想マシンイメージに対するクォータや"
+"アクセス権を定義するために使用されます。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2165
+msgid "project ID"
+msgstr "プロジェクト ID"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2167
+msgid "User defined alpha-numeric string in nova, the name of a project."
+msgstr "nova におけるユーザー定義の英数字文字列。プロジェクトの名前。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2172
+msgid "project VPN"
+msgstr "プロジェクト VPN"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2174
+msgid "Alternative term for a cloudpipe."
+msgstr "cloudpipe の別名。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2178
+msgid "proxy node"
+msgstr "プロキシノード"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2180
+msgid "A node that provides the swift proxy service."
+msgstr "Swift プロキシサービスを提供するノード。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2185
+msgid "proxy server"
+msgstr "プロキシサーバー"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2187
+msgid ""
+"Users of swift interact with the service through the proxy server which in-"
+"turn looks up the location of the requested data within the ring and returns "
+"the results to the user."
+msgstr ""
+"Swift のユーザーは、リング中にあるリクエストされたデータの場所を参照してユー"
+"ザに結果を返すプロキシサーバーを介して Swift サービスに通信を行う。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2195
+msgid "public API"
+msgstr "パブリック API"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2197
+msgid ""
+"An API endpoint used for both service to service communication and end user "
+"interactions."
+msgstr ""
+"サービス間の通信とユーザとのやり取りの両方に使用される API エンドポイント。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2203
+msgid "public image"
+msgstr "パブリックイメージ"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2205
+msgid "A glance VM image that is available to all tenants."
+msgstr "全テナントが利用可能な Glance VM イメージ。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2210
+msgid "public IP address"
+msgstr "パブリック IP アドレス"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2212
+msgid "An IP address that is accessible to end-users."
+msgstr "エンドユーザがアクセス可能な IP アドレス。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2217
+msgid "public network"
+msgstr "パブリックネットワーク"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2219
+msgid ""
+"The Network Controller provides virtual networks to enable compute servers "
+"to interact with each other and with the public network. All machines must "
+"have a public and private network interface. The public network interface is "
+"controlled by the public_interface option."
+msgstr ""
+"compute サーバーがパブリックネットワークと相互通信できるよう、ネットワークコ"
+"ントローラーが仮想ネットワークを提供する。全マシンにはパブリックとプライベー"
+"トのネットワーク・インターフェースがなければならない。パブリックネットワーク"
+"インターフェースは public_interface オプションにより制御される。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2229
+msgid "Puppet"
+msgstr "Puppet"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2236
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:43
+msgid "Python"
+msgstr "Python"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2238
+msgid "Programming language used extensively in OpenStack."
+msgstr "OpenStack において幅広く使用されるプログラミング言語。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2244
+msgid "Q"
+msgstr "Q"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2246
+msgid "quantum"
+msgstr "quantum"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2248
+msgid ""
+"A core OpenStack project that provides a network connectivity abstraction "
+"layer to OpenStack Compute."
+msgstr ""
+"OpenStack のコアプロジェクトで、OpenStack Compute に対してネットワーク接続の"
+"抽象化レイヤーを提供します。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2254
+msgid "quantum API"
+msgstr "quantum API"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2256
+msgid ""
+"API used to access quantum, provides and extensible architecture to allow "
+"custom plugin creation."
+msgstr ""
+"quantum へのアクセスに使用する API で、独自のプラグインが作成できる拡張性を"
+"持ったアーキテクチャになっています。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2262
+msgid "quantum manager"
+msgstr "quantum マネージャー"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2264
+msgid ""
+"Allows nova and quantum integration thus allowing quantum to perform network "
+"management for nova VMs."
+msgstr ""
+"nova と quantum を統合し、quantum が nova VM のネットワーク管理をできるように"
+"します。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2270
+msgid "quantum plugin"
+msgstr "quantum プラグイン"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2272
+msgid ""
+"Interface within quantum that allows organizations to create custom plugins "
+"for advanced features such as QoS, ACLs, or IDS."
+msgstr ""
+"quantum 内部のインタフェースで、QoS、ACL、IDS といった進んだ機能を持った独自"
+"のプラグインを作成できるようになっています。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2279
+msgid "quarantine"
+msgstr "隔離"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2281
+msgid ""
+"If swift finds objects, containers, or accounts that are corrupt they are "
+"placed in this state, are not replicated, cannot be read by clients, and a "
+"correct copy is re-replicated."
+msgstr ""
+"swift が壊れたオブジェクト、コンテナー、アカウントを見つけた際に、そのデータ"
+"をこの状態にセットします。この状態にセットされたデータは複製されず、クライア"
+"ントが読み出すこともできません。正しいコピーが再複製されます。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2289
+msgid "Quick EMUlator (QEMU)"
+msgstr "Quick EMUlator (QEMU)"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2291
+msgid ""
+"One of the hypervisors supported by OpenStack, generally used for "
+"development purposes."
+msgstr ""
+"OpenStack がサポートするハイパーバイザーの一つ。一般に、開発目的で使用されま"
+"す。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2297
+msgid "quota"
+msgstr "クォータ"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2299
+msgid "In nova, the ability to set resource limits on a per-project basis."
+msgstr "プロジェクト単位に使用できるリソース上限を設定できる nova の機能。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2305
+msgid "R"
+msgstr "R"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2307
+msgid "RAM filter"
+msgstr "RAM フィルター"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2309
+msgid "The nova setting that allows or disallows RAM overcommitment."
+msgstr "RAM オーバーコミットの有効／無効を制御する nova の設定。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2314
+msgid "RAM overcommit"
+msgstr "RAM オーバーコミット"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2316
+msgid ""
+"The ability to start new VM instances based on the actual memory usage of a "
+"host, as opposed to basing the decision on the amount of RAM each running "
+"instance thinks it has available. Also known as memory overcommit."
+msgstr ""
+"実行中の各インスタンスが利用可能と考えている RAM 量に基づく判断をベースにする"
+"代わりに、ホスト上の実際のメモリ使用量をベースにした、新しい VM インスタンス"
+"を起動する機能。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2325
+msgid "rate limit"
+msgstr "レートリミット"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2327
+msgid ""
+"Configurable option within swift to limit database writes on a per-account "
+"and/or per-container basis."
+msgstr ""
+"アカウント単位、コンテナー単位のデータベースの書き込みレートの上限を指定す"
+"る、swift の設定オプション。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2333
+msgid "rebalance"
+msgstr "リバランス"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2335
+msgid ""
+"The process of distributing swift partitions across all drives in the ring, "
+"used during initial ring creation and after ring reconfiguration."
+msgstr ""
+"リングに登録されたすべてのドライブに swift のパーティションを分散させる処理。"
+"最初にリングを作成する際やリングの設定を変更した後に行われます。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2342
+msgid "Recon"
+msgstr "recon"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2344
+msgid "A component of swift used to collect metrics."
+msgstr "メトリックス（品質）の収集に使われる swift のコンポーネント。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2349
+msgid "record ID"
+msgstr "レコード ID"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2351
+msgid ""
+"A number within a database that is incremented each time a change is made. "
+"Used by swift when replicating."
+msgstr ""
+"変更が行われる度に増加するデータベース内の数値。 swift が複製を行う際に使用し"
+"ます。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2357
+msgid "registry server"
+msgstr "レジストリサーバー"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2359
+msgid ""
+"A glance service that provides VM image metadata information to clients."
+msgstr "VM イメージのメタデータ情報をクライアントに提供する glance サービス。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2364
+msgid "replica"
+msgstr "レプリカ"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2366
+msgid ""
+"Provides data redundancy and fault tolerance by creating copies of swift "
+"objects, accounts, and containers so they are not lost when the underlying "
+"storage fails."
+msgstr ""
+"swift のオブジェクト、アカウント、コンテナーのコピーを作成することで、データ"
+"冗長性や耐障害性を実現します。これにより、バックエンドのストレージが故障した"
+"場合でもデータが失われません。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2373
+msgid "replica count"
+msgstr "レプリカ数"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2375
+msgid "The number of replicas of the data in a swift ring."
+msgstr "swift リングでのデータのレプリカ数。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2380
+msgid "replication"
+msgstr "レプリケーション"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2382
+msgid ""
+"The process of copying data to a separate physical device for fault "
+"tolerance and performance."
+msgstr ""
+"別の物理デバイスにデータをコピーする処理。耐障害性や性能のために行われます。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2388
+msgid "replicator"
+msgstr "レプリケーター"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2390
+msgid "The swift back-end process that creates and manages object replicas."
+msgstr "オブジェクトレプリカの作成、管理を行う swift のバックエンドプロセス。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2395
+msgid "request ID"
+msgstr "リクエスト ID"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2397
+msgid "Unique ID assigned to each request sent to nova."
+msgstr "nova に送られた各リクエストに割り当てられる一意な ID。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2402
+msgid "ring"
+msgstr "リング"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2404
+msgid ""
+"An entity that maps swift data to partitions. A separate ring exists for "
+"each service, such as account, object, and container."
+msgstr ""
+"swift データのパーティションへのマッピングを行います。アカウント、オブジェク"
+"ト、コンテナーというサービス単位に別々のリングが存在します。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2411
+msgid "ring builder"
+msgstr "リングビルダー"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2413
+msgid ""
+"Builds and manages rings within swift, assigns partitions to devices, and "
+"pushes the configuration to other storage nodes."
+msgstr ""
+"swift のリングの作成、管理を行い、パーティションのデバイスへの割り当てを行"
+"い、他のストレージノードに設定を転送します。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2419
+msgid "role ID"
+msgstr "ロール ID"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2421
+msgid "Alpha-numeric ID assigned to each keystone role."
+msgstr "keystone のロール毎に割り当てられる英数字の ID。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2426
+msgid "rootwrap"
+msgstr "rootwrap"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2428
+msgid ""
+"A feature of nova that allows the unprivileged \"nova\" user to run a "
+"specified list of commands as the Linux root user."
+msgstr ""
+"特権を持たない \"nova\" ユーザーが指定されたリストにあるコマンドを Linux "
+"root ユーザーで実行できるようにする nova の機能。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2435
+msgid "RPC driver"
+msgstr "RPC ドライバー"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2437
+msgid ""
+"Modular system that allows the nova underlying message queue software to be "
+"changed. For example, from RabbitMQ to ZeroMQ or Qpid."
+msgstr ""
+"nova が利用するメッセージキューソフトウェアを変更できるようにする仕組み。例え"
+"ば、 RabbitMQ を ZeroMQ や Qpid に変更できます。"
