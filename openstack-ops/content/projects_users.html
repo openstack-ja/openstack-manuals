@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:exsl="http://exslt.org/common" xmlns:ng="http://docbook.org/docbook-ng" xmlns:fb="http://ogp.me/ns/fb#"><head>
+<link type="text/css" rel="stylesheet" href="styles/shCoreDefault.css"/><script type="text/javascript" src="scripts/shCore.js"><!----></script><script type="text/javascript">
+               SyntaxHighlighter.config.space = ' ';
+               SyntaxHighlighter.all();
+    </script>
+<title>第10章 プロジェクトとユーザーの管理 - OpenStack 運用ガイド</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-ops-manual"/><meta name="mavenVersionId" content="1.0.0"/><link rel="home" href="index.html" title="OpenStack 運用ガイド"/><link rel="up" href="index.html" title="OpenStack 運用ガイド"/><link rel="prev" href="lay_of_the_land.html" title="第9章 環境を把握する"/><link rel="next" href="user_facing_operations.html" title="第11章 ユーザーによる運用"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
+            //The id for tree cookie
+            var treeCookieId = "treeview-10645";
+            var language = "en";
+            var w = new Object();
+            //Localization
+            txt_filesfound = 'Results';
+            txt_enter_at_least_1_char = "You must enter at least one character.";
+            txt_browser_not_supported = "Your browser is not supported. Use of Mozilla Firefox is recommended.";
+            txt_please_wait = "Please wait. Search in progress...";
+            txt_results_for = "Results for: ";
+        </script><style type="text/css">
+            input {
+            margin-bottom: 5px;
+            margin-top: 2px;
+            }
+
+            .folder {
+            display: block;
+            height: 22px;
+            padding-left: 20px;
+            background: transparent url(../common/jquery/treeview/images/folder.gif) 0 0px no-repeat;
+            }
+            
+        </style><link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/><link rel="stylesheet" type="text/css" href="../common/css/positioning.css"/><link rel="stylesheet" type="text/css" href="../common/css/custom.css"/><!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="../common/css/ie.css"/>
+	<![endif]--><link rel="stylesheet" type="text/css" href="../common/jquery/theme-redmond/jquery-ui-1.8.2.custom.css"/><link rel="stylesheet" type="text/css" href="../common/jquery/treeview/jquery.treeview.css"/><script type="text/javascript" src="../common/jquery/jquery-1.4.3.min.js"><!----></script><script type="text/javascript" src="../common/jquery/jquery-ui-1.8.2.custom.min.js"><!----></script><script type="text/javascript" src="../common/jquery/jquery.cookie.js"><!----></script><script type="text/javascript" src="../common/jquery/treeview/jquery.treeview.min.js"><!----></script><script type="text/javascript" src="../common/jquery/jquery.qtip-1.0.0-rc3/jquery.qtip-1.0.0-rc3.min.js"><!--jQuery plugin for glossary popups. --></script><script type="text/javascript" src="search/htmlFileList.js"><!----></script><script type="text/javascript" src="search/htmlFileInfoList.js"><!----></script><script type="text/javascript" src="search/nwSearchFnt.js"><!----></script><script type="text/javascript" src="search/stemmers/en_stemmer.js"><!--//make this scalable to other languages as well.--></script><script type="text/javascript" src="search/index-1.js"><!----></script><script type="text/javascript" src="search/index-2.js"><!----></script><script type="text/javascript" src="search/index-3.js"><!----></script><script type="text/javascript">
+	    var _gaq = _gaq || [];
+	    _gaq.push(['_setAccount', 'UA-17511903-1']);
+	    
+	    _gaq.push(['_setDomainName', '.openstack.org']);	        
+	        </script><script type="text/javascript" src="../common/ga.js"><!----></script></head><body><div id="header"><a onclick="_gaq.push(['_trackEvent', 'Header', 'logo', 'click', 1]);" target="_blank" href="http://www.openstack.org"><img src="../common/images/openstack-logo.png" alt="OpenStack Documentation" width="157" height="47"/></a><h1>第10章 プロジェクトとユーザーの管理</h1><div id="navheader" align="right"><!----><table class="navLinks"><tr><td><a id="showHideButton" onclick="showHideToc(); _gaq.push(['_trackEvent', 'Header', 'show/hide', 'click', 1]);" class="pointLeft" title="Hide TOC tree">Sidebar
+                            </a></td><td><a accesskey="p" class="navLinkPrevious" onclick="_gaq.push(['_trackEvent', 'Header', 'prevLink', 'click', 1]);" tabindex="5" href="lay_of_the_land.html">戻る</a> 
+				  |
+                                    <a accesskey="n" class="navLinkNext" onclick="_gaq.push(['_trackEvent', 'Header', 'nextLink', 'click', 1]);" tabindex="5" href="user_facing_operations.html">次へ</a></td></tr></table></div></div><div id="toolbar" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><div id="toolbar-left"><p class="breadcrumbs"><a href="http://docs.openstack.org/">OpenStack Manuals</a><a href="index.html">OpenStack 運用ガイド</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../openstack-ops-manual-local.pdf"><img src="../common/images/pdf.png"/></a></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="chapter"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="projects_users"> </a>第10章 プロジェクトとユーザーの管理</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="projects_users.html#projects_or_tenants">プロジェクトかテナントか?</a></span></dt><dt><span class="section"><a href="projects_users.html#managing_projects">プロジェクトの管理</a></span></dt><dt><span class="section"><a href="projects_users.html#quotas">クォータ</a></span></dt><dt><span class="section"><a href="projects_users.html#user_mgmt">ユーザー管理</a></span></dt><dt><span class="section"><a href="projects_users.html#create_new_users">新規ユーザーの作成</a></span></dt><dt><span class="section"><a href="projects_users.html#associate_users_with_projects">プロジェクトへのユーザーの割り当て</a></span></dt></dl></div><p>OpenStack クラウドはユーザーがいないと、あまり価値がありません。本章はユーザー、プロジェクトおよびクォータの管理に関する話題を説明します。</p><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="projects_or_tenants"> </a>プロジェクトかテナントか?</h2></div></div></div><p>OpenStack のユーザーインターフェースおよびドキュメントにおいて、ユーザーのグループは<script>
+             $(document).ready(function(){
+               $("a.gloss#プロジェクト").qtip({
+               content: '<strong>プロジェクト:</strong> <p>Nova におけるユーザーの論理的なグループ。仮想マシンイメージに対するクォータやアクセス権を定義するために使用されます。</p>',
+               show: {event:'mouseover',delay:500},
+               hide: {event:'mouseout',delay:500, fixed:true},
+               style: { 
+                        width: 200,
+                        padding: 5,
+                        background: '#FFFFCC',
+                        color: 'black',
+                        textAlign: 'left',
+                        border: {
+                                    width: 1,
+                                    radius: 4,
+                                    color: '#EEEEBB'
+                        },
+                        tip: true,
+                        name: 'cream' // Inherit the rest of the attributes from the preset cream style
+                },
+                position: {
+                    corner: {
+                            target: 'topMiddle',
+                            tooltip: 'bottomLeft'
+                    }
+                }
+               });
+             });
+             </script><a class="gloss" href="#" id="プロジェクト">プロジェクト</a>または<script>
+             $(document).ready(function(){
+               $("a.gloss#テナント").qtip({
+               content: '<strong>テナント:</strong> <p>Nova リソースへのアクセスを分離するために使用されるユーザーのグループ。Nova のプロジェクトの別名。</p>',
+               show: {event:'mouseover',delay:500},
+               hide: {event:'mouseout',delay:500, fixed:true},
+               style: { 
+                        width: 200,
+                        padding: 5,
+                        background: '#FFFFCC',
+                        color: 'black',
+                        textAlign: 'left',
+                        border: {
+                                    width: 1,
+                                    radius: 4,
+                                    color: '#EEEEBB'
+                        },
+                        tip: true,
+                        name: 'cream' // Inherit the rest of the attributes from the preset cream style
+                },
+                position: {
+                    corner: {
+                            target: 'topMiddle',
+                            tooltip: 'bottomLeft'
+                    }
+                }
+               });
+             });
+             </script><a class="gloss" href="#" id="テナント">テナント</a>と呼ばれます。これらの語は同じ意味で用いられます。</p><p>OpenStack Compute サービス (Nova) の初期実装は独自の認証システムを持ち、<code class="literal">プロジェクト</code>という用語を使用していました。認証が OpenStack Identity サービス (Keystone) プロジェクトに移行したとき、ユーザーのグループを参照するために<code class="literal">テナント</code>という用語が使用されました。このような経緯のため、いくつかの OpenStack ツールはプロジェクトを使用し、いくつかはテナントを使用します。</p><p>このガイドは<code class="literal">プロジェクト</code>という用語を使用します。<code class="literal">テナント</code>という用語を使用するツールとやりとりする例もあります。</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="managing_projects"> </a>プロジェクトの管理</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="projects_users.html#add_projects">プロジェクトの追加</a></span></dt></dl></div><p>ユーザーは少なくとも一つのプロジェクトに割り当てられる必要があります。複数に所属することもできます。そのため、ユーザーを追加する前に、少なくとも一つのプロジェクトを追加する必要があります。</p><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="add_projects"> </a>プロジェクトの追加</h3></div></div></div><p>ダッシュボードからプロジェクトを追加するには:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>管理ユーザーとしてログインします。</p></li><li class="listitem"><p>左側のナビゲーションバーにある "プロジェクト" リンクを選択します。</p></li><li class="listitem"><p>右上にある "プロジェクトの作成" ボタンをクリックします。</p></li></ol></div><p>プロジェクト名の入力が求められます。また、説明の入力は任意ですが、入力することをお薦めしますこのプロジェクトを有効にするには、フォームの下にあるチェックボックスを選択します。これは標準で有効になっています。</p><p>プロジェクトメンバーを追加し、プロジェクトのクォータを調整することもできます。後ほど議論しますが、これらの操作を一度にすべて処理するほうが、実践的には非常に便利です。</p><p>コマンドラインインターフェース (CLI) からプロジェクトを作成するには:</p><p>コマンドラインからプロジェクトを追加するには、keystone ユーティリティを使用する必要があります。ここで "プロジェクト" の代わりに "テナント" を使用します: </p><pre class="programlisting"># keystone tenant-create --name=demo</pre><p>このコマンドは "demo" という名前のプロジェクトを作成します。オプションとして、<code class="code">--description &lt;tenant-description&gt;,</code> を追加することにより、説明の文字列を追加できます。これは非常に便利です。コマンドに <code class="code">--enabled false</code> を追加することにより、無効状態のグループを作成できます。標準で、プロジェクトは有効状態で作成されます。</p></div></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="quotas"> </a>クォータ</h2></div></div></div><p>OpenStack には数多くのクォータがあります。クォータは (ユーザー単位ではなく) プロジェクト単位で適用されます。ダッシュボードにおいて管理者として、ナビゲーションサイドバーにある "クォータ" リンクを使用して、既定のクォータを参照できます (編集できません)。これらの規定のプロジェクトクォータはクラウドコントローラーにある <code class="code">nova.conf</code> で指定されます。</p><p>クォータ関連の変更を行っていない場合、システムは以下の既定値を使用します。</p><table rules="all" id="nova_conf"><caption>表10.1 nova.conf ファイルのクォータ関連の設定オプションに関する説明</caption><colgroup>
+                <col width="50%"/>
+                <col width="50%"/>
+            </colgroup><thead><tr>
+                    <th>設定オプション=規定値</th>
+                    <th>(型) 説明</th>
+                </tr></thead><tbody><tr>
+                    <td>
+                        <p>quota_cores=20</p>
+                    </td>
+                    <td>
+                        <p>(整数オプション) プロジェクト (テナント) ごとに許可されるインスタンスのコア数</p>
+                    </td>
+                </tr><tr>
+                    <td>
+                        <p>quota_floating_ips=10</p>
+                    </td>
+                    <td>
+                        <p>(整数オプション) プロジェクト (テナント) ごとに許可される Floating IP 数</p>
+                    </td>
+                </tr><tr>
+                    <td>
+                        <p>quota_fixed_ips=-1</p>
+                    </td>
+                    <td>
+                        <p>(整数オプション) プロジェクトごとに許可される Fixed IP 数 (少なくとも許可されたインスタンスの数にすべきです)。-1 は無制限です。</p>
+                    </td>
+                </tr><tr>
+                    <td>
+                        <p>quota_gigabytes=1000</p>
+                    </td>
+                    <td>
+                        <p>(整数オプション) プロジェクト (テナント) ごとに許可されるボリュームのギガバイト容量</p>
+                    </td>
+                </tr><tr>
+                    <td>
+                        <p>quota_injected_file_content_bytes=10240</p>
+                    </td>
+                    <td>
+                        <p>(整数オプション) injected file あたりの最大バイト数</p>
+                    </td>
+                </tr><tr>
+                    <td>
+                        <p>quota_injected_file_path_bytes=255</p>
+                    </td>
+                    <td>
+                        <p>(整数オプション) injected file のパス長の最大バイト数</p>
+                    </td>
+                </tr><tr>
+                    <td>
+                        <p>quota_injected_files=5</p>
+                    </td>
+                    <td>
+                        <p>(整数オプション) 許可される injected file 数</p>
+                    </td>
+                </tr><tr>
+                    <td>
+                        <p>quota_instances=10</p>
+                    </td>
+                    <td>
+                        <p>(整数オプション) プロジェクト (テナント) ごとに許可されるインスタンス数</p>
+                    </td>
+                </tr><tr>
+                    <td>
+                        <p>quota_key_pairs=100</p>
+                    </td>
+                    <td>
+                        <p>(整数オプション) ユーザーごとに許可されるキーペア数</p>
+                    </td>
+                </tr><tr>
+                    <td>
+                        <p>quota_metadata_items=128</p>
+                    </td>
+                    <td>
+                        <p>(整数オプション) インスタンスごとに許可されるメタデータ項目数</p>
+                    </td>
+                </tr><tr>
+                    <td>
+                        <p>quota_ram=51200</p>
+                    </td>
+                    <td>
+                        <p>(整数オプション) プロジェクト (テナント) ごとに許可されるインスタンスの RAM のメガバイト容量</p>
+                    </td>
+                </tr><tr>
+                    <td>
+                        <p>quota_security_group_rules=20</p>
+                    </td>
+                    <td>
+                        <p>(整数オプション) セキュリティグループごとのセキュリティルール数</p>
+                    </td>
+                </tr><tr>
+                    <td>
+                        <p>quota_security_groups=10</p>
+                    </td>
+                    <td>
+                        <p>(整数オプション) プロジェクト (テナント) ごとに許可されるセキュリティグループ数</p>
+                    </td>
+                </tr><tr>
+                    <td>
+                        <p>quota_volumes=10</p>
+                    </td>
+                    <td>
+                        <p>(整数オプション) プロジェクト (テナント) ごとに許可されるボリューム数</p>
+                    </td>
+                </tr></tbody></table><p>設定の表は from http://docs.openstack.org/folsom/openstack-compute/admin/content/list-of-compute-config-options.html から抜粋されています。</p><p>プロジェクトの規定のクォータを変更する最も簡単な方法は、クラウドコントローラーにおいて <code class="code">nova.conf</code> ファイルを編集することです。クォータは <code class="code">nova-scheduler</code> サービスにより適用されます。そのため、これらのオプションを変更すると、そのサービスを再起動する必要があります。</p><p>あなたのサイトの実装がこの例のアーキテクチャーと異なるならば、<code class="code">/etc/nova/nova.conf</code> にあるクォータのデフォルト値に関するオプションに対するすべての変更が <code class="code">nova-scheduler</code> サービスを実行しているホストに適用されていることを確認します。一貫性のあるクォータ設定のために、すべてのスケジューラーが同じクォータを持つことが非常に重要です。このガイドにおいて推奨されているベストプラクティスに従った場合、設定管理システムにより、自動的に、すべてのスケジューラーが一貫した設定を持った状態に保たれます。</p><p>各プロジェクトのクォータをダッシュボードから表示および編集するには:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>既存のプロジェクトの一覧を取得するには "プロジェクト" ナビゲーションリンクを使用します。</p></li><li class="listitem"><p>変更したいプロジェクトに移動し、"アクション" ドロップダウンメニューの最終行にある "クォータの変更" を選択します。</p></li></ol></div><p>各プロジェクトのクォータを CLI から表示および編集するには、以下の手順に従います:</p><p>コマンドラインからクォータの確認および変更をできますが、少しだけ複雑です。Keystone を使って ID を取得し、それから <code class="code">nova-manage</code> を実行します。</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>プロジェクトのクォータを一覧表示するには、まず Keystone CLI ツールを使用して ID を確認する必要があります。</p><pre class="programlisting"># keystone tenant-list | grep &lt;tenant-name&gt; 
+| 98333a1a28e746fa8c629c83a818ad57 | &lt;tenant-name&gt; | True | </pre></li><li class="listitem"><p>Nova CLI ツールが "プロジェクト" を使用するところで、Keystone CLI ツールは同じ意味で "テナント" を使用することを思い出してください。</p><p>上の例に対して、プロジェクトのクォータを表示するには、ID <code class="code">98333a1a28e746fa8c629c83a818ad57</code> を使用する必要があります:</p><pre class="programlisting brush: bash; "># nova-manage project quota 98333a1a28e746fa8c629c83a818ad57</pre><pre class="programlisting brush: bash; ">metadata_items: 128
+volumes: 10
+gigabytes: 1000
+ram: 6291456
+security_group_rules: 20
+instances: 1024
+security_groups: 10
+injected_file_content_bytes: 10240
+floating_ips: 10
+injected_files: 5
+cores: 2048</pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[注記]" src="../common/images/admon/note.png"/></td><th align="left">注記</th></tr><tr><td align="left" valign="top"><p>ややこしいことに、 <code class="code">nova-manage project quota</code> はコマンドの最後の引き数にどんな文字列でも受け付け、その場合クォータの規定値が表示されます。とくに、ID の代わりにプロジェクトの名前を入力しても、<code class="code">nova-manage</code> は何も警告せず、単に嘘をつきます。</p></td></tr></table></div><p>これらの値を変更するには、上のコマンドに <code class="code">--key</code> および <code class="code">--value</code> フラグを追加します。プロジェクトの Floating IP のクォータを 10 から 20 に増やすには:</p><pre class="programlisting"># nova-manage project quota 98333a1a28e746fa8c629c83a818ad57 --key floating_ips --value 20 </pre><pre class="programlisting">metadata_items: 128 
+volumes: 10
+gigabytes: 1000
+ram: 6291456
+security_group_rules: 20
+instances: 1024
+security_groups: 10
+injected_file_content_bytes: 10240
+floating_ips: 20
+injected_files: 5
+cores: 2048</pre></li></ol></div></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="user_mgmt"> </a>ユーザー管理</h2></div></div></div><p>直接コマンドラインツールを使ってユーザーを管理することは面倒です。一つの作業を完了するために、複数のコマンドを実行する必要があります。多くの項目に対して、シンボル名の代わりに UUID を使用します。現実的に、人間はこれらのツールをそのまま使用しません。幸運なことに、OpenStack ダッシュボードが便利なインターフェースを提供しています。さらに、多くのサイトは個別の要求を満たすために独自ツールを作成し、サイト固有のポリシーを適用し、パッケージツールでは実現できないレベルのセルフサービスをユーザーに提供しています。</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="create_new_users"> </a>新規ユーザーの作成</h2></div></div></div><p>ユーザーを作成するには、以下の情報が必要です:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>ユーザー名</p></li><li class="listitem"><p>電子メールアドレス</p></li><li class="listitem"><p>パスワード</p></li><li class="listitem"><p>主プロジェクト</p></li><li class="listitem"><p>役割</p></li></ul></div><p>ユーザー名と電子メールアドレスは見たとおりです。あなたのサイトは従うべき独自ルールがあるかもしれません。Identity サービスにおいてパスワードを設定および変更するには、管理者権限が必要です。Folsom リリースまでは、ユーザーが自分のパスワードを変更できません。これは独自のツールを作成する大きな理由になります。また、パスワードを割り当ておよび配布するときに気をつける必要があります。主プロジェクトは単にユーザーが割り当てられる最初のプロジェクトです。ユーザーを作成する前に存在している必要があります。役割は多くの場合ずっと "メンバー" のままになります。標準の状態で、OpenStack は次の 2 つの役割が定義されています:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>"member":  一般的なユーザー。</p></li><li class="listitem"><p>"admin":  すべてのプロジェクトにわたり全権限を持つ管理ユーザー。非常に注意して使用する必要があります。</p></li></ul></div><p>他の役割を定義できますが、一般的にはそうしません。</p><p>一度この情報を収集すると、ダッシュボードでのユーザーの作成は、これまでに見てきた他の Web フォームと同じです。"管理" ナビゲーションバーの "ユーザー" リンクにあります。そして、右上にある "ユーザーの作成" ボタンをクリックします。</p><p>ユーザー情報の変更は、この "ユーザー” ページから実行することもできます。かなり多くのユーザーがいるならば、このページにはたくさんのユーザーが表示されることでしょう。ページの上部にある "フィルター" 検索ボックスを使うと、表示されるユーザーの一覧を絞り込むことができます。変更しようとしているユーザーの行末にあるアクションドロップダウンメニューの ”編集” を選択することにより、ユーザー作成ダイアログと非常に似ているフォームを表示できます。</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="associate_users_with_projects"> </a>プロジェクトへのユーザーの割り当て</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="projects_users.html#customize_auth">権限のカスタマイズ</a></span></dt><dt><span class="section"><a href="projects_users.html#problem_users">他のユーザーに悪影響を与えるユーザー</a></span></dt></dl></div><p>多くのサイトは一つのプロジェクトのみに割り当てられているユーザーで実行しています。これは、管理者にとってもユーザーにとっても、より保守的で分かりやすい選択です。管理の面では、ユーザーからインスタンスやクォータに関する問題の報告があった場合、どのプロジェクトに関するものかが明確です。ユーザーが一つのプロジェクトのみに所属している場合、ユーザーがどのプロジェクトで操作しているのかを気にする必要がありません。ただし、既定の設定では、どのユーザーも同じプロジェクトにいる他のユーザーのリソースに影響を与えることができることに注意してください。あなたの組織にとって意味があるならば、ユーザーを複数のプロジェクトに割り当てることも可能です。</p><p>既存のユーザーを追加のプロジェクトに割り当てる、または古いプロジェクトから削除することは、ダッシュボードの ”プロジェクト” ページから、"アクション" 列の "ユーザーの変更" を選択することにより実行できます:</p><div class="informalfigure"><div class="mediaobject"><img src="figures/5/figures/horizon-user-project.png"/></div></div><p>このビューから、多くの有用な操作、いくつかの危険な操作を実行できます。</p><p>"すべてのユーザー (All Users)" という見出しが付けられた、このフォームの最初の列に、このプロジェクトにまだ割り当てられていない、クラウドのすべてのユーザーが一覧表示されます。2 列目には、すべての割り当て済みユーザーが一覧表示されます。これらは非常に長い可能性があります。しかし、それぞれの列の上部にあるフィルターフィールドに、探しているユーザー名の部分文字列を入力することにより、表示を絞り込むことができます。</p><p>ここから、プロジェクトにユーザーを追加するには <span class="guiicon"><strong>+</strong></span> アイコンをクリックします。削除するには <span class="guiicon"><strong>-</strong></span> をクリックします。</p><p>危険な点としては、メンバーの役割を変更する機能があることです。これは "プロジェクトメンバー" 一覧のユーザー名の後ろにあるドロップダウンリストです。事実上すべての場合で、この値は "メンバー" に設定されています。この例では意図的に、この値が "管理者" になっている管理ユーザーを示しています。</p><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[重要]" src="../common/images/admon/important.png"/></td><th align="left">重要</th></tr><tr><td align="left" valign="top"><p>"管理者" はプロジェクトごとではなく、グローバルです。そのため、ユーザーに管理者の役割を与えることにより、クラウド全体にわたる管理者権限を与えることになります。</p></td></tr></table></div><p>一般的な使用法は、一つのプロジェクトだけに管理ユーザーを所属させることです。慣例により、"admin" プロジェクトがクラウド環境のセットアップ中に標準で作成されます。管理ユーザーもクラウドを使用してインスタンスの起動、管理を行う場合には、管理アクセスと一般アクセス用に別々のユーザーアカウントを使用し、それらのユーザーを別々のプロジェクトにすることを強く推奨します。</p><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="customize_auth"> </a>権限のカスタマイズ</h3></div></div></div><p>デフォルトの<script>
+             $(document).ready(function(){
+               $("a.gloss#認可").qtip({
+               content: '<strong>認可:</strong> <p>ユーザー、プロセス、またはクライアントが操作を実行する権限があることを検証する動作。Swift オブジェクトの削除、Swift コンテナーの一覧表示、Nova 仮想マシンの起動、パスワードのリセットなどの操作です。AuthZ と略します。</p>',
+               show: {event:'mouseover',delay:500},
+               hide: {event:'mouseout',delay:500, fixed:true},
+               style: { 
+                        width: 200,
+                        padding: 5,
+                        background: '#FFFFCC',
+                        color: 'black',
+                        textAlign: 'left',
+                        border: {
+                                    width: 1,
+                                    radius: 4,
+                                    color: '#EEEEBB'
+                        },
+                        tip: true,
+                        name: 'cream' // Inherit the rest of the attributes from the preset cream style
+                },
+                position: {
+                    corner: {
+                            target: 'topMiddle',
+                            tooltip: 'bottomLeft'
+                    }
+                }
+               });
+             });
+             </script><a class="gloss" href="#" id="認可">認可</a>設定では、管理ユーザーのみが他のプロジェクトのリソースを作成できます。OpenStack では 2 種類の認可ポリシーを使うことができます:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="bold"><strong>操作ベース</strong></span>: 特定の操作に対するアクセス基準を指定するポリシー。特定の属性に対する詳細な制御も可能です。</p></li><li class="listitem"><p><span class="bold"><strong>リソースベース</strong></span>: リソースに対して設定されたパーミッションに基づいて、特性のリソースに対するアクセスを許可するかを決定する (今のところネットワークリソースでのみ利用可能)。OpenStack により強制される実際の認可ポリシーは、導入の仕方により異なります。</p></li></ul></div><p>ポリシーエンジンは <code class="code">policy.json</code> ファイルから項目を読み込みます。このファイルの実際の位置はディストリビューションにより異なります。一般的に Nova 用の設定ファイルは <code class="code">/etc/nova/policy.json</code> にあります。システムの実行中に項目を更新でき、サービスを再起動する必要がありません。今のところ、ポリシーファイルの編集がこのようなポリシーを更新する唯一の方法です。</p><p>OpenStack サービスのポリシーエンジンがポリシーと直接照合を行います。ルールはそのようなポリシーの要素の評価を意味します。たとえば、<code class="code">compute:create: [["rule:admin_or_owner"]]</code> 文において、ポリシーは <code class="code">compute:create</code> で、ルールは <code class="code">admin_or_owner</code> です。</p><p>ポリシーのいずれかが OpenStack API 操作、もしくは指定された操作で使用されている特定の属性に一致する場合、ポリシーが OpenStack ポリシーエンジンにより呼び出されます。たとえば、ユーザーが <code class="code">POST /v2/{tenant_id}/servers</code> リクエストを  OpenStack Compute API サーバーに送信したときに必ず、エンジンが <code class="code">create:compute</code> ポリシーを確認します。ポリシーは特定の <script>
+             $(document).ready(function(){
+               $("a.gloss#API_拡張").qtip({
+               content: '<strong>API 拡張:</strong> <p>独自モジュールがコア API を拡張できるようにする Nova と Quantum の機能。</p>',
+               show: {event:'mouseover',delay:500},
+               hide: {event:'mouseout',delay:500, fixed:true},
+               style: { 
+                        width: 200,
+                        padding: 5,
+                        background: '#FFFFCC',
+                        color: 'black',
+                        textAlign: 'left',
+                        border: {
+                                    width: 1,
+                                    radius: 4,
+                                    color: '#EEEEBB'
+                        },
+                        tip: true,
+                        name: 'cream' // Inherit the rest of the attributes from the preset cream style
+                },
+                position: {
+                    corner: {
+                            target: 'topMiddle',
+                            tooltip: 'bottomLeft'
+                    }
+                }
+               });
+             });
+             </script><a class="gloss" href="#" id="API_拡張">API 拡張</a>に関連づけることもできます。たとえば、ユーザーが <code class="code">compute_extension:rescue</code> のような拡張に対して要求を行った場合、プロバイダー拡張により定義された属性は、その操作に対するルールテストを呼び出します。</p><p>認可ポリシーは、一つまたは複数のルールにより構成できます。複数のルールを指定すると、いずれかのルールが成功と評価されれば、評価エンジンが成功になります。API 操作が複数のポリシーに一致すると、すべてのポリシーが成功と評価される必要があります。認可ルールは再帰的にもできます。あるルールにマッチした場合、これ以上展開できないルールに達するまで、そのルールは別のルールに展開されます。以下のルールが定義できます:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="bold"><strong>役割に基づいたルール</strong></span>: リクエストを出したユーザーが指定された役割を持っていれば、成功と評価されます。たとえば、リクエストを出しているユーザーが管理者ならば、<code class="code">"role:admin"</code> が成功します。</p></li><li class="listitem"><p><span class="bold"><strong>項目に基づいたルール</strong></span>: 現在のリクエストに指定されたリソースの項目が指定された値と一致すれば、成功と評価されます。たとえば、ネットワークリソースの shared 属性が True に設定されている場合、<code class="code">"field:networks:shared=True"</code> が成功します。</p></li><li class="listitem"><p><span class="bold"><strong>一般的なルール</strong></span>: リソースの属性をユーザーのセキュリティクレデンシャルから抽出した属性と比較し、一致した場合に成功と評価されます。たとえば、リソースのテナント識別子がリクエストを出したユーザーのテナント識別子と一致すれば、<code class="code">"tenant_id:%(tenant_id)s"</code> が成功します。</p></li></ul></div><p>これは標準の nova <code class="filename">policy.json</code> ファイルの抜粋です:</p><pre class="programlisting">{
+	"context_is_admin":  [["role:admin"]],
+	"admin_or_owner":  [["is_admin:True"], ["project_id:%(project_id)s"]], <span class="bold"><strong>[1]</strong></span>
+	"default": [["rule:admin_or_owner"]], <span class="bold"><strong>[2]</strong></span>
+	"compute:create": [ ],
+	"compute:create:attach_network": [ ],
+	"compute:create:attach_volume": [ ],
+	"compute:get_all": [ ],
+    "admin_api": [["is_admin:True"]],
+	"compute_extension:accounts": [["rule:admin_api"]],
+	"compute_extension:admin_actions": [["rule:admin_api"]],
+	"compute_extension:admin_actions:pause": [["rule:admin_or_owner"]],
+	"compute_extension:admin_actions:unpause": [["rule:admin_or_owner"]],
+	...
+	"compute_extension:admin_actions:migrate": [["rule:admin_api"]],
+	"compute_extension:aggregates": [["rule:admin_api"]],
+	"compute_extension:certificates": [ ],
+	...
+	"compute_extension:flavorextraspecs": [ ],
+	"compute_extension:flavormanage": [["rule:admin_api"]],  <span class="bold"><strong>[3]</strong></span>
+	}
+	</pre><p>[1] 現在のユーザーが、管理者、またはリクエストで指定されたリソースの所有者 (テナント識別子が同じ) であれば、成功であると評価されるルールを表します。</p><p>[2] API 操作が <code class="code">policy.json</code> のどのポリシーとも一致しなかった場合に、必ず評価される規定のポリシーを表します。</p><p>[3] インスタンスタイプを操作する権限を、管理 API を使用する管理者だけに限定するポリシーを表します。</p><p>いくつかの場合では、ある操作が管理者のみに制限されるべきです。そこで、次の例では、ユーザーが自分のフレーバーを作成できるようにするシナリオの場合に、このサンプルのポリシーファイルをどのように変更すればよいかを示します:</p><pre class="programlisting">"compute_extension:flavormanage": [ ],</pre></div><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="problem_users"> </a>他のユーザーに悪影響を与えるユーザー</h3></div></div></div><p>クラウドのユーザーは他のユーザーに悪影響を与える場合があります。意図的に悪意を持って行わる場合もあれば、偶然起こる場合もあります。状況を理解することにより、このような混乱に対処する方法について、よりよい判断をできるようになります。</p><p>例えば: あるユーザーのグループが、非常に計算負荷の高い作業用に大量のコンピュートリソースを使うインスタンスを持っているとします。これにより、Compute ノードの負荷が高くなり、他のユーザーに影響を与えます。この状況では、ユーザーのユースケースをする必要があります。計算負荷が高いシナリオがよくあるケースだと判明し、ホスト集約やリージョンなど、クラウドを適切に分割することを計画すべき場合もあるでしょう。</p><p>別の例は、あるユーザーが非常に多くの帯域を消費することです。繰り返しですが、ユーザーが実行していることを理解することが重要です。必ず多くの帯域を使用する必要があれば、他のユーザーに影響を与えないように通信帯域を制限する、または、より多くの帯域を利用可能な別の場所に移動させる必要があるかもしれません。一方、ユーザーのインスタンスが侵入され、DDOS 攻撃を行っているボットネットの一部になっているかもしれません。この問題の解決法は、ネットワークにある他のサーバーが侵入された場合と同じです。ユーザーに連絡し、対応する時間を与えます。もし対応しなければ、そのインスタンスを停止します。</p><p>最後の例は、ユーザーがクラウドのリソースに繰り返し悪影響を与えることです。ユーザーと連絡をとり、何をしようとしているのか理解します。ユーザー自身が実行しようとしていることを正しく理解していない可能性があります。または、アクセスしようとしているリソースに問題があり、リクエストがキューに入ったり遅れが発生している場合もあります。</p><p>システム管理の見過ごされがちな大事な要素の一つに、エンドユーザのためにシステム管理者が存在するという点があります。BOFH (Bastard Operator From Hell; 「地獄から来た最悪の管理者」) の道に入って、問題の原因となっているユーザーを全員停止させるようなことはしないでください。ユーザーがやりたいことを一緒になって理解し、どうするとあなたの環境がユーザーが目的を達成するのにもっと支援できるかを見つけてください。</p></div></div></div><script type="text/javascript" src="../common/main.js"><!----></script><hr/><div id="disqus_thread"><script type="text/javascript">
+	      if(window.location.protocol.substring(0,4) == 'http'){
+	        var disqus_shortname = 'openstack-ops';
+	      
+	        var disqus_identifier = 'openstack-operations-guideprojects_users';
+	      
+	      }
+	    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><script type="text/javascript" src="../common/comments.js"><!----></script></div><hr/><div class="legal"><a href="index.html">Legal notices</a></div></div><div><div id="leftnavigation" style="padding-top:3px; background-color:white;"><div id="tabs"><ul><li><a href="#treeDiv" tabindex="1"><span class="contentsTab">目次</span></a></li><li><a href="#searchDiv" tabindex="1"><span class="searchTab">Search</span></a></li></ul><div id="treeDiv"><img src="../common/images/loading.gif" alt="loading table of contents..." id="tocLoading" style="display:block;"/><div id="ulTreeDiv" style="display:none" class="thisisthat"><ul id="tree" class="filetree"><li tabindex="2"><span class="file"><a href="ch_doc_history.html">ドキュメント変更履歴</a></span></li><li tabindex="2"><span class="file"><a href="section_yk2_jpr_lj.html">はじめに</a></span><ul><li tabindex="2"><span class="file"><a href="section_yk2_jpr_lj.html#chapter_gk2_jpr_lj">この本をなぜ書いたか？どうやって書いたか？</a></span></li><li tabindex="2"><span class="file"><a href="section_yk2_jpr_lj.html#section_gl2_jpr_lj">この本の作成に参加するには</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="section_arch_provision.html">1. プロビジョニングとデプロイメント</a></span><ul><li tabindex="2"><span class="file"><a href="section_arch_provision.html#automated_deploy">自動デプロイメント</a></span><ul><li tabindex="2"><span class="file"><a href="section_arch_provision.html#disk_partition_raid">ディスクのパーティショニングと RAID</a></span></li><li tabindex="2"><span class="file"><a href="section_arch_provision.html#network_config">ネットワーク設定</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="section_arch_provision.html#auto_config">自動環境設定</a></span></li><li tabindex="2"><span class="file"><a href="section_arch_provision.html#remote_mgmt">リモート管理</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html">2. クラウドコントローラーの設計</a></span><ul><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#hardware_consid">ハードウェアの考慮事項</a></span></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#separate_services">サービスの分離</a></span></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#database">データベース</a></span></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#message_queue">メッセージキュー</a></span></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#api">Application Programming Interface (API)</a></span></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#extensions">API 拡張</a></span></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#scheduler">スケジューラー</a></span></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#images">イメージ</a></span></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#dashboard">Dashboard</a></span></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#authentication">認証および認可</a></span></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#network_consid">ネットワークの考慮事項</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="scaling.html">3. スケーリング</a></span><ul><li tabindex="2"><span class="file"><a href="scaling.html#starting">スタートポイント</a></span></li><li tabindex="2"><span class="file"><a href="scaling.html#add_controller_nodes">Controller ノードの追加</a></span></li><li tabindex="2"><span class="file"><a href="scaling.html#segregate_cloud">クラウドの分離</a></span><ul><li tabindex="2"><span class="file"><a href="scaling.html#cells_regions">セルとリージョン</a></span></li><li tabindex="2"><span class="file"><a href="scaling.html#availability_zones">アベイラビリティゾーンとホストアグリゲート</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="scaling.html#scalable_hardware">スケーラブルハードウェア</a></span><ul><li tabindex="2"><span class="file"><a href="scaling.html#hardware_procure">ハードウェア調達</a></span></li><li tabindex="2"><span class="file"><a href="scaling.html#capacity_planning">キャパシティプランニング</a></span></li><li tabindex="2"><span class="file"><a href="scaling.html#burin_testing">エージング試験</a></span></li></ul></li></ul></li><li tabindex="2"><span class="file"><a href="compute_nodes.html">4. コンピュートノード</a></span><ul><li tabindex="2"><span class="file"><a href="compute_nodes.html#cpu_choice">CPU の選択</a></span></li><li tabindex="2"><span class="file"><a href="compute_nodes.html#hypervisor_choice">ハイパーバイザーの選択</a></span></li><li tabindex="2"><span class="file"><a href="compute_nodes.html#instance_storage">インスタンスストレージのソリューション</a></span><ul><li tabindex="2"><span class="file"><a href="compute_nodes.html#off_compute_node_storage">コンピュートノード外のストレージ – 共有ファイルシステム</a></span></li><li tabindex="2"><span class="file"><a href="compute_nodes.html#on_compute_node_storage">コンピュートノード上のストレージ – 共有ファイルシステム</a></span></li><li tabindex="2"><span class="file"><a href="compute_nodes.html#on_compute_node_storage_nonshared">コンピュートノード上のストレージ – 非共有ファイルシステム</a></span></li><li tabindex="2"><span class="file"><a href="compute_nodes.html#live_migration">ライブマイグレーションに関する問題</a></span></li><li tabindex="2"><span class="file"><a href="compute_nodes.html#file_systems">ファイルシステムの選択</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="compute_nodes.html#overcommit">オーバーコミット</a></span></li><li tabindex="2"><span class="file"><a href="compute_nodes.html#logging">ロギング</a></span></li><li tabindex="2"><span class="file"><a href="compute_nodes.html#networking">ネットワーク</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="storage_decision.html">5. ストレージ選定</a></span><ul><li tabindex="2"><span class="file"><a href="storage_decision.html#storage_concepts">ストレージのコンセプト</a></span><ul><li tabindex="2"><span class="file"><a href="storage_decision.html#object_storage">オブジェクト・ストレージ</a></span></li><li tabindex="2"><span class="file"><a href="storage_decision.html#block_storage">ブロックストレージ</a></span></li><li tabindex="2"><span class="file"><a href="storage_decision.html#file_level_storage">ファイルレベル・ストレージ</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="storage_decision.html#storage_backends">ストレージ・バックエンドの選択</a></span><ul><li tabindex="2"><span class="file"><a href="storage_decision.html#commodity_storage_backends">コモディティ・ハードウェア上の ストレージ技術</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="storage_decision.html#openstack_object_storage">OpenStack Object Storage の注意事項</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="network_design.html">6. ネットワーク設計</a></span><ul><li tabindex="2"><span class="file"><a href="network_design.html#mgmt_network">管理ネットワーク</a></span></li><li tabindex="2"><span class="file"><a href="network_design.html#public_addressing">パブリックアドレスの選択肢</a></span></li><li tabindex="2"><span class="file"><a href="network_design.html#ip_address_planning">IP アドレス計画</a></span></li><li tabindex="2"><span class="file"><a href="network_design.html#network_topology">ネットワークトポロジー</a></span><ul><li tabindex="2"><span class="file"><a href="network_design.html#vlans">VLAN</a></span></li><li tabindex="2"><span class="file"><a href="network_design.html#multi_nic">マルチNIC</a></span></li><li tabindex="2"><span class="file"><a href="network_design.html#multi_host_single_host_networks">マルチホストネットワークとシングルホストネットワーク</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="network_design.html#services_for_networking">ネットワーク関係のサービス</a></span><ul><li tabindex="2"><span class="file"><a href="network_design.html#ntp">NTP</a></span><ul><li tabindex="2"><span class="file"><a href="network_design.html#dns">DNS</a></span></li></ul></li></ul></li></ul></li><li tabindex="2"><span class="file"><a href="example_architecture.html">7. 参考アーキテクチャ</a></span><ul><li tabindex="2"><span class="file"><a href="example_architecture.html#overview">概要</a></span></li><li tabindex="2"><span class="file"><a href="example_architecture.html#rationale">設定指針</a></span><ul><li tabindex="2"><span class="file"><a href="example_architecture.html#quantum">なぜ OpenStack Network Service (quantum) を使わないか？</a></span></li><li tabindex="2"><span class="file"><a href="example_architecture.html#multi-host-networking">なぜマルチホストネットワークを使うか？</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="example_architecture.html#detailed_desc">詳細な説明</a></span></li><li tabindex="2"><span class="file"><a href="example_architecture.html#optional_extensions">さらなる拡張</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="whats_next.html">8. 次はどうする？</a></span></li><li tabindex="2"><span class="file"><a href="lay_of_the_land.html">9. 環境を把握する</a></span><ul><li tabindex="2"><span class="file"><a href="lay_of_the_land.html#cli_tools">クライアントコマンドラインツール</a></span><ul><li tabindex="2"><span class="file"><a href="lay_of_the_land.html#install_tools">ツールの導入</a></span></li><li tabindex="2"><span class="file"><a href="lay_of_the_land.html#admin_cli">管理系コマンドラインツール</a></span></li><li tabindex="2"><span class="file"><a href="lay_of_the_land.html#get_creds">認証情報の取得方法</a></span></li><li tabindex="2"><span class="file"><a href="lay_of_the_land.html#cli_tricks">コマンドラインのこつと罠</a></span><ul><li tabindex="2"><span class="file"><a href="lay_of_the_land.html#curl">cURL</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="lay_of_the_land.html#servers_services">サーバーとサービス</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="lay_of_the_land.html#network">ネットワーク</a></span></li><li tabindex="2"><span class="file"><a href="lay_of_the_land.html#users_projects">ユーザおよびプロジェクト</a></span></li><li tabindex="2"><span class="file"><a href="lay_of_the_land.html#running_instances">稼働中インスタンス</a></span></li></ul></li><li tabindex="2" id="webhelp-currentid"><span class="file"><a href="projects_users.html">10. プロジェクトとユーザーの管理</a></span><ul><li tabindex="2"><span class="file"><a href="projects_users.html#projects_or_tenants">プロジェクトかテナントか?</a></span></li><li tabindex="2"><span class="file"><a href="projects_users.html#managing_projects">プロジェクトの管理</a></span><ul><li tabindex="2"><span class="file"><a href="projects_users.html#add_projects">プロジェクトの追加</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="projects_users.html#quotas">クォータ</a></span></li><li tabindex="2"><span class="file"><a href="projects_users.html#user_mgmt">ユーザー管理</a></span></li><li tabindex="2"><span class="file"><a href="projects_users.html#create_new_users">新規ユーザーの作成</a></span></li><li tabindex="2"><span class="file"><a href="projects_users.html#associate_users_with_projects">プロジェクトへのユーザーの割り当て</a></span><ul><li tabindex="2"><span class="file"><a href="projects_users.html#customize_auth">権限のカスタマイズ</a></span></li><li tabindex="2"><span class="file"><a href="projects_users.html#problem_users">他のユーザーに悪影響を与えるユーザー</a></span></li></ul></li></ul></li><li tabindex="2"><span class="file"><a href="user_facing_operations.html">11. ユーザーによる運用</a></span><ul><li tabindex="2"><span class="file"><a href="user_facing_images.html">イメージ</a></span><ul><li tabindex="2"><span class="file"><a href="user_facing_images.html#add_images">イメージの追加</a></span></li><li tabindex="2"><span class="file"><a href="user_facing_images.html#delete_images">イメージの削除</a></span></li><li tabindex="2"><span class="file"><a href="user_facing_images.html#other_cli">他の CLI オプション</a></span></li><li tabindex="2"><span class="file"><a href="user_facing_images.html#image_service_and_database">イメージサービスおよびデータベース</a></span></li><li tabindex="2"><span class="file"><a href="user_facing_images.html#sample_image_database">イメージサービスのデータベースクエリーの例</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="flavors.html">フレーバー</a></span><ul><li tabindex="2"><span class="file"><a href="flavors.html#d6e1977">どのように既存のフレーバーを変更しますか?</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="security_groups.html">セキュリティグループ</a></span></li><li tabindex="2"><span class="file"><a href="user_facing_block_storage.html">ブロックストレージ</a></span><ul><li tabindex="2"><span class="file"><a href="user_facing_block_storage.html#block_storage_creation_failures">ブロックストレージの作成エラー</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="instances.html">インスタンス</a></span><ul><li tabindex="2"><span class="file"><a href="instances.html#start_instances">インスタンスの起動</a></span></li><li tabindex="2"><span class="file"><a href="instances.html#instance_boot_failures">インスタンスの起動失敗</a></span></li><li tabindex="2"><span class="file"><a href="instances.html#instance_specific_data">インスタンス固有のデータ</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="associate_security_groups.html">セキュリティグループの割り当て</a></span></li><li tabindex="2"><span class="file"><a href="floating_ips.html">Floating IP</a></span></li><li tabindex="2"><span class="file"><a href="attach_block_storage.html">ブロックストレージの接続</a></span></li><li tabindex="2"><span class="file"><a href="snapsnots.html">スナップショットの取得</a></span><ul><li tabindex="2"><span class="file"><a href="snapsnots.html#consistent_snapshots">スナップショットの一貫性の保証</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="database_instances.html">データベースにあるインスタンス</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="maintenance.html">12. メンテナンス、故障およびデバッグ</a></span><ul><li tabindex="2"><span class="file"><a href="maintenance.html#cloud_controller_storage">クラウドコントローラーとストレージプロキシの故障とメンテナンス</a></span><ul><li tabindex="2"><span class="file"><a href="maintenance.html#planned_maintenance">計画メンテナンス</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#reboot_cloud_controller">クラウドコントローラーとストレージプロキシの再起動</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#after_a_cc_reboot">クラウドコントローラーまたはストレージプロキシの再起動後</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#cc_failure">全体的なクラウドコントローラーの故障</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="maintenance.html#compute_node_failures">コンピュートノードの故障とメンテナンス</a></span><ul><li tabindex="2"><span class="file"><a href="maintenance.html#planned_maintenance_compute_node">計画メンテナンス</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#after_compute_node_reboot">Compute ノードの再起動後</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#maintenance_instances">インスタンス</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#inspect_and_recover_failed_instances">故障したインスタンスからの検査とデータ復旧</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#volumes">ボリューム</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#totle_compute_node_failure">全体的なコンピュートノードの故障</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#var_lib_nova_instances">/var/lib/nova/instances</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="maintenance.html#storage_node_failures">ストレージノードの故障とメンテナンス</a></span><ul><li tabindex="2"><span class="file"><a href="maintenance.html#reboot_storage_node">ストレージノードの再起動</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#shut_down_storage_node">ストレージノードのシャットダウン</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#replace_swift_disk">Swift ディスクの交換</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="maintenance.html#complete_failure">完全な故障の対処</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#config_mgmt">構成管理</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#hardware">ハードウェアの取り扱い</a></span><ul><li tabindex="2"><span class="file"><a href="maintenance.html#add_new_node">コンピュートノードの追加</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#add_new_object_node">オブジェクトストレージノードの追加</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#replace_components">コンポーネントの交換</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="maintenance.html#databases">データベース</a></span><ul><li tabindex="2"><span class="file"><a href="maintenance.html#database_connect">データベース接続性</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#perf_and_opt">パフォーマンスおよび最適化</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="maintenance.html#hdmy">HDWMY</a></span><ul><li tabindex="2"><span class="file"><a href="maintenance.html#hourly">毎時</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#daily">日次</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#weekly">週次</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#monthly">月次</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#quarterly">四半期ごと</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#semiannual">半年ごと</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="maintenance.html#broken_component">故障しているコンポーネントの特定</a></span><ul><li tabindex="2"><span class="file"><a href="maintenance.html#tailing_logs">最新ログの確認</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#daemons_cli">CLI におけるデーモンの実行法</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#complexity">複雑さの例</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#upgrades">アップグレード</a></span></li></ul></li></ul></li><li tabindex="2"><span class="file"><a href="network_troubleshooting.html">13. ネットワークのトラブルシューティング</a></span><ul><li tabindex="2"><span class="file"><a href="network_troubleshooting.html#check_interface_states">"ip a" を使ってインタフェース状態をチェックする</a></span></li><li tabindex="2"><span class="file"><a href="network_troubleshooting.html#network_traffic_in_cloud">クラウド上のネットワークトラフィック</a></span></li><li tabindex="2"><span class="file"><a href="network_troubleshooting.html#failure_in_path">経路上の障害を見つける</a></span></li><li tabindex="2"><span class="file"><a href="network_troubleshooting.html#tcpdump">tcpdump</a></span></li><li tabindex="2"><span class="file"><a href="network_troubleshooting.html#iptables">iptables</a></span></li><li tabindex="2"><span class="file"><a href="network_troubleshooting.html#network_config_database">データベースにあるネットワーク設定</a></span><ul><li tabindex="2"><span class="file"><a href="network_troubleshooting.html#deassociate_floating_ip">手動でフローティングIPの関連付けを解除する</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="network_troubleshooting.html#debug_dhcp_issues">DHCP の問題をデバッグする</a></span></li><li tabindex="2"><span class="file"><a href="network_troubleshooting.html#debugging_dns_issues">DNS の問題をデバッグする</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html">14. ロギングと監視</a></span><ul><li tabindex="2"><span class="file"><a href="logging_monitoring.html#where_are_logs">ログはどこにあるのか？</a></span><ul><li tabindex="2"><span class="file"><a href="logging_monitoring.html#cloud_controller_ops">クラウドコントローラー</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#compute_nodes_ops">コンピュートノード</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#block_storage_nodes">ブロックストレージ ノード</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#how_to_read_logs">ログの読み方</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#tracing_instance_request">インスタンスリクエストの追跡</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#add_custom_logging">カスタムログの追加</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#rabbitmq">RabbitMQ Web管理インターフェイス および rabbitmqctl</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#manage_logs_centrally">ログの集中管理</a></span><ul><li tabindex="2"><span class="file"><a href="logging_monitoring.html#rsyslog_client_config">rsyslog クライアント設定</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#rsyslog_server_config">rsyslog サーバー設定</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#stacktach">StackTach</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#monitoring">監視</a></span><ul><li tabindex="2"><span class="file"><a href="logging_monitoring.html#process_monitoring">プロセス監視</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#resource_alerting">リソースのアラート</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#os_resources">OpenStack固有のリソース</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#intelligent_alerting">インテリジェントなアラート</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#trending">トレンド</a></span></li></ul></li></ul></li><li tabindex="2"><span class="file"><a href="backup_and_recovery.html">15. バックアップとリカバリー</a></span><ul><li tabindex="2"><span class="file"><a href="backup_and_recovery.html#what_to_backup">バックアップ対象</a></span></li><li tabindex="2"><span class="file"><a href="backup_and_recovery.html#database_backups">データベース バックアップ</a></span></li><li tabindex="2"><span class="file"><a href="backup_and_recovery.html#file_system_backups">ファイルシステム バックアップ</a></span><ul><li tabindex="2"><span class="file"><a href="backup_and_recovery.html#compute">Compute</a></span></li><li tabindex="2"><span class="file"><a href="backup_and_recovery.html#image_catalog_delivery">イメージカタログと配布</a></span></li><li tabindex="2"><span class="file"><a href="backup_and_recovery.html#identity">認証</a></span></li><li tabindex="2"><span class="file"><a href="backup_and_recovery.html#ops_block_storage">ブロックストレージ</a></span></li><li tabindex="2"><span class="file"><a href="backup_and_recovery.html#ops_object_storage">オブジェクト・ストレージ</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="backup_and_recovery.html#recovering_backups">バックアップのリカバリー</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="customize.html">16. カスタマイズ</a></span><ul><li tabindex="2"><span class="file"><a href="customize.html#devstack">DevStack</a></span></li><li tabindex="2"><span class="file"><a href="customize.html#middleware_example">ミドルウェア例</a></span></li><li tabindex="2"><span class="file"><a href="customize.html#nova_scheduler_example">Nova スケジューラーの例</a></span></li><li tabindex="2"><span class="file"><a href="customize.html#ops_dashboard">Dashboard</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="upstream_openstack.html">17. OpenStack コミュニティ</a></span><ul><li tabindex="2"><span class="file"><a href="upstream_openstack.html#get_help">助けを得る</a></span></li><li tabindex="2"><span class="file"><a href="upstream_openstack.html#report_bugs">バグ報告</a></span><ul><li tabindex="2"><span class="file"><a href="upstream_openstack.html#confirm_priority">バグの確認と優先付け</a></span></li><li tabindex="2"><span class="file"><a href="upstream_openstack.html#bug_fixing">バグ修正</a></span></li><li tabindex="2"><span class="file"><a href="upstream_openstack.html#after_change_is_accepted">変更が受理された後</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="upstream_openstack.html#openstack_community">OpenStack コミュニティに参加する</a></span></li><li tabindex="2"><span class="file"><a href="upstream_openstack.html#features">機能と開発ロードマップ</a></span></li><li tabindex="2"><span class="file"><a href="upstream_openstack.html#contribute_to_docs">ドキュメント作成への貢献の仕方</a></span></li><li tabindex="2"><span class="file"><a href="upstream_openstack.html#security_info">セキュリティ情報</a></span></li><li tabindex="2"><span class="file"><a href="upstream_openstack.html#additional_info">さらに情報を見つける</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="use-cases.html">A. 事例</a></span><ul><li tabindex="2"><span class="file"><a href="nectar.html">NeCTAR</a></span><ul><li tabindex="2"><span class="file"><a href="nectar_deploy.html">デプロイ</a></span></li><li tabindex="2"><span class="file"><a href="nectar_resources.html">リソース</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="mit_csail.html">MIT CSAIL</a></span><ul><li tabindex="2"><span class="file"><a href="mit_csail_deploy.html">デプロイ</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="dair.html">DAIR</a></span><ul><li tabindex="2"><span class="file"><a href="dair_deploy.html">デプロイ</a></span></li><li tabindex="2"><span class="file"><a href="dair_resources.html">リソース</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="cern.html">CERN</a></span><ul><li tabindex="2"><span class="file"><a href="cern_deploy.html">デプロイ</a></span></li><li tabindex="2"><span class="file"><a href="cern_resources.html">リソース</a></span></li></ul></li></ul></li><li tabindex="2"><span class="file"><a href="app_crypt.html">B. ハリウッド^H^H^H^H^Hクラウド・ナイトメア</a></span><ul><li tabindex="2"><span class="file"><a href="double_vlan.html">ダブル VLAN</a></span></li><li tabindex="2"><span class="file"><a href="issue.html">「あの問題」</a></span></li><li tabindex="2"><span class="file"><a href="disappear_images.html">イメージの消失</a></span></li><li tabindex="2"><span class="file"><a href="valentines.html">バレンタインデーの compute ノード大虐殺</a></span></li><li tabindex="2"><span class="file"><a href="rabbithole.html">ウサギの穴に落ちて</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="recommended-reading.html">C. リソース</a></span></li><li tabindex="2"><span class="file"><a href="go01.html">用語集</a></span></li></ul></div></div><div id="searchDiv"><div id="search"><form onsubmit="Verifie(ditaSearch_Form);return false" name="ditaSearch_Form" class="searchForm"><fieldset class="searchFieldSet"><legend>Search</legend><center><input id="textToSearch" name="textToSearch" type="text" class="searchText"/> &nbsp; <input onclick="Verifie(ditaSearch_Form)" type="button" class="searchButton" value="Go" id="doSearch"/></center></fieldset></form></div><div id="searchResults"><center/></div><p class="searchHighlight"><a href="#" onclick="toggleHighlight()">Search Highlighter (On/Off)</a></p></div></div></div></div><script type="text/javascript" src="../common/jquery/jquery.qtip-1.0.0-rc3/jquery.qtip-1.0.0-rc3.min.js"><!--jQuery plugin for glossary popups. -->
+                   $('a[title]').qtip({ style: { name: 'cream', tip: true } })
+                </script></body></html>

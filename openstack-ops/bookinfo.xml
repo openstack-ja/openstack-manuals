@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<products xmlns:xlink="http://www.w3.org/1999/xlink">
+   <latestpdf>openstack-ops-manual-local-latest.pdf</latestpdf>
+   <pdfoutname>openstack-ops-manual-local.pdf</pdfoutname>
+   <docname>OpenStack 運用ガイド</docname>
+   <productname>OpenStack</productname>
+   <webappname>bk_ops_guide</webappname>
+   <pominfo>
+      <groupid>org.openstack.docs</groupid>
+      <artifactid>openstack-ops-manual</artifactid>
+      <version>1.0.0</version>
+      <pomname>OpenStack Manuals, 1.0.0</pomname>
+   </pominfo>
+   <emails>
+      <email>
+         <name>CDT Publication Events</name>
+         <to>cdt-publication-events@lists.rackspace.com</to>
+         <from>clouddoctoolsteam@lists.rackspace.com</from>
+      </email>
+   </emails>
+</products>

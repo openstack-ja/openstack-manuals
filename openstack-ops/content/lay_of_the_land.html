@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:exsl="http://exslt.org/common" xmlns:ng="http://docbook.org/docbook-ng" xmlns:fb="http://ogp.me/ns/fb#"><head>
+<link type="text/css" rel="stylesheet" href="styles/shCoreDefault.css"/><script type="text/javascript" src="scripts/shCore.js"><!----></script><script type="text/javascript">
+               SyntaxHighlighter.config.space = ' ';
+               SyntaxHighlighter.all();
+    </script>
+<title>第9章 環境を把握する - OpenStack 運用ガイド</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-ops-manual"/><meta name="mavenVersionId" content="1.0.0"/><link rel="home" href="index.html" title="OpenStack 運用ガイド"/><link rel="up" href="index.html" title="OpenStack 運用ガイド"/><link rel="prev" href="whats_next.html" title="第8章 次はどうする？"/><link rel="next" href="projects_users.html" title="第10章 プロジェクトとユーザーの管理"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
+            //The id for tree cookie
+            var treeCookieId = "treeview-10645";
+            var language = "en";
+            var w = new Object();
+            //Localization
+            txt_filesfound = 'Results';
+            txt_enter_at_least_1_char = "You must enter at least one character.";
+            txt_browser_not_supported = "Your browser is not supported. Use of Mozilla Firefox is recommended.";
+            txt_please_wait = "Please wait. Search in progress...";
+            txt_results_for = "Results for: ";
+        </script><style type="text/css">
+            input {
+            margin-bottom: 5px;
+            margin-top: 2px;
+            }
+
+            .folder {
+            display: block;
+            height: 22px;
+            padding-left: 20px;
+            background: transparent url(../common/jquery/treeview/images/folder.gif) 0 0px no-repeat;
+            }
+            
+        </style><link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/><link rel="stylesheet" type="text/css" href="../common/css/positioning.css"/><link rel="stylesheet" type="text/css" href="../common/css/custom.css"/><!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="../common/css/ie.css"/>
+	<![endif]--><link rel="stylesheet" type="text/css" href="../common/jquery/theme-redmond/jquery-ui-1.8.2.custom.css"/><link rel="stylesheet" type="text/css" href="../common/jquery/treeview/jquery.treeview.css"/><script type="text/javascript" src="../common/jquery/jquery-1.4.3.min.js"><!----></script><script type="text/javascript" src="../common/jquery/jquery-ui-1.8.2.custom.min.js"><!----></script><script type="text/javascript" src="../common/jquery/jquery.cookie.js"><!----></script><script type="text/javascript" src="../common/jquery/treeview/jquery.treeview.min.js"><!----></script><script type="text/javascript" src="../common/jquery/jquery.qtip-1.0.0-rc3/jquery.qtip-1.0.0-rc3.min.js"><!--jQuery plugin for glossary popups. --></script><script type="text/javascript" src="search/htmlFileList.js"><!----></script><script type="text/javascript" src="search/htmlFileInfoList.js"><!----></script><script type="text/javascript" src="search/nwSearchFnt.js"><!----></script><script type="text/javascript" src="search/stemmers/en_stemmer.js"><!--//make this scalable to other languages as well.--></script><script type="text/javascript" src="search/index-1.js"><!----></script><script type="text/javascript" src="search/index-2.js"><!----></script><script type="text/javascript" src="search/index-3.js"><!----></script><script type="text/javascript">
+	    var _gaq = _gaq || [];
+	    _gaq.push(['_setAccount', 'UA-17511903-1']);
+	    
+	    _gaq.push(['_setDomainName', '.openstack.org']);	        
+	        </script><script type="text/javascript" src="../common/ga.js"><!----></script></head><body><div id="header"><a onclick="_gaq.push(['_trackEvent', 'Header', 'logo', 'click', 1]);" target="_blank" href="http://www.openstack.org"><img src="../common/images/openstack-logo.png" alt="OpenStack Documentation" width="157" height="47"/></a><h1>第9章 環境を把握する</h1><div id="navheader" align="right"><!----><table class="navLinks"><tr><td><a id="showHideButton" onclick="showHideToc(); _gaq.push(['_trackEvent', 'Header', 'show/hide', 'click', 1]);" class="pointLeft" title="Hide TOC tree">Sidebar
+                            </a></td><td><a accesskey="p" class="navLinkPrevious" onclick="_gaq.push(['_trackEvent', 'Header', 'prevLink', 'click', 1]);" tabindex="5" href="whats_next.html">戻る</a> 
+				  |
+                                    <a accesskey="n" class="navLinkNext" onclick="_gaq.push(['_trackEvent', 'Header', 'nextLink', 'click', 1]);" tabindex="5" href="projects_users.html">次へ</a></td></tr></table></div></div><div id="toolbar" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><div id="toolbar-left"><p class="breadcrumbs"><a href="http://docs.openstack.org/">OpenStack Manuals</a><a href="index.html">OpenStack 運用ガイド</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../openstack-ops-manual-local.pdf"><img src="../common/images/pdf.png"/></a></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="chapter"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="lay_of_the_land"> </a>第9章 環境を把握する</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="lay_of_the_land.html#cli_tools">クライアントコマンドラインツール</a></span></dt><dt><span class="section"><a href="lay_of_the_land.html#network">ネットワーク</a></span></dt><dt><span class="section"><a href="lay_of_the_land.html#users_projects">ユーザおよびプロジェクト</a></span></dt><dt><span class="section"><a href="lay_of_the_land.html#running_instances">稼働中インスタンス</a></span></dt></dl></div><p>ここからは、あなたがOpenStackの実行環境を持っていると想定して進めます。この節は環境の構築と情報収集に役立つでしょう。</p><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="cli_tools"> </a>クライアントコマンドラインツール</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="lay_of_the_land.html#install_tools">ツールの導入</a></span></dt><dt><span class="section"><a href="lay_of_the_land.html#admin_cli">管理系コマンドラインツール</a></span></dt><dt><span class="section"><a href="lay_of_the_land.html#get_creds">認証情報の取得方法</a></span></dt><dt><span class="section"><a href="lay_of_the_land.html#cli_tricks">コマンドラインのこつと罠</a></span></dt><dt><span class="section"><a href="lay_of_the_land.html#servers_services">サーバーとサービス</a></span></dt></dl></div><p>OpenStack command line interface (CLI) クライアントツールとOpenStackダッシュボードを組み合わせて使うことをおすすめします。他のクラウド技術の経験を持つユーザは、EC2互換APIを使っているかも知れませんが、それとは命名規則が少々異なります。それらの違いは必要に応じて補足します。</p><p>コマンドラインツールは、UbuntuやFedoraのパッケージからではなく、<a class="link" href="https://pypi.python.org/" target="_top">Python Package Index</a>(PyPI) (https://pypi.python.org/) からの導入を強くおすすめします。クライアントツールは開発が活発であり、OSベンダーが配布しているパッケージのバージョンが古くなりがちなためです。</p><p>"pip"ユーティリティはPyPIアーカイブからパッケージを導入するために使われます。そして、"python-pip"パッケージは多くのLinuxディストリビューションに含まれています。各OpenStackプロジェクトはそれぞれクライアントを持ちますので、あなたが動かすサービスに合わせ、以下のパッケージを導入してください。</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>python-novaclient (<script>
+             $(document).ready(function(){
+               $("a.gloss#nova").qtip({
+               content: '<strong>nova:</strong> <p>Compute サービスを提供する OpenStack プロジェクト。</p>',
+               show: {event:'mouseover',delay:500},
+               hide: {event:'mouseout',delay:500, fixed:true},
+               style: { 
+                        width: 200,
+                        padding: 5,
+                        background: '#FFFFCC',
+                        color: 'black',
+                        textAlign: 'left',
+                        border: {
+                                    width: 1,
+                                    radius: 4,
+                                    color: '#EEEEBB'
+                        },
+                        tip: true,
+                        name: 'cream' // Inherit the rest of the attributes from the preset cream style
+                },
+                position: {
+                    corner: {
+                            target: 'topMiddle',
+                            tooltip: 'bottomLeft'
+                    }
+                }
+               });
+             });
+             </script><a class="gloss" href="#" id="nova">nova</a> CLI)</p></li><li class="listitem"><p>python-glanceclient (<script>
+             $(document).ready(function(){
+               $("a.gloss#glance").qtip({
+               content: '<strong>glance:</strong> <p>OpenStack イメージサービスを提供するコアプロジェクト。</p>',
+               show: {event:'mouseover',delay:500},
+               hide: {event:'mouseout',delay:500, fixed:true},
+               style: { 
+                        width: 200,
+                        padding: 5,
+                        background: '#FFFFCC',
+                        color: 'black',
+                        textAlign: 'left',
+                        border: {
+                                    width: 1,
+                                    radius: 4,
+                                    color: '#EEEEBB'
+                        },
+                        tip: true,
+                        name: 'cream' // Inherit the rest of the attributes from the preset cream style
+                },
+                position: {
+                    corner: {
+                            target: 'topMiddle',
+                            tooltip: 'bottomLeft'
+                    }
+                }
+               });
+             });
+             </script><a class="gloss" href="#" id="glance">glance</a> CLI)</p></li><li class="listitem"><p>python-keystoneclient (<script>
+             $(document).ready(function(){
+               $("a.gloss#keystone").qtip({
+               content: '<strong>keystone:</strong> <p>OpenStack Identity サービスを提供するプロジェクト。</p>',
+               show: {event:'mouseover',delay:500},
+               hide: {event:'mouseout',delay:500, fixed:true},
+               style: { 
+                        width: 200,
+                        padding: 5,
+                        background: '#FFFFCC',
+                        color: 'black',
+                        textAlign: 'left',
+                        border: {
+                                    width: 1,
+                                    radius: 4,
+                                    color: '#EEEEBB'
+                        },
+                        tip: true,
+                        name: 'cream' // Inherit the rest of the attributes from the preset cream style
+                },
+                position: {
+                    corner: {
+                            target: 'topMiddle',
+                            tooltip: 'bottomLeft'
+                    }
+                }
+               });
+             });
+             </script><a class="gloss" href="#" id="keystone">keystone</a> CLI)</p></li><li class="listitem"><p>python-cinderclient (<script>
+             $(document).ready(function(){
+               $("a.gloss#cinder").qtip({
+               content: '<strong>cinder:</strong> <p>仮想マシンのインスタンスに接続できるブロックデバイスを管理する OpenStack ブロックストレージサービス。</p>',
+               show: {event:'mouseover',delay:500},
+               hide: {event:'mouseout',delay:500, fixed:true},
+               style: { 
+                        width: 200,
+                        padding: 5,
+                        background: '#FFFFCC',
+                        color: 'black',
+                        textAlign: 'left',
+                        border: {
+                                    width: 1,
+                                    radius: 4,
+                                    color: '#EEEEBB'
+                        },
+                        tip: true,
+                        name: 'cream' // Inherit the rest of the attributes from the preset cream style
+                },
+                position: {
+                    corner: {
+                            target: 'topMiddle',
+                            tooltip: 'bottomLeft'
+                    }
+                }
+               });
+             });
+             </script><a class="gloss" href="#" id="cinder">cinder</a> CLI)</p></li><li class="listitem"><p>python-swiftclient (<script>
+             $(document).ready(function(){
+               $("a.gloss#swift").qtip({
+               content: '<strong>swift:</strong> <p>オブジェクトストレージサービスを提供する OpenStack コアプロジェクト。</p>',
+               show: {event:'mouseover',delay:500},
+               hide: {event:'mouseout',delay:500, fixed:true},
+               style: { 
+                        width: 200,
+                        padding: 5,
+                        background: '#FFFFCC',
+                        color: 'black',
+                        textAlign: 'left',
+                        border: {
+                                    width: 1,
+                                    radius: 4,
+                                    color: '#EEEEBB'
+                        },
+                        tip: true,
+                        name: 'cream' // Inherit the rest of the attributes from the preset cream style
+                },
+                position: {
+                    corner: {
+                            target: 'topMiddle',
+                            tooltip: 'bottomLeft'
+                    }
+                }
+               });
+             });
+             </script><a class="gloss" href="#" id="swift">swift</a> CLI)</p></li><li class="listitem"><p>python-quantumclient (<script>
+             $(document).ready(function(){
+               $("a.gloss#quantum").qtip({
+               content: '<strong>quantum:</strong> <p>OpenStack のコアプロジェクトで、OpenStack Compute に対してネットワーク接続の抽象化レイヤーを提供します。</p>',
+               show: {event:'mouseover',delay:500},
+               hide: {event:'mouseout',delay:500, fixed:true},
+               style: { 
+                        width: 200,
+                        padding: 5,
+                        background: '#FFFFCC',
+                        color: 'black',
+                        textAlign: 'left',
+                        border: {
+                                    width: 1,
+                                    radius: 4,
+                                    color: '#EEEEBB'
+                        },
+                        tip: true,
+                        name: 'cream' // Inherit the rest of the attributes from the preset cream style
+                },
+                position: {
+                    corner: {
+                            target: 'topMiddle',
+                            tooltip: 'bottomLeft'
+                    }
+                }
+               });
+             });
+             </script><a class="gloss" href="#" id="quantum">quantum</a> CLI)</p></li></ul></div><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="install_tools"> </a>ツールの導入</h3></div></div></div><p>PyPIアーカイブからpipを使ってパッケージをインストール (もしくはアップグレード)するには、rootとして、</p><pre class="programlisting"># pip install [--upgrade] &lt;package-name&gt;</pre><p>パッケージを削除するには、</p><pre class="programlisting"># pip uninstall &lt;package-name&gt;</pre><p>もし新しいバージョンのクライアントが必要な場合、<code class="code">-e</code>フラグを指定することで、アップストリーム gitリポジトリから直接導入できます。その際は、Python egg名を指定しなければいけません。例えば、</p><pre class="programlisting"># pip install -e git+https://github.com/openstack/python-novaclient.git#egg=python-novaclient</pre><p>もしEC2 APIを使いたい場合、"euca2ools"パッケージなどのEC2 API対応ツールで実現できます。EC2 APIベースのツールはこのガイドの範囲外ですが、それを使うための認証情報の取得手段については触れることにします。</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="admin_cli"> </a>管理系コマンドラインツール</h3></div></div></div><p><span class="emphasis"><em>*-</em></span>manageという名のコマンドラインツールがいくつかあります。</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>nova-manage</p></li><li class="listitem"><p>glance-manage</p></li><li class="listitem"><p>keystone-manage</p></li><li class="listitem"><p>cinder-manage</p></li></ul></div><p>前述のツールと違って、<code class="code">*-manage</code>ツールはクラウドコントローラーからroot権限で実行されなければいけません。なぜなら、それらのツールは<code class="code">/etc/nova/nova.conf</code>などの構成ファイルを読み取り、また、OpenStack <script>
+             $(document).ready(function(){
+               $("a.gloss#API_endpoint").qtip({
+               content: '<strong>API endpoint:</strong> ',
+               show: {event:'mouseover',delay:500},
+               hide: {event:'mouseout',delay:500, fixed:true},
+               style: { 
+                        width: 200,
+                        padding: 5,
+                        background: '#FFFFCC',
+                        color: 'black',
+                        textAlign: 'left',
+                        border: {
+                                    width: 1,
+                                    radius: 4,
+                                    color: '#EEEEBB'
+                        },
+                        tip: true,
+                        name: 'cream' // Inherit the rest of the attributes from the preset cream style
+                },
+                position: {
+                    corner: {
+                            target: 'topMiddle',
+                            tooltip: 'bottomLeft'
+                    }
+                }
+               });
+             });
+             </script><a class="gloss" href="#" id="API_endpoint">API endpoint</a>ではなく、データベースに対し直接クエリーを発行する必要があるからです。</p><p><code class="code">*-manage</code>ツールの存在は、時代に合わなくなっています。OpenStackプロジェクトは最終的に、<code class="code">*-manage</code>の全機能を通常のクライアントツールへ移行する予定です。それまでは、<script>
+             $(document).ready(function(){
+               $("a.gloss#cloud_controller_node").qtip({
+               content: '<strong>cloud controller node:</strong> ',
+               show: {event:'mouseover',delay:500},
+               hide: {event:'mouseout',delay:500, fixed:true},
+               style: { 
+                        width: 200,
+                        padding: 5,
+                        background: '#FFFFCC',
+                        color: 'black',
+                        textAlign: 'left',
+                        border: {
+                                    width: 1,
+                                    radius: 4,
+                                    color: '#EEEEBB'
+                        },
+                        tip: true,
+                        name: 'cream' // Inherit the rest of the attributes from the preset cream style
+                },
+                position: {
+                    corner: {
+                            target: 'topMiddle',
+                            tooltip: 'bottomLeft'
+                    }
+                }
+               });
+             });
+             </script><a class="gloss" href="#" id="cloud_controller_node">cloud controller node</a>へSSHし、必要な<code class="code">*-manage</code>を使ってメンテナンス作業を行う必要があります。</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="get_creds"> </a>認証情報の取得方法</h3></div></div></div><p>OpenStackクラウドに対してクエリを発行するためにコマンドラインツールを使いたいのであれば、適切な認証情報を持っている必要があります。コマンドラインツールで使う認証情報を得るための最も簡単な方法は、Horizonダッシュボードです。ユーザ設定ページを表示するには、ページ右上のナビゲーション、<span class="guilabel"><strong>設定</strong></span>を選択します。ここから言語やタイムゾーンも設定できます。ここで重要なのは、このページ左側のナビゲーション<span class="guilabel"><strong>OpenStack API</strong></span> と <span class="guilabel"><strong>EC2 認証情報</strong></span> リンクです。このリンクから、あなたのサービスエンドポイントや認証情報といった環境変数を設定するファイルを生成できます。</p><p>OpenStackネイティブのツールを使うには、 <span class="guilabel"><strong>OpenStack API</strong></span> リンクを選択します。ページ上部にはサービスエンドポイントのURLリストが、その下にタイトル<span class="guilabel"><strong>OpenStack RCファイルのダウンロード</strong></span>があります。管理者としてクラウドにアクセスする場合、ドロップダウンメニューから選択できます。ここから認証情報を取得したいプロジェクトを選択し、<span class="guibutton"><strong>RCファイルのダウンロード</strong></span>をクリックします。以下のような、<code class="code">openrc.sh</code>ファイルが生成されます。</p><pre class="programlisting">#!/bin/bash
+      
+# With the addition of Keystone, to use an openstack cloud you should
+# authenticate against keystone, which returns a **Token** and **Service
+# Catalog**. The catalog contains the endpoint for all services the
+# user/tenant has access to - including nova, glance, keystone, swift.
+#
+# *NOTE*: Using the 2.0 *auth api* does not mean that compute api is 2.0. 
+# We use the 1.1 *compute api*
+export OS_AUTH_URL=http://203.0.113.10:5000/v2.0
+      
+# With the addition of Keystone we have standardized on the term **tenant**
+# as the entity that owns the resources.
+export OS_TENANT_ID=98333aba48e756fa8f629c83a818ad57
+export OS_TENANT_NAME="test-project"
+      
+# In addition to the owning entity (tenant), openstack stores the entity
+# performing the action as the **user**.
+export OS_USERNAME=test-user
+      
+# With Keystone you pass the keystone password.
+echo "Please enter your OpenStack Password: "
+read -s OS_PASSWORD_INPUT
+export OS_PASSWORD=$OS_PASSWORD_INPUT</pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[注記]" src="../common/images/admon/note.png"/></td><th align="left">注記</th></tr><tr><td align="left" valign="top"><p>あなたのパスワードはプレーンテキストに保存されません。これはいいことです。このスクリプトを読み込み、実行する際、パスワードの入力が要求され、環境変数<code class="code">OS_PASSWORD</code>に設定されます。対話式に要求することが重要です。もしあなたが非対話式に操作したいのであれば、値を直接スクリプトに書くことは可能です。しかし、このファイルのセキュリティとパーミッションに極めて高い注意を払う必要があります。</p></td></tr></table></div><p>EC2互換クレデンシャルは左側ナビゲーションバー内の "EC2 認証情報"リンクからダウンロードできます。対象認証情報のプロジェクトを選択し、"EC2 認証情報のダウンロード"をクリックすると、x509証明書とシェルスクリプトを含むzipファイルが生成されます。クラウドにアクセスするために必要な認証情報を含んでいるため、<code class="code">openrc</code>とは異なり、安全な場所へ新しいディレクトリを作り、そこへzipファイルを展開してください。cacert.pem、 cert.pem、 ec2rc.sh そして pk.pemがあるはずです。 <code class="code">ec2rc.sh</code>を以下のようになるでしょう。</p><pre class="programlisting">#!/bin/bash
+      
+NOVARC=$(readlink -f "${BASH_SOURCE:-${0}}" 2&gt;/dev/null) ||\
+NOVARC=$(python -c 'import os,sys; print os.path.abspath(os.path.realpath(sys.argv[1]))' "${BASH_SOURCE:-${0}}")
+NOVA_KEY_DIR=${NOVARC%/*}
+export EC2_ACCESS_KEY=df7f93ec47e84ef8a347bbb3d598449a
+export EC2_SECRET_KEY=ead2fff9f8a344e489956deacd47e818
+export EC2_URL=http://203.0.113.10:8773/services/Cloud
+export EC2_USER_ID=42 # nova does not use user id, but bundling requires it
+export EC2_PRIVATE_KEY=${NOVA_KEY_DIR}/pk.pem
+export EC2_CERT=${NOVA_KEY_DIR}/cert.pem
+export NOVA_CERT=${NOVA_KEY_DIR}/cacert.pem
+export EUCALYPTUS_CERT=${NOVA_CERT} # euca-bundle-image seems to require this set
+      
+alias ec2-bundle-image="ec2-bundle-image --cert $EC2_CERT --privatekey $EC2_PRIVATE_KEY --user 42 --ec2cert $NOVA_CERT"
+alias ec2-upload-bundle="ec2-upload-bundle -a $EC2_ACCESS_KEY -s $EC2_SECRET_KEY --url $S3_URL --ec2cert $NOVA_CERT"</pre><p>EC2認証情報をあなたの環境に追加するには、<code class="code">ec2rc.sh</code>ファイルを使います。</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="cli_tricks"> </a>コマンドラインのこつと罠</h3></div></div></div><div class="toc"><dl><dt><span class="section"><a href="lay_of_the_land.html#curl">cURL</a></span></dt></dl></div><p>コマンドラインツールは、<code class="code">--debug</code>フラグを渡すことでOpenStack APIコールを表示することができます。例えば、</p><pre class="programlisting"># nova --debug list</pre><p>この例は、クライアントからのHTTPリクエストとエンドポイントからのレスポンスを表示しています。これはOpenStack APIを使ったカスタムツールを作る際に役立ちます。</p><p><a class="link" href="https://wiki.openstack.org/wiki/KeyringSupport" target="_top">Keyring Support</a> (https://wiki.openstack.org/wiki/KeyringSupport)は、このガイドの執筆時点では混乱の元になるかもしれません。この<a class="link" href="https://bugs.launchpad.net/python-novaclient/+bug/1020238" target="_top">bug report</a> (https://bugs.launchpad.net/python-novaclient/+bug/1020238)はオープンされた後、不正にクローズされ、数サイクルを経て再度オープンされています。</p><p>その問題とは、ある条件下でコマンドラインツールがPythonのkeyringを認証情報キャッシュとして使おうとし、さらにある条件が重なった時、使用するたびにツールがkeyringパスワードを要求することです。もしあなたが運悪くその現象に遭遇した場合、認証情報キャッシュを回避するため、<code class="code">--no-cache</code>フラグを追加するか、<code class="code">OS_NO_CACHE=1</code>を環境変数に設定してください。</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[注記]" src="../common/images/admon/note.png"/></td><th align="left">注記</th></tr><tr><td align="left" valign="top"><p>この問題は、コマンドラインツールがクラウドとやりとりするたびに発生します。</p></td></tr></table></div><div class="section"><div xmlns="" class="titlepage"><div><div><h4 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="curl"> </a>cURL</h4></div></div></div><p>コマンドラインツールの内部では、HTTP RESTful APIであるOpenStack APIが使われています。時に、APIと直接やりとりしたい、CLIツールのバグを疑っている、ということがあるでしょう。その際に最適な方法は、<a class="link" href="http://curl.haxx.se/" target="_top">cURL</a> (http://curl.haxx.se/)と、JSONレスポンスを解析する<a class="link" href="http://stedolan.github.com/jq/" target="_top">jq</a> (http://stedolan.github.com/jq/)などのツールを組み合わせることです。</p><p>まずはじめに、クラウドの認証が必要です。あなたの認証情報を用いて認証トークンを入手してください。</p><p>あなたの認証情報はユーザ名、パスワード、テナント(プロジェクト)の組み合わせです。前述した<code class="code">openrc.sh</code>で、それらの値を得ることができます。そのトークンのおかげで、リクエストのたびに再認証することなく、サービスエンドポイントとやりとりすることができます。トークンは通常24時間有効です。失効の際は401 (Unauthorized)レスポンスにて警告されますが、別トークンを要求することができます。</p><p>
+                    </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>それではOpenStack service <script>
+             $(document).ready(function(){
+               $("a.gloss#catalog").qtip({
+               content: '<strong>catalog:</strong> ',
+               show: {event:'mouseover',delay:500},
+               hide: {event:'mouseout',delay:500, fixed:true},
+               style: { 
+                        width: 200,
+                        padding: 5,
+                        background: '#FFFFCC',
+                        color: 'black',
+                        textAlign: 'left',
+                        border: {
+                                    width: 1,
+                                    radius: 4,
+                                    color: '#EEEEBB'
+                        },
+                        tip: true,
+                        name: 'cream' // Inherit the rest of the attributes from the preset cream style
+                },
+                position: {
+                    corner: {
+                            target: 'topMiddle',
+                            tooltip: 'bottomLeft'
+                    }
+                }
+               });
+             });
+             </script><a class="gloss" href="#" id="catalog">catalog</a>を見てみましょう。</p><pre class="programlisting brush: bash; ">$ curl -s -X POST http://203.0.113.10:35357/v2.0/tokens \
+    -d '{"auth": {"passwordCredentials": {"username":"test-user", "password":"test-password"}, "tenantName":"test-project"}}' \
+    -H "Content-type: application/json" | jq .</pre></li><li class="listitem"><p>JSONレスポンスを読むことで、カタログを把握することができます。</p><p>続くリクエストを楽にするため、トークンを環境変数へ設定します。</p><pre class="programlisting brush: bash; ">$ TOKEN=`curl -s -X POST http://203.0.113.10:35357/v2.0/tokens \
+    -d '{"auth": {"passwordCredentials": {"username":"test-user", "password":"test-password"}, "tenantName":"test-project"}}' \
+    -H "Content-type: application/json" |  jq -r .access.token.id`</pre><p>コマンドラインから、トークンを$TOKENとして参照できるようになりました。</p></li><li class="listitem"><p>あなたのサービスカタログからcomputeなどのエンドポイントを選び、試してみましょう。例えば、(サーバー)インスタンスのリスト出力など。</p><pre class="programlisting">$ curl -s \
+                                  -H "X-Auth-Token: $TOKEN" \
+                                   http://203.0.113.10:8774/v2/98333aba48e756fa8f629c83a818ad57/servers | jq .</pre></li></ol></div><p>
+                </p><p>APIリクエストがどう構造化されているかを知るには、<a class="link" href="http://api.openstack.org/api-ref.html" target="_top">OpenStack API Reference</a> (http://api.openstack.org/api-ref.html)を参照してください。また、jqを使ってレスポンスを理解するには、<a class="link" href="http://stedolan.github.com/jq/manual/" target="_top">jq Manual</a> (http://stedolan.github.com/jq/manual/)も参考になるでしょう。</p><p>cURLの<code class="code">-s</code>フラグを使うことで、プログレスメーター非表示にできます。もしcURLコマンドの実行に問題がある場合、それらを消したくなるでしょう。いっぽう、<code class="code">-v</code>フラグは詳細を出力するため、cURLコマンドのトラブル解決に役立ちます。非常に便利な機能がcURLには多くあるので、manページでそれらのオプションを参照してください。</p></div></div><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="servers_services"> </a>サーバーとサービス</h3></div></div></div><p>管理者として、あなたのOpenStackクラウドがどのような状態か、ツールを使って把握する方法が、いくつかあります。この節では、あなたのクラウドの概要、形、大きさ、状態を得るアイデアをお伝えします。</p><p>まず、あなたのOpenStackクラウドに属し、稼働しているサーバーを把握することができます。</p><pre class="programlisting">$ nova-manage service list | sort</pre><p>出力は以下のようになります。</p><pre class="programlisting">Binary           Host              Zone Status  State Updated_At
+nova-cert        cloud.example.com nova enabled  :-)  2013-02-25 19:32:38
+nova-compute     c01.example.com   nova enabled  :-)  2013-02-25 19:32:35
+nova-compute     c02.example.com   nova enabled  :-)  2013-02-25 19:32:32
+nova-compute     c03.example.com   nova enabled  :-)  2013-02-25 19:32:36
+nova-compute     c04.example.com   nova enabled  :-)  2013-02-25 19:32:32
+nova-compute     c05.example.com   nova enabled  :-)  2013-02-25 19:32:41
+nova-consoleauth cloud.example.com nova enabled  :-)  2013-02-25 19:32:36
+nova-network     cloud.example.com nova enabled  :-)  2013-02-25 19:32:32
+nova-scheduler   cloud.example.com nova enabled  :-)  2013-02-25 19:32:33</pre><p>この出力は、5つのcomputeノードと1つのクラウドコントローラーがあることを示しています。<code class="code">:-)</code> のような笑顔は、サービスが起動、動作していることを表しています。もしサービスが動作していない場合、<code class="code">:-)</code>は<code class="code">XXX</code>へと変化します。なぜサービスがダウンしているのか、問題解決すべき表示です。</p><p>もしあなたがまだ<code class="code">nova-volume</code>を使っているのであれば、nova-volumeサービスのエントリも見えるでしょう。 (nova-volumeはFolsomリリース以降、廃止予定です)</p><p>Cinderを使っているのであれば、以下コマンドの実行で同様のリストが見られます。</p><pre class="programlisting">$ cinder-manage host list | sort</pre><pre class="programlisting">host              zone
+c01.example.com   nova
+c02.example.com   nova
+c03.example.com   nova
+c04.example.com   nova
+c05.example.com   nova
+cloud.example.com nova</pre><p>これら2つの表で、どのサーバーとサービスがあなたのクラウドを構成しているのか、概要を知ることができました。</p><p>また、IDサービス (Keystone)を使い、あなたのクラウドでどのサービスが使えるのか、また、どのエンドポイントがサービス向けに構成されているか、知ることができます。</p><p>下記コマンドを実行するには、あなたのシェル環境で正しく管理系の変数が設定されている必要があります。</p><pre class="programlisting">$ keystone service-list</pre><pre class="programlisting">+-----+----------+----------+----------------------------+
+| id  | name     | type     | description                |
++-----+----------+----------+----------------------------+
+| ... | cinder   | volume   | Cinder Service             |
+| ... | glance   | image    | OpenStack Image Service    |
+| ... | nova_ec2 | ec2      | EC2 Service                |
+| ... | keystone | identity | OpenStack Identity Service |
+| ... | nova     | compute  | OpenStack Compute Service  |
++-----+----------+----------+----------------------------+</pre><p>上記の出力は、5つのサービスが構成されていることを示しています。</p><p>サービスごとのエンドポイントを見るには、</p><pre class="programlisting">$ keystone endpoint-list</pre><pre class="programlisting">+-----+-----------------------------------------+-/+-----------------------------------------+
+| id  |            publicurl                    | \|               adminurl                  |
++-----+-----------------------------------------+-/+-----------------------------------------+
+| ... | http://example.com:8774/v2/%(tenant_id)s| \| http://example.com:8774/v2/%(tenant_id)s|
+| ... | http://example.com:8773/services/Cloud  | /| http://example.com:8773/services/Admin  |
+| ... | http://example.com:9292/v1              | \| http://example.com:9292/v1              |
+| ... | http://example.com:5000/v2.0            | /| http://example.com:35357/v2.0           |
+| ... | http://example.com:8776/v1/%(tenant_id)s| \| http://example.com:8776/v1/%(tenant_id)s|
++-----+-----------------------------------------+-/+-----------------------------------------+</pre><p><span class="emphasis"><em>service</em></span> と <span class="emphasis"><em>endpoint</em></span>は1対1でマッピングされます。いくつかのサービスではパブリックURLと管理URLが異なるので注意してください。</p></div></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="network"> </a>ネットワーク</h2></div></div></div><p>Next, take a look at what Fixed IP networks are configured in your cloud. You can use
+            the <span class="command"><strong>nova</strong></span> command-line client to get the IP
+            ranges.</p><pre class="screen">$ nova network-list
++--------------------------------------+--------+--------------+
+| ID                                   | Label  | Cidr         |
++--------------------------------------+--------+--------------+
+| 3df67919-9600-4ea8-952e-2a7be6f70774 | test01 |  10.1.0.0/24 |
+| 8283efb2-e53d-46e1-a6bd-bb2bdef9cb9a | test02 |  10.1.1.0/24 |
++--------------------------------------+--------+--------------+</pre><p>The <span class="command"><strong>nova-manage</strong></span> tool can provide some additional details.</p><pre class="screen">$ nova-manage network list
+id IPv4        IPv6 start address DNS1 DNS2 VlanID project   uuid 
+1  10.1.0.0/24 None 10.1.0.3      None None 300    2725bbd   beacb3f2
+2  10.1.1.0/24 None 10.1.1.3      None None 301    none      d0b1a796</pre><p>この出力は、2つのネットワークが構成され、それぞれが255のIPアドレス (/24 サブネット)を持つことを表しています。1つ目のネットワークはあるプロジェクトに割り当てられており、2つ目はまだ割り当てられていません。手動で割り当てることもできますし、プロジェクトの1つ目のインスタンスを起動する際、自動的に割り当てることもできます。</p><p>利用可能なフローティングIPを確認するには、</p><pre class="programlisting">$ nova-manage floating list</pre><pre class="programlisting">2725bbd458e2459a8c1bd36be859f43f 1.2.3.4 None                                 nova vlan20
+None                             1.2.3.5 48a415e7-6f07-4d33-ad00-814e60b010ff nova vlan20</pre><p>2つのフローティングIPが利用可能であることがわかります。1つめはプロジェクトに割り当て済み、もうひとつは未割り当てです。</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="users_projects"> </a>ユーザおよびプロジェクト</h2></div></div></div><p>クラウドに追加されたプロジェクトのリストを見るためには、</p><pre class="programlisting">$ keystone tenant-list</pre><pre class="programlisting">+-----+----------+---------+
+| id  | name     | enabled |
++-----+----------+---------+
+| ... | jtopjian | True    |
+| ... | alvaro   | True    |
+| ... | everett  | True    |
+| ... | admin    | True    |
+| ... | services | True    |
+| ... | jonathan | True    |
+| ... | lorin    | True    |
+| ... | anne     | True    |
+| ... | rhulsker | True    |
+| ... | tom      | True    |
+| ... | adam     | True    |
++-----+----------+---------+</pre><p>ユーザのリストを見るためには、</p><pre class="programlisting">$ keystone user-list</pre><pre class="programlisting">+-----+----------+---------+------------------------------+
+| id  | name     | enabled | email                        |
++-----+----------+---------+------------------------------+
+| ... | everett  | True    | everett.towne@backspace.com  |
+| ... | jonathan | True    | jon@sfcu.edu                 |
+| ... | nova     | True    | nova@localhost               |
+| ... | rhulsker | True    | ryan.hulkster@cyberalbert.ca |
+| ... | lorin    | True    | lorinhoch@nsservices.com     |
+| ... | alvaro   | True    | Alvaro.Perry@cyberalbert.ca  |
+| ... | anne     | True    | anne.green@backspace.com     |
+| ... | admin    | True    | root@localhost               |
+| ... | cinder   | True    | cinder@localhost             |
+| ... | glance   | True    | glance@localhost             |
+| ... | jtopjian | True    | joe.topjian@cyberalbert.com  |
+| ... | adam     | True    | adam@ossmanuals.net          |
+| ... | tom      | True    | fafield@univm.edu.au         |
++-----+----------+---------+------------------------------+</pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[注記]" src="../common/images/admon/note.png"/></td><th align="left">注記</th></tr><tr><td align="left" valign="top"><p>ユーザとグループが1対1でマッピングされることもあります。これはcinder、glance、novaやswiftなどの標準システムアカウントなど、1ユーザのみのグループがあるためです。</p></td></tr></table></div></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="running_instances"> </a>稼働中インスタンス</h2></div></div></div><p>稼働中インスタンスのリストを見るためには、</p><pre class="programlisting">$ nova list --all-tenants</pre><pre class="programlisting">+-----+------------------+--------+-------------------------------------------+
+| ID  | Name             | Status | Networks                                  |
++-----+------------------+--------+-------------------------------------------+
+| ... | Windows          | ACTIVE | novanetwork_1=10.1.1.3, 199.116.232.39    |
+| ... | cloud controller | ACTIVE | novanetwork_0=10.1.0.6; jtopjian=10.1.2.3 |
+| ... | compute node 1   | ACTIVE | novanetwork_0=10.1.0.4; jtopjian=10.1.2.4 |
+| ... | devbox           | ACTIVE | novanetwork_0=10.1.0.3                    |
+| ... | devstack         | ACTIVE | novanetwork_0=10.1.0.5                    |
+| ... | initial          | ACTIVE | nova_network=10.1.7.4, 10.1.8.4           |
+| ... | lorin-head       | ACTIVE | nova_network=10.1.7.3, 10.1.8.3           |
++-----+------------------+--------+-------------------------------------------+</pre><p>残念ながら、このコマンドは稼働中インスタンスの詳細を出力しません。例えば、どのcomputeノードでインスタンスが動いているのか、フレーバーは何か、などなど。あなたは以下のコマンドでインスタンス個別の詳細情報を得ることができます。</p><pre class="programlisting">$ nova show &lt;uuid&gt;</pre><p>例えば、</p><pre class="programlisting"># nova show 81db556b-8aa5-427d-a95c-2a9a6972f630</pre><pre class="programlisting">+-------------------------------------+-----------------------------------+
+| Property                            | Value                             |
++-------------------------------------+-----------------------------------+
+| OS-DCF:diskConfig                   | MANUAL                            |
+| OS-EXT-SRV-ATTR:host                | c02.example.com                   |
+| OS-EXT-SRV-ATTR:hypervisor_hostname | c02.example.com                   |
+| OS-EXT-SRV-ATTR:instance_name       | instance-00000029                 |
+| OS-EXT-STS:power_state              | 1                                 |
+| OS-EXT-STS:task_state               | None                              |
+| OS-EXT-STS:vm_state                 | active                            |
+| accessIPv4                          |                                   |
+| accessIPv6                          |                                   |
+| config_drive                        |                                   |
+| created                             | 2013-02-13T20:08:36Z              |
+| flavor                              | m1.small (6)                      |
+| hostId                              | ...                               |
+| id                                  | ...                               |
+| image                               | Ubuntu 12.04 cloudimg amd64 (...) |
+| key_name                            | jtopjian-sandbox                  |
+| metadata                            | {}                                |
+| name                                | devstack                          |
+| novanetwork_0 network               | 10.1.0.5                          |
+| progress                            | 0                                 |
+| security_groups                     | [{u'name': u'default'}]           |
+| status                              | ACTIVE                            |
+| tenant_id                           | ...                               |
+| updated                             | 2013-02-13T20:08:59Z              |
+| user_id                             | ...                               |
++-------------------------------------+-----------------------------------+</pre></div></div><script type="text/javascript" src="../common/main.js"><!----></script><hr/><div id="disqus_thread"><script type="text/javascript">
+	      if(window.location.protocol.substring(0,4) == 'http'){
+	        var disqus_shortname = 'openstack-ops';
+	      
+	        var disqus_identifier = 'openstack-operations-guidelay_of_the_land';
+	      
+	      }
+	    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><script type="text/javascript" src="../common/comments.js"><!----></script></div><hr/><div class="legal"><a href="index.html">Legal notices</a></div></div><div><div id="leftnavigation" style="padding-top:3px; background-color:white;"><div id="tabs"><ul><li><a href="#treeDiv" tabindex="1"><span class="contentsTab">目次</span></a></li><li><a href="#searchDiv" tabindex="1"><span class="searchTab">Search</span></a></li></ul><div id="treeDiv"><img src="../common/images/loading.gif" alt="loading table of contents..." id="tocLoading" style="display:block;"/><div id="ulTreeDiv" style="display:none" class="thisisthat"><ul id="tree" class="filetree"><li tabindex="2"><span class="file"><a href="ch_doc_history.html">ドキュメント変更履歴</a></span></li><li tabindex="2"><span class="file"><a href="section_yk2_jpr_lj.html">はじめに</a></span><ul><li tabindex="2"><span class="file"><a href="section_yk2_jpr_lj.html#chapter_gk2_jpr_lj">この本をなぜ書いたか？どうやって書いたか？</a></span></li><li tabindex="2"><span class="file"><a href="section_yk2_jpr_lj.html#section_gl2_jpr_lj">この本の作成に参加するには</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="section_arch_provision.html">1. プロビジョニングとデプロイメント</a></span><ul><li tabindex="2"><span class="file"><a href="section_arch_provision.html#automated_deploy">自動デプロイメント</a></span><ul><li tabindex="2"><span class="file"><a href="section_arch_provision.html#disk_partition_raid">ディスクのパーティショニングと RAID</a></span></li><li tabindex="2"><span class="file"><a href="section_arch_provision.html#network_config">ネットワーク設定</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="section_arch_provision.html#auto_config">自動環境設定</a></span></li><li tabindex="2"><span class="file"><a href="section_arch_provision.html#remote_mgmt">リモート管理</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html">2. クラウドコントローラーの設計</a></span><ul><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#hardware_consid">ハードウェアの考慮事項</a></span></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#separate_services">サービスの分離</a></span></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#database">データベース</a></span></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#message_queue">メッセージキュー</a></span></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#api">Application Programming Interface (API)</a></span></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#extensions">API 拡張</a></span></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#scheduler">スケジューラー</a></span></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#images">イメージ</a></span></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#dashboard">Dashboard</a></span></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#authentication">認証および認可</a></span></li><li tabindex="2"><span class="file"><a href="cloud_controller_design.html#network_consid">ネットワークの考慮事項</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="scaling.html">3. スケーリング</a></span><ul><li tabindex="2"><span class="file"><a href="scaling.html#starting">スタートポイント</a></span></li><li tabindex="2"><span class="file"><a href="scaling.html#add_controller_nodes">Controller ノードの追加</a></span></li><li tabindex="2"><span class="file"><a href="scaling.html#segregate_cloud">クラウドの分離</a></span><ul><li tabindex="2"><span class="file"><a href="scaling.html#cells_regions">セルとリージョン</a></span></li><li tabindex="2"><span class="file"><a href="scaling.html#availability_zones">アベイラビリティゾーンとホストアグリゲート</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="scaling.html#scalable_hardware">スケーラブルハードウェア</a></span><ul><li tabindex="2"><span class="file"><a href="scaling.html#hardware_procure">ハードウェア調達</a></span></li><li tabindex="2"><span class="file"><a href="scaling.html#capacity_planning">キャパシティプランニング</a></span></li><li tabindex="2"><span class="file"><a href="scaling.html#burin_testing">エージング試験</a></span></li></ul></li></ul></li><li tabindex="2"><span class="file"><a href="compute_nodes.html">4. コンピュートノード</a></span><ul><li tabindex="2"><span class="file"><a href="compute_nodes.html#cpu_choice">CPU の選択</a></span></li><li tabindex="2"><span class="file"><a href="compute_nodes.html#hypervisor_choice">ハイパーバイザーの選択</a></span></li><li tabindex="2"><span class="file"><a href="compute_nodes.html#instance_storage">インスタンスストレージのソリューション</a></span><ul><li tabindex="2"><span class="file"><a href="compute_nodes.html#off_compute_node_storage">コンピュートノード外のストレージ – 共有ファイルシステム</a></span></li><li tabindex="2"><span class="file"><a href="compute_nodes.html#on_compute_node_storage">コンピュートノード上のストレージ – 共有ファイルシステム</a></span></li><li tabindex="2"><span class="file"><a href="compute_nodes.html#on_compute_node_storage_nonshared">コンピュートノード上のストレージ – 非共有ファイルシステム</a></span></li><li tabindex="2"><span class="file"><a href="compute_nodes.html#live_migration">ライブマイグレーションに関する問題</a></span></li><li tabindex="2"><span class="file"><a href="compute_nodes.html#file_systems">ファイルシステムの選択</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="compute_nodes.html#overcommit">オーバーコミット</a></span></li><li tabindex="2"><span class="file"><a href="compute_nodes.html#logging">ロギング</a></span></li><li tabindex="2"><span class="file"><a href="compute_nodes.html#networking">ネットワーク</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="storage_decision.html">5. ストレージ選定</a></span><ul><li tabindex="2"><span class="file"><a href="storage_decision.html#storage_concepts">ストレージのコンセプト</a></span><ul><li tabindex="2"><span class="file"><a href="storage_decision.html#object_storage">オブジェクト・ストレージ</a></span></li><li tabindex="2"><span class="file"><a href="storage_decision.html#block_storage">ブロックストレージ</a></span></li><li tabindex="2"><span class="file"><a href="storage_decision.html#file_level_storage">ファイルレベル・ストレージ</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="storage_decision.html#storage_backends">ストレージ・バックエンドの選択</a></span><ul><li tabindex="2"><span class="file"><a href="storage_decision.html#commodity_storage_backends">コモディティ・ハードウェア上の ストレージ技術</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="storage_decision.html#openstack_object_storage">OpenStack Object Storage の注意事項</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="network_design.html">6. ネットワーク設計</a></span><ul><li tabindex="2"><span class="file"><a href="network_design.html#mgmt_network">管理ネットワーク</a></span></li><li tabindex="2"><span class="file"><a href="network_design.html#public_addressing">パブリックアドレスの選択肢</a></span></li><li tabindex="2"><span class="file"><a href="network_design.html#ip_address_planning">IP アドレス計画</a></span></li><li tabindex="2"><span class="file"><a href="network_design.html#network_topology">ネットワークトポロジー</a></span><ul><li tabindex="2"><span class="file"><a href="network_design.html#vlans">VLAN</a></span></li><li tabindex="2"><span class="file"><a href="network_design.html#multi_nic">マルチNIC</a></span></li><li tabindex="2"><span class="file"><a href="network_design.html#multi_host_single_host_networks">マルチホストネットワークとシングルホストネットワーク</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="network_design.html#services_for_networking">ネットワーク関係のサービス</a></span><ul><li tabindex="2"><span class="file"><a href="network_design.html#ntp">NTP</a></span><ul><li tabindex="2"><span class="file"><a href="network_design.html#dns">DNS</a></span></li></ul></li></ul></li></ul></li><li tabindex="2"><span class="file"><a href="example_architecture.html">7. 参考アーキテクチャ</a></span><ul><li tabindex="2"><span class="file"><a href="example_architecture.html#overview">概要</a></span></li><li tabindex="2"><span class="file"><a href="example_architecture.html#rationale">設定指針</a></span><ul><li tabindex="2"><span class="file"><a href="example_architecture.html#quantum">なぜ OpenStack Network Service (quantum) を使わないか？</a></span></li><li tabindex="2"><span class="file"><a href="example_architecture.html#multi-host-networking">なぜマルチホストネットワークを使うか？</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="example_architecture.html#detailed_desc">詳細な説明</a></span></li><li tabindex="2"><span class="file"><a href="example_architecture.html#optional_extensions">さらなる拡張</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="whats_next.html">8. 次はどうする？</a></span></li><li tabindex="2" id="webhelp-currentid"><span class="file"><a href="lay_of_the_land.html">9. 環境を把握する</a></span><ul><li tabindex="2"><span class="file"><a href="lay_of_the_land.html#cli_tools">クライアントコマンドラインツール</a></span><ul><li tabindex="2"><span class="file"><a href="lay_of_the_land.html#install_tools">ツールの導入</a></span></li><li tabindex="2"><span class="file"><a href="lay_of_the_land.html#admin_cli">管理系コマンドラインツール</a></span></li><li tabindex="2"><span class="file"><a href="lay_of_the_land.html#get_creds">認証情報の取得方法</a></span></li><li tabindex="2"><span class="file"><a href="lay_of_the_land.html#cli_tricks">コマンドラインのこつと罠</a></span><ul><li tabindex="2"><span class="file"><a href="lay_of_the_land.html#curl">cURL</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="lay_of_the_land.html#servers_services">サーバーとサービス</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="lay_of_the_land.html#network">ネットワーク</a></span></li><li tabindex="2"><span class="file"><a href="lay_of_the_land.html#users_projects">ユーザおよびプロジェクト</a></span></li><li tabindex="2"><span class="file"><a href="lay_of_the_land.html#running_instances">稼働中インスタンス</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="projects_users.html">10. プロジェクトとユーザーの管理</a></span><ul><li tabindex="2"><span class="file"><a href="projects_users.html#projects_or_tenants">プロジェクトかテナントか?</a></span></li><li tabindex="2"><span class="file"><a href="projects_users.html#managing_projects">プロジェクトの管理</a></span><ul><li tabindex="2"><span class="file"><a href="projects_users.html#add_projects">プロジェクトの追加</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="projects_users.html#quotas">クォータ</a></span></li><li tabindex="2"><span class="file"><a href="projects_users.html#user_mgmt">ユーザー管理</a></span></li><li tabindex="2"><span class="file"><a href="projects_users.html#create_new_users">新規ユーザーの作成</a></span></li><li tabindex="2"><span class="file"><a href="projects_users.html#associate_users_with_projects">プロジェクトへのユーザーの割り当て</a></span><ul><li tabindex="2"><span class="file"><a href="projects_users.html#customize_auth">権限のカスタマイズ</a></span></li><li tabindex="2"><span class="file"><a href="projects_users.html#problem_users">他のユーザーに悪影響を与えるユーザー</a></span></li></ul></li></ul></li><li tabindex="2"><span class="file"><a href="user_facing_operations.html">11. ユーザーによる運用</a></span><ul><li tabindex="2"><span class="file"><a href="user_facing_images.html">イメージ</a></span><ul><li tabindex="2"><span class="file"><a href="user_facing_images.html#add_images">イメージの追加</a></span></li><li tabindex="2"><span class="file"><a href="user_facing_images.html#delete_images">イメージの削除</a></span></li><li tabindex="2"><span class="file"><a href="user_facing_images.html#other_cli">他の CLI オプション</a></span></li><li tabindex="2"><span class="file"><a href="user_facing_images.html#image_service_and_database">イメージサービスおよびデータベース</a></span></li><li tabindex="2"><span class="file"><a href="user_facing_images.html#sample_image_database">イメージサービスのデータベースクエリーの例</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="flavors.html">フレーバー</a></span><ul><li tabindex="2"><span class="file"><a href="flavors.html#d6e1977">どのように既存のフレーバーを変更しますか?</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="security_groups.html">セキュリティグループ</a></span></li><li tabindex="2"><span class="file"><a href="user_facing_block_storage.html">ブロックストレージ</a></span><ul><li tabindex="2"><span class="file"><a href="user_facing_block_storage.html#block_storage_creation_failures">ブロックストレージの作成エラー</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="instances.html">インスタンス</a></span><ul><li tabindex="2"><span class="file"><a href="instances.html#start_instances">インスタンスの起動</a></span></li><li tabindex="2"><span class="file"><a href="instances.html#instance_boot_failures">インスタンスの起動失敗</a></span></li><li tabindex="2"><span class="file"><a href="instances.html#instance_specific_data">インスタンス固有のデータ</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="associate_security_groups.html">セキュリティグループの割り当て</a></span></li><li tabindex="2"><span class="file"><a href="floating_ips.html">Floating IP</a></span></li><li tabindex="2"><span class="file"><a href="attach_block_storage.html">ブロックストレージの接続</a></span></li><li tabindex="2"><span class="file"><a href="snapsnots.html">スナップショットの取得</a></span><ul><li tabindex="2"><span class="file"><a href="snapsnots.html#consistent_snapshots">スナップショットの一貫性の保証</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="database_instances.html">データベースにあるインスタンス</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="maintenance.html">12. メンテナンス、故障およびデバッグ</a></span><ul><li tabindex="2"><span class="file"><a href="maintenance.html#cloud_controller_storage">クラウドコントローラーとストレージプロキシの故障とメンテナンス</a></span><ul><li tabindex="2"><span class="file"><a href="maintenance.html#planned_maintenance">計画メンテナンス</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#reboot_cloud_controller">クラウドコントローラーとストレージプロキシの再起動</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#after_a_cc_reboot">クラウドコントローラーまたはストレージプロキシの再起動後</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#cc_failure">全体的なクラウドコントローラーの故障</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="maintenance.html#compute_node_failures">コンピュートノードの故障とメンテナンス</a></span><ul><li tabindex="2"><span class="file"><a href="maintenance.html#planned_maintenance_compute_node">計画メンテナンス</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#after_compute_node_reboot">Compute ノードの再起動後</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#maintenance_instances">インスタンス</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#inspect_and_recover_failed_instances">故障したインスタンスからの検査とデータ復旧</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#volumes">ボリューム</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#totle_compute_node_failure">全体的なコンピュートノードの故障</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#var_lib_nova_instances">/var/lib/nova/instances</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="maintenance.html#storage_node_failures">ストレージノードの故障とメンテナンス</a></span><ul><li tabindex="2"><span class="file"><a href="maintenance.html#reboot_storage_node">ストレージノードの再起動</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#shut_down_storage_node">ストレージノードのシャットダウン</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#replace_swift_disk">Swift ディスクの交換</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="maintenance.html#complete_failure">完全な故障の対処</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#config_mgmt">構成管理</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#hardware">ハードウェアの取り扱い</a></span><ul><li tabindex="2"><span class="file"><a href="maintenance.html#add_new_node">コンピュートノードの追加</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#add_new_object_node">オブジェクトストレージノードの追加</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#replace_components">コンポーネントの交換</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="maintenance.html#databases">データベース</a></span><ul><li tabindex="2"><span class="file"><a href="maintenance.html#database_connect">データベース接続性</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#perf_and_opt">パフォーマンスおよび最適化</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="maintenance.html#hdmy">HDWMY</a></span><ul><li tabindex="2"><span class="file"><a href="maintenance.html#hourly">毎時</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#daily">日次</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#weekly">週次</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#monthly">月次</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#quarterly">四半期ごと</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#semiannual">半年ごと</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="maintenance.html#broken_component">故障しているコンポーネントの特定</a></span><ul><li tabindex="2"><span class="file"><a href="maintenance.html#tailing_logs">最新ログの確認</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#daemons_cli">CLI におけるデーモンの実行法</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#complexity">複雑さの例</a></span></li><li tabindex="2"><span class="file"><a href="maintenance.html#upgrades">アップグレード</a></span></li></ul></li></ul></li><li tabindex="2"><span class="file"><a href="network_troubleshooting.html">13. ネットワークのトラブルシューティング</a></span><ul><li tabindex="2"><span class="file"><a href="network_troubleshooting.html#check_interface_states">"ip a" を使ってインタフェース状態をチェックする</a></span></li><li tabindex="2"><span class="file"><a href="network_troubleshooting.html#network_traffic_in_cloud">クラウド上のネットワークトラフィック</a></span></li><li tabindex="2"><span class="file"><a href="network_troubleshooting.html#failure_in_path">経路上の障害を見つける</a></span></li><li tabindex="2"><span class="file"><a href="network_troubleshooting.html#tcpdump">tcpdump</a></span></li><li tabindex="2"><span class="file"><a href="network_troubleshooting.html#iptables">iptables</a></span></li><li tabindex="2"><span class="file"><a href="network_troubleshooting.html#network_config_database">データベースにあるネットワーク設定</a></span><ul><li tabindex="2"><span class="file"><a href="network_troubleshooting.html#deassociate_floating_ip">手動でフローティングIPの関連付けを解除する</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="network_troubleshooting.html#debug_dhcp_issues">DHCP の問題をデバッグする</a></span></li><li tabindex="2"><span class="file"><a href="network_troubleshooting.html#debugging_dns_issues">DNS の問題をデバッグする</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html">14. ロギングと監視</a></span><ul><li tabindex="2"><span class="file"><a href="logging_monitoring.html#where_are_logs">ログはどこにあるのか？</a></span><ul><li tabindex="2"><span class="file"><a href="logging_monitoring.html#cloud_controller_ops">クラウドコントローラー</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#compute_nodes_ops">コンピュートノード</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#block_storage_nodes">ブロックストレージ ノード</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#how_to_read_logs">ログの読み方</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#tracing_instance_request">インスタンスリクエストの追跡</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#add_custom_logging">カスタムログの追加</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#rabbitmq">RabbitMQ Web管理インターフェイス および rabbitmqctl</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#manage_logs_centrally">ログの集中管理</a></span><ul><li tabindex="2"><span class="file"><a href="logging_monitoring.html#rsyslog_client_config">rsyslog クライアント設定</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#rsyslog_server_config">rsyslog サーバー設定</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#stacktach">StackTach</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#monitoring">監視</a></span><ul><li tabindex="2"><span class="file"><a href="logging_monitoring.html#process_monitoring">プロセス監視</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#resource_alerting">リソースのアラート</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#os_resources">OpenStack固有のリソース</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#intelligent_alerting">インテリジェントなアラート</a></span></li><li tabindex="2"><span class="file"><a href="logging_monitoring.html#trending">トレンド</a></span></li></ul></li></ul></li><li tabindex="2"><span class="file"><a href="backup_and_recovery.html">15. バックアップとリカバリー</a></span><ul><li tabindex="2"><span class="file"><a href="backup_and_recovery.html#what_to_backup">バックアップ対象</a></span></li><li tabindex="2"><span class="file"><a href="backup_and_recovery.html#database_backups">データベース バックアップ</a></span></li><li tabindex="2"><span class="file"><a href="backup_and_recovery.html#file_system_backups">ファイルシステム バックアップ</a></span><ul><li tabindex="2"><span class="file"><a href="backup_and_recovery.html#compute">Compute</a></span></li><li tabindex="2"><span class="file"><a href="backup_and_recovery.html#image_catalog_delivery">イメージカタログと配布</a></span></li><li tabindex="2"><span class="file"><a href="backup_and_recovery.html#identity">認証</a></span></li><li tabindex="2"><span class="file"><a href="backup_and_recovery.html#ops_block_storage">ブロックストレージ</a></span></li><li tabindex="2"><span class="file"><a href="backup_and_recovery.html#ops_object_storage">オブジェクト・ストレージ</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="backup_and_recovery.html#recovering_backups">バックアップのリカバリー</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="customize.html">16. カスタマイズ</a></span><ul><li tabindex="2"><span class="file"><a href="customize.html#devstack">DevStack</a></span></li><li tabindex="2"><span class="file"><a href="customize.html#middleware_example">ミドルウェア例</a></span></li><li tabindex="2"><span class="file"><a href="customize.html#nova_scheduler_example">Nova スケジューラーの例</a></span></li><li tabindex="2"><span class="file"><a href="customize.html#ops_dashboard">Dashboard</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="upstream_openstack.html">17. OpenStack コミュニティ</a></span><ul><li tabindex="2"><span class="file"><a href="upstream_openstack.html#get_help">助けを得る</a></span></li><li tabindex="2"><span class="file"><a href="upstream_openstack.html#report_bugs">バグ報告</a></span><ul><li tabindex="2"><span class="file"><a href="upstream_openstack.html#confirm_priority">バグの確認と優先付け</a></span></li><li tabindex="2"><span class="file"><a href="upstream_openstack.html#bug_fixing">バグ修正</a></span></li><li tabindex="2"><span class="file"><a href="upstream_openstack.html#after_change_is_accepted">変更が受理された後</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="upstream_openstack.html#openstack_community">OpenStack コミュニティに参加する</a></span></li><li tabindex="2"><span class="file"><a href="upstream_openstack.html#features">機能と開発ロードマップ</a></span></li><li tabindex="2"><span class="file"><a href="upstream_openstack.html#contribute_to_docs">ドキュメント作成への貢献の仕方</a></span></li><li tabindex="2"><span class="file"><a href="upstream_openstack.html#security_info">セキュリティ情報</a></span></li><li tabindex="2"><span class="file"><a href="upstream_openstack.html#additional_info">さらに情報を見つける</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="use-cases.html">A. 事例</a></span><ul><li tabindex="2"><span class="file"><a href="nectar.html">NeCTAR</a></span><ul><li tabindex="2"><span class="file"><a href="nectar_deploy.html">デプロイ</a></span></li><li tabindex="2"><span class="file"><a href="nectar_resources.html">リソース</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="mit_csail.html">MIT CSAIL</a></span><ul><li tabindex="2"><span class="file"><a href="mit_csail_deploy.html">デプロイ</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="dair.html">DAIR</a></span><ul><li tabindex="2"><span class="file"><a href="dair_deploy.html">デプロイ</a></span></li><li tabindex="2"><span class="file"><a href="dair_resources.html">リソース</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="cern.html">CERN</a></span><ul><li tabindex="2"><span class="file"><a href="cern_deploy.html">デプロイ</a></span></li><li tabindex="2"><span class="file"><a href="cern_resources.html">リソース</a></span></li></ul></li></ul></li><li tabindex="2"><span class="file"><a href="app_crypt.html">B. ハリウッド^H^H^H^H^Hクラウド・ナイトメア</a></span><ul><li tabindex="2"><span class="file"><a href="double_vlan.html">ダブル VLAN</a></span></li><li tabindex="2"><span class="file"><a href="issue.html">「あの問題」</a></span></li><li tabindex="2"><span class="file"><a href="disappear_images.html">イメージの消失</a></span></li><li tabindex="2"><span class="file"><a href="valentines.html">バレンタインデーの compute ノード大虐殺</a></span></li><li tabindex="2"><span class="file"><a href="rabbithole.html">ウサギの穴に落ちて</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="recommended-reading.html">C. リソース</a></span></li><li tabindex="2"><span class="file"><a href="go01.html">用語集</a></span></li></ul></div></div><div id="searchDiv"><div id="search"><form onsubmit="Verifie(ditaSearch_Form);return false" name="ditaSearch_Form" class="searchForm"><fieldset class="searchFieldSet"><legend>Search</legend><center><input id="textToSearch" name="textToSearch" type="text" class="searchText"/> &nbsp; <input onclick="Verifie(ditaSearch_Form)" type="button" class="searchButton" value="Go" id="doSearch"/></center></fieldset></form></div><div id="searchResults"><center/></div><p class="searchHighlight"><a href="#" onclick="toggleHighlight()">Search Highlighter (On/Off)</a></p></div></div></div></div><script type="text/javascript" src="../common/jquery/jquery.qtip-1.0.0-rc3/jquery.qtip-1.0.0-rc3.min.js"><!--jQuery plugin for glossary popups. -->
+                   $('a[title]').qtip({ style: { name: 'cream', tip: true } })
+                </script></body></html>
