@@ -167,7 +167,7 @@ msgid ""
 "contains accounts."
 msgstr ""
 "アカウントサーバーからアクセスされる、Swift アカウントと関連メタデータを含む"
-"SQLite データベース。又は、アカウントを含む Keystone バックエンド"
+"SQLite データベース、又は、アカウントを含む Keystone バックエンド。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:189
 msgid "account reaper"
