@@ -185,7 +185,7 @@ msgstr ""
 "次に最も優れている方法は、クラウドコントローラーを自動的に構築するために "
 "Puppet のような構成管理ツールを使用することです。利用可能な予備サーバーがあれ"
 "ば、15 分もかかりません。コントローラーを再構築後、取得したすべてのバックアップ"
-"から復元します (<emphasis role=\"bold\">バックアップとリカバリー</emphasis> "
+"を復元します (<emphasis role=\"bold\">バックアップとリカバリー</emphasis> "
 "の章を参照してください)。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:101
