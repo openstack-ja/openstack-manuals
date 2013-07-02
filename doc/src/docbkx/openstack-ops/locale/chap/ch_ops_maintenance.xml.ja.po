@@ -252,8 +252,8 @@ msgid ""
 "the <code>nova-compute</code> service is always running, you can temporarily "
 "move the init files:"
 msgstr ""
-"<code>nova-compute</code> サービスが確実に実行されているようにする、Puppet の"
-"ような構成管理システムを使用していると、init ファイルを一時的に移動できます。"
+"Puppet などの構成管理システムを使って、<code>nova-compute</code> サービスが確実に実行されているようにしている場合"
+"、init ファイルを一時的に移動します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:140
 msgid ""
@@ -274,7 +274,7 @@ msgid ""
 "You can now optionally migrate the instances back to their original compute "
 "node."
 msgstr ""
-"オプションとして、インスタンスを元のコンピュートノードにマイグレーションすること"
+"インスタンスを元のコンピュートノードにマイグレーションすること"
 "もできます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:154
@@ -286,7 +286,7 @@ msgid ""
 "When you reboot a compute node, first verify that it booted successfully. "
 "This includes ensuring the <code>nova-compute</code> service is running:"
 msgstr ""
-"コンピュートノードを再起動するとき、まず正常に起動することを検証します。これには "
+"コンピュートノードを再起動した場合、まず正常に起動したことを確認します。これには "
 "<code>nova-compute</code> サービスが実行していることを確認することが含まれま"
 "す:"
 
