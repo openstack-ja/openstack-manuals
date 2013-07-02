@@ -115,7 +115,7 @@ msgid ""
 "thorough, run your backup jobs just before you reboot."
 msgstr ""
 "多くの場合、\"reboot\" コマンドを発行するだけです。オペレーティングシステム"
-"が正常にサービスをシャットダウンし、自動的に再起動します。かなり万全を期した"
+"が正常にサービスをシャットダウンし、自動的に再起動します。万全を期した"
 "い場合、再起動する前にバックアップジョブを実行してください。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:59
@@ -138,7 +138,7 @@ msgstr "また、すべてのサービスが正しく機能していることを
 msgid ""
 "For the storage proxy, ensure that the Object Storage service has resumed:"
 msgstr ""
-"ストレージプロキシに対して、Object Storage サービスが再開していること"
+"ストレージプロキシの場合、Object Storage サービスが再開していること"
 "を確認します:"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:76
