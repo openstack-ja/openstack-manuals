@@ -143,7 +143,7 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:76
 msgid "Also check that it is functioning:"
-msgstr "それが正しく機能していることを確認します:"
+msgstr "また、正しく機能していることを確認します:"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:81
 msgid "Total Cloud Controller Failure"
@@ -168,11 +168,11 @@ msgid ""
 "content/ch-intro.html)."
 msgstr ""
 "この状況を避けるために、高可用なクラウドコントローラークラスターを作成しま"
-"す。このことは、このドキュメントの範囲外ですが、ドラフトの <link title=\"OpenStack "
+"す。このことは、このドキュメントの範囲外ですが、ドラフト版の <link title=\"OpenStack "
 "High Availability Guide\" href=\"http://docs.openstack.org/trunk/openstack-"
-"ha/content/ch-intro.html\">OpenStack High Availability Guide</link> (http://"
-"docs.openstack.org/trunk/openstack-ha/content/ch-intro.html) において詳細を参"
-"照できます。"
+"ha/content/ch-intro.html\">OpenStack High Availability Guide</link> が http://"
+"docs.openstack.org/trunk/openstack-ha/content/ch-intro.html にあり"
+"ます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:94
 msgid ""
@@ -195,8 +195,8 @@ msgid ""
 "back up after a long reboot and a restart on the nova services on the "
 "compute nodes is required."
 msgstr ""
-"実際問題として、コンピュートノードの nova-compute サービスがときどき、コントロー"
-"ラーにホストされている rabbitmq に正しく再接続されません。"
+"実際には、コンピュートノードの nova-compute サービスがときどき、コントロー"
+"ラー上で動作している rabbitmq に正しく再接続されない場合があります。"
 "時間のかかるリブートから戻ってきた場合や、コンピュートノードの"
 "nova サービスを再起動する必要がある場合です。"
 
@@ -209,8 +209,8 @@ msgid ""
 "Sometimes a compute node either crashes unexpectedly or requires a reboot "
 "for maintenance reasons."
 msgstr ""
-"コンピュートノードはときどき、予期せずクラッシュします。もしくは、メンテナンスの"
-"ために再起動する必要があります。"
+"コンピュートノードは、予期せずクラッシュしたり、メンテナンスの"
+"ために再起動が必要になったりすることがときどきあります。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:116
 msgid ""
