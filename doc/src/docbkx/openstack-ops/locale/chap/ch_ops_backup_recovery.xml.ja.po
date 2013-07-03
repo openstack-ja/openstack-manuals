@@ -35,7 +35,7 @@ msgstr "オブジェクト・ストレージ"
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:141
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:410
 msgid "Block Storage"
-msgstr "ブロック・ストレージ"
+msgstr "ブロックストレージ"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:16
 msgid "Backup and Recovery"
