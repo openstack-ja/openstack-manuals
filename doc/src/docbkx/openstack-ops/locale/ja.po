@@ -9238,7 +9238,7 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml35(th)
 msgid "Block storage"
-msgstr "ブロックストレージ"
+msgstr "ブロック・ストレージ"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml351(para)
 msgid ""
@@ -15345,9 +15345,9 @@ msgstr ""
 "例えば: あるユーザーのグループが、非常に計算負荷の高い作業用に大量のコン"
 "ピュートリソースを使うインスタンスを持っているとします。これにより、Compute "
 "ノードの負荷が高くなり、他のユーザーに影響を与えます。この状況では、ユーザー"
-"のユースケースをする必要があります。計算負荷が高いシナリオがよくあるケースだ"
-"と判明し、ホスト集約やリージョンなど、クラウドを適切に分割することを計画すべ"
-"き場合もあるでしょう。"
+"のユースケースを精査する必要があります。計算負荷が高いシナリオがよくあるケー"
+"スだと判明し、ホスト集約やリージョンなど、クラウドを適切に分割することを計画"
+"すべき場合もあるでしょう。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml627(para)
 msgid ""
@@ -15378,7 +15378,7 @@ msgid ""
 "issue with the resource they are trying to access that is causing their "
 "requests to queue or lag."
 msgstr ""
-"最後の例は、ユーザーがクラウドのリソースに繰り返し悪影響を与えることです。"
+"最後の例は、ユーザーがクラウドのリソースに繰り返し悪影響を与える場合です。"
 "ユーザーと連絡をとり、何をしようとしているのか理解します。ユーザー自身が実行"
 "しようとしていることを正しく理解していない可能性があります。または、アクセス"
 "しようとしているリソースに問題があり、リクエストがキューに入ったり遅れが発生"
