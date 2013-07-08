@@ -67,9 +67,9 @@ msgid ""
 "types can cause confusion to even experienced cloud engineers. This section "
 "focuses on persistent storage options you can configure with your cloud."
 msgstr ""
-"OpenStackのストレージには種類の異なる複数の選択肢があり、経験豊富なクラウドエ"
-"ンジニアでも混乱する場合があります。このセクションでは構成可能な永続的スト"
-"レージに焦点を当てます。"
+"ストレージは OpenStack スタックの多くの部分に存在し、これらのタイプの違い"
+"により経験豊富なクラウド技術者でさえ混乱する事があります。本章では、あなた"
+"のクラウドで設定可能な永続的ストレージに焦点を当てます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:27
 msgid "OpenStack Storage Concepts"
@@ -77,27 +77,27 @@ msgstr "ストレージのコンセプト"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:29
 msgid "OpenStack Storage"
-msgstr "OpenStackが持つストレージ機能"
+msgstr "OpenStackのストレージ"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:34
 msgid "Ephemeral storage"
-msgstr "エフェメラル・ストレージ"
+msgstr "エフェメラルストレージ"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:35
 msgid "Block storage"
-msgstr "ブロック・ストレージ"
+msgstr "ブロックストレージ"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:41
 msgid "Used to…"
-msgstr "目的"
+msgstr "使用目的"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:42
 msgid "Run operating system and scratch space"
-msgstr "OSを起動するため"
+msgstr "OS を起動し、空き領域に記録する"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:44
 msgid "Add additional persistent storage to a virtual machine (VM)"
-msgstr "永続的なストレージをVMへ追加する"
+msgstr "永続的なストレージを仮想マシン（VM）へ追加する"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:46
 msgid "Store data, including VM images"
@@ -154,7 +154,7 @@ msgstr "OpenStack Object Storage (Swift)"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:72
 msgid "Persists until…"
-msgstr "データが残る期間"
+msgstr "データの残存期間"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:73
 msgid "VM is terminated"
@@ -163,7 +163,7 @@ msgstr "VM終了まで"
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:74
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:75
 msgid "Deleted by user"
-msgstr "ユーザが削除するまで"
+msgstr "ユーザーが削除するまで"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:78
 msgid "Sizing determined by…"
@@ -172,7 +172,7 @@ msgstr "容量の指定"
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:79
 msgid ""
 "Administrator configures size settings, known as <emphasis>flavors</emphasis>"
-msgstr "管理者が構成した<emphasis>flavors</emphasis>で決まる"
+msgstr "管理者がサイズを設定（<emphasis>flavors</emphasis>）として知られる"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:82
 msgid "Specified by user in initial request"
@@ -184,11 +184,11 @@ msgstr "利用可能な物理ディスクの総量で決まる"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:88
 msgid "Example of typical usage…"
-msgstr "典型的な利用方法"
+msgstr "典型的な利用例"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:90
 msgid "10 GB first disk, 30GB second disk"
-msgstr "10GBの初期ディスク、30GBの2台目ディスク"
+msgstr "10GBの1台目ディスク、30GBの2台目ディスク"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:92
 msgid "1 TB disk"
@@ -196,7 +196,7 @@ msgstr "1TBディスク"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:94
 msgid "10s of TBs of dataset storage"
-msgstr "数十TBのデータセット"
+msgstr "数十TBのデータセットストレージ"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:99
 msgid ""
@@ -207,10 +207,11 @@ msgid ""
 "You must identify what type of persistent storage you want to support for "
 "your users."
 msgstr ""
-"Novaのみを構成した場合、ユーザはデフォルトで永続ストレージへのアクセス方法を"
-"持ちません。この状態でVMに割り当てられるディスクは”エフェメラル”であり、これ"
-"は仮想マシンが終了した時に削除されてしまいます。そのためユーザに対してどんな"
-"タイプの永続的ストレージがサポートされているか明示しておく必要があります。"
+"Novaのみを構成した場合、デフォルトではユーザにはあらゆる種類の永続ストレージ"
+"へのアクセス方法がありません。この状態でVMに割り当てられるディスクは「エフェ"
+"メラル」であり、これは仮想マシンが削除された時にディスクが削除される事を意味"
+"します。そのためユーザに対してどんなタイプの永続的ストレージがサポートされて"
+"いるか明示しておく必要があります。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:106
 msgid ""
@@ -223,7 +224,7 @@ msgstr ""
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:110
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:151
 msgid "Object Storage"
-msgstr "オブジェクト・ストレージ"
+msgstr "オブジェクトストレージ"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:111
 msgid ""
@@ -264,11 +265,11 @@ msgid ""
 "which supports multiple back-ends in the form of drivers. Your choice of a "
 "storage back-end must be supported by a Block Storage driver."
 msgstr ""
-"このボリュームは永続的で、データを残したままデタッチし、別の仮想マシンへ再ア"
-"タッチすることができます。ブロック・ストレージはOpenStack Block Storage "
-"(Cinder) で実装され、複数のバックエンド・ストレージをドライバという形式でサ"
-"ポートします。選択するストレージ・バックエンドはドライバでサポートされている"
-"必要があります。"
+"このボリュームは永続的です。データを残したまま仮想マシンからデタッチし、別の"
+"仮想マシンへ再アタッチすることができます。OpenStack では、ブロックストレージは"
+" OpenStack Block Storage （Cinder）で実装されており、複数のバックエンド・スト"
+"レージをドライバという形式でサポートします。あなたが選択するストレージバックエ"
+"ンドは、Block Storage のドライバによりサポートされている必要があります。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:135
 msgid ""
@@ -276,8 +277,9 @@ msgid ""
 "underlying storage hardware's block device. This helps increase the overall "
 "read/write IO."
 msgstr ""
-"多くのストレージ・ドライバはインスタンスが直接ストレージハードウェアへアクセ"
-"スできるようにします。これは read/write IO 性能の向上に役立ちます。"
+"多くのストレージ・ドライバはインスタンスが直接ストレージハードウェアのブロッ"
+"クデバイスへアクセスできるようにします。これは リード/ライト I/O 性能の向上"
+"に役立ちます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:139
 msgid ""
@@ -286,10 +288,10 @@ msgid ""
 "Cinder. By Grizzly's release, this has expanded into a full NFS driver as "
 "well as a GlusterFS driver."
 msgstr ""
-"Folsomでは実験的なサポートとしてファイルをボリュームとして利用できます。初期"
-"のCinderでは、NFSを利用するためのリファレンスとしてこのドライバーは実装されま"
-"した。Grizzlyリリースでは、GlusterFSドライバと同様に、完全なNFSドライバとして"
-"拡張されました。"
+"Folsomリリースではファイルをボリュームとして利用するための実験的サポートを"
+"開始しました。これは、最初は Cinder で NFS を使用するためのリファレンスド"
+"ライバとしてスタートしたものです。Grizzly リリースまでに、このドライバは"
+"GlusterFS ドライバと同様、完全な NFS ドライバに拡張されました。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:144
 msgid ""
@@ -299,15 +301,15 @@ msgid ""
 "translation is similar to how OpenStack utilizes QEMU's file-based virtual "
 "machines stored in <code>/var/lib/nova/instances</code>."
 msgstr ""
-"これらのドライバーは従来のブロック・ストレージドライバとは異なる動作をしま"
-"す。NFSやGlusterFSでは1つのファイルが作成され、インスタンスに対して仮想ボ"
-"リュームとしてマッピングされます。このマッピングはOpenStackで使われる QEMUの"
-"ファイルベースの仮想マシンストア<code>/var/lib/nova/instances</code> に似てい"
-"ます。"
+"これらのドライバーは従来のブロックストレージドライバとは少々異なる動作をしま"
+"す。NFSやGlusterFSでは1つのファイルが作成され、インスタンスに対して「仮想」ボ"
+"リュームとしてマッピングされます。このマッピング/変換は"
+"<code>/var/lib/nova/instances</code> 下に保存される、QEMUのファイルベースの仮"
+"想マシンの、OpenStackによる扱い方と同様です。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:153
 msgid "File-level Storage"
-msgstr "ファイルレベル・ストレージ"
+msgstr "ファイルレベルストレージ"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:154
 msgid ""
@@ -317,9 +319,11 @@ msgid ""
 "the Unix world, the most common form of this is NFS. In the Windows world, "
 "the most common form is called CIFS (previously, SMB)."
 msgstr ""
-"ファイルレベル・ストレージでは、ユーザはOSのファイルシステムインターフェース"
-"を使ってデータへアクセスします。UnixではNFSが一般的で、WindowsではCIFS(SMB)が"
-"一般的です。"
+"ファイルレベルストレージでは、ユーザはOSのファイルシステムインターフェース"
+"を使ってデータへアクセスします。ほとんどのユーザは（以前ネットワークソリュ"
+"ーションを使用した経験があった場合）この種類のネットワークストレージに遭遇"
+"したことがあります。UnixではNFSが一般的で、WindowsではCIFS(旧 SMB)が一般的"
+"です。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:161
 msgid ""
@@ -328,15 +332,15 @@ msgid ""
 "<code>/var/lib/nova/instances</code> when designing your cloud, since you "
 "must have a shared file system if you wish to support live migration."
 msgstr ""
-"OpenStackではエンドユーザがファイルレベル・ストレージの恩恵を直接受けることは"
-"ありません。しかし管理者のクラウド設計においてライブマイグレーションをサポー"
-"トしたい場合、インスタンスデータの保存先 <code>/var/lib/nova/instances</"
-"code> にファイルレベル・ストレージによる共有ファイルシステムの導入を検討する"
-"必要があります。 "
+"OpenStackではエンドユーザがファイルレベル・ストレージを目にすることは"
+"ありません。しかし、クラウド設計時、<code>/var/lib/nova/instances</"
+"code> 下のインスタンス保存用にファイルレベルストレージを検討する事は重要です。"
+"なぜなら、ライブマイグレーションをサポートしたい場合、共有ファイルシステムが必"
+"須だからです。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:172
 msgid "Choosing Storage Back-ends"
-msgstr "ストレージ・バックエンドの選択"
+msgstr "ストレージバックエンドの選択"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:173
 msgid ""
@@ -368,11 +372,13 @@ msgstr ""
 msgid ""
 "What is the platter count I can achieve? Do more spindles result in better I/"
 "O despite network access?"
-msgstr "必要な容量とアクセス速度は？"
+msgstr ""
+"実現可能な容量は？ネットワークアクセスでも、より多くのディスクがより良"
+"い I/O 性能に繋がるか？"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:197
 msgid "Which one results in the best cost-performance scenario I'm aiming for?"
-msgstr "何をターゲットとしてコストパフォーマンスを最適化するか？"
+msgstr "どちらが自分の意図した最高のコストパフォーマンスシナリオを実現するか？"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:201
 msgid "How do I manage the storage operationally?"
@@ -383,28 +389,28 @@ msgid ""
 "How redundant and distributed is the storage? What happens if a storage node "
 "fails? To what extent can it mitigate my data-loss disaster scenarios?"
 msgstr ""
-"ストレージの冗長性と分散をどうするか？ストレージノード障害でどうなるか？どの"
-"程度までデータ消失を軽減するか？"
+"ストレージの冗長性と分散をどうするか？ストレージノード障害でどうなるか？"
+"災害時、自分のデータ消失をどの程度軽減できるのか？"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:211
 msgid ""
 "To deploy your storage by using entirely commodity hardware, you can use a "
 "number of open-source packages, as shown in the following table:"
 msgstr ""
-"コモディティ・ハードウェアを利用したストレージ環境を構築するには、以下のオー"
-"プンソースパッケージを利用可能です。"
+"コモディティハードウェアを利用したストレージ環境の構築に、下記に表に示した"
+"いくつかのオープンソースパッケージを利用可能です。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:218
 msgid "Object"
-msgstr "オブジェクト・ストレージ"
+msgstr "オブジェクトストレージ"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:219
 msgid "Block"
-msgstr "ブロック・ストレージ"
+msgstr "ブロックストレージ"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:220
 msgid "File-level* (live migration support)"
-msgstr "ファイルレベル・ストレージ* (ライブマイグレーション・サポート)"
+msgstr "ファイルレベルストレージ* (ライブマイグレーションサポート)"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:226
 #: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:307
@@ -444,8 +450,8 @@ msgid ""
 "use."
 msgstr ""
 "* このOSS ファイルレベル・共有ストレージのリストは完全ではなく、他にもOSSが存"
-"在します(MooseFS)。あなたの組織では既に利用可能なファイルレベル・共有ストレー"
-"ジが利用できる可能性もあります。"
+"在します(MooseFS)。あなたの組織では既に利用可能なファイルレベル共有ストレー"
+"ジがあるかもしれません。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:274
 msgid ""
@@ -493,8 +499,8 @@ msgid ""
 "cloud are:"
 msgstr ""
 "クラウド内でオブジェクト・ストレージの利用を検討する必要があります。コン"
-"ピュート・クラウドでの一般的なオブジェクト・ストレージ利用方法は以下の二つで"
-"す。"
+"ピュートクラウドで提供されるオブジェクトストレージの一般的な利用方法は以下"
+"の二つです。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:303
 msgid "To provide users with a persistent storage mechanism"
@@ -502,7 +508,7 @@ msgstr "ユーザに永続的ストレージの仕組みを提供する"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:307
 msgid "As a scalable, reliable data store for virtual machine images"
-msgstr "スケーラブルで信頼性のある仮想マシンデータストアとして利用する"
+msgstr "スケーラブルで信頼性のある仮想マシンイメージデータストアとして利用する"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:312
 msgid "Commodity Storage Back-end Technologies"
@@ -514,7 +520,7 @@ msgid ""
 "different commodity storage back-end technologies."
 msgstr ""
 "このセクションでは様々な コモディティ・ハードウェアを利用するストレージ技術の"
-"差異について、概要を提供します。"
+"差異について、上位レベルの概要を提供します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:319
 msgid ""
@@ -528,7 +534,7 @@ msgid ""
 "multiple data center deployment through support of asynchronous eventual "
 "consistency replication."
 msgstr ""
-"<emphasis role=\"bold\">OpenStack Object Storage (Swift)</emphasis> OpenStack"
+"<emphasis role=\"bold\">OpenStack Object Storage (Swift)</emphasis>。OpenStack"
 "公式のオブジェクトストア実装です。これはRackspace Cloud Files で採用されてお"
 "り、既に数年間の商用実績を持つ成熟した技術です。高度なスケーラビリティを備"
 "え、ペタバイトストレージの管理に適しています。OpenStack Object Storageの利点"
@@ -545,11 +551,11 @@ msgid ""
 "Storage. More detail can be found about OpenStack Object Storage in the "
 "section below."
 msgstr ""
-"複数データセンターにまたがった分散ストレージ・クラスタを計画する場合や、コン"
-"ピュートとオブジェクト・ストレージ間で統一されたアカウントを必要とする時、ま"
-"たは OpenStack dashboard を使ってオブジェクト・ストレージを操作したい場合など"
-"に OpenStack Object Storage を検討します。より詳細な情報は以後のセクションで"
-"記載します。"
+"従って、将来的に複数データセンターにまたがった分散ストレージ・クラスタを"
+"計画する場合や、コンピュートとオブジェクト・ストレージ間で統一されたアカ"
+"ウントを必要とする場合、または OpenStack Dashboard を使ってオブジェクトス"
+"トレージを操作したい場合などに OpenStack Object Storage を検討します。"
+"OpenStack Object Storage のより詳細な情報は以後のセクションで記載します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:345
 msgid ""
@@ -558,10 +564,10 @@ msgid ""
 "developed by one of the founders of DreamHost and is currently used in "
 "production there."
 msgstr ""
-"<emphasis role=\"bold\">Ceph</emphasis> ストレージ・ノード間でデータレプリ"
-"ケーションを行う、スケーラブルなストレージソリューションです。Ceph は元々"
-"DreamHost の創設者の一人が開発し、現在はDreamHost の商用サービスで利用されて"
-"います。"
+"<emphasis role=\"bold\">Ceph</emphasis>。コモディティなストレージノード間で"
+"データレプリケーションを行う、スケーラブルなストレージソリューションです。"
+"Ceph は元々DreamHost の創設者の一人が開発し、現在はDreamHost の商用サービス"
+"で利用されています。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:351
 msgid ""
@@ -573,10 +579,10 @@ msgid ""
 "images. Ceph supports \"thin provisioning\", implemented using copy-on-write."
 msgstr ""
 "Ceph はエンドユーザに対して異なるストレージインターフェースが利用できるよう設"
-"計されています： オブジェクト・ストレージ、ブロック・ストレージ、ファイルシス"
-"テムをサポートしていますが、ファイルシステムはまだプロダクションレディではあ"
-"りません。Cephはオブジェクト・ストレージでSwiftと同じAPIをサポートし、Cinder "
-"ブロックストレージのバクエンドとしても利用でき、Glance用イメージのバックエン"
+"計されています： オブジェクトストレージ、ブロックストレージ、ファイルシス"
+"テムをサポートしていますが、ファイルシステムはまだ商用利用可能な状態ではあ"
+"りません。CephはオブジェクトストレージでSwiftと同じAPIをサポートし、Cinder "
+"ブロックストレージのバックエンドとしても利用でき、Glance用イメージのバックエン"
 "ド・ストレージとしても利用できます。Cephはcopy-on-wirteを使って実装されたシン"
 "プロビジョニングをサポートしています。"
 
@@ -663,7 +669,7 @@ msgid ""
 "create a volume group dedicated to Block Storage volumes. Blocks are created "
 "from LVM logical volumes."
 msgstr ""
-"ブロック・ストレージを収容する各ホストでは、管理者によって事前にブロック・ス"
+"ブロック・ストレージを収容する各ホストでは、管理者は事前にブロック・ス"
 "トレージ専用のボリューム・グループを作成しておく必要があります。ブロック・ス"
 "トレージはLVM論理ボリュームから作られます。"
 
@@ -803,7 +809,7 @@ msgid ""
 "these main traffic flows: <placeholder-1/>"
 msgstr ""
 "オブジェクト・ストレージのネットワークのトラフィックは通常とは異なっているか"
-"もしれません。以下のトラフィックを考慮てください。 <placeholder-1/>"
+"もしれません。以下のトラフィックを考慮してください。 <placeholder-1/>"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:507
 msgid ""
@@ -829,9 +835,10 @@ msgid ""
 "the aforementioned question is negative or times out, replication of the "
 "object begins."
 msgstr ""
-"オブジェクト・ストレージはデータを保持するノード間で頻繁に通信を行います。 こ"
-"れは数MB/sのトラフィック で主に他ホストにオブジェクトの存在確認を行いっていま"
-"す。相手ノードにオブジェクトが無い場合はレプリケーションが開始されます。"
+"オブジェクト・ストレージはデータを保持するノード間で頻繁に通信を行います。 "
+"小さなクラスタでさえ、これは数MB/sのトラフィックで主に他ホストにオブジェク"
+"トの存在確認を行いっています。相手ノードにオブジェクトが無い場合はレプリケ"
+"ーションが開始されます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:526
 msgid ""
