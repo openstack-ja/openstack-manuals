@@ -44,7 +44,7 @@ msgstr "トークン"
 #: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:381
 #: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:1001
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "ダッシュボード"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:16
 msgid "Customize"
