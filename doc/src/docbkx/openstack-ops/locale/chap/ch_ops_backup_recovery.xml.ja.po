@@ -29,7 +29,7 @@ msgstr ""
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:110
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:151
 msgid "Object Storage"
-msgstr "オブジェクト・ストレージ"
+msgstr "オブジェクトストレージ"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:123
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:141
@@ -151,7 +151,7 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:81
 msgid "File System Backups"
-msgstr "ファイルシステム バックアップ"
+msgstr "ファイルシステムバックアップ"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:82
 msgid ""
@@ -163,14 +163,14 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:84
 msgid "Compute"
-msgstr "Compute"
+msgstr "コンピュート"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:85
 msgid ""
 "The <code>/etc/nova</code> directory on both the cloud controller and "
 "compute nodes should be regularly backed up."
 msgstr ""
-"クラウドコントローラー、および、Compute ノードの <code>/etc/nova</code>ディレ"
+"クラウドコントローラー、および、コンピュートノードの <code>/etc/nova</code>ディレ"
 "クトリは定期的にバックアップされるべきです。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:88
@@ -180,7 +180,7 @@ msgid ""
 "server or backup the log directory."
 msgstr ""
 "<code>/var/log/nova</code> については、全てのログをリモートで集中管理している"
-"のであれば、バックアップの必要はありません。ログ集約システムの導入か、logディ"
+"のであれば、バックアップの必要はありません。ログ集約システムの導入か、ログディ"
 "レクトリのバックアップを強く推奨します"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:93
@@ -195,7 +195,7 @@ msgid ""
 "that instance to not boot properly if it is ever restored from a backup."
 msgstr ""
 "<code>/var/lib/nova</code> がバックアップする他の重要なディレクトリです。これ"
-"の例外が Compute ノードにある <code>/var/lib/nova/instances</code> サブディレ"
+"の例外がコンピュートノードにある <code>/var/lib/nova/instances</code> サブディレ"
 "クトリです。このサブディレクトリは実行中のインスタンスの KVM イメージを含みま"
 "す。すべてのインスタンスのバックアップコピーを維持したければ、このディレクト"
 "リをバックアップしたいかもしれません。多くの場合において、これを実行する必要"
@@ -289,9 +289,10 @@ msgid ""
 "throughout your storage cluster."
 msgstr ""
 "<code>/etc/swift</code>は非常に重要ですのでバックアップが必要です。このディレ"
-"クトリは、RingファイルやRingバッファファイルなどの消失した場合はクラスター上"
-"のデータにアクセスできなくなるSwiftの設定ファイルが存在します。ベストプラク"
-"ティスとしては、builderファイルを全てのストレージノードにringファイルと共に置"
+"クトリには、Swiftの設定ファイル以外に、RingファイルやRing<glossterm>ビルダーファイル"
+"</glossterm>が置かれています。これらのファイルを消失した場合はクラスター上"
+"のデータにアクセスできなくなります。ベストプラク"
+"ティスとしては、ビルダーファイルを全てのストレージノードにringファイルと共に置"
 "くことです。この方法でストレージクラスター上にバックアップコピーが分散されて"
 "保存されます。"
 
@@ -307,7 +308,7 @@ msgid ""
 "services:"
 msgstr ""
 "バックアップのリカバリーは単純です。始めにリカバリー対象のサービスが停止して"
-"いることを確認します。例を挙げると、Cloudコントローラー上のnovaの完全リカバ"
+"いることを確認します。例を挙げると、クラウドコントローラー上のnovaの完全リカバ"
 "リーを行なう場合、最初に全ての <code>nova</code> サービスを停止します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:177
