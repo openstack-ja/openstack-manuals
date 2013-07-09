@@ -58,7 +58,7 @@ msgid ""
 "to see information about interfaces, including information about IPs, VLANs, "
 "and whether your interfaces are up."
 msgstr ""
-"computeノード上でnova-networkが動いている場合、次のコマンドでIPやVLAN、また、"
+"コンピュートノード上でnova-networkが動いている場合、次のコマンドでIPやVLAN、また、"
 "インターフェイスがUPしているか、などインターフェイス関連の情報を見られます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:31
@@ -66,16 +66,16 @@ msgid ""
 "If you're encountering any sort of networking difficulty, one good initial "
 "sanity check is to make sure that your interfaces are up. For example:"
 msgstr ""
-"もしあなたがネットワークの問題に直面した場合、まず効果的な正当性検査は、イン"
-"ターフェイスがUPしているか確認することです。例えば、"
+"もしあなたがネットワークの問題に直面した場合、まず最初にするとよいのは、"
+"インターフェイスがUPになっているかを確認することです。例えば、"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:40
 msgid ""
 "You can safely ignore the state of virbr0, which is a default bridge created "
 "by QEMU and not used by OpenStack."
 msgstr ""
-"virbr0の状態は無視することができます。なぜならそれはQEMUが作成するデフォルト"
-"のブリッジで、OpenStackから使われないからです。"
+"virbr0の状態は無視することができます。なぜならそれはlibvirtが作成するデフォルト"
+"のブリッジで、OpenStackからは使われないからです。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:45
 msgid "Network Traffic in the Cloud"
@@ -114,7 +114,7 @@ msgid ""
 "You can find out what vent NIC is being used by looking at the /etc/libvirt/"
 "qemu/instance-xxxxxxxx.xml file."
 msgstr ""
-"そのパケットはcomputeホストの仮想NIC、例えば vnet1に転送されます。vnet NICの"
+"そのパケットはコンピュートホストの仮想NIC、例えば vnet1に転送されます。vnet NICの"
 "構成は、/etc/libvirt/qemu/instance-xxxxxxxx.xml を見ることで把握できます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:71
@@ -122,7 +122,7 @@ msgid ""
 "From the vnet NIC, the packet transfers to a bridge on the compute node, "
 "such as, <code>br100.</code>"
 msgstr ""
-"パケットはvnet NICからcomputeノードのブリッジ、例えば<code>br100.</code>に転"
+"パケットはvnet NICからコンピュートノードのブリッジ、例えば<code>br100</code>に転"
 "送されます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:75
@@ -130,7 +130,7 @@ msgid ""
 "If you run FlatDHCPManager, one bridge is on the compute node. If you run "
 "VlanManager, one bridge exists for each VLAN."
 msgstr ""
-"もしFlatDHCPManagerを使っているのであれば、ブリッジはcomputeノード上に一つで"
+"もしFlatDHCPManagerを使っているのであれば、ブリッジはコンピュートノード上に一つで"
 "す。VlanManagerであれば、VLANごとにブリッジが存在します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:78
@@ -154,7 +154,7 @@ msgid ""
 "this NIC in the brctl output, or you can find it by referencing the "
 "flat_interface option in nova.conf."
 msgstr ""
-"パケットはcomputeノードの物理NICに送られます。このNICはbrctlコマンドの出力か"
+"パケットはコンピュートノードの物理NICに送られます。このNICはbrctlコマンドの出力か"
 "ら、もしくはnova.confのflat_interfaceオプションから確認できます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:96
@@ -164,9 +164,9 @@ msgid ""
 "The diagram depicts an external gateway. However, in the default "
 "configuration with multi-host, the compute host is the gateway."
 msgstr ""
-"パケットはこのNICに送られた後、computeノードのデフォルトゲートウェイに転送さ"
+"パケットはこのNICに送られた後、コンピュートノードのデフォルトゲートウェイに転送さ"
 "れます。パケットはこの時点で、おそらくあなたの管理範囲外でしょう。図には外部"
-"ゲートウェイを描いていますが、マルチホストのデフォルト構成では、computeホスト"
+"ゲートウェイを描いていますが、マルチホストのデフォルト構成では、コンピュートホスト"
 "がゲートウェイです。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:105
@@ -203,9 +203,9 @@ msgid ""
 "instance is hosted. If you can ping this IP, then the problem is somewhere "
 "between the compute node and that compute node's gateway."
 msgstr ""
-"もしそれができないのであれば、インスタンスがホストされているcomputeノードのIP"
+"もしそれができないのであれば、インスタンスがホストされているコンピュートノードのIP"
 "アドレスへpingを試行してください。もしそのIPにpingできるのであれば、その"
-"computeノードと、ゲートウェイ間のどこかに問題があります。"
+"コンピュートノードと、ゲートウェイ間のどこかに問題があります。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:121
 msgid ""
@@ -213,8 +213,8 @@ msgid ""
 "the instance and the compute node. This includes the bridge connecting the "
 "compute node's main NIC with the vnet NIC of the instance."
 msgstr ""
-"もしcomputeノードのIPアドレスにpingできないのであれば、問題はインスタンスと"
-"computeノード間にあります。これはcomputeノードの物理NICとインスタンス vnet "
+"もしコンピュートノードのIPアドレスにpingできないのであれば、問題はインスタンスと"
+"コンピュートノード間にあります。これはコンピュートノードの物理NICとインスタンス vnet "
 "NIC間のブリッジ接続を含みます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:125
@@ -224,7 +224,7 @@ msgid ""
 "on the compute node."
 msgstr ""
 "最後のテストでは、2つ目のインスタンスを起動し、2つのインスタンス間でお互いに"
-"pingを実行します。実行できるのであれば、この問題にはcomputeノード上のファイア"
+"pingを実行します。実行できるのであれば、この問題にはコンピュートノード上のファイア"
 "ウォールが関係しているかもしれません。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:131
@@ -268,11 +268,11 @@ msgstr "クラウド外部のサーバー上"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:153
 msgid "A compute node."
-msgstr "computeノード上"
+msgstr "コンピュートノード上"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:156
 msgid "An instance running on that compute node."
-msgstr "computeノード内のインスタンス上"
+msgstr "コンピュートノード内のインスタンス上"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:159
 msgid "In this example, these locations have the following IP addresses:"
@@ -297,7 +297,7 @@ msgstr "外部サーバー上"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:181
 msgid "On the Compute Node:"
-msgstr "computeノード上"
+msgstr "コンピュートノード上"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:194
 msgid "On the Instance:"
@@ -311,9 +311,9 @@ msgid ""
 "compute node, as seen above, because tcpdump captured the packet on both the "
 "bridge and outgoing interface."
 msgstr ""
-"外部サーバーはpingリクエストを受信し、pingリプライを送信しています。compute"
+"外部サーバーはpingリクエストを受信し、pingリプライを送信しています。コンピュート"
 "ノード上では、pingとpingリプライがそれぞれ成功していることがわかります。ま"
-"た、見ての通り、computeノード上ではパケットが重複していることもわかるでしょ"
+"た、見ての通り、コンピュートノード上ではパケットが重複していることもわかるでしょ"
 "う。なぜならtcpdumpはブリッジと外向けインターフェイスの両方でパケットをキャプ"
 "チャするからです。"
 
@@ -323,7 +323,7 @@ msgid ""
 "from instances on a compute node, forwarding floating IP traffic, and "
 "managing security group rules."
 msgstr ""
-"Novaはiptablesを自動的に管理します。computeノード上のインスタンス間でのパケッ"
+"Novaはiptablesを自動的に管理します。コンピュートノード上のインスタンス間でのパケッ"
 "ト送受信、フローティングIPトラフィック、security groupのルール管理もそれに含"
 "まれます。"
 
@@ -356,7 +356,7 @@ msgid ""
 "instance_uuid column."
 msgstr ""
 "fixed_ips: Novaに登録されたサブネットで利用可能なIPアドレス。このテーブルは"
-"fixed_ips.instance_uuid列でインスタンステーブルと関連づけられる。"
+"fixed_ips.instance_uuid列で instances テーブルと関連付けられます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:230
 msgid ""
@@ -365,15 +365,15 @@ msgid ""
 "fixed_ip_id column."
 msgstr ""
 "floating_ips: Novaに登録されたフローティングIPアドレス。このテーブルは"
-"floating_ips.fixed_ip_id列でfixed_ipsテーブルと関連づけられる。"
+"floating_ips.fixed_ip_id列でfixed_ipsテーブルと関連付けられます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:236
 msgid ""
 "instances: not entirely network specific, but it contains information about "
 "the instance that is utilizing the fixed_ip and optional floating_ip."
 msgstr ""
-"instances: ネットワーク特有のテーブルではないが、特定のfixed_ipとfloating_ip"
-"を使っているインスタンスの情報を管理する。"
+"instances: ネットワーク特有のテーブルではありませんが、fixed_ipとfloating_ip"
+"を使っているインスタンスの情報を管理します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:242
 msgid ""
@@ -457,7 +457,7 @@ msgid ""
 "After you establish that the instance booted properly, the task is to figure "
 "out where the failure is."
 msgstr ""
-"インスタンスが正しく起動した後、このタスクでどこが問題かを切り分けることがで"
+"インスタンスが正しく起動した後、この手順でどこが問題かを切り分けることがで"
 "きます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:295
@@ -473,8 +473,8 @@ msgstr ""
 "当するプロジェクト(テナント)のdnsmasqプロセスを再起動してください。VLANモード"
 "においては、dnsmasqプロセスはテナントごとに存在します。すでに該当のdnsmasqプ"
 "ロセスを再起動しているのであれば、もっともシンプルな解決法は、マシン上の全て"
-"のdnsmasqプロセスをkillし、nova-networkを再起動することです。最終手段ですが、"
-"rootとして実行してください。"
+"のdnsmasqプロセスをkillし、nova-networkを再起動することです。最終手段として、"
+"rootで以下を実行してください。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:306
 msgid ""
@@ -495,7 +495,7 @@ msgid ""
 msgstr ""
 "もしまだインスタンスがIPアドレスを取得できない場合、次はdnsmasqがインスタンス"
 "からのDHCPリクエストを見えているか確認します。dnsmasqが動いているマシン上の "
-"dnsmasqの出力をを見るため、/var/log/syslog を参照します。もしdnsmasqがリクエ"
+"dnsmasqの出力を見るため、/var/log/syslog を参照します。もしdnsmasqがリクエ"
 "ストを正しく受け取り、処理していれば、以下のような出力になります。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:329
@@ -644,7 +644,7 @@ msgstr ""
 "なりえます。前節で述べたように、dnsmasqの不具合を解決するもっともシンプルな方"
 "法は、マシン上のすべてのdnsmasqプロセスをkillし、nova-networkを再起動すること"
 "です。しかしながら、このコマンドは該当ノード上で動いているすべてのインスタン"
-"ス、特に問題がないテナントにも影響します。最終手段は、rootとして実行します。"
+"ス、特に問題がないテナントにも影響します。最終手段として、rootで以下を実行します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:422
 msgid "After the dnsmasq processes start again, check if DNS is working."
@@ -660,8 +660,8 @@ msgid ""
 msgstr ""
 "dnsmasqの再起動でも問題が解決しないときは、tcpdumpで問題がある場所のパケット"
 "トレースを行う必要があるでしょう。DNSサーバーはUDPポート53番でリッスンしま"
-"す。あなたのcomputeノードのブリッジ(br100など)上でDNSリクエストをチェックして"
-"ください。computeノード上にて、tcpdumpでリッスンを開始すると、"
+"す。あなたのコンピュートノードのブリッジ(br100など)上でDNSリクエストをチェックして"
+"ください。コンピュートノード上にて、tcpdumpでリッスンを開始すると、"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:432
 msgid ""
