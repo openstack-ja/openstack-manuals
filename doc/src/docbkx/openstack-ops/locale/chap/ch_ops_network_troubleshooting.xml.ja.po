@@ -494,8 +494,9 @@ msgid ""
 "output looks like:"
 msgstr ""
 "もしまだインスタンスがIPアドレスを取得できない場合、次はdnsmasqがインスタンス"
-"からのDHCPリクエストを見えているか確認します。dnsmasqが動いているマシン上の "
-"dnsmasqの出力を見るため、/var/log/syslog を参照します。もしdnsmasqがリクエ"
+"からのDHCPリクエストを見えているか確認します。dnsmasqプロセスが動いているマシンで、"
+"/var/log/syslogを参照し、dnsmasqの出力を確認します。なお、マルチホストモードで"
+"動作している場合は、dnsmasqプロセスはコンピュートノードで動作します。もしdnsmasqがリクエ"
 "ストを正しく受け取り、処理していれば、以下のような出力になります。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:329
