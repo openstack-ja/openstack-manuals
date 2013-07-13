@@ -216,8 +216,7 @@ msgstr "実現したいプラッター数（ディスク容量）はどれくら
 #: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:119
 msgid "Do more spindles result in better I/O despite network access?"
 msgstr ""
-"ネットワークアクセスではなくより多くのディスクがあればよい I/O 性能が得られる"
-"か？"
+"ネットワークアクセスがあったとしても、ディスク数が多い方が良い I/O 性能が得られるか？"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:123
 msgid ""
@@ -454,7 +453,7 @@ msgid ""
 "configure a distributed file system."
 msgstr ""
 "共有ストレージを使ったライブマイグレーションをサポートしたい場合には、分散"
-"ファイルシステムを設定する必要があります。"
+"ファイルシステムを構成する必要があります。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:286
 msgid "Possible options include:"
