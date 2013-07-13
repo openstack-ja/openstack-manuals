@@ -28,7 +28,7 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:16
 msgid "Lay of the Land"
-msgstr "環境を把握する"
+msgstr "環境の把握"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:17
 msgid ""
@@ -36,7 +36,7 @@ msgid ""
 "cloud up and running. This section helps you set up your working environment "
 "and use it to take a look around your cloud."
 msgstr ""
-"ここからは、あなたがOpenStackの実行環境を持っていると想定して進めます。この節"
+"ここからは、あなたがOpenStackが稼働している環境を持っていると想定して進めます。この節"
 "は環境の構築と情報収集に役立つでしょう。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:22
@@ -67,7 +67,7 @@ msgid ""
 msgstr ""
 "コマンドラインツールは、UbuntuやFedoraのパッケージからではなく、<link href="
 "\"https://pypi.python.org/\">Python Package Index</link>(PyPI) (https://pypi."
-"python.org/) からの導入を強くおすすめします。クライアントツールは開発が活発で"
+"python.org/) から導入することを強くおすすめします。クライアントツールは開発が活発で"
 "あり、OSベンダーが配布しているパッケージのバージョンが古くなりがちなためで"
 "す。"
 
@@ -79,9 +79,9 @@ msgid ""
 "which services your site runs, install some or all of the following packages:"
 msgstr ""
 "\"pip\"ユーティリティはPyPIアーカイブからパッケージを導入するために使われま"
-"す。そして、\"python-pip\"パッケージは多くのLinuxディストリビューションに含ま"
+"す。そして、多くのLinuxディストリビューションでは\"pip\"ユーティリティは\"python-pip\"パッケージに含ま"
 "れています。各OpenStackプロジェクトはそれぞれクライアントを持ちますので、あな"
-"たが動かすサービスに合わせ、以下のパッケージを導入してください。"
+"たの環境で動かすサービスに合わせて、以下のパッケージを導入してください。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:45
 msgid "python-novaclient (<glossterm>nova</glossterm> CLI)"
@@ -129,7 +129,7 @@ msgid ""
 "specify a name for the Python egg that is installed. For example:"
 msgstr ""
 "もし新しいバージョンのクライアントが必要な場合、<code>-e</code>フラグを指定す"
-"ることで、アップストリーム gitリポジトリから直接導入できます。その際は、"
+"ることで、アップストリームのgitリポジトリから直接導入できます。その際は、"
 "Python egg名を指定しなければいけません。例えば、"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:82
@@ -180,9 +180,9 @@ msgid ""
 msgstr ""
 "前述のツールと違って、<code>*-manage</code>ツールはクラウドコントローラーから"
 "root権限で実行されなければいけません。なぜなら、それらのツールは<code>/etc/"
-"nova/nova.conf</code>などの構成ファイルを読み取り、また、OpenStack "
-"<glossterm>API endpoint</glossterm>ではなく、データベースに対し直接クエリーを"
-"発行する必要があるからです。"
+"nova/nova.conf</code>などの設定ファイルを読み取り、また、OpenStack "
+"<glossterm>API エンドポイント</glossterm>ではなく、データベースに対し直接クエリーを"
+"発行するからです。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:114
 msgid ""
@@ -193,7 +193,7 @@ msgid ""
 "node</glossterm> to perform some maintenance operations that require one of "
 "the <code>*-manage</code> tools."
 msgstr ""
-"<code>*-manage</code>ツールの存在は、時代に合わなくなっています。OpenStackプ"
+"<code>*-manage</code>ツールが存在しているのは、歴史的な経緯からです。OpenStackプ"
 "ロジェクトは最終的に、<code>*-manage</code>の全機能を通常のクライアントツール"
 "へ移行する予定です。それまでは、<glossterm>cloud controller node</glossterm>"
 "へSSHし、必要な<code>*-manage</code>を使ってメンテナンス作業を行う必要があり"
@@ -220,10 +220,10 @@ msgid ""
 msgstr ""
 "OpenStackクラウドに対してクエリを発行するためにコマンドラインツールを使いたい"
 "のであれば、適切な認証情報を持っている必要があります。コマンドラインツールで"
-"使う認証情報を得るための最も簡単な方法は、Horizonダッシュボードです。ユーザ設"
-"定ページを表示するには、ページ右上のナビゲーション、<guilabel>設定</guilabel>"
-"を選択します。ここから言語やタイムゾーンも設定できます。ここで重要なのは、こ"
-"のページ左側のナビゲーション<guilabel>OpenStack API</guilabel> と "
+"使う<glossterm>認証</glossterm>情報を得るための最も簡単な方法は、Horizonダッシュボードです。ユーザ設"
+"定ページを表示するには、ページ右上のナビゲーションバーから、<guilabel>設定</guilabel>"
+"のリンクを選択し、ユーザ設定を開きます。ユーザ設定では、言語やタイムゾーンも設定できます。ここで重要なのは、こ"
+"のページ左側のナビゲーションにある<guilabel>OpenStack API</guilabel> と "
 "<guilabel>EC2 認証情報</guilabel> リンクです。このリンクから、あなたのサービ"
 "スエンドポイントや認証情報といった環境変数を設定するファイルを生成できます。"
 
@@ -260,7 +260,7 @@ msgstr ""
 "のスクリプトを読み込み、実行する際、パスワードの入力が要求され、環境変数"
 "<code>OS_PASSWORD</code>に設定されます。対話式に要求することが重要です。もし"
 "あなたが非対話式に操作したいのであれば、値を直接スクリプトに書くことは可能で"
-"す。しかし、このファイルのセキュリティとパーミッションに極めて高い注意を払う"
+"す。しかし、このファイルのセキュリティとパーミッションに細心の注意を払う"
 "必要があります。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:191
@@ -281,19 +281,19 @@ msgstr ""
 "生成されます。クラウドにアクセスするために必要な認証情報を含んでいるため、"
 "<code>openrc</code>とは異なり、安全な場所へ新しいディレクトリを作り、そこへ"
 "zipファイルを展開してください。cacert.pem、 cert.pem、 ec2rc.sh そして pk.pem"
-"があるはずです。 <code>ec2rc.sh</code>を以下のようになるでしょう。"
+"があるはずです。 <code>ec2rc.sh</code>は以下のようになるでしょう。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:220
 msgid ""
 "To put the EC2 credentials into your environment source the <code>ec2rc.sh</"
 "code> file."
 msgstr ""
-"EC2認証情報をあなたの環境に追加するには、<code>ec2rc.sh</code>ファイルを使い"
+"EC2認証情報を環境変数として有効にするには、<code>ec2rc.sh</code>ファイルを(source コマンドで) 読み込み"
 "ます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:224
 msgid "Command Line Tricks and Traps"
-msgstr "コマンドラインのこつと罠"
+msgstr "コマンドラインのこつとはまりどころ"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:225
 msgid ""
@@ -326,9 +326,9 @@ msgstr ""
 "<link href=\"https://wiki.openstack.org/wiki/KeyringSupport\">Keyring "
 "Support</link> (https://wiki.openstack.org/wiki/KeyringSupport)は、このガイド"
 "の執筆時点では混乱の元になるかもしれません。この<link href=\"https://bugs."
-"launchpad.net/python-novaclient/+bug/1020238\">bug report</link> (https://"
-"bugs.launchpad.net/python-novaclient/+bug/1020238)はオープンされた後、不正に"
-"クローズされ、数サイクルを経て再度オープンされています。"
+"launchpad.net/python-novaclient/+bug/1020238\">バグレポート</link> (https://"
+"bugs.launchpad.net/python-novaclient/+bug/1020238)はオープンされた後、無効(invalid)として"
+"クローズされ、何度かやり取りがあって再度オープンされています。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:244
 msgid ""
@@ -350,7 +350,7 @@ msgid ""
 "This causes the command line tool to authenticate on each and every "
 "interaction with the cloud."
 msgstr ""
-"この問題は、コマンドラインツールがクラウドとやりとりするたびに発生します。"
+"no-cache を設定すると、コマンドラインツールがクラウドとやり取りを行う度に認証が行われます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:259
 msgid "cURL"
@@ -367,8 +367,8 @@ msgid ""
 "github.com/jq/\">jq</link> (http://stedolan.github.com/jq/), from the "
 "responses."
 msgstr ""
-"コマンドラインツールの内部では、HTTP RESTful APIであるOpenStack APIが使われて"
-"います。時に、APIと直接やりとりしたい、CLIツールのバグを疑っている、というこ"
+"コマンドラインツールの内部ではOpenStack APIが使用されます。OpenStack APIはHTTP上で動作する"
+"RESTful APIです。時に、APIと直接やりとりしたい、CLIツールのバグを疑っている、というこ"
 "とがあるでしょう。その際に最適な方法は、<link href=\"http://curl.haxx.se/"
 "\">cURL</link> (http://curl.haxx.se/)と、JSONレスポンスを解析する<link href="
 "\"http://stedolan.github.com/jq/\">jq</link> (http://stedolan.github.com/jq/)"
@@ -379,7 +379,7 @@ msgid ""
 "The first thing you must do is authenticate with the cloud using your "
 "credentials to get an <glossterm>authentication token</glossterm>."
 msgstr ""
-"まずはじめに、クラウドの認証が必要です。あなたの認証情報を用いて認証トークン"
+"まずはじめに、クラウドの認証が必要です。あなたの認証情報を用いて<glossterm>認証トークン</glossterm>"
 "を入手してください。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:278
@@ -401,7 +401,7 @@ msgstr ""
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:291
 msgid "Look at your OpenStack service <glossterm>catalog</glossterm>:"
 msgstr ""
-"それではOpenStack service <glossterm>catalog</glossterm>を見てみましょう。"
+"それではOpenStack サービス<glossterm>カタログ</glossterm>を見てみましょう。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:298
 msgid ""
@@ -412,7 +412,7 @@ msgstr "JSONレスポンスを読むことで、カタログを把握するこ�
 msgid ""
 "To make working with subsequent requests easier, store the token in an "
 "environment variable."
-msgstr "続くリクエストを楽にするため、トークンを環境変数へ設定します。"
+msgstr "これ以降のリクエストを楽にするため、トークンを環境変数へ設定します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:307
 msgid "Now you can refer to your token on the command line as $TOKEN."
@@ -423,7 +423,7 @@ msgid ""
 "Pick a service endpoint from your service catalog, such as compute, and try "
 "out a request like listing instances (servers)."
 msgstr ""
-"あなたのサービスカタログからcomputeなどのエンドポイントを選び、試してみましょ"
+"あなたのサービスカタログからコンピュートなどのエンドポイントを選び、試してみましょ"
 "う。例えば、(サーバー)インスタンスのリスト出力など。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:322
@@ -434,7 +434,7 @@ msgid ""
 "jq, see the <link href=\"http://stedolan.github.com/jq/manual/\">jq Manual</"
 "link> (http://stedolan.github.com/jq/manual/)."
 msgstr ""
-"APIリクエストがどう構造化されているかを知るには、<link href=\"http://api."
+"APIリクエストがどのような構造かを知るには、<link href=\"http://api."
 "openstack.org/api-ref.html\">OpenStack API Reference</link> (http://api."
 "openstack.org/api-ref.html)を参照してください。また、jqを使ってレスポンスを理"
 "解するには、<link href=\"http://stedolan.github.com/jq/manual/\">jq Manual</"
@@ -490,10 +490,10 @@ msgid ""
 "available, the <code>:-)</code> changes to an <code>XXX</code>. This is an "
 "indication that you should troubleshoot why the service is down."
 msgstr ""
-"この出力は、5つのcomputeノードと1つのクラウドコントローラーがあることを示して"
-"います。<code>:-)</code> のような笑顔は、サービスが起動、動作していることを表"
+"この出力は、5つのコンピュートノードと1つのクラウドコントローラーがあることを示して"
+"います。<code>:-)</code> のような笑顔は、サービスが起動し、稼働中であることを表"
 "しています。もしサービスが動作していない場合、<code>:-)</code>は<code>XXX</"
-"code>へと変化します。なぜサービスがダウンしているのか、問題解決すべき表示で"
+"code>へと変化します。なぜサービスがダウンしているのか、問題解決すべき印で"
 "す。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:370
@@ -502,15 +502,15 @@ msgid ""
 "after the Folsom release), you might also see entries for the nova-volume "
 "service."
 msgstr ""
-"もしあなたがまだ<code>nova-volume</code>を使っているのであれば、nova-volume"
-"サービスのエントリも見えるでしょう。 (nova-volumeはFolsomリリース以降、廃止予"
+"あなたがまだ<code>nova-volume</code>を使っているのであれば、nova-volume"
+"サービスのエントリも見えるでしょう。 (nova-volumeはFolsomより後のリリースでは廃止予"
 "定です)"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:374
 msgid ""
 "If you are using Cinder, run the following command to see a similar listing:"
 msgstr ""
-"Cinderを使っているのであれば、以下コマンドの実行で同様のリストが見られます。"
+"Cinderを使っているのであれば、以下のコマンドを実行すると同様のリストが見られます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:386
 msgid ""
@@ -526,7 +526,7 @@ msgid ""
 "available in your cloud as well as what endpoints have been configured for "
 "the services."
 msgstr ""
-"また、IDサービス (Keystone)を使い、あなたのクラウドでどのサービスが使えるの"
+"また、認証サービス (Keystone)を使い、あなたのクラウドでどのサービスが使えるの"
 "か、また、どのエンドポイントがサービス向けに構成されているか、知ることができ"
 "ます。"
 
@@ -544,7 +544,7 @@ msgstr "上記の出力は、5つのサービスが構成されていること�
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:410
 msgid "To see the endpoint of each service, run:"
-msgstr "サービスごとのエンドポイントを見るには、"
+msgstr "各サービスのエンドポイントを見るには、"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:421
 msgid ""
@@ -566,13 +566,13 @@ msgid ""
 "You can use the <placeholder-1/> command-line client to get the IP ranges."
 "<placeholder-2/>"
 msgstr ""
-"次に、あなたのクラウドで構成されている固定IPネットワークを見てみましょう。IP "
-"範囲を取得するために<placeholder-1/> コマンドラインクライアントを使用できま"
+"次に、あなたのクラウドでどのような固定IPネットワークが設定されているかを見てみましょう。"
+"<placeholder-1/> novaコマンドラインクライアントを使って、構成されているIPアドレス空間を得ることができま"
 "す。<placeholder-2/>"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:439
 msgid "The <placeholder-1/> tool can provide some additional details."
-msgstr "<placeholder-1/> ツールはいくつかの補足的な詳細を提供できます。"
+msgstr "<placeholder-1/> ツールを使うと、もう少し詳しい情報が表示されます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:445
 msgid ""
@@ -584,7 +584,7 @@ msgid ""
 msgstr ""
 "この出力は、2つのネットワークが構成され、それぞれが255のIPアドレス (/24 サブ"
 "ネット)を持つことを表しています。1つ目のネットワークはあるプロジェクトに割り"
-"当てられており、2つ目はまだ割り当てられていません。手動で割り当てることもでき"
+"当てられており、2つ目はまだ割り当てられていません。手動でプロジェクトに割り当てることもでき"
 "ますし、プロジェクトの1つ目のインスタンスを起動する際、自動的に割り当てること"
 "もできます。"
 
@@ -602,7 +602,7 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:464
 msgid "Users and Projects"
-msgstr "ユーザおよびプロジェクト"
+msgstr "ユーザーとプロジェクト"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:465
 msgid "To see a list of projects that have been added to the cloud, run:"
@@ -619,16 +619,16 @@ msgid ""
 "only one user is ever part of a group."
 msgstr ""
 "ユーザとグループが1対1でマッピングされることもあります。これはcinder、"
-"glance、novaやswiftなどの標準システムアカウントなど、1ユーザのみのグループが"
-"あるためです。"
+"glance、novaやswiftなど標準のシステムアカウントや、グループに属すのが1ユーザのみの場合が"
+"これにあたります。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:515
 msgid "Running Instances"
-msgstr "稼働中インスタンス"
+msgstr "稼働中のインスタンス"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:516
 msgid "To see a list of running instances, run:"
-msgstr "稼働中インスタンスのリストを見るためには、"
+msgstr "以下のコマンドで、稼働中のインスタンスのリストが得られます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:531
 msgid ""
@@ -637,8 +637,8 @@ msgid ""
 "what flavor the instance is, and so on. You can use the following command to "
 "view details about individual instances:"
 msgstr ""
-"残念ながら、このコマンドは稼働中インスタンスの詳細を出力しません。例えば、ど"
-"のcomputeノードでインスタンスが動いているのか、フレーバーは何か、などなど。あ"
+"残念ながら、このコマンドは稼働中のインスタンスの詳細を出力しません。例えば、ど"
+"のコンピュートノードでインスタンスが動いているのか、フレーバーは何か、などなど。あ"
 "なたは以下のコマンドでインスタンス個別の詳細情報を得ることができます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_lay_of_land.xml:539
