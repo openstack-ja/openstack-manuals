@@ -73,9 +73,9 @@ msgid ""
 msgstr ""
 "OpenStack は設定の自由度が高く、多くの異なる<glossterm>バックエンド</"
 "glossterm>とネットワーク設定オプションがあり、考えられる OpenStack の構成をす"
-"べて網羅するドキュメントを作成するのは困難です。そのため、この文書では"
-"<emphasis>参考アーキテクチャ</emphasis>を定義し、ドキュメントを分かりやすく"
-"し、この文書の説明対象を明確にしています。こうすることで、、著者らが実際に経"
+"べて網羅するドキュメントを作成するのは困難です。そのため、このガイドでは"
+"<emphasis>参考アーキテクチャ</emphasis>を定義することで、このガイドの説明範囲を明確にするとともに、"
+"ドキュメント作成を単純化しています。こうすることで、、著者らが実際に経"
 "験したことのある構成での設定に焦点を当てることができます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:26
@@ -96,7 +96,7 @@ msgstr "Ubuntu 12.04 LTS"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:40
 msgid "OpenStack package repository"
-msgstr "OpenStack パッケージ・リポジトリ"
+msgstr "OpenStack パッケージリポジトリ"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:41
 msgid ""
@@ -165,7 +165,7 @@ msgstr "SQL"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:83
 msgid "Block Storage Service (cinder) back-end"
-msgstr "ブロックストレージサービス (cinder) のバックエンド"
+msgstr "Block Storage Service (cinder) のバックエンド"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:85
 msgid "LVM/iSCSI"
@@ -228,9 +228,9 @@ msgid ""
 msgstr ""
 "この参考アーキテクチャは、OpenStack <glossterm>Folsom</glossterm> の現在のデ"
 "フォルト機能をベースとして、安定性を重視して選択されました。特に、 OpenStack "
-"Folsom リリースの構成で、この文書の著者の誰も使ったことがないバックエンドや構"
-"成については、この参考アーキテクチャでは取り上げないことにしました。きっと、"
-"現在プロダクトで OpenStack を使っている多くのクラウドでは同様の選択がなされて"
+"Folsom リリースの構成で、この文書の著者の誰も使ったことがないバックエンドや設定"
+"については、この参考アーキテクチャでは取り上げないことにしました。きっと、"
+"現在本番環境で OpenStack を使っている多くのクラウドでは同様の選択がなされて"
 "いることでしょう。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:140
@@ -294,7 +294,7 @@ msgstr ""
 "されており、 Ubuntu での動かし方についても非常によくドキュメントにまとまって"
 "います。\n"
 "デフォルトのデータベースである <emphasis>SQLite</emphasis> を使っていません"
-"が、それは SQLite がプロダクションでの利用には適したデータベースではないから"
+"が、それは SQLite が本番環境での利用には適したデータベースではないから"
 "です。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:171
@@ -309,10 +309,10 @@ msgid ""
 msgstr ""
 "OpenStack では AMQP 互換の選択肢としては ZeroMQ や Qpid などのサポートが進ん"
 "でいますが、 <emphasis role=\"bold\"> RabbitMQ</emphasis> を選んだのは、"
-"Ubuntu での使いやすさと、プロダクション環境で十分にテストされているのが理由で"
+"Ubuntu での使いやすさと、本番環境で十分にテストされているのが理由で"
 "す。また、RabbitMQ は Compute Cell といった機能でサポートされている唯一の選択"
 "肢です。 RabbitMQ はクラスタ構成にすることを推奨します。それは、メッセージ"
-"キューは OpenStack システムで不可欠のコンポーネントで、RabbitMQ 自体でサポー"
+"キューは OpenStack システムで不可欠のコンポーネントで、RabbitMQ 自体で元々サポー"
 "トされているためかなり簡単に実現することができるからです。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:180
@@ -358,7 +358,7 @@ msgstr ""
 "OpenStack Image Catalog and Delivery Service (Glance) のバックエンドとして"
 "ファイルバックエンドを選択しました。あなたが設計しているクラウドで Object "
 "Storage も動かすつもりであれば、代わりに Object Storage をバックエンドとして"
-"使うのは難しいことではなく、使用することを是非お薦めします。"
+"使うのは簡単なので、使用することを是非お薦めします。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:203
 msgid ""
@@ -411,7 +411,7 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:228
 msgid "Why Not Use the OpenStack Network Service (quantum)?"
-msgstr "なぜ OpenStack Network Service (quantum) を使わないか？"
+msgstr "なぜ OpenStack Networking Service (quantum) を使わないか？"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:230
 msgid ""
@@ -420,9 +420,9 @@ msgid ""
 "using <code>nova-network</code>. Additionally, it does not yet support multi-"
 "host networking."
 msgstr ""
-"我々はこのガイドで OpenStack Network Service (quantum) について触れていない。"
-"それは、このガイドの著者達がの <code>nova-network</code> を使ったプロダクショ"
-"ン環境の経験しかないからである。それに加えて、quantum はまだマルチホストネッ"
+"我々はこのガイドで OpenStack Networking Service (quantum) について触れていません。"
+"それは、このガイドの著者達がの <code>nova-network</code> を使った本番"
+"環境の経験しかないからです。それに加えて、quantum はまだマルチホストネッ"
 "トワークをサポートしていないことも理由の一つです。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:237
@@ -443,7 +443,7 @@ msgstr ""
 "デフォルトの OpenStack の構成では、<code>nova-network</code> サービスはクラウ"
 "ド内 (通常はクラウドコントローラー) で一つだけ動作し、ゲストインスタンスに"
 "ネットワークアドレス変換 (NAT)、DHCP、DNS などのサービスを提供します。 "
-"<code>nova-network</code> サービスが動作している1台のノードがダウンすると、イ"
+"<code>nova-network</code> サービスが動作している1台のノードがダウンすると、ユーザーはイ"
 "ンスタンスにアクセスできなくなり、インスタンスはインターネットにアクセスでき"
 "なくなります。クラウドで送受信されるネットワークトラフィックが多くなり過ぎる"
 "と、nova-network サービスが動作する1台のノードがボトルネックになる可能性があ"
@@ -462,7 +462,7 @@ msgstr ""
 "compute/admin/content/existing-ha-networking-options.html#d6e8906\">マルチホ"
 "スト</link> (http://docs.openstack.org/folsom/openstack-compute/admin/"
 "content/existing-ha-networking-options.html#d6e8906) は、ネットワーク設定の高"
-"可用性オプションで、 nova-network サービスを1台のノードではなく各コンピュート"
+"可用性オプションで、 nova-network サービスを1台のノードだけで動かすのではなく、各コンピュート"
 "ノードで動作させるものです。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:262
@@ -506,10 +506,10 @@ msgstr ""
 "クラウドコントローラーでは、ダッシュボード、API サービス、データベース "
 "(MySQL)、メッセージキューサーバー (RabbitMQ)、コンピューティングリソースの選"
 "択を行うスケジューラー (nova-scheduler)、 Identity サービス (keystone, "
-"<code>nova-consoleauth</code>), イメージ サービス (<code>glance-api</code>, "
-"<code>glance-registry</code>), ゲストへのコンソールアクセス用サービス、ブロッ"
-"クストレージサービス (ストレージリソースのスケジューラーを含む、 "
-"<code>cinder-api</code> and <code>cinder-scheduler</code>) が動作します。"
+"<code>nova-consoleauth</code>), Image Service (<code>glance-api</code>, "
+"<code>glance-registry</code>), ゲストへのコンソールアクセス用サービス、"
+"ストレージリソースのスケジューラーを含む Block Storage サービス"
+"(<code>cinder-api</code> と <code>cinder-scheduler</code>) が動作します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:289
 msgid ""
@@ -522,7 +522,7 @@ msgid ""
 msgstr ""
 "コンピュートノードはコンピューティングリソースを提供する場所です。この参考"
 "アーキテクチャでは、コンピュートノードで、ハイパーバイザー (KVM)、 libvirt "
-"(ハイパーバイザー用のドライバーで、ノード間でのライブマイグレーションを行いま"
+"(ハイパーバイザー用のドライバーで、ノード間でのライブマイグレーションを可能にしま"
 "す)、 <code>nova-compute</code>、 <code>nova-api-metadata</code> (通常はマル"
 "チホストモードの場合のみ使用されます。インスタンス固有のメタデータの取得に使"
 "われます)、 nova-vncproxy、 <code>nova-network</code> が動作します。"
@@ -543,7 +543,7 @@ msgstr ""
 "成をとるため、クラウドコントローラーと各コンピュートノードにはNICを2つ用意し"
 "ています。\n"
 "OpenStack Block Storage と NFS ストレージサーバーはプライベートネットワークだ"
-"けにアクセスできればよく、必要なNICは1つです。ただし、可能であれば複数のNIC"
+"けにアクセスできればよく、そのため必要なNICは1つです。ただし、可能であれば複数のNIC"
 "を bonding 設定で動作させることを推奨します。フローティング IP アクセスはイン"
 "ターネットと直結になりますが、フラット IP アクセスは NAT 経由となります。"
 
