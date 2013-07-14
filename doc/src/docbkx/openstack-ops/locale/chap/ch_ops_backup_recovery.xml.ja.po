@@ -48,15 +48,15 @@ msgid ""
 "quickly you need to recover from data loss."
 msgstr ""
 "OpenStackバックアップポリシーを作成する際、標準的なバックアップのベストプラク"
-"ティスが適用できます。例えば、どの程度の頻度でバックアップを行なうかは、デー"
-"タ損失からどの程度の期間でリカバリーする事と密接に関連しています。"
+"ティスが適用できます。例えば、どの程度の頻度でバックアップを行なうかは、"
+"どのくらい早くデータロスから復旧させる必要があるかに密接に関連しています。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:21
 msgid ""
 "If you cannot have any data loss at all, you should focus on High "
 "Availability as well as backups."
 msgstr ""
-"もし、いかなるデータロスも許されない場合、バックアップに加えてHAも検討すべき"
+"もし、いかなるデータロスも許されない場合、バックアップに加えて高可用性（High Avaialability）についても検討すべき"
 "です。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:24
@@ -80,8 +80,8 @@ msgid ""
 "Just as important as a backup policy is a recovery policy (or at least "
 "recovery testing)."
 msgstr ""
-"バックアップポリシーと同様に大事なことは、リカバリーポリシー(もしくはリカバ"
-"リーのテスト)を定めることです"
+"バックアップポリシーと同じくらい大事なことは、リカバリーポリシーです (少なくともリカバ"
+"リーのテストは必要です)。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:41
 msgid "What to Backup"
@@ -110,7 +110,7 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:53
 msgid "Database Backups"
-msgstr "データベース バックアップ"
+msgstr "データベースのバックアップ"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:54
 msgid ""
@@ -119,9 +119,9 @@ msgid ""
 "Cinder, and Keystone. With all of these databases in one place, it's very "
 "easy to create a database backup:"
 msgstr ""
-"ここでは、Cloud コントローラーに MySQL サーバーを利用しています。このMySQL "
+"参考アーキテクチャーでは、クラウドコントローラーを MySQL サーバにしています。このMySQL "
 "サーバーは Nova, Glance, Cinder, そして Keystone のデータベースを保持していま"
-"す。全てのデータベースが一つにある場合、データベースバックアップは非常に容易"
+"す。全てのデータベースが一ヶ所にある場合、データベースバックアップは非常に容易"
 "となります。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:63
@@ -196,9 +196,9 @@ msgid ""
 msgstr ""
 "<code>/var/lib/nova</code> がバックアップする他の重要なディレクトリです。これ"
 "の例外がコンピュートノードにある <code>/var/lib/nova/instances</code> サブディレ"
-"クトリです。このサブディレクトリは実行中のインスタンスの KVM イメージを含みま"
-"す。すべてのインスタンスのバックアップコピーを維持したければ、このディレクト"
-"リをバックアップしたいかもしれません。多くの場合において、これを実行する必要"
+"クトリです。このサブディレクトリには実行中のインスタンスの KVM イメージが置かれま"
+"す。このディレクトリをバックアップしたいと思うのは、すべてのインスタンスのバックアップ"
+"コピーを保持する必要がある場合だけでしょう。多くの場合において、これを実行する必要"
 "がありません。ただし、クラウドごとに異なり、サービスレベルによっても異なる可"
 "能性があります。稼働中の KVM インスタンスのバックアップは、バックアップから復"
 "元したときでも、正しく起動しない可能性があることに気をつけてください。"
@@ -313,15 +313,15 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:177
 msgid "Once that's done, stop MySQL:"
-msgstr "実行後、MySQLを停止します。"
+msgstr "その後、MySQLを停止します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:179
 msgid "Now you can import a previously backed up database:"
-msgstr "バックアップしたファイルをインポートします。"
+msgstr "以前にバックアップしたデータベースをインポートします。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:182
 msgid "As well as restore backed up nova directories:"
-msgstr "同様にnovaディレクトリをリストアします。"
+msgstr "同様に、バックアップした nova のディレクトリをリストアします。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:185
 msgid "Once the files are restored, start everything back up:"
