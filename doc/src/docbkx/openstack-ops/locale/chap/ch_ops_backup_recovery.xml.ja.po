@@ -223,7 +223,7 @@ msgid ""
 "stored and care should be taken."
 msgstr ""
 "<code>/var/lib/glance</code>もバックアップすべきです。 <code>/var/lib/glance/"
-"images</code>には特段の注意が必要です。\n"
+"images</code>には特段の注意が必要です。"
 "もし、ファイルベースのバックエンドを利用しており、このディレクトリがイメージ"
 "の保管ディレクトリならば特にです。"
 
