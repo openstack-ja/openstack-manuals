@@ -141,8 +141,8 @@ msgid ""
 "Plugin that allows a Linux bridge to understand a quantum port, interface "
 "attachment, and other abstractions."
 msgstr ""
-"Quantum ポート、インターフェース接続、その他抽象概念を理解する、Linux ブリッ"
-"ジ対応プラグイン"
+"Quantum のポート、インターフェース接続、その他抽象概念を認識する、Linux ブリッ"
+"ジ用のプラグイン"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1771
 msgid "Linux containers (LXC)"
@@ -402,7 +402,7 @@ msgstr "オブジェクト"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1974
 msgid "A BLOB of data held by swift, can be in any format."
-msgstr "Swift が保持する BLOB データ。任意のフォーマットに変換可能。"
+msgstr "Swift が保持する BLOB データ。フォーマットは任意。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1979
 msgid "Object API"
@@ -491,8 +491,8 @@ msgid ""
 "Provides eventually consistent and redundant storage and retrieval of fixed "
 "digital content."
 msgstr ""
-"結果整合性（eventually consistent）、ストレージ冗長化、固定のデジタルコンテン"
-"ツ取得を提供する。"
+"結果整合性（eventually consistent）、ストレージ冗長化、静的デジタルコンテン"
+"ツ取得、といった機能を提供する。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2046
 msgid "object versioning"
@@ -768,7 +768,7 @@ msgid ""
 "layer to OpenStack Compute."
 msgstr ""
 "OpenStack のコアプロジェクトで、OpenStack Compute に対してネットワーク接続の"
-"抽象化レイヤーを提供します。"
+"抽象化レイヤーを提供する。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2254
 msgid "quantum API"
@@ -780,7 +780,7 @@ msgid ""
 "custom plugin creation."
 msgstr ""
 "quantum へのアクセスに使用する API で、独自のプラグインが作成できる拡張性を"
-"持ったアーキテクチャになっています。"
+"持ったアーキテクチャになっている。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2262
 msgid "quantum manager"
@@ -791,8 +791,8 @@ msgid ""
 "Allows nova and quantum integration thus allowing quantum to perform network "
 "management for nova VMs."
 msgstr ""
-"nova と quantum を統合し、quantum が nova VM のネットワーク管理をできるように"
-"します。"
+"nova と quantum を統合し、quantum が nova VM のネットワークを管理できるように"
+"する。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2270
 msgid "quantum plugin"
@@ -803,8 +803,8 @@ msgid ""
 "Interface within quantum that allows organizations to create custom plugins "
 "for advanced features such as QoS, ACLs, or IDS."
 msgstr ""
-"quantum 内部のインタフェースで、QoS、ACL、IDS といった進んだ機能を持った独自"
-"のプラグインを作成できるようになっています。"
+"quantum 内部のインタフェースで、QoS、ACL、IDS といった先進的な機能を持った独自"
+"のプラグインを作成できるようになっている。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2279
 msgid "quarantine"
@@ -817,8 +817,8 @@ msgid ""
 "correct copy is re-replicated."
 msgstr ""
 "swift が壊れたオブジェクト、コンテナー、アカウントを見つけた際に、そのデータ"
-"をこの状態にセットします。この状態にセットされたデータは複製されず、クライア"
-"ントが読み出すこともできません。正しいコピーが再複製されます。"
+"はこの状態にセットされる。この状態にセットされたデータは、複製されず、クライア"
+"ントが読み出すこともできなくなり、正しいコピーが再複製される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2289
 msgid "Quick EMUlator (QEMU)"
@@ -829,8 +829,7 @@ msgid ""
 "One of the hypervisors supported by OpenStack, generally used for "
 "development purposes."
 msgstr ""
-"OpenStack がサポートするハイパーバイザーの一つ。一般に、開発目的で使用されま"
-"す。"
+"OpenStack がサポートするハイパーバイザーの一つ。一般に、開発目的で使用される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2297
 msgid "quota"
@@ -888,7 +887,7 @@ msgid ""
 "used during initial ring creation and after ring reconfiguration."
 msgstr ""
 "リングに登録されたすべてのドライブに swift のパーティションを分散させる処理。"
-"最初にリングを作成する際やリングの設定を変更した後に行われます。"
+"最初にリングを作成する際やリングの設定を変更した後に実行される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2342
 msgid "Recon"

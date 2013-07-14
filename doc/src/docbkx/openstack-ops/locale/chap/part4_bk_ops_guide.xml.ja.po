@@ -56,7 +56,7 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2463
 msgid "scoped token"
-msgstr "スコープドトークン"
+msgstr "スコープ付きトークン"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2465
 msgid "A keystone API access token that is associated with a specific tenant."
@@ -124,7 +124,7 @@ msgstr "サービス ID"
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2515
 msgid ""
 "Unique ID assigned to each service that is available in the keystone catalog."
-msgstr "各サービスに割り当てられる一意な ID。 keystone カタログで使われます。"
+msgstr "各サービスに割り当てられる一意な ID。 keystone カタログで使用される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2520
 msgid "service registration"
@@ -182,7 +182,7 @@ msgid ""
 "online."
 msgstr ""
 "負荷分散サービスの機能。そのノードがオンラインである限り、あるサービスへのそ"
-"れ以降の接続を同じノードにリダイレクトしようとします。"
+"れ以降の接続を同じノードにリダイレクトする。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2560
 msgid "session storage"
@@ -229,10 +229,10 @@ msgid ""
 "volume snapshots to back up volumes. Use image snapshots to back up data, or "
 "as \"gold\" images for additional servers."
 msgstr ""
-"OpenStack ストレージボリュームやイメージの、ある時点でのコピー。ストレージの"
-"ボリュームスナップショットを使って、ボリュームのバックアップを行います。イ"
-"メージスナップショットを使って、データのバックアップを行ったり、新しいサー"
-"バー用の \"gold\" イメージとしてバックアップします。"
+"OpenStack ストレージボリュームやイメージの、ある時点でのコピー。"
+"ストレージのボリュームスナップショットは、ボリュームをバックアップするために使用する。"
+"イメージスナップショットは、データのバックアップを行ったり、新しいサーバー"
+"用の「ゴールド」イメージ（設定済みイメージ）としてバックアップしたりするのに使用する。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2593
 msgid "spread-first scheduler"
@@ -369,7 +369,7 @@ msgstr "swift All in One (SAIO)"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2688
 msgid "Creates a full swift development environment within a single VM."
-msgstr "完全な swift の開発環境を1台のVMで作成できます。"
+msgstr "完全な swift の開発環境を1台のVM内に作成できます。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2693
 msgid "swift middleware"
@@ -389,7 +389,7 @@ msgstr "swift プロキシサーバー"
 msgid ""
 "Acts as the gatekeeper to swift and is responsible for authenticating the "
 "user."
-msgstr "swift への入り口にあたり、ユーザの認証を行う役割も持ちます。"
+msgstr "swift への出入口として動作する。ユーザを認証する役割も持つ。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2709
 msgid "swift storage node"
@@ -504,8 +504,8 @@ msgid ""
 "Used to mark swift objects that have been deleted, ensures the object is not "
 "updated on another node after it has been deleted."
 msgstr ""
-"削除された swift オブジェクトに印をつけるのに使われます。これにより、そのオブ"
-"ジェクトが削除後に別のノードで更新されないことが保証されます。"
+"削除済みの swift オブジェクトを示す印として使われる。これにより、そのオブ"
+"ジェクトが削除後に別のノードで更新されないことを保証する。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2790
 msgid "transaction ID"
@@ -523,7 +523,7 @@ msgstr "U"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2806
 msgid "unscoped token"
-msgstr "アンスコープドトークン"
+msgstr "スコープなしトークン"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2808
 msgid "Alternative term for a keystone default token."
@@ -602,7 +602,7 @@ msgid ""
 "can run at the same time on the same physical host."
 msgstr ""
 "ハイパーバイザー上で動作するオペレーティングシステムインスタンス。一台の物理"
-"ホストで同時に複数の VM が動作できます。"
+"ホストで同時に複数の VM を実行できます。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2869
 msgid "virtual network"
