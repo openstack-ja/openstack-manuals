@@ -355,7 +355,7 @@ msgid ""
 "expected return values."
 msgstr ""
 "サービス、アプリケーション、プログラムへのアクセスに使用される仕様の集合。"
-"サービス呼出、各呼出に必要なパラメータ、想定される戻り値を含む。"
+"サービス呼出、各呼出に必要なパラメーター、想定される戻り値を含む。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:330
 msgid "arptables"
@@ -452,7 +452,7 @@ msgid ""
 "perform an action, such as delete a swift object, list a swift container, "
 "start a nova VM, reset a password, and so on. Abbreviate as AuthZ."
 msgstr ""
-"ユーザー、プロセス、またはクライアントが操作を実行する権限があることを検証す"
+"ユーザー、プロセス、またはクライアントが、ある操作を実行する権限があることを検証す"
 "る動作。Swift オブジェクトの削除、Swift コンテナーの一覧表示、Nova 仮想マシン"
 "の起動、パスワードのリセットなどの操作です。AuthZ と略される。"
 
@@ -543,7 +543,7 @@ msgid ""
 "host to another with very little downtime during a user-initiated switch-"
 "over. Does not require shared storage. Supported by nova."
 msgstr ""
-"ユーザが移動を指示してから非常に短いダウンタイムで１ホストから別のホストにイ"
+"ユーザが移動を指示してから非常に短いダウンタイムであるあるホストから別のホストにイ"
 "ンスタンスを移動させる為に KVM で使用される VM ライブマイグレーション方式。共"
 "有ストレージを必要としない。Nova でサポート。"
 
@@ -714,7 +714,7 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:580
 msgid "cell manager"
-msgstr "セルマネージャ"
+msgstr "セルマネージャー"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:582
 msgid ""
@@ -780,7 +780,7 @@ msgid ""
 msgstr ""
 "新しいデータセットからのダウンロードや古いデータに対する比較の代わりに、あな"
 "たの最後のリクエストから要求されたアイテム変更をダウンロードする事を可能にす"
-"るNova API パラメータ。"
+"るNova API パラメーター。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:631
 msgid "Chef"
@@ -954,7 +954,7 @@ msgid ""
 "A segmented large object within swift that is put back together again and "
 "then sent to the client."
 msgstr ""
-"Swift 中で分割された大きなオブジェクト。一緒に配置され、その後クライアントに"
+"Swift 中で分割された大きなオブジェクト。再度結合されてから、クライアントに"
 "送信される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:762
@@ -1076,7 +1076,7 @@ msgid ""
 msgstr ""
 "OpenStack の公式プロジェクト。現在、Compute (nova), Object Storage (swift), "
 "Image Service (glance), Identity (keystone), Dashboard (horizon), Networking "
-"(quantum), Volume (cinder) が含まれている。"
+"(quantum), Volume (cinder) が含まれる。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:852
 msgid "credentials"
@@ -1089,9 +1089,9 @@ msgid ""
 "authentication. Examples include a password, secret key, digital "
 "certificate, fingerprint, and so on."
 msgstr ""
-"ユーザだけが知っているかアクセス可能なデータ。認証の間にサーバーに示され、"
-"ユーザが誰であるかの確認に使用される。例：パスワード、シークレットキー、デジ"
-"タル認証、フィンガープリント等。"
+"ユーザーだけが知っているデータもしくはユーザーだけがアクセスできるデータで、認証時にサーバーに示され、"
+"ユーザーが誰であるかの確認に使用される。例：パスワード、シークレットキー、デジ"
+"タル認証、フィンガープリントなど。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:863
 msgid "Crowbar"
@@ -1115,7 +1115,7 @@ msgid ""
 "of build, snapshot, migrate, and resize operations currently in progress on "
 "a given host."
 msgstr ""
-"指定されたホスト上で現在進行中の build, snapshot, migrate, resize 操作数を元"
+"指定されたホスト上で現在進行中の build, snapshot, migrate, resize の操作数を元"
 "に計算される、Nova のキャパシティキャッシュの１要素。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:880

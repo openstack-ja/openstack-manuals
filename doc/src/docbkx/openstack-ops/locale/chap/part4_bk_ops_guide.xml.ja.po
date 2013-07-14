@@ -801,7 +801,7 @@ msgid ""
 "A plugin for the nova volume manager. Provides support for a new and "
 "specialized types of back-end storage."
 msgstr ""
-"nova ボリュームマネージャのプラグイン。プラグインにより新しい種類や特別な種類"
+"nova ボリュームマネージャーのプラグイン。プラグインにより新しい種類や特別な種類"
 "のバックエンドストレージのサポートが提供される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:3016

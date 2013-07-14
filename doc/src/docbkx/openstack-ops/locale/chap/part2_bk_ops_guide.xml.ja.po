@@ -82,7 +82,7 @@ msgid ""
 "A keystone token that is not associated with a specific tenant and is "
 "exchanged for a scoped token."
 msgstr ""
-"特定のテナントに紐付けられず、特定のトークン用に変換される Keystone トーク"
+"特定のテナントに紐付けられず、スコープ付きトークン用と交換される Keystone トーク"
 "ン。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:936
@@ -94,7 +94,7 @@ msgid ""
 "An option within glance so that rather than immediately delete an image, it "
 "is deleted after a pre-defined number of seconds."
 msgstr ""
-"イメージを即時削除する代わりに、予め定義された秒数後に削除する Glance 中のオ"
+"イメージを即時削除する代わりに、あらかじめ定義された秒数後に削除する Glance のオ"
 "プション。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:944
@@ -173,8 +173,8 @@ msgid ""
 "The underlying format that a disk image for a VM is stored as within the "
 "glance back-end store. For example, AMI, ISO, QCOW2, VMDK, and so on."
 msgstr ""
-"Glance バックエンドストア中で VM 用ディスクイメージが保存される際の基礎フォー"
-"マット。例：AMI, ISO, QCOW2, VMDK 等。"
+"Glance バックエンドストアで格納される VM 用ディスクイメージのフォー"
+"マット。 AMI, ISO, QCOW2, VMDK など。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1002
 msgid "dispersion"
@@ -205,8 +205,8 @@ msgid ""
 "Daemon that provides DNS, DHCP, BOOTP, and TFTP services, used by the nova "
 "VLAN manager and FlatDHCP manager."
 msgstr ""
-"DNS, DHCP, BOOTP, TFTP サービスを提供するデーモン。Nova の VLAN マネージャと "
-"FlatDHCP マネージャが使用する。"
+"DNS, DHCP, BOOTP, TFTP サービスを提供するデーモン。Nova の VLAN マネージャーと "
+"FlatDHCP マネージャーが使用する。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1025
 msgid "DNS record"
@@ -329,7 +329,7 @@ msgid ""
 "A list of URL and port number endpoints that indicate where a service, such "
 "as object storage, compute, identity, and so on, can be accessed."
 msgstr ""
-"オブジェクトストレージ、Compute、Identity などサービスがアクセスできる場所を"
+"Object Storage、Compute、Identity などサービスがアクセスできる場所を"
 "示す、URL とポート番号のエンドポイントの一覧。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1120
@@ -472,7 +472,7 @@ msgid ""
 "The nova scheduling method that attempts to fill a host with VMs rather than "
 "starting new VMs on a variety of hosts."
 msgstr ""
-"様々なホスト上で新しい VM を起動する代わりに、１ホスト上で VM を埋める為の "
+"様々なホスト上で新しい VM を起動するよりも、なるべく一つのホストを埋めようとする "
 "Nova スケジューリング手法。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1224
@@ -524,7 +524,7 @@ msgid ""
 "instance of nova-network to assign and manage IP addresses for all instances."
 msgstr ""
 "OpenStack クラウド中の全サブネット用に単一のレイヤ２ドメインを提供する Nova "
-"のネットワークマネージャ。nova-network インスタンス毎に１つの DHCP サーバーを"
+"のネットワークマネージャー。nova-network インスタンス毎に１つの DHCP サーバーを"
 "提供し、全インスタンスの IP アドレスを管理する。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1262
@@ -574,7 +574,7 @@ msgid ""
 "available to users, includes parameters such as CPU, storage, and "
 "memory. Also known as instance type."
 msgstr ""
-"ユーザが利用可能な様々な仮想マシンイメージのパラメータ（CPU、ストレージ、メモ"
+"ユーザが利用可能な様々な仮想マシンイメージのパラメーター（CPU、ストレージ、メモ"
 "リ等を含む）を示す。インスタンスタイプとしても知られている。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1298
@@ -583,7 +583,7 @@ msgstr "フレーバー ID"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1300
 msgid "UUID for each nova or glance VM flavor or instance type."
-msgstr "Nova 又は Glance VM 用の、フレーバ又はインスタンスタイプのUUID。"
+msgstr "Nova 又は Glance VM 用の、フレーバーまたはインスタンスタイプのUUID。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1305
 msgid "Floating IP address"
@@ -598,8 +598,8 @@ msgid ""
 msgstr ""
 "Nova プロジェクトが１ VM に紐付け可能な IP アドレス。これにより、インスタンス"
 "起動時に毎回同じパブリック IP アドレスがインスタンスに割り当てできる。DNS 割"
-"当管理用の一貫した IP アドレスを管理する為に、フローティング IP アドレスの"
-"プールを作成し、VM 起動時にインスタンスにフローティング IP アドレスを割り当て"
+"当管理用の一貫した IP アドレスを管理する為に、Floating IP アドレスの"
+"プールを作成し、VM 起動時にインスタンスに Floating IP アドレスを割り当て"
 "できる。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1317
@@ -803,7 +803,7 @@ msgid ""
 "Unique numeric ID associated with each user in keystone, conceptually "
 "similar to a Linux or LDAP UID."
 msgstr ""
-"Keystone 中で各ユーザに割り当てられた一意な数字ID。Linux や LDAP の UID と同"
+"Keystone 中で各ユーザに割り当てられた一意な数値 ID。Linux や LDAP の UID と同"
 "様の概念。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1472
@@ -823,8 +823,7 @@ msgid ""
 "The source used by keystone to retrieve user information an OpenLDAP server "
 "for example."
 msgstr ""
-"例えば OpenLDAP サーバーのユーザ情報を取得する為の、Keystone が使用する情報"
-"源。"
+"Keystone がユーザー情報を取得する情報源。例えば OpenLDAP サーバー。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1487
 msgid "Identity Service"
@@ -954,7 +953,7 @@ msgstr "イメージ UUID"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1581
 msgid "The UUID used by glance to uniquely identify each VM image."
-msgstr "各 VM イメージの一意な指定の為に Glance が使用する UUID。"
+msgstr "Glance が各 VM イメージを一意に識別するために使用する UUID。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1586
 msgid "incubated project"
@@ -1058,8 +1057,8 @@ msgid ""
 "Used along with arptables, ebtables, and iptables to create firewalls in "
 "nova."
 msgstr ""
-"Nova 中でファイアウォール作成に、arptables, ebtables, iptables と一緒に使用さ"
-"れる。"
+"Nova の中でファイアウォールを作成するのに、arptables, ebtables, iptables と"
+"一緒に使用される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1663
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:205
