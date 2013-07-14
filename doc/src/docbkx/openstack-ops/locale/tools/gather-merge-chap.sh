@@ -37,3 +37,4 @@ msgcat -F $WORKDIR/*.xml.ja.po > $TMPFILE
 msgmerge -F $TMPFILE $POTFILE > $POFILE
 
 rm -f $TMPFILE
+rm -rf $WORKDIR
