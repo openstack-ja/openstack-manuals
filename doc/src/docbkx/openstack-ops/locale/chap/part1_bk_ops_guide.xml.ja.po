@@ -141,8 +141,8 @@ msgid ""
 "The swift context of an account, or a user account from an identity service "
 "such as Active Directory, /etc/passwd, OpenLDAP, keystone, and so on."
 msgstr ""
-"Active Directory、/etc/passwd、OpenLDAP、Keystone などの Identity サービスか"
-"らのアカウント又はユーザアカウントの Swift コンテキスト。"
+"Swift のアカウントコンテキスト、または Active Directory、/etc/passwd、OpenLDAP、"
+"Keystone などの Identity サービスのアカウント。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:170
 msgid "account auditor"
@@ -204,8 +204,7 @@ msgid ""
 "account services."
 msgstr ""
 "一覧、作成、修正、監査等のアカウントサービスを提供するSwift のコンポーネン"
-"ト。Keystone、OpenLDAP、又は同様のユーザアカウントサービスと混同しないで下さ"
-"い。"
+"ト。Keystone、OpenLDAP、又は同様のユーザアカウントサービスと混同しないこと。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:214
 msgid "Active Directory"
@@ -229,7 +228,7 @@ msgid ""
 "project and can be used by or assigned to the VM instances in a project."
 msgstr ""
 "Nova の１プロジェクトに紐付けられ、プロジェクト内の VM インスタンスに割り当て"
-"る事で使用可能な固定 IP アドレスとフローティング IP アドレスの組。"
+"る事で使用可能な固定 IP アドレスと Floating IP アドレスの組。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:231
 msgid "admin API"
@@ -254,8 +253,8 @@ msgstr "Amazon Kernel Image (AKI)"
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:258
 msgid "Both a VM container format and a VM disk format. Supported by glance."
 msgstr ""
-"仮想マシン・コンテナー形式および仮想マシン・ディスク形式。glance によりサポー"
-"トされます。"
+"仮想マシンコンテナー形式および仮想マシンディスク形式。glance がサポー"
+"トしている。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:249
 msgid "Amazon Machine Image (AMI)"
@@ -275,7 +274,7 @@ msgid ""
 "HTTPd."
 msgstr ""
 "現在インターネットにおいて使用されている最も一般的な Web サーバーのソフトウェ"
-"ア。HTTPd としても知られています。"
+"ア。HTTPd としても知られている。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:271
 msgid "Apache License 2.0"
@@ -286,8 +285,8 @@ msgid ""
 "All OpenStack core projects are provided under the terms of the Apache "
 "License 2.0 license."
 msgstr ""
-"すべての OpenStack コアプロジェクトは Apache License 2.0 ライセンスの条件によ"
-"り提供されています。"
+"すべての OpenStack コアプロジェクトは Apache License 2.0 ライセンスの条件で"
+"提供されている。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:279
 msgid "API endpoint"
@@ -301,8 +300,8 @@ msgid ""
 "volumes."
 msgstr ""
 "クライアントが API にアクセスするために通信するデーモン、ワーカーまたはサービ"
-"ス。OpenStack では、API エンドポイントが認証、イメージの追加、仮想マシンの起"
-"動、およびボリュームの追加のようなサービスを提供できます。"
+"ス。OpenStack では、認証、イメージの追加、仮想マシンの起動、"
+"ボリュームの追加といったサービスは API エンドポイントで提供される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:290
 msgid "API extension"
@@ -341,7 +340,7 @@ msgid ""
 "In OpenStack, a the API version for a project is part of the URL. For "
 "example, <code>example.com/nova/v1/foobar</code>."
 msgstr ""
-"OpenStack において、プロジェクト向けの API バージョンは URL の一部です。たと"
+"OpenStack において、プロジェクト向けの API バージョンは URL の一部である。たと"
 "えば、 <code>example.com/nova/v1/foobar</code>。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:319
@@ -427,9 +426,9 @@ msgid ""
 "they say they are through private key, secret token, password, fingerprint, "
 "or similar method. Abbreviated as AuthN."
 msgstr ""
-"ユーザー、プロセスまたはクライアントが、秘密鍵、秘密トークン、パスワード、指"
-"紋または同様の方式により示されている主体と本当に同じであることを確認するプロ"
-"セス。AuthN と略されます。"
+"ユーザー、プロセスまたはクライアントが、秘密鍵、秘密トークン、パスワード、フィンガープリント"
+"または同様の方式により示されている主体と本当に同じであることを確認するプロ"
+"セス。AuthN と略される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:382
 msgid "authentication token"
@@ -441,7 +440,7 @@ msgid ""
 "provided by the user or process in subsequent requests to the API endpoint."
 msgstr ""
 "認証後にクライアントに提供されるテキスト文字列。API エンドポイントに続くリク"
-"エストにおいて、ユーザーまたはプロセスにより提供される必要があります。"
+"エストにおいて、ユーザーまたはプロセスにより提供される必要がある。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:391
 msgid "authorization"
@@ -455,7 +454,7 @@ msgid ""
 msgstr ""
 "ユーザー、プロセス、またはクライアントが操作を実行する権限があることを検証す"
 "る動作。Swift オブジェクトの削除、Swift コンテナーの一覧表示、Nova 仮想マシン"
-"の起動、パスワードのリセットなどの操作です。AuthZ と略します。"
+"の起動、パスワードのリセットなどの操作です。AuthZ と略される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:401
 msgid "availability zone"
@@ -479,7 +478,7 @@ msgid ""
 "retrieve information about API endpoints that are available to the client. "
 "Examples include a SQL database, LDAP database, or KVS back-end."
 msgstr ""
-"クライアントが利用可能なAPI エンドポイントに関する情報の保存・取得の為に "
+"クライアントが利用可能なAPI エンドポイントに関する情報の保存、取得の為に "
 "Keystone カタログサービスで使用されるストレージ方式。例：SQL データベース、"
 "LDAP データベース、KVS バックエンドを含む。"
 
@@ -493,8 +492,7 @@ msgid ""
 "images. Options include swift, local file system, S3, and HTTP."
 msgstr ""
 "glance が仮想マシンイメージを取得および保管するために使用する永続的なデータス"
-"トア。オプションに swift、ローカルファイルシステム、S3 および HTTP がありま"
-"す。"
+"トア。オプションに swift、ローカルファイルシステム、S3 および HTTP がある。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:431
 msgid "bare"
@@ -989,8 +987,8 @@ msgid ""
 "Linux directory but cannot be nested. Alternative term for a glance "
 "container format."
 msgstr ""
-"Swift 中でオブジェクトの校正・保存に使用される。Linux のディレクトリと同様の"
-"コンセプトだが、階層構造を持てない。Glance コンテナフォーマットの別名。"
+"Swift 中でオブジェクトの構造化、格納に使用される。Linux のディレクトリと同様の"
+"コンセプトだが、階層構造にできない。Glance コンテナフォーマットの別名。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:786
 msgid "container auditor"
@@ -1044,7 +1042,7 @@ msgstr "コンテナサービス"
 msgid ""
 "The swift component that provides container services, such as create, "
 "delete, list, and so on."
-msgstr "作成・削除・一覧等のコンテナサービスを提供する Swift コンポーネント。"
+msgstr "作成、削除、覧等のコンテナサービスを提供する Swift コンポーネント。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:826
 msgid "controller node"
@@ -1078,7 +1076,7 @@ msgid ""
 msgstr ""
 "OpenStack の公式プロジェクト。現在、Compute (nova), Object Storage (swift), "
 "Image Service (glance), Identity (keystone), Dashboard (horizon), Networking "
-"(quantum), and Volume (cinder) が含まれている。"
+"(quantum), Volume (cinder) が含まれている。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:852
 msgid "credentials"

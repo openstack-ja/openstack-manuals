@@ -106,7 +106,7 @@ msgstr "レイヤ2 ネットワーク"
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1742
 msgid "Term used for OSI network architecture for the data link layer."
 msgstr ""
-"データリンクレイヤ用の OSI ネットワーク・アーキテクチャで使用される用語。"
+"データリンクレイヤ用の OSI ネットワークアーキテクチャで使用される用語。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1747
 msgid "libvirt"
@@ -250,7 +250,7 @@ msgid ""
 "The software package used to provide AMQP messaging capabilities within "
 "nova, default is RabbitMQ."
 msgstr ""
-"Nova 中で AMQP メッセージ機能を提供する為に使用されるソフトウェア・パッケー"
+"Nova 中で AMQP メッセージ機能を提供する為に使用されるソフトウェアパッケー"
 "ジ。デフォルトは RabbitMQ。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1856
@@ -619,7 +619,7 @@ msgid ""
 "A virtual network port within quantum, VIFs / vNICs are connected to a port."
 msgstr ""
 "quantum で定義される仮想ネットワークポート。仮想インターフェース / 仮想 NIC "
-"がポートに接続されます。"
+"がポートに接続される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2136
 msgid "port UUID"
@@ -659,7 +659,7 @@ msgid ""
 "VM images."
 msgstr ""
 "Nova におけるユーザーの論理的なグループ。仮想マシンイメージに対するクォータや"
-"アクセス権を定義するために使用されます。"
+"アクセス権を定義するために使用される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2165
 msgid "project ID"
@@ -738,7 +738,7 @@ msgid ""
 msgstr ""
 "compute サーバーがパブリックネットワークと相互通信できるよう、ネットワークコ"
 "ントローラーが仮想ネットワークを提供する。全マシンにはパブリックとプライベー"
-"トのネットワーク・インターフェースがなければならない。パブリックネットワーク"
+"トのネットワークインターフェースがなければならない。パブリックネットワーク"
 "インターフェースは public_interface オプションにより制御される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2229
@@ -906,8 +906,7 @@ msgid ""
 "A number within a database that is incremented each time a change is made. "
 "Used by swift when replicating."
 msgstr ""
-"変更が行われる度に増加するデータベース内の数値。 swift が複製を行う際に使用し"
-"ます。"
+"変更が行われる度に増加するデータベース内の数値。 swift が複製を行う際に使用する。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2357
 msgid "registry server"
@@ -929,8 +928,8 @@ msgid ""
 "storage fails."
 msgstr ""
 "swift のオブジェクト、アカウント、コンテナーのコピーを作成することで、データ"
-"冗長性や耐障害性を実現します。これにより、バックエンドのストレージが故障した"
-"場合でもデータが失われません。"
+"冗長性や耐障害性を実現する。これにより、バックエンドのストレージが故障した"
+"場合でもデータは失わない。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2373
 msgid "replica count"
@@ -949,7 +948,7 @@ msgid ""
 "The process of copying data to a separate physical device for fault "
 "tolerance and performance."
 msgstr ""
-"別の物理デバイスにデータをコピーする処理。耐障害性や性能のために行われます。"
+"別の物理デバイスにデータをコピーする処理。耐障害性や性能のために行われる。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2388
 msgid "replicator"
@@ -976,8 +975,8 @@ msgid ""
 "An entity that maps swift data to partitions. A separate ring exists for "
 "each service, such as account, object, and container."
 msgstr ""
-"swift データのパーティションへのマッピングを行います。アカウント、オブジェク"
-"ト、コンテナーというサービス単位に別々のリングが存在します。"
+"swift データのパーティションへのマッピングを行う。アカウント、オブジェク"
+"ト、コンテナーというサービス単位に別々のリングが存在する。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2411
 msgid "ring builder"
@@ -989,7 +988,7 @@ msgid ""
 "pushes the configuration to other storage nodes."
 msgstr ""
 "swift のリングの作成、管理を行い、パーティションのデバイスへの割り当てを行"
-"い、他のストレージノードに設定を転送します。"
+"い、他のストレージノードに設定を転送する。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2419
 msgid "role ID"
@@ -1021,4 +1020,4 @@ msgid ""
 "changed. For example, from RabbitMQ to ZeroMQ or Qpid."
 msgstr ""
 "nova が利用するメッセージキューソフトウェアを変更できるようにする仕組み。例え"
-"ば、 RabbitMQ を ZeroMQ や Qpid に変更できます。"
+"ば、 RabbitMQ を ZeroMQ や Qpid に変更できる。"

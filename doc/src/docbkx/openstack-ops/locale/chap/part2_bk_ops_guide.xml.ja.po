@@ -107,7 +107,7 @@ msgid ""
 "transient or persistent."
 msgstr ""
 "Nova RabbitMQ メッセージ配信モード用設定。transient（一時）又は "
-"persistent（永続）のいずれかを設定出来る。"
+"persistent（永続）のいずれかを設定できる。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:952
 msgid "device"
@@ -186,7 +186,7 @@ msgid ""
 "ensure fault tolerance."
 msgstr ""
 "Swift で、フォールトトレラントの確認の為に、オブジェクトとコンテナの分散をテ"
-"スト・確認するツール。"
+"スト、確認するツール。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1010
 msgid "Django"
@@ -405,8 +405,8 @@ msgid ""
 "A collection of command line tools for administering VMs, most are "
 "compatible with OpenStack."
 msgstr ""
-"仮想マシンを管理するためのコマンドラインツール集。ほとんど OpenStack と互換性"
-"があります。"
+"仮想マシンを管理するためのコマンドラインツール集。ほとんどは OpenStack と互換性"
+"がある。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1178
 msgid "evacuate"
@@ -461,7 +461,7 @@ msgid ""
 "nova. Requires Redis."
 msgstr ""
 "keystone と nova をテストするためにローカル LDAP ディレクトリを作成する簡単な"
-"方法。Redis が必要です。"
+"方法。Redis が必要。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1216
 msgid "fill-first scheduler"
@@ -496,7 +496,7 @@ msgid ""
 "Used to restrict communications between hosts and/or nodes, implemented in "
 "nova using iptables, arptables, ip6tables and etables."
 msgstr ""
-"ホスト・ノード間の通信を制限する為に使用される。iptables, arptables, "
+"ホストノード間の通信を制限する為に使用される。iptables, arptables, "
 "ip6tables, ebtables を使用して Nova により実装される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1241
@@ -770,7 +770,7 @@ msgstr "Hyper-V"
 msgid "One of the hypervisors supported by OpenStack, developed by Microsoft."
 msgstr ""
 "OpenStack によりサポートされるハイパーバイザーの一つ。Microsoft により開発さ"
-"れました。"
+"れた。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1440
 msgid "hypervisor"
@@ -855,7 +855,7 @@ msgid ""
 "create or rebuild a server. You can also create custom images, or snapshots, "
 "from servers that you have launched."
 msgstr ""
-"サーバーの作成・再構築に使用する特定のオペレーティング・システム（OS）用の"
+"サーバーの作成、再構築に使用する特定のオペレーティングシステム（OS）用の"
 "ファイルの集合。起動したサーバーからカスタムイメージ（又はスナップショット）"
 "を作成する事ができる。"
 
@@ -966,7 +966,7 @@ msgid ""
 "core project."
 msgstr ""
 "育成プロジェクト。コミュニティプロジェクトがこの状態に昇格する事があり、その"
-"後コアプロジェクトに昇進する。"
+"後コアプロジェクトに昇格する。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1594
 msgid "ingress filtering"

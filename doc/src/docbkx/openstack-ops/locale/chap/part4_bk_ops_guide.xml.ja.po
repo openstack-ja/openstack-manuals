@@ -39,8 +39,8 @@ msgid ""
 "Object storage service by Amazon, similar in function to swift, can act as a "
 "back-end store for glance VM images."
 msgstr ""
-"Amazon のオブジェクトストレージサービス。 swift の機能に似ています。 glance "
-"の VM イメージのバックエンドストレージとして利用できます"
+"Amazon のオブジェクトストレージサービス。 swift に似た機能を持つ。 glance "
+"の VM イメージのバックエンドストレージとして利用できる。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2455
 msgid "scheduler manager"
@@ -52,7 +52,7 @@ msgid ""
 "modular design to support a variety of scheduler types."
 msgstr ""
 "どこで VM インスタンスを起動するかを決定する nova のコンポーネント。様々なス"
-"ケジューラーが利用できるようにモジュラー型の設計になっています。"
+"ケジューラーが利用できるようにモジュラー型の設計になっている。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2463
 msgid "scoped token"
@@ -72,7 +72,7 @@ msgid ""
 "requests to the nova API."
 msgstr ""
 "ユーザーだけが知っている文字列。 nova API へのリクエスト時にアクセスキーとと"
-"もに使用されます。"
+"もに使用される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2478
 msgid "security group"
@@ -95,7 +95,7 @@ msgid ""
 "object is called a concatenated object."
 msgstr ""
 "複数に分割された swift のラージオブジェクト。再構成されたオブジェクトは "
-"\"concatenated object\" （連結オブジェクト） と呼ばれます。"
+"\"concatenated object\" （連結オブジェクト） と呼ばれる。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2493
 msgid "server image"
@@ -156,8 +156,7 @@ msgid ""
 "An administrator defined token used by nova to communicate securely with "
 "keystone."
 msgstr ""
-"管理者が定義するトークンで、 nova が keystone と安全に通信するのに使用されま"
-"す。"
+"管理者が定義するトークンで、 nova が keystone と安全に通信するのに使用される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2543
 msgid "session back-end"
@@ -194,7 +193,7 @@ msgid ""
 "Implemented through the Django sessions framework."
 msgstr ""
 "クライアントセッションの保持と追跡を行う Horizon のコンポーネント。 Django の"
-"セッションフレームワークを用いて実装されています。"
+"セッションフレームワークを用いて実装されている。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2568
 msgid "shared storage"
@@ -214,8 +213,7 @@ msgstr "SmokeStack"
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2578
 msgid "Runs automated tests against the core OpenStack API, written in Rails."
 msgstr ""
-"OpenStack のコア API に対して自動テストを実行します。 Rails で書かれていま"
-"す。"
+"OpenStack のコア API に対して自動テストを実行する。 Rails で書かれている。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2583
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:857
@@ -265,7 +263,7 @@ msgid ""
 "many OpenStack services."
 msgstr ""
 "軽量 SQL データベース。多くの OpenStack サービスでデフォルトの永続ストレージ"
-"として使用されています。"
+"として使用されている。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2616
 #: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:385
@@ -277,8 +275,7 @@ msgid ""
 "Community project that captures nova AMQP communications, useful for "
 "debugging."
 msgstr ""
-"nova の AMQP 通信のキャプチャーを行うコミュニティプロジェクト。デバッグに役立"
-"ちます。"
+"nova の AMQP 通信のキャプチャーを行うコミュニティプロジェクト。デバッグに役立つ。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2623
 msgid "static IP address"
@@ -322,7 +319,7 @@ msgid ""
 msgstr ""
 "アカウントサービス、コンテナーサービス、オブジェクトサービスを提供する swift "
 "ノード。アカウントデータベース、コンテナーデータベース、オブジェクトストレー"
-"ジの制御を行います。"
+"ジの制御を行う。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2656
 msgid "storage manager"
@@ -334,7 +331,7 @@ msgid ""
 "variety of persistent storage back-ends."
 msgstr ""
 "XenAPI の一つのコンポーネントで、様々な種類の永続ストレージバックエンドをサ"
-"ポートするための取り外し可能な（pluggable）インタフェースを提供します。"
+"ポートするための取り外し可能な（pluggable）インタフェースを提供する。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2664
 msgid "storage manager back-end"
@@ -369,7 +366,7 @@ msgstr "swift All in One (SAIO)"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2688
 msgid "Creates a full swift development environment within a single VM."
-msgstr "完全な swift の開発環境を1台のVM内に作成できます。"
+msgstr "完全な swift の開発環境を1台のVM内に作成できる。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2693
 msgid "swift middleware"
@@ -426,8 +423,8 @@ msgid ""
 "An authentication facility within swift that allows swift itself to perform "
 "authentication and authorization, frequently used in testing and development."
 msgstr ""
-"swift 自身が認証と認可を行えるようにする、 swift の認証機構。もっぱらテストや"
-"開発で使用されます。"
+"swift 自身が認証と認可を行えるようにする swift の認証機構。もっぱらテストや"
+"開発で使用される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2736
 msgid "Tempest"
@@ -483,7 +480,7 @@ msgid ""
 "to the keystone tenant IDs."
 msgstr ""
 "keystone 内で各テナントに割り当てられる一意な ID。 nova のプロジェクト ID は "
-"keystone のテナント ID にマッピングされます。"
+"keystone のテナント ID にマッピングされる。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2775
 #: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:262
@@ -515,7 +512,7 @@ msgstr "トランザクション ID"
 msgid ""
 "Unique ID assigned to each swift request, used for debugging and tracing."
 msgstr ""
-"各 swift リクエストに割り当てられる一意な ID。デバッグや追跡に使用されます。"
+"各 swift リクエストに割り当てられる一意な ID。デバッグや追跡に使用される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2804
 msgid "U"
@@ -550,8 +547,8 @@ msgid ""
 "In keystone each user is associated with one or more tenants, and in nova "
 "they can be associated with roles, projects, or both."
 msgstr ""
-"keystone では、各ユーザは一つ以上のテナントに所属します。 nova では、テナント"
-"はロール、プロジェクトおよびその両方と関連付けされます。"
+"keystone では、各ユーザは一つ以上のテナントに所属する。 nova では、テナント"
+"はロール、プロジェクトおよびその両方と関連付けられる。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2830
 msgid "user data"
@@ -565,8 +562,8 @@ msgid ""
 "the instance on boot."
 msgstr ""
 "インスタンス起動時にユーザが指定できる blob データ。インスタンスはこのデータ"
-"に metadata サービスや config driver 経由でアクセスできます。通常、インスタン"
-"スがブート時に実行するシェルスクリプトを渡すのに使われます。"
+"に metadata サービスや config driver 経由でアクセスできる。通常、インスタン"
+"スがブート時に実行するシェルスクリプトを渡すのに使用される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2842
 msgid "V"
@@ -589,8 +586,8 @@ msgid ""
 "Allows physical CPUs to be sub-divided and those divisions are then used by "
 "instances. Also known as virtual cores."
 msgstr ""
-"物理 CPU をいくつかに分割し、分割された部分をインスタンスが使用します。仮想コ"
-"アとも呼ばれます。"
+"物理 CPU をいくつかに分割し、分割された部分をインスタンスが使用する。仮想コ"
+"アとも呼ばれる。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2860
 msgid "Virtual Machine (VM)"
@@ -602,7 +599,7 @@ msgid ""
 "can run at the same time on the same physical host."
 msgstr ""
 "ハイパーバイザー上で動作するオペレーティングシステムインスタンス。一台の物理"
-"ホストで同時に複数の VM を実行できます。"
+"ホストで同時に複数の VM を実行できる。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2869
 msgid "virtual network"
@@ -622,7 +619,7 @@ msgid ""
 "virtual network interface belonging to a VM."
 msgstr ""
 "quantum ネットワークのポートに接続されるインタフェース。通常は仮想ネットワー"
-"ク・インタフェースは VM に所属します。"
+"クインタフェースは VM に所属する。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2883
 msgid "virtual port"
@@ -642,8 +639,8 @@ msgid ""
 "Provided by nova in the form of cloudpipes, specialized instances that are "
 "used to create VPNs on a per-project basis."
 msgstr ""
-"nova では cloudpipe の形で提供されます。 cloudpipe では、特別なインスタンスを"
-"使って、プロジェクト毎に VPN を作成します。"
+"nova では cloudpipe の形で提供される。 cloudpipe では、特別なインスタンスを"
+"使って、プロジェクト毎に VPN が作成される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2898
 msgid "virtual server"
@@ -684,8 +681,8 @@ msgid ""
 "to assign IP addresses for instances."
 msgstr ""
 "nova ネットワークマネージャーの一つで、サブネットを分割し、テナント毎に異な"
-"る VLAN を割り当て分離された Layer 2 セグメントを実現します。VLAN 毎に、イン"
-"スタンスに IP アドレスの払い出しを行う DHCP サーバーを動かします。"
+"る VLAN を割り当て分離された Layer 2 セグメントを実現する。VLAN 毎に、イン"
+"スタンスに IP アドレスの払い出しを行う DHCP サーバーが用意される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2929
 msgid "VLAN network"
@@ -700,10 +697,10 @@ msgid ""
 "VLAN managers."
 msgstr ""
 "ネットワークコントローラーは、コンピュートサーバー間、およびコンピュートサー"
-"バーとパブリックネットワークとの通信を行う仮想ネットワークを用意します。すべ"
+"バーとパブリックネットワークとの通信を行う仮想ネットワークを用意する。すべ"
 "ての物理マシンにはパブリック側とプライベート側のネットワークインタフェースが"
-"必要です。VLAN ネットワークはプライベート側のネットワークインタフェースで、"
-"VLAN マネージャーの vlan_interface オプションで指定されます。"
+"必要。VLAN ネットワークはプライベート側のネットワークインタフェースで、"
+"VLAN マネージャーの vlan_interface オプションで指定される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2942
 msgid "VM image"
@@ -736,9 +733,9 @@ msgid ""
 "Commonly used as a synonym for block device."
 msgstr ""
 "ディスクベースのデータストレージで、ほとんどの場合 iSCSI ターゲットとして表現"
-"され、拡張属性をサポートするファイルシステムを用いて構成されます。永続的スト"
-"レージも一時的ストレージの両方があります。通常は、ブロックデバイスの同義語と"
-"して使用されます。"
+"され、拡張属性をサポートするファイルシステムを用いて構成される。永続的スト"
+"レージと一時的ストレージの両方がある。通常は、ブロックデバイスの同義語と"
+"して使用される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2966
 msgid "Volume API"
@@ -750,7 +747,7 @@ msgid ""
 "storage for compute VMs."
 msgstr ""
 "コンピュート VM 用のブロックストレージの作成、接続、接続解除を行うための API "
-"で、独立したエンドポイントとして提供されます。"
+"で、独立したエンドポイントとして提供される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2974
 msgid "volume controller"
@@ -805,7 +802,7 @@ msgid ""
 "specialized types of back-end storage."
 msgstr ""
 "nova ボリュームマネージャのプラグイン。プラグインにより新しい種類や特別な種類"
-"のバックエンドストレージのサポートが提供されます。"
+"のバックエンドストレージのサポートが提供される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:3016
 msgid "Volume Service API"
@@ -827,7 +824,7 @@ msgid ""
 msgstr ""
 "バックエンドストレージとやり取りを行い、ボリュームの作成、削除、コンピュート"
 "ボリュームの作成を行う nova のコンポーネント。 nova-volume デーモンにより提供"
-"されます。"
+"される。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:3034
 msgid "W"
@@ -843,7 +840,7 @@ msgid ""
 "suitable for the job. Devices are weighted by size."
 msgstr ""
 "swift ストレージデバイスが、そのジョブに適したストレージデバイスを判定するの"
-"に使用します。デバイスはサイズで重み付けされます。"
+"に使用する。デバイスはサイズで重み付けされる。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:3044
 msgid "weighted cost"
@@ -882,8 +879,8 @@ msgid ""
 "action when new messages arrive."
 msgstr ""
 "タスクを実行するデーモン。例えば、 nova-volume ワーカーはストレージを VM イン"
-"スタンスに接続します。ワーカーは、キューを待ち受け、新しいメッセージが到着す"
-"ると操作を行います。"
+"スタンスに接続する。ワーカーは、キューを待ち受け、新しいメッセージが到着す"
+"ると操作を行う。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:3073
 msgid "Z"
@@ -899,4 +896,4 @@ msgid ""
 "changes in parallel."
 msgstr ""
 "OpenStack 開発で使用されているツールで、変更のテストを正しい順番を保証しなが"
-"ら並列に実行します。"
+"ら並列に実行する。"
