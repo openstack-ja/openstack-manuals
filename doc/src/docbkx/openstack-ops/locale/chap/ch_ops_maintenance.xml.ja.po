@@ -155,7 +155,7 @@ msgid ""
 "part of your cloud. If you have only one controller, many services are "
 "missing."
 msgstr ""
-"残念ながら、これは大まかな状況です。クラウドコントローラーはクラウドの不可欠"
+"残念ながら、これはひどい状況です。クラウドコントローラーはクラウドの不可欠"
 "な部分です。コントローラーが一つだけならば、多くのサービスが失われます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:86
@@ -787,7 +787,7 @@ msgstr "内部ネットワーク接続性"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:531
 msgid "Backing storage services"
-msgstr "バッキングストレージサービス"
+msgstr "バックエンドのストレージサービス"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:536
 msgid "3"
@@ -958,11 +958,11 @@ msgid ""
 "Many options are available, and normally double as benchmark software so you "
 "also get a good idea of the performance of your system."
 msgstr ""
-"初期導入時と同じように、本番環境に追加する前に、すべてのハードウェアが適切に"
-"作成されていることを確実にすべきです。ハードウェアを限界まで使用するソフト"
-"ウェアを実行します。RAM、CPU、ディスク、ネットワークを限界まで使用します。システム"
-"のパフォーマンスに関する良いアイディアを得るために、多くのオプションが利用可"
-"能です。また、通常はベンチマークソフトウェアの 2 倍にします。"
+"初期導入時と同じように、本番環境に追加する前に、すべてのハードウェアが適切な"
+"一定時間の通電テストを行われるべきでしょう。ハードウェアを限界まで使用するソフト"
+"ウェアを実行します。RAM、CPU、ディスク、ネットワークを限界まで使用します。"
+"多くのオプションが利用可能であり、通常はベンチマークソフトウェアとの二つの役割を果たします。"
+"そのため、システムのパフォーマンスに関する良いアイディアを得ることもできます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:668
 msgid "Adding a Compute Node"
@@ -997,9 +997,9 @@ msgid ""
 "the same procedure still applies as the same queuing and polling system is "
 "used in both services."
 msgstr ""
-"OpenStack ブロックストレージノードがコンピュートノードから分離されていれば、同じ"
-"手順が両方のサービスにおいて使用されているキューおよびポーリングのシステムと"
-"して適用されます。"
+"OpenStack ブロックストレージノードがコンピュートノードから分離されていれば、"
+"同じキュー管理システムが両方のサービスで使用されるので、"
+"同じ手順が適用されます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:687
 msgid ""
