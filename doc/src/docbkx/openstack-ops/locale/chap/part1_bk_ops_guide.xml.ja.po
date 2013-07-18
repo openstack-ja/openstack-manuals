@@ -1,0 +1,1131 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-21 08:33+0000\n"
+"Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:16
+msgid "OpenStack Operations Guide"
+msgstr "OpenStack 運用ガイド"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:18
+msgid "OpenStack Ops Guide"
+msgstr "OpenStack 運用ガイド"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:26
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:32
+msgid "OpenStack Foundation"
+msgstr "OpenStack Foundation"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:31
+msgid "2013"
+msgstr "2013"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:34
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:16
+msgid "OpenStack"
+msgstr "OpenStack"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:39
+msgid "Copyright details are filled in by the template."
+msgstr "Copyright details are filled in by the template."
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:44
+msgid ""
+"This book provides information about designing and operating OpenStack "
+"clouds."
+msgstr "本書は OpenStack クラウドの設計および運用に関する情報を提供します。"
+
+#. ... continue addding more revisions here as you change this document using
+#. the markup shown below...
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:50
+msgid "2013-04-02"
+msgstr "2013-04-02"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:54
+msgid "Fixes to ensure samples fit in page size and notes are formatted."
+msgstr "画面例がページや注記に収まるように修正しました。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:61
+msgid "2013-03-22"
+msgstr "2013-03-22"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:65
+msgid "Stopped chunking in HTML output."
+msgstr "HTML 出力において分割することを止めました。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:74
+msgid "2013-03-20"
+msgstr "2013-03-20"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:78
+msgid "Editorial changes."
+msgstr "編集における変更をしました。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:81
+msgid "Added <literal>glossterm</literal> tags to glossary terms."
+msgstr "<literal>glossterm</literal> タグを用語集の用語に追加しました。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:85
+msgid "Cleaned up formatting in code examples."
+msgstr "コード例におけるフォーマットを整理しました。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:89
+msgid "Removed future tense."
+msgstr "未来時制を削除しました。"
+
+#. ... continue addding more revisions here as you change this document using
+#. the markup shown below...
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:97
+msgid "2013-03-11"
+msgstr "2013-03-11"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:101
+msgid "Moved files to OpenStack github repository."
+msgstr "ファイルを OpenStack github リポジトリに移動しました。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:150
+msgid "Glossary"
+msgstr "用語集"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:151
+msgid ""
+"Use this glossary to get definitions of OpenStack-related words and phrases."
+msgstr ""
+"OpenStack 関連の用語や言い回しの定義を確認するために、この用語集を使用してく"
+"ださい。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:153
+msgid ""
+"To add to this glossary, fork the <literal>openstack/openstack-manuals</"
+"literal> repository on github.com and update the source files through the "
+"OpenStack contribution process."
+msgstr ""
+"この用語集に追加するには、OpenStack の貢献プロセスを通して、 github.com にあ"
+"る <literal>openstack/openstack-manuals</literal> リポジトリをフォークして、"
+"ソースファイルを更新します。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:159
+msgid "A"
+msgstr "A"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:161
+#: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:262
+msgid "account"
+msgstr "アカウント"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:163
+msgid ""
+"The swift context of an account, or a user account from an identity service "
+"such as Active Directory, /etc/passwd, OpenLDAP, keystone, and so on."
+msgstr ""
+"Swift のアカウントコンテキスト、または Active Directory、/etc/passwd、OpenLDAP、"
+"Keystone などの Identity サービスのアカウント。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:170
+msgid "account auditor"
+msgstr "account auditor"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:172
+msgid ""
+"Checks for missing replicas, incorrect, and corrupted objects in a specified "
+"swift account by running queries against the back-end SQLite database."
+msgstr ""
+"バックエンドの SQLite データベースに対して問合せを実行した特定の Swift アカウ"
+"ント中の消失したレプリカ、不正、破壊されたオブジェクトのチェック。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:179
+msgid "account database"
+msgstr "アカウントデータベース"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:181
+msgid ""
+"An SQLite database that contains swift accounts and related metadata and is "
+"accessed by the accounts server. Alternately, the keystone back-end which "
+"contains accounts."
+msgstr ""
+"アカウントサーバーからアクセスされる、Swift アカウントと関連メタデータを含む"
+"SQLite データベース、又は、アカウントを含む Keystone バックエンド。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:189
+msgid "account reaper"
+msgstr "account reaper"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:191
+msgid ""
+"A swift worker that scans for and deletes account databases that are marked "
+"for deletion on an account server."
+msgstr ""
+"アカウントサーバー上で削除済みとマークされたアカウントデータベースをスキャン"
+"／削除する Swift のワーカープロセス。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:197
+msgid "account server"
+msgstr "account server"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:199
+msgid ""
+"Lists containers in swift and stores container information in the account "
+"database."
+msgstr ""
+"Swift 中のコンテナの一覧を表示し、アカウントデータベース中のコンテナ情報を保"
+"存する。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:205
+msgid "account service"
+msgstr "account service"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:207
+msgid ""
+"Component of swift that provides account services such as list, create, "
+"modify, and audit. Do not confuse with keystone, OpenLDAP, or similar user "
+"account services."
+msgstr ""
+"一覧、作成、修正、監査等のアカウントサービスを提供するSwift のコンポーネン"
+"ト。Keystone、OpenLDAP、又は同様のユーザアカウントサービスと混同しないこと。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:214
+msgid "Active Directory"
+msgstr "Active Directory"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:216
+msgid ""
+"Authentication and Identity Service by Microsoft, based on LDAP. Supported "
+"in OpenStack."
+msgstr ""
+"OpenStack においてサポートされる、LDAP に基づいた、Microsoft による認証および"
+"識別サービス。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:222
+msgid "address pool"
+msgstr "アドレスプール"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:224
+msgid ""
+"A group of fixed and/or floating IP addresses that are assigned to a nova "
+"project and can be used by or assigned to the VM instances in a project."
+msgstr ""
+"Nova の１プロジェクトに紐付けられ、プロジェクト内の VM インスタンスに割り当て"
+"る事で使用可能な固定 IP アドレスと Floating IP アドレスの組。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:231
+msgid "admin API"
+msgstr "管理 API"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:233
+msgid ""
+"A subset of API calls that are accessible to authorized administrators and "
+"are generally not accessible to end users or the public internet, can exist "
+"as a separate service (keystone) or can be a subset of another API (nova)."
+msgstr ""
+"認証済み管理者がアクセス可能で一般に公共のインターネットからのエンドユーザア"
+"クセスが出来ない API コールのサブセット。独立したサービス（Keystone）として存"
+"在したり、別の API（Nova）のサブセットになり得る。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:242
+msgid "Amazon Kernel Image (AKI)"
+msgstr "Amazon Kernel Image (AKI)"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:244
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:251
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:258
+msgid "Both a VM container format and a VM disk format. Supported by glance."
+msgstr ""
+"仮想マシンコンテナー形式および仮想マシンディスク形式。glance がサポー"
+"トしている。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:249
+msgid "Amazon Machine Image (AMI)"
+msgstr "Amazon Machine Image (AMI)"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:256
+msgid "Amazon Ramdisk Image (ARI)"
+msgstr "Amazon Ramdisk Image (ARI)"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:263
+msgid "Apache"
+msgstr "Apache"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:265
+msgid ""
+"The most common web server software currently used on the Internet, known as "
+"HTTPd."
+msgstr ""
+"現在インターネットにおいて使用されている最も一般的な Web サーバーのソフトウェ"
+"ア。HTTPd としても知られている。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:271
+msgid "Apache License 2.0"
+msgstr "Apache License 2.0"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:273
+msgid ""
+"All OpenStack core projects are provided under the terms of the Apache "
+"License 2.0 license."
+msgstr ""
+"すべての OpenStack コアプロジェクトは Apache License 2.0 ライセンスの条件で"
+"提供されている。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:279
+msgid "API endpoint"
+msgstr "API エンドポイント"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:281
+msgid ""
+"The daemon, worker, or service that a client communicates with to access an "
+"API. In OpenStack, API endpoints can provide services such as "
+"authentication, adding images, booting virtual machines, and attaching "
+"volumes."
+msgstr ""
+"クライアントが API にアクセスするために通信するデーモン、ワーカーまたはサービ"
+"ス。OpenStack では、認証、イメージの追加、仮想マシンの起動、"
+"ボリュームの追加といったサービスは API エンドポイントで提供される。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:290
+msgid "API extension"
+msgstr "API 拡張"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:292
+msgid ""
+"A feature of nova and quantum that allows custom modules to extend the core "
+"APIs."
+msgstr ""
+"独自モジュールがコア API を拡張できるようにする Nova と Quantum の機能。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:297
+msgid "API extension plug-in"
+msgstr "API 拡張プラグイン"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:299
+msgid "Alternative term for a quantum plug-in or quantum API extension."
+msgstr "quantum プラグインまたは quantum API 拡張の別名。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:304
+msgid "API server"
+msgstr "API サーバー"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:306
+msgid "Any node running a daemon or worker that provides an API endpoint."
+msgstr ""
+"API エンドポイントを提供するデーモンまたはワーカーを実行するあらゆるノード。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:311
+msgid "API version"
+msgstr "API バージョン"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:313
+msgid ""
+"In OpenStack, a the API version for a project is part of the URL. For "
+"example, <code>example.com/nova/v1/foobar</code>."
+msgstr ""
+"OpenStack において、プロジェクト向けの API バージョンは URL の一部である。たと"
+"えば、 <code>example.com/nova/v1/foobar</code>。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:319
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:267
+msgid "Application Programming Interface (API)"
+msgstr "Application Programming Interface (API)"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:322
+msgid ""
+"A collection of specifications used to access a service, application, or "
+"program. Includes service calls, required parameters for each call, and the "
+"expected return values."
+msgstr ""
+"サービス、アプリケーション、プログラムへのアクセスに使用される仕様の集合。"
+"サービス呼出、各呼出に必要なパラメーター、想定される戻り値を含む。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:330
+msgid "arptables"
+msgstr "arptables"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:332
+msgid ""
+"Used along with iptables, ebtables, and ip6tables in nova to provide "
+"firewall services."
+msgstr ""
+"ファイアウォールサービスを提供する為に Nova 中で iptables, ebtables, "
+"ip6tables と一緒に使用される。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:338
+msgid "Asynchronous JavaScript and XML (AJAX)"
+msgstr "Asynchronous JavaScript and XML (AJAX)"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:341
+msgid ""
+"A group of interrelated web development techniques used on the client-side "
+"to create asynchronous web applications. Used extensively in horizon."
+msgstr ""
+"非同期 Web アプリケーションを作成する為にクライアント側で使用される相互関係の"
+"ある Web 開発技術の集合。Horizon で広く使用されている。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:348
+msgid "attachment (network)"
+msgstr "アタッチ（ネットワーク）"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:350
+msgid ""
+"Association of an interface ID to a logical port. Plugs an interface into a "
+"port."
+msgstr ""
+"論理ポートへのインターフェースIDの紐付け。インターフェースをポートに差し込"
+"む。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:355
+msgid "auditor"
+msgstr "auditor"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:357
+msgid ""
+"A worker process that verifies the integrity of swift objects, containers, "
+"and accounts. Auditors is the collective term for the swift account auditor, "
+"container auditor, and object auditor."
+msgstr ""
+"Swift オブジェクト、コンテナ、アカウントの完全な状態を検証するワーカープロセ"
+"ス。Auditor は Swift account auditor, container auditor, object auditor の総"
+"称。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:365
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:584
+msgid "Austin"
+msgstr "Austin"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:367
+msgid "Project name for the initial release of OpenStack."
+msgstr "OpenStack の最初のリリースのプロジェクト名。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:372
+msgid "authentication"
+msgstr "認証"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:374
+msgid ""
+"The process that confirms that the user, process, or client is really who "
+"they say they are through private key, secret token, password, fingerprint, "
+"or similar method. Abbreviated as AuthN."
+msgstr ""
+"ユーザー、プロセスまたはクライアントが、秘密鍵、秘密トークン、パスワード、フィンガープリント"
+"または同様の方式により示されている主体と本当に同じであることを確認するプロ"
+"セス。AuthN と略される。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:382
+msgid "authentication token"
+msgstr "認証トークン"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:384
+msgid ""
+"A string of text provided to the client after authentication. Must be "
+"provided by the user or process in subsequent requests to the API endpoint."
+msgstr ""
+"認証後にクライアントに提供されるテキスト文字列。API エンドポイントに続くリク"
+"エストにおいて、ユーザーまたはプロセスにより提供される必要がある。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:391
+msgid "authorization"
+msgstr "認可"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:393
+msgid ""
+"The act of verifying that a user, process, or client is authorized to "
+"perform an action, such as delete a swift object, list a swift container, "
+"start a nova VM, reset a password, and so on. Abbreviate as AuthZ."
+msgstr ""
+"ユーザー、プロセス、またはクライアントが、ある操作を実行する権限があることを検証す"
+"る動作。Swift オブジェクトの削除、Swift コンテナーの一覧表示、Nova 仮想マシン"
+"の起動、パスワードのリセットなどの操作です。AuthZ と略される。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:401
+msgid "availability zone"
+msgstr "アベイラビリティゾーン"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:403
+msgid "A segregated area of a cloud deployment."
+msgstr "クラウドデプロイの独立したエリア。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:409
+msgid "B"
+msgstr "B"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:411
+msgid "back-end catalog"
+msgstr "バックエンドカタログ"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:413
+msgid ""
+"The storage method used by the keystone catalog service to store and "
+"retrieve information about API endpoints that are available to the client. "
+"Examples include a SQL database, LDAP database, or KVS back-end."
+msgstr ""
+"クライアントが利用可能なAPI エンドポイントに関する情報の保存、取得の為に "
+"Keystone カタログサービスで使用されるストレージ方式。例：SQL データベース、"
+"LDAP データベース、KVS バックエンドを含む。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:422
+msgid "back-end store"
+msgstr "バックエンドストア"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:424
+msgid ""
+"The persistent data store used that glance uses to retrieve and store VM "
+"images. Options include swift, local file system, S3, and HTTP."
+msgstr ""
+"glance が仮想マシンイメージを取得および保管するために使用する永続的なデータス"
+"トア。オプションに swift、ローカルファイルシステム、S3 および HTTP がある。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:431
+msgid "bare"
+msgstr "bare"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:433
+msgid ""
+"A glance container format that indicates that no container exists for the VM "
+"image."
+msgstr ""
+"VM イメージ用にコンテナ（保存先）がない事を示す Glance のコンテナフォーマッ"
+"ト。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:439
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:574
+msgid "Bexar"
+msgstr "Bexar"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:441
+msgid ""
+"A grouped release of projects related to OpenStack that came out in February "
+"of 2011. It included Compute (nova) and Object Storage (swift) only."
+msgstr ""
+"2011年２月に登場した OpenStack 関連プロジェクトのまとまったリリース。Compute "
+"(Nova) と Object Storage (Swift) のみが含まれていた。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:448
+msgid "block device"
+msgstr "ブロックデバイス"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:450
+msgid ""
+"A device that moves data in the form of blocks. These device nodes interface "
+"the devices, such as hard disks, CD-ROM drives, flash drives, and other "
+"addressable regions of memory."
+msgstr ""
+"ブロック状態のデータを移動するデバイス。これらのデバイスノードにはハードディ"
+"スク、CD-ROM ドライブ、フラッシュドライブ、その他のアドレス可能なメモリの範囲"
+"等がある。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:458
+msgid "block migration"
+msgstr "ブロックマイグレーション"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:460
+msgid ""
+"A method of VM live migration used by KVM to evacuate instances from one "
+"host to another with very little downtime during a user-initiated switch-"
+"over. Does not require shared storage. Supported by nova."
+msgstr ""
+"ユーザが移動を指示してから非常に短いダウンタイムであるあるホストから別のホストにイ"
+"ンスタンスを移動させる為に KVM で使用される VM ライブマイグレーション方式。共"
+"有ストレージを必要としない。Nova でサポート。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:468
+msgid "bootable disk image"
+msgstr "ブータブルディスクイメージ"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:470
+msgid "A type of VM image that exists as a single, bootable file."
+msgstr "単独の、ブート可能なファイルとして存在する仮想マシンイメージの形式。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:475
+msgid "builder file"
+msgstr "ビルダーファイル"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:477
+msgid ""
+"Contains configuration information for a swift ring, and is used to re-"
+"configure the ring or to recreate it from scratch after a serious failure."
+msgstr ""
+"Swift リング用の設定情報を含み、リングの再設定や深刻な障害後に１からリング情"
+"報を作成するのに使用される。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:486
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:890
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1457
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1672
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1696
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1788
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1889
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2799
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:217
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:228
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:229
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:233
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:235
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:246
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:257
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:259
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:263
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:265
+msgid " "
+msgstr " "
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:491
+msgid "C"
+msgstr "C"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:493
+msgid "cache pruner"
+msgstr "cache pruner"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:495
+msgid ""
+"An executable program that is used to keep a glance VM image cache at or "
+"below its configured maximum size."
+msgstr ""
+"Glance VM イメージキャッシュを設定された最大サイズ以下に保持する為に使用され"
+"る実行可能プログラム。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:501
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:564
+msgid "Cactus"
+msgstr "Cactus"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:503
+msgid ""
+"An OpenStack grouped release of projects that came out in the spring of "
+"2011. It included Compute (nova), Object Storage (swift), and the Image "
+"service (glance)."
+msgstr ""
+"2011年春に登場した OpenStack 関連のプロジェクトリリース。Compute (Nova), "
+"Object Storage (Swift), Image Service (Glance) が含まれていた。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:511
+msgid "capability"
+msgstr "キャパシティ"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:513
+msgid ""
+"Defines resources for a cell, including CPU, storage, and networking. Can "
+"apply to the specific services within a cell or a whole cell."
+msgstr ""
+"CPU、ストレージ、ネットワークを含むセルのリソースを定義する。１セルやセル全体"
+"に含まれる特定のサービスに適用可能。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:520
+msgid "capacity cache"
+msgstr "capacity cache"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:522
+msgid ""
+"A table within the nova back-end database that contains the current "
+"workload, amount of free RAM, number of VMs running on each host. Used to "
+"determine on which VM a host starts."
+msgstr ""
+"各ホストの現在の負荷、空き RAM 量、実行中の VM 数を含む、Nova バックエンド"
+"データベース中のテーブル。どのホストで VM を起動するかを決定するのに使用され"
+"る。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:530
+msgid "capacity updater"
+msgstr "capacity updater"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:532
+msgid ""
+"A notification driver that monitors VM instances and updates the capacity "
+"cache as needed."
+msgstr ""
+"VM インスタンスを監視し、必要に応じて容量キャッシュを更新する通知ドライバ。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:538
+msgid "catalog"
+msgstr "カタログ"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:540
+msgid ""
+"Contains a list of available API endpoints to a user after they authenticate "
+"to keystone."
+msgstr "Keystone での認証後に、ユーザに返される利用可能な API エンドポイントの一覧。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:546
+msgid "catalog service"
+msgstr "カタログサービス"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:548
+msgid ""
+"A keystone service that provides a list of available API endpoints to a user "
+"after they authenticate to keystone."
+msgstr ""
+"Keystone での認証後にユーザに返される利用可能な API エンドポイントの一覧を提供す"
+"る Keystone サービス。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:554
+msgid "ceilometer"
+msgstr "ceilometer"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:556
+msgid ""
+"An incubated project that provides metering and billing facilities for "
+"OpenStack."
+msgstr "OpenStack 用のメータリング・課金基盤を提供する育成プロジェクト。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:561
+msgid "cell"
+msgstr "セル"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:563
+msgid ""
+"Provides logical partitioning of nova resources in a child and parent "
+"relationship. Requests are passed from parent cells to child cells if the "
+"parent cannot provide the requested resource."
+msgstr ""
+"親子関係で Nova リソースの論理パーティションを提供する。親セルが要求されたリ"
+"ソースを提供できない場合、親セルからのリクエストは子セルに渡される。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:571
+msgid "cell forwarding"
+msgstr "セルフォワーディング"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:573
+msgid ""
+"A nova option that allows parent cells to pass resource requests to child "
+"cells if the parent cannot provide the requested resource."
+msgstr ""
+"親が要求されたリソースを提供できない場合、親セルがリソース要求を子セルに渡す"
+"事を可能にするNovaオプション。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:580
+msgid "cell manager"
+msgstr "セルマネージャー"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:582
+msgid ""
+"The nova component that contains a list of the current capabilities of each "
+"host within the cell and routes requests as appropriate."
+msgstr ""
+"セル中の各ホストの現在のキャパシティの一覧を含み、リクエストを適切な方法で"
+"ルーティングする Nova コンポーネント。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:589
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:238
+msgid "Ceph"
+msgstr "Ceph"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:591
+msgid ""
+"Massively scalable distributed storage system that consists of an object "
+"store, block store, and POSIX-compatible distributed file system. Compatible "
+"with OpenStack."
+msgstr ""
+"オブジェクトストア、ブロックストア、および POSIX 互換分散ファイルシステムから"
+"構成される大規模スケール可能分散ストレージシステム。OpenStack 互換。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:598
+msgid "CephFS"
+msgstr "CephFS"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:600
+msgid "The POSIX-compliant file system provided by Ceph."
+msgstr "Ceph により提供される POSIX 互換ファイルシステム。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:605
+msgid "certificate authority"
+msgstr "認証局"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:607
+msgid ""
+"A simple certificate authority provided by nova for cloudpipe VPNs and VM "
+"image decryption."
+msgstr "cloudpipe VPN と VM イメージ復号用に Nova が提供するシンプルな認証局。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:613
+msgid "chance scheduler"
+msgstr "チャンススケジューラー"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:615
+msgid ""
+"A scheduling method used by nova that randomly chooses an available host "
+"from the pool."
+msgstr ""
+"プールから利用可能なホストをランダムに選択する為に Nova が使用するスケジュー"
+"ル方式。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:621
+msgid "changes-since"
+msgstr "changes-since"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:623
+msgid ""
+"A nova API parameter that allows you to download changes to the requested "
+"item since your last request, instead of downloading a new, fresh set of "
+"data and comparing it against the old data."
+msgstr ""
+"新しいデータセットからのダウンロードや古いデータに対する比較の代わりに、あな"
+"たの最後のリクエストから要求されたアイテム変更をダウンロードする事を可能にす"
+"るNova API パラメーター。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:631
+msgid "Chef"
+msgstr "Chef"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:633
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2231
+msgid "A configuration management tool that supports OpenStack."
+msgstr "OpenStack をサポートする構成管理ツール。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:638
+msgid "child cell"
+msgstr "子セル"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:640
+msgid ""
+"If a requested resource such as CPU time, disk storage, or memory is not "
+"available in the parent cell, the request is forwarded to its associated "
+"child cells. If the child cell can fulfill the request, it does. Otherwise, "
+"it attempts to pass the request to any of its children."
+msgstr ""
+"CPU 時間、ディスクストレージ、メモリ等の要求されたリソースが親セルで利用不可"
+"の場合、リクエストは親セルに紐付けられた子セルに転送される。子セルがリクエス"
+"トに対応可能な場合、子セルはそのリクエストを処理する。対応不可の場合、そのリ"
+"クエストを自分の子セルに渡そうとする。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:650
+msgid "cinder"
+msgstr "cinder"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:652
+msgid ""
+"The OpenStack Block Storage service that maintains the block devices that "
+"can be attached to virtual machine instances."
+msgstr ""
+"仮想マシンのインスタンスに接続できるブロックデバイスを管理する OpenStack ブ"
+"ロックストレージサービス。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:658
+msgid "cloud architect"
+msgstr "クラウドアーキテクト"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:660
+msgid "A person who plans, designs, and oversees the creation of clouds."
+msgstr "クラウドの作成を計画、設計および監督する人。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:665
+msgid "cloud controller node"
+msgstr "クラウドコントローラーノード"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:667
+msgid ""
+"A node that runs network, volume, API, scheduler and image services. Each "
+"service may be broken out into separate nodes for scalability or "
+"availability."
+msgstr ""
+"network, volume, API, scheduler, Image service を実行するノード。スケーラビリ"
+"ティや可用性の為、各サービスは独立したノード群に分割され得る。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:674
+msgid "cloud-init"
+msgstr "cloud-init"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:676
+msgid ""
+"A package commonly installed in VM images that performs initialization of an "
+"instance after boot using information that it retrieves from the metadata "
+"service such as the SSH public key and user data."
+msgstr ""
+"メタデータサービスから取得したSSH 公開鍵やユーザデータ等の情報を使用して、起"
+"動後にインスタンスの初期化を実行する為にVMイメージに一般にインストールされる"
+"パッケージ。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:684
+msgid "cloudpipe"
+msgstr "cloudpipe"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:686
+msgid "A service in nova used to create VPNs on a per-project basis."
+msgstr "プロジェクト単位の VPN 作成用に Nova が使用するサービス。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:691
+msgid "cloudpipe image"
+msgstr "cloudpipe イメージ"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:693
+msgid ""
+"A pre-made VM image that serves as a cloudpipe server. Essentially, OpenVPN "
+"running on Linux."
+msgstr ""
+"cloudpipe サーバとしてサービスを行う為の、予め用意された VM イメージ。本質的"
+"には Linux 上で実行される OpenVPN。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:699
+msgid "command filter"
+msgstr "コマンドフィルタ"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:701
+msgid "Lists allowed commands within the nova rootwrap facility."
+msgstr "Nova rootwrap 機構中で許可されたコマンドの一覧。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:706
+msgid "community project"
+msgstr "コミュニティプロジェクト"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:708
+msgid ""
+"A project that is not officially endorsed by the OpenStack Foundation. If "
+"the project is successful enough, it might be elevated to an incubated "
+"project and then to a core project, or it might be merged with the main code "
+"trunk."
+msgstr ""
+"OpenStack Foundation で公認されていないプロジェクト。プロジェクトが充分成功し"
+"た場合、育成プロジェクトに昇格し、その後コアプロジェクトに昇格する事がある。"
+"あるいはメインの code trunk にマージされる事もある。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:717
+msgid "Compute API"
+msgstr "Compute API"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:719
+msgid ""
+"The nova-api daemon that provides access to the nova services. Can also "
+"communicate with some outside APIs such as the Amazons EC2 API."
+msgstr ""
+"Nova サービスへのアクセスを提供する nova-api デーモン。Amazon EC2 API のよう"
+"ないくつかの外部 API でも通信可能。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:726
+msgid "Compute API extension"
+msgstr "Compute API extension"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:728
+msgid "Alternative term for a nova API extension."
+msgstr "Nova API extension の別名。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:733
+msgid "compute controller"
+msgstr "コンピュートコントローラー"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:735
+msgid ""
+"The nova component that chooses suitable hosts on which to start VM "
+"instances."
+msgstr ""
+"VM インスタンスを起動する適切なホストを選択する Nova のコンポーネント。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:740
+msgid "compute node"
+msgstr "コンピュートノード"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:742
+msgid ""
+"A node that runs the nova-compute daemon and the virtual machine instances."
+msgstr "nova-compute デーモンと仮想マシンインスタンスを実行するノード。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:747
+msgid "compute service"
+msgstr "コンピュートサービス"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:749
+msgid "Alternative term for the nova component that manages VMs."
+msgstr "VM を管理する Nova コンポーネントの別名。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:754
+msgid "concatenated object"
+msgstr "連結オブジェクト"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:756
+msgid ""
+"A segmented large object within swift that is put back together again and "
+"then sent to the client."
+msgstr ""
+"Swift 中で分割された大きなオブジェクト。再度結合されてから、クライアントに"
+"送信される。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:762
+msgid "consistency window"
+msgstr "一貫性ウインドウ"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:764
+msgid ""
+"The amount of time it takes for a new swift object to become accessible to "
+"all clients."
+msgstr ""
+"全クライアントがアクセス可能になる為に、新しい Swift オブジェクトに必要な時"
+"間。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:770
+msgid "console log"
+msgstr "コンソールログ"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:772
+msgid "Contains the output from a Linux VM console in nova."
+msgstr "Nova 中の Linux VM コンソールからの出力を含む。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:777
+msgid "container"
+msgstr "コンテナ"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:779
+msgid ""
+"Used to organize and store objects within swift, similar to the concept as a "
+"Linux directory but cannot be nested. Alternative term for a glance "
+"container format."
+msgstr ""
+"Swift 中でオブジェクトの構造化、格納に使用される。Linux のディレクトリと同様の"
+"コンセプトだが、階層構造にできない。Glance コンテナフォーマットの別名。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:786
+msgid "container auditor"
+msgstr "コンテナオーディタ"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:788
+msgid ""
+"Checks for missing replicas or incorrect objects in the specified swift "
+"containers through queries to the SQLite back-end database."
+msgstr ""
+"SQLite バックエンドデータベースへのクエリを通して、指定された Swift コンテナ"
+"中の失われたレプリカや不完全なオブジェクトをチェックする。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:795
+msgid "container database"
+msgstr "コンテナデータベース"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:797
+msgid ""
+"A SQLite database that contains swift containers and related metadata and is "
+"accessed by the container server"
+msgstr ""
+"Swift コンテナと関連メタデータを含む SQLite データベース。container サーバか"
+"らアクセスされる。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:803
+msgid "container format"
+msgstr "コンテナフォーマット"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:805
+msgid ""
+"The \"envelope\" used by glance to store a VM image and its associated "
+"metadata, such as machine state, OS disk size, and so on."
+msgstr ""
+"VM イメージの保存用に Glance が使用する「封筒」。マシン状態、OS ディスクサイ"
+"ズ等のメタデータに紐付けられる。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:811
+msgid "container server"
+msgstr "コンテナサーバー"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:813
+msgid "Component of swift that manages containers."
+msgstr "コンテナを管理する Swift のコンポーネント。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:818
+msgid "container service"
+msgstr "コンテナサービス"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:820
+msgid ""
+"The swift component that provides container services, such as create, "
+"delete, list, and so on."
+msgstr "作成、削除、覧等のコンテナサービスを提供する Swift コンポーネント。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:826
+msgid "controller node"
+msgstr "コントローラーノード"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:828
+msgid "Alternative term for a cloud controller node."
+msgstr "クラウドコントローラーノードの別名。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:833
+msgid "core API"
+msgstr "コアAPI"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:835
+msgid ""
+"Depending on context, the core API is either the OpenStack API or the main "
+"API of a specific core project, such as nova, quantum, glance, and so on."
+msgstr ""
+"文脈に依存する。コアAPI は OpenStack API またはNova, Quantum, Glance 等の特定"
+"のコアプロジェクトのメイン API のいずれかである。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:842
+msgid "core project"
+msgstr "コアプロジェクト"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:844
+msgid ""
+"An official OpenStack project. Currently consists of Compute (nova), Object "
+"Storage (swift), Image Service (glance), Identity (keystone), Dashboard "
+"(horizon), Networking (quantum), and Volume (cinder)."
+msgstr ""
+"OpenStack の公式プロジェクト。現在、Compute (nova), Object Storage (swift), "
+"Image Service (glance), Identity (keystone), Dashboard (horizon), Networking "
+"(quantum), Volume (cinder) が含まれる。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:852
+msgid "credentials"
+msgstr "クレデンシャル"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:854
+msgid ""
+"Data that is only known to or accessible by a user that is used to verify "
+"the user is who they say they are and presented to the server during "
+"authentication. Examples include a password, secret key, digital "
+"certificate, fingerprint, and so on."
+msgstr ""
+"ユーザーだけが知っているデータもしくはユーザーだけがアクセスできるデータで、認証時にサーバーに示され、"
+"ユーザーが誰であるかの確認に使用される。例：パスワード、シークレットキー、デジ"
+"タル認証、フィンガープリントなど。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:863
+msgid "Crowbar"
+msgstr "Crowbar"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:865
+msgid ""
+"An open source community project by Dell that aims to provide all necessary "
+"services to quickly deploy clouds."
+msgstr ""
+"クラウドの迅速なデプロイ用に全ての必要なサービスを提供する用途の、Dell による"
+"オープンソースコミュニティプロジェクト。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:871
+msgid "current workload"
+msgstr "カレントワークロード"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:873
+msgid ""
+"An element of the nova capacity cache that is calculated based on the number "
+"of build, snapshot, migrate, and resize operations currently in progress on "
+"a given host."
+msgstr ""
+"指定されたホスト上で現在進行中の build, snapshot, migrate, resize の操作数を元"
+"に計算される、Nova のキャパシティキャッシュの１要素。"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:880
+msgid "customization module"
+msgstr "カスタムモジュール"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:882
+msgid ""
+"A user-created Python module that is loaded by horizon to change the look "
+"and feel of the dashboard."
+msgstr ""
+"ダッシュボードのルックアンドフィールを変更する為に Horizon がロードする、ユー"
+"ザが作成した Python モジュール。"
