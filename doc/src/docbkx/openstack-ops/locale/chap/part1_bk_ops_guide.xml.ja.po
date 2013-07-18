@@ -663,7 +663,7 @@ msgstr "カタログ"
 msgid ""
 "Contains a list of available API endpoints to a user after they authenticate "
 "to keystone."
-msgstr "keystone に認証した後、ユーザーに利用可能な API エンドポイントの一覧。"
+msgstr "Keystone での認証後に、ユーザに返される利用可能な API エンドポイントの一覧。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:546
 msgid "catalog service"
@@ -674,8 +674,8 @@ msgid ""
 "A keystone service that provides a list of available API endpoints to a user "
 "after they authenticate to keystone."
 msgstr ""
-"keystone に認証した後、ユーザーに利用可能な API エンドポイントの一覧を提供す"
-"る keystone サービス。"
+"Keystone での認証後にユーザに返される利用可能な API エンドポイントの一覧を提供す"
+"る Keystone サービス。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:554
 msgid "ceilometer"

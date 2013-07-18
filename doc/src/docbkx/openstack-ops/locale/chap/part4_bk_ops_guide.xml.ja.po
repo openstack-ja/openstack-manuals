@@ -305,7 +305,7 @@ msgid ""
 "The method that a service uses for persistent storage such as iSCSI, NFS, or "
 "local disk."
 msgstr ""
-"iSCSI、NFS、ローカルディスクなどの、サービスが使用する永続ストレージ手段。"
+"サービスが永続ストレージで使用する方式。 iSCSI、NFS、ローカルディスクなどがある。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2646
 msgid "storage node"

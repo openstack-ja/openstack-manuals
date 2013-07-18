@@ -302,7 +302,7 @@ msgstr "Elastic Block Storage (EBS)"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1093
 msgid "The Amazon commercial block storage product, similar to cinder."
-msgstr "Cinder と同様の、アマゾンの商用ブロックストレージ製品。"
+msgstr "Amazon の商用ブロックストレージ製品。 Cinder と似た機能を持つ。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1098
 msgid "endpoint"
@@ -721,8 +721,8 @@ msgid ""
 "A type of reboot where a physical or virtual power button is pressed as "
 "opposed to a graceful, proper shutdown of the operating system."
 msgstr ""
-"綺麗な（graceful）、OSの適切なシャットダウンを避ける為、物理又は仮想電源ボタ"
-"ンが押される再起動のタイプ。"
+"きちんとした正常なOSのシャットダウンを行わず、物理又は仮想電源ボタンを押す"
+"タイプの再起動。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1404
 msgid "Heat"

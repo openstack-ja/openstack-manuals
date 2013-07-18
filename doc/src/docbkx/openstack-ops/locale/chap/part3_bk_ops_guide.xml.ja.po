@@ -171,11 +171,11 @@ msgstr "M"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1795
 msgid "management API"
-msgstr "管理 API"
+msgstr "マネジメント API"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1797
 msgid "Alternative term for an admin API."
-msgstr "admin API の別名。"
+msgstr "管理 API（admin API）の別名。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1801
 msgid "management network"
@@ -508,7 +508,7 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2054
 msgid "operator"
-msgstr "オペレーター"
+msgstr "運用者"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2056
 msgid ""
