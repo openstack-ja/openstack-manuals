@@ -1560,7 +1560,7 @@ msgstr "Elastic Block Storage (EBS)"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml1093(para)
 msgid "The Amazon commercial block storage product, similar to cinder."
-msgstr "Cinder と同様の、アマゾンの商用ブロックストレージ製品。"
+msgstr "Amazon の商用ブロックストレージ製品。 Cinder と似た機能を持つ。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml1098(glossterm)
 msgid "endpoint"
@@ -1978,8 +1978,8 @@ msgid ""
 "A type of reboot where a physical or virtual power button is pressed as "
 "opposed to a graceful, proper shutdown of the operating system."
 msgstr ""
-"綺麗な（graceful）、OSの適切なシャットダウンを避ける為、物理又は仮想電源ボタ"
-"ンが押される再起動のタイプ。"
+"きちんとした正常なOSのシャットダウンを行わず、物理又は仮想電源ボタンを押すタ"
+"イプの再起動。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml1404(glossterm)
 msgid "Heat"
@@ -2553,11 +2553,11 @@ msgstr "M"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml1795(glossterm)
 msgid "management API"
-msgstr "管理 API"
+msgstr "マネジメント API"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml1797(para)
 msgid "Alternative term for an admin API."
-msgstr "admin API の別名。"
+msgstr "管理 API（admin API）の別名。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml18(titleabbrev)
 msgid "OpenStack Ops Guide"
@@ -2931,7 +2931,7 @@ msgstr "account service"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml2054(glossterm)
 msgid "operator"
-msgstr "オペレーター"
+msgstr "運用者"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml2056(para)
 msgid ""
@@ -3810,7 +3810,8 @@ msgid ""
 "The method that a service uses for persistent storage such as iSCSI, NFS, or "
 "local disk."
 msgstr ""
-"iSCSI、NFS、ローカルディスクなどの、サービスが使用する永続ストレージ手段。"
+"サービスが永続ストレージで使用する方式。 iSCSI、NFS、ローカルディスクなどがあ"
+"る。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml2646(glossterm)
 msgid "storage node"
@@ -4806,7 +4807,8 @@ msgstr "画面例がページや注記に収まるように修正しました。
 msgid ""
 "Contains a list of available API endpoints to a user after they authenticate "
 "to keystone."
-msgstr "keystone に認証した後、ユーザーに利用可能な API エンドポイントの一覧。"
+msgstr ""
+"Keystone での認証後に、ユーザに返される利用可能な API エンドポイントの一覧。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml546(glossterm)
 msgid "catalog service"
@@ -4817,8 +4819,8 @@ msgid ""
 "A keystone service that provides a list of available API endpoints to a user "
 "after they authenticate to keystone."
 msgstr ""
-"keystone に認証した後、ユーザーに利用可能な API エンドポイントの一覧を提供す"
-"る keystone サービス。"
+"Keystone での認証後にユーザに返される利用可能な API エンドポイントの一覧を提"
+"供する Keystone サービス。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml554(glossterm)
 msgid "ceilometer"
@@ -13010,13 +13012,13 @@ msgid ""
 msgstr ""
 "<code>/var/lib/nova/instances</code> にあるすべてのファイルとディレクトリは一"
 "意に名前が付けられています。_base にあるファイルは元となった glance イメージ"
-"に対して一意に名前が付けられています。また、<code>instance-xxxxxxxx</code> と"
-"いう名前が付けられたディレクトリは特定のインスタンスに対して一意にタイトルが"
-"付けられています。たとえば、あるコンピュートノードにある <code>/var/lib/nova/"
-"instances</code> のすべてのデータを他のノードにコピーしたとしても、ファイルを"
-"上書きすることはありませんし、また同じ一意な名前を持つイメージにダメージを与"
-"えることもありません。同じ一意な名前を持つものは本質的に同じファイルだからで"
-"す。"
+"に対応する一意に名前が付けられています。また、<code>instance-xxxxxxxx</code> "
+"という名前が付けられたディレクトリは特定のインスタンスに対して一意にタイトル"
+"が付けられています。たとえば、あるコンピュートノードにある <code>/var/lib/"
+"nova/instances</code> のすべてのデータを他のノードにコピーしたとしても、ファ"
+"イルを上書きすることはありませんし、また同じ一意な名前を持つイメージにダメー"
+"ジを与えることもありません。同じ一意な名前を持つものは本質的に同じファイルだ"
+"からです。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml432(para)
 msgid ""
@@ -13186,7 +13188,7 @@ msgstr "内部ネットワーク接続性"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml531(para)
 msgid "Backing storage services"
-msgstr "バッキングストレージサービス"
+msgstr "バックエンドのストレージサービス"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml536(para)
 msgid "3"
@@ -13370,11 +13372,12 @@ msgid ""
 "Many options are available, and normally double as benchmark software so you "
 "also get a good idea of the performance of your system."
 msgstr ""
-"初期導入時と同じように、本番環境に追加する前に、すべてのハードウェアが適切に"
-"作成されていることを確実にすべきです。ハードウェアを限界まで使用するソフト"
-"ウェアを実行します。RAM、CPU、ディスク、ネットワークを限界まで使用します。シ"
-"ステムのパフォーマンスに関する良いアイディアを得るために、多くのオプションが"
-"利用可能です。また、通常はベンチマークソフトウェアの 2 倍にします。"
+"初期導入時と同じように、本番環境に追加する前に、すべてのハードウェアについて"
+"適切な通電テストを行うべきでしょう。ハードウェアを限界まで使用するソフトウェ"
+"アを実行します。RAM、CPU、ディスク、ネットワークを限界まで使用します。多くの"
+"オプションが利用可能であり、通常はベンチマークソフトウェアとの役割も果たしま"
+"す。そのため、システムのパフォーマンスに関する良いアイディアを得ることもでき"
+"ます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml668(title)
 msgid "Adding a Compute Node"
@@ -13413,9 +13416,9 @@ msgid ""
 "the same procedure still applies as the same queuing and polling system is "
 "used in both services."
 msgstr ""
-"OpenStack ブロックストレージノードがコンピュートノードから分離されていれば、"
-"同じ手順が両方のサービスにおいて使用されているキューおよびポーリングのシステ"
-"ムとして適用されます。"
+"OpenStack ブロックストレージノードがコンピュートノードから分離いる場合、同じ"
+"キュー管理とポーリングのシステムが両方のサービスで使用されるので、同じ手順が"
+"適用できます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml687(para)
 msgid ""
@@ -13448,10 +13451,10 @@ msgstr ""
 "テムと構成管理システムを使って行えます。完了した後、オブジェクトストレージ"
 "ノードのローカルディスクをオブジェクトストレージリングに追加する必要がありま"
 "す。これを実行するコマンドは、最初にディスクをリングに追加するのに使用したコ"
-"マンドと全く同じです。新しいオブジェクトストレージノードにあるすべてのディス"
-"クに対して、単にオブジェクトストレージプロキシサーバーにおいてこのコマンドを"
-"再実行します。これが終わったら、リングの再バランスを行い、更新されたリング"
-"ファイルを他のストレージノードにコピーします。"
+"マンドと全く同じです。オブジェクトストレージプロキシサーバーにおいて、このコ"
+"マンドを、新しいオブジェクトストレージノードにあるすべてのディスクに対して、"
+"再実行するだけです。これが終わったら、リングの再バランスを行い、更新されたリ"
+"ングファイルを他のストレージノードにコピーします。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml709(para)
 msgid ""
@@ -13510,7 +13513,7 @@ msgstr ""
 "MySQL の管理方法がこれらのデータベースに適用できます。OpenStack は特別な方法"
 "でデータベースを設定しているわけではありません。基本的な管理として、パフォー"
 "マンス調整、高可用性、バックアップ、リカバリーおよび修理などがあります。さら"
-"なる情報は標準的な MySQL 管理ガイドを参照してください。"
+"なる情報は標準の MySQL 管理ガイドを参照してください。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml742(para)
 msgid ""
@@ -13521,7 +13524,7 @@ msgid ""
 msgstr ""
 "より迅速に情報を取得したり、データ不整合のエラーを修正したりするために、デー"
 "タベースでいくつかの小技を実行できます。たとえば、インスタンスが終了していた"
-"が、データベースの状態が更新されていなかった、という状況です。これらの小技が"
+"が、データベースの状態が更新されていなかった、という状況です。こうした小技が"
 "このドキュメント全体を通して議論されています。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml749(title)
@@ -13544,7 +13547,7 @@ msgstr "また、正しく機能していることを確認します:"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml761(para)
 msgid "The connection strings take this format:"
-msgstr "文字列はこの形式をとります:"
+msgstr "connection 文字列は以下の形式をとります。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml766(title)
 msgid "Performance and Optimizing"
@@ -13626,8 +13629,8 @@ msgid ""
 "part of your cloud. If you have only one controller, many services are "
 "missing."
 msgstr ""
-"残念ながら、これは大まかな状況です。クラウドコントローラーはクラウドの不可欠"
-"な部分です。コントローラーが一つだけならば、多くのサービスが失われます。"
+"残念ながら、これはひどい状況です。クラウドコントローラーはクラウドの不可欠な"
+"部分です。コントローラーが一つだけならば、多くのサービスが失われます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml821(para)
 msgid "Disk space"
@@ -13731,8 +13734,8 @@ msgid ""
 msgstr ""
 "OpenStack は、異なるコンポーネント同士が互いに強く連携して動作しています。た"
 "とえば、イメージのアップロードでは、<code>nova-api</code>, <code>glance-api</"
-"code>, <code>glance-registry</code>, Keystone が連携する必要があります。場合"
-"によっては <code>swift-proxy</code> も関係します。その結果、時として問題が発"
+"code>, <code>glance-registry</code>, Keystone が連携する必要があります。 "
+"<code>swift-proxy</code> も関係する場合があります。その結果、時として問題が発"
 "生している箇所を正確に特定することが難しくなります。これを支援することがこの"
 "セクションの目的です。"
 
@@ -14615,8 +14618,8 @@ msgstr "quota_gigabytes=1000"
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml158(para)
 msgid "(IntOpt) number of volume gigabytes allowed per project (tenant)"
 msgstr ""
-"(整数オプション) プロジェクト (テナント) ごとに許可されるボリュームのギガバイ"
-"ト容量"
+"(整数オプション) プロジェクト (テナント) ごとに許可されるボリューム容量（単位"
+"はギガバイト）"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml16(para)
 msgid ""
@@ -15092,7 +15095,7 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml45(para)
 msgid "To create a project through the dashboard:"
-msgstr "ダッシュボードからプロジェクトを追加するには:"
+msgstr "ダッシュボードからプロジェクトを追加する方法:"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml454(para)
 msgid ""
@@ -15290,9 +15293,9 @@ msgid ""
 "description. Select the check box at the bottom of the form to enable this "
 "project. By default, this is enabled."
 msgstr ""
-"プロジェクト名の入力が求められます。また、説明の入力は任意ですが、入力するこ"
-"とをお薦めしますこのプロジェクトを有効にするには、フォームの下にあるチェック"
-"ボックスを選択します。これは標準で有効になっています。"
+"プロジェクト名と説明の入力が求められます（説明の入力は任意ですが、入力をお薦"
+"めします）。このプロジェクトを有効にするには、フォームの下にあるチェックボッ"
+"クスを選択します。これは標準で有効になっています。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml592(emphasis)
 msgid "[3]"
@@ -15431,21 +15434,20 @@ msgid ""
 "deal with all these operations at one time."
 msgstr ""
 "プロジェクトメンバーを追加し、プロジェクトのクォータを調整することもできま"
-"す。後ほど議論しますが、これらの操作を一度にすべて処理するほうが、実践的には"
-"非常に便利です。"
+"す。後述しますが、これらの操作を一度にすべて処理するほうが、実践的には非常に"
+"便利です。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml77(para)
 msgid "To create a project through the command-line interface (CLI):"
-msgstr "コマンドラインインターフェース (CLI) からプロジェクトを作成するには:"
+msgstr "コマンドラインインターフェース (CLI) からプロジェクトを作成する方法:"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml79(para)
 msgid ""
 "To add a project through the command line, you must use the keystone "
 "utility, which uses \"tenant\" in place of \"project\": "
 msgstr ""
-"コマンドラインからプロジェクトを追加するには、keystone ユーティリティを使用す"
-"る必要があります。ここで \"プロジェクト\" の代わりに \"テナント\" を使用しま"
-"す: "
+"コマンドラインからのプロジェクト追加には、keystone ユーティリティを使用する必"
+"要があります。ここで \"プロジェクト\" の代わりに \"テナント\" を使用します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml83(para)
 msgid ""
@@ -15455,11 +15457,11 @@ msgid ""
 "group in a disabled state by appending <code>--enabled false</code> to the "
 "command. By default, projects are created in an enabled state."
 msgstr ""
-"このコマンドは \"demo\" という名前のプロジェクトを作成します。オプションとし"
-"て、<code>--description &lt;tenant-description&gt;,</code> を追加することによ"
-"り、説明の文字列を追加できます。これは非常に便利です。コマンドに <code>--"
-"enabled false</code> を追加することにより、無効状態のグループを作成できます。"
-"標準で、プロジェクトは有効状態で作成されます。"
+"このコマンドは \"demo\" という名前のプロジェクトを作成します。<code>--"
+"description &lt;tenant-description&gt;,</code> を追加で指定することで、説明の"
+"文字列を付与できます。これは非常に便利です。また、コマンドに <code>--enabled "
+"false</code> を追加することにより、無効状態のグループを作成することもできま"
+"す。標準で、プロジェクトは有効状態で作成されます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml95(title)
 msgid "Quotas"
@@ -15474,10 +15476,10 @@ msgid ""
 "<code>nova.conf</code> file on your cloud controller."
 msgstr ""
 "OpenStack には数多くのクォータがあります。クォータは (ユーザー単位ではなく) "
-"プロジェクト単位で適用されます。ダッシュボードにおいて管理者として、ナビゲー"
-"ションサイドバーにある \"クォータ\" リンクを使用して、既定のクォータを参照で"
-"きます (編集できません)。これらの規定のプロジェクトクォータはクラウドコント"
-"ローラーにある <code>nova.conf</code> で指定されます。"
+"プロジェクト単位で適用されます。ダッシュボード上で管理者ユーザーであれば、ナ"
+"ビゲーションサイドバーにある \"クォータ\" リンクを使用して、既定のクォータを"
+"参照できます (編集できません)。これらの規定のプロジェクトクォータはクラウドコ"
+"ントローラーにある <code>nova.conf</code> で指定されます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml18(para)
 msgid ""
