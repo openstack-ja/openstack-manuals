@@ -95,7 +95,7 @@ msgstr "プロジェクトの追加"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:45
 msgid "To create a project through the dashboard:"
-msgstr "ダッシュボードからプロジェクトを追加するには:"
+msgstr "ダッシュボードからプロジェクトを追加する方法:"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:48
 msgid "Log in as an administrative user."
@@ -115,7 +115,7 @@ msgid ""
 "description. Select the check box at the bottom of the form to enable this "
 "project. By default, this is enabled."
 msgstr ""
-"プロジェクト名の入力が求められます。また、説明の入力は任意ですが、入力することをお薦めします"
+"プロジェクト名と説明の入力が求められます（説明の入力は任意ですが、入力をお薦めします）。"
 "このプロジェクトを有効にするには、フォームの下にあるチェックボックスを選"
 "択します。これは標準で有効になっています。"
 
@@ -135,21 +135,21 @@ msgid ""
 "deal with all these operations at one time."
 msgstr ""
 "プロジェクトメンバーを追加し、プロジェクトのクォータを調整することもできま"
-"す。後ほど議論しますが、これらの操作を一度にすべて処理するほうが、実践的には非"
+"す。後述しますが、これらの操作を一度にすべて処理するほうが、実践的には非"
 "常に便利です。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:77
 msgid "To create a project through the command-line interface (CLI):"
-msgstr "コマンドラインインターフェース (CLI) からプロジェクトを作成するには:"
+msgstr "コマンドラインインターフェース (CLI) からプロジェクトを作成する方法:"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:79
 msgid ""
 "To add a project through the command line, you must use the keystone "
 "utility, which uses \"tenant\" in place of \"project\": "
 msgstr ""
-"コマンドラインからプロジェクトを追加するには、keystone ユーティリティを使用す"
+"コマンドラインからのプロジェクト追加には、keystone ユーティリティを使用す"
 "る必要があります。ここで \"プロジェクト\" の代わりに \"テナント\" を使用しま"
-"す: "
+"す。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:83
 msgid ""
@@ -159,10 +159,10 @@ msgid ""
 "group in a disabled state by appending <code>--enabled false</code> to the "
 "command. By default, projects are created in an enabled state."
 msgstr ""
-"このコマンドは \"demo\" という名前のプロジェクトを作成します。オプションとし"
-"て、<code>--description &lt;tenant-description&gt;,</code> を追加することによ"
-"り、説明の文字列を追加できます。これは非常に便利です。コマンドに <code>--"
-"enabled false</code> を追加することにより、無効状態のグループを作成できます。"
+"このコマンドは \"demo\" という名前のプロジェクトを作成します。"
+"<code>--description &lt;tenant-description&gt;,</code> を追加で指定すること"
+"で、説明の文字列を付与できます。これは非常に便利です。また、コマンドに <code>--"
+"enabled false</code> を追加することにより、無効状態のグループを作成することもできます。"
 "標準で、プロジェクトは有効状態で作成されます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:95
@@ -178,7 +178,7 @@ msgid ""
 "<code>nova.conf</code> file on your cloud controller."
 msgstr ""
 "OpenStack には数多くのクォータがあります。クォータは (ユーザー単位ではなく) プロジェクト単位で適用されます。"
-"ダッシュボードにおいて管理者として、ナビゲーションサイドバーに"
+"ダッシュボード上で管理者ユーザーであれば、ナビゲーションサイドバーに"
 "ある \"クォータ\" リンクを使用して、既定のクォータを参照できます (編集できま"
 "せん)。これらの規定のプロジェクトクォータはクラウドコントローラーにある <code>nova.conf</code> で指定されます。"
 
@@ -238,8 +238,8 @@ msgstr "quota_gigabytes=1000"
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:158
 msgid "(IntOpt) number of volume gigabytes allowed per project (tenant)"
 msgstr ""
-"(整数オプション) プロジェクト (テナント) ごとに許可されるボリュームのギガバイ"
-"ト容量"
+"(整数オプション) プロジェクト (テナント) ごとに許可されるボリューム容量（単位はギガバイ"
+"ト）"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:164
 msgid "quota_injected_file_content_bytes=10240"
