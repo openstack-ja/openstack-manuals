@@ -367,7 +367,7 @@ msgstr ""
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:270
 msgid ""
 "To view and edit quotas for an individual project through the Dashboard:"
-msgstr "各プロジェクトのクォータをダッシュボードから表示および編集するには:"
+msgstr "各プロジェクトのクォータをダッシュボードから表示および編集する方法:"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:274
 msgid ""
@@ -389,8 +389,8 @@ msgid ""
 "To view and edit quotas for an individual project through the CLI, follow "
 "these steps:"
 msgstr ""
-"各プロジェクトのクォータを CLI から表示および編集するには、以下の手順に従いま"
-"す:"
+"各プロジェクトのクォータを CLI から表示および編集する方法は、以下のとおりで"
+"す。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:285
 msgid ""
@@ -423,7 +423,7 @@ msgid ""
 "<code>98333a1a28e746fa8c629c83a818ad57</code>:"
 msgstr ""
 "上の例に対して、プロジェクトのクォータを表示するには、ID "
-"<code>98333a1a28e746fa8c629c83a818ad57</code> を使用する必要があります:"
+"<code>98333a1a28e746fa8c629c83a818ad57</code> を使用する必要があります。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:315
 msgid ""
@@ -445,7 +445,7 @@ msgid ""
 msgstr ""
 "これらの値を変更するには、上のコマンドに <code>--key</code> および <code>--"
 "value</code> フラグを追加します。プロジェクトの Floating IP のクォータを 10 "
-"から 20 に増やすには:"
+"から 20 に増やす方法:"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:343
 msgid "User Management"
@@ -477,7 +477,7 @@ msgstr "新規ユーザーの作成"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:357
 msgid "To create a user, you need the following information:"
-msgstr "ユーザーを作成するには、以下の情報が必要です:"
+msgstr "ユーザーを作成するには、以下の情報が必要です。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:361
 msgid "Username"
@@ -519,7 +519,7 @@ msgstr ""
 "主プロジェクトは単にユーザーが割り当てられる最初のプロジェクトです。ユーザー"
 "を作成する前に存在している必要があります。役割は多くの場合ずっと \"メンバー"
 "\" のままになります。標準の状態で、OpenStack は次の 2 つの役割が定義されてい"
-"ます:"
+"ます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:389
 msgid "\"member\":  a typical user."
@@ -597,7 +597,7 @@ msgid ""
 msgstr ""
 "既存のユーザーを追加のプロジェクトに割り当てる、または古いプロジェクトから削"
 "除することは、ダッシュボードの ”プロジェクト” ページから、\"アクション\" 列"
-"の \"ユーザーの変更\" を選択することにより実行できます:"
+"の \"ユーザーの変更\" を選択することにより実行できます。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for
 #. you.
@@ -684,8 +684,8 @@ msgid ""
 "OpenStack handles two kind of authorization policies:"
 msgstr ""
 "デフォルトの<glossterm>認可</glossterm>設定では、管理ユーザーのみが他のプロジェクトの"
-"リソースを作成できます。OpenStack では 2 種類の認可ポリシーを使うことができま"
-"す:"
+"リソースを作成できます。OpenStack では以下の 2 種類の認可ポリシーを使うことができま"
+"す。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:473
 msgid ""
@@ -773,7 +773,7 @@ msgstr ""
 "す。API 操作が複数のポリシーに一致すると、すべてのポリシーが成功と評価される"
 "必要があります。認可ルールは再帰的にもできます。あるルールにマッチした場合、"
 "これ以上展開できないルールに達するまで、そのルールは別のルールに展開されます。"
-"以下のルールが定義できます:"
+"以下のルールが定義できます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:533
 msgid ""
@@ -817,7 +817,7 @@ msgstr ""
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:571
 msgid ""
 "Here are snippets of the default nova <filename>policy.json</filename> file:"
-msgstr "これは標準の nova <filename>policy.json</filename> ファイルの抜粋です:"
+msgstr "これは標準の nova <filename>policy.json</filename> ファイルの抜粋です。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:575
 msgid "[1]"
@@ -865,7 +865,7 @@ msgid ""
 msgstr ""
 "いくつかの場合では、ある操作が管理者のみに制限されるべきです。そこで、次の"
 "例では、ユーザーが自分のフレーバーを作成できるようにするシナリ"
-"オの場合に、このサンプルのポリシーファイルをどのように変更すればよいかを示します:"
+"オの場合に、このサンプルのポリシーファイルをどのように変更すればよいかを示します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:613
 msgid "Users that Disrupt Other Users"
