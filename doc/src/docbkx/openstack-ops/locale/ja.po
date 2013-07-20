@@ -6910,12 +6910,12 @@ msgid ""
 "\">array of options available</link> (http://docs.openstack.org/folsom/"
 "openstack-compute/admin/content/reference-for-ldap-config-options.html)"
 msgstr ""
-"<emphasis role=\"bold\">Identity Service (keystone)</emphasis> のバックエンド"
-"として、LDAP などの他の選択肢ではなく <emphasis role=\"bold\">SQL バックエン"
-"ド</emphasis>を選択しました。 SQL バックエンドはインストールが簡単で、堅牢性"
-"があります。多くのシステムで既存のディレクトリサービスと接続したいという要望"
-"があることは理解しています。その場合は、<link title=\"LDAP config options\" "
-"href=\"http://docs.openstack.org/folsom/openstack-compute/admin/content/"
+"<emphasis role=\"bold\">Identity サービス (keystone)</emphasis> のバックエン"
+"ドとして、LDAP などの他の選択肢ではなく <emphasis role=\"bold\">SQL バックエ"
+"ンド</emphasis>を選択しました。 SQL バックエンドはインストールが簡単で、堅牢"
+"性があります。多くのシステムで既存のディレクトリサービスと接続したいという要"
+"望があることは理解しています。その場合は、<link title=\"LDAP config options"
+"\" href=\"http://docs.openstack.org/folsom/openstack-compute/admin/content/"
 "reference-for-ldap-config-options.html\">設定オプションリスト</link> (http://"
 "docs.openstack.org/folsom/openstack-compute/admin/content/reference-for-ldap-"
 "config-options.html) を注意深く理解してから使って下さい。"
@@ -6941,11 +6941,11 @@ msgid ""
 "interaction with the cloud, but also as a tool for operators. Additionally, "
 "the dashboard's use of Django makes it a flexible framework for extension."
 msgstr ""
-"このクラウドは <emphasis role=\"bold\">OpenStack Dashboard</emphasis> なしで"
-"動かすことはできますが、我々はダッシュボードを、クラウドのユーザ操作のためだ"
-"けでなく、オペレータ向けのツールとしてもなくてはならないものと考えています。"
-"まだ、ダッシュボードは Django を使っているため拡張しやすい柔軟なフレームワー"
-"クとなっています。"
+"このクラウドは <emphasis role=\"bold\">OpenStack ダッシュボード</emphasis> な"
+"しで動かすことはできますが、我々はダッシュボードを、クラウドのユーザ操作のた"
+"めだけでなく、オペレータ向けのツールとしてもなくてはならないものと考えていま"
+"す。まだ、ダッシュボードは Django を使っているため拡張しやすい柔軟なフレーム"
+"ワークとなっています。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml228(title)
 msgid "Why Not Use the OpenStack Network Service (quantum)?"
@@ -9923,8 +9923,8 @@ msgid ""
 "While OpenStack is composed of many components and moving parts, backing up "
 "the critical data is quite simple."
 msgstr ""
-"OpenStackは多くのコンポーネントからなり、それらは交換可能と複雑ですが、クリ"
-"ティカルデータのバックアップは非常にシンプルです。"
+"OpenStackは多くのコンポーネントから構成され、注意を払うべき箇所もたくさんあり"
+"ますが、大事なデータのバックアップは非常に単純です。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml45(para)
 msgid ""
@@ -14583,8 +14583,7 @@ msgstr "quota_cores=20"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml129(para)
 msgid "(IntOpt) number of instance cores allowed per project (tenant)"
-msgstr ""
-"(整数オプション) プロジェクト (テナント) ごとに許可されるインスタンスのコア数"
+msgstr "(整数型) プロジェクト (テナント) ごとに許可されるインスタンスのコア数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml135(para)
 msgid "quota_floating_ips=10"
@@ -14592,8 +14591,7 @@ msgstr "quota_floating_ips=10"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml138(para)
 msgid "(IntOpt) number of floating ips allowed per project (tenant)"
-msgstr ""
-"(整数オプション) プロジェクト (テナント) ごとに許可される Floating IP 数"
+msgstr "(整数型) プロジェクト (テナント) ごとに許可される Floating IP 数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml144(para)
 msgid "quota_fixed_ips=-1"
@@ -14604,8 +14602,8 @@ msgid ""
 "(IntOpt) number of floating ips allowed per project (this should be at least "
 "the number of instances allowed). -1 is unlimited"
 msgstr ""
-"(整数オプション) プロジェクトごとに許可される Fixed IP 数 (少なくとも許可され"
-"たインスタンスの数にすべきです)。-1 は無制限です。"
+"(整数型) プロジェクトごとに許可される Fixed IP 数 (少なくとも許可されたインス"
+"タンスの数にすべきです)。-1 は無制限です。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml15(title)
 msgid "Managing Projects and Users"
@@ -14618,8 +14616,8 @@ msgstr "quota_gigabytes=1000"
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml158(para)
 msgid "(IntOpt) number of volume gigabytes allowed per project (tenant)"
 msgstr ""
-"(整数オプション) プロジェクト (テナント) ごとに許可されるボリューム容量（単位"
-"はギガバイト）"
+"(整数型) プロジェクト (テナント) ごとに許可されるボリューム容量（単位はギガバ"
+"イト）"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml16(para)
 msgid ""
@@ -14635,7 +14633,7 @@ msgstr "quota_injected_file_content_bytes=10240"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml167(para)
 msgid "(IntOpt) number of bytes allowed per injected file"
-msgstr "(整数オプション) injected file あたりの最大バイト数"
+msgstr "(整数型) injected file あたりの最大バイト数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml173(para)
 msgid "quota_injected_file_path_bytes=255"
@@ -14643,7 +14641,7 @@ msgstr "quota_injected_file_path_bytes=255"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml176(para)
 msgid "(IntOpt) number of bytes allowed per injected file path"
-msgstr "(整数オプション) injected file のパス長の最大バイト数"
+msgstr "(整数型) injected file のパス長の最大バイト数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml182(para)
 msgid "quota_injected_files=5"
@@ -14651,7 +14649,7 @@ msgstr "quota_injected_files=5"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml185(para)
 msgid "(IntOpt) number of injected files allowed"
-msgstr "(整数オプション) 許可される injected file 数"
+msgstr "(整数型) 許可される injected file 数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml191(para)
 msgid "quota_instances=10"
@@ -14659,8 +14657,7 @@ msgstr "quota_instances=10"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml194(para)
 msgid "(IntOpt) number of instances allowed per project (tenant)"
-msgstr ""
-"(整数オプション) プロジェクト (テナント) ごとに許可されるインスタンス数"
+msgstr "(整数型) プロジェクト (テナント) ごとに許可されるインスタンス数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml20(title)
 msgid "Projects or Tenants?"
@@ -14672,7 +14669,7 @@ msgstr "quota_key_pairs=100"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml203(para)
 msgid "(IntOpt) number of key pairs allowed per user"
-msgstr "(整数オプション) ユーザーごとに許可されるキーペア数"
+msgstr "(整数型) ユーザーごとに許可されるキーペア数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml209(para)
 msgid "quota_metadata_items=128"
@@ -14690,7 +14687,7 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml212(para)
 msgid "(IntOpt) number of metadata items allowed per instance"
-msgstr "(整数オプション) インスタンスごとに許可されるメタデータ項目数"
+msgstr "(整数型) インスタンスごとに許可されるメタデータ項目数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml218(para)
 msgid "quota_ram=51200"
@@ -14699,8 +14696,8 @@ msgstr "quota_ram=51200"
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml221(para)
 msgid "(IntOpt) megabytes of instance ram allowed per project (tenant)"
 msgstr ""
-"(整数オプション) プロジェクト (テナント) ごとに許可されるインスタンスの RAM "
-"のメガバイト容量"
+"(整数型) プロジェクト (テナント) ごとに許可されるインスタンスの RAM のメガバ"
+"イト容量"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml227(para)
 msgid "quota_security_group_rules=20"
@@ -14708,7 +14705,7 @@ msgstr "quota_security_group_rules=20"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml230(para)
 msgid "(IntOpt) number of security rules per security group"
-msgstr "(整数オプション) セキュリティグループごとのセキュリティルール数"
+msgstr "(整数型) セキュリティグループごとのセキュリティルール数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml236(para)
 msgid "quota_security_groups=10"
@@ -14717,8 +14714,7 @@ msgstr "quota_security_groups=10"
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml239(para)
 msgid "(IntOpt) number of security groups per project (tenant)"
 msgstr ""
-"(整数オプション) プロジェクト (テナント) ごとに許可されるセキュリティグループ"
-"数"
+"(整数型) プロジェクト (テナント) ごとに許可されるセキュリティグループ数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml245(para)
 msgid "quota_volumes=10"
@@ -14726,7 +14722,7 @@ msgstr "quota_volumes=10"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml248(para)
 msgid "(IntOpt) number of volumes allowed per project (tenant)"
-msgstr "(整数オプション) プロジェクト (テナント) ごとに許可されるボリューム数"
+msgstr "(整数型) プロジェクト (テナント) ごとに許可されるボリューム数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml254(para)
 msgid ""
@@ -14785,7 +14781,7 @@ msgstr ""
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml270(para)
 msgid ""
 "To view and edit quotas for an individual project through the Dashboard:"
-msgstr "各プロジェクトのクォータをダッシュボードから表示および編集するには:"
+msgstr "各プロジェクトのクォータをダッシュボードから表示および編集する方法:"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml274(para)
 msgid ""
@@ -14807,8 +14803,8 @@ msgid ""
 "To view and edit quotas for an individual project through the CLI, follow "
 "these steps:"
 msgstr ""
-"各プロジェクトのクォータを CLI から表示および編集するには、以下の手順に従いま"
-"す:"
+"各プロジェクトのクォータを CLI から表示および編集する方法は、以下のとおりで"
+"す。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml285(para)
 msgid ""
@@ -14842,7 +14838,7 @@ msgid ""
 "<code>98333a1a28e746fa8c629c83a818ad57</code>:"
 msgstr ""
 "上の例に対して、プロジェクトのクォータを表示するには、ID "
-"<code>98333a1a28e746fa8c629c83a818ad57</code> を使用する必要があります:"
+"<code>98333a1a28e746fa8c629c83a818ad57</code> を使用する必要があります。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml315(para)
 msgid ""
@@ -14864,7 +14860,7 @@ msgid ""
 msgstr ""
 "これらの値を変更するには、上のコマンドに <code>--key</code> および <code>--"
 "value</code> フラグを追加します。プロジェクトの Floating IP のクォータを 10 "
-"から 20 に増やすには:"
+"から 20 に増やす方法:"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml34(para)
 msgid ""
@@ -14903,7 +14899,7 @@ msgstr "新規ユーザーの作成"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml357(para)
 msgid "To create a user, you need the following information:"
-msgstr "ユーザーを作成するには、以下の情報が必要です:"
+msgstr "ユーザーを作成するには、以下の情報が必要です。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml361(para)
 msgid "Username"
@@ -14944,7 +14940,7 @@ msgstr ""
 "た、パスワードを割り当ておよび配布するときに気をつける必要があります。主プロ"
 "ジェクトは単にユーザーが割り当てられる最初のプロジェクトです。ユーザーを作成"
 "する前に存在している必要があります。役割は多くの場合ずっと \"メンバー\" のま"
-"まになります。標準の状態で、OpenStack は次の 2 つの役割が定義されています:"
+"まになります。標準の状態で、OpenStack は次の 2 つの役割が定義されています。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml389(para)
 msgid "\"member\":  a typical user."
@@ -15036,7 +15032,7 @@ msgid ""
 msgstr ""
 "既存のユーザーを追加のプロジェクトに割り当てる、または古いプロジェクトから削"
 "除することは、ダッシュボードの ”プロジェクト” ページから、\"アクション\" 列"
-"の \"ユーザーの変更\" を選択することにより実行できます:"
+"の \"ユーザーの変更\" を選択することにより実行できます。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for
 #. you.
@@ -15132,8 +15128,8 @@ msgid ""
 "OpenStack handles two kind of authorization policies:"
 msgstr ""
 "デフォルトの<glossterm>認可</glossterm>設定では、管理ユーザーのみが他のプロ"
-"ジェクトのリソースを作成できます。OpenStack では 2 種類の認可ポリシーを使うこ"
-"とができます:"
+"ジェクトのリソースを作成できます。OpenStack では以下の 2 種類の認可ポリシーを"
+"使うことができます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml473(para)
 msgid ""
@@ -15229,7 +15225,7 @@ msgstr ""
 "API 操作が複数のポリシーに一致すると、すべてのポリシーが成功と評価される必要"
 "があります。認可ルールは再帰的にもできます。あるルールにマッチした場合、これ"
 "以上展開できないルールに達するまで、そのルールは別のルールに展開されます。以"
-"下のルールが定義できます:"
+"下のルールが定義できます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml533(para)
 msgid ""
@@ -15277,7 +15273,8 @@ msgstr ""
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml571(para)
 msgid ""
 "Here are snippets of the default nova <filename>policy.json</filename> file:"
-msgstr "これは標準の nova <filename>policy.json</filename> ファイルの抜粋です:"
+msgstr ""
+"これは標準の nova <filename>policy.json</filename> ファイルの抜粋です。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml575(emphasis)
 msgid "[1]"
@@ -15335,7 +15332,7 @@ msgid ""
 msgstr ""
 "いくつかの場合では、ある操作が管理者のみに制限されるべきです。そこで、次の例"
 "では、ユーザーが自分のフレーバーを作成できるようにするシナリオの場合に、この"
-"サンプルのポリシーファイルをどのように変更すればよいかを示します:"
+"サンプルのポリシーファイルをどのように変更すればよいかを示します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml613(title)
 msgid "Users that Disrupt Other Users"
