@@ -1,0 +1,793 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-21 08:33+0000\n"
+"Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:16
+msgid "Scaling"
+msgstr "スケーリング"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:17
+msgid ""
+"If your cloud is successful, eventually you must add resources to meet the "
+"increasing demand. OpenStack is designed to be horizontally scalable. Rather "
+"than switching to larger servers, you procure more servers. Ideally, you "
+"scale out and load balance among functionally-identical services."
+msgstr ""
+"あなたのクラウドが成功していれば、いずれ増加する需要に対応するためにリソース"
+"を追加しなければなりません。OpenStack は水平的にスケールできるよう設計されて"
+"います。より大きなサーバーに取り換えるのではなく、もっと多くのサーバーを購入"
+"すればよいのです。理想的には、機能的に同一のサービス間でスケールアウトして負"
+"荷分散します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:23
+msgid "The Starting Point"
+msgstr "出発点"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:24
+msgid ""
+"Determining the scalability of your cloud and how to improve it is an "
+"exercise with many variables to balance. No one solution meets everyone's "
+"scalability aims. However, it is helpful to track a number of metrics."
+msgstr ""
+"クラウドのスケーラビリティを決定することと、それをどう改善するのかは、多くの"
+"変数のバランスをとる問題です。万人のスケーラビリティ目標に適した"
+"解決策は存在しませんが、いくつかの指標を観察しておくと役に立つでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:29
+msgid ""
+"The starting point for most is the core count of your cloud. By applying "
+"some ratios, you can gather information about the number of virtual machines "
+"(VMs) you expect to run <code>((overcommit fraction × cores) / virtual cores "
+"per instance)</code>, how much storage is required <code>(flavor disk size "
+"× number of instances)</code>. You can use these ratios to determine how "
+"much additional infrastructure you need to support your cloud."
+msgstr ""
+"ほとんどの場合の出発点は、クラウドのコア数です。なんらかの比率を掛"
+"けることにより、実行される仮想マシン(VM)の数の期待値についての情報を得られま"
+"す。 <code>((オーバーコミット率 × cores) / インスタンスごとの仮想コア数)</"
+"code>, 必要なストレージ容量は <code>(フレーバーごとのディスクサイズ × インス"
+"タンス数)</code>. あなたのクラウドにどの程度の追加機材が必要なのか、これらの"
+"比率で判断することができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:37
+msgid "The default OpenStack flavors are:"
+msgstr "OpenStack のデフォルトフレーバー:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:41
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:171
+msgid "Name"
+msgstr "名前"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:42
+msgid "Virtual cores"
+msgstr "仮想コア数"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:43
+msgid "Memory"
+msgstr "メモリ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:44
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:188
+msgid "Disk"
+msgstr "ディスク"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:45
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:199
+msgid "Ephemeral"
+msgstr "エフェメラル"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:50
+msgid "m1.tiny"
+msgstr "m1.tiny"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:51
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:58
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:522
+msgid "1"
+msgstr "1"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:52
+msgid "512 MB"
+msgstr "512 MB"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:53
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:54
+msgid "0 GB"
+msgstr "0 GB"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:57
+msgid "m1.small"
+msgstr "m1.small"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:59
+msgid "2 GB"
+msgstr "2 GB"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:60
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:67
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:74
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:81
+msgid "10 GB"
+msgstr "10 GB"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:61
+msgid "20 GB"
+msgstr "20 GB"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:64
+msgid "m1.medium"
+msgstr "m1.medium"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:65
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:529
+msgid "2"
+msgstr "2"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:66
+msgid "4 GB"
+msgstr "4 GB"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:68
+msgid "40 GB"
+msgstr "40 GB"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:71
+msgid "m1.large"
+msgstr "m1.large"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:72
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:543
+msgid "4"
+msgstr "4"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:73
+msgid "8 GB"
+msgstr "8 GB"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:75
+msgid "80 GB"
+msgstr "80 GB"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:78
+msgid "m1.xlarge"
+msgstr "m1.xlarge"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:79
+msgid "8"
+msgstr "8"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:80
+msgid "16 GB"
+msgstr "16 GB"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:82
+msgid "160 GB"
+msgstr "160 GB"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:87
+msgid ""
+"Assume that the following set-up supports (200 / 2) × 16 = 1600 VM instances "
+"and requires 80 TB of storage for <code>/var/lib/nova/instances</code>:"
+msgstr ""
+"以下の構築例では、 (200 / 2) × 16 = 1600 VM インスタンスをサポートし、 "
+"<code>/var/lib/nova/instances</code> 以下に80TBのストレージ領域が必要なものと"
+"します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:92
+msgid "200 physical cores"
+msgstr "200物理コア"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:95
+msgid "Most instances are size m1.medium (2 virtual cores, 50 GB of storage)"
+msgstr ""
+"ほとんどのインスタンスのサイズは m1.medium (仮想コア数2、ストレージ50GB)とし"
+"ます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:99
+msgid ""
+"Default CPU over-commit ratio (<code>cpu_allocation_ratio</code> in nova."
+"conf) of 16:1"
+msgstr ""
+"デフォルトの CPU オーバーコミット率 (<code>cpu_allocation_ratio</code> in "
+"nova.conf) は 16:1 とします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:104
+msgid ""
+"However, you need more than the core count alone to estimate the load that "
+"the API services, database servers, and queue servers are likely to "
+"encounter. You must also consider the usage patterns of your cloud."
+msgstr ""
+"しかし、APIサービスやデータベースサーバー、MQサーバーがおそらく遭遇する負荷を"
+"見積もるためには、コア数以外の検討も行う必要があります。クラウドの利用パター"
+"ンも考慮しなければなりません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:108
+msgid ""
+"As a specific example, compare a cloud that supports a managed web hosting "
+"platform with one running integration tests for a development project that "
+"creates one VM per code commit. In the former, the heavy work of creating a "
+"VM happens only every few months, whereas the latter puts constant heavy "
+"load on the cloud controller. You must consider your average VM lifetime, as "
+"a larger number generally means less load on the cloud controller."
+msgstr ""
+"特定の例としては、マネージドWebホスティングプラットフォームをサポートするクラ"
+"ウドと、コードコミットごとに仮想マシンを１つ作成するような開発プロジェクト用の"
+"結合テストを動かしているクラウドを比較してみましょう。前者では、VMを作"
+"成する重い処理は数か月に"
+"一度しか発生しないのに対して、後者はクラウドコントローラーに定常的に重い処理"
+"を発生させます。一般論として、VMの平均寿命が長いということは、クラウドコント"
+"ローラーの負荷が軽いことを意味するため、平均的なVMの寿命を検討しなければなり"
+"ません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:117
+msgid ""
+"Aside from the creation and termination of VMs, you must consider the impact "
+"of users accessing the service — particularly on nova-api and its associated "
+"database. Listing instances garners a great deal of information and, given "
+"the frequency with which users run this operation, a cloud with a large "
+"number of users can increase the load significantly. This can even occur "
+"without their knowledge — leaving the OpenStack Dashboard instances tab open "
+"in the browser refreshes the list of VMs every 30 seconds."
+msgstr ""
+"仮想マシンの起動、停止以外では、ユーザーアクセス、特に nova-api と関連デー"
+"タベースへのアクセスの影響を検討しなければなりません。インスタンス一覧"
+"を取得する処理は膨大な量の情報を収集しますし、ユーザーがこの処理を頻繁に行うと、"
+"ユーザー数が多いクラウドではこの負荷が著しく上昇します。"
+"この負荷は、ユーザーが知らずに発生します。つまり、ブラウザのOpenStack ダッシュボー"
+"ドのインスタンスタブを開いたままにすると、30秒ごとに仮想マシンの一覧が更新さ"
+"れます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:127
+msgid ""
+"After you consider these factors, you can determine how many cloud "
+"controller cores you require. A typical 8 core, 8 GB of RAM server is "
+"sufficient for up to a rack of compute nodes — given the above caveats."
+msgstr ""
+"これらの要素を検討した後、クラウドコントローラーにどのくらいのコア数が必要な"
+"のか決定することができます。上記の注意事項において、典型的には、ラック1本"
+"分のコンピュートノードに対して8コア、メモリ8GBのサーバーで充分です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:131
+msgid ""
+"You must also consider key hardware specifications for the performance of "
+"user VMs. You must consider both budget and performance needs. Examples "
+"include: Storage performance (spindles/core), memory availability (RAM/"
+"core), network bandwidth (Gbps/core), and overall CPU performance (CPU/core)."
+msgstr ""
+"ユーザーの仮想マシンの性能のために、ハードウェアのキーになるスペックも考慮に入"
+"れなければなりません。予算と性能への需要を検討するのです。例としては、スト"
+"レージ性能(スピンドル / コア)、メモリ(メモリ量 / コア)、ネットワーク帯域"
+"(Gbps / コア)、そして全般的なCPU性能 (CPU / コア)です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:137
+msgid ""
+"For which metrics to track to determine how to scale your cloud, see <xref "
+"linkend=\"logging_monitoring\"/>."
+msgstr ""
+"クラウドをどうスケールさせるのか決定するために観察すべき指標については、"
+"<xref linkend=\"logging_monitoring\"/> を参照してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:143
+msgid "Adding Controller Nodes"
+msgstr "コントローラーノードの追加"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:144
+msgid ""
+"You can facilitate the horizontal expansion of your cloud by adding nodes. "
+"Adding compute nodes is straightforward — they are easily picked up by the "
+"existing installation. However, you must consider some important points when "
+"you design your cluster to be highly available."
+msgstr ""
+"クラウドの水平的な拡張は、ノード追加によって容易に実行することができます。"
+"コンピュートノードの追加は簡単です。新規のコンピュートノードは既存のシステムから簡単に"
+"認識されます。しかし、クラスタを高可用なものにするためには、設計の際にいくつ"
+"かの重要なポイントを検討しなければなりません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:150
+msgid ""
+"Recall that a cloud controller node runs several different services. You can "
+"install services that communicate only using the message queue internally "
+"— <code>nova-scheduler</code> and <code>nova-console</code> — on a new "
+"server for expansion. However, other integral parts require more care."
+msgstr ""
+"クラウドコントローラーは、いくつかの異なるサービスを実行することを思い出して"
+"ください。拡張のための新しいサーバーには、  <code>nova-scheduler</code> や "
+"<code>nova-console</code> のようなメッセージキューを用いて内部でのみ通信す"
+"るサービスをインストールすることができます。しかし、他の不可欠な部"
+"分についてはもっと注意が必要です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:157
+msgid ""
+"You should load balance user-facing services such as Dashboard, <code>nova-"
+"api</code> or the Object Storage proxy. Use any standard HTTP load balancing "
+"method (DNS round robin, hardware load balancer, software like Pound or "
+"HAProxy). One caveat with Dashboard is the VNC proxy, which uses the "
+"WebSocket protocol — something that a L7 load balancer might struggle with. "
+"See also <link title=\"Horizon session storage\" href=\"http://docs."
+"openstack.org/developer/horizon/topics/deployment.html#session-storage"
+"\">Horizon session storage</link> (http://docs.openstack.org/developer/"
+"horizon/topics/deployment.html#session-storage)."
+msgstr ""
+"ダッシュボードや<code>nova-api</code> 、Object Storage proxy のようなユーザー向"
+"けのサービスは負荷分散するべきです。任意の標準的なHTTP負荷分散方法 (DNSラウン"
+"ドロビン、ハードウェアロードバランサ、Pound や HAProxy のようなソフトウェア) "
+"を使ってください。ダッシュボードに関する注意事項の一つは、VNC proxy が使う "
+"WebSocket プロトコルです。これは、L7ロードバランサで苦労することになるかもしれませ"
+"ん。以下のリンクも参照してください。 <link title=\"Horizon session storage\" "
+"href=\"http://docs.openstack.org/developer/horizon/topics/deployment."
+"html#session-storage\">Horizon session storage</link> (http://docs.openstack."
+"org/developer/horizon/topics/deployment.html#session-storage)."
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:168
+msgid ""
+"You can configure some services, such as <code>nova-api</code> and "
+"<code>glance-api</code>, to use multiple processes by changing a flag in "
+"their configuration file — allowing them to share work between multiple "
+"cores on the one machine."
+msgstr ""
+"<code>nova-api</code> や <code>glance-api</code> のようなサービスは、設定"
+"ファイルのフラグを変更することによって複数プロセスで処理させるように設定でき"
+"ます。これによって一台のサーバの複数のコアの間で処理を共有できるようになりま"
+"す。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:173
+msgid ""
+"Several options are available for MySQL load balancing, and RabbitMQ has in-"
+"built clustering support. Information on how to configure these and many of "
+"the other services can be found in the<emphasis role=\"bold\"> Operations "
+"Section.</emphasis>"
+msgstr ""
+"MySQLの負荷分散にはいくつかのオプションがありますし、RabbitMQ はクラスタリン"
+"グ機能を持っています。これらや他の多くのサービスの設定方法に関する情報は"
+"<emphasis role=\"bold\">運用の章</emphasis>で見つけることができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:182
+msgid "Segregating Your Cloud"
+msgstr "クラウドの分離"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:183
+msgid ""
+"Use one of the following OpenStack methods to segregate your cloud: "
+"<emphasis>cells</emphasis>, <emphasis>regions</emphasis>, <emphasis>zones</"
+"emphasis> and <emphasis>host aggregates</emphasis>. Each method provides "
+"different functionality, as described in the following table:"
+msgstr ""
+"クラウドを分離するためには、次に挙げる OpenStack の方法を使います。 "
+"<emphasis>セル</emphasis>, <emphasis>リージョン</emphasis>, <emphasis>ゾーン"
+"</emphasis> そして<emphasis>ホストアグリゲート</emphasis> です。これらは以"
+"下の表で述べるように、それぞれ異なる機能を提供します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:193
+msgid "Cells"
+msgstr "セル"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:194
+msgid "Regions"
+msgstr "リージョン"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:195
+msgid "Availability Zones"
+msgstr "アベイラビリティゾーン"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:196
+msgid "Host Aggregates"
+msgstr "ホストアグリゲート"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:201
+msgid "Use when you need"
+msgstr "用途"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:204
+msgid ""
+"A single <glossterm>API endpoint</glossterm> for compute, or you require a "
+"second level of scheduling."
+msgstr ""
+"コンピュート資源に対する単一の <glossterm>API エンドポイント</glossterm>、もしくは"
+"２段階スケジューリングが必要な場合"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:208
+msgid ""
+"Discrete regions with separate API endpoints and no coordination between "
+"regions."
+msgstr ""
+"リージョンごとに別々のAPIエンドポイントが必要で、リージョン間で協調する必要が"
+"ない場合"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:211
+msgid ""
+"Logical separation within your nova deployment for physical isolation or "
+"redundancy."
+msgstr ""
+"物理的な隔離や冗長性のために、Nova デプロイメントの中で論理的な分離が必要な場合"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:214
+msgid "To schedule a group of hosts with common features."
+msgstr "共通の機能を持ったホストのグループに対してスケジューリングしたい場合"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:218
+msgid "Example"
+msgstr "例"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:220
+msgid ""
+"A cloud with multiple sites where you can schedule VMs \"anywhere\" or on a "
+"particular site."
+msgstr ""
+"複数サイトで構成されるクラウドで、仮想マシンを「任意のサイト」または"
+"特定のサイトにスケジューリングしたい場合"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:223
+msgid ""
+"A cloud with multiple sites, where you schedule VMs to a particular site and "
+"you want a shared infrastructure."
+msgstr ""
+"複数サイトで構成されるクラウドで、仮想マシンを特定のサイトに対してスケ"
+"ジューリングでき、かつ共有インフラを利用したい場合"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:226
+msgid "A single site cloud with equipment fed by separate power supplies."
+msgstr "単一サイトのクラウドで、分離された電源供給ラインを持つ設備で構成される場合"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:228
+msgid "Scheduling to hosts with trusted hardware support."
+msgstr ""
+"トラステッドコンピューティング機能に対応したホスト群に対してスケジューリングしたい"
+"場合"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:233
+msgid "Overhead"
+msgstr "オーバーヘッド"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:238
+msgid "A new service, <code>nova-cells</code>"
+msgstr "<code>nova-cells</code> という新しいサービスが必要"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:242
+msgid "Each cell has a full nova installation except <code>nova-api</code>"
+msgstr ""
+"各セルには <code>nova-api</code>　以外の全 nova サービスが必要"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:251
+msgid "A different API endpoint for every region."
+msgstr "リージョン毎に別々のAPIエンドポイントが必要"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:255
+msgid "Each region has a full nova installation."
+msgstr "各リージョンにフルセットのNovaサービスが必要"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:263
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:271
+msgid "Configuration changes to nova.conf"
+msgstr "nova.conf の設定変更が必要"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:278
+msgid "Shared services"
+msgstr "共有サービス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:281
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:283
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:284
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:286
+msgid "Keystone"
+msgstr "Keystone"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:281
+msgid "nova-api"
+msgstr "nova-api"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:284
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:286
+msgid "All nova services"
+msgstr "すべての Nova サービス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:291
+msgid ""
+"This array of options can be best divided into two — those which result in "
+"running separate nova deployments (cells and regions), and those which "
+"merely divide a single deployment (<glossterm>availability zone</glossterm>s "
+"and host aggregates)."
+msgstr ""
+"この選択肢の表は２つに分けると一番良く理解することができます。１つは、別々の "
+"Nova デプロイメントが動作します (セルとリージョン)。もう一つは、単一の "
+"Nova デプロイメントを分割するだけです。(<glossterm>アベイラビリテイゾーン</"
+"glossterm>とホストアグリゲート)."
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:298
+msgid "Cells and Regions"
+msgstr "セルとリージョン"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:299
+msgid ""
+"OpenStack Compute cells are designed to allow running the cloud in a "
+"distributed fashion without having to use more complicated technologies, or "
+"being invasive to existing nova installations. Hosts in a cloud are "
+"partitioned into groups called <emphasis>cells</emphasis>. Cells are "
+"configured in a tree. The top-level cell (\"API cell\") has a host that runs "
+"the <code>nova-api</code> service, but no <code>nova-compute</code> "
+"services. Each child cell runs all of the other typical <code>nova-*</code> "
+"services found in a regular installation, except for the <code>nova-api</"
+"code> service. Each cell has its own message queue and database service, and "
+"also runs <code>nova-cells</code> — which manages the communication between "
+"the API cell and child cells."
+msgstr ""
+"OpenStack Compute のセルは、より複雑な技術を持ち込むことなしに、また既"
+"存のNovaシステムに悪影響を与えることなしに、クラウドを分散された環境で運用す"
+"ることができるように設計されています。１つのクラウドの中のホストは、<emphasis>セル</emphasis>と呼"
+"ばれるグループに分割されます。セルは、木構造に構成されてます。最上位のセル "
+"(「API セル」) は<code>nova-api</code>サービスを実行するホストを持ちますが、"
+"<code>nova-compute</code> サービスを実行するホストは持ちません。それぞれの子"
+"セルは、<code>nova-api</code>サービス以外の、普通のNovaシステムに見られる他の"
+"すべての典型的な <code>nova-*</code> サービスを実行します。それぞれのセルは自"
+"分のメッセージキューとデータベースサービスを持ち、またAPIセルと子セルの間の"
+"通信を制御する<code>nova-cells</code>サービスを実行します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:315
+msgid ""
+"This allows for a single API server being used to control access to multiple "
+"cloud installations. Introducing a second level of scheduling (the cell "
+"selection), in addition to the regular <code>nova-scheduler</code> selection "
+"of hosts, provides greater flexibility to control where virtual machines are "
+"run."
+msgstr ""
+"これによって、複数のクラウドシステムに対するアクセスを、１つのAPIサーバで制御"
+"することができます。通常の<code>nova-scheduler</code>によるホストの選択に加え"
+"て、第二段階のスケジューリング(セルの選択)を導入することにより、仮想マシンを"
+"実行する場所の制御の柔軟性が大きく向上します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:322
+msgid ""
+"Contrast this with regions. Regions have a separate API endpoint per "
+"installation, allowing for a more discrete separation. Users wishing to run "
+"instances across sites have to explicitly select a region. However, the "
+"additional complexity of a running a new service is not required."
+msgstr ""
+"セルをリージョンと比較してみましょう。リージョンは、クラウドごとに別々のAPIエ"
+"ンドポイントを持ち、より関連性の低い分離を実現できます。サイトをまたがってイ"
+"ンスタンスを実行したいユーザーは、明示的にリージョンを指定しなければなりませ"
+"ん。しかし、新しいサービスを実行するという、さらなる複雑さは必要ありません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:328
+msgid ""
+"The OpenStack Dashboard (Horizon) currently only uses a single region, so "
+"one dashboard service should be run per region. Regions are a robust way to "
+"share some infrastructure between OpenStack Compute installations, while "
+"allowing for a high degree of failure tolerance."
+msgstr ""
+"現在のところ、OpenStack ダッシュボード (Horizon)　は１つのリージョンだけを操"
+"作対象とします。したがって、リージョンごとにダッシュボードサービスを実行する"
+"べきです。リージョンは、高度な故障耐性を実現しつつ、複数の OpenStack Compute "
+"のシステム間でインフラのいくらかの部分を共有するための堅牢な方法です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:336
+msgid "Availability Zones and Host Aggregates"
+msgstr "アベイラビリティゾーンとホストアグリゲート"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:337
+msgid ""
+"Both availability zones and host aggregates partition a single nova "
+"deployment. While seeming similar to configure, host aggregates and "
+"availability zones differ in their intended use. The former allows the "
+"partition of OpenStack Compute deployments into logical groups for load "
+"balancing and instance distribution, the latter are used to provide some "
+"form of physical isolation and redundancy from other availability zones "
+"(such as by using separate power supply or network equipment). Host "
+"aggregates can be regarded as a mechanism to further partitioning an "
+"availability zone, i.e. into multiple groups of hosts that share common "
+"resources like storage and network, or have a special property such as "
+"trusted computing hardware."
+msgstr ""
+"アベイラビリティゾーンとホストアグリゲートは、いずれも単一の Nova デプロ"
+"イメントを分割します。設定方法は同じように見えますが、ホストアグリゲー"
+"トはその使用目的の点でアベイラビリティゾーンとは異なります。ホストアグリゲートは、"
+"負荷分散とインスタンスの分散配置のために、OpenStack Compute のデプロイメントを"
+"論理グループに分割します。アベイラビリティゾーンは、(独立した電源系統やネットワーク装置などを使って)"
+"他のアベイラビリティゾーンとの物理的な分離や冗長性を実現するために使用します。"
+"ホストアグリゲート"
+"は、アベリラビリティゾーンをさらに分割するしくみだと考えることができます。"
+"すなわち、ストレージやネットワークのようなリソースを共有するホストや、トラス"
+"テッドコンピューティングハードウェアのような特別な性質を備えたホストを複"
+"数のグループに分割するしくみです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:352
+msgid ""
+"A common use of host aggregates is to provide information for use with the "
+"<code>nova-scheduler</code>. For example, limiting specific flavours or "
+"images to a subset of hosts."
+msgstr ""
+"ホストアグリゲートのよくある使い方は<code>nova-scheduler</code>サービスに情"
+"報を提供することです。例えば、特定のフレーバーやイメージの実行を一部のホスト"
+"に制限することなどです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:357
+msgid ""
+"Availability zones allow you to arrange sets of either OpenStack Compute or "
+"OpenStack Block Storage hosts into logical groups. You define the "
+"availability zone that a given Compute or block Storage host is in locally "
+"on each server. Availability zones are commonly used to identify a sets of "
+"servers that have some common attribute. For instance, if some of the racks "
+"in your data center are on a separate power source, you may put servers in "
+"those racks in their own availability zone. Availability zones can also be "
+"helpful for separating out different classes of hardware. This is especially "
+"helpful with OpenStack Block Storage where you may have storage servers with "
+"different types of hard drives. When provisioning resources, users can "
+"specify what availability zone they would like their instance or volume to "
+"come from. This allows cloud consumers to ensure that their application "
+"resources are spread across multiple disparate machines to achieve high "
+"availability in the event of hardware failure."
+msgstr ""
+"アベイラビリティゾーンによって、OpenStack Compute ホストや OpenStack Block "
+"Storage ホストの集合をそれぞれ論理的なグループに分割して配置することができます。ある "
+"Compute や Block Storage のホストが各サーバーで局所的になるようにアベリラビリ"
+"ティゾーンを定義します。一般に、アベイラビリティゾーンは共通の性質をもつ"
+"サーバの集合を識別するために使われます。例えば、データセンタの一部のラック群"
+"が別々の電源系統の上にあるとしたら、それらのラック群に設置されたサーバを独立"
+"したアベイラビリティゾーンに配置してもよいでしょう。また、アベイラビリ"
+"ティゾーンは異なるクラスのハードウェアを分離するのに使うことができます。これは特"
+"に、異なるタイプのハードディスクを持つストレージサーバーで構成される "
+"OpenStack Block Storage の場合に有用です。ユーザーは、リソースを割り当てる"
+"際、どのアベイラビリティゾーンのインスタンスやボリュームを使いたいのか、指"
+"定することができます。これによって、アプリケーションのリソースを異なるマシンに"
+"分散することを保証でき、ハードウェア故障が発生しても高可用性を達成することが"
+"できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:380
+msgid "Scalable Hardware"
+msgstr "スケーラブルハードウェア"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:381
+msgid ""
+"While several resources already exist to help with deploying and installing "
+"OpenStack, it's very important to make sure you have your deployment planned "
+"out ahead of time. This guide expects at least a rack has been set aside for "
+"the OpenStack cloud but also offers suggestions for when and what to scale."
+msgstr ""
+"OpenStack をインストールしてデプロイするのに有用な情報源が既にい"
+"くらか存在していますが、自分のデプロイメントで事前に計画を立てておくことは非常に重要で"
+"す。このガイドでは、OpenStack用にラックを少なくとも１本用意しておくことを想定"
+"してしますが、いつ、何をスケールさせるのかについてのアドバイスも行っています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:388
+msgid "Hardware Procurement"
+msgstr "ハードウェア調達"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:389
+msgid ""
+"“The Cloud” has been described as a volatile environment where servers can "
+"be created and terminated at will. While this may be true, it does not mean "
+"that your servers must be volatile. Ensuring your cloud’s hardware is stable "
+"and configured correctly means your cloud environment remains up and "
+"running. Basically, put effort into creating a stable hardware environment "
+"so you can host a cloud that users may treat as unstable and volatile."
+msgstr ""
+"「クラウド」とは、サーバーが作成されたり終了されたりするという揮発性の環境で"
+"あると説明されてきました。これは正しいかもしれませんが、あなたのサーバーが揮"
+"発性でなければならないという意味ではありません。クラウドを構成するハードウェ"
+"アを安定させ、正しく設定されていることを保障するということは、あなたのクラウ"
+"ド環境が稼働中であり動作していることを意味します。基本的に、ユーザーが必要な時に"
+"確保でき揮発性なものとして扱えるようなクラウドを運営できるよう、"
+"安定したハードウェア環境を作ることに注力してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:398
+msgid ""
+"OpenStack can be deployed on any hardware supported by an OpenStack-"
+"compatible Linux distribution, such as Ubuntu 12.04 as used in this books' "
+"reference architecture."
+msgstr ""
+"OpenStack は、この本の参考アーキテクチャで使われている Ubuntu "
+"12.04 のように、OpenStack と互換性のある Linux ディストリビューションでサポー"
+"トされたハードウェアにデプロイできます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:402
+msgid ""
+"Hardware does not have to be consistent, but should at least have the same "
+"type of CPU to support instance migration."
+msgstr ""
+"ハードウェアはまったく同じでなければいけないことはありませんが、少なくとも"
+"インスタンスマイグレーションが可能であるような同じタイプのCPUを装備している"
+"べきです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:405
+msgid ""
+"The typical hardware recommended for use with OpenStack is \"commodity\". "
+"That is, very standard \"value-for-money\" offerings that most hardware "
+"vendors stock. It should be straightforward to divide your procurement into "
+"building blocks such as \"compute,\" \"object storage,\" and \"cloud "
+"controller,\" and request as many of these as desired. Alternately should "
+"you be unable to spend more, if you have existing servers, provided they "
+"meet your performance requirements and virtualization technology, these are "
+"quite likely to be able to support OpenStack."
+msgstr ""
+"OpenStack に使うのに推奨される典型的なハードウェアは「コモディティ」です。つ"
+"まり、とても標準的な「金額に見合う価値」をもった、ほとんどのハードウェアベン"
+"ダが提供するようなものです。調達を「コンピュート」や｢オブジェクトス"
+"トレージ」そして「クラウドコントローラー」のような構成要素に分割し、それぞれ必要な数だけ"
+"要求するのは分かりやすい方法でしょう。これ以上費用をかけることができない場合でも、"
+"代わりに、もし既存のサーバーがあって、これらが性能や仮想化技術の要件を満たしていれば、"
+"高い確率で OpenStack を動作させられます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:418
+msgid "Capacity Planning"
+msgstr "キャパシティプランニング"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:419
+msgid ""
+"OpenStack is designed to increase in size in a straightforward manner. "
+"Taking into account the considerations in the <emphasis role=\"bold"
+"\">Scalability</emphasis> chapter — particularly on the sizing of the cloud "
+"controller, it should be possible to procure additional compute or object "
+"storage nodes as needed. New nodes do not need to be the same specification, "
+"or even vendor, as existing nodes."
+msgstr ""
+"OpenStackは、単純な方法でサイズを拡大できるように設計されています。 "
+"<emphasis role=\"bold\">スケーラビリティ</emphasis> の章の、特にクラウドコン"
+"トローラーのサイジングに関する検討を考慮に入れ、必要に応じて追加のコンピュー"
+"トノードやオブジェクトストレージノードを調達できるようにすべきです。新しいノードは、"
+"既存ノードと同じスペックである必要はありませんし、同じベンダーである必"
+"要すらありません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:428
+msgid ""
+"For compute nodes, <code>nova-scheduler</code> will take care of differences "
+"in sizing to do with core count and RAM amounts, however you should consider "
+"the user experience changes with differing CPU speeds. When adding object "
+"storage nodes, a <glossterm>weight</glossterm> should be specified that "
+"reflects the <glossterm>capability</glossterm> of the node."
+msgstr ""
+"コンピュートノードについては、<code>nova-scheduler</code> がコア数やメモリ量"
+"のサイジングに関する違いを吸収しますが、CPUの速度が違うことによって、ユーザーの"
+"使用感が変わることを考慮するべきです。オブジェクトストレージノードを"
+"追加する際には、 そのノードの<glossterm>capability</glossterm> を反映する"
+"<glossterm>weight</glossterm> を指定するべきです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:436
+msgid ""
+"Monitoring the resource usage and user growth will enable you to know when "
+"to procure. The <emphasis role=\"bold\">Monitoring</emphasis> chapter "
+"details some useful metrics."
+msgstr ""
+"リソース利用状況の監視とユーザー増加の監視によって、（追加機材の）調達時期を知ること"
+"ができます。<emphasis role=\"bold\">監視</emphasis>の章でいくつかの有用な監視"
+"項目を詳しく解説します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:442
+msgid "Burn-in Testing"
+msgstr "エージング試験"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:443
+msgid ""
+"Server hardware's chance of failure is high at the start and the end of its "
+"life. As a result, much effort in dealing with hardware failures while in "
+"production can be avoided by appropriate burn-in testing to attempt to "
+"trigger the early-stage failures. The general principle is to stress the "
+"hardware to its limits. Examples of burn-in tests include running a CPU or "
+"disk benchmark for several days."
+msgstr ""
+"サーバーは、そのライフタイムの最初と最後にハードウェア故障の確率が高くなりま"
+"す。結論として、初期故障を誘発する適切なエージングテストを行うことによって、"
+"運用中の故障に対応するための多くの労力を避けることができます。一般的な原則"
+"は、限界まで負荷をかけることです。エージング試験の例としては、数日間にわたっ"
+"てCPUやディスクベンチマークを走行させることが含まれます。"
