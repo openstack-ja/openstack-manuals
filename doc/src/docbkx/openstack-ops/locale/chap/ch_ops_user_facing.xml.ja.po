@@ -1,0 +1,1573 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-21 08:33+0000\n"
+"Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2583
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:857
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:878
+msgid "snapshot"
+msgstr "スナップショット"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:343
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:27
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:829
+msgid "Images"
+msgstr "イメージ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:41
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:171
+msgid "Name"
+msgstr "名前"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:44
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:188
+msgid "Disk"
+msgstr "ディスク"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:45
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:199
+msgid "Ephemeral"
+msgstr "エフェメラル"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:123
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:141
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:410
+msgid "Block Storage"
+msgstr "ブロックストレージ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:174
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:485
+msgid "Instances"
+msgstr "インスタンス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:16
+msgid "User-facing Operations"
+msgstr "ユーザーによる運用"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:17
+msgid ""
+"This guide is for OpenStack operators and does not seek to be an exhaustive "
+"reference for users, but as an operator it is important that you have a "
+"basic understanding of how to use the cloud facilities. This chapter looks "
+"at OpenStack from a basic user perspective, which helps you understand your "
+"users' needs and determine when you get a trouble ticket whether it is a "
+"user issue or a service issue. The main concepts covered are images, "
+"flavors, security groups, blocks storage and instances."
+msgstr ""
+"このガイドは OpenStack の運用者向けです。ユーザー向けの膨大なリファレンスを目"
+"指すものではありません。しかし運用者として、クラウド設備を使用する方法につい"
+"て基本的な理解を持つことが重要です。本章は、基本的なユーザーの観点から "
+"OpenStack を見ていきます。ユーザーが必要とすることを理解する手助けになりま"
+"す。また、トラブルのチケットを受け取ったときに、ユーザーの問題またはサービス"
+"の問題のどちらかを判断する手助けになります。取り扱っている主な概念はイメー"
+"ジ、インスタンスタイプ、セキュリティグループ、ブロックストレージおよびインス"
+"タンスです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:29
+msgid ""
+"OpenStack images can often be thought of as \"virtual machine templates\". "
+"Images can also be standard installation mediums like ISO images. "
+"Essentially, they contain bootable file systems which are used to launch "
+"instances."
+msgstr ""
+"OpenStack のイメージはしばしば \"仮想マシンテンプレート\" と考えることができま"
+"す。イメージは ISO イメージのような標準的なインストールメディアの場合もありま"
+"す。基本的に、インスタンスを起動するために使用されるブート可能なファイルシス"
+"テムを含みます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:35
+msgid "Adding Images"
+msgstr "イメージの追加"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:36
+msgid ""
+"Several pre-made images exist and can easily be imported into the Image "
+"Service. A common image to add is the CirrOS image which is very small and "
+"used for testing purposes. To add this image, simply do:"
+msgstr ""
+"いくつかの構築済みイメージが存在します。簡単に Image Service の中にインポー"
+"トできます。追加する一般的なイメージは、非常に小さく、テスト目的に使用される "
+"CirrOS イメージです。このイメージを追加するには、単に次のようにします:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:41
+msgid ""
+"The <code>glance image-create</code> command provides a large set of options "
+"to give your image. For example, the <code>min-disk</code> option is useful "
+"for images that require root disks of a certain size (for example, large "
+"Windows images). To view these options, do:"
+msgstr ""
+"<code>glance image-create</code> コマンドでは、イメージに指定できる多数のオプションが"
+"用意されています。たとえば、<code>min-disk</code> オプションは、特定の容量のルート"
+"ディスクを必要とするイメージ (例: 大きな Windows イメージ) のために有用です。"
+"これらのオプションを表示するには、次のようにします:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:48
+msgid ""
+"The <code>location</code> option is important to note. It does not copy the "
+"entire image into Glance, but reference an original location to where the "
+"image can be found. Upon launching an instance of that image, Glance "
+"accesses the image from the location specified."
+msgstr ""
+"<code>location</code> オプションは注意する意味があります。Glance にイメー"
+"ジ全体のコピーを行わず、そのイメージがある元の位置への参照を保持します。イ"
+"メージのインスタンスを起動するとき、Glance が指定された場所からイメージにアク"
+"セスします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:54
+msgid ""
+"The <code>copy-from</code> option copies the image from the location "
+"specified into the <code>/var/lib/glance/images</code> directory. The same "
+"thing is done when using the STDIN redirection such as shown in the example."
+msgstr ""
+"<code>copy-from</code> オプションは、指定された位置から <code>/var/lib/glance/"
+"images</code> ディレクトリの中にコピーします。例に示されたように STDIN リダイ"
+"レクションを使用するときに、同じことが実行されます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:59
+msgid "Run the following command to view the properties of existing images:"
+msgstr ""
+"既存のイメージのプロパティを表示するために、以下のコマンドを実行します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:64
+msgid "Deleting Images"
+msgstr "イメージの削除"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:65
+msgid "To delete an image, just execute:"
+msgstr "イメージを削除するには、ただ次のとおり実行します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:68
+msgid ""
+"Deleting an image does not affect instances or snapshots that were based off "
+"the image."
+msgstr ""
+"イメージを削除しても、そのイメージがベースになっているインスタンスやスナップショットには"
+"影響がありません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:73
+msgid "Other CLI Options"
+msgstr "他の CLI オプション"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:74
+msgid "A full set of options can be found using:"
+msgstr "オプションの完全な一覧は、以下を使用して見つけられます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:76
+msgid ""
+"or the <link href=\"http://docs.openstack.org/cli/quick-start/content/glance-"
+"cli-reference.html\">OpenStack Image Service</link> CLI Guide. (http://docs."
+"openstack.org/cli/quick-start/content/glance-cli-reference.html)"
+msgstr ""
+"または <link href=\"http://docs.openstack.org/cli/quick-start/content/glance-"
+"cli-reference.html\">OpenStack Image Service</link> CLI Guide. (http://docs."
+"openstack.org/cli/quick-start/content/glance-cli-reference.html)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:82
+msgid "The Image Service and the Database"
+msgstr "イメージサービスおよびデータベース"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:83
+msgid ""
+"The only thing that Glance does not store in a database is the image itself. "
+"The Glance database has two main tables:"
+msgstr ""
+"Glance がデータベースに保存しない唯一のものがイメージそのものです。Glance  "
+"データベースは主な 2 つのテーブルを持ちます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:88
+msgid "images"
+msgstr "images"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:91
+msgid "image_properties"
+msgstr "image_properties"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:94
+msgid ""
+"Working directly with the database and SQL queries can provide you with "
+"custom lists and reports of Glance images. Technically, you can update "
+"properties about images through the database, although this is not generally "
+"recommended."
+msgstr ""
+"データベースと SQL クエリーを直接使うことで、Glance イ"
+"メージの独自のリストやレポートを得ることができます。一般には、推奨されませんが、技術的にはデータベー"
+"ス経由でイメージのプロパティを更新できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:101
+msgid "Example Image Service Database Queries"
+msgstr "イメージサービスのデータベースクエリーの例"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:102
+msgid ""
+"One interesting example is modifying the table of images and the owner of "
+"that image. This can be easily done if you simply display the unique ID of "
+"the owner, this example goes one step further and displays the readable name "
+"of the owner:"
+msgstr ""
+"興味深い例の一つは、イメージとそのイメージの所有者の表の表示内容を変更するこ"
+"とです。これは、所有者のユニーク ID を表示するようにするだけで実現できます。この"
+"例はさらに一歩進め、所有者の読みやすい形式の名前を表示します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:108
+msgid "Another example is displaying all properties for a certain image:"
+msgstr ""
+"もう一つの例は、特定のイメージに関するすべてのプロパティを表示することです:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:116
+msgid "Flavors"
+msgstr "フレーバー"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:118
+msgid ""
+"Virtual hardware templates are called \"flavors\" in OpenStack, defining "
+"sizes for RAM, disk, number of cores and so on. The default install provides "
+"a range of five flavors. These are configurable by admin users (this too is "
+"configurable and may be delegated by redefining the access controls for "
+"<code>compute_extension:flavormanage</code> in <code>/etc/nova/policy.json</"
+"code> on the <code>nova-api</code> server). To get a list of available "
+"flavors on your system run:"
+msgstr ""
+"仮想ハードウェアのテンプレートは、OpenStack において \"フレーバー\" と呼ばれ"
+"ます。これは、RAM、ディスク、コア数などを定義します。標準のインストールでは"
+"、5 種類のフレーバーが提供されます。これらは管理ユーザーにより編集可能です "
+"(これは設定可能であり、<code>nova-api</code> サーバーにおいて <code>/etc/"
+"nova/policy.json</code> にある <code>compute_extension:flavormanage</code> に"
+"対するアクセス制御を再定義することにより権限委譲できます)。お使いのシステムに"
+"おいて利用可能なフレーバーの一覧を取得するには、次のとおり実行します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:139
+msgid ""
+"The <code>nova flavor-create</code> command allows authorized users to "
+"create new flavors. Additional flavor manipulation commands can be shown "
+"with the command: <placeholder-1/>"
+msgstr ""
+"<code>nova flavor-create</code> コマンドにより、権限のあるユーザーが新しいフ"
+"レーバーを作成できます。さらなるフレーバーの操作コマンドは次のコマンドを用い"
+"て表示できます: <placeholder-1/>"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:144
+msgid "Flavors define a number of elements:"
+msgstr "フレーバーは数多くの要素を定義します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:152
+msgid "Column"
+msgstr "項目"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:157
+msgid "Description"
+msgstr "説明"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:163
+msgid "ID"
+msgstr "ID"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:166
+msgid "A unique numeric id."
+msgstr "一意な数値 ID。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:174
+msgid ""
+"a descriptive name. xx.size_name is conventional not required, though some "
+"third party tools may rely on it."
+msgstr ""
+"補足的な名前。xx.size_name が慣習的ですが、必須ではありません。いくつかのサー"
+"ドパーティツールはその名称に依存しているかもしれません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:180
+msgid "Memory_MB"
+msgstr "MB メモリー"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:183
+msgid "Memory_MB: virtual machine memory in megabytes."
+msgstr "Memory_MB: メガバイト単位の仮想マシンメモリー。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:191
+msgid ""
+"Virtual root disk size in gigabytes. This is an ephemeral disk the base "
+"image is copied into. When booting from a persistent volume it is not used. "
+"The \"0\" size is a special case which uses the native base image size as "
+"the size of the ephemeral root volume."
+msgstr ""
+"ギガバイト単位の仮想ルートディスク容量。これはベースイメージがコピーされる一"
+"時ディスクです。永続的なボリュームからブートするとき、これは使用されませ"
+"ん。\"0\" という容量は特別な値で、一時ルートボリュームの容量としてベースイメージのネ"
+"イティブ容量をそのまま使用することを意味します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:202
+msgid ""
+"Specifies the size of a secondary ephemeral data disk. This is an empty, "
+"unformatted disk and exists only for the life of the instance."
+msgstr ""
+"二次的な一時データディスクの容量を指定します。これは空の、フォーマットされて"
+"いないディスクです。インスタンスの生存期間だけ存在します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:209
+msgid "Swap"
+msgstr "スワップ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:212
+msgid "Optional swap space allocation for the instance."
+msgstr "インスタンスに割り当てられるスワップ空間。これはオプションです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:217
+msgid "VCPUs"
+msgstr "仮想 CPU"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:220
+msgid "Number of virtual CPUs presented to the instance."
+msgstr "インスタンスに存在する仮想 CPU 数。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:225
+msgid "RXTX_Factor"
+msgstr "RXTX_Factor"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:228
+msgid ""
+"Optional property allows created servers to have a different bandwidth cap "
+"than that defined in the network they are attached to. This factor is "
+"multiplied by the rxtx_base property of the network. Default value is 1.0 "
+"(that is, the same as attached network)."
+msgstr ""
+"作成したサーバーが接続されたネットワークにおける定義と異なる帯域制限を持てる"
+"ようにするプロパティ。これはオプションです。この要素はネットワークの "
+"rxtx_base プロパティの倍数です。既定の値は 1.0 です (つまり、接続されたネット"
+"ワークと同じです)。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:236
+msgid "Is_Public"
+msgstr "Is_Public"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:239
+msgid ""
+"Boolean value, whether flavor is available to all users or private to the "
+"tenant it was created in. Defaults to True."
+msgstr ""
+"論理値。フレーバーがすべてのユーザーに利用可能か、または作成されたプロジェク"
+"ト内のみであるか。標準で真 (True) です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:245
+msgid "extra_specs"
+msgstr "extra_specs"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:248
+msgid ""
+"Additional optional restrictions on which compute nodes the flavor can run "
+"on. This is implemented as key/value pairs that must match against the "
+"corresponding key/value pairs on compute nodes. Can be used to implement "
+"things like special resources (such as flavors that can only run on compute "
+"nodes with GPU hardware)."
+msgstr ""
+"フレーバーを実行できるコンピュートノードに関する追加の制限。これはオプションで"
+"す。これは、コンピュートノードにおいて対応するキー/バリューペアとして実装され、"
+"コンピュートノードでの対応するキー/バリューペアと一致するものでなければいけません。(GPU ハードウェアを持つコンピュートノー"
+"ドのみにおいて実行するフレーバーのように) 特別なリソースのようなものを実装"
+"するために使用できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:258
+msgid "How do I modify an existing flavor?"
+msgstr "どのように既存のフレーバーを変更しますか?"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:259
+msgid ""
+"Unfortunately, OpenStack does not provide an interface for modifying "
+"flavors, only for creating and deleting them. The OpenStack Dashboard "
+"simulates the ability to modify a flavor by deleting an existing flavor and "
+"creating a new one with the same name."
+msgstr ""
+"残念ながら、OpenStack ではフレーバーを変更するインターフェースは提供されておらず、"
+"作成および削除のインターフェースだけがあります。OpenStack ダッシュボードは、既存のフ"
+"レーバーを削除し、同じ名前の新しいものを作成することにより、フレーバーを変更"
+"する機能を模倣しています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:269
+msgid "Security groups"
+msgstr "セキュリティグループ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:270
+msgid ""
+"One of the most common new user issues with OpenStack is failing to set "
+"appropriate security group when launching an instance and are then unable to "
+"contact the instance on the network."
+msgstr ""
+"OpenStack の新しいユーザーが非常によく経験する問題の一つが、インスタンスを起"
+"動するときに適切なセキュリティグループを設定できず、ネットワーク経由でインス"
+"タンスにアクセスできないことです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:274
+msgid ""
+"Security groups are sets of IP filter rules that are applied to an "
+"instance's networking. They are project specific and project members can "
+"edit the default rules for their group and add new rules sets. All projects "
+"have a \"default\" security group which is applied to instances which have "
+"no other security group defined, unless changed this security group denies "
+"all incoming traffic."
+msgstr ""
+"セキュリティグループは、インスタンスのネットワークに適用される、IP フィルター"
+"ルールの組です。それらはプロジェクト固有です。プロジェクトメンバーがそれらの"
+"グループの標準ルールを編集でき、新しいルールを追加できます。すべてのプロジェ"
+"クトが \"default\" セキュリティグループを持ちます。"
+"他のセキュリティグループが定義されていないインスタンスには \"default\" セキュリティグループが適用されます。"
+"\"default\" セキュリティグループは、ルールを変更しない限り、すべての受信トラフィックを拒否します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:281
+msgid ""
+"The <code>nova.conf</code> option <code>allow_same_net_traffic</code> (which "
+"defaults to true) globally controls whether the rules applies to hosts which "
+"share a network. When set to true, hosts on the same subnet are not filtered "
+"and are allowed to pass all types of traffic between them. On a flat "
+"network, this allows all instances from all projects unfiltered "
+"communication. With VLAN networking, this allows access between instances "
+"within the same project. If <code>allow_same_net_traffic</code> is set to "
+"false, security groups are enforced for all connections, in this case it is "
+"possible for projects to simulate the <code>allow_same_net_traffic</code> by "
+"configuring their default security group to allow all traffic from their "
+"subnet."
+msgstr ""
+"<code>nova.conf</code> のオプション <code>allow_same_net_traffic</code> (標準"
+"で true) は、同じネットワークを共有するホストにルールを適用するか"
+"を制御します。このオプションはシステム全体に影響するグローバルオプションです。true に設定したとき、同じサブネットにあるホストはフィルターされ"
+"ず、それらの間ですべての種類の通信が通過できるようになります。フラットなネッ"
+"トワークでは、これにより、全プロジェクトの全インスタンスが通信をフィルターさ"
+"れなくなります。VLAN ネットワークでは、これにより、同じプロジェクト内のインス"
+"タンス間でアクセスが許可されます。<code>allow_same_net_traffic</code> が "
+"false に設定されていると、セキュリティグループがすべての通信に対して強制され"
+"ます。この場合、既定のセキュリティグループをそれらのサブネットからのすべての"
+"通信を許可するよう設定することにより、プロジェクトが "
+"<code>allow_same_net_traffic</code> をシミュレートできます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:296
+msgid ""
+"Security groups for the current project can be found on the Horizon "
+"dashboard under \"Access &amp; Security\" to see details of an existing "
+"group select the \"edit\" action for that security group. Obviously "
+"modifying existing groups can be done from this \"edit\" interface. There is "
+"a \"Create Security Group\" button on the main Access &amp; Security page "
+"for creating new groups. We discuss the terms used in these fields when we "
+"explain the command line equivalents."
+msgstr ""
+"現在のプロジェクトのセキュリティグループが、Horizon ダッシュボードの \"アクセ"
+"ス &amp; セキュリティ\" にあります。既存のグループの詳細を表示するには、セ"
+"キュリティグループの \"編集\" を選択します。自明ですが、"
+"この \"編集\" インターフェースから既存のグループを変更できます。新しいグループ"
+"を作成するための \"セキュリティグループの作成\" ボタンが、メインの \"アクセス &amp; セキュリティ\" ページに"
+"あります。同等のコマンドラインを説明するとき、"
+"これらの項目において使用される用語について説明します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:305
+msgid ""
+"From the command line you can get a list of security groups for the project "
+"you're acting in using the nova command:"
+msgstr ""
+"コマンドラインからは、以下の nova コマンドを使って、現在のプロジェクト"
+"のセキュリティグループのリストを取得できます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:317
+msgid "To view the details of the \"open\" security group:"
+msgstr "\"open\" セキュリティグループの詳細を表示するには:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:328
+msgid ""
+"These rules are all \"allow\" type rules as the default is deny. The first "
+"column is the IP protocol (one of icmp, tcp, or udp) the second and third "
+"columns specify the affected port range. The third column specifies the IP "
+"range in CIDR format. This example shows the full port range for all "
+"protocols allowed from all IPs."
+msgstr ""
+"標準で拒否されるので、これらのルールはすべて \"許可\" 形式のルールです。1 番"
+"目の項目は IP プロトコル (icmp, tcp, udp のどれか) です。2 番目と 3 番目の項"
+"目は対象となるポート番号の範囲を指定します。4 番目の項目は CIDR 形式の IP アドレスの範囲を指定"
+"します。この例では、すべてのプロトコルの全ポート番号について、すべての IP からのトラフィック"
+"を許可しています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:334
+msgid ""
+"As noted in the previous chapter the number of rules per security group is "
+"controlled by the quota_security_group_rules and the number of allowed "
+"security groups per project is controlled by the quota_security_groups "
+"quota. "
+msgstr ""
+"前の章で述べたとおり、セキュリティグループごとのルール数は "
+"quota_security_group_rules により制御されます。また、プロジェクトごとに許可さ"
+"れるセキュリティグループ数は quota_security_groups クォータにより制御されま"
+"す。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:339
+msgid ""
+"When adding a new security group you should pick a descriptive but brief "
+"name. This name shows up in brief descriptions of the instances that use it "
+"where the longer description field often does not. Seeing that an instance "
+"is using security group \"http\" is much easier to understand than "
+"\"bobs_group\" or \"secgrp1\"."
+msgstr ""
+"新しいセキュリティグループを追加するとき、内容を表す簡潔な名前をつけるべ"
+"きです。この名前はインスタンスの簡単な説明など、より長い説明フィールドが"
+"使用されないところで使用されます。インスタンスがセキュリティグループ \"http"
+"\" を使っているのを見れば、\"bobs_group\" や \"secgrp1\" よりはずっと理解しやすいことでしょう"
+"。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:345
+msgid ""
+"As an example, let's create a security group that allows web traffic "
+"anywhere on the internet. We'll call this \"global_http\" which is clear and "
+"reasonably concise, encapsulating what is allowed and from where. From the "
+"command line:"
+msgstr ""
+"例のとおり、インターネットのどこからでも Web 通信を許可するセキュリティグルー"
+"プを作成しましょう。このグループを \"global_http\" と呼ぶことにします。許可されるものと許可されるところを要約した、明白で"
+"簡潔な名前になっています。コマンドラインから:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:355
+msgid ""
+"This creates the empty security group to make it do what we want we need to "
+"add some rules."
+msgstr ""
+"やりたいことを行うための空のセキュリティグループが作成されます。いくつかのルールを追加する必要が"
+"あります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:365
+msgid ""
+"Note that the arguments are positional and the \"from-port\" and \"to-port\" "
+"arguments specify the local port range connections are allowed to not source "
+"and destination ports of the connection. More complex rule sets can be built "
+"up through multiple invocations of nova secgroup-add-rule. For example if "
+"you want to pass both http and https traffic:"
+msgstr ""
+"引数の順番が決まっていることに注意してください。そして、\"from-port\" と "
+"\"to-port\" の引数は許可されるローカルのポート範囲を指定し、接続の送信元ポー"
+"トと宛先ポートではないことに注意してください。"
+"nova secgroup-add-rule を複数回呼び出すことで、より複雑なルールセットを構成できます。たとえば、http と "
+"https の通信を通過させたければ:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:380
+msgid ""
+"Despite only outputting the newly added rule this operation is additive:"
+msgstr ""
+"新しく追加されたルールのみが出力されますが、この操作は追加操作です:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:389
+msgid ""
+"The inverse operation is called secgroup-delete-rule, using the same format. "
+"Whole security groups can be removed with secgroup-delete."
+msgstr ""
+"逆の操作が secgroup-delete-rule です。secgroup-delete-rule のコマンドラインは同じ形式です。セキュリティグ"
+"ループ全体を secgroup-delete を用いて削除できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:392
+msgid "To create security group rules for a cluster of instances:"
+msgstr ""
+"インスタンスのクラスター向けにセキュリティグループのルールを作成するには:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:394
+msgid ""
+"SourceGroups are a special dynamic way of defining the CIDR of allowed "
+"sources. The user specifies a SourceGroup (Security Group name), all the "
+"users' other Instances using the specified SourceGroup are selected "
+"dynamically. This alleviates the need for a individual rules to allow each "
+"new member of the cluster.usage:"
+msgstr ""
+"ソースグループは許可するソースの CIDR を動的に定義する特別な方法です。ユー"
+"ザーがソースグループ (セキュリティグループ名) を指定します。これにより、指定"
+"されたソースグループを使用する、ユーザーの他のインスタンスが動的にすべて選択"
+"されます。これにより、クラスターのそれぞれの新しいメンバーを許可する、個別の"
+"ルールが必要なくなります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:400
+msgid ""
+"usage: nova secgroup-add-group-rule &lt;secgroup&gt; &lt;source-group&gt; "
+"&lt;ip-proto&gt; &lt;from-port&gt; &lt;to-port&gt;"
+msgstr ""
+"使用法: nova secgroup-add-group-rule &lt;secgroup&gt; &lt;source-group&gt; "
+"&lt;ip-proto&gt; &lt;from-port&gt; &lt;to-port&gt;"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:404
+msgid ""
+"The \"cluster\" rule allows ssh access from any other instance that uses the "
+"\"global-http\" group."
+msgstr ""
+"\"cluster\"ルールにより、\"global-http\" グループを使用する他のすべてのインス"
+"タンスから SSH アクセスが許可されます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:411
+msgid ""
+"OpenStack volumes are persistent block storage devices which may be attached "
+"and detached from instances, but can only be attached to one instance at a "
+"time, similar to an external hard drive they do not proved shared storage in "
+"the way a network file system or object store does. It is left to the "
+"operating system in the instance to put a file system on the block device "
+"and mount it, or not."
+msgstr ""
+"OpenStack のボリュームは、インスタンスから接続および切断できる、永続的なブ"
+"ロックストレージデバイスです。ただし、一度に接続できるのは 1 インスタンスだけ"
+"です。外部ハードディスクと似ています。ネットワークファイルシステムやオブジェクトストアがしているような共有ス"
+"トレージは提供されません。ブロックデバイス上に"
+"ファイルシステムを構築し、それをマウントするかどうかは、インスタンス内のオペレーティングシステムに任されます"
+"。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:418
+msgid ""
+"Similar to other removable disk technology it is important the operating "
+"system is not trying to make use of the disk before removing it. On Linux "
+"instances this typically involves unmounting any file systems mounted from "
+"the volume. The OpenStack volume service cannot tell if it is safe to remove "
+"volumes from an instance so it does what it is told. If a user tells the "
+"volume service to detach a volume from an instance while it is being written "
+"to you can expect some level of file system corruption as well as faults "
+"from whatever process within the instance was using the device."
+msgstr ""
+"他のリムーバブルディスク技術と同じように、ディスクを取り外す前に、オペレー"
+"ティングシステムがそのディスクを使用しないようにすることが重要です。Linux インスタ"
+"ンスにおいて、一般的にボリュームからマウントされているすべてのファイルシステ"
+"ムをアンマウントする必要があります。OpenStack Volume Service は、インスタ"
+"ンスから安全にボリュームを取り外すことができるかはわかりません。そのため、指示さ"
+"れたことを実行します。ボリュームに書き込み中にインスタンスからボリュームの切"
+"断を、ユーザーが Volume Service に指示すると、何らかのレベルの"
+"ファイルシステム破損が起きる可能性があります。それだけでなく、デバイスを使用"
+"していたインスタンスの中のプロセスがエラーを起こす可能性もあります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:429
+msgid ""
+"There is nothing OpenStack specific in being aware of the steps needed from "
+"with in the instance operating system to access block devices, potentially "
+"formatting them for first use and being cautious when removing devices. What "
+"is specific is how to create new volumes and attach and detach them from "
+"instances. These operations can all be done from the \"Volumes\" page of the "
+"Dashboard or using the cinder command line client."
+msgstr ""
+"ブロックデバイスにアクセスするために、インスタンスのオペレーティングシステム"
+"において必要となる手順に、OpenStack 固有の事項はありません。初め"
+"て使用するときにフォーマットが必要になる、デバイスを取り外すときに注意す"
+"る、などが考えられます。固有の事項は、新しいボリュームを作成し、それらをインスタン"
+"スに接続および切断する方法です。これらの操作は、ダッシュボードの \"ボリューム"
+"\" ページからすべて実行できます。または、cinder コマンドラインクライアントを"
+"使用します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:437
+msgid ""
+"To add new volumes you only need a name and a volume size in gigabytes, "
+"ether put these into the \"create volume\" web form or using the command "
+"line:"
+msgstr ""
+"新しいボリュームを追加する際に必要なのは、名前とギガバイト単位のボリューム容量だけです。"
+"これらを \"ボリュームの作成\" Web フォームに記入します。または、コマ"
+"ンドラインを使用します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:441
+msgid ""
+"This creates a 10 GB volume named \"test-volume.\" To list existing volumes "
+"and the instances they are connected to if any:"
+msgstr ""
+"これは \"test-volume\" という名前の 10GB のボリュームを作成します。既存のボ"
+"リュームの一覧を表示するには以下のようにします。それらが接続されているインスタンスがあれば、インスタンス情報も表示"
+"されます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:450
+msgid ""
+"The Block Storage service also allows for creating snapshots of volumes. "
+"Remember this is a block level snapshot which is crash consistent so it is "
+"best if the volume is not connected to an instance when the snapshot is "
+"taken and second best if the volume is not in use on the instance it is "
+"attached to. If the volume is under heavy use, the snapshot may have an "
+"inconsistent file system. In fact, by default, the volume service does not "
+"take a snapshot of a volume that is attached to an image, though it can be "
+"forced. To take a volume snapshot either select \"Create Snapshot\" from the "
+"actions column next to the volume name in the dashboard volume page, or from "
+"the command line:"
+msgstr ""
+"Block Storage Service では、ボリュームのスナップショットを作成すること"
+"もできます。これはブロックレベルのスナップショットであることを覚えておいてく"
+"ださい。これはクラッシュに対する一貫性があります。そのため、スナップショット"
+"が取得されるとき、ボリュームがインスタンスに接続されていないことが最良です。"
+"ボリュームが接続されたインスタンスにおいて使用されていなければ、次に良いで"
+"す。ボリュームが高負荷にある場合、スナップショットによりファイルシステムの不"
+"整合が起こる可能性があります。実際、デフォルト設定では、Volume Service はイメージに"
+"接続されたボリュームのスナップショットを取得しません。ただし、強制的に実行す"
+"ることができます。ボリュームのスナップショットを取得するには、ダッシュボード"
+"の \"ボリューム” ページにおいて、ボリューム名の隣にあるアクション項目から "
+"\"スナップショットの作成\" を選択します。または、コマンドラインから次のように"
+"します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:473
+msgid "Block Storage Creation Failures"
+msgstr "ブロックストレージの作成エラー"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:474
+msgid ""
+"If a user tries to create a volume and it immediately goes into an error "
+"state, the best way to troubleshoot is to grep the Cinder log files for the "
+"volume's UUID. First try the log files on the cloud controller and then try "
+"the storage node where they volume was attempted to be created:"
+msgstr ""
+"ユーザーがボリュームを作成しようとし、すぐにエラー状態になれば、トラブル解決"
+"のために最適な方法は Cinder ログファイルをボリュームの UUID で grep すること"
+"です。まずクラウドコントローラーにあるログファイルを調べます。次に、ボ"
+"リュームを作成しようとしたストレージノードのログファイルを調べます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:486
+msgid ""
+"Instances are the running virtual machines within an OpenStack cloud. This "
+"section deals with how to work with them and their underlying images, their "
+"network properties and how they are represented in the database."
+msgstr ""
+"インスタンスは OpenStack クラウドの中で実行中の仮想マシンです。このセクション"
+"は、インスタンス、インスタンスが使用するイメージ、インスタンスのネットワークプロパティを扱う"
+"ための方法について取り扱います。また、それらがデータベースでどのように表現"
+"されているかについて取り扱います。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:491
+msgid "Starting Instances"
+msgstr "インスタンスの起動"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:492
+msgid ""
+"To launch an instance you need to select an image, a flavor, and a name. The "
+"name needn't be unique but your life is simpler if it is because many tools "
+"will use the name in place of UUID so long as the name is unique. This can "
+"be done from the dashboard either from the \"Launch Instance\" button on the "
+"\"Instances\" page or by selecting the \"Launch\" action next to an image or "
+"snapshot on the \"Images &amp; Snapshots\" page."
+msgstr ""
+"インスタンスを起動するには、イメージ、フレーバーおよび名前を選択する"
+"必要があります。名前は一意である必要がありませんが、名前が一意である限りは、"
+"多くのツールが UUID の代わりに名前を使用できるので、シンプルにできます。"
+"インスタンスの起動はダッシュボードにおいて、\"インスタンス\" ページにある \"インスタンスの起動\" ボタン、または "
+"\"イメージ &amp; スナップショット\" ページにあるイメージまたはスナップショッ"
+"トの隣にある \"起動\" アクションから実行"
+"できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:501
+msgid "On the command line:"
+msgstr "コマンドラインでは次のようにします:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:503
+msgid ""
+"There are a number of optional items that can be specified. You should read "
+"the rest of this instances section before trying to start one, but this is "
+"the base command that later details are layered upon."
+msgstr ""
+"指定できる多くのオプション項目があります。インスタンスを起動しようとする前"
+"に、このインスタンスのセクションを最後まで読んでください。しかし、これが"
+"今から説明する詳細の基本となるコマンドです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:508
+msgid ""
+"To delete instances from the dashboard select the \"Terminate instance\" "
+"action next to the instance on the \"Instances\" page, from the command line:"
+msgstr ""
+"ダッシュボードからインスタンスを削除するには、\"インスタンス\" ページにおいて"
+"インスタンスの隣にある \"インスタンスの終了\" アクションを選択します。また"
+"は、コマンドラインから次のとおり実行します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:512
+msgid ""
+"It is important to note that powering off an instance does not terminate it "
+"in the OpenStack sense."
+msgstr ""
+"注意すべき大事な点は、インスタンスの電源オフは、OpenStack 的な意味での"
+"インスタンスの終了ではないということです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:517
+msgid "Instance Boot Failures"
+msgstr "インスタンスの起動失敗"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:518
+msgid ""
+"If an instance fails to start and immediately moves to \"Error\" state there "
+"are a few different ways to track down what has gone wrong. Some of these "
+"can be done with normal user access while others require access to your log "
+"server or compute nodes."
+msgstr ""
+"インスタンスの開始に失敗し、すぐに \"エラー\" 状態になるならば、何が問題なの"
+"かを追跡するために、いくつかの異なる方法があります。いくつかの方法は通常の"
+"ユーザーアクセスで実行でき、他の方法ではログサーバーやコンピュートノードへのアクセス"
+"が必要です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:523
+msgid ""
+"The simplest reasons for nodes to fail to launch are quota violations or the "
+"scheduler being unable to find a suitable compute node on which to run the "
+"instance. In these cases the error is apparent doing a <code>nova show</"
+"code> on the faulted instance."
+msgstr ""
+"ノードが起動に失敗する最も簡単な理由は、クォータ違反、またはスケジューラーがインスタンスを実"
+"行するのに適したコンピュートノードを見つけられなかった場合です。これらの場"
+"合、失敗したインスタンスに対して <code>nova show</code> を実行すると"
+"エラーが表示されます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:557
+msgid ""
+"In this case looking at the \"fault\" message shows NoValidHost indicating "
+"the scheduler was unable to match the instance requirements."
+msgstr ""
+"この場合、\"fault\" メッセージに NoValidHost が表示されています。NoValidHost はスケジューラーがインスタンスの"
+"要件を満たせなかったことを意味します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:560
+msgid ""
+"If <code>nova show</code> does not sufficiently explain the failure "
+"searching for the instance UUID in the <code>nova-compute.log</code> on the "
+"compute node it was scheduled on or the <code>nova-scheduler.log</code> on "
+"your scheduler hosts is a good place to start looking for lower level "
+"problems."
+msgstr ""
+"<code>nova show</code> が十分な失敗の理由が表示されていない場合、"
+"そのインスタンスがスケジューリングされたコンピュートノードの <code>nova-compute.log</code> やスケジューラーホストの "
+"<code>nova-scheduler.log</code> を、インスタンスの UUID で検索するのが"
+"、より低レベルの問題を調査する良い出発点となります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:567
+msgid ""
+"Using <code>nova show</code> as an admin user will show the compute node the "
+"instance was scheduled on as <code>hostId</code>, if the instance failed "
+"during scheduling this field is blank."
+msgstr ""
+"管理ユーザーとして <code>nova show</code> を使用すると、インスタンス"
+"がスケジュールされたコンピュートノードが <code>hostId</code> として表示されます。"
+"インスタンスがスケジュール中に失敗していれば、この項目が空白です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:573
+msgid "Instance-specific Data"
+msgstr "インスタンス固有のデータ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:574
+msgid ""
+"There are a variety of ways to inject custom data including authorized_keys "
+"key injection, user-data, metadata service, and file injection."
+msgstr ""
+"カスタムデータを注入する方法は、認証済みキー注入、ユーザーデータ、メタデータサービス、ファイル注入 (file injection) "
+"などいろいろな方法があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:577
+msgid ""
+"To clarify user-data versus metadata, understand that \"user-data\" is a "
+"chunk of data, set when an instance is not running. This user-data is "
+"accessible from within the instance when it is running. People use this user-"
+"data to store configuration, a script, or anything the tenant wants."
+msgstr ""
+"ユーザーデータとメタデータの違いを明確にするには、\"ユーザーデータ\" がデー"
+"タの塊で、インスタンスが実行されていないときに設定することを理解する必要があります。こ"
+"のユーザーデータは、インスタンスが実行中に、インスタンスの中からアクセスでき"
+"ます。設定、スクリプト、またはテナントが必要とする任意のものを保存"
+"するために、このユーザーデータを使用します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:583
+msgid ""
+"For Compute, instance metadata is a collection of key/value pairs associated "
+"with an instance. Compute reads and writes to these key/value pairs any time "
+"during the instance lifetime, from inside and outside the instance, when the "
+"end-user uses the Compute API to do so. However, you cannot query the "
+"instance associated key/value pairs via the metadata service that is "
+"compatible with the Amazon EC2 metadata service."
+msgstr ""
+"Compute では、インスタンスのメタデータはインスタンスと関連付けられたキーバ"
+"リューペアの集まりです。エンドユーザーがこれらのキーバリューペアを読み書きす"
+"るために Compute API を使用するとき、Compute がインスタンスの生存期間中にイン"
+"スタンスの内外からこれらを読み書きします。しかしながら、Amazon EC2 メタデータ"
+"サービスと互換性のあるメタデータサービス経由で、インスタンスに関連付けられた"
+"キーバリューペアをクエリーできません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:592
+msgid "Users can generate and register ssh keys using the nova command"
+msgstr "ユーザーが nova コマンドを使用して SSH 鍵を生成および登録できます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:595
+msgid ""
+"This creates a key named mykey which you can associate with instances. The "
+"file mykey.pem is the private key which should be saved to a secure location "
+"as it allows root access to instances the mykey key is associated with."
+msgstr ""
+"これにより、インスタンスと関連付けられる mykey という名前の鍵が生成されます。"
+"mykey.pem というファイルが秘密鍵です。これは、mykey 鍵が関連付けられたインス"
+"タンスに root アクセスできるので、安全な場所に保存すべきです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:600
+msgid ""
+"You can register an existing public key with OpenStack using this command"
+msgstr "このコマンドを使用して、既存の公開鍵を OpenStack に登録できます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:603
+msgid ""
+"You must have the matching private key to access instances associated with "
+"this key."
+msgstr ""
+"この鍵と関連付けられたインスタンスにアクセスするために、対応する秘密鍵を持つ"
+"必要があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:605
+msgid ""
+"To associate a key with an instance on boot add --key_name mykey to your "
+"command line for example:"
+msgstr ""
+"起動時にインスタンスに鍵を関連付けるには、たとえば、コマンドラインに --"
+"key_name mykey を追加します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:609
+msgid ""
+"When booting a server, you can also add metadata, so that you can more "
+"easily identify it amongst other running instances. Use the --meta option "
+"with a key=value pair, where you can make up the string for both the key and "
+"the value. For example, you could add a description and also the creator of "
+"the server."
+msgstr ""
+"サーバーを起動するとき、他の実行中のインスタンスと区別しやすくするために、メ"
+"タデータを追加することもできます。--meta オプションを key=value ペアとともに"
+"使用します。ここで、キーとバリューの両方の文字列を指定することができます。た"
+"とえば、説明とサーバーの作成者を追加できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:617
+msgid ""
+"When viewing the server information, you can see the metadata included on "
+"the metadata line:"
+msgstr ""
+"サーバーの情報を表示するとき、メタデータ行に含まれるメタデータを参照できます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:648
+msgid ""
+"User Data is a special key in the metadata service which holds a file that "
+"cloud aware applications within the guest instance can access. For example "
+"<link title=\"OpenStack Image Service\" href=\"https://help.ubuntu.com/"
+"community/CloudInit\">cloudinit</link> (https://help.ubuntu.com/community/"
+"CloudInit) is an open source package from Ubuntu that handles early "
+"initialization of a cloud instance that makes use of this user data."
+msgstr ""
+"ユーザーデータはメタデータサービスにおける特別なキーで、ゲストインスタンス内のクラウド対応アプリケーションがアクセ"
+"スできるファイルを保持します。たとえ"
+"ば、 <link title=\"OpenStack Image Service\" href=\"https://help.ubuntu.com/"
+"community/CloudInit\">cloudinit</link> (https://help.ubuntu.com/community/"
+"CloudInit) は、このユーザーデータを使用するクラウドインスタンスの初期設定を処"
+"理する、Ubuntu のオープンソースパッケージです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:658
+msgid ""
+"This user-data can be put in a file on your local system and then passed in "
+"at instance creation with the flag --user-data &lt;user-data-file&gt; for "
+"example:"
+msgstr ""
+"このユーザーデータは、ローカルマシンのファイルに保存され、--user-data &lt;"
+"user-data-file&gt; フラグを用いてインスタンスの生成時に渡されます。たとえば:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:663
+msgid ""
+"Arbitrary local files can also be placed into the instance file system at "
+"creation time using the --file &lt;dst-path=src-path&gt; option. You may "
+"store up to 5 files. For example if you have a special authorized_keys file "
+"named special_authorized_keysfile that you want to put on the instance "
+"rather than using the regular ssh key injection for some reason you can use "
+"the following command:"
+msgstr ""
+"--file &lt;dst-path=src-path&gt; オプションを用い"
+"て、任意のローカルファイルを生成時にインスタンスのファイルシステムの中に置けます。5 ファイルまで保存"
+"できます。たとえば、何らかの理由で通常の SSH 鍵の注入ではなく"
+"、special_authorized_keysfile という名前の特別な authorized_keys をインスタンスに置きたい場合、"
+"以下のコマンドを使用できます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:676
+msgid "Associating Security Groups"
+msgstr "セキュリティグループの割り当て"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:677
+msgid ""
+"Security groups as discussed earlier are typically required to allow network "
+"traffic to an instance, unless the default security group for a project has "
+"been modified to be more permissive."
+msgstr ""
+"プロジェクトの規定のセキュリティ"
+"グループを新たな通信を許可するように変更していない限り、インスタンス向けのネットワーク通信を許可するには、"
+"これまでに議論してきたセキュリティグループが必要です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:681
+msgid ""
+"Adding security groups is typically done on instance boot. When launching "
+"from the dashboard this is on the \"Access &amp; Security\" tab of the "
+"\"Launch Instance\" dialog. When launching from the command line append --"
+"security-groups with a comma separated list of security groups."
+msgstr ""
+"セキュリティグループの追加は、一般的にインスタンスの起動時に実行されます。"
+"ダッシュボードから起動するとき、これは \"インスタンスの起動\" ダイアログの "
+"\"アクセス &amp; セキュリティ\" タブにあります。コマンドラインから起動する場合"
+"には、--security-groups にセキュリティグループのコンマ区切り一覧を指定します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:687
+msgid ""
+"It is also possible to add and remove security groups when an instance is "
+"running. Currently this is only available through the command line tools."
+msgstr ""
+"インスタンスを実行中にセキュリティグループを追加および削除することもできま"
+"す。現在、コマンドラインツールからのみ利用可能です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:694
+msgid "Floating IPs"
+msgstr "Floating IP"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:695
+msgid ""
+"Projects have a quota controlled number of Floating IPs, however these need "
+"to be allocated by a user before they are available for use. To allocate a "
+"Floating IP to a project there is an \"Allocate IP to Project\" button on "
+"the \"Access &amp; Security\" page of the dashboard or on the command line "
+"by using:"
+msgstr ""
+"プロジェクトはクォータで管理された数の Floating IP を持ちます。しかしながら、"
+"これらは、使用可能になる前にユーザーにより確保する必要があります。Floating "
+"IP をプロジェクトに確保するために、ダッシュボードの \"アクセス &amp; セキュリ"
+"ティ\" ページにある \"プロジェクトへの IP の確保\" ボタンがあります。または、"
+"コマンドラインにおいて次を使用します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:703
+msgid ""
+"Once allocated, Floating IP can be assigned to running instances from the "
+"Dashboard either by selecting the \"Associate Floating IP\" from the actions "
+"drop down next to the IP on the \"Access &amp; Security\" page or the same "
+"action next to the instance you wish to associate it with on the \"Instances"
+"\" page. The inverse action, \"Dissociate Floating IP\", is only available "
+"from the \"Access &amp; Security\" page and not from the Instances page."
+msgstr ""
+"一度確保すると、Floating IP を実行中のインスタンスに割り当"
+"てることができます。ダッシュボードでは、\"アクセス &amp; セキュリティ\" ページにある IP の隣にある、アク"
+"ションドロップダウンから \"Floating IP の割り当て\" を選択することにより実行"
+"できます。または、\"インスタンス\" ページにおいて割り当てたいインスタンスの隣"
+"にある、同じアクションから実行できます。逆の動作 \"Floating IP の解放\" は "
+"\"アクセス &amp; セキュリティ\" ページからのみ利用可能です。インスタンスの"
+"ページから利用できません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:711
+msgid ""
+"From the command line, enter the following command to complete these tasks:"
+msgstr ""
+"これらの作業を完了するために、コマンドラインの場合、以下のコマンドにより"
+"同じことができます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:718
+msgid "Attaching Block Storage"
+msgstr "ブロックストレージの接続"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:719
+msgid ""
+"You can attach block storage to instances from the dashboard on the "
+"<guilabel>Volumes</guilabel> page. Click the <guibutton>Edit Attachments</"
+"guibutton> action next to the volume you wish to attach."
+msgstr ""
+"ダッシュボードから <guilabel>ボリューム</guilabel> ページにおいて、ブロックス"
+"トレージをインスタンスに接続できます。接続したいボリュームの隣にある "
+"<guibutton>接続の編集</guibutton> アクションをクリックします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:723
+msgid "To perform this action from command line, run the following command:"
+msgstr ""
+"このアクションをコマンドラインから実行するには、以下のコマンドを実行します"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:726
+msgid ""
+"You can also specify block device mapping at instance boot time through the "
+"nova command-line client, as follows:"
+msgstr ""
+"nova コマンドラインクライアントから以下のように、インスタンスの起動時にブロッ"
+"クストレージのマッピングを指定することもできます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:730
+msgid ""
+"The block device mapping format is <code>&lt;dev-name=&lt;id&gt;:&lt;"
+"type&gt;:&lt;size(GB)&gt;:&lt;delete-on-terminate&gt;</code>, where:"
+msgstr ""
+"ブロックデバイスのマッピング形式は <code>&lt;dev-name=&lt;id&gt;:&lt;"
+"type&gt;:&lt;size(GB)&gt;:&lt;delete-on-terminate&gt;</code> です。ここで:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:735
+msgid "dev-name"
+msgstr "dev-name"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:737
+msgid ""
+"A device name where the volume is attached in the system at <code>/dev/"
+"<replaceable>dev_name</replaceable></code>."
+msgstr ""
+"そのボリュームはシステムで <code>/dev/<replaceable>dev_name</"
+"replaceable></code> に接続されます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:744
+msgid "id"
+msgstr "id"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:746
+msgid ""
+"The ID of the volume to boot from, as shown in the output of nova volume-"
+"list."
+msgstr "起動するボリュームの ID です。nova volume-list の出力に表示されます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:751
+msgid "type"
+msgstr "type"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:753
+msgid ""
+"Either <literal>snap</literal>, which means that the volume was created from "
+"a snapshot, or anything other than <literal>snap</literal> (a blank string "
+"is valid). In the example above, the volume was not created from a snapshot, "
+"so we leave this field blank in our example below."
+msgstr ""
+"ボリュームがスナップショットから作成されたことを意味する <literal>snap</"
+"literal>、または <literal>snap</literal> 以外の何か (空文字列も有効) です。上"
+"の例では、ボリュームがスナップショットから作成されていません。そのため、この"
+"項目を以下の例において空白にしてあります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:767
+msgid "size (GB)"
+msgstr "size (GB)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:769
+msgid ""
+"The size of the volume, in GB. It is safe to leave this blank and have the "
+"Compute service infer the size."
+msgstr ""
+"ボリュームのギガバイト単位の容量。このフィールドを空欄にして、"
+"Compute サービスに容量を推定させるのが安全です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:775
+msgid "delete-on-terminate"
+msgstr "delete-on-terminate"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:777
+msgid ""
+"A boolean to indicate whether the volume should be deleted when the instance "
+"is terminated. True can be specified as <literal>True</literal> or "
+"<literal>1</literal>. False can be specified as <literal>False</literal> or "
+"<literal>0</literal>."
+msgstr ""
+"インスタンスが終了したときに、ボリュームが削除されるかどうかを指示する論理値"
+"です。真は <literal>True</literal> または <literal>1</literal> として指定でき"
+"ます。偽は <literal>False</literal> または <literal>0</literal> として指定で"
+"きます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:795
+msgid ""
+"If you have previously prepared the block storage with a bootable file "
+"system image it is even possible to boot from persistent block storage. The "
+"following example will attempt boot from volume with ID=<literal>13</"
+"literal>, it does not delete on terminate. Replace the <literal>--key-name</"
+"literal> with a valid keypair name:"
+msgstr ""
+"ブート可能なファイルシステムイメージでブロックストレージを事前に準備している"
+"と、永続ブロックストレージからブートすることもできます。以下の例は "
+"ID=<literal>13</literal> のボリュームからブートしようとしています。終了時に削"
+"除されません。<literal>--key-name</literal> を有効なキーペア名で置き換えてください:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:805
+msgid ""
+"Because of bug <link title=\"OpenStack Image Service\" href=\"https://bugs."
+"launchpad.net/nova/+bug/1163566\">1163566</link> (https://bugs.launchpad.net/"
+"nova/+bug/1163566) you must specify an image when booting from a volume in "
+"Horizon, even though this image is not used."
+msgstr ""
+"バグ <link title=\"OpenStack Image Service\" href=\"https://bugs.launchpad."
+"net/nova/+bug/1163566\">1163566</link> (https://bugs.launchpad.net/nova/"
+"+bug/1163566) のため、Horizon においてボリュームからブートするとき、このイ"
+"メージを使用しないにも関わらず、イメージを指定しなければいけません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:812
+msgid ""
+"To boot normally from an image and attach block storage, map to a device "
+"other than vda."
+msgstr ""
+"普通にイメージからブートし、ブロックストレージを接続するには、vda 以外のデバ"
+"イスをマッピングします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:817
+msgid "Taking Snapshots"
+msgstr "スナップショットの取得"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:818
+msgid ""
+"OpenStack's snapshot mechanism allows you to create new images from running "
+"instances. This is a very convenient for upgrading base images or taking a "
+"published image and customizing for local use. To snapshot a running "
+"instance to an image using the CLI:"
+msgstr ""
+"OpenStack のスナップショット機能により、実行中のインスタンスから新しいイメー"
+"ジを作成できます。これは、基本イメージをアップグレードしたり、公開イ"
+"メージを取得してローカル向けにカスタマイズしたりする場合に非常に便利で"
+"す。CLI を利用して、実行中のインスタンスのスナップショットを取得し、イメージを作成する"
+"には:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:824
+msgid ""
+"The Dashboard interface for snapshots can be confusing because the Images "
+"&amp; Snapshots page splits content up into:"
+msgstr ""
+"\"イメージ &amp; スナップショット\" のページでは、内容が以下のように分類されているの"
+"で、ダッシュボードのスナップショットのインターフェースは紛らわしいです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:832
+msgid "Instance snapshots"
+msgstr "インスタンスのスナップショット"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:835
+msgid "Volume snapshots"
+msgstr "ボリュームのスナップショット"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:838
+msgid ""
+"However, an instance snapshot <emphasis>is</emphasis> an image. The only "
+"difference between an image that you upload directly to glance and an image "
+"you create by snapshot is that an image created by snapshot has additional "
+"properties in the glance database. These properties are found in the "
+"image_properties table, and include:"
+msgstr ""
+"しかしながら、インスタンスのスナップショットはイメージ<emphasis>です</"
+"emphasis>。Glance に直接アップロードしたイメージと、スナップショットにより作"
+"成したイメージとの唯一の違いは、スナップショットにより作成されたイメージが "
+"glance データベースにおいて追加のプロパティを持つことです。これらのプロパティ"
+"は image_properties テーブルで確認でき、次の項目を含みます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:848
+msgid "name"
+msgstr "名前"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:849
+msgid "value"
+msgstr "値"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:855
+msgid "image_type"
+msgstr "image_type"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:861
+msgid "instance_uuid"
+msgstr "instance_uuid"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:863
+msgid "&lt;uuid of instance that was snapshotted&gt;"
+msgstr "&lt;スナップショットされたインスタンスの UUID&gt;"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:868
+msgid "base_image_ref"
+msgstr "base_image_ref"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:870
+msgid "&lt;uuid of original image of instance that was snapshotted&gt;"
+msgstr "&lt;スナップショットされたインスタンスの元イメージの UUID&gt;"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:876
+msgid "image_location"
+msgstr "image_location"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:883
+msgid "Ensuring snapshots are consistent"
+msgstr "スナップショットの一貫性の保証"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:884
+msgid ""
+"Content from Sébastien Han's <link title=\"OpenStack Image Service\" href="
+"\"http://www.sebastien-han.fr/blog/2012/12/10/openstack-perform-consistent-"
+"snapshots/\">OpenStack: Perform Consistent Snapshots blog entry</link> "
+"(http://www.sebastien-han.fr/blog/2012/12/10/openstack-perform-consistent-"
+"snapshots/)"
+msgstr ""
+"Sébastien Han さんの <link title=\"OpenStack Image Service\" href=\"http://"
+"www.sebastien-han.fr/blog/2012/12/10/openstack-perform-consistent-snapshots/"
+"\">OpenStack: Perform Consistent Snapshots ブログエントリー</link> (http://"
+"www.sebastien-han.fr/blog/2012/12/10/openstack-perform-consistent-"
+"snapshots/) からのコンテンツです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:890
+msgid ""
+"A snapshot captures the state of the file system, but not the state of the "
+"memory. Therefore, to ensure your snapshot contains the data that you want, "
+"before your snapshot you need to ensure that:"
+msgstr ""
+"スナップショットは、ファイルシステムの状態をキャプチャーしますが、メモリーの"
+"状態をキャプチャーしません。そのため、スナップショットに期待するデータが含ま"
+"れることを確実にするために、次のことを確実にする必要があります:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:896
+msgid "Running programs have written their contents to disk"
+msgstr "実行中のプログラムがコンテンツをディスクに書き込んだこと"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:900
+msgid ""
+"The file system does not have any \"dirty\" buffers: where programs have "
+"issued the command to write to disk, but the operating system has not yet "
+"done the write"
+msgstr ""
+"ファイルシステムが \"ダーティー\" バッファーを持たないこと: \"ダーティー\" バッファーがあるとは、プログラ"
+"ムがディスクに書き込むためにコマンドを発行しましたが、オペレーティングシステ"
+"ムがまだ書き込みを完了していないことです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:906
+msgid ""
+"To ensure that important services have written their contents to disk (such "
+"as, databases), we recommend you read the documentation for those "
+"applications to determine what commands to issue to have them sync their "
+"contents to disk. If you are unsure how to do this, the safest approach is "
+"to simply stop these running services normally."
+msgstr ""
+"(データベースのような) 重要なサービスがコンテンツをディスクに書き込んだことを"
+"保証するために、それらのアプリケーションのドキュメントを読んで、コンテンツをディスクに同期させるためにどのコマ"
+"ンドを発行する必要があるかを調べることを"
+"推奨します。ディスクに同期させるための方法がはっきり分からない場合、最も安全な方法は単にこ"
+"れらの実行中のサービスを通常通り停止することです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:913
+msgid ""
+"To deal with the \"dirty\" buffer issue, we recommend using the sync command "
+"before snapshotting:"
+msgstr ""
+"\"ダーティー\" バッファーの問題を解決するために、スナップショットの前に sync "
+"コマンドを使用することを推奨します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:916
+msgid ""
+"Running <code>sync</code> writes dirty buffer (buffered block that have been "
+"modified but not written yet to the disk block) to disk."
+msgstr ""
+"<code>sync</code> を実行することにより、ダーティーバッファー (変更されたが、"
+"ディスクに書き込まれていないバッファー済みブロック) をディスクに書き込みま"
+"す。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:919
+msgid ""
+"Just running <code>sync</code> is not enough to ensure the file system is "
+"consistent. We recommend you use the <code>fsfreeze</code> tool, which halts "
+"new access to the file system and create a stable image on disk that is "
+"suitable for snapshotting. fsfreeze supports several file systems, including "
+"ext3, ext4, and XFS. If your virtual machine instance is running on Ubuntu, "
+"install the util-linux package to get fsfreeze:"
+msgstr ""
+"ファイルシステムが一貫性を持つことを保証するためには、単に <code>sync</code> "
+"を実行するだけでは不十分です。<code>fsfreeze</code> ツールを使用することを推"
+"奨します。これは、ファイルシステムに対する新規アクセスを停止し、スナップ"
+"ショットに適した安定したイメージをディスクに作成します。fsfreeze は ext3, "
+"ext4 および XFS を含むいくつかのファイルシステムをサポートします。仮想マシン"
+"のインスタンスが Ubuntu において実行されていれば、fsfreeze を取得するために "
+"util-linux パッケージをインストールします:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:929
+msgid ""
+"If your operating system doesn't have a version of fsfreeze available, you "
+"can use xfs_freeze instead, which is available on Ubuntu in the xfsprogs "
+"package. Despite the \"xfs\" in the name, xfs_freeze also works on ext3 and "
+"ext4 if you are using a Linux kernel version 2.6.29 or greater, since it "
+"works at the virtual file system (VFS) level starting at 2.6.29. xfs_freeze "
+"supports the same command-line arguments as fsfreeze."
+msgstr ""
+"お使いのオペレーティングシステムに利用可能なバージョンの fsfreeze がなけれ"
+"ば、代わりに xfs_freeze を使用できます。これは Ubuntu の xfsprogs パッケージ"
+"において利用可能です。\"xfs\" という名前にもかかわらず、xfs_freeze は Linux "
+"カーネル 2.6.29 またはそれ以降を使用していれば ext3 や ext4 においても動作し"
+"ます。それは 2.6.29 において開始された仮想ファイルシステム (VFS) レベルで動作"
+"するためです。xfs_freeze は fsfreeze と同じ名前のコマンドライン引数をサポート"
+"します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:938
+msgid ""
+"Consider the example where you want to take a snapshot of a persistent block "
+"storage volume, detected by the guest operating system as /dev/vdb and "
+"mounted on /mnt. The fsfreeze command accepts 2 arguments:"
+msgstr ""
+"永続ブロックストレージのスナップショットを取得したい例を検討します。ゲストオ"
+"ペレーティングシステムにより /dev/vdb として認識され、/mnt にマウントされてい"
+"るとします。fsfreeze コマンドが 2 つの引数を受け取ります:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:945
+msgid "-f: freeze the system"
+msgstr "-f: システムをフリーズします"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:948
+msgid "-u: thaw (un-freeze) the system"
+msgstr "-u: システムを解凍 (フリーズ解除) します"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:951
+msgid ""
+"To freeze the volume in preparation for snapshotting, you would do, as root, "
+"inside of the instance:"
+msgstr ""
+"スナップショットの準備においてボリュームをフリーズするには、インスタンスの中"
+"で root として次のとおり実行します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:955
+msgid ""
+"You <emphasis role=\"bold\">must mount the file system</emphasis> before you "
+"run the <placeholder-1/> command."
+msgstr ""
+"<placeholder-1/> コマンドを実行する前に、<emphasis role=\"bold\">ファイルシス"
+"テムをマウントする必要があります</emphasis>。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:958
+msgid ""
+"When the \"fsfreeze -f\" command is issued, all ongoing transactions in the "
+"file system are allowed to complete, new write system calls are halted, and "
+"other calls which modify the file system are halted. Most importantly, all "
+"dirty data, metadata, and log information are written to disk."
+msgstr ""
+"\"fsfreeze -f\" コマンドが発行された場合、ファイルシステム内で進行中のす"
+"べてのトランザクションが完了することが認められます。新規書き込みのシステムコー"
+"ルは停止されます。そして、ファイルシステムを変更する他のコールは停止されま"
+"す。最も重要なこととしては、すべてのダーティーデータ、メタデータ、およびログ情報が"
+"ディスクに書き込まれることです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:964
+msgid ""
+"Once the volume has been frozen, do not attempt to read from or write to the "
+"volume, as these operations hang. The operating system stops every I/O "
+"operation and any I/O attempts is delayed until the file system has been "
+"unfrozen."
+msgstr ""
+"ボリュームがフリーズ状態になったら、ボリュームの読み書き命令が止まってしまうので、"
+"ボリュームの読み書きを行わないようにしてください。オペレーティングシステムがすべての I/O 操作を停止し、すべての I/"
+"O 試行がファイルシステムがフリーズ解除されるまで遅延させられます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:969
+msgid ""
+"Once you have issued the fsfreeze command, it is safe to perform the "
+"snapshot. For example, if your instance was named mon-instance, and you "
+"wanted to snapshot it to an image, named mon-snapshot, you could now run the "
+"following:"
+msgstr ""
+"fsfreeze コマンドを発行すると、スナップショットを実行しても安全です。たとえ"
+"ば、インスタンスが mon-instance という名前で、mon-snapshot という名前のイメー"
+"ジにスナップショットを取得したければ、以下のとおり実行します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:975
+msgid ""
+"When the snapshot is done, you can thaw the file system with the following "
+"command, as root, inside of the instance:"
+msgstr ""
+"スナップショットの作成が終わったら、インスタンスの中で root として以下のコマンド"
+"を用いて、ファイルシステムをフリーズ解除できます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:979
+msgid ""
+"If you want to backup the root files ystem, you can't simply do the command "
+"above because it will freeze the prompt. Instead, run the following one-"
+"liner, as root, inside of the instance:"
+msgstr ""
+"ルートファイルシステムをバックアップしたければ、プロンプトがフリーズしてしますの"
+"で、上のコマンドを単純に実行できません。代わりに、インスタンスの中で root と"
+"して以下の 1 行を実行します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:988
+msgid "Instances in the Database"
+msgstr "データベースにあるインスタンス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:989
+msgid ""
+"While instance information is stored in a number of database tables, the "
+"table operators are most likely to need to look at in relation to user "
+"instances is the \"instances\" table."
+msgstr ""
+"インスタンス情報は多くのデータベースのテーブルに保存されますが、"
+"ユーザーのインスタンスに関連して運用者が参照する必要が最もありそうなテーブルは "
+"\"instances\" テーブルです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:993
+msgid ""
+"The instances table carries all most of the information related to both "
+"running and deleted instances. It has a bewildering array of fields, for an "
+"exhaustive list look at the database. These are the most useful fields for "
+"operators looking to form queries."
+msgstr ""
+"インスタンスのテーブルは、実行中および削除済みの両方のインスタンスに関連する情報の"
+"ほとんどを保持しています。データベースで完全なリストを見ると、このテーブルには目が回る"
+"ほどたくさんのフィールドがあることがわかります。以下に、クエリーを行おうとしている運用者に"
+"とって非常に有用なフィールドを挙げます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:998
+msgid ""
+"The \"deleted\" field is set to \"1\" if the instance has been deleted and "
+"NULL if it has not been deleted this important for excluding deleted "
+"instances from your queries."
+msgstr ""
+"\"deleted\" フィールドは、インスタンスが削除されていると \"1\" がセットされます。"
+"削除されていなければ NULL です。これはクエリーから削除済みインスタンスを除外"
+"するために重要です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:1002
+msgid ""
+"The \"uuid\" field is the UUID of the instance and is used through out other "
+"tables in the database as a foreign key. This id is also reported in logs, "
+"the dashboard and command line tools to uniquely identify an instance."
+msgstr ""
+"\"uuid\" フィールドはインスタンスの UUID です。データベースにある他の表において外部"
+"キーとして使用されます。この ID は、インスタンスを一意に識別するために、ロ"
+"グ、ダッシュボードおよびコマンドラインツールにおいて表示されます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:1007
+msgid ""
+"A collection of foreign keys are available to find relations to the "
+"instance. The most useful of these are \"user_id\" and \"project_id\" are "
+"the UUIDs of the user who launched the instance and the project it was "
+"launched in."
+msgstr ""
+"外部キーはインスタンスの関連を見つけるために利用可能です。これらの中で最も"
+"有用なものは、 \"user_id\" および \"project_id\" です。これらは、インスタンスを"
+"起動したユーザー、およびそれが起動されたプロジェクトの UUID です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:1012
+msgid "The \"host\" field tells which compute node is hosting the instance."
+msgstr ""
+"\"host\" フィールドは、どのコンピュートノードがインスタンスをホストしているかを示しま"
+"す。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:1014
+msgid ""
+"The \"hostname\" field holds the name of the instance when it is launched. "
+"The \"display-name\" is initially the same as hostname but can be reset "
+"using the nova rename command."
+msgstr ""
+"\"hostname\" フィールドは、インスタンスが起動したときのインスタンス名を保持しま"
+"す。\"display-name\" は、最初は hostname と同じですが、nova rename コマンドを使っ"
+"て再設定することができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:1018
+msgid ""
+"A number of time related fields are useful for tracking when state changes "
+"happened on an instance:"
+msgstr ""
+"多くの時刻関連のフィールドは、いつ状態の変化がインスタンスに起こったかを追跡する際に"
+"役に立ちます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:1022
+msgid "created_at"
+msgstr "created_at"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:1025
+msgid "updated_at"
+msgstr "updated_at"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:1028
+msgid "deleted_at"
+msgstr "deleted_at"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:1031
+msgid "scheduled_at"
+msgstr "scheduled_at"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:1034
+msgid "launched_at"
+msgstr "launched_at"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:1037
+msgid "terminated_at"
+msgstr "terminated_at"
