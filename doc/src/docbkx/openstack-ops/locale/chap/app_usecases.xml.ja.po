@@ -1,0 +1,356 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-21 08:33+0000\n"
+"Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:14
+msgid "Use Cases"
+msgstr "事例"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:15
+msgid ""
+"This section contains a small selection of use cases from the community with "
+"more technical detail than usual. Further examples can be found on the <link "
+"title=\"OpenStack Website\" href=\"https://www.openstack.org/user-stories/"
+"\">OpenStack Website</link> (https://www.openstack.org/user-stories/)"
+msgstr ""
+"この節ではコミュニティからを事例をいくつか紹介します。これらでは通常より多く"
+"の技術的詳細情報が提供されています。他の事例は <link title=\"OpenStack "
+"Website\" href=\"https://www.openstack.org/user-stories/\">OpenStack ウェブサ"
+"イト</link> (https://www.openstack.org/user-stories/) で探して下さい。"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:23
+msgid "NeCTAR"
+msgstr "NeCTAR"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:24
+msgid ""
+"Who uses it: Researchers from the Australian publicly funded research "
+"sector. Use is across a wide variety of disciplines, with the purpose of "
+"instances being from running simple web servers to using hundreds of cores "
+"for high throughput computing."
+msgstr ""
+"利用者：オーストラリアの公的資金による研究部門からの研究者。用途は、シンプル"
+"な Web サーバー用のインスタンスから高スループットコンピューティング用の数百の"
+"コア使用まで、多種多様な専門分野に渡ります。"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:30
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:86
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:126
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:170
+msgid "Deployment"
+msgstr "デプロイ"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:31
+msgid ""
+"Using OpenStack Compute Cells, the NeCTAR Cloud spans eight sites with "
+"approximately 4,000 cores per site."
+msgstr ""
+"OpenStack Compute Cells を使用して、NeCTAR クラウドは８サイトに及び、１サイト"
+"あたり約4,000コアがあります。"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:34
+msgid ""
+"Each site runs a different configuration, as resource <glossterm>cell</"
+"glossterm>s in an OpenStack Compute cells setup. Some sites span multiple "
+"data centers, some use off compute node storage with a shared file "
+"system and some use on compute node storage with a non-shared file system. "
+"Each site deploys the Image Service with an Object Storage back-end. A "
+"central Identity Service, Dashboard and Compute API Service is used. Login "
+"to the Dashboard triggers a SAML login with Shibboleth, that creates an "
+"<glossterm>account</glossterm> in the Identity Service with an SQL back-end."
+msgstr ""
+"各サイトは（OpenStack Compute のセル設定におけるリソース<glossterm>セル</"
+"glossterm>として）異なる設定で実行されています。数サイトは複数データセンター"
+"に渡り、コンピュートノード外のストレージを共有ストレージで使用しているサイトもあれば、"
+"コンピュートノード上のストレージを非共有型ファイルシステムで使用しているサイトもあります。"
+"各サイトは Object Storage バックエンドを持つ Image Service をデ"
+"プロイしています。中央の Identity Service、Dashboard、Compute API サービスが"
+"使用されています。Dashboard へのログインが Shibboleth の SAML ログインのトリ"
+"ガーになり、SQL バックエンドの Identity サービスの<glossterm>アカウント</"
+"glossterm>を作成します。"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:46
+msgid ""
+"Compute nodes have 24 to 48 cores, with at least 4 GB of RAM per core and "
+"approximately 40 GB of ephemeral storage per core."
+msgstr ""
+"コンピュートノードは 24～48コアがあり、１コアあたり 4GB 以上の RAM があり、１コア"
+"あたり約 40GB 以上の一時ストレージがあります。"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:49
+msgid ""
+"All sites are based on Ubuntu 12.04 with KVM as the hypervisor. The "
+"OpenStack version in use is typically the current stable version, with 5 to "
+"10% back ported code from trunk and modifications."
+msgstr ""
+"全サイトは Ubuntu 12.04 をベースにしており、ハイパーバイザとして KVM を使用し"
+"ています。使用している OpenStack のバージョンは基本的に安定バージョンであり、"
+"5～10%のコードが開発コードからバックポートされたか、修正されています。"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:55
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:152
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:188
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:14
+msgid "Resources"
+msgstr "リソース"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:58
+msgid ""
+"<link title=\"OpenStack Website\" href=\"https://www.openstack.org/user-"
+"stories/nectar/\">OpenStack.org Case Study</link> (https://www.openstack.org/"
+"user-stories/nectar/)"
+msgstr ""
+"<link title=\"OpenStack Website\" href=\"https://www.openstack.org/user-"
+"stories/nectar/\">OpenStack.org Case Study</link> (https://www.openstack.org/"
+"user-stories/nectar/)"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:65
+msgid ""
+"<link title=\"OpenStack Website\" href=\"https://github.com/NeCTAR-RC/"
+"\">NeCTAR-RC GitHub</link> (https://github.com/NeCTAR-RC/)"
+msgstr ""
+"<link title=\"OpenStack Website\" href=\"https://github.com/NeCTAR-RC/"
+"\">NeCTAR-RC GitHub</link> (https://github.com/NeCTAR-RC/)"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:72
+msgid ""
+"<link title=\"OpenStack Website\" href=\"https://www.nectar.org.au/\">NeCTAR "
+"Website</link> (https://www.nectar.org.au/)"
+msgstr ""
+"<link title=\"OpenStack Website\" href=\"https://www.nectar.org.au/\">NeCTAR "
+"Web サイト</link> (https://www.nectar.org.au/)"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:82
+msgid "MIT CSAIL"
+msgstr "MIT CSAIL"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:83
+msgid ""
+"Who uses it: Researchers from the MIT Computer Science and Artificial "
+"Intelligence Lab."
+msgstr ""
+"利用者：マサチューセッツ工科大学コンピュータ科学・人工知能研究所の研究者。"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:87
+msgid ""
+"The CSAIL cloud is currently 64 physical nodes with a total of 768 physical "
+"cores and 3,456 GB of RAM. Persistent data storage is largely outside of the "
+"cloud on NFS with cloud resources focused on compute resources. There are 65 "
+"users in 23 projects with typical capacity utilization nearing 90% we are "
+"looking to expand."
+msgstr ""
+"CSAIL クラウドは現在 64 物理ノード、768 物理コア、3,456 GB のメモリがありま"
+"す。クラウドリソースがコンピュータリソースに焦点をあてているため、永続データ"
+"ストレージの大部分は、クラウド外の NFS 上にあります。現在 65 ユーザと 23 プ"
+"ロジェクトがあり、拡張が期待される約 90% 近くの利用率があります。"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:94
+msgid ""
+"The software stack is Ubuntu 12.04 LTS with OpenStack Folsom from the Ubuntu "
+"Cloud Archive. KVM is the hypervisor, deployed using FAI (http://fai-project."
+"org/) and Puppet for configuration management. The FAI and Puppet "
+"combination is used lab wide, not only for OpenStack. There is a single "
+"cloud controller node, with the remainder of the server hardware dedicated "
+"to compute nodes. Due to the compute intensive nature of the use case, the "
+"ratio of physical CPU and RAM to virtual is 1:1 in nova.conf. Although hyper-"
+"threading is enabled so, given the way Linux counts CPUs, this is actually "
+"2:1 in practice."
+msgstr ""
+"ソフトウェアスタックは Ubuntu 12.04 LTS と Ubuntu Cloud Archive からの "
+"OpenStack Folsom です。KVM がハイパーバイザで、FAI(http://fai-project.org/)"
+"と Puppet を設定管理に使用してデプロイされています。FAI と Puppet の組み合わ"
+"せはOpenStack のみならず研究所全体で使用されています。単一のクラウドコント"
+"ローラーノードがあり、他のコンピュータ・ハードウェアはコンピュートノードに使用さ"
+"れています。用途が計算集約型の為、nova.conf 中の物理 CPU・RAM と仮想 CPU・"
+"RAM の比は 1:1 です。しかしながら、ハイパースレッディングが有効であり（Linux "
+"がその方式を複数 CPU でカウントする為）実際には通常 2:1 になっています。"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:107
+msgid ""
+"On the network side, physical systems have two network interfaces and a "
+"separate management card for IPMI management. The OpenStack network service "
+"uses multi-host networking and the FlatDHCP."
+msgstr ""
+"ネットワーク面では、物理システムは２つのネットワーク・インターフェースと、独"
+"立したIPMI管理用のマネージメントカードがあります。OpenStack ネットワークサー"
+"ビスはマルチホストネットワーク、FlatDHCP を使用しています。"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:115
+msgid "DAIR"
+msgstr "DAIR"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:116
+msgid ""
+"Who uses it: DAIR is an integrated virtual environment that leverages the "
+"CANARIE network to develop and test new information communication technology "
+"(ICT) and other digital technologies. It combines such digital "
+"infrastructure as advanced networking, and cloud computing and storage to "
+"create an environment for develop and test of innovative ICT applications, "
+"protocols and services, perform at-scale experimentation for deployment, and "
+"facilitate a faster time to market."
+msgstr ""
+"利用者：DAIR は新しい情報通信技術（ICT）と他のデジタル技術を開発・評価する"
+"ための CANARIE ネットワークを活用した統合仮想環境です。このシステムは、先進的な"
+"ネットワーク、クラウドコンピューティング、ストレージといったデジタルインフラ"
+"から構成されており、革新的な ICT アプリケーション、プロトコル、サービス、の開"
+"発・評価環境の作成、デプロイのスケールに関する実験の実施、市場へのより早期の"
+"投入促進を目的としています。"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:127
+msgid ""
+"DAIR is hosted at two different data centres across Canada: one in Alberta "
+"and the other in Quebec. It consists of a cloud controller at each location, "
+"however, one is designated as the \"master\" controller that is in charge of "
+"central authentication and quotas. This is done through custom scripts and "
+"light modifications to OpenStack. DAIR is currently running Folsom."
+msgstr ""
+"DAIR はカナダの2つの異なるデータセンタ（１つはアルバータ州、もう1つはケベック"
+"州）でホスティングされています。各拠点にはそれぞれクラウドコントローラがあり"
+"ますが、その１つが「マスター」コントローラーとして、認証とクォータ管理を集中して"
+"行うよう設計されています。これは、特製スクリプトと OpenStack の軽微な改造に"
+"より実現されています。DAIR は現在、Folsom で運営されています。"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:135
+msgid "For Object Storage, each region has a Swift environment."
+msgstr "オブジェクトストレージ用に、各リージョンには Swift 環境があります。"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:137
+msgid ""
+"A NetApp appliance is used in each region for both block storage and "
+"instance storage. There are future plans to move the instances off of the "
+"NetApp appliance and onto a distributed file system such as <glossterm>Ceph</"
+"glossterm> or GlusterFS."
+msgstr ""
+"各リージョンでは、ブロックストレージとインスタンスストレージの両方でNetApp アプ"
+"ライアンスが使用されています。これらのインスタンスを NetApp アプライアンスか"
+"ら <glossterm>Ceph</glossterm> または GlusterFS といった分散ファイルシステム"
+"上に移動する計画があります。"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:142
+msgid ""
+"VlanManager is used extensively for network management. All servers have two "
+"bonded 10gb NICs that are connected to two redundant switches. DAIR is set "
+"up to use single-node networking where the cloud controller is the gateway "
+"for all instances on all compute nodes. Internal OpenStack traffic (for "
+"example, storage traffic) does not go through the cloud controller."
+msgstr ""
+"ネットワーク管理は VlanManager が広範囲に使用されています。全てのサーバーは２"
+"つの冗長化（bonding）された 10GB NIC があり、２つの独立したスイッチに接続され"
+"ています。DAIR はクラウドコントローラーが全コンピュートノード上の全インスタンス"
+"用のゲートウェイとなる、単一ノードのネットワーキングを使用する設定がされてい"
+"ます。内部の OpenStack 通信（例：ストレージ通信）はクラウドコントローラーを経"
+"由していません。"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:155
+msgid ""
+"<link title=\"OpenStack Website\" href=\"http://www.canarie.ca/en/dair-"
+"program/about\">DAIR Homepage</link> (http://www.canarie.ca/en/dair-program/"
+"about)"
+msgstr ""
+"<link title=\"OpenStack Website\" href=\"http://www.canarie.ca/en/dair-"
+"program/about\">DAIR ホームページ</link> (http://www.canarie.ca/en/dair-"
+"program/about)"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:165
+msgid "CERN"
+msgstr "CERN"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:166
+msgid ""
+"Who uses it: Researchers at CERN (European Organization for Nuclear "
+"Research) conducting high-energy physics research."
+msgstr ""
+"利用者：高エネルギー物理学研究を管理する CERN（欧州原子核共同研究機関）の研究"
+"者。"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:171
+msgid ""
+"The environment is largely based on Scientific Linux 6, which is Red Hat "
+"compatible. We use KVM as our primary hypervisor although tests are ongoing "
+"with Hyper-V on Windows Server 2008."
+msgstr ""
+"この環境は、大部分は Red Hat 互換の Scientific Linux 6 ベースです。主な"
+"ハイパーバイザとして KVM を使用していますが、一方 Windows Server 2008 上の "
+"Hyper-V を使用したテストも進行中です。"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:175
+msgid ""
+"We use the Puppet Labs OpenStack modules to configure Compute, Image "
+"Service, Identity Service and Dashboard. Puppet is used widely for instance "
+"configuration and Foreman as a GUI for reporting and instance provisioning."
+msgstr ""
+"我々は Compute、Image Service、Identity Service、Dashboard の設定に Puppet Labs の"
+"OpenStack モジュールを使用しています。"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:180
+msgid ""
+"Users and Groups are managed through Active Directory and imported into the "
+"Identity Service using LDAP. CLIs are available for Nova and Euca2ools to do "
+"this."
+msgstr ""
+"ユーザとグループは Active Directory で管理され、LDAP を使用して Identity Service "
+"にインポートされます。CLI は nova と euca2ools が使用可能です。"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:184
+msgid ""
+"CERN is currently running around 250 Nova Compute nodes with approximately "
+"1,000 instances."
+msgstr ""
+"CERN は現在、約 250 台の Nova コンピュートノード上で 約 1,000 インスタンスが 稼働"
+"中です。"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:191
+msgid ""
+"<link title=\"OpenStack Website\" href=\"http://www.slideshare.net/"
+"noggin143/20121017-openstack-accelerating-science\">San Diego 2012 Summit</"
+"link> (http://www.slideshare.net/noggin143/20121017-openstack-accelerating-"
+"science)"
+msgstr ""
+"<link title=\"OpenStack Website\" href=\"http://www.slideshare.net/"
+"noggin143/20121017-openstack-accelerating-science\">San Diego 2012 Summit</"
+"link> (http://www.slideshare.net/noggin143/20121017-openstack-accelerating-"
+"science)"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:198
+msgid ""
+"<link title=\"OpenStack Website\" href=\"http://cern.ch/go/N8wp\">Review of "
+"CERN Data Centre Infrastructure</link> (http://cern.ch/go/N8wp)"
+msgstr ""
+"<link title=\"OpenStack Website\" href=\"http://cern.ch/go/N8wp\">Review of "
+"CERN Data Centre Infrastructure</link> (http://cern.ch/go/N8wp)"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:205
+msgid ""
+"<link title=\"OpenStack Website\" href=\"http://information-technology.web."
+"cern.ch/book/cern-private-cloud-user-guide\">CERN Cloud Infrastructure User "
+"Guide</link> (http://information-technology.web.cern.ch/book/cern-private-"
+"cloud-user-guide)"
+msgstr ""
+"<link title=\"OpenStack Website\" href=\"http://information-technology.web."
+"cern.ch/book/cern-private-cloud-user-guide\">CERN Cloud Infrastructure User "
+"Guide</link> (http://information-technology.web.cern.ch/book/cern-private-"
+"cloud-user-guide)"
