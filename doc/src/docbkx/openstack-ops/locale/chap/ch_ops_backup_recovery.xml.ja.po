@@ -92,8 +92,8 @@ msgid ""
 "While OpenStack is composed of many components and moving parts, backing up "
 "the critical data is quite simple."
 msgstr ""
-"OpenStackは多くのコンポーネントからなり、それらは交換可能と複雑ですが、クリ"
-"ティカルデータのバックアップは非常にシンプルです。"
+"OpenStackは多くのコンポーネントから構成され、注意を払うべき箇所もたくさんありますが、"
+"大事なデータのバックアップは非常に単純です。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:45
 msgid ""
