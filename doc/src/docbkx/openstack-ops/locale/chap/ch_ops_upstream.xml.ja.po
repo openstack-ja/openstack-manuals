@@ -1,0 +1,1054 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-21 08:33+0000\n"
+"Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:365
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:584
+msgid "Austin"
+msgstr "Austin"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:439
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:574
+msgid "Bexar"
+msgstr "Bexar"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:501
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:564
+msgid "Cactus"
+msgstr "Cactus"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:983
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:544
+msgid "Diablo"
+msgstr "Diablo"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1138
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:506
+msgid "Essex"
+msgstr "Essex"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1317
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:33
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:467
+msgid "Folsom"
+msgstr "Folsom"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1370
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:456
+msgid "Grizzly"
+msgstr "Grizzly"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:16
+msgid "Upstream OpenStack"
+msgstr "OpenStack コミュニティ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:17
+msgid ""
+"OpenStack is founded on a thriving community which is a source of help, and "
+"welcomes your contributions. This section details some of the ways you can "
+"interact with the others involved."
+msgstr ""
+"OpenStack は非常に活発なコミュニティの上に成り立っており、あなたの参加をいつ"
+"でも待っています。この節では、コミュニティの他の人と交流する方法について詳し"
+"く説明します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:23
+msgid "Getting Help"
+msgstr "助けを得る"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:24
+msgid ""
+"There are several avenues available for seeking assistance. The quickest way "
+"to is to help the community help you. Search the Q&amp;A sites, mailing list "
+"archives, and bug lists for issues similar to yours. If you can't find "
+"anything, follow the directions for Reporting Bugs in the section below or "
+"use one of the channels for support below."
+msgstr ""
+"助けてもらうにはいくつかの方法があります。コミュニティの助けを得るのが一番早"
+"い方法です。 Q&amp;A サイト、メーリングリストのアーカイブを検索したり、バグリ"
+"ストにあなたが抱えている問題に似た問題がないか探します。必要な情報が見つから"
+"なかった場合、この後の節で説明する手順にしたがってバグ報告を行ったり、以下の"
+"サポートチャネルのどれかを使うことになります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:31
+msgid ""
+"Your first port of call should be the official OpenStack documentation, "
+"found on http://docs.openstack.org."
+msgstr ""
+"最初に確認すべき場所は OpenStack の公式ドキュメントです。 http://docs."
+"openstack.org にあります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:33
+msgid "You can get questions answered on the ask.openstack.org site."
+msgstr "ask.openstack.org では、すでに回答されている質問を見ることができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:34
+msgid ""
+"<link href=\"https://wiki.openstack.org/wiki/Mailing_Lists\">Mailing Lists</"
+"link> (https://wiki.openstack.org/wiki/Mailing_Lists) are also a great place "
+"to get help. The wiki page has more information about the various lists. As "
+"an operator, the main lists you should be aware of are:"
+msgstr ""
+"<link href=\"https://wiki.openstack.org/wiki/Mailing_Lists\">メーリングリスト"
+"</link> (https://wiki.openstack.org/wiki/Mailing_Lists) もアドバイスをもらう"
+"のに素晴らしい場所です。 Wiki ページにメーリングリストの詳しい情報が載ってい"
+"ます。運用者としては、確認しておくべき主要なメーリングリストは以下です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:44
+msgid ""
+"<link href=\"https://launchpad.net/~openstack\">General list</"
+"link>: <code>openstack@lists.launchpad.net</code>. The scope of this list is "
+"the current state of OpenStack. This is a very high traffic mailing list, "
+"with many, many emails per day."
+msgstr ""
+"<link href=\"https://launchpad.net/~openstack\">一般向けメーリングリスト</"
+"link>: <code>openstack@lists.launchpad.net</code>. このリストでは、OpenStack"
+"の現行リリースに関する話題を扱います。流量は非常に多く、1日にとてもたくさんの"
+"メールが流れます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:54
+msgid ""
+"<link href=\"http://lists.openstack.org/cgi-bin/mailman/listinfo/openstack-"
+"operators\">Operators list</link>: <code>openstack-operators@lists.openstack."
+"org.</code> This list is intended for discussion among existing OpenStack "
+"cloud operators, such as yourself. Currently, this list is relatively low "
+"traffic, on the order of one email a day."
+msgstr ""
+"<link href=\"http://lists.openstack.org/cgi-bin/mailman/listinfo/openstack-"
+"operators\">運用者向けリスト</link>: <code>openstack-operators@lists."
+"openstack.org.</code> このリストは、あなたのように、実際にOpenStackクラウドの"
+"運用者間での議論を目的としています。現在のところ、メールの流量はかなり少な"
+"く、１日に１通といったレベルです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:65
+msgid ""
+"<link href=\"http://lists.openstack.org/cgi-bin/mailman/listinfo/openstack-"
+"dev\">Development list</link>: <code>openstack-dev@lists.openstack.org</"
+"code>. The scope of this list is the future state of OpenStack. This is a "
+"high traffic mailing list, with multiple emails per day."
+msgstr ""
+"<link href=\"http://lists.openstack.org/cgi-bin/mailman/listinfo/openstack-"
+"dev\">開発者向けリスト</link>: <code>openstack-dev@lists.openstack.org</"
+"code>. このリストでは、OpenStackの今後についての話題を扱います。流量は多く、1"
+"日に何通もメールが流れます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:75
+msgid ""
+"We recommend you subscribe to the general list and the operator list, "
+"although you must set up filters to manage the volume for the general list. "
+"You'll also find links to the mailing list archives on the mailing list wiki "
+"page where you can search through the discussions."
+msgstr ""
+"一般向けリストと運用者向けリストを購読するのがお薦めです。一般向けリストの流"
+"量に対応するにはフィルタを設定する必要があるでしょうが。 Wiki のメーリングリ"
+"ストのページにはメーリングリストのアーカイブへのリンクがあり、そこで議論の過"
+"程を検索することができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:81
+msgid ""
+"<link href=\"https://wiki.openstack.org/wiki/IRC\">Multiple IRC channels</"
+"link> (https://wiki.openstack.org/wiki/IRC) are available for general "
+"questions and developer discussions. The general discussion channel is "
+"<code>#openstack</code> on <code>irc.freenode.net</code>."
+msgstr ""
+"一般的な質問用や開発者の議論用など、<link href=\"https://wiki.openstack.org/"
+"wiki/IRC\">複数の IRC チャネル</link> (https://wiki.openstack.org/wiki/IRC) "
+"があります。一般的な議論用のチャネルは <code>irc.freenode.net</code> の "
+"<code>#openstack</code>です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:91
+msgid "Reporting Bugs"
+msgstr "バグ報告"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:92
+msgid ""
+"As an operator, you are in a very good position to report unexpected "
+"behavior with your cloud. As OpenStack is flexible, you may be the only "
+"individual to report a particular issue. Every issue is important to fix so "
+"it is essential to learn how to easily submit a bug report."
+msgstr ""
+"運用者として、あなたは、あなたのクラウドでの予期しない動作を報告できる非常に"
+"よい立場にいます。 OpenStack は柔軟性が高いので、ある特定の問題を報告するのは"
+"あなた一人かもしれません。すべての問題は重要で修正すべきものです。そのために"
+"は、簡単にバグ報告を登録する方法を知っておくことは欠かせません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:98
+msgid ""
+"All OpenStack projects use <link href=\"http://launchpad.net/\">Launchpad</"
+"link> for bug tracking. You'll need to create an account on Launchpad before "
+"you can submit a bug report."
+msgstr ""
+"全ての OpenStack プロジェクトでは、バグ管理に <link href=\"http://launchpad."
+"net/\">Launchpad</link> を使っています。バグ報告を行う前に、Launchpad のアカ"
+"ウントを作る必要があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:104
+msgid ""
+"Once you have a Launchpad account, reporting a bug is as simple as "
+"identifying the project, or projects that are causing the issue. Sometimes "
+"this is more difficult than expected, but those working on the bug triage "
+"are happy to help relocate issues if their not in the right place initially."
+msgstr ""
+"Launchpad のアカウントを作った後は、バグを報告するのは、問題の原因となったプ"
+"ロジェクトを特定するのと同じくらい簡単です。場合によっては、思っていたよりも"
+"難しいこともありますが、最初のバグ報告が適切な場所でなかったとしても、バグの"
+"分類を行う人がバグ報告を適切なプロジェクトに割り当て直してくれます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:112
+msgid ""
+"Report a bug in <link href=\"https://bugs.launchpad.net/nova/+filebug"
+"\">Nova</link> (https://bugs.launchpad.net/nova/+filebug)"
+msgstr ""
+"<link href=\"https://bugs.launchpad.net/nova/+filebug\">Nova</link> のバグ報"
+"告 (https://bugs.launchpad.net/nova/+filebug)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:118
+msgid ""
+"Report a bug in <link href=\"https://bugs.launchpad.net/python-novaclient/"
+"+filebug\">python-novaclient</link> (https://bugs.launchpad.net/python-"
+"novaclient/+filebug)"
+msgstr ""
+"<link href=\"https://bugs.launchpad.net/python-novaclient/+filebug\">python-"
+"novaclient</link> のバグ報告 (https://bugs.launchpad.net/python-novaclient/"
+"+filebug)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:124
+msgid ""
+"Report a bug in <link href=\"https://bugs.launchpad.net/swift/+filebug"
+"\">Swift</link> (https://bugs.launchpad.net/swift/+filebug)"
+msgstr ""
+"<link href=\"https://bugs.launchpad.net/swift/+filebug\">Swift</link> のバグ"
+"報告 (https://bugs.launchpad.net/swift/+filebug)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:130
+msgid ""
+"Report a bug in <link href=\"https://bugs.launchpad.net/python-swiftclient/"
+"+filebug\">python-swiftclient</link> (https://bugs.launchpad.net/python-"
+"swiftclient/+filebug)"
+msgstr ""
+"<link href=\"https://bugs.launchpad.net/python-swiftclient/+filebug\">python-"
+"swiftclient</link> のバグ報告(https://bugs.launchpad.net/python-swiftclient/"
+"+filebug)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:137
+msgid ""
+"Report a bug in <link href=\"https://bugs.launchpad.net/glance/+filebug"
+"\">Glance</link> (https://bugs.launchpad.net/glance/+filebug)"
+msgstr ""
+"<link href=\"https://bugs.launchpad.net/glance/+filebug\">Glance</link> のバ"
+"グ報告 (https://bugs.launchpad.net/glance/+filebug)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:143
+msgid ""
+"Report a bug in <link href=\"https://bugs.launchpad.net/python-glanceclient/"
+"+filebug\">python-glanceclient</link> (https://bugs.launchpad.net/python-"
+"glanceclient/+filebug)"
+msgstr ""
+"<link href=\"https://bugs.launchpad.net/python-glanceclient/+filebug"
+"\">python-glanceclient</link> のバグ報告(https://bugs.launchpad.net/python-"
+"glanceclient/+filebug)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:150
+msgid ""
+"Report a bug in <link href=\"https://bugs.launchpad.net/keystone/+filebug"
+"\">Keystone</link> (https://bugs.launchpad.net/keystone/+filebug)"
+msgstr ""
+"<link href=\"https://bugs.launchpad.net/keystone/+filebug\">Keystone</link> "
+"のバグ報告 (https://bugs.launchpad.net/keystone/+filebug)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:156
+msgid ""
+"Report a bug in <link href=\"https://bugs.launchpad.net/python-"
+"keystoneclient/+filebug\">python-keystoneclient</link> (https://bugs."
+"launchpad.net/python-keystoneclient/+filebug)"
+msgstr ""
+"<link href=\"https://bugs.launchpad.net/python-keystoneclient/+filebug"
+"\">python-keystoneclient</link> のバグ報告(https://bugs.launchpad.net/python-"
+"keystoneclient/+filebug)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:163
+msgid ""
+"Report a bug in <link href=\"https://bugs.launchpad.net/quantum/+filebug"
+"\">Quantum</link> (https://bugs.launchpad.net/quantum/+filebug)"
+msgstr ""
+"<link href=\"https://bugs.launchpad.net/quantum/+filebug\">Quantum</link> の"
+"バグ報告 (https://bugs.launchpad.net/quantum/+filebug)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:169
+msgid ""
+"Report a bug in <link href=\"https://bugs.launchpad.net/python-quantumclient/"
+"+filebug\">python-quantumclient</link> (https://bugs.launchpad.net/python-"
+"quantumclient/+filebug)"
+msgstr ""
+"<link href=\"https://bugs.launchpad.net/python-quantumclient/+filebug"
+"\">python-quantumclient</link> のバグ報告(https://bugs.launchpad.net/python-"
+"quantumclient/+filebug)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:176
+msgid ""
+"Report a bug in <link href=\"https://bugs.launchpad.net/cinder/+filebug"
+"\">Cinder</link> (https://bugs.launchpad.net/cinder/+filebug)"
+msgstr ""
+"<link href=\"https://bugs.launchpad.net/cinder/+filebug\">Cinder</link> のバ"
+"グ報告 (https://bugs.launchpad.net/cinder/+filebug)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:182
+msgid ""
+"Report a bug in <link href=\"https://bugs.launchpad.net/python-cinderclient/"
+"+filebug\">python-cinderclient</link> (https://bugs.launchpad.net/python-"
+"cinderclient/+filebug)"
+msgstr ""
+"<link href=\"https://bugs.launchpad.net/python-cinderclient/+filebug"
+"\">python-cinderclient</link> のバグ報告(https://bugs.launchpad.net/python-"
+"cinderclient/+filebug)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:189
+msgid ""
+"Report a bug in <link href=\"https://bugs.launchpad.net/horizon/+filebug"
+"\">Horizon</link> (https://bugs.launchpad.net/horizon/+filebug)"
+msgstr ""
+"<link href=\"https://bugs.launchpad.net/horizon/+filebug\">Horizon</link> の"
+"バグ報告 (https://bugs.launchpad.net/horizon/+filebug)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:195
+msgid ""
+"Report a bug with the <link href=\"http://bugs.launchpad.net/openstack-"
+"manuals/+filebug\">documentation</link> (http://bugs.launchpad.net/openstack-"
+"manuals/+filebug)"
+msgstr ""
+"<link href=\"http://bugs.launchpad.net/openstack-manuals/+filebug\">ドキュメ"
+"ントdocumentation</link> に関するバグ報告 (http://bugs.launchpad.net/"
+"openstack-manuals/+filebug)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:201
+msgid ""
+"Report a bug with the <link href=\"http://bugs.launchpad.net/openstack-api-"
+"site/+filebug\">API documentation</link> (http://bugs.launchpad.net/"
+"openstack-api-site/+filebug)"
+msgstr ""
+"<link href=\"http://bugs.launchpad.net/openstack-api-site/+filebug\">API ド"
+"キュメント</link> に関するバグ報告 (http://bugs.launchpad.net/openstack-api-"
+"site/+filebug)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:208
+msgid ""
+"To write a good bug report, the following process is essential. First, "
+"search for the bug to make sure there is no bug already filed for the same "
+"issue. If you find one, be sure to click on \"This bug affects X people. "
+"Does this bug affect you?\" If you can't find the issue then enter the "
+"details of your report. It should at least include:"
+msgstr ""
+"よいバグ報告を書くには、次に述べる手順を踏むことが不可欠です。まず、バグを検"
+"索し、同じ問題に関してすでに登録されているバグがないことを確認します。見つ"
+"かった場合は、\"This bug affects X people. Does this bug affect you?\" (この"
+"バグは X 人に影響があります。あなたもこのバグの影響を受けますか?) をクリック"
+"するようにして下さい。同じ問題が見つからなかった場合は、バグ報告で詳細を入力"
+"して下さい。少なくとも以下の情報を含めるべきです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:217
+msgid ""
+"The release, or milestone, or commit ID corresponding to the software that "
+"you are running."
+msgstr "実行しているソフトウェアのリリースやマイルストーン、コミット ID。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:222
+msgid "The operating system and version where you've identified the bug."
+msgstr "あなたがバグを確認したオペレーティングシステムとそのバージョン。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:226
+msgid "Steps to reproduce the bug, including what went wrong."
+msgstr "バグの再現手順。何がおかしいかも含めて下さい。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:230
+msgid "Description of the expected results instead of what you saw."
+msgstr "期待される結果の説明 (出くわした現象ではなく)。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:234
+msgid ""
+"Read and understood your log files so you only include relevant excerpts."
+msgstr "ログファイルから関連部分のみを抜粋したもの。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:238
+msgid "When you do this, the bug is created with:"
+msgstr "バグ報告をすると、バグは次のステータスで作成されます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:241
+msgid "Status: <emphasis>New</emphasis>"
+msgstr "Status: <emphasis>New</emphasis>"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:245
+msgid ""
+"In the bug comments, you can contribute instructions on how to fix a given "
+"bug, and set it to <emphasis>Triaged</emphasis>. Or you can directly fix it: "
+"assign the bug to yourself, set it to <emphasis>In progress</emphasis>, "
+"branch the code, implement the fix, and propose your change for merging into "
+"trunk. But let's not get ahead of ourselves, there are bug triaging tasks as "
+"well."
+msgstr ""
+"バグのコメントでは、既知のバグの修正方法に関して案を出したり、バグの状態を "
+"<emphasis>Triaged</emphasis> (有効な報告か、対応が必要かなどを分類した状態) "
+"にセットすることができます。バグを直接修正することもできます。その場合は、バ"
+"グを自分に割り当てて、状態を <emphasis>In progress</emphasis> (進行中) にセッ"
+"トし、コードのブランチを作り、トランクにマージしてもらうように変更を提案する"
+"という流れになります。でも、先走りし過ぎないようにしましょう。バグを分類する"
+"という仕事もありますから。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:254
+msgid "Confirming &amp; Prioritizing"
+msgstr "バグの確認と優先付け"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:255
+msgid ""
+"This stage is about checking that a bug is real and assessing its impact. "
+"Some of these steps require bug supervisor rights (usually limited to core "
+"teams). If the bug lacks information to properly reproduce or assess the "
+"importance of the bug, the bug is set to:"
+msgstr ""
+"このステップでは、バグが実際に起こるかのチェックやその重要度の判定が行われま"
+"す。これらのステップを行うには、バグ管理者権限が必要なものがあります (通常、"
+"バグ管理者権限はコア開発者チームだけが持っています)。バグ報告に、バグを再現し"
+"たり、バグの重要度を判定したりするのに必要な情報が不足している場合、バグは"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:263
+msgid "Status: <emphasis>Incomplete</emphasis>"
+msgstr "Status: <emphasis>Incomplete</emphasis>"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:267
+msgid ""
+"Once you have reproduced the issue (or are 100% confident that this is "
+"indeed a valid bug) and have permissions to do so, set:"
+msgstr ""
+"にセットされます。問題を再現できた場合 (もしくはこの報告がバグであると 100％ "
+"確信を持てる場合) で、セットする権限を持っている場合には、%c_dummy"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:272
+msgid "Status: <emphasis>Confirmed</emphasis>"
+msgstr "Status: <emphasis>Confirmed</emphasis>"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:276
+msgid "Core developers also prioritize the bug, based on its impact:"
+msgstr "にセットして下さい。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:280
+msgid "Importance: &lt;Bug impact&gt;"
+msgstr "Importance: &lt;バグ影響度&gt;"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:283
+msgid "The bug impacts are categorized as follows:"
+msgstr "バグ影響度は以下のカテゴリに分かれています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:286
+msgid ""
+"<emphasis>Critical</emphasis> if the bug prevents a key feature from working "
+"properly (regression) for all users (or without a simple workaround) or "
+"result in data loss"
+msgstr ""
+"<emphasis>Critical</emphasis> このバグにより、目玉となる機能が全てのユーザで"
+"正常に動作しない場合 (または簡単なワークアラウンドでは動作しない場合)、もしく"
+"はデータロスにつながるような場合"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:294
+msgid ""
+"<emphasis>High</emphasis> if the bug prevents a key feature from working "
+"properly for some users (or with a workaround)"
+msgstr ""
+"<emphasis>High</emphasis> このバグにより、目玉となる機能が何人かユーザで正常"
+"に動作しない場合 (または簡単なワークアラウンドで動作する場合)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:300
+msgid ""
+"<emphasis>Medium</emphasis> if the bug prevents a secondary feature from "
+"working properly"
+msgstr ""
+"<emphasis>Medium</emphasis> このバグにより、ある程度重要な機能が正常に動作し"
+"ない場合"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:306
+msgid "<emphasis>Low</emphasis> if the bug is mostly cosmetic"
+msgstr "<emphasis>Low</emphasis> このバグが多くの場合で軽微な場合"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:311
+msgid ""
+"<emphasis>Wishlist</emphasis> if the bug is not really a bug, but rather a "
+"welcome change in behavior"
+msgstr ""
+"<emphasis>Wishlist</emphasis> 実際にはバグではないが、そのように動作を変更し"
+"た方よいものの場合"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:317
+msgid ""
+"If the bug contains the solution, or a patch, set the bug status to "
+"<emphasis>Triaged</emphasis>"
+msgstr ""
+"バグ報告に解決方法やパッチが書かれている場合、そのバグの状態は "
+"<emphasis>Triaged</emphasis> にセットされる。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:322
+msgid "Bug Fixing"
+msgstr "バグ修正"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:323
+msgid ""
+"At this stage, a developer works on a fix. During that time, to avoid "
+"duplicating the work, they should set:"
+msgstr ""
+"この段階では、開発者が修正を行います。修正を行っている間、作業の重複を避ける"
+"ため、バグの状態を以下のようにセットすべきです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:328
+msgid "Status: <emphasis>In progress</emphasis>"
+msgstr "Status: <emphasis>In progress</emphasis>"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:332
+msgid "Assignee: &lt;yourself&gt;"
+msgstr "Assignee: &lt;あなた自身&gt;"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:335
+msgid "When the fix is ready, they propose and get the change reviewed."
+msgstr "修正が用意できたら、開発者は変更を提案し、レビューを受けます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:338
+msgid "After the Change is Accepted"
+msgstr "変更が受理された後"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:339
+msgid ""
+"After the change is reviewed, accepted, and lands in master, it "
+"automatically moves to:"
+msgstr ""
+"変更がレビューされ、受理されて、マスターブランチにマージされると、バグの状態"
+"は自動的に以下のようになります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:343
+msgid "Status: <emphasis>Fix committed</emphasis>"
+msgstr "Status: <emphasis>Fix committed</emphasis>"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:347
+msgid ""
+"When the fix makes it into a milestone or release branch, it automatically "
+"moves to:"
+msgstr ""
+"修正がマイルストーンやリリースブランチに取り込まれると、バグの状態は自動的に"
+"以下のようになります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:351
+msgid "Milestone: Milestone the bug was fixed in"
+msgstr "Milestone: このバグの修正が入ったマイルストーン"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:355
+msgid "Status: <emphasis>Fix released</emphasis>"
+msgstr "Status: <emphasis>Fix released</emphasis>"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:363
+msgid "Join the OpenStack Community"
+msgstr "OpenStack コミュニティに参加する"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:364
+msgid ""
+"Since you've made it this far in the book, you should consider becoming an "
+"official individual member of the community and <link href=\"https://www."
+"openstack.org/join/\">Join The OpenStack Foundation</link> (https://www."
+"openstack.org/join/). The OpenStack Foundation is an independent body "
+"providing shared resources to help achieve the OpenStack mission by "
+"protecting, empowering, and promoting OpenStack software and the community "
+"around it, including users, developers and the entire ecosystem. We all "
+"share the responsibility to make this community the best it can possibly be "
+"and signing up to be a member is the first step to participating. Like the "
+"software, individual membership within the OpenStack Foundation is free and "
+"accessible to anyone."
+msgstr ""
+"この本をここまで読んで来たので、あなたはコミュニティの正式な個人メンバーに"
+"なって、<link href=\"https://www.openstack.org/join/\">Join The OpenStack "
+"Foundation</link> (https://www.openstack.org/join/) に加入することを考えてい"
+"ることでしょう。 OpenStack Foundation は、共有リソースを提供し OpenStack の目"
+"的の達成を支援する独立組織で、OpenStack ソフトウェア、およびユーザ、開発者、"
+"エコシステム全体といった OpenStack を取り巻くコニュニティを守り、活力を与え、"
+"普及の促進を行います。我々全員がこのコミュニティをできる限りよいものにしてい"
+"く責任を共有します。メンバーになることはコミュニティに参加する最初のステップ"
+"です。ソフトウェア同様、 OpenStack Foundation の個人会員は無料で誰でもなるこ"
+"とができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:382
+msgid "Features and the Development Roadmap"
+msgstr "機能と開発ロードマップ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:383
+msgid ""
+"OpenStack follows a six month release cycle, typically releasing in April "
+"and October each year. At the start of each cycle, the community gathers in "
+"a single location for a Design Summit. At the summit, the features for the "
+"coming releases are discussed, prioritized and planned. Here's an example "
+"release cycle with dates showing milestone releases, code freeze, and string "
+"freeze dates along with an example of when the Summit occurs. Milestones are "
+"interim releases within the cycle that are available as packages for "
+"download and testing. Code freeze is putting a stop to adding new features "
+"to the release. String freeze is putting a stop to changing any strings "
+"within the source code."
+msgstr ""
+"OpenStack は6ヶ月のリリースサイクルを取っており、通常は4月と10月にリリースが"
+"行われます。各リリースサイクルの最初に、OpenStack コミュニティは一ヶ所に集ま"
+"りデザインサミットを行います。サミットでは、次のリリースでの機能が議論され、"
+"優先度付けと計画が行われます。以下はリリースサイクルの一例で、サミットが行わ"
+"れて以降のマイルストーンリリース、Code Freeze、String Freeze などが記載されて"
+"います。マイルストーンはリリースサイクル内での中間リリースで、テスト用にパッ"
+"ケージが作成され、ダウンロードできるようになります。 Code Freeze では、そのリ"
+"リースに向けての新機能の追加が凍結されます。String Freeze は、ソースコード内"
+"の文字列の変更が凍結されることを意味します。"
+
+#. When image changes, this message will be marked fuzzy or untranslated for
+#. you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:401
+msgid ""
+"@@image: 'figures/releasecyclegrizzlydiagram.png'; "
+"md5=f4cf95f80608d5069f55cb6c27c215a3"
+msgstr ""
+"@@image: 'figures/releasecyclegrizzlydiagram.png'; "
+"md5=f4cf95f80608d5069f55cb6c27c215a3"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:405
+msgid ""
+"Feature requests typically start their life in Etherpad, a collaborative "
+"editing tool, which is used to take coordinating notes at a design summit "
+"session specific to the feature. This then leads to the creation of a "
+"blueprint on the Launchpad site for the particular project, which is used to "
+"describe the feature more formally. Blueprints are then approved by project "
+"team members, and development can begin."
+msgstr ""
+"機能追加リクエストは、通常 Etherpad で始まります。Etherpad は共同編集ツール"
+"で、デザインサミットのその機能に関するセッションで議論を整理するのに使われま"
+"す。続けて、プロジェクトの Launchpad サイトに blueprint が作成され、"
+"blueprint を使ってよりきちんとした形で機能が規定されていきます。 この後、"
+"blueprint はプロジェクトメンバーによって承認され、開発が始まります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:413
+msgid ""
+"Therefore, the fastest way to get your feature request up for consideration "
+"is to create an Etherpad with your ideas and propose a session to the design "
+"summit. If the design summit has already passed, you may also create a "
+"blueprint directly. Read this <link href=\"http://vmartinezdelacruz.com/how-"
+"to-work-with-blueprints-without-losing-your-mind/\">blog post about how to "
+"work with blueprints</link> (http://vmartinezdelacruz.com/how-to-work-with-"
+"blueprints-without-losing-your-mind/) for a developer intern's perspective, "
+"Victoria Martínez."
+msgstr ""
+"あなたの機能追加リクエストを新機能として検討してもらうのに一番早い方法は、ア"
+"イデアを書いた Etherpad を作成し、デザインサミットのセッションを提案すること"
+"です。デザインサミットが終わっている場合には、blueprint を直接作成することも"
+"できます。 Victoria Martínez の <link href=\"http://vmartinezdelacruz.com/"
+"how-to-work-with-blueprints-without-losing-your-mind/\">blueprint での開発の"
+"進め方についてのブログ</link> (http://vmartinezdelacruz.com/how-to-work-with-"
+"blueprints-without-losing-your-mind/) を是非読んで下さい。 OpenStack 開発者の"
+"インターンの視点で書かれた記事です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:424
+msgid ""
+"The roadmap for the next release as it is developed can be seen at <link "
+"href=\"http://status.openstack.org/release/\">Releases</link> (http://status."
+"openstack.org/release/)."
+msgstr ""
+"次のリリースに向けたロードマップと開発状況は <link href=\"http://status."
+"openstack.org/release/\">Releases</link> (http://status.openstack.org/"
+"release/) で見ることができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:429
+msgid ""
+"To determine the potential features going in to future releases, or to look "
+"at features implemented previously, take a look at the existing blueprints "
+"such as <link href=\"https://blueprints.launchpad.net/nova\">OpenStack "
+"Compute (nova) Blueprints</link> (https://blueprints.launchpad.net/nova), "
+"<link href=\"https://blueprints.launchpad.net/keystone\">OpenStack Identity "
+"(keystone) Blueprints</link> (https://blueprints.launchpad.net/keystone) and "
+"release notes."
+msgstr ""
+"将来のリリースで検討されている機能を確認したり、過去に実装された機能を見るに"
+"は、<link href=\"https://blueprints.launchpad.net/nova\">OpenStack Compute "
+"(nova) Blueprints</link> (https://blueprints.launchpad.net/nova), <link href="
+"\"https://blueprints.launchpad.net/keystone\">OpenStack Identity (keystone) "
+"Blueprints</link> (https://blueprints.launchpad.net/keystone) などの既存の "
+"Blueprint やリリースノートを見て下さい。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:443
+msgid "Release notes are maintained on the OpenStack wiki:"
+msgstr "リリースノートは OpenStack Wiki で管理されています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:448
+msgid "Series"
+msgstr "シリーズ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:449
+msgid "Status"
+msgstr "状態"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:450
+msgid "Releases"
+msgstr "リリース番号"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:451
+msgid "Date"
+msgstr "リリース日"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:460
+msgid "Under development, Release schedule"
+msgstr "開発中、リリーススケジュール"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:463
+msgid "Due"
+msgstr "リリース予定"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:464
+msgid "Apr 4, 2013"
+msgstr "2013年4月4日"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:468
+msgid "Current stable release, security-supported"
+msgstr "現在の安定版リリース、セキュリティアップデート対象"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:473
+msgid "2012.2"
+msgstr "2012.2"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:475
+msgid "Sep 27, 2012"
+msgstr "2012年9月27日"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:483
+msgid "2012.2.1"
+msgstr "2012.2.1"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:485
+msgid "Nov 29, 2012"
+msgstr "2012年11月29日"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:492
+msgid "2012.2.2"
+msgstr "2012.2.2"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:494
+msgid "Dec 13, 2012"
+msgstr "2012年12月13日"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:501
+msgid "2012.2.3"
+msgstr "2012.2.3"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:503
+msgid "Jan 31, 2012"
+msgstr "2012年1月31日"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:507
+msgid "Community-supported, security-supported"
+msgstr "コミュニティによるサポートが行われている、セキュリティアップデート対象"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:512
+msgid "2012.1"
+msgstr "2012.1"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:514
+msgid "Apr 5, 2012"
+msgstr "2012年4月5日"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:521
+msgid "2012.1.1"
+msgstr "2012.1.1"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:523
+msgid "Jun 22, 2012"
+msgstr "2012年6月22日"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:530
+msgid "2012.1.2"
+msgstr "2012.1.2"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:532
+msgid "Aug 10, 2012"
+msgstr "2012年8月10日"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:539
+msgid "2012.1.3"
+msgstr "2012.1.3"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:541
+msgid "Oct 12, 2012"
+msgstr "2012年10月12日"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:546
+msgid "Community-supported"
+msgstr "コミュニティによるサポートが行われている"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:550
+msgid "2011.3"
+msgstr "2011.3"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:552
+msgid "Sep 22, 2011"
+msgstr "2011年9月22日"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:559
+msgid "2011.3.1"
+msgstr "2011.3.1"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:561
+msgid "Jan 19, 2012"
+msgstr "2012年1月19日"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:565
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:575
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:585
+msgid "Deprecated"
+msgstr "非推奨"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:569
+msgid "2011.2"
+msgstr "2011.2"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:571
+msgid "Apr 15, 2011"
+msgstr "2011年4月15日"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:579
+msgid "2011.1"
+msgstr "2011.1"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:581
+msgid "Feb 3, 2011"
+msgstr "2011年2月3日"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:589
+msgid "2010.1"
+msgstr "2010.1"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:591
+msgid "Oct 21, 2010"
+msgstr "2010年10月21日"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:597
+msgid "How to Contribute to the Documentation"
+msgstr "ドキュメント作成への貢献の仕方"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:598
+msgid ""
+"OpenStack documentation efforts encompass operator and administrator docs, "
+"API docs, and user docs."
+msgstr ""
+"OpenStack のドキュメント作成活動は、運用管理ドキュメント、API ドキュメント、"
+"ユーザドキュメントなどに渡ります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:600
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:184
+msgid ""
+"The genesis of this book was an in-person event, but now that the book is in "
+"your hands we want you to contribute to it. OpenStack documentation follows "
+"the coding principles of iterative work, with bug logging, investigating, "
+"and fixing."
+msgstr ""
+"この本の元は人が集まったイベントで作成されましたが、今やこの本はみなさんも貢"
+"献できる状態になっています。 OpenStack のドキュメント作成は、バグ登録、調査、"
+"修正を繰り返し行うというコーディングの基本原則に基いて行われています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:605
+msgid ""
+"Just like the code, the <link href=\"http://docs.openstack.org\">docs."
+"openstack.org</link> site is updated constantly using the Gerrit review "
+"system, with source stored in GitHub in the <link href=\"http://github.com/"
+"openstack/openstack-manuals/\">openstack-manuals</link> (http://github.com/"
+"openstack/openstack-manuals/) repository and the <link href=\"http://github."
+"com/openstack/api-site/\">api-site</link> (http://github.com/openstack/api-"
+"site/) repository, in DocBook format."
+msgstr ""
+"コードと全く同じく、<link href=\"http://docs.openstack.org\">docs.openstack."
+"org</link> サイトは Gerrit レビューシステムを使って常に更新されています。ソー"
+"スは、GitHub の <link href=\"http://github.com/openstack/openstack-manuals/"
+"\">openstack-manuals</link> (http://github.com/openstack/openstack-manuals/) "
+"レポジトリと <link href=\"http://github.com/openstack/api-site/\">api-site</"
+"link> (http://github.com/openstack/api-site/) レポジトリに、それぞれ DocBook "
+"形式で保存されています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:617
+msgid ""
+"To review the documentation before it's published, go to the OpenStack "
+"Gerrit server at <link href=\"http://review.openstack.org\">review.openstack."
+"org</link> and search for <link href=\"https://review.openstack.org/#/q/"
+"status:open+project:openstack/openstack-manuals,n,z\">project:openstack/"
+"openstack-manuals</link> or <link href=\"https://review.openstack.org/#/q/"
+"status:open+project:openstack/api-site,n,z\">project:openstack/api-site</"
+"link>."
+msgstr ""
+"公開される前にドキュメントのレビューを行うには、OpenStack Gerrit サーバー "
+"<link href=\"http://review.openstack.org\">review.openstack.org</link> に行っ"
+"て、<link href=\"https://review.openstack.org/#/q/status:open+project:"
+"openstack/openstack-manuals,n,z\">project:openstack/openstack-manuals</link> "
+"や <link href=\"https://review.openstack.org/#/q/status:open+project:"
+"openstack/api-site,n,z\">project:openstack/api-site</link> を検索して下さい。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:628
+msgid ""
+"See the <link href=\"https://wiki.openstack.org/wiki/How_To_Contribute\">How "
+"To Contribute</link> (https://wiki.openstack.org/wiki/How_To_Contribute) "
+"page on the wiki for more information on the steps you need to take to "
+"submit your first documentation review or change."
+msgstr ""
+"ドキュメントのレビューや変更を最初に行うのに必要な手続きについての詳しい情報"
+"は、Wiki の <link href=\"https://wiki.openstack.org/wiki/How_To_Contribute"
+"\">How To Contribute</link> (https://wiki.openstack.org/wiki/"
+"How_To_Contribute) ページを参照して下さい。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:637
+msgid "Security Information"
+msgstr "セキュリティ情報"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:638
+msgid ""
+"As a community, we take security very seriously and follow a specific "
+"process for reporting potential issues. We vigilantly pursue fixes and "
+"regularly eliminate exposures. You can report security issues you discover "
+"through this specific process. The OpenStack Vulnerability Management Team "
+"is a very small group of experts in vulnerability management drawn from the "
+"OpenStack community. Their job is facilitating the reporting of "
+"vulnerabilities, coordinating security fixes and handling progressive "
+"disclosure of the vulnerability information. Specifically, the Team is "
+"responsible for the following functions:"
+msgstr ""
+"我々は、コミュニティとして、セキュリティを非常に重要だと考えており、潜在的な"
+"問題の報告は決められたプロセスに基いて処理されます。修正を用心深く追跡し、定"
+"期的にセキュリティ上の問題点を取り除きます。あなたは発見したセキュリティ上の"
+"問題をこの決められたプロセスを通して報告できます。OpenStack 脆弱性管理チーム"
+"は、OpenStackコミュニティから選ばれた脆弱性管理の専門家で構成されるごく少人数"
+"のグループです。このチームの仕事は、脆弱性の報告を手助けし、セキュリティ上の"
+"修正を調整し、脆弱性情報の公開を続けていくことです。特に、このチームは以下の"
+"役割を担っています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:652
+msgid ""
+"Vulnerability Management: All vulnerabilities discovered by community "
+"members (or users) can be reported to the Team."
+msgstr ""
+"脆弱性管理: コミュニティメンバー (やユーザ) が発見した全ての脆弱性をこのチー"
+"ムに報告できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:657
+msgid ""
+"Vulnerability Tracking: The Team will curate a set of vulnerability related "
+"issues in the issue tracker. Some of these issues are private to the Team "
+"and the affected product leads, but once remediation is in place, all "
+"vulnerabilities are public."
+msgstr ""
+"脆弱性追跡: このチームはバグ追跡システムに登録された脆弱性に関連する問題の管"
+"理を行います。問題の中には、このチームと影響を受けるプロジェクトの責任者のみ"
+"が参照できる場合もありますが、問題の修正が用意されると、全ての脆弱性は公開さ"
+"れます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:665
+msgid ""
+"Responsible Disclosure: As part of our commitment to work with the security "
+"community, the team ensures that proper credit is given to security "
+"researchers who responsibly report issues in OpenStack."
+msgstr ""
+"Responsible Disclosure（責任ある情報公開）: セキュリティコミュニティと仕事を"
+"する義務の一つとして、セキュリティ情報の公開が、確実に、OpenStack のセキュリ"
+"ティ問題を責任をもって扱うセキュリティ研究者の適切なお墨付きを得て行われるよ"
+"うにします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:672
+msgid ""
+"We provide two ways to report issues to the OpenStack Vulnerability "
+"Management Team depending on how sensitive the issue is:"
+msgstr ""
+"OpenStack 脆弱性管理チームに問題を報告する方法は2種類用意されており、問題の重"
+"要度に応じて使い分けて下さい。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:677
+msgid ""
+"Open a bug in Launchpad and mark it as a 'security bug'. This makes the bug "
+"private and accessible to only the Vulnerability Management Team."
+msgstr ""
+"Launchpad でバグ報告を行い、'security bug' のマークを付ける。マークを付ける"
+"と、そのバグは一般には公開されなくなり、脆弱性管理チームだけが参照できるよう"
+"になります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:683
+msgid ""
+"If the issue is extremely sensitive, send an encrypted email to one of the "
+"Team's members. Find their GPG keys at <link href=\"http://www.openstack.org/"
+"projects/openstack-security/\">OpenStack Security</link> (http://www."
+"openstack.org/projects/openstack-security/)."
+msgstr ""
+"問題が極めて慎重に扱うべき情報の場合は、脆弱性管理チームのメンバーの誰かに暗"
+"号化したメールを送って下さい。メンバーの GPG 鍵は "
+"<link href=\"http://www.openstack.org/projects/openstack-security/"
+"\">OpenStack Security</link> (http://www.openstack.org/projects/openstack-"
+"security/) で入手できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:692
+msgid ""
+"You can find the full list of security-oriented teams you can join at <link "
+"href=\"https://wiki.openstack.org/wiki/SecurityTeams\">Security Teams</"
+"link> (http://wiki.openstack.org/SecurityTeams). The Vulnerability "
+"Management process is fully documented at <link href=\"https://wiki."
+"openstack.org/wiki/VulnerabilityManagement\">Vulnerability Management</"
+"link> (https://wiki.openstack.org/wiki/VulnerabilityManagement)."
+msgstr ""
+"あなたが参加できるセキュリティ関連のチームのリストは <link href=\"https://"
+"wiki.openstack.org/wiki/SecurityTeams\">セキュリティチーム</link> (http://"
+"wiki.openstack.org/SecurityTeams) にあります。脆弱性管理プロセスはすべてド"
+"キュメントにまとめられており、<link href=\"https://wiki.openstack.org/wiki/"
+"VulnerabilityManagement\">脆弱性管理</link> (https://wiki.openstack.org/wiki/"
+"VulnerabilityManagement) で参照できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:704
+msgid "Finding Additional Information"
+msgstr "さらに情報を見つける"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:705
+msgid ""
+"In addition to this book, there are many other sources of information about "
+"OpenStack. The <link href=\"http://www.openstack.org\">OpenStack website</"
+"link> (http://www.openstack.org) is a good starting point, with <link href="
+"\"http://docs.openstack.org\">OpenStack Docs</link> (http://docs.openstack."
+"org) and <link href=\"http://api.openstack.org\">OpenStack API Docs</"
+"link> (http://api.openstack.org) providing technical documentation about "
+"OpenStack. The <link href=\"https://wiki.openstack.org\">OpenStack wiki</"
+"link> contains a lot of general information that cuts across the OpenStack "
+"projects including a list of <link href=\"https://wiki.openstack.org/wiki/"
+"OperationsTools\">recommended tools</link> (https://wiki.openstack.org/wiki/"
+"OperationsTools ). Finally, there are a number of blogs aggregated at <link "
+"href=\"http://planet.openstack.org\">Planet OpenStack</link> (http://planet."
+"openstack.org)."
+msgstr ""
+"この本以外にも、OpenStack に関する情報源はたくさんあります。 <link href="
+"\"http://www.openstack.org\">OpenStack ウェブサイト</link> (http://www."
+"openstack.org) は最初に見るといいでしょう。ここには、<link href=\"http://"
+"docs.openstack.org\">OpenStack ドキュメント</link> (http://docs.openstack."
+"org) と <link href=\"http://api.openstack.org\">OpenStack API ドキュメント</"
+"link> (http://api.openstack.org) があり、OpenStack に関する技術情報が提供され"
+"ています。 <link href=\"https://wiki.openstack.org\">OpenStack wiki</link> に"
+"は、OpenStack の各プロジェクトの範囲にとどらまらない汎用的な情報が多数あり、"
+"例えば <link href=\"https://wiki.openstack.org/wiki/OperationsTools\">お薦め"
+"ツールのリスト</link> (https://wiki.openstack.org/wiki/OperationsTools ) と"
+"いった情報も載っています。最後に、<link href=\"http://planet.openstack.org"
+"\">Planet OpenStack</link> (http://planet.openstack.org) には多くのブログが集"
+"められています。"
