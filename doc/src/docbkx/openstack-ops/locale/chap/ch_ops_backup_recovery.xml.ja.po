@@ -1,0 +1,335 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-21 08:33+0000\n"
+"Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:110
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:151
+msgid "Object Storage"
+msgstr "オブジェクトストレージ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:123
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:141
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:410
+msgid "Block Storage"
+msgstr "ブロックストレージ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:16
+msgid "Backup and Recovery"
+msgstr "バックアップとリカバリー"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:17
+msgid ""
+"Standard backup best practices apply when creating your OpenStack backup "
+"policy. For example, how often to backup your data is closely related to how "
+"quickly you need to recover from data loss."
+msgstr ""
+"OpenStackバックアップポリシーを作成する際、標準的なバックアップのベストプラク"
+"ティスが適用できます。例えば、どの程度の頻度でバックアップを行なうかは、"
+"どのくらい早くデータロスから復旧させる必要があるかに密接に関連しています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:21
+msgid ""
+"If you cannot have any data loss at all, you should focus on High "
+"Availability as well as backups."
+msgstr ""
+"もし、いかなるデータロスも許されない場合、バックアップに加えて高可用性（High Avaialability）についても検討すべき"
+"です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:24
+msgid "Other backup considerations include:"
+msgstr "さらにバックアップの考慮点として以下があげられます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:27
+msgid "How many backups to keep?"
+msgstr "いくつのバックアップを持つべきか?"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:30
+msgid "Should backups be kept off-site?"
+msgstr "オフサイトにバックアップを置くべきか?"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:33
+msgid "How often should backups be tested?"
+msgstr "どの程度の頻度でバックアップをテストすべきか?"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:36
+msgid ""
+"Just as important as a backup policy is a recovery policy (or at least "
+"recovery testing)."
+msgstr ""
+"バックアップポリシーと同じくらい大事なことは、リカバリーポリシーです (少なくともリカバ"
+"リーのテストは必要です)。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:41
+msgid "What to Backup"
+msgstr "バックアップ対象"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:42
+msgid ""
+"While OpenStack is composed of many components and moving parts, backing up "
+"the critical data is quite simple."
+msgstr ""
+"OpenStackは多くのコンポーネントから構成され、注意を払うべき箇所もたくさんありますが、"
+"大事なデータのバックアップは非常に単純です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:45
+msgid ""
+"This chapter describes only how to back up configuration files and databases "
+"that the various OpenStack components need to run. This chapter does not "
+"describe how to back up objects inside Object Storage or data contained "
+"inside Block Storage. Generally these areas are left for the user to back up "
+"on their own."
+msgstr ""
+"この章では、OpenStackコンポーネントを動作させるのに必要な設定ファイルとデータ"
+"ベースについてのバックアップ方法のみを説明します。オブジェクトストレージ内の"
+"オブジェクトや、ブロックストレージ内のデータのバックアップについては説明して"
+"いません。一般的にこれらの領域はユーザー自身でバックアップを行います。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:53
+msgid "Database Backups"
+msgstr "データベースのバックアップ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:54
+msgid ""
+"The example OpenStack architecture designates the Cloud Controller as the "
+"MySQL server. This MySQL server hosts the databases for Nova, Glance, "
+"Cinder, and Keystone. With all of these databases in one place, it's very "
+"easy to create a database backup:"
+msgstr ""
+"参考アーキテクチャーでは、クラウドコントローラーを MySQL サーバにしています。このMySQL "
+"サーバーは Nova, Glance, Cinder, そして Keystone のデータベースを保持していま"
+"す。全てのデータベースが一ヶ所にある場合、データベースバックアップは非常に容易"
+"となります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:63
+msgid "If you only want to backup a single database, you can instead run:"
+msgstr ""
+"もし、単一のデータベースのみバックアップする場合は次のように実行します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:66
+msgid "where <code>nova</code> is the database you want to back up."
+msgstr "ここで <code>nova</code> はバックアップ対象のデータベースです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:68
+msgid ""
+"You can easily automate this process by creating a cron job that runs the "
+"following script once per day:"
+msgstr ""
+"以下のようなcronジョブを一日に一度実行することで、簡単に自動化することも出来"
+"ます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:77
+msgid ""
+"This script dumps the entire MySQL database and delete any backups older "
+"than 7 days."
+msgstr ""
+"このスクリプトは MySQL データベース全体をダンプし、7日間より古いバックアップ"
+"を削除します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:81
+msgid "File System Backups"
+msgstr "ファイルシステムバックアップ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:82
+msgid ""
+"This section discusses which files and directories should be backed up "
+"regularly, organized by service."
+msgstr ""
+"このセクションは、サービスにより構成される、定期的にバックアップすべきファイ"
+"ルとディレクトリについて議論します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:84
+msgid "Compute"
+msgstr "コンピュート"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:85
+msgid ""
+"The <code>/etc/nova</code> directory on both the cloud controller and "
+"compute nodes should be regularly backed up."
+msgstr ""
+"クラウドコントローラー、および、コンピュートノードの <code>/etc/nova</code>ディレ"
+"クトリは定期的にバックアップされるべきです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:88
+msgid ""
+"<code>/var/log/nova</code> does not need backed up if you have all logs "
+"going to a central area. It is highly recommended to use a central logging "
+"server or backup the log directory."
+msgstr ""
+"<code>/var/log/nova</code> については、全てのログをリモートで集中管理している"
+"のであれば、バックアップの必要はありません。ログ集約システムの導入か、ログディ"
+"レクトリのバックアップを強く推奨します"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:93
+msgid ""
+"<code>/var/lib/nova</code> is another important directory to backup. The "
+"exception to this is the <code>/var/lib/nova/instances</code> subdirectory "
+"on compute nodes. This subdirectory contains the KVM images of running "
+"instances. You would only want to back up this directory if you need to "
+"maintain backup copies of all instances. Under most circumstances, you do "
+"not need to do this, but this can vary from cloud to cloud and your service "
+"levels. Also be aware that making a backup of a live KVM instance can cause "
+"that instance to not boot properly if it is ever restored from a backup."
+msgstr ""
+"<code>/var/lib/nova</code> がバックアップする他の重要なディレクトリです。これ"
+"の例外がコンピュートノードにある <code>/var/lib/nova/instances</code> サブディレ"
+"クトリです。このサブディレクトリには実行中のインスタンスの KVM イメージが置かれま"
+"す。このディレクトリをバックアップしたいと思うのは、すべてのインスタンスのバックアップ"
+"コピーを保持する必要がある場合だけでしょう。多くの場合において、これを実行する必要"
+"がありません。ただし、クラウドごとに異なり、サービスレベルによっても異なる可"
+"能性があります。稼働中の KVM インスタンスのバックアップは、バックアップから復"
+"元したときでも、正しく起動しない可能性があることに気をつけてください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:108
+msgid "Image Catalog and Delivery"
+msgstr "イメージカタログと配布"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:109
+msgid ""
+"<code>/etc/glance</code> and <code>/var/log/glance</code> follow the same "
+"rules at the nova counterparts."
+msgstr ""
+"<code>/etc/glance</code>と<code>/var/log/glance</code>はnovaの場合と同じルー"
+"ルに従います。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:113
+msgid ""
+"<code>/var/lib/glance</code> should also be backed up. Take special notice "
+"of <code>/var/lib/glance/images</code>. If you are using a file-based back-"
+"end of Glance, <code>/var/lib/glance/images</code> is where the images are "
+"stored and care should be taken."
+msgstr ""
+"<code>/var/lib/glance</code>もバックアップすべきです。 <code>/var/lib/glance/"
+"images</code>には特段の注意が必要です。"
+"もし、ファイルベースのバックエンドを利用しており、このディレクトリがイメージ"
+"の保管ディレクトリならば特にです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:120
+msgid ""
+"There are two ways to ensure stability with this directory. The first is to "
+"make sure this directory is run on a RAID array. If a disk fails, the "
+"directory is available. The second way is to use a tool such as rsync to "
+"replicate the images to another server:"
+msgstr ""
+"このディレクトリの永続性を保証するために二つの方法があります。一つ目はRAIDア"
+"レイ上にこのディレクトリを置くことで、ディスク障害時にもこのディレクトリが利"
+"用できます。二つ目の方法はrsyncのようなツールを用いてイメージを他のサーバーに"
+"複製することです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:126
+msgid ""
+"# rsync -az --progress /var/lib/glance/images backup-server:/var/lib/glance/"
+"images/"
+msgstr ""
+"# rsync -az --progress /var/lib/glance/images backup-server:/var/lib/glance/"
+"images/"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:130
+msgid "Identity"
+msgstr "認証"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:131
+msgid ""
+"<code>/etc/keystone</code> and <code>/var/log/keystone</code> follow the "
+"same rules as other components."
+msgstr ""
+"<code>/etc/keystone</code>と<code>/var/log/keystone</code>は他のコンポーネン"
+"トと同じルールになります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:135
+msgid ""
+"<code>/var/lib/keystone</code>, while should not contain any data being "
+"used, can also be backed up just in case."
+msgstr ""
+"<code>/var/lib/keystone</code>は、使用されるデータは含まれていないはずです"
+"が、念のためバックアップします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:142
+msgid ""
+"<code>/etc/cinder</code> and <code>/var/log/cinder</code> follow the same "
+"rules as other components."
+msgstr ""
+"<code>/etc/cinder</code>と<code>/var/log/cinder</code>は他のコンポーネントと"
+"同じルールです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:146
+msgid "<code>/var/lib/cinder</code> should also be backed up."
+msgstr "<code>/var/lib/cinder</code>もまたバックアップされるべきです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:152
+msgid ""
+"<code>/etc/swift</code> is very important to have backed up. This directory "
+"contains the Swift configuration files as well as the ring files and ring "
+"<glossterm>builder file</glossterm>s, which if lost render the data on your "
+"cluster inaccessible. A best practice is to copy the builder files to all "
+"storage nodes along with the ring files. Multiple backups copies are spread "
+"throughout your storage cluster."
+msgstr ""
+"<code>/etc/swift</code>は非常に重要ですのでバックアップが必要です。このディレ"
+"クトリには、Swiftの設定ファイル以外に、RingファイルやRing<glossterm>ビルダーファイル"
+"</glossterm>が置かれています。これらのファイルを消失した場合はクラスター上"
+"のデータにアクセスできなくなります。ベストプラク"
+"ティスとしては、ビルダーファイルを全てのストレージノードにringファイルと共に置"
+"くことです。この方法でストレージクラスター上にバックアップコピーが分散されて"
+"保存されます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:165
+msgid "Recovering Backups"
+msgstr "バックアップのリカバリー"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:166
+msgid ""
+"Recovering backups is a fairly simple process. To begin, first ensure that "
+"the service you are recovering is not running. For example, to do a full "
+"recovery of nova on the cloud controller, first stop all <code>nova</code> "
+"services:"
+msgstr ""
+"バックアップのリカバリーは単純です。始めにリカバリー対象のサービスが停止して"
+"いることを確認します。例を挙げると、クラウドコントローラー上のnovaの完全リカバ"
+"リーを行なう場合、最初に全ての <code>nova</code> サービスを停止します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:177
+msgid "Once that's done, stop MySQL:"
+msgstr "その後、MySQLを停止します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:179
+msgid "Now you can import a previously backed up database:"
+msgstr "以前にバックアップしたデータベースをインポートします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:182
+msgid "As well as restore backed up nova directories:"
+msgstr "同様に、バックアップした nova のディレクトリをリストアします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:185
+msgid "Once the files are restored, start everything back up:"
+msgstr "ファイルをリストア後、サービスを起動します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:193
+msgid ""
+"Other services follow the same process, with their respective directories "
+"and databases."
+msgstr ""
+"他のサービスもそれぞれのディレクトリとデータベース名で同じ処理となります。"
