@@ -1,0 +1,992 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-21 08:33+0000\n"
+"Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:0
+msgid "translator-credits"
+msgstr ""
+"Akihiro MOTOKI <amotoki@gmail.com>, 2013\n"
+"Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013\n"
+"Masanori Itoh <masanori.itoh@gmail.com>, 2013\n"
+"masayukig <masayuki.igawa@gmail.com>, 2013\n"
+"*はたらくpokotan* <>, 2013\n"
+"Tsutomu TAKEKAWA <takekawa@gmail.com>, 2013\n"
+"doki701 <tokidokidokidoki@gmail.com>, 2013\n"
+"Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013\n"
+"tmak <t.makabe@gmail.com>, 2013"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:14
+msgid "Tales From the Cryp^H^H^H^H Cloud"
+msgstr "ハリウッド^H^H^H^H^Hクラウドナイトメア"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:16
+msgid ""
+"Herein lies a selection of takes from OpenStack cloud operators. Read, and "
+"learn from their wisdom."
+msgstr ""
+"ここにあるのは、OpenStack クラウドオペレータ達の苦闘の抜粋である。これを読"
+"み、彼らの叡智を学ぶが良い。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:20
+msgid "Double VLAN"
+msgstr "ダブル VLAN"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:21
+msgid ""
+"I was on-site in Kelowna, British Columbia, Canada setting up a new "
+"OpenStack cloud. The deployment was fully automated: Cobbler deployed the OS "
+"on the bare metal, bootstrapped it, and Puppet took over from there. I had "
+"run the deployment scenario so many times in practice and took for granted "
+"that everything was working."
+msgstr ""
+"私は、新しい OpenStack クラウドのセットアップをするため、カナダのブリティッシュ"
+"コロンビア州ケロウナの現地にいた。デプロイ作業は完全に自動化されていた。"
+"Cobbler が物理マシンに OS をデプロイし、それを起動し、その後は Puppet が引"
+"き継いだ。私は練習で幾度もデプロイシナリオを実行してきたし、もちろん全て正常で"
+"あった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:27
+msgid ""
+"On my last day in Kelowna, I was in a conference call from my hotel. In the "
+"background, I was fooling around on the new cloud. I launched an instance "
+"and logged in. Everything looked fine. Out of boredom, I ran ps aux and all "
+"of the sudden the instance locked up."
+msgstr ""
+"ケロウナの最終日、私はホテルから電話会議に参加していた。その裏で、私は新しい"
+"クラウドをいじっていた。私はインスタンスを１つ起動し、ログインした。全ては正"
+"常に思えた。退屈しのぎに、私は ps axu を実行したところ、突然そのインスタンス"
+"がロックアップしてしまった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:32
+msgid ""
+"Thinking it was just a one-off issue, I terminated the instance and launched "
+"a new one. By then, the conference call ended and I was off to the data "
+"center."
+msgstr ""
+"これは単なる１回限りの問題と思ったので、私はインスタンスを削除して、新しいイ"
+"ンスタンスを起動した。その後電話会議は終了し、私はデータセンターを離れた。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:35
+msgid ""
+"At the data center, I was finishing up some tasks and remembered the lock-"
+"up. I logged into the new instance and ran ps aux again. It worked. Phew. I "
+"decided to run it one more time. It locked up. WTF."
+msgstr ""
+"データセンターで、私はいくつかの仕事を済ませると、ロックアップのことを思い出し"
+"た。私は新しいインスタンスにログインし、再度 ps aux を実行した。コマンドは機"
+"能した。ふぅ。私はもう一度試してみることにした。今度はロックアップした。何だこ"
+"れは？"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:39
+msgid ""
+"After reproducing the problem several times, I came to the unfortunate "
+"conclusion that this cloud did indeed have a problem. Even worse, my time "
+"was up in Kelowna and I had to return back to Calgary."
+msgstr ""
+"何度か問題が再現した後、私はこのクラウドが実は問題を抱えているという不幸な結"
+"論に至った。更に悪いことに、私がケロウナから出発する時間になっており、カルガ"
+"リーに戻らなければならなかった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:43
+msgid ""
+"Where do you even begin troubleshooting something like this? An instance "
+"just randomly locks when a command is issued. Is it the image? Nope — it "
+"happens on all images. Is it the compute node? Nope — all nodes. Is the "
+"instance locked up? No! New SSH connections work just fine!"
+msgstr ""
+"どこかであなたはこのような障害調査を行ったことがあるだろうか？インスタンスはコ"
+"マンドを打つ度に全くランダムにロックアップしてしまう。元になったイメージの問"
+"題か？No－全てのイメージで同じ問題が発生する。コンピュートノードの問題か？No－全"
+"てのノードで発生する。インスタンスはロックアップしたのか？No！新しいSSH接続は"
+"問題なく機能する！"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:48
+msgid ""
+"We reached out for help. A networking engineer suggested it was an MTU "
+"issue. Great! MTU! Something to go on! What's MTU and why would it cause a "
+"problem?"
+msgstr ""
+"我々は助けを求めた。ネットワークエンジニアは、これは MTU の問題ではないかとい"
+"うのだ。素晴らしい！MTU! 事態は動き始めた! MTU とは何で、何故それが問題になる"
+"のだろうか？"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:51
+msgid ""
+"MTU is maximum transmission unit. It specifies the maximum number of bytes "
+"that the interface accepts for each packet. If two interfaces have two "
+"different MTUs, bytes might get chopped off and weird things happen -- such "
+"as random session lockups.<placeholder-1/>"
+msgstr ""
+"MTU とは最大転送単位（Maximum Transmission Unit）である。これは、各パケットに"
+"対してそのインターフェースが受け取る最大バイト数を指定する。もし２つのイン"
+"ターフェースが異なる MTU であった場合、バイトは尻切れトンボとなって変なことが"
+"起こり始める…例えばセッションのランダムなロックアップとか。<placeholder-1/>"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:56
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:64
+msgid ""
+"Not all packets have a size of 1500. Running the ls command over SSH might "
+"only create a single packets less than 1500 bytes. However, running a "
+"command with heavy output, such as <placeholder-1/> requires several packets "
+"of 1500 bytes."
+msgstr ""
+"すべてのパケットサイズが 1500 に収まるわけではない。SSH 経由の ls コマンド実"
+"行は 1500 バイト未満のサイズのパケット１つで収まるかもしれない。しかし、 "
+"<placeholder-1/> のように多大な出力を行うコマンドを実行する場合、1500 バイト"
+"のパケットが複数必要とある。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:70
+msgid ""
+"OK, so where is the MTU issue coming from? Why haven't we seen this in any "
+"other deployment? What's new in this situation? Well, new data center, new "
+"uplink, new switches, new model of switches, new servers, first time using "
+"this model of servers… so, basically everything was new. Wonderful. We toyed "
+"around with raising the MTU at various areas: the switches, the NICs on the "
+"compute nodes, the virtual NICs in the instances, we even had the data "
+"center raise the MTU for our uplink interface. Some changes worked, some "
+"didn't. This line of troubleshooting didn't feel right, though. We shouldn't "
+"have to be changing the MTU in these areas."
+msgstr ""
+"OK。では MTU の問題はどこから来るのか？なぜ我々は他のデプロイでこの問題に遭遇"
+"しなかったのか？この状況は何が新しいのか？えっと、新しいデータセンター、新し"
+"い上位リンク、新しいスイッチ、スイッチの新機種、新しいサーバー、サーバーの新"
+"機種…つまり、基本的に全てが新しいものだった。素晴らしい。我々は様々な領域で "
+"MTU の増加を試してみた。スイッチ、コンピュータのNIC、インスタンスの仮想NIC、"
+"データセンターの上位リンク用のインターフェースのMTUまでいじってみた。いくつか"
+"の変更ではうまくいったが、他はダメだった。やはり、この線の障害対策はうまく"
+"いってないようだった。我々はこれらの領域のMTUは変更すべきではないようだ。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:82
+msgid ""
+"As a last resort, our network admin (Alvaro) and myself sat down with four "
+"terminal windows, a pencil, and a piece of paper. In one window, we ran "
+"ping. In the second window, we ran tcpdump on the cloud controller. In the "
+"third, tcpdump on the compute node. And the forth had tcpdump on the "
+"instance. For background, this cloud was a multi-node, non-multi-host setup."
+msgstr ""
+"結局、我々のネットワーク管理者（Alvao）と私自身は４つのターミナルウィンドウ、"
+"１本の鉛筆と紙切れを持って座った。１つのウインドウで我々は ping を実行した。"
+"２つ目のウインドウではクラウドコントローラー上の tcpdump、３つ目ではコンピュート"
+"ノード上の tcpdump、４つ目ではインスタンス上の tcpdump を実行した。前提とし"
+"て、このクラウドはマルチノード、非マルチホスト構成である。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:89
+msgid ""
+"One cloud controller acted as a gateway to all compute nodes. VlanManager "
+"was used for the network config. This means that the cloud controller and "
+"all compute nodes had a different VLAN for each OpenStack project. We used "
+"the -s option of ping to change the packet size. We watched as sometimes "
+"packets would fully return, sometimes they'd only make it out and never back "
+"in, and sometimes the packets would stop at a random point. We changed "
+"tcpdump to start displaying the hex dump of the packet. We pinged between "
+"every combination of outside, controller, compute, and instance."
+msgstr ""
+"１つのクラウドコントローラーが全コンピュートノードのゲートウェイの役割を果たして"
+"いた。ネットワーク設定には VlanManager が使われていた。これは、クラ"
+"ウドコントローラーと全コンピュートノードで、各 OpenStack プロジェクトが異なる "
+"VLAN を持つことを意味する。パケットサイズ変更のため、ping の -s オプションを使"
+"用していた。パケットが全て戻ってくる時もあれば、パケットが出ていったきり全く戻って来ない"
+"時もあれば、パケットはランダムな場所で止まってしまう時もある、という状況だった。"
+"tcpdump を変更し、パケットの16進ダンプを表示するようにし"
+"た。外部、コントローラー、コンピュート、インスタンスのあらゆる組み合わせの間で "
+"ping を実行した。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:100
+msgid ""
+"Finally, Alvaro noticed something. When a packet from the outside hits the "
+"cloud controller, it should not be configured with a VLAN. We verified this "
+"as true. When the packet went from the cloud controller to the compute node, "
+"it should only have a VLAN if it was destined for an instance. This was "
+"still true. When the ping reply was sent from the instance, it should be in "
+"a VLAN. True. When it came back to the cloud controller and on its way out "
+"to the public internet, it should no longer have a VLAN. False. Uh oh. It "
+"looked as though the VLAN part of the packet was not being removed."
+msgstr ""
+"遂に、Alvaro が何かを掴んだ。外部からのパケットがクラウドコントローラーを叩い"
+"た際、パケットは VLAN で設定されるべきではない。我々はこれが正しいことを検証し"
+"た。パケットがクラウドコントローラーからコンピュートノードに行く際、パケットはイ"
+"ンスタンス宛の場合にのみ VLAN を持つべきである。これもまた正しかった。ping の"
+"レスポンスがインスタンスから送られる際、パケットは VLAN 中にいるべきである。Ｏ"
+"Ｋ。クラウドコントローラーからパブリックインターネットにパケットが戻る際、パ"
+"ケットには VLAN を持つべきではない。ＮＧ。うぉっ。まるで パケットの VLAN 部分"
+"が削除されていないように見える。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:111
+msgid "That made no sense."
+msgstr "これでは意味が無かった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:112
+msgid ""
+"While bouncing this idea around in our heads, I was randomly typing commands "
+"on the compute node:"
+msgstr ""
+"このアイデアが我々の頭を駆け巡る間、私はコンピュートノード上でコマンドをランダム"
+"に叩いていた。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:118
+msgid "\"Hey Alvaro, can you run a VLAN on top of a VLAN?\""
+msgstr "「Alvaro、VLAN 上に VLAN って作れるのかい？」"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:120
+msgid "\"If you did, you'd add an extra 4 bytes to the packet…\""
+msgstr "「もしやったら、パケットに余計に４バイト追加になるよ…」"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:122
+msgid "Then it all made sense…"
+msgstr "やっと事の全容が判明した…"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:125
+msgid ""
+"In <code>nova.conf</code>, <code>vlan_interface</code> specifies what "
+"interface OpenStack should attach all VLANs to. The correct setting should "
+"have been: <code>vlan_interface=bond0</code>."
+msgstr ""
+"<code>nova.conf</code> 中で、<code>vlan_interface</code> は OpenStack が全て"
+"の VLAN をアタッチすべきインターフェースがどれかを指定する。正しい設定はこう"
+"だった: <code>vlan_interface=bond0</code>"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:129
+msgid "As this would be the server's bonded NIC."
+msgstr "これはサーバーの冗長化された（bonded）NIC であるべきだからだ。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:130
+msgid ""
+"vlan20 is the VLAN that the data center gave us for outgoing public internet "
+"access. It's a correct VLAN and is also attached to bond0."
+msgstr ""
+"vlan20 はデータセンターが外向けのパブリックなインターネットアクセス用に我々に"
+"付与した VLAN である。これは正しい VLAN で bond0 にアタッチされている。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:133
+msgid ""
+"By mistake, I configured OpenStack to attach all tenant VLANs to vlan20 "
+"instead of bond0 thereby stacking one VLAN on top of another which then "
+"added an extra 4 bytes to each packet which cause a packet of 1504 bytes to "
+"be sent out which would cause problems when it arrived at an interface that "
+"only accepted 1500!"
+msgstr ""
+"ミスにより、私は全てのテナント VLAN を bond0 の代わりに vlan20 にアタッチする"
+"よう OpenStack を設定した。それによって１つの VLAN が別の VLAN の上に積み重な"
+"り、各パケットに余分に４バイトが追加され、送信されるパケットサイズが 1504 バ"
+"イトになる原因となった。これがパケットサイズ 1500 のみ許容するインターフェー"
+"スに到達した際、問題の原因となったのだった！"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:139
+msgid "As soon as this setting was fixed, everything worked."
+msgstr "全力でこの問題を修正した結果、全てが正常に動作するようになった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:143
+msgid "\"The Issue\""
+msgstr "「あの問題」"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:144
+msgid ""
+"At the end of August 2012, a post-secondary school in Alberta, Canada "
+"migrated its infrastructure to an OpenStack cloud. As luck would have it, "
+"within the first day or two of it running, one of their servers just "
+"disappeared from the network. Blip. Gone."
+msgstr ""
+"2012年8月の終わり、カナダ アルバータ州のある大学はそのインフラを OpenStack "
+"クラウドに移行した。幸か不幸か、サービスインから1～2日間に、彼らのサーバー"
+"の1台がネットワークから消失した。ビッ。いなくなった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:149
+msgid ""
+"After restarting the instance, everything was back up and running. We "
+"reviewed the logs and saw that at some point, network communication stopped "
+"and then everything went idle. We chalked this up to a random occurrence."
+msgstr ""
+"インスタンスの再起動後、全ては元通りに動くようになった。我々はログを見直し、"
+"問題の箇所（ネットワーク通信が止まり、全ては待機状態になった）を見た。我々は"
+"ランダムな事象の原因はこのインスタンスだと判断した。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:154
+msgid "A few nights later, it happened again."
+msgstr "数日後、それは再び起こった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:155
+msgid ""
+"We reviewed both sets of logs. The one thing that stood out the most was "
+"DHCP. OpenStack, by default, sets DHCP leases for one minute. This means "
+"that every instance contacts the cloud controller (DHCP server) to renew its "
+"fixed IP. For some reason, this instance could not renew its IP. We "
+"correlated the instance's logs with the logs on the cloud controller and put "
+"together a conversation:"
+msgstr ""
+"我々はログのセットを両方見直した。頻発したログの１つは DHCP だった。"
+"OpenStack は（デフォルトで）DHCP リース期間を１分に設定する。これは、各インス"
+"タンスが固定 IP アドレスを更新するためにクラウドコントローラー（DHCP サー"
+"バー）に接続することを意味する。幾つかの理由で、このインスタンスはその IP アド"
+"レスを更新できなかった。インスタンスのログとクラウドコントローラー上のログを突き合わせ、"
+"並べてやりとりにしてみた。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:165
+msgid "Instance tries to renew IP."
+msgstr "インスタンスはIPアドレスを更新しようとする。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:168
+msgid "Cloud controller receives the renewal request and sends a response."
+msgstr "クラウドコントローラーは更新リクエストを受信し、レスポンスを返す。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:172
+msgid "Instance \"ignores\" the response and re-sends the renewal request."
+msgstr "インスタンスはそのレスポンスを「無視」して、更新リクエストを再送する。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:176
+msgid "Cloud controller receives the second request and sends a new response."
+msgstr ""
+"クラウドコントローラーは２度めのリクエストを受信し、新しいレスポンスを返す。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:180
+msgid ""
+"Instance begins sending a renewal request to <code>255.255.255.255</code> "
+"since it hasn't heard back from the cloud controller."
+msgstr ""
+"インスタンスはクラウドコントローラーからのレスポンスを受信しなかったため、更"
+"新リクエストを<code>255.255.255.255</code>に送信し始める。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:185
+msgid ""
+"The cloud controller receives the <code>255.255.255.255</code> request and "
+"sends a third response."
+msgstr ""
+"クラウドコントローラーは <code>255.255.255.255</code> 宛のリクエストを受信"
+"し、３番めのレスポンスを返す。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:190
+msgid "The instance finally gives up."
+msgstr "最終的に、インスタンスはIPアドレス取得を諦める。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:193
+msgid ""
+"With this information in hand, we were sure that the problem had to do with "
+"DHCP. We thought that for some reason, the instance wasn't getting a new IP "
+"address and with no IP, it shut itself off from the network."
+msgstr ""
+"この情報により、我々は問題が DHCP 実行に起因するものと確信した。何らかの理由で"
+"インスタンスが新しいIPアドレスを取得できず、その結果IPアドレスがなくなり、"
+"インスタンスは自分自身をネットワークから切り離した、と考えた。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:197
+msgid ""
+"A quick Google search turned up this: <link title=\"DAIR project\" href="
+"\"https://lists.launchpad.net/openstack/msg11696.html\">DHCP lease errors in "
+"VLAN mode</link> (https://lists.launchpad.net/openstack/msg11696.html) which "
+"further supported our DHCP theory."
+msgstr ""
+"ちょっと Google 検索した結果、これを見つけた。<link title=\"DAIR project\" "
+"href=\"https://lists.launchpad.net/openstack/msg11696.html\">VLAN モードでの "
+"DHCPリースエラー</link> (https://lists.launchpad.net/openstack/msg11696."
+"html) 。この情報はその後の我々の DHCP 方針の支えになった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:203
+msgid ""
+"An initial idea was to just increase the lease time. If the instance only "
+"renewed once every week, the chances of this problem happening would be "
+"tremendously smaller than every minute. This didn't solve the problem, "
+"though. It was just covering the problem up."
+msgstr ""
+"最初のアイデアは、単にリース時間を増やすことだった。もしインスタンスが毎週１回"
+"だけIPアドレスを更新するのであれば、毎分更新する場合よりこの問題が起こる可能"
+"性は極端に低くなるだろう。これはこの問題を解決しないが、問題を単に取り繕うこと"
+"はできる。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:208
+msgid ""
+"We decided to have <code>tcpdump</code> run on this instance and see if we "
+"could catch it in action again. Sure enough, we did."
+msgstr ""
+"我々は、このインスタンス上で <code>tcpdump</code> を実行して、操作で再びこの"
+"現象に遭遇するか見てみることにした。実際、我々はやってみた。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:211
+msgid ""
+"The <code>tcpdump</code> looked very, very weird. In short, it looked as "
+"though network communication stopped before the instance tried to renew its "
+"IP. Since there is so much DHCP chatter from a one minute lease, it's very "
+"hard to confirm it, but even with only milliseconds difference between "
+"packets, if one packet arrives first, it arrived first, and if that packet "
+"reported network issues, then it had to have happened before DHCP."
+msgstr ""
+"<code>tcpdump</code> の結果は非常に奇妙だった。一言で言えば、インスタンスが "
+"IP アドレスを更新しようとする前に、まるでネットワーク通信が停止しているように"
+"見えた。１分間のリース期間で大量の DHCP ネゴシエーションがあるため、確認作業は"
+"困難を極めた。しかし、パケット間のたった数ミリ秒の違いであれ、あるパケットが"
+"最初に到着する際、そのパケットが最初に到着し、そのパケットがネットワーク障害"
+"を報告した場合、DHCP より前にネットワーク障害が発生していることになる。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:219
+msgid ""
+"Additionally, this instance in question was responsible for a very, very "
+"large backup job each night. While \"The Issue\" (as we were now calling it) "
+"didn't happen exactly when the backup happened, it was close enough (a few "
+"hours) that we couldn't ignore it."
+msgstr ""
+"加えて、問題のインスタンスは毎晩非常に長いバックアップジョブを担っていた。"
+"「あの問題」（今では我々はこの障害をこう呼んでいる）はバックアップが行われて"
+"いる最中には起こらなかったが、（数時間たっていて）「あの問題」が起こるまで"
+"あと少しのところだった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:224
+msgid ""
+"Further days go by and we catch The Issue in action more and more. We find "
+"that dhclient is not running after The Issue happens. Now we're back to "
+"thinking it's a DHCP issue. Running <code>/etc/init.d/networking</code> "
+"restart brings everything back up and running."
+msgstr ""
+"それから何日か過ぎ、我々は「あの問題」に度々遭遇した。我々は「あの問題」の発"
+"生後、dhclient が実行されていないことを発見した。今、我々は、それが DHCP の問題"
+"であるという考えに立ち戻った。<code>/etc/init.d/networking</code> restart を"
+"実行すると、全ては元通りに実行されるようになった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:229
+msgid ""
+"Ever have one of those days where all of the sudden you get the Google "
+"results you were looking for? Well, that's what happened here. I was looking "
+"for information on dhclient and why it dies when it can't renew its lease "
+"and all of the sudden I found a bunch of OpenStack and dnsmasq discussions "
+"that were identical to the problem we were seeing!"
+msgstr ""
+"探し続けてきた Google の検索結果が突然得られたという事態をお分かりだろうか？"
+"えっと、それがここで起こったことだ。私は dhclient の情報と、何故 dhclient がそ"
+"のリースを更新できない場合に死ぬのかを探していて、我々が遭遇したのと同じ問"
+"題についての OpenStack と dnsmasq の議論の束を突然発見した。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:236
+msgid ""
+"<link title=\"DAIR project\" href=\"http://www.gossamer-threads.com/lists/"
+"openstack/operators/18197\">Problem with Heavy Network IO and Dnsmasq</link> "
+"(http://www.gossamer-threads.com/lists/openstack/operators/18197)"
+msgstr ""
+"<link title=\"DAIR project\" href=\"http://www.gossamer-threads.com/lists/"
+"openstack/operators/18197\">高負荷ネットワークと Dnsmasq における問題</link> "
+"(http://www.gossamer-threads.com/lists/openstack/operators/18197)"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:241
+msgid ""
+"<link title=\"DAIR project\" href=\"http://www.gossamer-threads.com/lists/"
+"openstack/dev/14696\">instances loosing IP address while running, due to No "
+"DHCPOFFER</link> (http://www.gossamer-threads.com/lists/openstack/dev/14696)"
+msgstr ""
+"<link title=\"DAIR project\" href=\"http://www.gossamer-threads.com/lists/"
+"openstack/dev/14696\">DHCPOFFER が無いために起動中のインスタンスが IP アドレ"
+"スを失う問題</link> (http://www.gossamer-threads.com/lists/openstack/"
+"dev/14696)"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:247
+msgid "Seriously, Google."
+msgstr "マジ？Google。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:248
+msgid "This bug report was the key to everything:"
+msgstr "このバグ報告は全ての鍵だった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:249
+msgid ""
+"<link title=\"DAIR project\" href=\"https://bugs.launchpad.net/ubuntu/"
+"+source/qemu-kvm/+bug/997978\"> KVM images lose connectivity with bridged "
+"network</link> (https://bugs.launchpad.net/ubuntu/+source/qemu-kvm/"
+"+bug/997978)"
+msgstr ""
+"<link title=\"DAIR project\" href=\"https://bugs.launchpad.net/ubuntu/"
+"+source/qemu-kvm/+bug/997978\"> KVMイメージがブリッジネットワークで接続を失う"
+"</link> (https://bugs.launchpad.net/ubuntu/+source/qemu-kvm/+bug/997978)"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:255
+msgid ""
+"It was funny to read the report. It was full of people who had some strange "
+"network problem but didn't quite explain it in the same way."
+msgstr ""
+"レポートを読むのは楽しかった。同じ奇妙なネットワーク問題にあった人々であふれ"
+"ていたが、全く同じ説明はなかった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:258
+msgid "So it was a qemu/kvm bug."
+msgstr "つまり、これは qemu/kvm のバグである。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:259
+msgid ""
+"At the same time of finding the bug report, a co-worker was able to "
+"successfully reproduce The Issue! How? He used iperf to spew a ton of "
+"bandwidth at an instance. Within 30 minutes, the instance just disappeared "
+"from the network."
+msgstr ""
+"バグ報告を発見すると同時に、同僚が「あの問題」を再現することに成功した！どう"
+"やって？彼は iperf を使用して、インスタンス上で膨大なネットワーク負荷をかけ"
+"た。30分後、インスタンスはネットワークから姿を消した。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:264
+msgid ""
+"Armed with a patched qemu and a way to reproduce, we set out to see if we've "
+"finally solved The Issue. After 48 hours straight of hammering the instance "
+"with bandwidth, we were confident. The rest is history. You can search the "
+"bug report for \"joe\" to find my comments and actual tests."
+msgstr ""
+"パッチを当てた qemu と再現方法を携えて、我々は「あの問題」を最終的に解決した"
+"かを確認する作業に着手した。インスタンスにネットワーク負荷をかけてから丸48時"
+"間後、我々は確信していた。その後のことは知っての通りだ。あなたは、joe へのバグ報告を検索"
+"し、私のコメントと実際のテストを見つけることができる。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:272
+msgid "Disappearing Images"
+msgstr "イメージの消失"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:273
+msgid ""
+"At the end of 2012, Cybera (a nonprofit with a mandate to oversee the "
+"development of cyberinfrastructure in Alberta, Canada) deployed an updated "
+"OpenStack cloud for their <link title=\"DAIR project\" href=\"http://www."
+"canarie.ca/en/dair-program/about\">DAIR project</link> (http://www.canarie."
+"ca/en/dair-program/about). A few days into production, a compute node locks "
+"up. Upon rebooting the node, I checked to see what instances were hosted on "
+"that node so I could boot them on behalf of the customer. Luckily, only one "
+"instance."
+msgstr ""
+"2012年の終わり、Cybera （カナダ アルバータ州にある、サイバーインフラのデプロ"
+"イを監督する権限を持つ非営利団体）が、彼らの <link title=\"DAIR project\" "
+"href=\"http://www.canarie.ca/en/dair-program/about\">DAIR プロジェクト</"
+"link> (http://www.canarie.ca/en/dair-program/about) 用に新しい OpenStack クラ"
+"ウドをデプロイした。サービスインから数日後、あるコンピュートノードがロックアップ"
+"した。問題のノードの再起動にあたり、私は顧客の権限でインスタンスを起動するた"
+"め、そのノード上で何のインスタンスがホスティングされていたかを確認した。幸運"
+"にも、インスタンスは１つだけだった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:284
+msgid ""
+"The <code>nova reboot</code> command wasn't working, so I used <code>virsh</"
+"code>, but it immediately came back with an error saying it was unable to "
+"find the backing disk. In this case, the backing disk is the Glance image "
+"that is copied to <code>/var/lib/nova/instances/_base</code> when the image "
+"is used for the first time. Why couldn't it find it? I checked the directory "
+"and sure enough it was gone."
+msgstr ""
+"<code>nova reboot</code> コマンドは機能しなかったので、<code>virsh</code> を"
+"使用したが、すぐに仮想ディスクが見つからないとのエラーが返ってきた。この場"
+"合、仮想ディスクは Glance イメージで、イメージが最初に使用する際に <code>/"
+"var/lib/nova/instances/_base</code> にコピーされていた。何故イメージが見つか"
+"らないのか？私はそのディレクトリをチェックし、イメージがないことを知った。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:293
+msgid ""
+"I reviewed the <code>nova</code> database and saw the instance's entry in "
+"the <code>nova.instances</code> table. The image that the instance was using "
+"matched what virsh was reporting, so no inconsistency there."
+msgstr ""
+"私は <code>nova</code> データベースを見直し、<code>nova.instances</code> テー"
+"ブル中の当該インスタンスのレコードを見た。インスタンスが使用しているイメージ"
+"は virsh が報告したものと一致した。よって、ここでは矛盾は発見されなかった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:297
+msgid ""
+"I checked Glance and noticed that this image was a snapshot that the user "
+"created. At least that was good news — this user would have been the only "
+"user affected."
+msgstr ""
+"私は Glance をチェックし、問題のイメージがそのユーザの作成したスナップショットで"
+"あることに注目した。最終的に、それはグッドニュースだった。このユーザが影響を受けた唯一の"
+"ユーザだった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:301
+msgid ""
+"Finally, I checked StackTach and reviewed the user's events. They had "
+"created and deleted several snapshots — most likely experimenting. Although "
+"the timestamps didn't match up, my conclusion was that they launched their "
+"instance and then deleted the snapshot and it was somehow removed from "
+"<code>/var/lib/nova/instances/_base</code>. None of that made sense, but it "
+"was the best I could come up with."
+msgstr ""
+"最後に、私は StackTack をチェックし、ユーザのイベントを見直した。彼らはいくつ"
+"かのスナップショットを作ったり消したりしていた－ありそうな操作ではあるが。タ"
+"イムスタンプが一致しないとはいえ、彼らがインスタンスを起動して、その後スナッ"
+"プショットを削除し、それが何故か <code>/var/lib/nova/instances/_base</code> "
+"から削除されたというのが私の結論だった。大した意味は無かったが、それがその時"
+"私が得た全てだった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:310
+msgid ""
+"It turns out the reason that this compute node locked up was a hardware "
+"issue. We removed it from the DAIR cloud and called Dell to have it "
+"serviced. Dell arrived and began working. Somehow or another (or a fat "
+"finger), a different compute node was bumped and rebooted. Great."
+msgstr ""
+"コンピュートノードがロックアップした原因はハードウェアの問題だったことが判明した。"
+"我々はそのハードウェアを DAIR クラウドから取り外し、修理するよう Dell に依頼"
+"した。Dell が到着して作業を開始した。何とかかんとか（あるいはタイプミス）で、"
+"異なるコンピュートノードを落としてしまい、再起動した。素晴らしい。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:316
+msgid ""
+"When this node fully booted, I ran through the same scenario of seeing what "
+"instances were running so I could turn them back on. There were a total of "
+"four. Three booted and one gave an error. It was the same error as before: "
+"unable to find the backing disk. Seriously, what?"
+msgstr ""
+"そのノードが完全に起動した際、インスタンスが起動した時に何が起こるのかを見る"
+"ため、私は同じシナリオを実行して、インスタンスを復旧した。インスタンスは全部"
+"で４つあった。３つは起動し、１つはエラーになった。このエラーは以前のエラーと"
+"同じだった。「unable to find the backing disk.」マジ、何で？"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:322
+msgid ""
+"Again, it turns out that the image was a snapshot. The three other instances "
+"that successfully started were standard cloud images. Was it a problem with "
+"snapshots? That didn't make sense."
+msgstr ""
+"再度、イメージがスナップショットであることが判明した。無事に起動した他の３イン"
+"スタンスは標準のクラウドイメージであった。これはスナップショットの問題か？そ"
+"れは意味が無かった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:326
+msgid ""
+"A note about DAIR's architecture: <code>/var/lib/nova/instances</code> is a "
+"shared NFS mount. This means that all compute nodes have access to it, which "
+"includes the <code>_base</code> directory. Another centralized area is "
+"<code>/var/log/rsyslog</code> on the cloud controller. This directory "
+"collects all OpenStack logs from all compute nodes. I wondered if there were "
+"any entries for the file that <code>virsh</code> is reporting:"
+msgstr ""
+"DAIR のアーキテクチャは <code>/var/lib/nova/instances</code> が共有 NFS マウ"
+"ントであることに注意したい。これは、全てのコンピュートノードがそのディレクトリにア"
+"クセスし、その中に <code>_base</code> ディレクトリが含まれることを意味してい"
+"た。その他の集約化エリアはクラウドコントローラーの <code>/var/log/rsyslog</"
+"code> だ。このディレクトリは全コンピュートノードの全ての OpenStack ログが収集さ"
+"れていた。私は、<code>virsh</code> が報告したファイルに関するエントリがあるの"
+"だろうかと思った。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:336
+msgid ""
+"dair-ua-c03/nova.log:Dec 19 12:10:59 dair-ua-c03 2012-12-19 12:10:59 INFO "
+"nova.virt.libvirt.imagecache [-] Removing base file: /var/lib/nova/instances/"
+"_base/7b4783508212f5d242cbf9ff56fb8d33b4ce6166_10"
+msgstr ""
+"dair-ua-c03/nova.log:Dec 19 12:10:59 dair-ua-c03 2012-12-19 12:10:59 INFO "
+"nova.virt.libvirt.imagecache [-] Removing base file: /var/lib/nova/instances/"
+"_base/7b4783508212f5d242cbf9ff56fb8d33b4ce6166_10"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:341
+msgid "Ah-hah! So OpenStack was deleting it. But why?"
+msgstr "あっはっは！じゃぁ、OpenStack が削除したのか。でも何故？"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:342
+msgid ""
+"A feature was introduced in Essex to periodically check and see if there "
+"were any _base files not in use. If there were, Nova would delete them. This "
+"idea sounds innocent enough and has some good qualities to it. But how did "
+"this feature end up turned on? It was disabled by default in Essex. As it "
+"should be. It was <link href=\"https://bugs.launchpad.net/nova/"
+"+bug/1029674\">decided to be turned on in Folsom</link> (https://bugs."
+"launchpad.net/nova/+bug/1029674). I cannot emphasize enough that:"
+msgstr ""
+"Essex で、_base 下の任意のファイルが使用されていないかどうか定期的にチェック"
+"して確認する機能が導入された。もしあれば、Nova はそのファイルを削除する。この"
+"アイデアは問題がないように見え、品質的にも良いようだった。しかし、この機能を"
+"有効にすると最終的にどうなるのか？Essex ではこの機能がデフォルトで無効化され"
+"ていた。そうあるべきであったからだ。これは、<link href=\"https://bugs."
+"launchpad.net/nova/+bug/1029674 \">Folsom で有効になることが決定された</link> "
+"(https://bugs.launchpad.net/nova/+bug/1029674)。私はそうあるべきとは思わな"
+"い。何故なら"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:353
+msgid "Actions which delete things should not be enabled by default."
+msgstr "何かを削除する操作はデフォルトで有効化されるべきではない。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:356
+msgid "Disk space is cheap these days. Data recovery is not."
+msgstr "今日、ディスクスペースは安価である。データの復元はそうではない。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:358
+msgid ""
+"Secondly, DAIR's shared <code>/var/lib/nova/instances</code> directory "
+"contributed to the problem. Since all compute nodes have access to this "
+"directory, all compute nodes periodically review the _base directory. If "
+"there is only one instance using an image, and the node that the instance is "
+"on is down for a few minutes, it won't be able to mark the image as still in "
+"use. Therefore, the image seems like it's not in use and is deleted. When "
+"the compute node comes back online, the instance hosted on that node is "
+"unable to start."
+msgstr ""
+"次に、DAIR の共有された <code>/var/lib/nova/instances</code> が問題を助長し"
+"た。全コンピュートノードがこのディレクトリにアクセスするため、全てのコンピュートノー"
+"ドは定期的に _base ディレクトリを見直していた。あるイメージを使用しているイン"
+"スタンスが１つだけあり、そのインスタンスが存在するノードが数分間ダウンした場"
+"合、そのイメージが使用中であるという印を付けられなくなる。それゆえ、イメージ"
+"は使用中に見えず、削除されてしまったのだ。そのコンピュートノードが復帰した際、そ"
+"のノード上でホスティングされていたインスタンスは起動できない。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:371
+msgid "The Valentine's Day Compute Node Massacre"
+msgstr "バレンタインデーのコンピュートノード大虐殺"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:372
+msgid ""
+"Although the title of this story is much more dramatic than the actual "
+"event, I don't think, or hope, that I'll have the opportunity to use "
+"\"Valentine's Day Massacre\" again in a title."
+msgstr ""
+"この物語のタイトルは実際の事件よりかなりドラマティックだが、私はタイトル中に"
+"「バレンタインデーの大虐殺」を使用する機会が再びあるとは思わない（し望まな"
+"い）。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:376
+msgid ""
+"This past Valentine's Day, I received an alert that a compute node was no "
+"longer available in the cloud — meaning,"
+msgstr ""
+"この前のバレンタインデーに、クラウド中にあるコンピュートノードが最早動いていない"
+"との警告を受け取った。つまり"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:380
+msgid "showed this particular node with a status of <code>XXX</code>."
+msgstr "の出力で、この特定のノードの状態が <code>XXX</code> になっていた。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:382
+msgid ""
+"I logged into the cloud controller and was able to both ping and SSH into "
+"the problematic compute node which seemed very odd. Usually if I receive "
+"this type of alert, the compute node has totally locked up and would be "
+"inaccessible."
+msgstr ""
+"実に奇妙なことだが、私はクラウドコントローラーにログインし、問題のコンピュートノー"
+"ドに ping と SSH の両方を実行できた。通常、この種の警告を受け取ると、コンピュート"
+"ノードは完全にロックしていてアクセス不可になる。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:387
+msgid "After a few minutes of troubleshooting, I saw the following details:"
+msgstr "数分間のトラブル調査の後、以下の詳細が判明した。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:391
+msgid "A user recently tried launching a CentOS instance on that node"
+msgstr ""
+"最近、あるユーザがそのノード上で CentOS のインスタンスを起動しようとした。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:395
+msgid "This user was the only user on the node (new node)"
+msgstr "このユーザはそのノード（新しいノード）上の唯一のユーザだった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:399
+msgid "The load shot up to 8 right before I received the alert"
+msgstr "私が警告を受け取る直前、負荷率は８に急増した。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:403
+msgid "The bonded 10gb network device (bond0) was in a DOWN state"
+msgstr "冗長化された 10Gb ネットワークデバイス(bond0）は DOWN 状態だった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:407
+msgid "The 1gb NIC was still alive and active"
+msgstr "1Gb NICはまだ生きていて、有効だった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:410
+msgid ""
+"I looked at the status of both NICs in the bonded pair and saw that neither "
+"was able to communicate with the switch port. Seeing as how each NIC in the "
+"bond is connected to a separate switch, I thought that the chance of a "
+"switch port dying on each switch at the same time was quite improbable. I "
+"concluded that the 10gb dual port NIC had died and needed replaced. I "
+"created a ticket for the hardware support department at the data center "
+"where the node was hosted. I felt lucky that this was a new node and no one "
+"else was hosted on it yet."
+msgstr ""
+"私は bonding ペアの両方の NIC の状態を確認し、両方ともスイッチポートへの通信"
+"ができないことを知った。bond 中の各 NIC が異なるスイッチに接続されていることを知"
+"り、私は、各スイッチのスイッチポートが同時に死ぬ可能性はまずないと思った。私"
+"は 10Gb デュアルポート NIC が死んで、交換が必要だと結論づけた。私は、そのノー"
+"ドがホスティングされているデータセンターのハードウェアサポート部門に宛てたチ"
+"ケットを作成した。私は、それが新しいノードで、他のインスタンスがまだそのノー"
+"ド上でホスティングされていないことを幸運に思った。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:420
+msgid ""
+"An hour later I received the same alert, but for another compute node. Crap. "
+"OK, now there's definitely a problem going on. Just like the original node, "
+"I was able to log in by SSH. The bond0 NIC was DOWN but the 1gb NIC was "
+"active."
+msgstr ""
+"１時間後、私は同じ警告を受信したが、別のコンピュートノードだった。拍手。OK、問題"
+"は間違いなく現在進行中だ。元のノードと全く同様に、私は SSH でログインすることが"
+"出来た。bond0 NIC は DOWN だったが、1Gb NIC は有効だった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:425
+msgid ""
+"And the best part: the same user had just tried creating a CentOS instance. "
+"Wat?"
+msgstr ""
+"そして、最も重要なこと。同じユーザが CentOS インスタンスを作成しようとしたばか"
+"りだった。何だと？"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:427
+msgid ""
+"I was totally confused at this point, so I texted our network admin to see "
+"if he was available to help. He logged in to both switches and immediately "
+"saw the problem: the switches detected spanning tree packets coming from the "
+"two compute nodes and immediately shut the ports down to prevent spanning "
+"tree loops:"
+msgstr ""
+"私はこの時点で完全に混乱した。よって、私はネットワーク管理者に対して、私を助"
+"けられるか聞いてみるためメールした。彼は両方のスイッチにログインし、すぐに問"
+"題を発見した。そのスイッチは２つのコンピュートノードから来たスパニングツリーパ"
+"ケットを検出し、スパニングツリーループを回避するため、即時にそれらのポートをダ"
+"ウンさせたのだ。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:439
+msgid ""
+"He re-enabled the switch ports and the two compute nodes immediately came "
+"back to life."
+msgstr ""
+"彼はスイッチポートを再度有効にしたところ、２つのコンピュートノードは即時に復活し"
+"た。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:441
+msgid ""
+"Unfortunately, this story has an open ending... we're still looking into why "
+"the CentOS image was sending out spanning tree packets. Further, we're "
+"researching a proper way on how to mitigate this from happening. It's a "
+"bigger issue than one might think. While it's extremely important for "
+"switches to prevent spanning tree loops, it's very problematic to have an "
+"entire compute node be cut from the network when this happens. If a compute "
+"node is hosting 100 instances and one of them sends a spanning tree packet, "
+"that instance has effectively DDOS'd the other 99 instances."
+msgstr ""
+"不幸にも、この話にはエンディングがない…我々は、なぜ CentOS イメージがスパニン"
+"グツリーパケットを送信し始める原因をいまだ探している。更に、我々は障害時にス"
+"パニングツリーを軽減する正しい方法を調査している。これは誰かが思うより大きな"
+"問題だ。スパニングツリーループを防ぐことはスイッチにとって非常に重要であるが、"
+"スパニングツリーが起こった際に、コンピュートノード全体がネットワークから切り離さ"
+"れることも大きな問題である。コンピュートノードが 100 インスタンスをホスティングして"
+"いて、そのうち１つがスパニングツリーパケットを送信した場合、そのインスタンス"
+"は事実上他の 99 インスタンスを DDoS（サービス不能攻撃）したことになる。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:452
+msgid ""
+"This is an ongoing and hot topic in networking circles — especially with the "
+"raise of virtualization and virtual switches."
+msgstr ""
+"これはネットワーク業界で進行中で話題のトピックである（特に仮想マシンと仮想ス"
+"イッチで発生する）。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:457
+msgid "Down the Rabbit Hole"
+msgstr "ウサギの穴に落ちて"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:458
+msgid ""
+"Users being able to retrieve console logs from running instances is a boon "
+"for support — many times they can figure out what's going on inside their "
+"instance and fix what's going on without bothering you. Unfortunately, "
+"sometimes overzealous logging of failures can cause problems of its own."
+msgstr ""
+"稼働中のインスタンスからコンソールログを取得可能なユーザはサポートの恩恵とな"
+"る（インスタンスの中で何が起こっているのか何度も確認できるし、あなたが悩まず"
+"に問題を修正することができる）。不幸なことに、過剰な失敗の記録は時々、自らの問題"
+"となり得る。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:464
+msgid ""
+"A report came in: VMs were launching slowly, or not at all. Cue the standard "
+"checks — nothing on the nagios, but there was a spike in network towards the "
+"current master of our RabbitMQ cluster. Investigation started, but soon the "
+"other parts of the queue cluster were leaking memory like a sieve. Then the "
+"alert came in — the master rabbit server went down. Connections failed over "
+"to the slave."
+msgstr ""
+"報告が入った。VM の起動が遅いか、全く起動しない。標準のチェック項目は？"
+"Nagios 上は問題なかったが、RabbitMQ クラスタの現用系に向かうネットワークのみ"
+"高負荷を示していた。捜査を開始したが、すぐに RabbitMQ クラスタの別の部分がざ"
+"るのようにメモリリークを起こしていることを発見した。また警報か？RabbitMQ サー"
+"バーの現用系はダウンしようとしていた。接続は待機系にフェイルオーバーした。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:471
+msgid ""
+"At that time, our control services were hosted by another team and we didn't "
+"have much debugging information to determine what was going on with the "
+"master, and couldn't reboot it. That team noted that it failed without "
+"alert, but managed to reboot it. After an hour, the cluster had returned to "
+"its normal state and we went home for the day."
+msgstr ""
+"この時、我々のコントロールサービスは別のチームによりホスティングされており、"
+"我々には現用系サーバー上で何が起こっているのかを調査するための大したデバッグ情"
+"報がなく、再起動もできなかった。このチームは警報なしで障害が起こったと連絡し"
+"てきたが、そのサーバーの再起動を管理していた。１時間後、クラスタは通常状態に"
+"復帰し、我々はその日は帰宅した。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:478
+msgid ""
+"Continuing the diagnosis the next morning was kick started by another "
+"identical failure. We quickly got the message queue running again, and tried "
+"to work out why Rabbit was suffering from so much network traffic. Enabling "
+"debug logging on nova-api quickly brought understanding. A <code>tail -f /"
+"var/log/nova/nova-api.log</code> was scrolling by faster than we'd ever seen "
+"before. CTRL+C on that and we could plainly see the contents of a system log "
+"spewing failures over and over again - a system log from one of our users' "
+"instances."
+msgstr ""
+"翌朝の継続調査は別の同様の障害でいきなり始まった。我々は急いで RabbitMQ サー"
+"バーを再起動し、何故 RabbitMQ がそのような過剰なネットワーク負荷に直面してい"
+"るのかを調べようとした。nova-api のデバッグログを出力することにより、理由はすぐ"
+"に判明した。<code>tail -f /var/log/nova/nova-api.log</code> は我々が見たこと"
+"もない速さでスクロールしていた。CTRL+C でコマンドを止め、障害を吐き出していた"
+"システムログの内容をはっきり目にすることが出来た。－我々のユーザの１人のインス"
+"タンスからのシステムログだった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:489
+msgid ""
+"After finding the instance ID we headed over to <code>/var/lib/nova/"
+"instances</code> to find the <code>console.log</code>:"
+msgstr ""
+"インスタンスIDの発見後、<code>console.log</code> を探すため <code>/var/lib/"
+"nova/instances</code> にアクセスした。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:496
+msgid ""
+"Sure enough, the user had been periodically refreshing the console log page "
+"on the dashboard and the 5G file was traversing the rabbit cluster to get to "
+"the dashboard."
+msgstr ""
+"思った通り、ユーザはダッシュボード上のコンソールログページを定期的に更新して"
+"おり、ダッシュボードに向けて5GB のファイルが RabbitMQ クラスタを通過してい"
+"た。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:500
+msgid ""
+"We called them and asked them to stop for a while, and they were happy to "
+"abandon the horribly broken VM. After that, we started monitoring the size "
+"of console logs."
+msgstr ""
+"我々はユーザを呼び、しばらくダッシュボードの更新を止めるよう申し入れた。する"
+"と、恐ろしい VM の破壊は止み、彼らは大いに喜んだ。その後、我々はコンソールロ"
+"グのサイズを監視するようになった。"
+
+#: doc/src/docbkx/openstack-ops/src/app_crypt.xml:504
+msgid ""
+"To this day, <link href=\"https://bugs.launchpad.net/nova/+bug/832507\">the "
+"issue</link> (https://bugs.launchpad.net/nova/+bug/832507) doesn't have a "
+"permanent resolution, but we look forward to the discussion at the next "
+"summit."
+msgstr ""
+"今日に至るまで、<link href=\"https://bugs.launchpad.net/nova/+bug/832507\">こ"
+"の問題</link> (https://bugs.launchpad.net/nova/+bug/832507) には完全な解決策"
+"がないが、我々は次回のサミットの議論に期待している。"
