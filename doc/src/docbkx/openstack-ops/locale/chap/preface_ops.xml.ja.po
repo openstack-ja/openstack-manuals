@@ -1,0 +1,337 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-21 08:33+0000\n"
+"Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:600
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:184
+msgid ""
+"The genesis of this book was an in-person event, but now that the book is in "
+"your hands we want you to contribute to it. OpenStack documentation follows "
+"the coding principles of iterative work, with bug logging, investigating, "
+"and fixing."
+msgstr ""
+"この本の元は人が集まったイベントで作成されましたが、今やこの本はみなさんも貢"
+"献できる状態になっています。 OpenStack のドキュメント作成は、バグ登録、調査、"
+"修正を繰り返し行うというコーディングの基本原則に基いて行われています。"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:16
+msgid "Preface"
+msgstr "はじめに"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:17
+msgid ""
+"OpenStack is an open source platform that lets you build an Infrastructure "
+"as a Service (IaaS) cloud that runs on commodity hardware. OpenStack is "
+"designed for scalability, so you can easily add new compute and storage "
+"resources to grow your cloud over time. Organizations such as HP and "
+"Rackspace have built massive public clouds on top of OpenStack."
+msgstr ""
+"OpenStack はオープンソースプラットフォームで、OpenStack を使うと、コモディ"
+"ティハードウェア上で動作する Infrastructure as a Service (IaaS) クラウドを自"
+"分で構築できます。OpenStack はスケーラビリティを意識して設計されており、運用"
+"するクラウドが大きくなるのに合わせて新しいコンピュートノードやストレージノー"
+"ドを簡単に追加することができます。 HP や Rackspace などの組織では、OpenStack "
+"を使って巨大なパブリッククラウドを構築しています。"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:23
+msgid ""
+"OpenStack is more than a software package that you run as-is. It lets you "
+"integrate a number of different technologies to construct a cloud. This "
+"approach provides great flexibility, but the number of options might be "
+"bewildering at first."
+msgstr ""
+"OpenStack は、そのまま実行する単なるソフトウェアパッケージではなく、数多くの"
+"様々な技術を組み合わせてクラウドを構築することができます。このアプローチは非"
+"常に柔軟性がありますが、このため多くの選択肢があり最初は面食らうかもしれませ"
+"ん。"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:28
+msgid ""
+"This guide assumes that you are familiar with the Ubuntu distribution of "
+"Linux, SQL databases, and virtualization. You must be comfortable "
+"administering and configuring multiple Linux machines for networking. You "
+"must install and maintain a MySQL database, and occasionally run SQL queries "
+"against it. One of the most complex aspects of an OpenStack cloud is the "
+"networking configuration. You should be familiar with concepts such as DHCP, "
+"Linux bridges, VLANs, and iptables. You must also have access to a network "
+"hardware expert who can configure the switches and routers required in your "
+"OpenStack cloud."
+msgstr ""
+"このガイドは、Linux ディストリビューションの Ubuntu、SQL データベースや仮想化"
+"に関してよく知っていることを前提にしています。複数台の Linux マシンのネット"
+"ワーク設定・管理にも慣れている必要があります。MySQL データベースのインストー"
+"ルと管理を行い、場合によってはデータベースに対して SQL クエリーを実行すること"
+"もあります。OpenStack クラウドの最も複雑な点の一つにネットワーク設定がありま"
+"す。DHCP、Linux ブリッジ、VLAN、iptables といった考え方をよく理解していなけれ"
+"ばなりません。OpenStack クラウドで必要となるスイッチやルータを設定できるネッ"
+"トワークハードウェアの専門家と話をする必要もあります。"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:44
+msgid "Why and How We Wrote This Book"
+msgstr "この本をなぜ書いたか？どうやって書いたか？"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:45
+msgid ""
+"We wrote this book because we have deployed and maintained OpenStack clouds "
+"for at least a year, and wanted to be able to distribute this knowledge to "
+"others. After months of being the point people for an OpenStack cloud, we "
+"also wanted to have a document to hand to our system administrators so "
+"they'd know how to operate the cloud on a daily basis — both reactively and "
+"proactively. We wanted to provide more detailed technical information about "
+"the decisions that deployers make along the way."
+msgstr ""
+"私たちは少なくとも1年以上 OpenStack クラウドを構築し運用してきました。そこで"
+"得られた知識を多くの人と共有するために、この本を書きました。 OpenStack クラウ"
+"ドの責任者として数ヶ月がたつと、そのドキュメントを渡しておけば、システム管理"
+"者に日々のクラウドの運用をどのように行なえばよいかが分かるようなドキュメント"
+"が欲しくなりました。また、クラウドを構築する際に選択したやり方のより詳細な技"
+"術情報を共有したいと思いました。"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:56
+msgid "We wrote this book to help you:<placeholder-1/>"
+msgstr ""
+"次のような場面であなたの助けとなるように、この本を書きました。<placeholder-1/"
+">"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:59
+msgid ""
+"Design and create an architecture for your first non-trivial OpenStack "
+"cloud. After you read this guide, you'll know which questions to ask and how "
+"to organize your compute, networking, storage resources, and the associated "
+"software packages."
+msgstr ""
+"初めての本格的な OpenStack クラウドのアーキテクチャの設計と構築。この本を読み"
+"終えると、コンピュート、ネットワーク、ストレージリソースを選ぶにはどんな質問"
+"を自分にすればよいのか、どのように組み上げればよいのかや、どんなソフトウェア"
+"パッケージが必要かが分かることでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:67
+msgid "Perform the day-to-day tasks required to administer a cloud."
+msgstr "クラウドを管理する上で必要となる日々のタスクの実行。"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:72
+msgid ""
+"We wrote this book in a Book Sprint, which is a facilitated rapid "
+"development production method for books. For more information see the <link "
+"title=\"Foundation web site\" href=\"http://www.booksprints.net\">Book "
+"Sprint site</link>. Your authors cobbled this book together in five days "
+"during February 2013, fueled by caffeine and the best take-out food that "
+"Austin, Texas could offer."
+msgstr ""
+"私たちはこの本を Book Sprint で執筆しました。 Book Sprint は短い期間で本を建"
+"設的に作成できるメソッドです。詳しい情報は、 "
+"<link title=\"Foundation web site\" href=\"http://www.booksprints.net\">Book "
+"Sprint のサイト</link> を参照して下さい。"
+"著者らは2013年2月の5日間でこの本をまとめあげました。カフェインと、テキサス州"
+"オースティンの素晴らしいテイクアウトの食事は力になりました。"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:80
+msgid ""
+"On the first day we filled white boards with colorful sticky notes to start "
+"to shape this nebulous book about how to architect and operate clouds. "
+"<placeholder-1/>"
+msgstr ""
+"最初の日に、アイデアを色とりどりのポストイットでホワイトボードいっぱいに書き"
+"出し、クラウドを設計し運用するという漠然とした話題を扱った本の作成を開始しま"
+"した。 <placeholder-1/>"
+
+#. When image changes, this message will be marked fuzzy or untranslated for
+#. you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:86
+msgid "@@image: 'figures/1-IMG_4895.JPG'; md5=fa6e602f909a462f29afd9596a8aa998"
+msgstr ""
+"@@image: 'figures/1-IMG_4895.JPG'; md5=fa6e602f909a462f29afd9596a8aa998"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:90
+msgid ""
+"We wrote furiously from our own experiences and bounced ideas between each "
+"other. At regular intervals we reviewed the shape and organization of the "
+"book and further molded it, leading to what you see today."
+msgstr ""
+"私たちは一心不乱に自分たちの経験に基づき執筆を行い、互いに意見をぶつけ合いま"
+"した。一定の間隔で、本の現在の状況や構成をレビューし、本を作り上げていき、今"
+"皆さんが見ているものができあがりました。"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:95
+msgid "The team includes:"
+msgstr "以下が執筆チームのメンバーです。"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:98
+msgid ""
+"<emphasis role=\"bold\">Tom Fifield</emphasis>. After learning about "
+"scalability in computing from particle physics experiments like ATLAS at the "
+"LHC, Tom works on OpenStack clouds in production to support the Australian "
+"public research sector. He lives in Melbourne, Australia and works on "
+"OpenStack documentation in his spare time."
+msgstr ""
+"<emphasis role=\"bold\">Tom Fifield</emphasis>. LHC で ATLAS のような素粒子物"
+"理学実験でコンピューティングのスケーラビリティの経験を積んだ後、現在はオース"
+"トラリアの公的な研究部門を支援するプロダクションの OpenStack クラウドに携わっ"
+"ています。オーストラリアのメルボルンに住んでいて、空いた時間で OpenStack ド"
+"キュメントプロジェクトに参加しています。"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:107
+msgid ""
+"<emphasis role=\"bold\">Diane Fleming</emphasis>. Diane works on the "
+"OpenStack API documentation tirelessly. She helped out wherever she could on "
+"this project."
+msgstr ""
+"<emphasis role=\"bold\">Diane Fleming</emphasis>. 彼女は OpenStack API ドキュ"
+"メントプロジェクトで非常に熱心に活動しています。このプロジェクトでは自分がで"
+"きるところであれば、どこでも取り組んでくれました。"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:113
+msgid ""
+"<emphasis role=\"bold\">Anne Gentle</emphasis>. Anne is the documentation "
+"coordinator for OpenStack and also served as an individual contributor to "
+"the Google Doc Summit in 2011, working with the Open Street Maps team. Anne "
+"has worked on doc sprints in the past with FLOSS Manuals’ Adam Hyde "
+"facilitating. Anne lives in Austin, Texas."
+msgstr ""
+"<emphasis role=\"bold\">Anne Gentle</emphasis>. 彼女は OpenStack のドキュメン"
+"トコーディネーターで、2011年の Google Doc Summit では individual contributor "
+"（個人コントリビュータ） を努め Open Street Maps チームとともに活動しました。"
+"Adam Hyde が進めていた FLOSS Manuals の以前の doc sprint にも参加しています。"
+"テキサス州オースティンに住んでいます。"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:123
+msgid ""
+"<emphasis role=\"bold\">Lorin Hochstein</emphasis>. An academic turned "
+"software developer-slash-operator, Lorin currently works as the Lead "
+"Architect for Cloud Services at Nimbis Services where he deploys OpenStack "
+"for technical computing applications. He has been working with OpenStack "
+"since the Cactus release. Previously, he worked on high-performance "
+"computing extensions for OpenStack at University of Southern California's "
+"Information Sciences Institute (USC-ISI)."
+msgstr ""
+"<emphasis role=\"bold\">Lorin Hochstein</emphasis>. アカデミック出身のソフト"
+"ウェア開発者・運用者である彼は、Nimbis Services でクラウドサービスの Lead "
+"Architect として働いています。Nimbis Service では彼は技術計算アプリケーション"
+"用の OpenStack を運用しています。 Cactus リリース以来 OpenStack に携わってい"
+"ます。以前は、University of Southern California's Information Sciences "
+"Institute (USC-ISI) で OpenStack の high-performance computing 向けの拡張を行"
+"いました。"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:136
+msgid ""
+"<emphasis role=\"bold\">Adam Hyde</emphasis>. Adam facilitated this Book "
+"Sprint. He also founded the Book Sprint methodology and is the most "
+"experienced Book Sprint facilitator around. See http://www.booksprints.net/ "
+"for more information. Adam founded FLOSS Manuals—a community of some 3,000 "
+"individuals developing Free Manuals about Free Software. He is also the "
+"founder and project manager for Booktype, an open source project for "
+"writing, editing, and publishing books online and in print."
+msgstr ""
+"<emphasis role=\"bold\">Adam Hyde</emphasis>. 彼は今回の Book Sprint をリード"
+"しました。 Book Sprint メソッドを創設者でもあり、一番経験豊富な Book Sprint "
+"のファシリテーターです。詳しい情報は http://www.booksprints.net/ を見て下さ"
+"い。 3000人もの参加者がいるフリーソフトウェアのフリーなマニュアルを作成するコ"
+"ミュニティである FLOSS Manuals の創設者です。また、Booktype の創設者でプロ"
+"ジェクトマネージャーです。 Booktype はオンラインで本の執筆、編集、出版を行う"
+"オープンソースプロジェクトです。"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:149
+msgid ""
+"<emphasis role=\"bold\">Jonathan Proulx</emphasis>. Jon has been piloting an "
+"OpenStack cloud as a senior system administrator at the MIT Computer Science "
+"and Artificial Intelligence Lab for his researchers to have as much "
+"computing power as they need. He started contributing to OpenStack "
+"documentation and reviewing the documentation so that he could accelerate "
+"his learning."
+msgstr ""
+"<emphasis role=\"bold\">Jonathan Proulx</emphasis>. 彼は MIT Computer "
+"Science and Artificial Intelligence Lab で上級システム管理者として OpenStack "
+"クラウドを運用し、研究者が必要なだけの計算能力を使えるようにしています。 "
+"OpenStack の勉強を加速しようと思い、OpenStack ドキュメントへの貢献とドキュメ"
+"ントのレビューを始めました。"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:160
+msgid ""
+"<emphasis role=\"bold\">Everett Toews</emphasis>. Everett is a Developer "
+"Advocate at Rackspace making OpenStack and the Rackspace Cloud easy to use. "
+"Sometimes developer, sometimes advocate, and sometimes operator. He's built "
+"web applications, taught workshops, given presentations around the world, "
+"and deployed OpenStack for production use by academia and business."
+msgstr ""
+"<emphasis role=\"bold\">Everett Toews</emphasis>. 彼は Rackspace の "
+"Developer Advocate で、OpenStack や Rackspace Cloud を使いやすくする仕事をし"
+"ています。ある時は開発者、ある時は advocate、またある時は運用者です。彼は、"
+"ウェブアプリケーションを作成し、ワークショップを行い、世界中で公演を行い、教"
+"育界やビジネスでプロダクションユースとして使われる OpenStack を構築していま"
+"す。"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:170
+msgid ""
+"<emphasis role=\"bold\">Joe Topjian</emphasis>. Joe has designed and "
+"deployed several clouds at Cybera, where, as a non-profit, they are building "
+"e-infrastructure to support entrepreneurs and local researchers in Alberta, "
+"Canada. He also actively maintains and operates these clouds which has "
+"generated a wealth of troubleshooting skills for cloud environments."
+msgstr ""
+"<emphasis role=\"bold\">Joe Topjian</emphasis>. 彼は Cybera で複数のクラウド"
+"の設計と構築を行って来ました。 Cybera は、非営利でカナダのアルバータ州の起業"
+"家や研究者を支援する電子情報インフラを構築しています。また、これらのクラウド"
+"の維持・運用を活発に行なっており、その経験からクラウド環境でのトラブルシュー"
+"ティングの豊富な知識を持っています。"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:183
+msgid "How to Contribute to This Book"
+msgstr "この本の作成に参加するには"
+
+#. <para>A member of the OpenStack doc-core team publishes this
+#.             book periodically. We plan to have events at OpenStack
+#.             summits to work in-person on this book.</para>
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:203
+msgid ""
+"Learn more about how to contribute to the OpenStack docs at <link href="
+"\"http://wiki.openstack.org/Documentation/HowTo\">Documentation How To</"
+"link> (http://wiki.openstack.org/Documentation/HowTo)."
+msgstr ""
+"OpenStack ドキュメント作成プロジェクトに参加する方法については、<link href="
+"\"http://wiki.openstack.org/Documentation/HowTo\">Documentation How To</"
+"link> (http://wiki.openstack.org/Documentation/HowTo) を見て下さい。"
+
+#: doc/src/docbkx/openstack-ops/src/preface_ops.xml:208
+msgid ""
+"If you find a bug and can't fix it or aren't sure it's really a doc bug, log "
+"a bug at <link href=\"http://bugs.launchpad.net/openstack-manuals"
+"\">OpenStack Manuals</link> (http://bugs.launchpad.net/openstack-manuals). "
+"Tag the bug under <guilabel>Extra</guilabel> options with <literal>ops-"
+"guide</literal> tag to indicate that the bug is in this guide. You can "
+"assign the bug to yourself if you know how to fix it. Also, a member of the "
+"OpenStack doc-core team can triage the doc bug."
+msgstr ""
+"バグを見つけたが、どのように直せばよいか分からない場合や本当にドキュメントの"
+"バグか自信が持てない場合は、 <link href=\"http://bugs.launchpad.net/"
+"openstack-manuals\">OpenStack Manuals</link> (http://bugs.launchpad.net/"
+"openstack-manuals) にバグを登録して、バグの <guilabel>Extra</guilabel> オプ"
+"ションで <literal>ops-guide</literal> タグを付けて下さい。 <literal>ops-"
+"guide</literal> タグは、そのバグがこのガイドに関するものであることを示しま"
+"す。どのように直せばよいか分かる場合には、そのバグの担当者を自分に割り当てる"
+"こともできます。また、OpenStack doc-core チームのメンバーがドキュメントバグを"
+"分類することもできます。"
