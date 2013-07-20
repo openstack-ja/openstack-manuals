@@ -1,0 +1,586 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-21 08:33+0000\n"
+"Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1363
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:292
+msgid "GlusterFS"
+msgstr "GlusterFS"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:16
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:88
+msgid "Compute Nodes"
+msgstr "コンピュートノード"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:17
+msgid ""
+"Compute nodes form the resource core of the OpenStack Compute cloud, "
+"providing the processing, memory, network and storage resources to run "
+"instances."
+msgstr ""
+"コンピュートノードは OpenStack Compute クラウドのリソースの中核を構成し、インスタン"
+"スを動作させるためのプロセッシング、メモリ、ネットワーク、ストレージの各リ"
+"ソースを提供します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:21
+msgid "CPU Choice"
+msgstr "CPU の選択"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:22
+msgid ""
+"The type of CPU in your compute node is a very important choice. First, "
+"ensure the CPU supports virtualization by way of <emphasis>VT-x</emphasis> "
+"for Intel chips and <emphasis>AMD-v</emphasis> for AMD chips."
+msgstr ""
+"コンピュートノードの CPU 種別は非常に重要な選択です。まず、CPU は Intel チッ"
+"プでは <emphasis>VT-x</emphasis>、 AMD チップでは <emphasis>AMD-v</emphasis> "
+"の仮想化に対応している必要があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:26
+msgid ""
+"The number of cores that the CPU has also affects the decision. It's common "
+"for current CPUs to have up to 12 cores. Additionally, if the CPU supports "
+"Hyper-threading, those 12 cores are doubled to 24 cores. If you purchase a "
+"server that supports multiple CPUs, the number of cores is further "
+"multiplied."
+msgstr ""
+"CPU のコア数も選択に影響します。最近のCPUでは最大12コアあるのが一般的で"
+"す。さらに、CPU がハイパースレッディングをサポートしていれば、12コアは2倍の24コアに"
+"なります。複数のCPUを持つサーバーを購入すれば、コア数はさらに掛け算で増えます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:32
+msgid ""
+"Whether you should enable hyper-threading on your CPUs depends upon your use "
+"case. We recommend you do performance testing with your local workload with "
+"both hyper-threading on and off to determine what is more appropriate in "
+"your case."
+msgstr ""
+"CPUでハイパースレッディングを有効にするかどうかはユースケースに依存します。ハイパー"
+"スレッディングがオン、オフの両方の状態であなたの用途に応じた負荷で性能試験を行い、どち"
+"らがユースケースに適しているかを判断することをお薦めします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:40
+msgid "Hypervisor Choice"
+msgstr "ハイパーバイザーの選択"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:41
+msgid ""
+"OpenStack Compute supports many hypervisors to various degrees, including "
+"<link title=\"reference manual\" href=\"http://www.linux-kvm.org/page/"
+"Main_Page\">KVM</link>, <link title=\"reference manual\" href=\"http://lxc."
+"sourceforge.net/\">LXC</link>, <link title=\"reference manual\" href="
+"\"http://wiki.qemu.org/Manual\">QEMU</link>, <link title=\"reference manual"
+"\" href=\"http://user-mode-linux.sourceforge.net/\">UML</link>, <link title="
+"\"reference manual\" href=\"http://www.vmware.com/products/vsphere-"
+"hypervisor/support.html\">VMWare ESX/ESXi</link>, <link title=\"reference "
+"manual\" href=\"http://www.xen.org\">Xen</link>, <link title=\"reference "
+"manual\" href=\"http://www-03.ibm.com/systems/power/software/virtualization/"
+"features.html\">PowerVM</link>, <link title=\"reference manual\" href="
+"\"http://www.microsoft.com/en-us/server-cloud/windows-server/server-"
+"virtualization-features.aspx\">Hyper-V</link>."
+msgstr ""
+"OpenStack Compute は多数のハイパーバイザーをサポートしており、その程度も様々"
+"です。 サポートされているハイパーバイザーは、<link title=\"reference manual"
+"\" href=\"http://www.linux-kvm.org/page/Main_Page\">KVM</link>, <link title="
+"\"reference manual\" href=\"http://lxc.sourceforge.net/\">LXC</link>, <link "
+"title=\"reference manual\" href=\"http://wiki.qemu.org/Manual\">QEMU</link>, "
+"<link title=\"reference manual\" href=\"http://user-mode-linux.sourceforge."
+"net/\">UML</link>, <link title=\"reference manual\" href=\"http://www.vmware."
+"com/products/vsphere-hypervisor/support.html\">VMWare ESX/ESXi</link>, <link "
+"title=\"reference manual\" href=\"http://www.xen.org\">Xen</link>, <link "
+"title=\"reference manual\" href=\"http://www-03.ibm.com/systems/power/"
+"software/virtualization/features.html\">PowerVM</link>, <link title="
+"\"reference manual\" href=\"http://www.microsoft.com/en-us/server-cloud/"
+"windows-server/server-virtualization-features.aspx\">Hyper-V</link> です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:60
+msgid ""
+"Probably the most important factor in your choice of hypervisor is your "
+"current usage or experience. Aside from that, there are practical concerns "
+"to do with feature parity, documentation, and the level of community "
+"experience."
+msgstr ""
+"おそらく、ハイパーバイザーの選択で最も重要な要素は、現在の使用法やこれまでの経"
+"験でしょう。"
+"それ以外では、同等の機能の実用上の懸念、ドキュメント、コミュニティでの経験量"
+"などあると思います。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:65
+msgid ""
+"For example, KVM is the most widely adopted hypervisor in the OpenStack "
+"community. Besides KVM, more deployments exist running Xen, LXC, VMWare and "
+"Hyper-V than the others listed — however, each of these are lacking some "
+"feature support or the documentation on how to use them with OpenStack is "
+"out of date."
+msgstr ""
+"例えば、 KVM は OpenStack コミュニティでは最も多く採用されているハイパーバイ"
+"ザーです。 KVM 以外では、Xen、LXC、VMWare、Hyper-V を使っているシステムが、（サポート）リ"
+"ストにある他のハイパーバイザーよりは多いです。しかしながら、これらのハイパーバイ"
+"ザーはどれもある機能のサポートがなかったり、OpenStack と組み合わせての使い方"
+"に関するドキュメントが最新版に追従していなかったりします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:71
+msgid ""
+"The best information available to support your choice is found on the <link "
+"title=\"reference manual\" href=\"https://wiki.openstack.org/wiki/"
+"HypervisorSupportMatrix\">Hypervisor Support Matrix</link> (https://wiki."
+"openstack.org/wiki/HypervisorSupportMatrix), and in the <link title="
+"\"reference manual\" href=\"http://docs.openstack.org/folsom/openstack-"
+"compute/admin/content/ch_hypervisors.html\">reference manual</link> (http://"
+"docs.openstack.org/folsom/openstack-compute/admin/content/ch_hypervisors."
+"html)."
+msgstr ""
+"ハイパーバイザー選択の参考になる情報は、<link title=\"reference manual\" "
+"href=\"https://wiki.openstack.org/wiki/HypervisorSupportMatrix\">Hypervisor "
+"Support Matrix</link> (https://wiki.openstack.org/wiki/"
+"HypervisorSupportMatrix) と <link title=\"reference manual\" href=\"http://"
+"docs.openstack.org/folsom/openstack-compute/admin/content/ch_hypervisors.html"
+"\">レファレンスマニュアル</link> (http://docs.openstack.org/folsom/openstack-"
+"compute/admin/content/ch_hypervisors.html) です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:81
+msgid ""
+"It is also possible to run multiple hypervisors in a single deployment using "
+"Host Aggregates or Cells. However, an individual compute node can only run a "
+"single hypervisor at a time."
+msgstr ""
+"ホストアグリゲートやセルを使うと一つの OpenStack システムで複数のハイパーバイ"
+"ザーを動かすこともできますが、一つのコンピュートノードで同時に実行できるのは"
+"1種類のハイパーバイザーだけです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:89
+msgid "Instance Storage Solutions"
+msgstr "インスタンスストレージのソリューション"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:90
+msgid ""
+"As part of the procurement for a compute cluster, you must specify some "
+"storage for the disk on which the instantiated instance runs. There are "
+"three main approaches to providing this temporary-style storage, and it is "
+"important to understand the implications of the choice."
+msgstr ""
+"コンピュートクラスタを調達する際に、作成したインスタンスの（仮想）ディスク"
+"用のストレージを決めなければいけません。この一時ストレージの提供方法には主に3"
+"つのアプローチがあり、その意味を理解することが重要です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:96
+msgid "They are:"
+msgstr "次の3つの方法があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:99
+msgid "Off compute node storage – shared file system"
+msgstr "コンピュートノード外のストレージ （共有ファイルシステム）"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:103
+msgid "On compute node storage – shared file system"
+msgstr "コンピュートノード上のストレージ （共有ファイルシステム）"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:107
+msgid "On compute node storage – non-shared file system"
+msgstr "コンピュートノード上のストレージ （非共有ファイルシステム）"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:111
+msgid ""
+"In general, the questions you should be asking when selecting the storage "
+"are as follows:"
+msgstr "一般的には、ストレージを選択する際には次のような質問をされます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:115
+msgid "What is the platter count you can achieve?"
+msgstr "実現したいプラッター数（ディスク容量）はどれくらいか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:119
+msgid "Do more spindles result in better I/O despite network access?"
+msgstr ""
+"ネットワークアクセスがあったとしても、ディスク数が多い方が良い I/O 性能が得られるか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:123
+msgid ""
+"Which one results in the best cost-performance scenario you're aiming for?"
+msgstr "何があなたが目指すコストパフォーマンスのシナリオはどれか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:127
+msgid "How do you manage the storage operationally?"
+msgstr "運用上ストレージをどのように管理したいのか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:132
+msgid "Off Compute Node Storage – Shared File System"
+msgstr "コンピュートノード外のストレージ （共有ファイルシステム）"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:134
+msgid ""
+"Many operators use separate compute and storage hosts. Compute services and "
+"storage services have different requirements, compute hosts typically "
+"require more CPU and RAM than storage hosts. Therefore, for a fixed budget, "
+"it makes sense to have different configurations for your compute nodes and "
+"your storage nodes with compute nodes invested in CPU and RAM, and storage "
+"nodes invested in block storage."
+msgstr ""
+"多くの運用者はコンピュートホストとストレージホストを分離して使用しています。"
+"コンピュートサービスとストレージサービスには異なる要件があり、コンピュートホ"
+"ストでは通常はストレージホストよりも多くのCPUとRAMが必要です。そのため、一定"
+"の予算の中では、コンピュートホストとストレージホストで異なる構成として、コン"
+"ピュートホストに多くのCPUとRAMを持たせ、ストレージホストに多くのブロックスト"
+"レージを持たせるのは、理にかなっています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:143
+msgid ""
+"Also, if you use separate compute and storage hosts then you can treat your "
+"compute hosts as \"stateless\". This simplifies maintenance for the compute "
+"hosts. As long as you don't have any instances currently running on a "
+"compute host, you can take it offline or wipe it completely without having "
+"any effect on the rest of your cloud."
+msgstr ""
+"また、コンピュートホストとストレージホストを分離しておけば、コンピュートホス"
+"トを「ステートレス」（状態を保持しないもの）として扱うことができます。これ"
+"により、コンピュートホストの管理を単純にすることができます。コンピュートホス"
+"ト上で動作しているインスタンスがない限り、クラウドの他の部分に影響を与えずに"
+"そのノードをオフラインにしたり取り除いたりすることができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:150
+msgid ""
+"However, if you are more restricted in the number of physical hosts you have "
+"available for creating your cloud and you want to be able to dedicate as "
+"many of your hosts as possible to running instances, it makes sense to run "
+"compute and storage on the same machines."
+msgstr ""
+"一方、クラウドの構築に使用できる物理ホスト数に制限があり、できるだけ多くのホ"
+"ストをインスタンスの実行に使えるようにしたい場合は、同じマシンでコンピュート"
+"ホストとストレージホストを動作させるのは理にかなっています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:156
+msgid ""
+"In this option, the disks storing the running instances are hosted in "
+"servers outside of the compute nodes. There are also several advantages to "
+"this approach:"
+msgstr ""
+"この方法では、実行中のインスタンスの状態を格納するディスクはコンピュートホス"
+"ト外のサーバーに置かれます。この方法には以下のようなメリットもあります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:162
+msgid "If a compute node fails, instances are usually easily recoverable."
+msgstr ""
+"コンピュートホストが故障した場合、通常インスタンスは簡単に復旧できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:166
+msgid "Running a dedicated storage system can be operationally simpler."
+msgstr "専用のストレージシステムを動作させることで、運用がシンプルになります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:170
+msgid "Being able to scale to any number of spindles."
+msgstr "ディスク数がスケーラブルになります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:174
+msgid "It may be possible to share the external storage for other purposes."
+msgstr "外部ストレージを他の用途と共有できる可能性があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:179
+msgid "The main downsides to this approach are:"
+msgstr "この方法の主なマイナス面は以下の点です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:182
+msgid ""
+"Depending on design, heavy I/O usage from some instances can affect "
+"unrelated instances."
+msgstr ""
+"設計次第では、一部のインスタンスの I/O が非常に多い場合に、無関係のインスタンス"
+"に影響が出る場合があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:187
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:218
+msgid "Use of the network can decrease performance."
+msgstr "ネットワークを使用するため、性能低下が起こる可能性があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:193
+msgid "On Compute Node Storage – Shared File System"
+msgstr "コンピュートノード上のストレージ （共有ファイルシステム）"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:195
+msgid ""
+"In this option, each <code>nova-compute</code> node is specified with a "
+"significant amount of disks, but a distributed file system ties the disks "
+"from each compute node into a single mount. The main advantage of this "
+"option is that it scales to external storage when you require additional "
+"storage."
+msgstr ""
+"この方法では、各 <code>nova-compute</code> ノードには多数のディスクが接続され"
+"ますが、分散ファイルシステムにより各コンピュートノードのディスクは1つのマウ"
+"ントポイントにまとめられます。この方法の主なメリットは、追加のストレージが必"
+"要になった際に外部ストレージを利用してスケールできる点です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:201
+msgid "However, this option has several downsides:"
+msgstr "しかし、この方法にはいくつかマイナス点があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:204
+msgid ""
+"Running a distributed file system can make you lose your data locality "
+"compared with non-shared storage."
+msgstr ""
+"分散ファイルシステムを動作させるため、非共有ストレージと比較してデータの局所"
+"性が失われます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:209
+msgid "Recovery of instances is complicated by depending on multiple hosts."
+msgstr "複数の物理ホストが関係するため、インスタンスの復旧が複雑になります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:213
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:250
+msgid ""
+"The chassis size of the compute node can limit the number of spindles able "
+"to be used in a compute node."
+msgstr ""
+"コンピュートノードの筐体サイズによって、コンピュートノードに搭載できる"
+"ディスク数が制限されます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:225
+msgid "On Compute Node Storage – Non-shared File System"
+msgstr "コンピュートノード上のストレージ （非共有ファイルシステム）"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:227
+msgid ""
+"In this option, each <code>nova-compute</code> node is specified with enough "
+"disks to store the instances it hosts. There are two main reasons why this "
+"is a good idea:"
+msgstr ""
+"この方法では、各 <code>nova-compute</code> ノードには、そのホストで動作するイ"
+"ンスタンスを収容するのに十分な量のディスクが接続されます。この方法には次の2つ"
+"のメリットがあります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:233
+msgid ""
+"Heavy I/O usage on one compute node does not affect instances on other "
+"compute nodes."
+msgstr ""
+"あるコンピュートノード上での I/O が非常に多い場合でも、他のコンピュートノード"
+"のインスタンスに影響がありません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:238
+msgid "Direct I/O access can increase performance."
+msgstr "I/O アクセスが直接行われるので、性能向上が図れます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:243
+msgid "This has several downsides:"
+msgstr "この方法には次のようなマイナス点があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:246
+msgid "If a compute node fails, the instances running on that node are lost."
+msgstr ""
+"コンピュートノードが故障すると、そのノードで実行中のインスタンスが失われてし"
+"まいます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:255
+msgid ""
+"Migrations of instances from one node to another are more complicated, and "
+"rely on features which may not continue to be developed."
+msgstr ""
+"あるノードから別のノードへのインスタンスのマイグレーションが複雑になります。"
+"また、マイグレーション方法も開発が継続されるか分からない方法に依存することに"
+"なります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:261
+msgid "If additional storage is required, this option does not to scale."
+msgstr ""
+"追加のストレージが必要になった際に、この方法はスケールしません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:267
+msgid "Issues with Live Migration"
+msgstr "ライブマイグレーションに関する問題"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:268
+msgid ""
+"We consider live migration an integral part of the operations of the cloud. "
+"This feature provides the ability to seamlessly move instances from one "
+"physical host to another, a necessity for performing upgrades that require "
+"reboots of the compute hosts, but only works well with shared storage."
+msgstr ""
+"我々はライブマイグレーションはクラウドの運用に不可欠なものだと考えています。"
+"この機能により、インスタンスをある物理ホストから別の物理ホストに停止せずに移"
+"動し、コンピュートホストの再起動を必要とするアップグレードを実行することがで"
+"きるようになります。しかし、ライブマイグレーションを行うには共有ストレージが"
+"なければなりません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:274
+msgid ""
+"Live migration can be also done with non-shared storage, using a feature "
+"known as <emphasis>KVM live block migration</emphasis>. While an earlier "
+"implementation of block-based migration in KVM and QEMU was considered "
+"unreliable, there is a newer, more reliable implementation of block-based "
+"live migration as of QEMU 1.4 and libvirt 1.0.2 that is also compatible with "
+"OpenStack. However, none of the authors of this guide have first-hand "
+"experience using live block migration."
+msgstr ""
+"ライブマイグレーションは、<emphasis>KVM ライブブロックマイグレーション</"
+"emphasis>として知られる機能を用いて、非共有ストレージでも実行できます。"
+"以前のバージョンでの KVM と QEMU におけるブロックマイグレーションの実装は"
+"信頼性がないと思われていましたが、"
+"OpenStack とも互換性のある QEMU 1.4 と libvirt 1.0.2 には、"
+"信頼性が向上した新しいライブブロックマイグレーションの実装があります。し"
+"かしながら、このガイドの執筆陣は誰もライブブロックマイグレーションを使用し"
+"たことがありません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:282
+msgid "Choice of File System"
+msgstr "ファイルシステムの選択"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:283
+msgid ""
+"If you want to support shared storage live migration, you'll need to "
+"configure a distributed file system."
+msgstr ""
+"共有ストレージを使ったライブマイグレーションをサポートしたい場合には、分散"
+"ファイルシステムを構成する必要があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:286
+msgid "Possible options include:"
+msgstr "次のような選択肢があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:289
+msgid "NFS (default for Linux)"
+msgstr "NFS (Linux でのデフォルト)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:295
+msgid "MooseFS"
+msgstr "MooseFS"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:298
+msgid "Lustre"
+msgstr "Lustre"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:301
+msgid ""
+"We've seen deployments with all, and recommend you choose the one you are "
+"most familiar with operating."
+msgstr ""
+"我々はこれら全ての実例を見たことがありますが、一番運用方法を知っている"
+"ものを選択することをお薦めします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:308
+msgid "Overcommitting"
+msgstr "オーバーコミット"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:309
+msgid ""
+"OpenStack allows you to overcommit CPU and RAM on compute nodes. This allows "
+"you to increase the number of instances you can have running on your cloud, "
+"at the cost of reducing the performance of the instances. OpenStack Compute "
+"uses the following ratios by default:"
+msgstr ""
+"OpenStack では、コンピュートノードの CPU と RAM をオーバーコミットすることが"
+"できます。これにより、インスタンスの性能が下がるものの、"
+"クラウド上で動作可能なインスタンス数を増やすことができます。 "
+"OpenStack Compute でのデフォルト値は次のようになっています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:316
+msgid "CPU allocation ratio: 16"
+msgstr "CPU 割当比: 16"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:319
+msgid "RAM allocation ratio: 1.5"
+msgstr "RAM 割当比: 1.5"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:322
+msgid ""
+"The default CPU allocation ratio of 16 means that the scheduler allocates up "
+"to 16 virtual cores on a node per physical cores. For example, if a physical "
+"node has 12 cores, and each virtual machine instance uses 4 virtual cores, "
+"the scheduler allocates up to 192 virtual cores to instances (such as, 48 "
+"instances, in the case where each instance has 4 virtual cores)."
+msgstr ""
+"CPU 割当比のデフォルト値 16 は、スケジューラーが1つのノードで物理"
+"コア1つあたり最大16個の仮想コアを割り当てることを意味します。例えば、ある物理"
+"ノードのコア数が12の場合、スケジューラが最大で192個の仮想コアを"
+"インスタンスに割り当てることになります (例えば、各インスタンスの仮"
+"想コアが4個の場合には、48インスタンス割り当てられます)。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:329
+msgid ""
+"Similarly, the default RAM allocation ratio of 1.5 means that the scheduler "
+"allocates instances to a physical node as long as the total amount of RAM "
+"associated with the instances is less than 1.5 times the amount of RAM "
+"available on the physical node."
+msgstr ""
+"同様に、RAM 割当比のデフォルト値 1.5 は、インスタンスに割り当てら"
+"れた RAM の総量がその物理ノードで利用できるメモリ量の1.5倍未満であれば、スケ"
+"ジューラーがその物理ノードにインスタンスを割り当てることを意味します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:334
+msgid ""
+"For example, if a physical node has 48 GB of RAM, the scheduler allocates "
+"instances to that node until the sum of the RAM associated with the "
+"instances reaches 72 GB (such as nine instances, in the case where each "
+"instance has 8 GB of RAM)."
+msgstr ""
+"例えば、物理ノードに 48GB の RAM がある場合、そのノード上のインスタンスに割り"
+"当てられた RAM の合計が 72GB に達するまでは、スケジューラーはそのノードにイン"
+"スタンスを割り振ることになります (例えば、各インスタンスのメモリが 8GB であれ"
+"ば、9 インスタンス割り当てられます)。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:339
+msgid ""
+"You must select the appropriate CPU and RAM allocation ratio for your "
+"particular use case."
+msgstr ""
+"あなた自身のユースケースに合わせて、適切な CPU と RAM の割当比を"
+"選択しなければなりません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:343
+msgid "Logging"
+msgstr "ロギング"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:344
+msgid ""
+"Logging is detailed more fully in <xref linkend=\"logging\"/>. However it is "
+"an important design consideration to take into account before commencing "
+"operations of your cloud."
+msgstr ""
+"ロギングについては <xref linkend=\"logging\"/> で詳しく説明しています。しか"
+"し、ロギングはクラウドの運用を開始前に考慮しておくべき重要な検討事項です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:348
+msgid ""
+"OpenStack produces a great deal of useful logging information, however, in "
+"order for it to be useful for operations purposes you should consider having "
+"a central logging server to send logs to, and a log parsing/analysis system "
+"(such as logstash)."
+msgstr ""
+"OpenStack は非常に多くの有用なログ情報を出力しますが、運用時にログ情報を"
+"有効活用するためには、ログを集積するログサーバーや、(logstash といった) ロ"
+"グ解析/分析システムを用意することを検討すべきでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:355
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:49
+msgid "Networking"
+msgstr "ネットワーク"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:356
+msgid ""
+"Networking in OpenStack is a complex, multi-faceted challenge. See <xref "
+"linkend=\"network_design\"/>."
+msgstr ""
+"OpenStack のネットワークは複雑で、検討すべき点がたくさんあります。 <xref "
+"linkend=\"network_design\"/> を参照して下さい。"
