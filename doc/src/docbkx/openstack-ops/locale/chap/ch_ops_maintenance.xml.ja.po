@@ -1,0 +1,1534 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-21 08:33+0000\n"
+"Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:51
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:58
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:522
+msgid "1"
+msgstr "1"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:65
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:529
+msgid "2"
+msgstr "2"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_scaling.xml:72
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:543
+msgid "4"
+msgstr "4"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:17
+msgid "Maintenance, Failures, and Debugging"
+msgstr "メンテナンス、故障およびデバッグ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:18
+msgid ""
+"Downtime, whether planned or unscheduled, is a certainty when running a "
+"cloud. This chapter aims to provide useful information for dealing "
+"proactively, or reactively with these occurrences."
+msgstr ""
+"停止時間（計画的なものと予定外のものの両方）はクラウドを運用するときに確実"
+"に発生します。本章は、プロアクティブまたはリアクティブに、これらの出来事に対処"
+"するために有用な情報を提供することを目的としています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:24
+msgid "Cloud Controller and Storage Proxy Failures and Maintenance"
+msgstr "クラウドコントローラーとストレージプロキシの故障とメンテナンス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:26
+msgid ""
+"The cloud controller and storage proxy are very similar to each other when "
+"it comes to expected and unexpected downtime. One of each server type "
+"typically runs in the cloud, which makes them very noticeable when they are "
+"not running."
+msgstr ""
+"想定内の場合も想定外の場合も停止時間が発生した場合の挙動が、"
+"クラウドコントローラーとストレージプロキシは互いに似ています。"
+"クラウドコントローラーとストレージプロキシはそれぞれクラウドで一つ実行されるので、"
+"動作していない場合、非常に目立ちます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:31
+msgid ""
+"For the cloud controller, the good news is if your cloud is using the "
+"FlatDHCP multi-host HA network mode, existing instances and volumes continue "
+"to operate while the cloud controller is offline. However for the storage "
+"proxy, no storage traffic is possible until it is back up and running."
+msgstr ""
+"クラウドコントローラーの場合、良いニュースとしては、クラウドが FlatDHCP マルチホスト HA ネットワークモードを使用していれば、既存"
+"のインスタンスとボリュームはクラウドコントローラーがオフラインの間も動作を継"
+"続するという点があります。しかしながら、"
+"ストレージプロキシの場合には、サーバーが元に戻され動作状態になるまで、ストレージとの通"
+"信ができません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:39
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:115
+msgid "Planned Maintenance"
+msgstr "計画メンテナンス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:40
+msgid ""
+"One way to plan for cloud controller or storage proxy maintenance is to "
+"simply do it off-hours, such as at 1 or 2 A.M.. This strategy impacts fewer "
+"users. If your cloud controller or storage proxy is too important to have "
+"unavailable at any point in time, you must look into High Availability "
+"options."
+msgstr ""
+"クラウドコントローラーやストレージプロキシのメンテナンスを計画する一つの方法"
+"は、単に午前 1 時や 2 時のような利用の少ない時間帯に実行することです。この戦略はあまり多"
+"くのユーザーに影響を与えません。クラウドコントローラーやストレージプロキシが、"
+"いかなる時間帯においても、サービスが利用できないことによる影響が大きければ、高可用性オプション"
+"について検討する必要があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:49
+msgid "Rebooting a cloud controller or Storage Proxy"
+msgstr "クラウドコントローラーとストレージプロキシの再起動"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:51
+msgid ""
+"All in all, just issue the \"reboot\" command. The operating system cleanly "
+"shuts services down and then automatically reboots. If you want to be very "
+"thorough, run your backup jobs just before you reboot."
+msgstr ""
+"多くの場合、\"reboot\" コマンドを発行するだけです。オペレーティングシステム"
+"が正常にサービスをシャットダウンし、自動的に再起動します。万全を期した"
+"い場合、再起動する前にバックアップジョブを実行してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:59
+msgid "After a Cloud Controller or Storage Proxy Reboots"
+msgstr "クラウドコントローラーまたはストレージプロキシの再起動後"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:61
+msgid ""
+"After a cloud controller reboots, ensure that all required services were "
+"successfully started:"
+msgstr ""
+"クラウドコントローラーを再起動した後、すべての必要なサービスが正常に起動した"
+"ことを確認します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:68
+msgid "Also check that all services are functioning:"
+msgstr "また、すべてのサービスが正しく機能していることを確認します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:73
+msgid ""
+"For the storage proxy, ensure that the Object Storage service has resumed:"
+msgstr ""
+"ストレージプロキシの場合、Object Storage サービスが再開していること"
+"を確認します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:76
+msgid "Also check that it is functioning:"
+msgstr "また、正しく機能していることを確認します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:81
+msgid "Total Cloud Controller Failure"
+msgstr "全体的なクラウドコントローラーの故障"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:82
+msgid ""
+"Unfortunately, this is a rough situation. The cloud controller is a integral "
+"part of your cloud. If you have only one controller, many services are "
+"missing."
+msgstr ""
+"残念ながら、これはひどい状況です。クラウドコントローラーはクラウドの不可欠"
+"な部分です。コントローラーが一つだけならば、多くのサービスが失われます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:86
+msgid ""
+"To avoid this situation, create a highly available cloud controller cluster. "
+"This is outside the scope of this document, but you can read more in the "
+"draft <link title=\"OpenStack High Availability Guide\" href=\"http://docs."
+"openstack.org/trunk/openstack-ha/content/ch-intro.html\">OpenStack High "
+"Availability Guide</link> (http://docs.openstack.org/trunk/openstack-ha/"
+"content/ch-intro.html)."
+msgstr ""
+"この状況を避けるために、高可用なクラウドコントローラークラスターを作成しま"
+"す。このことは、このドキュメントの範囲外ですが、ドラフト版の <link title=\"OpenStack "
+"High Availability Guide\" href=\"http://docs.openstack.org/trunk/openstack-"
+"ha/content/ch-intro.html\">OpenStack High Availability Guide</link> が http://"
+"docs.openstack.org/trunk/openstack-ha/content/ch-intro.html にあり"
+"ます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:94
+msgid ""
+"The next best way is to use a configuration management tool such as Puppet "
+"to automatically build a cloud controller. This should not take more than 15 "
+"minutes if you have a spare server available. After the controller rebuilds, "
+"restore any backups taken (see the <emphasis role=\"bold\">Backup and "
+"Recovery</emphasis> chapter)."
+msgstr ""
+"次に最も優れている方法は、クラウドコントローラーを自動的に構築するために "
+"Puppet のような構成管理ツールを使用することです。利用可能な予備サーバーがあれ"
+"ば、15 分もかかりません。コントローラーを再構築後、取得したすべてのバックアップ"
+"を復元します (<emphasis role=\"bold\">バックアップとリカバリー</emphasis> "
+"の章を参照してください)。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:101
+msgid ""
+"Also, in practice, sometimes the nova-compute services on the compute nodes "
+"do not reconnect cleanly to rabbitmq hosted on the controller when it comes "
+"back up after a long reboot and a restart on the nova services on the "
+"compute nodes is required."
+msgstr ""
+"実際には、コンピュートノードの nova-compute サービスがときどき、コントロー"
+"ラー上で動作している rabbitmq に正しく再接続されない場合があります。"
+"時間のかかるリブートから戻ってきた場合や、コンピュートノードの"
+"nova サービスを再起動する必要がある場合です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:110
+msgid "Compute Node Failures and Maintenance"
+msgstr "コンピュートノードの故障とメンテナンス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:111
+msgid ""
+"Sometimes a compute node either crashes unexpectedly or requires a reboot "
+"for maintenance reasons."
+msgstr ""
+"コンピュートノードは、予期せずクラッシュしたり、メンテナンスの"
+"ために再起動が必要になったりすることがときどきあります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:116
+msgid ""
+"If you need to reboot a compute node due to planned maintenance (such as a "
+"software or hardware upgrade), first ensure that all hosted instances have "
+"been moved off of the node. If your cloud is utilizing shared storage, use "
+"the <code>nova live-migration</code> command. First, get a list of instances "
+"that need to be moved:"
+msgstr ""
+"(ソフトウェアやハードウェアのアップグレードのように) 計画されたメンテナンスの"
+"ために、コンピュートノードを再起動する必要があれば、まずホストしている全インスタ"
+"ンスがノード外に移動していることを確認します。クラウドが共有ストレージを利用"
+"していれば、<code>nova live-migration</code>  コマンドを使用します。初めに、"
+"移動させる必要があるインスタンスの一覧を取得します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:124
+msgid "Next, migrate them one by one:"
+msgstr "次に、それらを一つずつマイグレーションします"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:126
+msgid ""
+"If you are not using shared storage, you can use the <code>--block-migrate</"
+"code> option:"
+msgstr ""
+"共有ストレージを使用していない場合、<code>--block-migrate</code> オプションを"
+"使用できます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:129
+msgid ""
+"After you have migrated all instances, ensure the <code>nova-compute</code> "
+"service has stopped:"
+msgstr ""
+"すべてのインスタンスをマイグレーションした後、<code>nova-compute</code> サー"
+"ビスが停止していることを確認します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:133
+msgid ""
+"If you use a configuration management system, such as Puppet, that ensures "
+"the <code>nova-compute</code> service is always running, you can temporarily "
+"move the init files:"
+msgstr ""
+"Puppet などの構成管理システムを使って、<code>nova-compute</code> サービスが確実に実行されているようにしている場合"
+"、init ファイルを一時的に移動します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:140
+msgid ""
+"Next, shut your compute node down, perform your maintenance, and turn the "
+"node back on. You can re-enable the <code>nova-compute</code> service by "
+"undoing the previous commands:"
+msgstr ""
+"続けて、コンピュートノードを停止し、メンテナンスを実行し、ノードを元に戻します。"
+"先のコマンドを逆に実行することにより、<code>nova-compute</code> サービスを再"
+"び有効化できます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:146
+msgid "Then start the <code>nova-compute</code> service:"
+msgstr "そして <code>nova-compute</code> サービスを起動します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:149
+msgid ""
+"You can now optionally migrate the instances back to their original compute "
+"node."
+msgstr ""
+"インスタンスを元のコンピュートノードにマイグレーションすること"
+"もできます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:154
+msgid "After a Compute Node Reboots"
+msgstr "コンピュートノードの再起動後"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:155
+msgid ""
+"When you reboot a compute node, first verify that it booted successfully. "
+"This includes ensuring the <code>nova-compute</code> service is running:"
+msgstr ""
+"コンピュートノードを再起動した場合、まず正常に起動したことを確認します。これには "
+"<code>nova-compute</code> サービスが実行していることを確認することが含まれま"
+"す:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:161
+msgid "Also ensure that it has successfully connected to the AMQP server:"
+msgstr "AMQP サーバーに正常に接続できることも確認します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:165
+msgid ""
+"After the compute node is successfully running, you must deal with the "
+"instances that are hosted on that compute node as none of them is running. "
+"Depending on your SLA with your users or customers, you might have to start "
+"each instance and ensure they start correctly."
+msgstr ""
+"コンピュートノードが正常に実行された後、そのコンピュートノードでホストされているインスタンスはどれも動作していないので、その"
+"コンピュートノードにおいてホストされているインスタンスを処理する必要があります。"
+"ユーザーや顧客に対する SLA によっては、各インスタンスを開始し、正常に起動して"
+"いることを確認する必要がある場合もあるでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:174
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:485
+msgid "Instances"
+msgstr "インスタンス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:175
+msgid ""
+"You can create a list of instances that are hosted on the compute node by "
+"performing the following command:"
+msgstr ""
+"以下のコマンドを実行することにより、コンピュートノードにおいてホストされているイ"
+"ンスタンスの一覧を作成できます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:179
+msgid ""
+"After you have the list, you can use the nova command to start each instance:"
+msgstr ""
+"一覧を取得した後、各インスタンスを起動するために nova コマンドを使用できます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:183
+msgid ""
+"Any time an instance shuts down unexpectedly, it might have problems on "
+"boot. For example, the instance might require an <code>fsck</code> on the "
+"root partition. If this happens, the user can use the Dashboard VNC console "
+"to fix this."
+msgstr ""
+"予期せずシャットダウンしたときは、ブートに問題があるかもしれません。たと"
+"えば、インスタンスがルートパーティションにおいて <code>fsck</code> を実行する"
+"必要があるかもしれません。もしこうなっても、これを修復するためにダッシュボー"
+"ド VNC コンソールを使用できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:189
+msgid ""
+"If an instance does not boot, meaning <code>virsh list</code> never shows "
+"the instance as even attempting to boot, do the following on the compute "
+"node:"
+msgstr ""
+"インスタンスがブートしなければ、つまりブートしようとしても <code>virsh list</"
+"code> がインスタンスを表示しなければ、コンピュートノードにおいて以下のとおり実行"
+"します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:194
+msgid ""
+"Try executing the <code>nova reboot</code> command again. You should see an "
+"error message about why the instance was not able to boot"
+msgstr ""
+"再び <code>nova reboot</code> コマンドを実行してみてください。インスタンスが"
+"なぜブートできないかについて、エラーメッセージを確認すべきです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:197
+msgid ""
+"In most cases, the error is due to something in libvirt's XML file (<code>/"
+"etc/libvirt/qemu/instance-xxxxxxxx.xml</code>) that no longer exists. You "
+"can enforce recreation of the XML file as well as rebooting the instance by "
+"running:"
+msgstr ""
+"多くの場合、libvirt の XML ファイル (<code>/etc/"
+"libvirt/qemu/instance-xxxxxxxx.xml</code>) の何かがすでに存在しないことで、エラーが発生する。次のとおり実"
+"行することにより、インスタンスを再起動するのと同時に、強制的に XML ファイルを"
+"再作成できます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:207
+msgid "Inspecting and Recovering Data from Failed Instances"
+msgstr "故障したインスタンスからの検査とデータ復旧"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:209
+msgid ""
+"In some scenarios, instances are running but are inaccessible through SSH "
+"and do not respond to any command. VNC console could be displaying a boot "
+"failure or kernel panic error messages. This could be an indication of a "
+"file system corruption on the VM itself. If you need to recover files or "
+"inspect the content of the instance, qemu-nbd can be used to mount the disk."
+msgstr ""
+"いくつかのシナリオでは、インスタンスが実行中であるにも関わらず、SSH 経由でア"
+"クセスできず、あらゆるコマンドに反応がありません。VNC コンソールがブート失敗"
+"やカーネルパニックのエラーメッセージを表示している可能性があります。これは仮"
+"想マシン自身においてファイルシステム破損の意味する可能性があります。ファイル"
+"を復旧したりインスタンスの中身を調査したりする必要があれば、qemu-nbd を使ってディスクをマウント"
+"できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:218
+msgid ""
+"If you access or view the user's content and data, get their approval first!"
+msgstr ""
+"ユーザーのコンテンツやデータにアクセスしたり表示したりする場合は、まず承認をもらっ"
+"てください!"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:221
+msgid ""
+"To access the instance's disk (/var/lib/nova/instances/instance-xxxxxx/"
+"disk), the following steps must be followed:"
+msgstr ""
+"インスタンスのディスク (/var/lib/nova/instances/instance-xxxxxx/disk) にアク"
+"セスするには、以下の手順に従う必要があります:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:226
+msgid "Suspend the instance using the virsh command"
+msgstr "virsh コマンドを使用してインスタンスをサスペンドします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:230
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:271
+msgid "Connect the qemu-nbd device to the disk"
+msgstr "qemu-nbd デバイスをディスクに接続します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:234
+msgid "Mount the qemu-nbd device"
+msgstr "qemu-nbd デバイスをマウントします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:237
+msgid "Unmount the device after inspecting"
+msgstr "デバイスを調査後、アンマウントします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:240
+msgid "Disconnect the qemu-nbd device"
+msgstr "qemu-nbd デバイスを切断します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:243
+msgid "Resume the instance"
+msgstr "インスタンスを再開します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:246
+msgid ""
+"If you do not follow the steps from 4-6, OpenStack Compute cannot manage the "
+"instance any longer. It fails to respond to any command issued by OpenStack "
+"Compute and it is marked as shutdown."
+msgstr ""
+"手順 4-6 を省略すると、OpenStack Compute がインスタンスを管理できなくなりま"
+"す。OpenStack Compute により発行されるすべてのコマンドに対する応答が失敗し、"
+"シャットダウンしているように見えます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:250
+msgid ""
+"Once you mount the disk file, you should be able access it and treat it as "
+"normal directories with files and a directory structure. However, we do not "
+"recommend that you edit or touch any files because this could change the "
+"acls and make the instance unbootable if it is not already."
+msgstr ""
+"ディスクファイルをマウントすると、それにアクセスでき、ファイルとディレクトリ"
+"構造を持つ通常のディレクトリのように取り扱えます。しかしながら、"
+"どのファイルの編集も操作もしないことをお薦めします。なぜなら、それにより ACL が変更されたり、"
+"起動できるインスタンスが起動できなくなってします場合があるからです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:258
+msgid ""
+"Suspend the instance using the virsh command - taking note of the internal "
+"ID."
+msgstr ""
+"virsh コマンドを使用してインスタンスを一時停止します - 内部 ID を記録します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:282
+msgid "Mount the qemu-nbd device."
+msgstr "qemu-nbd デバイスをマウントします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:283
+msgid ""
+"The qemu-nbd device tries to export the instance disk's different partitions "
+"as separate devices. For example if vda as the disk and vda1 as the root "
+"partition, qemu-nbd exports the device as /dev/nbd0 and /dev/nbd0p1 "
+"respectively."
+msgstr ""
+"qemu-nbd デバイスはインスタンスのディスクの個々のパーティションを別々のデ"
+"バイスとしてエクスポートしようとします。たとえば、ディスクが vda で、ルート"
+"パーティションが vda1 の場合、qemu-nbd はそれぞれ /dev/nbd0 と /dev/"
+"nbd0p1 としてデバイスをエクスポートします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:293
+msgid ""
+"To examine the secondary or ephemeral disk, use an alternate mount point if "
+"you want both primary and secondary drives mounted at the same time."
+msgstr ""
+"セカンダリディスクや一時ディスクを調査する際に、プライマリディスクとセカン"
+"ダリディスクを同時にマウントしたければ、別のマウントポイントを使用してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:324
+msgid ""
+"Once you have completed the inspection, umount the mount point and release "
+"the qemu-nbd device"
+msgstr ""
+"調査を完了すると、マウントポイントをアンマウントし、qemu-nbd デバイスを解放し"
+"ます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:332
+msgid "Resume the instance using virsh"
+msgstr "virsh を使用してインスタンスを再開します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:347
+msgid "Volumes"
+msgstr "ボリューム"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:348
+msgid ""
+"If the affected instances also had attached volumes, first generate a list "
+"of instance and volume UUIDs:"
+msgstr ""
+"影響のあったインスタンスがボリュームを接続していれば、まずインスタンスとボ"
+"リュームの UUID 一覧を生成します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:355
+msgid "You should see a result like the following:"
+msgstr "以下のような結果を確認できます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:362
+msgid "Next, manually detach and reattach the volumes:"
+msgstr "次に、ボリュームを手動で切断し、再接続します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:366
+msgid ""
+"Where X is the proper mount point. Make sure that the instance has "
+"successfully booted and is at a login screen before doing the above."
+msgstr ""
+"ここで、X には適切なマウントポイントを指定します。上記を実行する前に、インスタ"
+"ンスが正常に起動し、ログイン画面になっていることを確認します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:372
+msgid "Total Compute Node Failure"
+msgstr "コンピュートノード全体の故障"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:373
+msgid ""
+"If a compute node fails and won't be fixed for a few hours or ever, you can "
+"relaunch all instances that are hosted on the failed node if you use shared "
+"storage for <code>/var/lib/nova/instances</code>."
+msgstr ""
+"コンピュートノードが故障し、2〜3時間もしくはそれ以上たっても復旧できないと見込まれる場合、<code>/var/lib/nova/"
+"instances</code> に共有ストレージを使用していれば、故障したノードで"
+"動作していたインスタンスをすべて再スタートすることができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:377
+msgid ""
+"To do this, generate a list of instance UUIDs that are hosted on the failed "
+"node by running the following query on the nova database:"
+msgstr ""
+"これを実行するために、nova データベースにおいて以下のクエリーを実行することにより、"
+"故障したノードにおいてホストされているインスタンスの UUID の一覧を生成しま"
+"す:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:381
+msgid ""
+"Next, tell Nova that all instances that used to be hosted on c01.example.com "
+"are now hosted on c02.example.com:"
+msgstr ""
+"次に、c01.example.com においてホストされていたすべてのインスタンスが、今度は "
+"c02.example.com でホストされることを Nova に教えます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:385
+msgid ""
+"After that, use the nova command to reboot all instances that were on c01."
+"example.com while regenerating their XML files at the same time:"
+msgstr ""
+"その後、nova コマンドを使って、c01.example.com にあったすべてのインスタンスを再起動します。"
+"起動する際にインスタンスの XML ファイルを再生成します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:389
+msgid ""
+"Finally, re-attach volumes using the same method described in <emphasis role="
+"\"bold\">After a compute node Reboots</emphasis>."
+msgstr ""
+"最後に、<emphasis role=\"bold\">コンピュートノードの再起動後</emphasis> に説明さ"
+"れているのと同じ方法を用いて、ボリュームを再接続します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:395
+msgid "/var/lib/nova/instances"
+msgstr "/var/lib/nova/instances"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:396
+msgid ""
+"It's worth mentioning this directory in the context of failed compute nodes. "
+"This directory contains the libvirt KVM file-based disk images for the "
+"instances that are hosted on that compute node. If you are not running your "
+"cloud in a shared storage environment, this directory is unique across all "
+"compute nodes."
+msgstr ""
+"コンピュートノードの故障の話題に関連して、このディレクトリについては説明しておく価値が"
+"あるでしょう。このディレクトリには、コンピュートノードにホストされているインスタンス用"
+"の libvirt KVM のファイル形式のディスクイメージが置かれます。共有ストレージ"
+"環境でクラウドを実行していなければ、このディレクトリはコンピュートノード全体"
+"で一つしかありません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:403
+msgid "<code>/var/lib/nova/instances</code> contains two types of directories."
+msgstr ""
+"<code>/var/lib/nova/instances</code> には 2 種類のディレクトリがあります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:406
+msgid ""
+"The first is the <code>_base</code> directory. This contains all of the "
+"cached base images from glance for each unique image that has been launched "
+"on that compute node. Files ending in <code>_20</code> (or a different "
+"number) are the ephemeral base images."
+msgstr ""
+"一つ目は <code>_base</code> ディレクトリです。ここには、そのコンピュートノードで"
+"起動されたそれぞれのイメージに関して、glance から取得したすべてのベースイメージ"
+"のキャッシュが置かれます。<code>_20</code> (または他の番号) で終わるファイル"
+"は一時ディスクのベースイメージです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:412
+msgid ""
+"The other directories are titled <code>instance-xxxxxxxx</code>. These "
+"directories correspond to instances running on that compute node. The files "
+"inside are related to one of the files in the <code>_base</code> directory. "
+"They're essentially differential-based files containing only the changes "
+"made from the original <code>_base</code> directory."
+msgstr ""
+"もう一つのディレクトリは <code>instance-xxxxxxxx</code> という名前です。これらの"
+"ディレクトリはコンピュートノードにおいて実行中のインスタンスと対応します。中"
+"にあるファイルは <code>_base</code> ディレクトリにあるファイルのどれかと関連"
+"があります。これらは基本的に、元々の <code>_base</code> ディレクトリからの変更点"
+"のみ含む、差分ベースのファイルです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:420
+msgid ""
+"All files and directories in <code>/var/lib/nova/instances</code> are "
+"uniquely named. The files in _base are uniquely titled for the glance image "
+"that they are based on and the directory names <code>instance-xxxxxxxx</"
+"code> are uniquely titled for that particular instance. For example, if you "
+"copy all data from <code>/var/lib/nova/instances</code> on one compute node "
+"to another, you do not overwrite any files or cause any damage to images "
+"that have the same unique name, because they are essentially the same file."
+msgstr ""
+"<code>/var/lib/nova/instances</code> にあるすべてのファイルとディレクトリは一"
+"意に名前が付けられています。_base にあるファイルは元となった glance イメー"
+"ジに対応する一意に名前が付けられています。また、<code>instance-xxxxxxxx</code> "
+"という名前が付けられたディレクトリは特定のインスタンスに対して一意にタイトル"
+"が付けられています。たとえば、あるコンピュートノードにある <code>/var/lib/nova/"
+"instances</code> のすべてのデータを他のノードにコピーしたとしても、"
+"ファイルを上書きすることはありませんし、また同じ一意な名前を持つイメージにダメージを与えることもありません。"
+"同じ一意な名前を持つものは本質的に同じファイルだからです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:432
+msgid ""
+"Although this method is not documented or supported, you can use it when "
+"your compute node is permanently offline but you have instances locally "
+"stored on it."
+msgstr ""
+"この方法はドキュメントに書かれておらず、サポートされていない方法ですが、"
+"コンピュートノードが完全にオフラインになってしまったが、インスタンスがローカルに保存されている"
+"ときに、この方法を使用できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:440
+msgid "Storage Node Failures and Maintenance"
+msgstr "ストレージノードの故障とメンテナンス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:441
+msgid ""
+"Due to the Object Storage's high redundancy, dealing with object storage "
+"node issues is a lot easier than dealing with compute node issues."
+msgstr ""
+"オブジェクトストレージの高い冗長性のため、オブジェクトストレージのノードに関"
+"する問題を処理することは、コンピュートノードに関する問題を処理するよりも簡単で"
+"す。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:446
+msgid "Rebooting a Storage Node"
+msgstr "ストレージノードの再起動"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:447
+msgid ""
+"If a storage node requires a reboot, simply reboot it. Requests for data "
+"hosted on that node are redirected to other copies while the server is "
+"rebooting."
+msgstr ""
+"ストレージノードの再起動が必要ならば、単に再起動します。そのノードにホストさ"
+"れているデータに対する要求は、サーバーが再起動している間、他のコピーに転送さ"
+"れます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:454
+msgid "Shutting Down a Storage Node"
+msgstr "ストレージノードのシャットダウン"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:455
+msgid ""
+"If you need to shut down a storage node for an extended period of time (1+ "
+"days), consider removing the node from the storage ring. For example:"
+msgstr ""
+"ストレージノードを少し長い間 (1 日以上) シャットダウンする必要があれば、ノー"
+"ドをストレージリングから削除することを検討します。例:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:464
+msgid "Next, redistribute the ring files to the other nodes:"
+msgstr "次に、ring ファイルを他のノードに再配布します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:470
+msgid ""
+"These actions effectively take the storage node out of the storage cluster."
+msgstr ""
+"これらの操作はストレージノードをストレージクラスターから効率的に外せます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:472
+msgid ""
+"When the node is able to rejoin the cluster, just add it back to the ring. "
+"The exact syntax to add a node to your Swift cluster using <code>swift-ring-"
+"builder</code> heavily depends on the original options used when you "
+"originally created your cluster. Please refer back to those commands."
+msgstr ""
+"ノードがクラスターに参加できるようになったら、ただリングに再度追加するだけです。<code>swift-ring-"
+"builder</code> を使用して Swift クラスターにノードを追加するための構文は、"
+"元々クラスターを作成したときに使用した元々のオプションに強く依存します。作成時に使用したコマンドをもう一度見てください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:482
+msgid "Replacing a Swift Disk"
+msgstr "Swift ディスクの交換"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:483
+msgid ""
+"If a hard drive fails in a Object Storage node, replacing it is relatively "
+"easy. This assumes that your Object Storage environment is configured "
+"correctly where the data that is stored on the failed drive is also "
+"replicated to other drives in the Object Storage environment."
+msgstr ""
+"Object Storage ノードのハードディスクが故障した場合、その交換は比較的簡単で"
+"す。Object Storage 環境が正しく設定され、"
+"故障したディスクに保存されているデータが Object Storage 環"
+"境内の他のディスクにも複製されていることを前提にしています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:489
+msgid "This example assumes that <code>/dev/sdb</code> has failed."
+msgstr "この例では、<code>/dev/sdb</code> が故障したと仮定します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:491
+msgid "First, unmount the disk:"
+msgstr "まず、ディスクをアンマウントします:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:493
+msgid ""
+"Next, physically remove the disk from the server and replace it with a "
+"working disk."
+msgstr ""
+"次に、ディスクを物理的にサーバーから取り外し、正常なディスクと入れ替えます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:495
+msgid "Ensure that the operating system has recognized the new disk:"
+msgstr ""
+"オペレーティングシステムが新しいディスクを認識していることを確認します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:498
+msgid "You should see a message about /dev/sdb."
+msgstr "/dev/sdb に関するメッセージを確認したほうがいいです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:499
+msgid ""
+"Because it is recommended to not use partitions on a swift disk, simply "
+"format the disk as a whole:"
+msgstr ""
+"Swift ディスクではパーティションを使用しないことが推奨されるので、単にディスク"
+"全体をフォーマットします:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:502
+msgid "Finally, mount the disk:"
+msgstr "最後に、ディスクをマウントします:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:504
+msgid ""
+"Swift should notice the new disk and that no data exists. It then begins "
+"replicating the data to the disk from the other existing replicas."
+msgstr ""
+"Swift は新しいディスクを認識します。また、データが存在しないことを認識しま"
+"す。そうすると、他の既存の複製からディスクにデータを複製しはじめます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:511
+msgid "Handling a Complete Failure"
+msgstr "完全な故障の対処"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:512
+msgid ""
+"A common way of dealing with the recovery from a full system failure, such "
+"as a power outage of a data center is to assign each service a priority, and "
+"restore in order."
+msgstr ""
+"データセンターの電力消失のような、完全なシステム故障から復旧する一般的な方法"
+"は、各サービスに優先度を付け、順番に復旧することです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:517
+msgid "Example Service Restoration Priority List"
+msgstr "サービス復旧優先度一覧の例"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:524
+msgid "Internal network connectivity"
+msgstr "内部ネットワーク接続性"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:531
+msgid "Backing storage services"
+msgstr "バックエンドのストレージサービス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:536
+msgid "3"
+msgstr "3"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:538
+msgid "Public network connectivity for user Virtual Machines"
+msgstr "ユーザーの仮想マシンに対するパブリックネットワーク接続性"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:545
+msgid "Nova-compute, nova-network, cinder hosts"
+msgstr "nova-compute, nova-network, cinder ホスト"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:550
+msgid "5"
+msgstr "5"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:552
+msgid "User virtual machines"
+msgstr "ユーザーの仮想マシン"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:556
+msgid "10"
+msgstr "10"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:558
+msgid "Message Queue and Database services"
+msgstr "メッセージキューとデータベースのサービス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:563
+msgid "15"
+msgstr "15"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:565
+msgid "Keystone services"
+msgstr "Keystone サービス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:569
+msgid "20"
+msgstr "20"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:571
+msgid "cinder-scheduler"
+msgstr "cinder-scheduler"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:575
+msgid "21"
+msgstr "21"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:577
+msgid "Image Catalogue and Delivery services"
+msgstr "イメージカタログとイメージ配信のサービス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:582
+msgid "22"
+msgstr "22"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:584
+msgid "nova-scheduler services"
+msgstr "nova-scheduler サービス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:588
+msgid "98"
+msgstr "98"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:590
+msgid "Cinder-api"
+msgstr "cinder-api"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:594
+msgid "99"
+msgstr "99"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:596
+msgid "Nova-api services"
+msgstr "nova-api サービス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:600
+msgid "100"
+msgstr "100"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:602
+msgid "Dashboard node"
+msgstr "ダッシュボードサービス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:606
+msgid ""
+"Use this example priority list to ensure that user affected services are "
+"restored as soon as possible, but not before a stable environment is in "
+"place. Of course, despite being listed as a single line item, each step "
+"requires significant work. For example, just after starting the database, "
+"you should check its integrity or, after starting the Nova services, you "
+"should verify that the hypervisor matches the database and fix any "
+"mismatches."
+msgstr ""
+"この例にある優先度一覧を使用すると、きちんと安定した状態になる前であっても、"
+"できる限り早くユーザーに影響するサービスを復旧させることができます。"
+"もちろん、1 行の項目として一覧化されていますが、各ステップは多大な作業が必要"
+"です。たとえば、データベースを開始した後、その完全性を確認すべきです。また"
+"、Nova サービスを開始した後、ハイパーバイザーがデータベースに一致しているかを確認し、"
+"不一致があれば修正すべきです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:618
+msgid "Configuration Management"
+msgstr "構成管理"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:619
+msgid ""
+"Maintaining an OpenStack cloud requires that you manage multiple physical "
+"servers, and this number might grow over time. Because managing nodes "
+"manually is error-prone, we strongly recommend that you use a configuration "
+"management tool. These tools automate the process of ensuring that all of "
+"your nodes are configured properly and encourage you to maintain your "
+"configuration information (such as packages and configuration options) in a "
+"version controlled repository."
+msgstr ""
+"OpenStack クラウドをメンテナンスするには、複数の物理サーバーを管理す"
+"ることが必要です。そして、この数は日々増えていきます。ノードを手動で管理する"
+"ことはエラーを起こしやすいので、構成管理ツールを使用することを強く推奨しま"
+"す。これらのツールはすべてのノードが適切に設定されていることを保証するプロ"
+"セスを自動化します。また、これらを使うことで、(パッケージや"
+"設定オプションといった) 構成情報のバージョン管理されたリポジトリでの管理が行いやすくなります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:628
+msgid ""
+"Several configuration management tools are available, and this guide does "
+"not recommend a specific one. The two most popular ones in the OpenStack "
+"community are <link href=\"https://puppetlabs.com/\">Puppet</link> (https://"
+"puppetlabs.com/) with available <link title=\"Optimization Overview\" href="
+"\"http://github.com/puppetlabs/puppetlabs-openstack\">OpenStack Puppet "
+"modules</link> (http://github.com/puppetlabs/puppetlabs-openstack) and <link "
+"href=\"http://www.opscode.com/chef/\">Chef</link> (http://opscode.com/chef) "
+"with available <link href=\"https://github.com/opscode/openstack-chef-repo"
+"\">OpenStack Chef recipes</link> (https://github.com/opscode/openstack-chef-"
+"repo). Other newer configuration tools include <link href=\"https://juju."
+"ubuntu.com/\">Juju</link> (https://juju.ubuntu.com/) <link href=\"http://"
+"ansible.cc\">Ansible</link> (http://ansible.cc) and <link href=\"http://"
+"saltstack.com/\">Salt</link> (http://saltstack.com), and more mature "
+"configuration management tools include <link href=\"http://cfengine.com/"
+"\">CFEngine</link> (http://cfengine.com) and <link href=\"http://bcfg2.org/"
+"\">Bcfg2</link> (http://bcfg2.org)."
+msgstr ""
+"いくつかの構成管理ツールがあります。このガイドでは特定のものを推奨しませ"
+"ん。OpenStack コミュニティで人気があるものは <link href=\"https://puppetlabs.com/\">Puppet</link> (https://puppetlabs.com/) と "
+"<link href=\"http://www.opscode.com/chef/\">Chef</link> (http://opscode.com/chef) の 2 つで、"
+"OpenStack 用の設定集がそれぞれ <link title="
+"\"Optimization Overview\" href=\"http://github.com/puppetlabs/puppetlabs-"
+"openstack\">OpenStack Puppet modules</link> (http://github.com/puppetlabs/"
+"puppetlabs-openstack) と <link href=\"https://github."
+"com/opscode/openstack-chef-repo\">OpenStack Chef recipes</link> (https://"
+"github.com/opscode/openstack-chef-repo) にあります。比較的新"
+"しい他のツールとしては、<link href=\"https://juju.ubuntu.com/\">Juju</link> (https://"
+"juju.ubuntu.com/)、<link href=\"http://ansible.cc\">Ansible</link> (http://"
+"ansible.cc) や <link href=\"http://saltstack.com/\">Salt</link> (http://"
+"saltstack.com) があります。もう少し成熟したツールとしては <link href=\"http://"
+"cfengine.com/\">CFEngine</link> (http://cfengine.com) や <link href=\"http://"
+"bcfg2.org/\">Bcfg2</link> (http://bcfg2.org) があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:658
+msgid "Working with Hardware"
+msgstr "ハードウェアの取り扱い"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:659
+msgid ""
+"Similar to your initial deployment, you should ensure all hardware is "
+"appropriately burned in before adding it to production. Run software that "
+"uses the hardware to its limits - maxing out RAM, CPU, disk and network. "
+"Many options are available, and normally double as benchmark software so you "
+"also get a good idea of the performance of your system."
+msgstr ""
+"初期導入時と同じように、本番環境に追加する前に、すべてのハードウェアについて適切な"
+"通電テストを行うべきでしょう。ハードウェアを限界まで使用するソフト"
+"ウェアを実行します。RAM、CPU、ディスク、ネットワークを限界まで使用します。"
+"多くのオプションが利用可能であり、通常はベンチマークソフトウェアとの役割も果たします。"
+"そのため、システムのパフォーマンスに関する良いアイディアを得ることもできます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:668
+msgid "Adding a Compute Node"
+msgstr "コンピュートノードの追加"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:669
+msgid ""
+"If you find that you have reached or are reaching the capacity limit of your "
+"computing resources, you should plan to add additional compute nodes. Adding "
+"more nodes is quite easy. The process for adding nodes is the same as when "
+"the initial compute nodes were deployed to your cloud: use an automated "
+"deployment system to bootstrap the bare-metal server with the operating "
+"system and then have a configuration management system install and configure "
+"the OpenStack Compute service. Once the Compute service has been installed "
+"and configured in the same way as the other compute nodes, it automatically "
+"attaches itself to the cloud. The cloud controller notices the new node(s) "
+"and begin scheduling instances to launch there."
+msgstr ""
+"コンピューティングリソースのキャパシティ限界に達した、または達しそうとわかれ"
+"ば、さらなるコンピュートノードの追加を計画すべきです。さらなるノードを追加するこ"
+"とは簡単です。ノードを追加する手順は、最初にコンピュートノードをクラウドに導"
+"入したときと同じです。自動配備システムを使ってベアメタルサーバーにオペレーティングシステムの"
+"インストールと起動を行い、次に構成管理システムにより"
+"OpenStack Compute サービスのインストールと設定を行います。"
+"他のコンピュートノードと同じ方法で Compute サービスのインストールと設定が終わると、自動的にクラウ"
+"ドに接続されます。クラウドコントローラーが新しいノードを検知し、そこにインス"
+"タンスを起動するようスケジュールし始めます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:683
+msgid ""
+"If your OpenStack Block Storage nodes are separate from your compute nodes, "
+"the same procedure still applies as the same queuing and polling system is "
+"used in both services."
+msgstr ""
+"OpenStack ブロックストレージノードがコンピュートノードから分離いる場合、"
+"同じキュー管理とポーリングのシステムが両方のサービスで使用されるので、"
+"同じ手順が適用できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:687
+msgid ""
+"We recommend that you use the same hardware for new compute and block "
+"storage nodes. At the very least, ensure that the CPUs are similar in the "
+"compute nodes to not break live migration."
+msgstr ""
+"新しいコンピュートノードとブロックストレージノードには、同じハードウェアを使"
+"用することを推奨します。最低限、ライブマイグレーションが失敗しないように、"
+"コンピュートノードでは CPU は同様のものにしてください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:694
+msgid "Adding an Object Storage Node"
+msgstr "オブジェクトストレージノードの追加"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:695
+msgid ""
+"Adding a new object storage node is different than adding compute or block "
+"storage nodes. You still want to initially configure the server by using "
+"your automated deployment and configuration management systems. After that "
+"is done, you need to add the local disks of the object storage node into the "
+"object storage ring. The exact command to do this is the same command that "
+"was used to add the initial disks to the ring. Simply re-run this command on "
+"the object storage proxy server for all disks on the new object storage "
+"node. Once this has been done, rebalance the ring and copy the resulting "
+"ring files to the other storage nodes."
+msgstr ""
+"新しいオブジェクトストレージノードの追加は、コンピュートノードやブロック"
+"ストレージノードの追加とは異なります。サーバーの設定は、これまで通り自動配備システムと構成管理"
+"システムを使って行えます。完了"
+"した後、オブジェクトストレージノードのローカルディスクをオブジェクトストレー"
+"ジリングに追加する必要があります。これを実行するコマンドは、最初にディス"
+"クをリングに追加するのに使用したコマンドと全く同じです。オブジェクトストレージプロキシサーバーにおいて、"
+"このコマンドを、新しいオブジェクトストレージノードにあるすべてのディスクに対して、"
+"再実行するだけです。これが終わったら、リングの"
+"再バランスを行い、更新されたリングファイルを他のストレージノードにコピーします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:709
+msgid ""
+"If your new object storage node has a different number of disks than the "
+"original nodes have, the command to add the new node is different than the "
+"original commands. These parameters vary from environment to environment."
+msgstr ""
+"新しいオブジェクトストレージノードのディスク数が元々のノードのディスク数と異なる"
+"場合には、新しいノードを追加するコマンドが元々のコマンドと異なります。こ"
+"れらのパラメーターは環境により異なります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:718
+msgid "Replacing Components"
+msgstr "コンポーネントの交換"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:719
+msgid ""
+"Failures of hardware are common in large scale deployments such as an "
+"infrastructure cloud. Consider your processes and balance time saving "
+"against availability. For example, an Object Storage cluster can easily live "
+"with dead disks in it for some period of time if it has sufficient capacity. "
+"Or, if your compute installation is not full you could consider live "
+"migrating instances off a host with a RAM failure until you have time to "
+"deal with the problem."
+msgstr ""
+"クラウドインフラなどの大規模環境では、ハードウェアの故障はよくあること"
+"です。作業内容を考慮し、可用性と時間の節約のバランスを取ります。"
+"たとえば、オブジェクトストレージクラスターは、十分な容量がある場合には、あ"
+"る程度の期間は死んだディスクがあっても問題なく動作します。また、(クラウド内の) コンピュート"
+"ノードに空きがある場合には、問題に対処する時間が取れるまで、ライブマイグレーションで RAM が故障"
+"したホストから他のホストへインスタンスを移動させることも考慮すると"
+"よいでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:732
+msgid "Databases"
+msgstr "データベース"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:733
+msgid ""
+"Almost all OpenStack components have an underlying database to store "
+"persistent information. Usually this database is MySQL. Normal MySQL "
+"administration is applicable to these databases. OpenStack does not "
+"configure the databases out of the ordinary. Basic administration includes "
+"performance tweaking, high availability, backup, recovery, and repairing. "
+"For more information, see a standard MySQL administration guide."
+msgstr ""
+"ほとんどすべての OpenStack コンポーネントは、永続的な情報を保存するために"
+"内部でデータベースを使用しています。このデータベースは通常 MySQL です。通常の "
+"MySQL の管理方法がこれらのデータベースに適用できます。OpenStack は特別な方法でデータベース"
+"を設定しているわけではありません。基本的な管理として、パフォーマンス調整、高可用"
+"性、バックアップ、リカバリーおよび修理などがあります。さらなる情報は標準の "
+"MySQL 管理ガイドを参照してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:742
+msgid ""
+"You can perform a couple tricks with the database to either more quickly "
+"retrieve information or fix a data inconsistency error. For example, an "
+"instance was terminated but the status was not updated in the database. "
+"These tricks are discussed throughout this book."
+msgstr ""
+"より迅速に情報を取得したり、データ不整合のエラーを修正したりするために、デー"
+"タベースでいくつかの小技を実行できます。たとえば、インスタンスが終了していた"
+"が、データベースの状態が更新されていなかった、という状況です。こうした小技がこのドキュメ"
+"ント全体を通して議論されています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:749
+msgid "Database Connectivity"
+msgstr "データベース接続性"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:750
+msgid ""
+"Review the components configuration file to see how each OpenStack component "
+"accesses its corresponding database. Look for either <code>sql_connection</"
+"code> or simply <code>connection</code>:"
+msgstr ""
+"コンポーネントの設定ファイルを確認して、それぞれの OpenStack コンポーネントが対応するデータベースにどのようにアクセス"
+"するかを把握ください。"
+"<code>sql_connection</code> またはただの <code>connection</code> を探します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:761
+msgid "The connection strings take this format:"
+msgstr "connection 文字列は以下の形式をとります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:766
+msgid "Performance and Optimizing"
+msgstr "パフォーマンスと最適化"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:767
+msgid ""
+"As your cloud grows, MySQL is utilized more and more. If you suspect that "
+"MySQL might be becoming a bottleneck, you should start researching MySQL "
+"optimization. The MySQL manual has an entire section dedicated to this topic "
+"<link href=\"http://dev.mysql.com/doc/refman/5.5/en/optimize-overview.html"
+"\">Optimization Overview</link> (http://dev.mysql.com/doc/refman/5.5/en/"
+"optimize-overview.html)."
+msgstr ""
+"クラウドが大きくなるにつれて、MySQL がさらに使用されてきます。MySQL がボトル"
+"ネックになってきたことが疑われる場合、MySQL 最適化の調査から始めるとよいでしょう。"
+"MySQL のマニュアルでは、<link href=\"http://dev.mysql.com/doc/"
+"refman/5.5/en/optimize-overview.html\">Optimization Overview</link> (http://"
+"dev.mysql.com/doc/refman/5.5/en/optimize-overview.html) というセクションがあり、"
+"一つのセクション全部をあててこの話題を扱っています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:779
+msgid "HDWMY"
+msgstr "HDWMY"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:780
+msgid ""
+"Here's a quick list of various to-do items each hour, day, week, month, and "
+"year. Please note these tasks are neither required nor definitive, but "
+"helpful ideas:"
+msgstr ""
+"これらは、毎時間、日、週、月および年に実行する To Do 項目の簡単な一覧です。これ"
+"らのタスクは必要なものでも、絶対的なものでもありませんが、役に立つ"
+"ものばかりです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:785
+msgid "Hourly"
+msgstr "毎時"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:788
+msgid "Check your monitoring system for alerts and act on them."
+msgstr "監視システムのアラートを確認し、それらに対処します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:792
+msgid "Check your ticket queue for new tickets."
+msgstr "チケットキューの新しいチケットを確認します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:799
+msgid "Daily"
+msgstr "日次"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:802
+msgid "Check for instances in a failed or weird state and investigate why."
+msgstr "故障または異常になっているインスタンスを確認し、理由を調査します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:806
+msgid "Check for security patches and apply them as needed."
+msgstr "セキュリティパッチを確認し、必要に応じて適用します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:813
+msgid "Weekly"
+msgstr "週次"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:816
+msgid "Check cloud usage: <placeholder-1/>"
+msgstr "クラウドの使用量を確認します: <placeholder-1/>"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:818
+msgid "User quotas"
+msgstr "ユーザークォータ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:821
+msgid "Disk space"
+msgstr "ディスク領域"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:824
+msgid "Image usage"
+msgstr "イメージ使用量"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:827
+msgid "Large instances"
+msgstr "大きなインスタンス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:830
+msgid "Network usage (bandwidth and IP usage)"
+msgstr "ネットワーク使用量 (帯域および IP 使用量)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:836
+msgid "Verify your alert mechanisms are still working."
+msgstr "アラート機能が動作していることを確認します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:843
+msgid "Monthly"
+msgstr "月次"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:846
+msgid "Check usage and trends over the past month."
+msgstr "この 1 か月における使用量および傾向を確認します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:850
+msgid "Check for user accounts that should be removed."
+msgstr "削除すべきユーザーアカウントを確認します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:854
+msgid "Check for operator accounts that should be removed."
+msgstr "削除すべきオペレーターアカウントを確認します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:861
+msgid "Quarterly"
+msgstr "四半期ごと"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:864
+msgid "Review usage and trends over the past quarter."
+msgstr "この四半期における使用量および傾向を確認します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:868
+msgid "Prepare any quarterly reports on usage and statistics."
+msgstr "使用量と統計に関する四半期レポートを準備します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:872
+msgid "Review and plan any necessary cloud additions."
+msgstr "クラウドの追加の必要性を検討し、計画を立てます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:876
+msgid "Review and plan any major OpenStack upgrades."
+msgstr "OpenStack のメジャーアップグレードの内容を確認し、その計画を立てます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:883
+msgid "Semi-Annually"
+msgstr "半年ごと"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:886
+msgid "Upgrade OpenStack."
+msgstr "OpenStack をアップグレードします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:889
+msgid ""
+"Clean up after OpenStack upgrade (any unused or new services to be aware of?)"
+msgstr ""
+"OpenStack のアップグレード後に後始末を行います (未使用または新しいサービ"
+"スを把握していますか?)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:897
+msgid "Determining which Component Is Broken"
+msgstr "故障しているコンポーネントの特定"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:898
+msgid ""
+"OpenStack's collection of different components interact with each other "
+"strongly. For example, uploading an image requires interaction from "
+"<code>nova-api</code>, <code>glance-api</code>, <code>glance-registry</"
+"code>, Keystone, and potentially <code>swift-proxy</code>. As a result, it "
+"is sometimes difficult to determine exactly where problems lie. Assisting in "
+"this is the purpose of this section."
+msgstr ""
+"OpenStack は、異なるコンポーネント同士が互いに強く連携して動作していま"
+"す。たとえば、イメージのアップロードでは、<code>nova-api</code>, "
+"<code>glance-api</code>, <code>glance-registry</code>, Keystone が連携する必要があります。"
+" <code>swift-proxy</code> も関係する場合があります。その結果、"
+"時として問題が発生している箇所を正確に特定することが難しくなります。これを支援"
+"することがこのセクションの目的です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:908
+msgid "Tailing Logs"
+msgstr "最新ログの確認"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:909
+msgid ""
+"The first place to look is the log file related to the command you are "
+"trying to run. For example, if <code>nova list</code> is failing, try "
+"tailing a Nova log file and running the command again:"
+msgstr ""
+"最初に確認する場所は、実行しようとしているコマンドに関連するログファイルで"
+"す。たとえば、<code>nova list</code> が失敗していれば、Nova ログファイルを "
+"tail 表示しながら、次のコマンドを再実行してください:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:913
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:925
+msgid "Terminal 1:"
+msgstr "端末 1:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:915
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:927
+msgid "Terminal 2:"
+msgstr "端末 2:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:917
+msgid ""
+"Look for any errors or traces in the log file. For more information, see the "
+"chapter on <emphasis role=\"bold\">Logging and Monitoring</emphasis>."
+msgstr ""
+"何らかのエラーまたはトレースをログファイルで探します。詳細は <emphasis role="
+"\"bold\">ロギングとモニタリング</emphasis> の章を参照してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:921
+msgid ""
+"If the error indicates that the problem is with another component, switch to "
+"tailing that component's log file. For example, if nova cannot access "
+"glance, look at the glance-api log:"
+msgstr ""
+"エラーから問題が他のコンポーネントにあることが分かる場合には、そのコンポーネントの"
+"ログファイルに表示を切り替えます。nova が glance にアクセスできなければ、"
+"glance-api ログを確認します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:929
+msgid "Wash, rinse, repeat until you find the core cause of the problem."
+msgstr "問題の根本となる原因を見つけるまで、洗い出し、精査し、繰り返します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:935
+msgid "Running Daemons on the CLI"
+msgstr "コマンドラインでのデーモンの実行"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:936
+msgid ""
+"Unfortunately, sometimes the error is not apparent from the log files. In "
+"this case, switch tactics and use a different command, maybe run the service "
+"directly on the command line. For example, if the <code>glance-api</code> "
+"service refuses to start and stay running, try launching the daemon from the "
+"command line:"
+msgstr ""
+"残念ながら、ときどきエラーがログファイルに表れない場合があります。このような場合、作戦を"
+"変更し、違うコマンドを使用します。おそらくコマンドラインにおいて直接サービス"
+"を実行することです。たとえば、<code>glance-api</code> サービスが起動しなかったり、実"
+"行状態にとどまらない場合は、コマンドラインからデーモンを起動してみ"
+"ます:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:944
+msgid "This might print the error and cause of the problem.<placeholder-1/>"
+msgstr ""
+"これにより、エラーと問題の原因が表示されるかもしれません。 <placeholder-1/>"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:945
+msgid ""
+"The <literal>-H</literal> flag is required when running the daemons with "
+"sudo because some daemons will write files relative to the user's home "
+"directory, and this write may fail if <literal>-H</literal> is left off."
+msgstr ""
+"sudo を用いてデーモンを実行するとき、<literal>-H</literal> フラグが必要です。"
+"いくつかのデーモンは、ユーザーのホームディレクトリーからの相対パスのファイルに書き込"
+"みを行うため、<literal>-H</literal> がないと、この書き込みが失敗してしまいます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:954
+msgid "Example of Complexity"
+msgstr "複雑な例"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:955
+msgid ""
+"One morning, a compute node failed to run any instances. The log files were "
+"a bit vague, claiming that a certain instance was unable to be started. This "
+"ended up being a red herring because the instance was simply the first "
+"instance in alphabetical order, so it was the first instance that nova-"
+"compute would touch."
+msgstr ""
+"ある朝、あるノードでインスタンスの実行がすべて失敗するようになりました。ログファ"
+"イルがすこしあいまいでした。特定のインスタンスが起動できなかったことを示して"
+"いました。これは最終的に偽の手掛かりであることがわかりました。単にそのインスタンスがアルファベット順で最初のインスタンスだったので、"
+"nova-compute が最初に操作したのがそのインスタンスだったというだけで"
+"した。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:961
+msgid ""
+"Further troubleshooting showed that libvirt was not running at all. This "
+"made more sense. If libvirt wasn't running, then no instance could be "
+"virtualized through KVM. Upon trying to start libvirt, it would silently die "
+"immediately. The libvirt logs did not explain why."
+msgstr ""
+"さらなるトラブルシューティングにより、libvirt がまったく動作していないことが"
+"わかりました。これは大きな手がかりです。libvirt が動作していないと、KVM によるインスタ"
+"ンスの仮想化ができません。libvirt を開始させようとしても、libvirt は何も"
+"表示せずすぐに停止しました。libvirt のログでは理由がわかりませんでした。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:967
+msgid ""
+"Next, the <code>libvirtd</code> daemon was run on the command line. Finally "
+"a helpful error message: it could not connect to d-bus. As ridiculous as it "
+"sounds, libvirt, and thus <code>nova-compute</code>, relies on d-bus and "
+"somehow d-bus crashed. Simply starting d-bus set the entire chain back on "
+"track and soon everything was back up and running."
+msgstr ""
+"次に、<code>libvirtd</code> デーモンをコマンドラインにおいて実行しました。最"
+"終的に次のような役に立つエラーメッセージが得られました。d-bus に接続できませんでした。このため、"
+"滑稽に聞こえるかもしれませんが、libvirt 、その結果として <code>nova-compute</code> も D-"
+"Bus に依存していて、どういう訳か D-Bus がクラッシュしました。単に D-Bus を"
+"開始するだけで、一連のプログラムがうまく動くようになり、すぐに全部が元に戻り"
+"動作状態になりました。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:977
+msgid "Upgrades"
+msgstr "アップグレード"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:978
+msgid ""
+"With the exception of Object Storage, an upgrade from one version of "
+"OpenStack to another is a great deal of work."
+msgstr ""
+"Object Storage 以外では、OpenStack をあるバージョンから別のバージョンへ"
+"アップグレードするには、非常に労力を伴います。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:981
+msgid "The upgrade process generally follows these steps:"
+msgstr "一般的に、アップグレード作業は以下の手順で行います:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:985
+msgid "Read the release notes and documentation."
+msgstr "リリースノートとドキュメントを読みます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:989
+msgid "Find incompatibilities between different versions."
+msgstr "異なるバージョン間の非互換性を確認します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:993
+msgid "Plan an upgrade schedule and complete it in order on a test cluster."
+msgstr ""
+"アップグレードスケジュールの計画を立て、テストクラスターで手順どおりにアップグレードができることを確認し"
+"ます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:997
+msgid "Run the upgrade."
+msgstr "アップグレードを実行します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:1000
+msgid ""
+"You can perform an upgrade while user instances run. However, this strategy "
+"can be dangerous. Don't forget appropriate notice to your users, and backups."
+msgstr ""
+"ユーザーのインスタンスが実行中のまま、アップグレードを実行することができま"
+"す。しかしながら、この方法は危険です。ユーザーに対する適切な通知を忘れないよ"
+"うにしてください。そして、バックアップも忘れないでください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:1003
+msgid "The general order that seems to be most successful is:"
+msgstr "最も成功すると考えられる一般的な順番は次のとおりです:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:1007
+msgid "Upgrade the OpenStack Identity service (keystone)."
+msgstr "OpenStack Identity サービス (keystone) をアップグレードします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:1011
+msgid "Upgrade the OpenStack Image service (glance)."
+msgstr "OpenStack Image サービス (glance) をアップグレードします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:1015
+msgid "Upgrade all OpenStack Compute (nova) services."
+msgstr "すべての OpenStack Compute (nova) サービスをアップグレードします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:1019
+msgid "Upgrade all OpenStack Block Storage (cinder) services."
+msgstr ""
+"すべての OpenStack Block Storage (cinder) サービスをアップグレードしま"
+"す。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:1023
+msgid "For each of these steps, complete the following sub-steps:"
+msgstr "これらのステップそれぞれに対して、以下のサブステップを完了します:"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:1027
+msgid "Stop services."
+msgstr "サービスを停止します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:1030
+msgid "Create a backup of configuration files and databases."
+msgstr "設定ファイルとデータベースのバックアップを作成します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:1034
+msgid "Upgrade the packages using your distribution's package manager."
+msgstr ""
+"ディストリビューションのパッケージマネージャーを用いてパッケージをアップグ"
+"レードします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:1038
+msgid "Update the configuration files according to the release notes."
+msgstr "リリースノートに従って設定ファイルを更新します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:1042
+msgid "Apply the database upgrades."
+msgstr "データベースのアップグレードを適用します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:1045
+msgid "Restart the services."
+msgstr "サービスを再起動します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:1048
+msgid "Verify that everything is running."
+msgstr "すべてが正しく動作することを確認します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:1051
+msgid ""
+"Probably the most important step of all is the pre-upgrade testing. "
+"Especially if you are upgrading immediately after release of a new version, "
+"undiscovered bugs might hinder your progress. Some deployers prefer to wait "
+"until the first point release is announced. However, if you have a "
+"significant deployment, you might follow the development and testing of the "
+"release, thereby ensuring that bugs for your use cases are fixed."
+msgstr ""
+"おそらく、すべて中で最も大切なステップは事前のアップグレードテストです。とく"
+"に新しいバージョンのリリース後すぐにアップグレードする場合、未発見のバグによって"
+"アップグレードがうまくいかないこともあるでしょう。管理者によっては、最初のアップデート版が出るま"
+"で待つことを選ぶ場合もあります。しかしながら、重要な環境の場合には、リリース版の"
+"開発やテストに参加することで、あなたのユースケース"
+"でのバグを確実に修正することもできるでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:1060
+msgid ""
+"To complete an upgrade of OpenStack Compute while keeping instances running, "
+"you should be able to use live migration to move machines around while "
+"performing updates, and then move them back afterward as this is a property "
+"of the hypervisor. However, it is critical to ensure that database changes "
+"are successful otherwise an inconsistent cluster state could arise."
+msgstr ""
+"インスタンスを実行したまま、OpenStack Compute のアップグレードを行うに"
+"は、ハイパーバイザーの機能のライブマイグレーションを使って、"
+"アップグレードを実行している間はインスタンスを他のマシンに移動し、"
+"終わったら元のマシンに戻す方法を取ることができます。しかしながら、データベースの更新を確実に行うことが非常に重要です。"
+"さもないと、クラスターが一貫性のない状態になってしまいます。"
