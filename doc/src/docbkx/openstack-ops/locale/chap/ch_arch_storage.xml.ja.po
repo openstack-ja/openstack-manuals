@@ -1,0 +1,884 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-21 08:33+0000\n"
+"Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:486
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:890
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1457
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1672
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1696
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1788
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1889
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2799
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:217
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:228
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:229
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:233
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:235
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:246
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:257
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:259
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:263
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:265
+msgid " "
+msgstr " "
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:589
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:238
+msgid "Ceph"
+msgstr "Ceph"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:92
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:36
+msgid "Object storage"
+msgstr "オブジェクトストレージ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:21
+msgid "Storage Decisions"
+msgstr "ストレージ選定"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:22
+msgid ""
+"Storage is found in many parts of the OpenStack stack, and the differing "
+"types can cause confusion to even experienced cloud engineers. This section "
+"focuses on persistent storage options you can configure with your cloud."
+msgstr ""
+"ストレージは OpenStack スタックの多くの部分に存在し、これらのタイプの違い"
+"により経験豊富なクラウド技術者でさえ混乱する事があります。本章では、あなた"
+"のクラウドで設定可能な永続的ストレージに焦点を当てます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:27
+msgid "OpenStack Storage Concepts"
+msgstr "ストレージのコンセプト"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:29
+msgid "OpenStack Storage"
+msgstr "OpenStackのストレージ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:34
+msgid "Ephemeral storage"
+msgstr "エフェメラルストレージ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:35
+msgid "Block storage"
+msgstr "ブロックストレージ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:41
+msgid "Used to…"
+msgstr "使用目的"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:42
+msgid "Run operating system and scratch space"
+msgstr "OS を起動し、空き領域に記録する"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:44
+msgid "Add additional persistent storage to a virtual machine (VM)"
+msgstr "永続的なストレージを仮想マシン（VM）へ追加する"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:46
+msgid "Store data, including VM images"
+msgstr "データを保存する（VMイメージも含む）"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:50
+msgid "Accessed through…"
+msgstr "アクセス方法"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:51
+msgid "A file system"
+msgstr "ファイルシステム"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:52
+msgid ""
+"A <glossterm>block device</glossterm> that can be partitioned, formatted and "
+"mounted (such as, /dev/vdc)"
+msgstr ""
+"パーティション作成、フォーマット、マウントされた<glossterm>block device</"
+"glossterm>（/dev/vdc など）"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:55
+msgid "REST API"
+msgstr "REST API"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:58
+msgid "Accessible from…"
+msgstr "アクセス可能な場所"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:59
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:60
+msgid "Within a VM"
+msgstr "VM内"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:61
+msgid "Anywhere"
+msgstr "どこからでも"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:64
+msgid "Managed by…"
+msgstr "管理元"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:65
+msgid "OpenStack Compute (Nova)"
+msgstr "OpenStack Compute (Nova)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:66
+msgid "OpenStack Block Storage (Cinder)"
+msgstr "OpenStack Block Storage (Cinder)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:68
+msgid "OpenStack Object Storage (Swift)"
+msgstr "OpenStack Object Storage (Swift)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:72
+msgid "Persists until…"
+msgstr "データの残存期間"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:73
+msgid "VM is terminated"
+msgstr "VM終了まで"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:74
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:75
+msgid "Deleted by user"
+msgstr "ユーザーが削除するまで"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:78
+msgid "Sizing determined by…"
+msgstr "容量の指定"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:79
+msgid ""
+"Administrator configures size settings, known as <emphasis>flavors</emphasis>"
+msgstr "管理者がサイズを設定（<emphasis>flavors</emphasis>）として知られる"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:82
+msgid "Specified by user in initial request"
+msgstr "ユーザが指定する"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:84
+msgid "Amount of available physical storage"
+msgstr "利用可能な物理ディスクの総量で決まる"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:88
+msgid "Example of typical usage…"
+msgstr "典型的な利用例"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:90
+msgid "10 GB first disk, 30GB second disk"
+msgstr "10GBの1台目ディスク、30GBの2台目ディスク"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:92
+msgid "1 TB disk"
+msgstr "1TBディスク"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:94
+msgid "10s of TBs of dataset storage"
+msgstr "数十TBのデータセットストレージ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:99
+msgid ""
+"If you only deploy the OpenStack Compute Service (nova), your users do not "
+"have access to any form of persistent storage by default. The disks "
+"associated with VMs are \"ephemeral\", meaning that (from the user's point "
+"of view) they effectively disappear when a virtual machine is terminated. "
+"You must identify what type of persistent storage you want to support for "
+"your users."
+msgstr ""
+"Novaのみを構成した場合、デフォルトではユーザにはあらゆる種類の永続ストレージ"
+"へのアクセス方法がありません。この状態でVMに割り当てられるディスクは「エフェ"
+"メラル」であり、これは仮想マシンが削除された時にディスクが削除される事を意味"
+"します。そのためユーザに対してどんなタイプの永続的ストレージがサポートされて"
+"いるか明示しておく必要があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:106
+msgid ""
+"Today, OpenStack clouds explicitly support two types of persistent storage: "
+"<emphasis>object storage</emphasis> and <emphasis>block storage</emphasis>."
+msgstr ""
+"現在、OpenStackでは二つの永続的ストレージ（<emphasis>object storage</"
+"emphasis> と <emphasis>block storage</emphasis>）がサポートされています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:110
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:151
+msgid "Object Storage"
+msgstr "オブジェクトストレージ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:111
+msgid ""
+"With object storage, users access binary objects through a REST API. You may "
+"be familiar with Amazon S3, which is a well-known example of an object "
+"storage system. If your intended users need to archive or manage large "
+"datasets, you want to provide them with object storage. In addition, "
+"OpenStack can store your virtual machine (VM) images inside of an object "
+"storage system, as an alternative to storing the images on a file system."
+msgstr ""
+"オブジェクトストレージでは、ユーザはREST APIを経由してバイナリオブジェクト"
+"へアクセスします。有名なオブジェクトストレージにAmazon S3があります。ユーザ"
+"がアーカイブ領域や大容量のデータセットを必要としたときにオブジェクトスト"
+"レージは有効です。またOpenStackはファイルシステムの代わりにオブジェクトスト"
+"レージに仮想マシンイメージを保存する事が可能です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:123
+#: doc/src/docbkx/openstack-ops/src/ch_ops_backup_recovery.xml:141
+#: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:410
+msgid "Block Storage"
+msgstr "ブロックストレージ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:124
+msgid ""
+"Block storage (sometimes referred to as volume storage) exposes a block "
+"device to the user. Users interact with block storage by attaching volumes "
+"to their running VM instances."
+msgstr ""
+"ブロックストレージ(ボリュームストレージとも呼ばれる)はユーザにブロック"
+"デバイスを提供します。ユーザは実行中のVMにボリュームをアタッチして、ブロッ"
+"クストレージを利用します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:128
+msgid ""
+"These volumes are persistent: they can be detached from one instance and re-"
+"attached to another, and the data remains intact. Block storage is "
+"implemented in OpenStack by the OpenStack Block Storage (Cinder) project, "
+"which supports multiple back-ends in the form of drivers. Your choice of a "
+"storage back-end must be supported by a Block Storage driver."
+msgstr ""
+"このボリュームは永続的です。データを残したまま仮想マシンからデタッチし、別の"
+"仮想マシンへ再アタッチすることができます。OpenStack では、ブロックストレージは"
+" OpenStack Block Storage （Cinder）で実装されており、複数のバックエンドスト"
+"レージをドライバという形式でサポートします。あなたが選択するストレージバックエ"
+"ンドは、Block Storage のドライバによりサポートされている必要があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:135
+msgid ""
+"Most block storage drivers allow the instance to have direct access to the "
+"underlying storage hardware's block device. This helps increase the overall "
+"read/write IO."
+msgstr ""
+"多くのストレージドライバはインスタンスが直接ストレージハードウェアのブロッ"
+"クデバイスへアクセスできるようにします。これは リード/ライト I/O 性能の向上"
+"に役立ちます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:139
+msgid ""
+"Experimental support for utilizing files as volumes began in the Folsom "
+"release. This initially started as a reference driver for using NFS with "
+"Cinder. By Grizzly's release, this has expanded into a full NFS driver as "
+"well as a GlusterFS driver."
+msgstr ""
+"Folsomリリースではファイルをボリュームとして利用するための実験的サポートを"
+"開始しました。これは、最初は Cinder で NFS を使用するためのリファレンスド"
+"ライバとしてスタートしたものです。Grizzly リリースまでに、このドライバは"
+"GlusterFS ドライバと同様、完全な NFS ドライバに拡張されました。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:144
+msgid ""
+"These drivers work a little differently than a traditional \"block\" storage "
+"driver. On an NFS or GlusterFS file system, a single file is created and "
+"then mapped as a \"virtual\" volume into the instance. This mapping/"
+"translation is similar to how OpenStack utilizes QEMU's file-based virtual "
+"machines stored in <code>/var/lib/nova/instances</code>."
+msgstr ""
+"これらのドライバーは従来のブロックストレージドライバとは少々異なる動作をしま"
+"す。NFSやGlusterFSでは1つのファイルが作成され、インスタンスに対して「仮想」ボ"
+"リュームとしてマッピングされます。このマッピング/変換は"
+"<code>/var/lib/nova/instances</code> 下に保存される、QEMUのファイルベースの仮"
+"想マシンの、OpenStackによる扱い方と同様です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:153
+msgid "File-level Storage"
+msgstr "ファイルレベルストレージ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:154
+msgid ""
+"With file-level storage, users access stored data using the operating "
+"system's file system interface. Most users, if they have used a network "
+"storage solution before, have encountered this form of networked storage. In "
+"the Unix world, the most common form of this is NFS. In the Windows world, "
+"the most common form is called CIFS (previously, SMB)."
+msgstr ""
+"ファイルレベルストレージでは、ユーザはOSのファイルシステムインターフェース"
+"を使ってデータへアクセスします。ほとんどのユーザは（以前ネットワークソリュ"
+"ーションを使用した経験があった場合）この種類のネットワークストレージに遭遇"
+"したことがあります。UnixではNFSが一般的で、WindowsではCIFS(旧 SMB)が一般的"
+"です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:161
+msgid ""
+"OpenStack clouds do not present file-level storage to end users. However, it "
+"is important to consider file-level storage for storing instances under "
+"<code>/var/lib/nova/instances</code> when designing your cloud, since you "
+"must have a shared file system if you wish to support live migration."
+msgstr ""
+"OpenStackではエンドユーザがファイルレベルストレージを目にすることは"
+"ありません。しかし、クラウド設計時、<code>/var/lib/nova/instances</"
+"code> 下のインスタンス保存用にファイルレベルストレージを検討する事は重要です。"
+"なぜなら、ライブマイグレーションをサポートしたい場合、共有ファイルシステムが必"
+"須だからです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:172
+msgid "Choosing Storage Back-ends"
+msgstr "ストレージバックエンドの選択"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:173
+msgid ""
+"In general, when you select <glossterm>storage back-end</glossterm>s, ask "
+"the following questions:"
+msgstr "<glossterm>storage back-end</glossterm> 選択における一般的な考慮事項："
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:178
+msgid "Do my users need block storage?"
+msgstr "ユーザがブロックストレージを必要とするか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:181
+msgid "Do my users need object storage?"
+msgstr "ユーザがオブジェクトストレージを必要とするか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:184
+msgid "Do I need to support live migration?"
+msgstr "管理者がライブマイグレーションを必要とするか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:187
+msgid ""
+"Should my persistent storage drives be contained in my compute nodes, or "
+"should I use external storage?"
+msgstr ""
+"永続的ストレージをコンピュートノード内に持つべきか？それとも外部ストレージ"
+"に持つべきか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:192
+msgid ""
+"What is the platter count I can achieve? Do more spindles result in better I/"
+"O despite network access?"
+msgstr ""
+"実現可能な容量は？ネットワークアクセスでも、より多くのディスクがより良"
+"い I/O 性能に繋がるか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:197
+msgid "Which one results in the best cost-performance scenario I'm aiming for?"
+msgstr "どちらが自分の意図した最高のコストパフォーマンスシナリオを実現するか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:201
+msgid "How do I manage the storage operationally?"
+msgstr "ストレージの運用管理をどうするか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:205
+msgid ""
+"How redundant and distributed is the storage? What happens if a storage node "
+"fails? To what extent can it mitigate my data-loss disaster scenarios?"
+msgstr ""
+"ストレージの冗長性と分散をどうするか？ストレージノード障害でどうなるか？"
+"災害時、自分のデータ消失をどの程度軽減できるのか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:211
+msgid ""
+"To deploy your storage by using entirely commodity hardware, you can use a "
+"number of open-source packages, as shown in the following table:"
+msgstr ""
+"コモディティハードウェアを利用したストレージ環境の構築に、下記に表に示した"
+"いくつかのオープンソースパッケージを利用可能です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:218
+msgid "Object"
+msgstr "オブジェクトストレージ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:219
+msgid "Block"
+msgstr "ブロックストレージ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:220
+msgid "File-level* (live migration support)"
+msgstr "ファイルレベルストレージ* (ライブマイグレーションサポート)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:226
+#: doc/src/docbkx/openstack-ops/src/ch_ops_log_monitor.xml:307
+msgid "Swift"
+msgstr "Swift"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:232
+msgid "LVM"
+msgstr "LVM"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:241
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:264
+msgid "experimental"
+msgstr "実験的"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:244
+msgid "Gluster"
+msgstr "Gluster"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:250
+msgid "NFS"
+msgstr "NFS"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:256
+msgid "ZFS"
+msgstr "ZFS"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:262
+msgid "Sheepdog"
+msgstr "Sheepdog"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:269
+msgid ""
+"* This list of open-source file-level shared storage solutions is not "
+"exhaustive, other open source solutions exist (MooseFS). Your organization "
+"may already have deployed a file-level shared storage solution which you can "
+"use."
+msgstr ""
+"* このOSS ファイルレベル共有ストレージのリストは完全ではなく、他にもOSSが存"
+"在します(MooseFS)。あなたの組織では既に利用可能なファイルレベル共有ストレー"
+"ジがあるかもしれません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:274
+msgid ""
+"In addition to the open-source technologies, there are a number of "
+"proprietary solutions that are officially supported by OpenStack Block "
+"Storage. They are offered by the following vendors:"
+msgstr ""
+"OSSに加えて、OpenStack Block Storageではいくつかのプロプライエタリなストレー"
+"ジを公式にサポートしています。それらは以下のベンダーによって提供されていま"
+"す。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:280
+msgid "IBM (Storwize family/SVC, XIV)"
+msgstr "IBM (Storwize family/SVC, XIV)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:283
+msgid "NetApp"
+msgstr "NetApp"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:286
+msgid "Nexenta"
+msgstr "Nexenta"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:289
+msgid "SolidFire"
+msgstr "SolidFire"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:292
+msgid ""
+"You can find a matrix of the functionality provided by all of the supported "
+"Block Storage drivers on the <link title=\"OpenStack wiki\" href=\"https://"
+"wiki.openstack.org/wiki/CinderSupportMatrix\">OpenStack wiki</link> (https://"
+"wiki.openstack.org/wiki/CinderSupportMatrix)."
+msgstr ""
+"こちらのリンクからドライバごとにサポートされている機能マトリックスを参照でき"
+"ます。 "
+"<link title=\"OpenStack wiki\" href=\"https://wiki.openstack.org/wiki/"
+"CinderSupportMatrix\">OpenStack wiki</link> (https://wiki.openstack.org/wiki/"
+"CinderSupportMatrix)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:298
+msgid ""
+"Also, you need to decide whether you want to support object storage in your "
+"cloud. The two common use cases for providing object storage in a compute "
+"cloud are:"
+msgstr ""
+"クラウド内でオブジェクトストレージの利用を検討する必要があります。コン"
+"ピュートクラウドで提供されるオブジェクトストレージの一般的な利用方法は以下"
+"の二つです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:303
+msgid "To provide users with a persistent storage mechanism"
+msgstr "ユーザに永続的ストレージの仕組みを提供する"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:307
+msgid "As a scalable, reliable data store for virtual machine images"
+msgstr "スケーラブルで信頼性のある仮想マシンイメージデータストアとして利用する"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:312
+msgid "Commodity Storage Back-end Technologies"
+msgstr "コモディティハードウェア上の ストレージ技術"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:313
+msgid ""
+"This section provides a high-level overview of the differences among the "
+"different commodity storage back-end technologies."
+msgstr ""
+"このセクションでは様々な コモディティハードウェアを利用するストレージ技術の"
+"差異について、上位レベルの概要を提供します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:319
+msgid ""
+"<emphasis role=\"bold\">OpenStack Object Storage (Swift)</emphasis>. The "
+"official OpenStack Object Store implementation. It is a mature technology "
+"that has been used for several years in production by Rackspace as the "
+"technology behind Rackspace Cloud Files. As it is highly scalable, it is "
+"well-suited to managing petabytes of storage. OpenStack Object Storage's "
+"advantages are better integration with OpenStack (integrates with OpenStack "
+"Identity, works with OpenStack Dashboard interface), and better support for "
+"multiple data center deployment through support of asynchronous eventual "
+"consistency replication."
+msgstr ""
+"<emphasis role=\"bold\">OpenStack Object Storage (Swift)</emphasis>。OpenStack"
+"公式のオブジェクトストア実装です。これはRackspace Cloud Files で採用されてお"
+"り、既に数年間の商用実績を持つ成熟した技術です。高度なスケーラビリティを備"
+"え、ペタバイトストレージの管理に適しています。OpenStack Object Storageの利点"
+"はOpenStackとの統合(OpenStack Identityとの統合、OpenStack Dashboardインター"
+"フェースでの操作)と、非同期の結果整合性レプリケーションによる複数データセン"
+"ターのサポートです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:334
+msgid ""
+"Therefore, if you eventually plan on distributing your storage cluster "
+"across multiple data centers, if you need unified accounts for your users "
+"for both compute and object storage, or if you want to control your object "
+"storage with the OpenStack dashboard, you should consider OpenStack Object "
+"Storage. More detail can be found about OpenStack Object Storage in the "
+"section below."
+msgstr ""
+"従って、将来的に複数データセンターにまたがった分散ストレージクラスタを"
+"計画する場合や、コンピュートとオブジェクトストレージ間で統一されたアカ"
+"ウントを必要とする場合、または OpenStack Dashboard を使ってオブジェクトス"
+"トレージを操作したい場合などに OpenStack Object Storage を検討します。"
+"OpenStack Object Storage のより詳細な情報は以後のセクションで記載します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:345
+msgid ""
+"<emphasis role=\"bold\">Ceph</emphasis>. A scalable storage solution that "
+"replicates data across commodity storage nodes. Ceph was originally "
+"developed by one of the founders of DreamHost and is currently used in "
+"production there."
+msgstr ""
+"<emphasis role=\"bold\">Ceph</emphasis>。コモディティなストレージノード間で"
+"データレプリケーションを行う、スケーラブルなストレージソリューションです。"
+"Ceph は元々DreamHost の創設者の一人が開発し、現在はDreamHost の商用サービス"
+"で利用されています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:351
+msgid ""
+"Ceph was designed to expose different types of storage interfaces to the end-"
+"user: it supports object storage, block storage, and file system interfaces, "
+"although the file system interface is not yet considered production-ready. "
+"Ceph supports the same API as Swift for object storage, can be used as a "
+"back-end for Cinder block storage, as well as back-end storage for Glance "
+"images. Ceph supports \"thin provisioning\", implemented using copy-on-write."
+msgstr ""
+"Ceph はエンドユーザに対して異なるストレージインターフェースが利用できるよう設"
+"計されています： オブジェクトストレージ、ブロックストレージ、ファイルシス"
+"テムをサポートしていますが、ファイルシステムはまだ商用利用可能な状態ではあ"
+"りません。CephはオブジェクトストレージでSwiftと同じAPIをサポートし、Cinder "
+"ブロックストレージのバックエンドとしても利用でき、Glance用イメージのバックエン"
+"ドストレージとしても利用できます。Cephはcopy-on-wirteを使って実装されたシン"
+"プロビジョニングをサポートしています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:362
+msgid ""
+"This can be useful when booting from volume because a new volume can be "
+"provisioned very quickly. Ceph also supports keystone-based authentication "
+"(as of version 0.56), so it can be a seamless swap in for the default "
+"OpenStack Swift implementation."
+msgstr ""
+"ボリューム作成が非常に高速なため、boot-from-volume に有効です。またCephは"
+"Keystoneベースの認証(version 0.56等)をサポートするため、デフォルトの"
+"OpenStack Swift との置き換えをシームレスに行えます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:368
+msgid ""
+"Ceph's advantages are that it gives the administrator more fine-grained "
+"control over data distribution and replication strategies, enables you to "
+"consolidate your object and block storage, enables very fast provisioning of "
+"boot-from-volume instances using thin provisioning, and supports a "
+"distributed file system interface, though this interface is <link title="
+"\"OpenStack wiki\" href=\"http://ceph.com/docs/master/faq/\">not yet "
+"recommended</link> (http://ceph.com/docs/master/faq/) for use in production "
+"deployment by the Ceph project."
+msgstr ""
+"Cephのメリットは、管理者がデータの分散とレプリケーションを細かく計画する事が"
+"できること、ブロックストレージとオブジェクトストレージを統合できること、"
+"シンプロビジョニングを使ってインスタンスのboot-from-volumeを高速で行えるこ"
+"と、 <link title=\"OpenStack wiki\" href=\"http://ceph.com/docs/master/faq/"
+"\">商用利用にはまだ推奨されていませんが</link> (http://ceph.com/docs/master/"
+"faq/) 分散ファイルシステムのインターフェースを利用できることです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:381
+msgid ""
+"If you wish to manage your object and block storage within a single system, "
+"or if you wish to support fast boot-from-volume, you should consider Ceph."
+msgstr ""
+"単一システムでブロックストレージとオブジェクトストレージを管理したい場合"
+"や、高速なboot-from-volumeをサポートしたい場合はCephの利用を検討してくださ"
+"い。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:387
+msgid ""
+"<emphasis role=\"bold\">Gluster</emphasis>. A distributed, shared file "
+"system. As of Gluster version 3.3, you can use Gluster to consolidate your "
+"object storage and file storage into one unified file and object storage "
+"solution, which is called Gluster UFO. Gluster UFO uses a customizes version "
+"of Swift that uses Gluster as the back-end."
+msgstr ""
+"<emphasis role=\"bold\">Gluster</emphasis> 分散共有ファイルシステムです。"
+"Gluster 3.3の時点で、オブジェクトストレージとファイルストレージを統合して"
+"利用でき、これはGluster UFOと呼ばれています。Gluster UFOは、Glusterをバックエ"
+"ンドとして使うようにカスタマイズされたSwiftを利用しています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:395
+msgid ""
+"The main advantage of using Gluster UFO over regular Swift is if you also "
+"want to support a distributed file system, either to support shared storage "
+"live migration or to provide it as a separate service to your end-users. If "
+"you wish to manage your object and file storage within a single system, you "
+"should consider Gluster UFO."
+msgstr ""
+"正規のSwift経由でGluster UFOを使う利点は、分散ファイルシステムをサポートした"
+"い時や、共有ストレージによるライブマイグレーションのサポートや、個別サービス"
+"としてエンドユーザにGluster UFOを提供できる事です。単一ストレージシステムでオ"
+"ブジェクトストレージとファイルストレージを管理したい場合はGluster UFOを検"
+"討します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:403
+msgid ""
+"<emphasis role=\"bold\">LVM</emphasis>. The Logical Volume Manager, a Linux-"
+"based system that provides an abstraction layer on top of physical disks to "
+"expose logical volumes to the operating system. The LVM (Logical Volume "
+"Manager) back-end implements block storage as LVM logical partitions."
+msgstr ""
+"<emphasis role=\"bold\">LVM</emphasis>  論理ボリュームマネージャ。オペレー"
+"ティングシステムへ論理ディスクを公開するために、物理ディスク上の抽象化レイ"
+"ヤーを提供するLinuxベースの仕組みです。LVM(論理ボリュームマネージャ)のバック"
+"エンドは、LVM論理パーティションとしてブロックストレージを提供します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:410
+msgid ""
+"On each host that will house block storage, an administrator must initially "
+"create a volume group dedicated to Block Storage volumes. Blocks are created "
+"from LVM logical volumes."
+msgstr ""
+"ブロックストレージを収容する各ホストでは、管理者は事前にブロックス"
+"トレージ専用のボリュームグループを作成しておく必要があります。ブロックス"
+"トレージはLVM論理ボリュームから作られます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:416
+msgid ""
+"LVM does <emphasis>not</emphasis> provide any replication. Typically, "
+"administrators configure RAID on nodes that use LVM as block storage to "
+"protect against failures of individual hard drives. However, RAID does not "
+"protect against a failure of the entire host."
+msgstr ""
+"LVMはレプリケーションを<emphasis>提供しません</emphasis>。通常、管理者はブ"
+"ロックストレージとしてLVMを利用するホスト上にRAIDを構成し、ここのハードディ"
+"スク障害からブロックストレージを保護します。しかしRAIDではホストそのものの"
+"障害には対応できません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:425
+msgid ""
+"The Solaris iSCSI driver for OpenStack Block Storage implements blocks as "
+"<emphasis role=\"bold\">ZFS</emphasis> entities. ZFS is a file system that "
+"also has functionality of a volume manager. This is unlike on a Linux "
+"system, where there is a separation of volume manager (LVM) and file system "
+"(such as, ext3, ext4, xfs, btrfs). ZFS has a number of advantages over ext4, "
+"including improved data integrity checking."
+msgstr ""
+"Solarisの OpenStack Block Storage用のiSCSIドライバーは<emphasis role=\"bold"
+"\">ZFS</emphasis>を実態としたブロックストレージを実装しています。ZFSはボ"
+"リュームマネージャ機能を持ったファイルシステムです。これはボリュームマ"
+"ネージャ(LVM)とファイルシステム(ext3, ext4, xfs, btrfsのような)が分離している"
+"Linuxとは異なっています。ZFSはデータ整合性チェックを含み、ext4より多くの利点"
+"を持っています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:435
+msgid ""
+"The ZFS back-end for OpenStack Block Storage only supports Solaris-based "
+"systems such as Illumos. While there is a Linux port of ZFS, it is not "
+"included in any of the standard Linux distributions, and it has not been "
+"tested with OpenStack Block Storage. As with LVM, ZFS does not provide "
+"replication across hosts on its own, you need to add a replication solution "
+"on top of ZFS if your cloud needs to be able to handle storage node failures."
+msgstr ""
+"OpenStack Block Storage用のZFSバックエンドは Illumos 等のSolaris ベースのシス"
+"テムのみをサポートします。LinuxにポーティングされたZFSもありますが、標準的な"
+"Linuxディストリビューションには含まれておらず、OpenStack Block Storage でもテ"
+"ストされていません。LVMと同様にZFSはホスト間のレプリケーション機能を提供して"
+"いませんので、ストレージノードの障害に対応するためには、ZFS上にレプリケー"
+"ション機能を追加する必要があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:446
+msgid ""
+"We don't recommend ZFS unless you have previous experience with deploying "
+"it, since the ZFS back-end for Block Storage requires a Solaris-based "
+"operating system and we assume that your experience is primarily with Linux-"
+"based systems."
+msgstr ""
+"ここではLinuxベースのシステムを前提としているので、これまでにZFSの構築実績が"
+"無ければ、Solarisの知識を前提とするZFSはあえてお薦めしません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:454
+msgid ""
+"<emphasis role=\"bold\">Sheepdog</emphasis>. A recent project that aims to "
+"provide block storage for KVM-based instances, with support for replication "
+"across hosts. We don't recommend Sheepdog for a production cloud, because "
+"its authors at NTT Labs consider Sheepdog as an experimental technology."
+msgstr ""
+"<emphasis role=\"bold\">Sheepdog</emphasis> KVMのインスタンスにブロックスト"
+"レージを提供する事に特化した新しいプロジェクトで、ホスト間のレプリケーション"
+"もサポートします。ただし、作者であるNTT研究所では、Sheepdogは実験的な技術と考"
+"えており、商用クラウドサービスでの利用はお薦めしません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:467
+msgid "Notes on OpenStack Object Storage"
+msgstr "OpenStack Object Storage の注意事項"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:468
+msgid ""
+"OpenStack Object Storage provides a highly scalable, highly available "
+"storage solution by relaxing some of the constraints of traditional file "
+"systems. In designing and procuring for such a cluster, it is important to "
+"understand some key concepts about its operation. Essentially, this type of "
+"storage is built on the idea that all storage hardware fails, at every "
+"level, at some point. Infrequently encountered failures that would hamstring "
+"other storage systems, such as issues taking down RAID cards, or entire "
+"servers are handled gracefully with OpenStack Object Storage."
+msgstr ""
+"OpenStack Object Storage は従来のファイルシステムの制約を一部緩和することで、"
+"高いスケーラビリティと可用性を実現しています。その設計のためには、動作のキー"
+"コンセプトを理解することが重要です。このタイプのストレージはあらゆる場所・レ"
+"ベルにおいてハードウェア障害が発生する、という考えに基づいて構築されていま"
+"す。他のストレージシステムでは動作不能になってしまうような、まれに発生する"
+"RAIDカードやホスト全体の障害に対しても OpenStack Object Storage は正常に動作"
+"します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:479
+msgid ""
+"A good document describing the Object Storage architecture is found within "
+"<link title=\"OpenStack wiki\" href=\"http://docs.openstack.org/developer/"
+"swift/overview_architecture.html\">the developer documentation</link> "
+"(http://docs.openstack.org/developer/swift/overview_architecture.html) - "
+"read this first. Once you have understood the architecture, you should know "
+"what a proxy server does and how zones work. However, some there important "
+"points that are often missed at first glance."
+msgstr ""
+"オブジェクトストレージのアーキテクチャについて <link title=\"OpenStack wiki"
+"\" href=\"http://docs.openstack.org/developer/swift/overview_architecture."
+"html\">the developer documentation</link> (http://docs.openstack.org/"
+"developer/swift/overview_architecture.html) に記述されています。まずアーキテ"
+"クチャを理解し、プロキシサーバーとZoneがどのように働くか知る必要があります。"
+"重要なポイント見逃さないように注意してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:489
+msgid ""
+"When designing your cluster, you must consider durability and availability. "
+"Understand that the predominant source of these is the spread and placement "
+"of your data, rather than the reliability of the hardware. Consider the "
+"default value of the number of replicas, which is 3. This means that when "
+"before an object is marked as having being written at least two copies "
+"exists - in case a single server fails to write, the third copy may or may "
+"not yet exist when the write operation initially returns. Altering this "
+"number increases the robustness of your data, but reduces the amount of "
+"storage you have available. Next look at the placement of your servers. "
+"Consider spreading them widely throughout your data centre's network and "
+"power failure zones. Is a zone a rack, a server or a disk?"
+msgstr ""
+"クラスタの設計には耐久性と可用性を検討する必要があります。耐久性と可用性は"
+"ハードウェアの信頼性ではなく、データの分布と配置が重要です。デフォルトのレプ"
+"リカ数3について考えます。これはオブジェクトが書き込まれた時に少なくとも2つの"
+"コピーが存在する事を意味します。1台のサーバーへの書き込みが失敗した場合、3つ"
+"目のコピーは書き込み操作が返った直後には存在するかもしれないし、存在しないか"
+"もしれません。レプリカ数を増やすとデータの堅牢性は増しますが、利用できるスト"
+"レージの総量は減ってしまいます。次にサーバーの配置を見てみます。データセン"
+"ター全体でネットワークや電源の障害箇所とサーバーの分布を考えてください。その"
+"障害ではラック、サーバー、ディスクのどこが影響を受けますか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:504
+msgid ""
+"Object Storage's network patterns might seem unfamiliar at first. Consider "
+"these main traffic flows: <placeholder-1/>"
+msgstr ""
+"オブジェクトストレージのネットワークのトラフィックは通常とは異なっているか"
+"もしれません。以下のトラフィックを考慮してください。 <placeholder-1/>"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:507
+msgid ""
+"Among <glossterm>object</glossterm>, <glossterm>container</glossterm>, and "
+"<glossterm>account server</glossterm>s"
+msgstr ""
+"<glossterm>object server</glossterm> 、 <glossterm>container server</"
+"glossterm> 、  <glossterm>account server</glossterm> 間"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:513
+msgid "Between those servers and the proxies"
+msgstr "object/container/account server と proxy server の間"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:516
+msgid "Between the proxies and your users"
+msgstr "proxy server と 利用者の間"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:520
+msgid ""
+"Object Storage is very 'chatty' among servers hosting data - even a small "
+"cluster does megabytes/second of traffic, which is predominantly \"Do you "
+"have the object?\"/\"Yes I have the object!.\" Of course, if the answer to "
+"the aforementioned question is negative or times out, replication of the "
+"object begins."
+msgstr ""
+"オブジェクトストレージはデータを保持するノード間で頻繁に通信を行います。 "
+"小さなクラスタでさえ、これは数MB/sのトラフィックで主に他ホストにオブジェク"
+"トの存在確認を行いっています。相手ノードにオブジェクトが無い場合はレプリケ"
+"ーションが開始されます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:526
+msgid ""
+"Consider the scenario where an entire server fails, and 24 TB of data needs "
+"to be transferred \"immediately\" to remain at three copies - this can put "
+"significant load on the network."
+msgstr ""
+"サーバー障害で3つのコピーを保つために、24TBのデータ転送が必要になる場合を考え"
+"てみてください。これはネットワークに大きな負荷を発生させます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:530
+msgid ""
+"Another oft forgotten fact is that when a new file is being uploaded, the "
+"proxy server must write out as many streams as there are replicas - giving a "
+"multiple of network traffic. For a 3-replica cluster, 10Gbps in means 30Gbps "
+"out. Combining this with the previous high bandwidth demands of replication "
+"is what results in the recommendation that your private network is of "
+"significantly higher bandwidth than your public need be. Oh, and OpenStack "
+"Object Storage communicates internally with unencrypted, unauthenticated "
+"rsync for performance - you do want the private network to be private."
+msgstr ""
+"忘れてはいけない事として、レプリカがあるためファイルがアップロードされたとき"
+"に、proxy server は多くのストリームを書き出す必要があることです。これは3レプ"
+"リカの場合、10Gbpsのアップロードに対して、30Gbpsのダウンロードになります。こ"
+"れはパブリック側のネットワークよりも、プライベート側のネットワークがより多く"
+"の帯域を必要とすることを意味しています。OpenStack Object Storage はパフォーマ"
+"ンスのために非暗号化、未認証のrsync通信を行います。そのためプライベートネット"
+"ワークは非公開である必要があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:541
+msgid ""
+"The remaining point on bandwidth is the public facing portion. swift-proxy "
+"is stateless, which means that you can easily add more and use http load-"
+"balancing methods to share bandwidth and availability between them."
+msgstr ""
+"残りのポイントはパブリック側のネットワーク帯域になります。swift-proxyはステー"
+"トレスなため、ノードを追加し、HTTPロードバランスを使うことで帯域の増加と可用"
+"性の向上を容易に行うことができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:545
+msgid "More proxies means more bandwidth, if your storage can keep up."
+msgstr ""
+"ストレージ側の性能が十分であれば、proxy server の増加は帯域の増加になります。"
