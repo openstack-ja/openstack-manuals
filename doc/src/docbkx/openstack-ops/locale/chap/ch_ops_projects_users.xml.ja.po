@@ -208,7 +208,7 @@ msgstr "quota_cores=20"
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:129
 msgid "(IntOpt) number of instance cores allowed per project (tenant)"
 msgstr ""
-"(整数オプション) プロジェクト (テナント) ごとに許可されるインスタンスのコア数"
+"(整数型) プロジェクト (テナント) ごとに許可されるインスタンスのコア数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:135
 msgid "quota_floating_ips=10"
@@ -217,7 +217,7 @@ msgstr "quota_floating_ips=10"
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:138
 msgid "(IntOpt) number of floating ips allowed per project (tenant)"
 msgstr ""
-"(整数オプション) プロジェクト (テナント) ごとに許可される Floating IP 数"
+"(整数型) プロジェクト (テナント) ごとに許可される Floating IP 数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:144
 msgid "quota_fixed_ips=-1"
@@ -228,7 +228,7 @@ msgid ""
 "(IntOpt) number of floating ips allowed per project (this should be at least "
 "the number of instances allowed). -1 is unlimited"
 msgstr ""
-"(整数オプション) プロジェクトごとに許可される Fixed IP 数 (少なくとも許可"
+"(整数型) プロジェクトごとに許可される Fixed IP 数 (少なくとも許可"
 "されたインスタンスの数にすべきです)。-1 は無制限です。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:155
@@ -238,7 +238,7 @@ msgstr "quota_gigabytes=1000"
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:158
 msgid "(IntOpt) number of volume gigabytes allowed per project (tenant)"
 msgstr ""
-"(整数オプション) プロジェクト (テナント) ごとに許可されるボリューム容量（単位はギガバイ"
+"(整数型) プロジェクト (テナント) ごとに許可されるボリューム容量（単位はギガバイ"
 "ト）"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:164
@@ -247,7 +247,7 @@ msgstr "quota_injected_file_content_bytes=10240"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:167
 msgid "(IntOpt) number of bytes allowed per injected file"
-msgstr "(整数オプション) injected file あたりの最大バイト数"
+msgstr "(整数型) injected file あたりの最大バイト数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:173
 msgid "quota_injected_file_path_bytes=255"
@@ -255,7 +255,7 @@ msgstr "quota_injected_file_path_bytes=255"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:176
 msgid "(IntOpt) number of bytes allowed per injected file path"
-msgstr "(整数オプション) injected file のパス長の最大バイト数"
+msgstr "(整数型) injected file のパス長の最大バイト数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:182
 msgid "quota_injected_files=5"
@@ -263,7 +263,7 @@ msgstr "quota_injected_files=5"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:185
 msgid "(IntOpt) number of injected files allowed"
-msgstr "(整数オプション) 許可される injected file 数"
+msgstr "(整数型) 許可される injected file 数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:191
 msgid "quota_instances=10"
@@ -272,7 +272,7 @@ msgstr "quota_instances=10"
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:194
 msgid "(IntOpt) number of instances allowed per project (tenant)"
 msgstr ""
-"(整数オプション) プロジェクト (テナント) ごとに許可されるインスタンス数"
+"(整数型) プロジェクト (テナント) ごとに許可されるインスタンス数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:200
 msgid "quota_key_pairs=100"
@@ -280,7 +280,7 @@ msgstr "quota_key_pairs=100"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:203
 msgid "(IntOpt) number of key pairs allowed per user"
-msgstr "(整数オプション) ユーザーごとに許可されるキーペア数"
+msgstr "(整数型) ユーザーごとに許可されるキーペア数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:209
 msgid "quota_metadata_items=128"
@@ -288,7 +288,7 @@ msgstr "quota_metadata_items=128"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:212
 msgid "(IntOpt) number of metadata items allowed per instance"
-msgstr "(整数オプション) インスタンスごとに許可されるメタデータ項目数"
+msgstr "(整数型) インスタンスごとに許可されるメタデータ項目数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:218
 msgid "quota_ram=51200"
@@ -297,7 +297,7 @@ msgstr "quota_ram=51200"
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:221
 msgid "(IntOpt) megabytes of instance ram allowed per project (tenant)"
 msgstr ""
-"(整数オプション) プロジェクト (テナント) ごとに許可されるインスタンスの RAM "
+"(整数型) プロジェクト (テナント) ごとに許可されるインスタンスの RAM "
 "のメガバイト容量"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:227
@@ -306,7 +306,7 @@ msgstr "quota_security_group_rules=20"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:230
 msgid "(IntOpt) number of security rules per security group"
-msgstr "(整数オプション) セキュリティグループごとのセキュリティルール数"
+msgstr "(整数型) セキュリティグループごとのセキュリティルール数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:236
 msgid "quota_security_groups=10"
@@ -315,7 +315,7 @@ msgstr "quota_security_groups=10"
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:239
 msgid "(IntOpt) number of security groups per project (tenant)"
 msgstr ""
-"(整数オプション) プロジェクト (テナント) ごとに許可されるセキュリティグループ"
+"(整数型) プロジェクト (テナント) ごとに許可されるセキュリティグループ"
 "数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:245
@@ -324,7 +324,7 @@ msgstr "quota_volumes=10"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:248
 msgid "(IntOpt) number of volumes allowed per project (tenant)"
-msgstr "(整数オプション) プロジェクト (テナント) ごとに許可されるボリューム数"
+msgstr "(整数型) プロジェクト (テナント) ごとに許可されるボリューム数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:254
 msgid ""
