@@ -1,0 +1,588 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-21 08:33+0000\n"
+"Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:897
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:107
+msgid "dashboard"
+msgstr "ダッシュボード"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1317
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:33
+#: doc/src/docbkx/openstack-ops/src/ch_ops_upstream.xml:467
+msgid "Folsom"
+msgstr "Folsom"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1777
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:118
+msgid "live migration"
+msgstr "ライブマイグレーション"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1961
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:61
+msgid "nova-network"
+msgstr "nova-network"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2038
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:122
+msgid "object storage"
+msgstr "オブジェクトストレージ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_cloud_controller.xml:247
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:52
+msgid "Database"
+msgstr "データベース"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:15
+msgid "Example Architecture"
+msgstr "参考アーキテクチャ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:16
+msgid ""
+"Because OpenStack is highly configurable, with many different "
+"<glossterm>back-ends</glossterm> and network configuration options, it is "
+"difficult to write documentation that covers all possible OpenStack "
+"deployments. Therefore, this guide defines an <emphasis>example "
+"architecture</emphasis> to simplify the task of documenting, as well as to "
+"scope this guide so that it is focused on a configuration where the authors "
+"have direct deployment experience."
+msgstr ""
+"OpenStack は設定の自由度が高く、多くの異なる<glossterm>バックエンド</"
+"glossterm>とネットワーク設定オプションがあり、考えられる OpenStack の構成をす"
+"べて網羅するドキュメントを作成するのは困難です。そのため、このガイドでは"
+"<emphasis>参考アーキテクチャ</emphasis>を定義することで、このガイドの説明範囲を明確にするとともに、"
+"ドキュメント作成を単純化しています。こうすることで、、著者らが実際に経"
+"験したことのある構成での設定に焦点を当てることができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:26
+msgid "Overview"
+msgstr "概要"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:32
+msgid "OpenStack release"
+msgstr "OpenStack リリース"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:36
+msgid "Host operating system"
+msgstr "ホストのオペレーティングシステム"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:37
+msgid "Ubuntu 12.04 LTS"
+msgstr "Ubuntu 12.04 LTS"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:40
+msgid "OpenStack package repository"
+msgstr "OpenStack パッケージリポジトリ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:41
+msgid ""
+"<link href=\"https://wiki.ubuntu.com/ServerTeam/CloudArchive\">Ubuntu Cloud "
+"Archive</link> (https://wiki.ubuntu.com/ServerTeam/CloudArchive) *"
+msgstr ""
+"<link href=\"https://wiki.ubuntu.com/ServerTeam/CloudArchive\">Ubuntu Cloud "
+"Archive</link> (https://wiki.ubuntu.com/ServerTeam/CloudArchive) *"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:48
+msgid "Hypervisor"
+msgstr "ハイパーバイザー"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:49
+msgid "KVM"
+msgstr "KVM"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:53
+msgid "MySQL*"
+msgstr "MySQL*"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:56
+msgid "Message queue"
+msgstr "メッセージキュー"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:57
+msgid "RabbitMQ"
+msgstr "RabbitMQ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:60
+msgid "Networking service"
+msgstr "ネットワークサービス"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:64
+msgid "Network manager"
+msgstr "ネットワークマネージャー"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:65
+#: doc/src/docbkx/openstack-ops/src/ch_arch_network_design.xml:188
+msgid "FlatDHCP"
+msgstr "FlatDHCP"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:68
+msgid "Single nova-network or multi-host?"
+msgstr "nova-network がシングルホストかマルチホストか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:70
+msgid "multi-host*"
+msgstr "マルチホスト*"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:73
+msgid "Image Service (glance) back-end"
+msgstr "Image Service (glance) のバックエンド"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:75
+msgid "file"
+msgstr "file"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:78
+msgid "Identity Service (keystone) driver"
+msgstr "Identity Service (keystone) のドライバー"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:80
+msgid "SQL"
+msgstr "SQL"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:83
+msgid "Block Storage Service (cinder) back-end"
+msgstr "Block Storage Service (cinder) のバックエンド"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:85
+msgid "LVM/iSCSI"
+msgstr "LVM/iSCSI"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:88
+msgid "Live Migration back-end"
+msgstr "ライブマイグレーションのバックエンド"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:89
+msgid "shared storage using NFS *"
+msgstr "NFS を使った共有ストレージ *"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:92
+#: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:36
+msgid "Object storage"
+msgstr "オブジェクトストレージ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:93
+msgid "OpenStack Object Storage (swift)"
+msgstr "OpenStack Object Storage (swift)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:98
+msgid ""
+"An asterisk (*) indicates when the example architecture deviates from the "
+"settings of a default installation."
+msgstr ""
+"アスタリスク (*) は、参考アーキテクチャでの設定がデフォルトのインストールの設"
+"定とは違うことを示します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:103
+msgid ""
+"The following features of OpenStack are supported by the example "
+"architecture documented in this guide, but are optional: <placeholder-1/>"
+msgstr ""
+"以下の OpenStack の機能がこのガイドの参考アーキテクチャではサポートされていま"
+"すが、これらは必須項目ではありません。 <placeholder-1/>"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:110
+msgid "block storage"
+msgstr "ブロックストレージ"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:114
+msgid "<glossterm>floating IP address</glossterm>es"
+msgstr "<glossterm>フローティング IP アドレス</glossterm>"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:130
+msgid "Rationale"
+msgstr "設定指針"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:131
+msgid ""
+"This example architecture has been selected based on the current default "
+"feature set of OpenStack <glossterm>Folsom</glossterm>, with an emphasis on "
+"stability. In particular, if none of the guide authors had experience "
+"deploying the Folsom release of OpenStack with a specific back-end or "
+"configuration, we did not consider it for the example architecture. We "
+"believe that many clouds that currently run OpenStack in production have "
+"made similar choices."
+msgstr ""
+"この参考アーキテクチャは、OpenStack <glossterm>Folsom</glossterm> の現在のデ"
+"フォルト機能をベースとして、安定性を重視して選択されました。特に、 OpenStack "
+"Folsom リリースの構成で、この文書の著者の誰も使ったことがないバックエンドや設定"
+"については、この参考アーキテクチャでは取り上げないことにしました。きっと、"
+"現在本番環境で OpenStack を使っている多くのクラウドでは同様の選択がなされて"
+"いることでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:140
+msgid ""
+"You must first choose the operating system that runs on all of the physical "
+"nodes. While OpenStack is supported on several distributions of Linux, we "
+"used <emphasis role=\"bold\">Ubuntu 12.04 LTS (Long Term Support)</"
+"emphasis>, which is used by the majority of the development community, has "
+"feature completeness compared with other distributions, and has clear future "
+"support plans."
+msgstr ""
+"まず最初に、すべての物理ノードで動作させるオペレーティングシステムを選ばなけ"
+"ればなりません。いくつかの Linux ディストリビューションが OpenStack をサポー"
+"トしていますが、我々は <emphasis role=\"bold\">Ubuntu 12.04 LTS (Long Term "
+"Support)</emphasis> を使うことにしました。 Ubuntu 12.04 LTS は開発コミュニ"
+"ティの大半の人が使っており、他のディストリビューションと比較して機能の完成度"
+"が高く、今後のサポート計画もはっきりしています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:148
+msgid ""
+"We recommend that you do not use the default Ubuntu OpenStack install "
+"packages and instead use the <link href=\"https://wiki.ubuntu.com/ServerTeam/"
+"CloudArchive\">Ubuntu Cloud Archive</link> (https://wiki.ubuntu.com/"
+"ServerTeam/CloudArchive). The Cloud Archive is a package repository "
+"supported by Canonical that allows you to upgrade to future OpenStack "
+"releases while remaining on Ubuntu 12.04."
+msgstr ""
+"Ubuntu のデフォルトの OpenStack インストールパッケージではなく、<link href="
+"\"https://wiki.ubuntu.com/ServerTeam/CloudArchive\">Ubuntu Cloud Archive</"
+"link> (https://wiki.ubuntu.com/ServerTeam/CloudArchive) を使うことをお薦めし"
+"ます。Cloud Archive は Canonical がサポートしているパッケージレポジトリで、こ"
+"のレポジトリを使うことで Ubuntu 12.04 を使い続けながら新しい OpenStack リリー"
+"スにアップグレードすることができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:156
+msgid ""
+"<emphasis role=\"bold\">KVM</emphasis> as a <glossterm>hypervisor</"
+"glossterm> complements the choice of Ubuntu - being a matched pair in terms "
+"of support, and also because of the significant degree of attention it "
+"garners from the OpenStack development community (including the authors, who "
+"mostly use KVM). It is also feature complete, free from licensing charges "
+"and restrictions."
+msgstr ""
+"Ubuntu を選択した場合、 <glossterm>ハイパーバイザー</glossterm> として "
+"<emphasis role=\"bold\">KVM</emphasis> が最も適切です。サポートの観点では"
+"ぴったりの組み合わせであり、また (著者も含め) OpenStack の開発コミュニティからの関心も"
+"非常に高いからです。著者のほとんどが KVM を使っています。"
+"また、 KVM は機能が揃っていて、ライセンスの課金も制限もありません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:164
+msgid ""
+"<emphasis role=\"bold\">MySQL</emphasis> follows a similar trend. Despite "
+"its recent change of ownership, this database is the most tested for use "
+"with OpenStack and is heavily documented for running on Ubuntu. We deviate "
+"from the default database, <emphasis>SQLite</emphasis>, because SQLite is "
+"not an appropriate database for production usage."
+msgstr ""
+"<emphasis role=\"bold\">MySQL</emphasis> も同様の理由から選ばれました。最近開"
+"発元が変わりましたが、このデータベースは OpenStack との組み合わせで最もテスト"
+"されており、 Ubuntu での動かし方についても非常によくドキュメントにまとまって"
+"います。"
+"デフォルトのデータベースである <emphasis>SQLite</emphasis> を使っていません"
+"が、それは SQLite が本番環境での利用には適したデータベースではないから"
+"です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:171
+msgid ""
+"The choice of <emphasis role=\"bold\"> RabbitMQ</emphasis> over other AMQP "
+"compatible options that are gaining support in OpenStack, such as ZeroMQ and "
+"Qpid is due to its ease of use with Ubuntu and significant testing in "
+"production. It also is the only option which supports features such as "
+"Compute Cells. We recommend clustering with RabbitMQ, as it is an integral "
+"component of the system, and fairly simple to implement due to its inbuilt "
+"nature."
+msgstr ""
+"OpenStack では AMQP 互換の選択肢としては ZeroMQ や Qpid などのサポートが進ん"
+"でいますが、 <emphasis role=\"bold\"> RabbitMQ</emphasis> を選んだのは、"
+"Ubuntu での使いやすさと、本番環境で十分にテストされているのが理由で"
+"す。また、RabbitMQ は Compute Cell といった機能でサポートされている唯一の選択"
+"肢です。 RabbitMQ はクラスタ構成にすることを推奨します。それは、メッセージ"
+"キューは OpenStack システムで不可欠のコンポーネントで、RabbitMQ 自体で元々サポー"
+"トされているためかなり簡単に実現することができるからです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:180
+msgid ""
+"As discussed in previous chapters, there are several options for networking "
+"in OpenStack Compute. We recommend <emphasis role=\"bold\">FlatDHCP</"
+"emphasis> and to use <emphasis role=\"bold\">Multi-Host</emphasis> "
+"networking mode for high availability, running one <code>nova-network</code> "
+"daemon per OpenStack Compute host. This provides a robust mechanism for "
+"ensuring network interruptions are isolated to individual compute hosts, and "
+"allows for the direct use of hardware network gateways."
+msgstr ""
+"前の章に議論したように、OpenStack Compute のネットワークにはいくつかの選択肢"
+"があります。"
+"我々は <emphasis role=\"bold\">FlatDHCP</emphasis> を選択し、高可用性のため"
+"に <emphasis role=\"bold\">マルチホスト</emphasis> モードを使うことをお薦めし"
+"ます。マルチホストモードでは、<code>nova-network</code> デーモンを OpenStack "
+"Compute ホスト毎に一つ動作させます。この堅牢性のメカニズムでは、ネットワーク"
+"障害が各コンピュートホスト内に閉じることが保証され、各ホストがハードウェアの"
+"ネットワークゲートウェイと直接通信できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:190
+msgid ""
+"<emphasis role=\"bold\">Live Migration</emphasis> is supported by way of "
+"shared storage, with <emphasis role=\"bold\">NFS</emphasis> as the "
+"distributed file system."
+msgstr ""
+"<emphasis role=\"bold\">ライブマイグレーション</emphasis> は共有ストレージを"
+"使うことでサポートされます。分散ファイルシステムとして <emphasis role=\"bold"
+"\">NFS</emphasis> を使います。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:194
+msgid ""
+"Acknowledging that many small-scale deployments see running an Object "
+"Storage service just for the storage of virtual machine images as too "
+"costly, we opted for the file back-end in the OpenStack Image Catalog and "
+"Delivery Service (Glance). If the cloud you are designing also intends to "
+"run Object Storage, it is trivial to enable this as the back-end instead, "
+"and a recommended approach."
+msgstr ""
+"多くの小規模の構成では Object Storage サービスを仮想マシンイメージのストレー"
+"ジのためだけに使うのはコストがかかることなので、"
+"OpenStack Image Service (Glance) のバックエンドとして"
+"ファイルバックエンドを選択しました。あなたが設計しているクラウドで Object "
+"Storage も動かすつもりであれば、代わりに Object Storage をバックエンドとして"
+"使うのは簡単なので、使用することを是非お薦めします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:203
+msgid ""
+"We chose the <emphasis role=\"bold\">SQL back-end for Identity Service "
+"(keystone)</emphasis> over others, such as LDAP. This back-end is simple to "
+"install and is robust. The authors acknowledge that many installations want "
+"to bind with existing directory services, and caution careful understanding "
+"of the <link title=\"LDAP config options\" href=\"http://docs.openstack.org/"
+"folsom/openstack-compute/admin/content/reference-for-ldap-config-options.html"
+"\">array of options available</link> (http://docs.openstack.org/folsom/"
+"openstack-compute/admin/content/reference-for-ldap-config-options.html)"
+msgstr ""
+"<emphasis role=\"bold\">Identity サービス (keystone)</emphasis> のバックエンド"
+"として、LDAP などの他の選択肢ではなく <emphasis role=\"bold\">SQL バックエン"
+"ド</emphasis>を選択しました。 SQL バックエンドはインストールが簡単で、堅牢性"
+"があります。多くのシステムで既存のディレクトリサービスと接続したいという要望"
+"があることは理解しています。その場合は、"
+"<link title=\"LDAP config options\" href=\"http://docs.openstack.org/folsom/"
+"openstack-compute/admin/content/reference-for-ldap-config-options.html\">設定"
+"オプションリスト</link> (http://docs.openstack.org/folsom/openstack-compute/"
+"admin/content/reference-for-ldap-config-options.html) を注意深く理解してから"
+"使って下さい。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:213
+msgid ""
+"The Block Storage service (cinder) is installed natively on external storage "
+"nodes and uses the <emphasis role=\"bold\">LVM/iSCSI plugin</emphasis>. Most "
+"Block Storage Service plugins are tied to particular vendor products and "
+"implementations limiting their use to consumers of those hardware platforms, "
+"but LVM/iSCSI is robust and stable on commodity hardware."
+msgstr ""
+"Block Storage サービス (cinder) は外部のストレージノードに直接インストールされ、"
+"<emphasis role=\"bold\">LVM/iSCSI プラグイン</emphasis> を使用します。ほとん"
+"どの Block Storage サービスのプラグインは個々のベンダー製品や実装に依存してお"
+"り、そのハードウェアプラットフォームを持っているユーザしか利用できませんが、 "
+"LVM/iSCSI は堅牢性と安定性があり、一般的なハードウェアで利用できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:220
+msgid ""
+"While the cloud can be run without the <emphasis role=\"bold\">OpenStack "
+"Dashboard</emphasis>, we consider it to be indispensable, not just for user "
+"interaction with the cloud, but also as a tool for operators. Additionally, "
+"the dashboard's use of Django makes it a flexible framework for extension."
+msgstr ""
+"このクラウドは <emphasis role=\"bold\">OpenStack ダッシュボード</emphasis> なしで"
+"動かすことはできますが、我々はダッシュボードを、クラウドのユーザ操作のためだ"
+"けでなく、オペレータ向けのツールとしてもなくてはならないものと考えています。"
+"まだ、ダッシュボードは Django を使っているため拡張しやすい柔軟なフレームワー"
+"クとなっています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:228
+msgid "Why Not Use the OpenStack Network Service (quantum)?"
+msgstr "なぜ OpenStack Networking Service (quantum) を使わないか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:230
+msgid ""
+"We do not discuss the OpenStack Network Service (quantum) in this guide, "
+"because the authors of this guide only have production deployment experience "
+"using <code>nova-network</code>. Additionally, it does not yet support multi-"
+"host networking."
+msgstr ""
+"我々はこのガイドで OpenStack Networking Service (quantum) について触れていません。"
+"それは、このガイドの著者達が <code>nova-network</code> を使った本番"
+"環境の経験しかないからです。それに加えて、quantum はまだマルチホストネッ"
+"トワークをサポートしていないことも理由の一つです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:237
+msgid "Why Use Multi-host Networking?"
+msgstr "なぜマルチホストネットワークを使うか？"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:238
+msgid ""
+"In a default OpenStack deployment, there is a single <code>nova-network</"
+"code> service that runs within the cloud (usually on the cloud controller) "
+"that provides services such as network address translation (NAT), DHCP, and "
+"DNS to the guest instances. If the single node that runs the <code>nova-"
+"network</code> service goes down, you cannot access your instances and the "
+"instances cannot access the Internet. The single node that runs the nova-"
+"network service can become a bottleneck if excessive network traffic comes "
+"in and goes out of the cloud."
+msgstr ""
+"デフォルトの OpenStack の構成では、<code>nova-network</code> サービスはクラウ"
+"ド内 (通常はクラウドコントローラー) で一つだけ動作し、ゲストインスタンスに"
+"ネットワークアドレス変換 (NAT)、DHCP、DNS などのサービスを提供します。 "
+"<code>nova-network</code> サービスが動作している1台のノードがダウンすると、ユーザーはイ"
+"ンスタンスにアクセスできなくなり、インスタンスはインターネットにアクセスでき"
+"なくなります。クラウドで送受信されるネットワークトラフィックが多くなり過ぎる"
+"と、nova-network サービスが動作する1台のノードがボトルネックになる可能性があ"
+"ります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:249
+msgid ""
+"<link title=\"Multi-host\" href=\"http://docs.openstack.org/folsom/openstack-"
+"compute/admin/content/existing-ha-networking-options.html#d6e8906\">Multi-"
+"host</link> (http://docs.openstack.org/folsom/openstack-compute/admin/"
+"content/existing-ha-networking-options.html#d6e8906) is a high-availability "
+"option for the network configuration where the nova-network service is run "
+"on every compute node instead of running on only a single node."
+msgstr ""
+"<link title=\"Multi-host\" href=\"http://docs.openstack.org/folsom/openstack-"
+"compute/admin/content/existing-ha-networking-options.html#d6e8906\">マルチホ"
+"スト</link> (http://docs.openstack.org/folsom/openstack-compute/admin/"
+"content/existing-ha-networking-options.html#d6e8906) は、ネットワーク設定の高"
+"可用性オプションで、 nova-network サービスを1台のノードだけで動かすのではなく、各コンピュート"
+"ノードで動作させるものです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:262
+msgid "Detailed Description"
+msgstr "詳細な説明"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:263
+msgid ""
+"The reference architecture consists of multiple compute nodes, a cloud "
+"controller, an external NFS storage server for instance storage and an "
+"OpenStack Block Storage server for <glossterm>volume</glossterm> storage. A "
+"network time service (Network Time Protocol, NTP) synchronizes time for all "
+"the nodes. FlatDHCPManager in multi-host mode is used for the networking."
+msgstr ""
+"参考アーキテクチャは複数のコンピュートノード、クラウドコントローラー、インス"
+"タンスストレージ用の外部の NFS ストレージサーバー、<glossterm>ボリューム</"
+"glossterm> ストレージ用の OpenStack Block Storage サーバーで構成されていま"
+"す。ネットワーク時刻サービス (Network Time Protocol, NTP) により全ノードの時"
+"刻が同期されます。ネットワークでは、マルチホストモードの FlatDHCPManager を使"
+"用しています。"
+
+#. When image changes, this message will be marked fuzzy or untranslated for
+#. you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:274
+msgid ""
+"@@image: 'figures/os-ref-arch.png'; md5=d14dd97ceaea1a78af7f292c5d6bd605"
+msgstr ""
+"@@image: 'figures/os-ref-arch.png'; md5=d14dd97ceaea1a78af7f292c5d6bd605"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:278
+msgid ""
+"The cloud controller runs: the dashboard, the API services, the database "
+"(MySQL), a message queue server (RabbitMQ), the scheduler for choosing "
+"compute resources (nova-scheduler), Identity services (keystone, <code>nova-"
+"consoleauth</code>), Image services (<code>glance-api</code>, <code>glance-"
+"registry</code>), services for console access of guests, and block storage "
+"services including the scheduler for storage resources (<code>cinder-api</"
+"code> and <code>cinder-scheduler</code>)."
+msgstr ""
+"クラウドコントローラーでは、ダッシュボード、API サービス、データベース "
+"(MySQL)、メッセージキューサーバー (RabbitMQ)、コンピューティングリソースの選"
+"択を行うスケジューラー (nova-scheduler)、 Identity サービス (keystone, "
+"<code>nova-consoleauth</code>), Image Service (<code>glance-api</code>, "
+"<code>glance-registry</code>), ゲストへのコンソールアクセス用サービス、"
+"ストレージリソースのスケジューラーを含む Block Storage サービス"
+"(<code>cinder-api</code> と <code>cinder-scheduler</code>) が動作します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:289
+msgid ""
+"Compute nodes are where the computing resources are held, and in our example "
+"architecture they run the hypervisor (KVM), libvirt (the driver for the "
+"hypervisor, which enables live migration node to node), <code>nova-compute</"
+"code>, <code>nova-api-metadata</code> (generally only used when running in "
+"multi-host mode, it retrieves instance-specific metadata), nova-vncproxy, "
+"and <code>nova-network.</code>"
+msgstr ""
+"コンピュートノードはコンピューティングリソースを提供する場所です。この参考"
+"アーキテクチャでは、コンピュートノードで、ハイパーバイザー (KVM)、 libvirt "
+"(ハイパーバイザー用のドライバーで、ノード間でのライブマイグレーションを可能にしま"
+"す)、 <code>nova-compute</code>、 <code>nova-api-metadata</code> (通常はマル"
+"チホストモードの場合のみ使用されます。インスタンス固有のメタデータの取得に使"
+"われます)、 nova-vncproxy、 <code>nova-network</code> が動作します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:299
+msgid ""
+"The network consists of two switches, one for the management or private "
+"traffic, and one which covers public access including Floating IPs. To "
+"support this, the cloud controller and the compute nodes have two network "
+"cards. The OpenStack Block Storage and NFS storage servers only need to "
+"access the private network and therefore only need one network card, but "
+"multiple cards run in a bonded configuration are recommended if possible. "
+"Floating IP access is direct to the internet, whereas Flat IP access goes "
+"through a NAT."
+msgstr ""
+"ネットワークは2つのスイッチで構成され、一つは管理やプライベートトラフィック用"
+"で、もう一つはフローティングIPなどのパブリックアクセスに使用されます。この構"
+"成をとるため、クラウドコントローラーと各コンピュートノードにはNICを2つ用意し"
+"ています。"
+"OpenStack Block Storage と NFS ストレージサーバーはプライベートネットワークだ"
+"けにアクセスできればよく、そのため必要なNICは1つです。ただし、可能であれば複数のNIC"
+"を bonding 設定で動作させることを推奨します。フローティング IP アクセスはイン"
+"ターネットと直結になりますが、フラット IP アクセスは NAT 経由となります。"
+
+#. When image changes, this message will be marked fuzzy or untranslated for
+#. you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:313
+msgid ""
+"@@image: 'figures/os_physical_network_1.png'; "
+"md5=9f2bb38fdeb722bb06baca74fc91d03e"
+msgstr ""
+"@@image: 'figures/os_physical_network_1.png'; "
+"md5=9f2bb38fdeb722bb06baca74fc91d03e"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:320
+msgid "Optional Extensions"
+msgstr "さらなる拡張"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:321
+msgid "You can extend this reference architecture as follows:"
+msgstr "この参考アーキテクチャを以下のように拡張することができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:325
+msgid "Add additional cloud controllers (see <xref linkend=\"maintenance\"/>)."
+msgstr ""
+"追加でクラウドコントローラーを増やす (<xref linkend=\"maintenance\"/> を参"
+"照)。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:329
+msgid ""
+"Add an OpenStack Storage service (http://docs.openstack.org/folsom/openstack-"
+"object-storage/admin/)"
+msgstr ""
+"OpenStack Storage サービスを追加する (http://docs.openstack.org/folsom/"
+"openstack-object-storage/admin/)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_example.xml:333
+msgid ""
+"Add additional OpenStack Block Storage hosts (see <xref linkend=\"maintenance"
+"\"/>)."
+msgstr ""
+"追加で OpenStack Block Storage ホストを増やす (see <xref linkend="
+"\"maintenance\"/> 参照)。"
