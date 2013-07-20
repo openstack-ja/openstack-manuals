@@ -1,0 +1,673 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-21 08:33+0000\n"
+"Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:1663
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:205
+msgid "iptables"
+msgstr "iptables"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:16
+msgid "Network Troubleshooting"
+msgstr "ネットワークのトラブルシューティング"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:17
+msgid ""
+"Network troubleshooting can unfortunately be a very difficult and confusing "
+"procedure. A network issue can cause a problem at several points in the "
+"cloud. Using a logical troubleshooting procedure can help mitigate the "
+"confusion and more quickly isolate where exactly the network issue is. This "
+"chapter aims to give you the information you need to make yours."
+msgstr ""
+"ネットワークのトラブルシューティングは、残念ながら、非常に難しくややこしい作"
+"業です。ネットワークの問題は、クラウドのいくつかの場所で問題となりえます。論"
+"理的な問題解決手順を用いることは、混乱の緩和や迅速な切り分けに役立つでしょ"
+"う。この章は、あなたがものにしたい情報を提供することを目標とします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:25
+msgid "Using \"ip a\" to Check Interface States"
+msgstr "\"ip a\" を使ってインタフェース状態をチェックする"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:26
+msgid ""
+"On compute nodes and nodes running nova-network, use the following command "
+"to see information about interfaces, including information about IPs, VLANs, "
+"and whether your interfaces are up."
+msgstr ""
+"コンピュートノード上でnova-networkが動いている場合、次のコマンドでIPやVLAN、また、"
+"インターフェイスがUPしているか、などインターフェイス関連の情報を見られます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:31
+msgid ""
+"If you're encountering any sort of networking difficulty, one good initial "
+"sanity check is to make sure that your interfaces are up. For example:"
+msgstr ""
+"もしあなたがネットワークの問題に直面した場合、まず最初にするとよいのは、"
+"インターフェイスがUPになっているかを確認することです。例えば、"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:40
+msgid ""
+"You can safely ignore the state of virbr0, which is a default bridge created "
+"by QEMU and not used by OpenStack."
+msgstr ""
+"virbr0の状態は無視することができます。なぜならそれはlibvirtが作成するデフォルト"
+"のブリッジで、OpenStackからは使われないからです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:45
+msgid "Network Traffic in the Cloud"
+msgstr "クラウド上のネットワークトラフィック"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:46
+msgid ""
+"If you are logged in to an instance and ping an external host, for example "
+"google.com, the ping packet takes the following route:"
+msgstr ""
+"もしあなたがインスタンスにログインしており、外部ホスト、例えば google.comに"
+"pingした場合、そのpingパケットは下記経路を通ります。"
+
+#. When image changes, this message will be marked fuzzy or untranslated for
+#. you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:53
+msgid ""
+"@@image: 'figures/network_packet_ping.png'; "
+"md5=3b1f2132f9133d2ce1960743a2d6c6a4"
+msgstr ""
+"@@image: 'figures/network_packet_ping.png'; "
+"md5=3b1f2132f9133d2ce1960743a2d6c6a4"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:59
+msgid ""
+"The instance generates a packet and places it on the virtual NIC inside the "
+"instance, such as, eth0."
+msgstr ""
+"インスタンスはパケットを生成し、インスタンス内の仮想NIC、例えば eth0にそれを"
+"渡します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:64
+msgid ""
+"The packet transfers to the virtual NIC of the compute host, such as, vnet1. "
+"You can find out what vent NIC is being used by looking at the /etc/libvirt/"
+"qemu/instance-xxxxxxxx.xml file."
+msgstr ""
+"そのパケットはコンピュートホストの仮想NIC、例えば vnet1に転送されます。vnet NICの"
+"構成は、/etc/libvirt/qemu/instance-xxxxxxxx.xml を見ることで把握できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:71
+msgid ""
+"From the vnet NIC, the packet transfers to a bridge on the compute node, "
+"such as, <code>br100.</code>"
+msgstr ""
+"パケットはvnet NICからコンピュートノードのブリッジ、例えば<code>br100</code>に転"
+"送されます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:75
+msgid ""
+"If you run FlatDHCPManager, one bridge is on the compute node. If you run "
+"VlanManager, one bridge exists for each VLAN."
+msgstr ""
+"もしFlatDHCPManagerを使っているのであれば、ブリッジはコンピュートノード上に一つで"
+"す。VlanManagerであれば、VLANごとにブリッジが存在します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:78
+msgid ""
+"To see which bridge the packet will use, run the command: <placeholder-1/>"
+msgstr ""
+"下記コマンドを実行することで、パケットがどのブリッジを使うか確認できます。"
+"<placeholder-1/>"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:82
+msgid ""
+"Look for the vnet NIC. You can also reference nova.conf and look for the "
+"flat_interface_bridge option."
+msgstr ""
+"vnet NICを探してください。また、nova.confのflat_network_bridgeオプションも参"
+"考になります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:88
+msgid ""
+"The packet transfers to the main NIC of the compute node. You can also see "
+"this NIC in the brctl output, or you can find it by referencing the "
+"flat_interface option in nova.conf."
+msgstr ""
+"パケットはコンピュートノードの物理NICに送られます。このNICはbrctlコマンドの出力か"
+"ら、もしくはnova.confのflat_interfaceオプションから確認できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:96
+msgid ""
+"After the packet is on this NIC, it transfers to the compute node's default "
+"gateway. The packet is now most likely out of your control at this point. "
+"The diagram depicts an external gateway. However, in the default "
+"configuration with multi-host, the compute host is the gateway."
+msgstr ""
+"パケットはこのNICに送られた後、コンピュートノードのデフォルトゲートウェイに転送さ"
+"れます。パケットはこの時点で、おそらくあなたの管理範囲外でしょう。図には外部"
+"ゲートウェイを描いていますが、マルチホストのデフォルト構成では、コンピュートホスト"
+"がゲートウェイです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:105
+msgid "Reverse the direction to see the path of a ping reply."
+msgstr "pingの応答経路は、これと逆方向です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:107
+msgid ""
+"From this path, you can see that a single packet travels across four "
+"different NICs. If a problem occurs with any of these NICs, a network issue "
+"occurs."
+msgstr ""
+"この経路説明によって、あなたはパケットが4つの異なるNICの間を行き来しているこ"
+"とがわかったでしょう。これらのどのNICに問題が発生しても、ネットワークの問題と"
+"なるでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:112
+msgid "Finding a Failure in the Path"
+msgstr "経路上の障害を見つける"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:113
+msgid ""
+"Use ping to quickly find where a failure exists in the network path. In an "
+"instance, first see if you can ping an external host, such as google.com. If "
+"you can, then there shouldn't be a network problem at all."
+msgstr ""
+"ネットワーク経路のどこに障害があるかを素早く見つけるには、pingを使います。ま"
+"ずあなたがインスタンス上で、google.comのような外部ホストにpingできるのであれ"
+"ば、ネットワークの問題はないでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:117
+msgid ""
+"If you can't, try pinging the IP address of the compute node where the "
+"instance is hosted. If you can ping this IP, then the problem is somewhere "
+"between the compute node and that compute node's gateway."
+msgstr ""
+"もしそれができないのであれば、インスタンスがホストされているコンピュートノードのIP"
+"アドレスへpingを試行してください。もしそのIPにpingできるのであれば、その"
+"コンピュートノードと、ゲートウェイ間のどこかに問題があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:121
+msgid ""
+"If you can't ping the IP address of the compute node, the problem is between "
+"the instance and the compute node. This includes the bridge connecting the "
+"compute node's main NIC with the vnet NIC of the instance."
+msgstr ""
+"もしコンピュートノードのIPアドレスにpingできないのであれば、問題はインスタンスと"
+"コンピュートノード間にあります。これはコンピュートノードの物理NICとインスタンス vnet "
+"NIC間のブリッジ接続を含みます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:125
+msgid ""
+"One last test is to launch a second instance and see if the two instances "
+"can ping each other. If they can, the issue might be related to the firewall "
+"on the compute node."
+msgstr ""
+"最後のテストでは、2つ目のインスタンスを起動し、2つのインスタンス間でお互いに"
+"pingを実行します。実行できるのであれば、この問題にはコンピュートノード上のファイア"
+"ウォールが関係しているかもしれません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:131
+msgid "tcpdump"
+msgstr "tcpdump"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:132
+msgid ""
+"One great, although very in-depth, way of troubleshooting network issues is "
+"to use tcpdump. It's recommended to use tcpdump at several points along the "
+"network path to correlate where a problem might be. If you prefer working "
+"with a GUI, either live or by using a tcpdump capture do also check out "
+"<link title=\"Wireshark\" href=\"http://www.wireshark.org/\">Wireshark</"
+"link> (http://www.wireshark.org/)."
+msgstr ""
+"ネットワーク問題の解決を徹底的に行う方法のひとつは、tcpdumpです。tcpdumpを使"
+"い、ネットワーク経路上の数点、問題のありそうなところから情報を収集することを"
+"おすすめします。もしGUIが好みであれば、<link title=\"Wireshark\" href="
+"\"http://www.wireshark.org/\">Wireshark</link> (http://www.wireshark.org/)を"
+"試してみてはいかがでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:141
+msgid "For example, run the following command:"
+msgstr "例えば、以下のコマンドを実行します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:143
+msgid ""
+"tcpdump -i any -n -v 'icmp[icmptype] = icmp-echoreply or icmp[icmptype] = "
+"icmp-echo'"
+msgstr ""
+"tcpdump -i any -n -v 'icmp[icmptype] = icmp-echoreply or icmp[icmptype] = "
+"icmp-echo'"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:146
+msgid "Run this on the command line of the following areas:"
+msgstr "このコマンドは以下の場所で実行します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:150
+msgid "An external server outside of the cloud."
+msgstr "クラウド外部のサーバー上"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:153
+msgid "A compute node."
+msgstr "コンピュートノード上"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:156
+msgid "An instance running on that compute node."
+msgstr "コンピュートノード内のインスタンス上"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:159
+msgid "In this example, these locations have the following IP addresses:"
+msgstr "例では、この環境には以下のIPアドレスが存在します"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:161
+msgid "DWC: Check formatting of the following:"
+msgstr "(翻訳不要)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:172
+msgid ""
+"Next, open a new shell to the instance and then ping the external host where "
+"tcpdump is running. If the network path to the external server and back is "
+"fully functional, you see something like the following:"
+msgstr ""
+"次に、新しいシェルを開いてtcpdumpの動いている外部ホストへpingを行います。もし"
+"外部サーバーとのネットワーク経路に問題がなければ、以下のように表示されます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:176
+msgid "On the external server:"
+msgstr "外部サーバー上"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:181
+msgid "On the Compute Node:"
+msgstr "コンピュートノード上"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:194
+msgid "On the Instance:"
+msgstr "インスタンス上"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:197
+msgid ""
+"Here, the external server received the ping request and sent a ping reply. "
+"On the compute node, you can see that both the ping and ping reply "
+"successfully passed through. You might also see duplicate packets on the "
+"compute node, as seen above, because tcpdump captured the packet on both the "
+"bridge and outgoing interface."
+msgstr ""
+"外部サーバーはpingリクエストを受信し、pingリプライを送信しています。コンピュート"
+"ノード上では、pingとpingリプライがそれぞれ成功していることがわかります。ま"
+"た、見ての通り、コンピュートノード上ではパケットが重複していることもわかるでしょ"
+"う。なぜならtcpdumpはブリッジと外向けインターフェイスの両方でパケットをキャプ"
+"チャするからです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:206
+msgid ""
+"Nova automatically manages iptables, including forwarding packets to and "
+"from instances on a compute node, forwarding floating IP traffic, and "
+"managing security group rules."
+msgstr ""
+"Novaはiptablesを自動的に管理します。コンピュートノード上のインスタンス間でのパケッ"
+"ト送受信、フローティングIPトラフィック、security groupのルール管理もそれに含"
+"まれます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:210
+msgid "Run the following command to view the current iptables configuration:"
+msgstr "iptablesの現在の構成を見るには、以下のコマンドを実行します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:213
+msgid ""
+"If you modify the configuration, it reverts the next time you restart nova-"
+"network. You must use OpenStack to manage iptables."
+msgstr ""
+"もしiptablesの構成を変更した場合、次のnova-network再起動時に前の状態に戻りま"
+"す。iptablesの管理にはOpenStackを使ってください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:219
+msgid "Network Configuration in the Database"
+msgstr "データベースにあるネットワーク設定"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:220
+msgid ""
+"The nova database table contains a few tables with networking information:"
+msgstr ""
+"novaデータベースのテーブルには、いくつかのネットワーク情報が含まれています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:224
+msgid ""
+"fixed_ips: contains each possible IP address for the subnet(s) added to "
+"Nova. This table is related to the instances table by way of the fixed_ips."
+"instance_uuid column."
+msgstr ""
+"fixed_ips: Novaに登録されたサブネットで利用可能なIPアドレス。このテーブルは"
+"fixed_ips.instance_uuid列で instances テーブルと関連付けられます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:230
+msgid ""
+"floating_ips: contains each floating IP address that was added to nova. This "
+"table is related to the fixed_ips table by way of the floating_ips."
+"fixed_ip_id column."
+msgstr ""
+"floating_ips: Novaに登録されたフローティングIPアドレス。このテーブルは"
+"floating_ips.fixed_ip_id列でfixed_ipsテーブルと関連付けられます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:236
+msgid ""
+"instances: not entirely network specific, but it contains information about "
+"the instance that is utilizing the fixed_ip and optional floating_ip."
+msgstr ""
+"instances: ネットワーク特有のテーブルではありませんが、fixed_ipとfloating_ip"
+"を使っているインスタンスの情報を管理します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:242
+msgid ""
+"From these tables, you can see that a Floating IP is technically never "
+"directly related to an instance, it must always go through a Fixed IP."
+msgstr ""
+"これらのテーブルから、フローティングIPが技術的には直接インスタンスにひも付け"
+"られておらず、固定IP経由であることがわかります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:246
+msgid "Manually De-Associating a Floating IP"
+msgstr "手動でフローティングIPの関連付けを解除する"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:247
+msgid ""
+"Sometimes an instance is terminated but the Floating IP was not correctly de-"
+"associated from that instance. Because the database is in an inconsistent "
+"state, the usual tools to de-associate the IP no longer work. To fix this, "
+"you must manually update the database."
+msgstr ""
+"しばしば、フローティングIPを正しく開放しないままインスタンスが終了されること"
+"があります。するとデータベースは不整合状態となるため、通常のツールではうまく"
+"開放できません。解決するには、手動でデータベースを更新する必要があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:253
+msgid "First, find the UUID of the instance in question:"
+msgstr "まず、インスタンスのUUIDを確認します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:256
+msgid "Next, find the Fixed IP entry for that UUID:"
+msgstr "次に、そのUUIDから固定IPのエントリーを探します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:258
+msgid "You can now get the related Floating IP entry:"
+msgstr "関連するフローティングIPのエントリーが見つかります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:261
+msgid "And finally, you can de-associate the Floating IP:"
+msgstr "最後に、フローティングIPを開放します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:264
+msgid "You can optionally also de-allocate the IP from the user's pool:"
+msgstr "また、ユーザプールからIPを開放することもできます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:270
+msgid "Debugging DHCP Issues"
+msgstr "DHCP の問題をデバッグする"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:271
+msgid ""
+"One common networking problem is that an instance boots successfully but is "
+"not reachable because it failed to obtain an IP address from dnsmasq, which "
+"is the DHCP server that is launched by the nova-network service."
+msgstr ""
+"よくあるネットワークの問題に、インスタンスが起動しているにも関わらず、dnsmasq"
+"からのIPアドレス取得に失敗し、到達できないという現象があります。dnsmasqは"
+"nova-nwtworkサービスから起動されるDHCPサーバです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:276
+msgid ""
+"The simplest way to identify that this the problem with your instance is to "
+"look at the console output of your instance. If DHCP failed, you can "
+"retrieve the console log by doing:"
+msgstr ""
+"もっともシンプルにこの問題を特定する方法は、インスタンス上のコンソール出力を"
+"確認することです。もしDHCPが正しく動いていなければ、下記のようにコンソールロ"
+"グを参照してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:281
+msgid ""
+"If your instance failed to obtain an IP through DHCP, some messages should "
+"appear in the console. For example, for the Cirros image, you see output "
+"that looks like:"
+msgstr ""
+"もしインスタンスがDHCPからのIP取得に失敗していれば、いくつかのメッセージがコ"
+"ンソールで確認できるはずです。例えば、Cirrosイメージでは、このような出力にな"
+"ります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:293
+msgid ""
+"After you establish that the instance booted properly, the task is to figure "
+"out where the failure is."
+msgstr ""
+"インスタンスが正しく起動した後、この手順でどこが問題かを切り分けることがで"
+"きます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:295
+msgid ""
+"A DHCP problem might be caused by a misbehaving dnsmasq process. First, "
+"debug by checking logs and then restart the dnsmasq processes only for that "
+"project (tenant). In VLAN mode there is a dnsmasq process for each tenant. "
+"Once you have restarted targeted dnsmasq processes, the simplest way to rule "
+"out dnsmasq causes is to kill all of the dnsmasq processes on the machine, "
+"and restart nova-network. As a last resort, do this as root:"
+msgstr ""
+"DHCPの問題はdnsmasqの不具合が原因となりがちです。まず、ログを確認し、その後該"
+"当するプロジェクト(テナント)のdnsmasqプロセスを再起動してください。VLANモード"
+"においては、dnsmasqプロセスはテナントごとに存在します。すでに該当のdnsmasqプ"
+"ロセスを再起動しているのであれば、もっともシンプルな解決法は、マシン上の全て"
+"のdnsmasqプロセスをkillし、nova-networkを再起動することです。最終手段として、"
+"rootで以下を実行してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:306
+msgid ""
+"Several minutes after nova-network is restarted, you should see new dnsmasq "
+"processes running:"
+msgstr ""
+"nova-networkの再起動から数分後、新たなdnsmasqプロセスが動いていることが確認で"
+"きるでしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:317
+msgid ""
+"If your instances are still not able to obtain IP addresses, the next thing "
+"to check is if dnsmasq is seeing the DHCP requests from the instance. On the "
+"machine that is running the dnsmasq process, which is the compute host if "
+"running in multi-host mode, look at /var/log/syslog to see the dnsmasq "
+"output. If dnsmasq is seeing the request properly and handing out an IP, the "
+"output looks like:"
+msgstr ""
+"もしまだインスタンスがIPアドレスを取得できない場合、次はdnsmasqがインスタンス"
+"からのDHCPリクエストを見えているか確認します。dnsmasqプロセスが動いているマシンで、"
+"/var/log/syslogを参照し、dnsmasqの出力を確認します。なお、マルチホストモードで"
+"動作している場合は、dnsmasqプロセスはコンピュートノードで動作します。もしdnsmasqがリクエ"
+"ストを正しく受け取り、処理していれば、以下のような出力になります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:329
+msgid ""
+"If you do not see the DHCPDISCOVER, a problem exists with the packet getting "
+"from the instance to the machine running dnsmasq. If you see all of above "
+"output and your instances are still not able to obtain IP addresses then the "
+"packet is able to get from the instance to the host running dnsmasq, but it "
+"is not able to make the return trip."
+msgstr ""
+"もしDHCPDISCOVERが見つからなければ、dnsmasqが動いているマシンがインスタンスか"
+"らパケットを受け取れない何らかの問題があります。もし上記の出力が全て確認で"
+"き、かついまだにIPアドレスを取得できないのであれば、パケットはインスタンスか"
+"らdnsmasq稼働マシンに到達していますが、その復路に問題があります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:336
+msgid "If you see any other message, such as:"
+msgstr "もし他にこのようなメッセージを確認できたのであれば、"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:338
+msgid ""
+"Then this may be a dnsmasq and/or nova-network related issue. (For the "
+"example above, the problem happened to be that dnsmasq did not have any more "
+"IP addresses to give away because there were no more Fixed IPs available in "
+"the OpenStack Compute database)."
+msgstr ""
+"これはdnsmasqの、もしくはdnsmasqとnova-network両方の問題です。(例えば上記で"
+"は、OpenStack Compute データベース上に利用可能な固定IPがなく、dnsmasqがIPアド"
+"レスを払い出せない問題が発生しています)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:343
+msgid ""
+"If there's a suspicious-looking dnsmasq log message, take a look at the "
+"command-line arguments to the dnsmasq processes to see if they look correct."
+msgstr ""
+"もしdnsmasqのログメッセージで疑わしいものがあれば、コマンドラインにてdnsmasq"
+"が正しく動いているか確認してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:347
+msgid "The output looks something like:"
+msgstr "出力は以下のようになります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:360
+msgid ""
+"If the problem does not seem to be related to dnsmasq itself, at this point, "
+"use tcpdump on the interfaces to determine where the packets are getting "
+"lost."
+msgstr ""
+"もし問題がdnsmasqと関係しないようであれば、tcpdumpを使ってパケットロスがない"
+"か確認してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:363
+msgid ""
+"DHCP traffic uses UDP. The client sends from port 68 to port 67 on the "
+"server. Try to boot a new instance and then systematically listen on the "
+"NICs until you identify the one that isn't seeing the traffic. To use "
+"tcpdump to listen to ports 67 and 68 on br100, you would do:"
+msgstr ""
+"DHCPトラフィックはUDPを使います。そして、クライアントは68番ポートからサーバー"
+"の67番ポートへパケットを送信します。新しいインスタンスを起動し、機械的にNICを"
+"リッスンしてください。トラフィックに現れない通信を特定できるまで行います。"
+"tcpdumpでbr100上のポート67、68をリッスンするには、こうします。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:369
+msgid ""
+"You should be doing sanity checks on the interfaces using command such as "
+"\"<code>ip a</code>\" and \"<code>brctl show</code>\" to ensure that the "
+"interfaces are actually up and configured the way that you think that they "
+"are."
+msgstr ""
+"また、\"<code>ip a</code>\" や \"<code>brctl show</code>\"などのコマンドを"
+"使って、インターフェイスが実際にUPしているか、あなたが考えたとおりに設定され"
+"ているか、正当性を検査をすべきです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:376
+msgid "Debugging DNS Issues"
+msgstr "DNS の問題をデバッグする"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:377
+msgid ""
+"If you are able to ssh into an instance, but it takes a very long time (on "
+"the order of a minute) to get a prompt, then you might have a DNS issue. The "
+"reason a DNS issue can cause this problem is that the ssh server does a "
+"reverse DNS lookup on the IP address that you are connecting from. If DNS "
+"lookup isn't working on your instances, then you must wait for the DNS "
+"reverse lookup timeout to occur for the ssh login process to complete."
+msgstr ""
+"あなたがインスタンスにsshできるけれども、プロンプトが表示されるまで長い時間"
+"(約1分)を要する場合、DNSに問題があるかもしれません。sshサーバーが接続元IPアド"
+"レスのDNS逆引きをおこなうこと、それがこの問題の原因です。もしあなたのインスタ"
+"ンスでDNSが正しく引けない場合、sshのログインプロセスが完了するには、DNSの逆引"
+"きがタイムアウトするまで待たなければいけません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:386
+msgid ""
+"When debugging DNS issues, start by making sure the host where the dnsmasq "
+"process for that instance runs is able to correctly resolve. If the host "
+"cannot resolve, then the instances won't be able either."
+msgstr ""
+"DNS問題のデバッグをするとき、そのインスタンスのdnsmasqが動いているホストが、"
+"名前解決できるかを確認することから始めます。もしホストができないのであれば、"
+"インスタンスも同様でしょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:390
+msgid ""
+"A quick way to check if DNS is working is to resolve a hostname inside your "
+"instance using the <code>host</code> command. If DNS is working, you should "
+"see:"
+msgstr ""
+"DNSが正しくホスト名をインスタンス内から解決できているか確認する簡単な方法は、"
+"<code>host</code>コマンドです。もしDNSが正しく動いていれば、以下メッセージが"
+"確認できます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:398
+msgid ""
+"If you're running the Cirros image, it doesn't have the \"host\" program "
+"installed, in which case you can use ping to try to access a machine by "
+"hostname to see if it resolves. If DNS is working, the first line of ping "
+"would be:"
+msgstr ""
+"もしあなたがCirrosイメージを使っているのであれば、\"host\"プログラムはインス"
+"トールされていません。その場合はpingを使い、ホスト名が解決できているか判断で"
+"きます。もしDNSが動いていれば、ping結果の先頭行はこうなるはずです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:405
+msgid ""
+"If the instance fails to resolve the hostname, you have a DNS problem. For "
+"example:"
+msgstr ""
+"もしインスタンスがホスト名の解決に失敗するのであれば、DNSに問題があります。例"
+"えば、"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:409
+msgid ""
+"In an OpenStack cloud, the dnsmasq process acts as the DNS server for the "
+"instances in addition to acting as the DHCP server. A misbehaving dnsmasq "
+"process may be the source of DNS-related issues inside the instance. As "
+"mentioned in the previous section, the simplest way to rule out a "
+"misbehaving dnsmasq process is to kill all of the dnsmasq processes on the "
+"machine, and restart nova-network. However, be aware that this command "
+"affects everyone running instances on this node, including tenants that have "
+"not seen the issue. As a last resort, as root:"
+msgstr ""
+"OpenStackクラウドにおいて、dnsmasqプロセスはDHCPサーバに加えてDNSサーバーの役"
+"割を担っています。dnsmasqの不具合は、インスタンスにおけるDNS関連問題の原因と"
+"なりえます。前節で述べたように、dnsmasqの不具合を解決するもっともシンプルな方"
+"法は、マシン上のすべてのdnsmasqプロセスをkillし、nova-networkを再起動すること"
+"です。しかしながら、このコマンドは該当ノード上で動いているすべてのインスタン"
+"ス、特に問題がないテナントにも影響します。最終手段として、rootで以下を実行します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:422
+msgid "After the dnsmasq processes start again, check if DNS is working."
+msgstr "dnsmasq再起動後に、DNSが動いているか確認します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:424
+msgid ""
+"If restarting the dnsmasq process doesn't fix the issue, you might need to "
+"use tcpdump to look at the packets to trace where the failure is. The DNS "
+"server listens on UDP port 53. You should see the DNS request on the bridge "
+"(such as, br100) of your compute node. If you start listening with tcpdump "
+"on the compute node:"
+msgstr ""
+"dnsmasqの再起動でも問題が解決しないときは、tcpdumpで問題がある場所のパケット"
+"トレースを行う必要があるでしょう。DNSサーバーはUDPポート53番でリッスンしま"
+"す。あなたのコンピュートノードのブリッジ(br100など)上でDNSリクエストをチェックして"
+"ください。コンピュートノード上にて、tcpdumpでリッスンを開始すると、"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:432
+msgid ""
+"Then, if you ssh into your instance and try to <code>ping openstack.org</"
+"code>, you should see something like:"
+msgstr ""
+"インスタンスへのssh、<code>ping openstack.org</code>の試行にて、以下のような"
+"メッセージが確認できるでしょう。"
