@@ -1,0 +1,173 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-21 08:33+0000\n"
+"Last-Translator: Tsutomu Takekawa <takekawa@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:55
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:152
+#: doc/src/docbkx/openstack-ops/src/app_usecases.xml:188
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:14
+msgid "Resources"
+msgstr "リソース"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:34
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:16
+msgid "OpenStack"
+msgstr "OpenStack"
+
+#: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2236
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:43
+msgid "Python"
+msgstr "Python"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_compute_nodes.xml:355
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:49
+msgid "Networking"
+msgstr "ネットワーク"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:18
+msgid ""
+"<link href=\"http://docs.openstack.org/folsom/openstack-compute/admin/"
+"content/\">OpenStack Compute Administration Manual</link> (http://docs."
+"openstack.org/folsom/openstack-compute/admin/content/)"
+msgstr ""
+"<link href=\"http://docs.openstack.org/folsom/openstack-compute/admin/"
+"content/\">OpenStack Compute Administration Manual</link> (http://docs."
+"openstack.org/folsom/openstack-compute/admin/content/)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:23
+msgid ""
+"<link href=\"http://docs.openstack.org/folsom/openstack-compute/install/apt/"
+"content/\">OpenStack Compute Install and Deploy Manual - Ubuntu</link> "
+"(http://docs.openstack.org/folsom/openstack-compute/install/apt/content/)"
+msgstr ""
+"<link href=\"http://docs.openstack.org/folsom/openstack-compute/install/apt/"
+"content/\">OpenStack Compute Install and Deploy Manual - Ubuntu</link> "
+"(http://docs.openstack.org/folsom/openstack-compute/install/apt/content/)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:29
+msgid ""
+"<link href=\"http://www.packtpub.com/openstack-cloud-computing-cookbook/book"
+"\">OpenStack Cloud Computing Cookbook</link> (http://www.packtpub.com/"
+"openstack-cloud-computing-cookbook/book)"
+msgstr ""
+"<link href=\"http://www.packtpub.com/openstack-cloud-computing-cookbook/book"
+"\">OpenStack Cloud Computing Cookbook</link> (http://www.packtpub.com/"
+"openstack-cloud-computing-cookbook/book)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:35
+msgid "Cloud (general)"
+msgstr "クラウド (全般)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:37
+msgid ""
+"<link href=\"http://csrc.nist.gov/publications/nistpubs/800-145/SP800-145.pdf"
+"\">NIST Cloud Computing Definition</link> (http://csrc.nist.gov/publications/"
+"nistpubs/800-145/SP800-145.pdf)"
+msgstr ""
+"<link href=\"http://csrc.nist.gov/publications/nistpubs/800-145/SP800-145.pdf"
+"\">NIST Cloud Computing Definition</link> (http://csrc.nist.gov/publications/"
+"nistpubs/800-145/SP800-145.pdf)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:45
+msgid ""
+"<link href=\"http://www.diveintopython.net\">Dive Into Python</link> (http://"
+"www.diveintopython.net)"
+msgstr ""
+"<link href=\"http://www.diveintopython.net\">Dive Into Python</link> (http://"
+"www.diveintopython.net)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:51
+msgid ""
+"<link href=\"http://www.pearsonhighered.com/educator/product/TCPIP-"
+"Illustrated-Volume-1-The-Protocols/9780321336316.page\">TCP/IP Illustrated</"
+"link> (http://www.pearsonhighered.com/educator/product/TCPIP-Illustrated-"
+"Volume-1-The-Protocols/9780321336316.page)"
+msgstr ""
+"<link href=\"http://www.pearsonhighered.com/educator/product/TCPIP-"
+"Illustrated-Volume-1-The-Protocols/9780321336316.page\">TCP/IP Illustrated</"
+"link> (http://www.pearsonhighered.com/educator/product/TCPIP-Illustrated-"
+"Volume-1-The-Protocols/9780321336316.page)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:56
+msgid ""
+"<link href=\"http://nostarch.com/tcpip.htm\">The TCP/IP Guide</link> (http://"
+"nostarch.com/tcpip.htm)"
+msgstr ""
+"<link href=\"http://nostarch.com/tcpip.htm\">The TCP/IP Guide</link> (http://"
+"nostarch.com/tcpip.htm)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:59
+msgid ""
+"<link href=\"http://danielmiessler.com/study/tcpdump/\">A tcpdump Tutorial "
+"and Primer</link> (http://danielmiessler.com/study/tcpdump/)"
+msgstr ""
+"<link href=\"http://danielmiessler.com/study/tcpdump/\">A tcpdump Tutorial "
+"and Primer</link> (http://danielmiessler.com/study/tcpdump/)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:64
+msgid "Systems administration"
+msgstr "システム管理"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:66
+msgid ""
+"<link href=\"http://www.admin.com/\">UNIX and Linux Systems Administration "
+"Handbook</link> (http://www.admin.com/)"
+msgstr ""
+"<link href=\"http://www.admin.com/\">UNIX and Linux Systems Administration "
+"Handbook</link> (http://www.admin.com/)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:71
+msgid "Virtualization"
+msgstr "仮想化"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:73
+msgid ""
+"<link href=\"http://nostarch.com/xen.htm\">The Book of Xen</link> (http://"
+"nostarch.com/xen.htm)"
+msgstr ""
+"<link href=\"http://nostarch.com/xen.htm\">The Book of Xen</link> (http://"
+"nostarch.com/xen.htm)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:77
+msgid "Configuration management"
+msgstr "設定管理"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:79
+msgid ""
+"<link href=\"http://docs.puppetlabs.com/\">Puppet Labs Documentation</link> "
+"(http://docs.puppetlabs.com/)"
+msgstr ""
+"<link href=\"http://docs.puppetlabs.com/\">Puppet Labs Documentation</link> "
+"(http://docs.puppetlabs.com/)"
+
+#: doc/src/docbkx/openstack-ops/src/ch_ops_resources.xml:82
+msgid ""
+"<link href=\"http://www.apress.com/9781430230571\">Pro Puppet</link> (http://"
+"www.apress.com/9781430230571)"
+msgstr ""
+"<link href=\"http://www.apress.com/9781430230571\">Pro Puppet</link> (http://"
+"www.apress.com/9781430230571)"
