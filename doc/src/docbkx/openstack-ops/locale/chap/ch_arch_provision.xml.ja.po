@@ -1,0 +1,351 @@
+#
+# Translators:
+# Akihiro MOTOKI <amotoki@gmail.com>, 2013
+# Akira Yoshiyama <akirayoshiyama@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# thatsdone <masanori.itoh@gmail.com>, 2013
+# masayukig <masayuki.igawa@gmail.com>, 2013
+# *はたらくpokotan* <>, 2013
+# Tsutomu Takekawa <takekawa@gmail.com>, 2013
+# doki701 <tokidokidokidoki@gmail.com>, 2013
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
+# tmak <t.makabe@gmail.com>, 2013
+# daisy.ycguo <daisy.ycguo@gmail.com>, 2013
+# Shirayuki/しらゆき Shira <shirayuking@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenStack Manuals\n"
+"POT-Creation-Date: 2013-05-08 15:45+0800\n"
+"PO-Revision-Date: 2013-06-25 02:00+0000\n"
+"Last-Translator: Tomoyuki KATO <tomo@dream.daynight.jp>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/openstack/"
+"language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:16
+msgid "Provisioning and Deployment"
+msgstr "プロビジョニングとデプロイメント"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:17
+msgid ""
+"A critical part of a cloud's scalability is the amount of effort that it "
+"takes to run your cloud. To minimize the operational cost of running your "
+"cloud, set up and use an automated deployment and configuration "
+"infrastructure."
+msgstr ""
+"クラウドのスケーラビリティにおける重要な部分の一つは、クラウドを運用するのに"
+"必要な労力にあります。クラウドの運用コストを最小化するために、デプロイメント"
+"と環境設定を自動化する基盤を構築して利用しましょう。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:21
+msgid ""
+"This infrastructure includes systems to automatically install the operating "
+"system's initial configuration and later coordinate the configuration of all "
+"services automatically and centrally, which reduces both manual effort and "
+"chance for error."
+msgstr ""
+"この基盤には、初期構成のオペレーティングシステム自動的にインストールするこ"
+"と、その後すべてのサービスの環境設定を自動的かつ集中的に調整することが含まれ"
+"ます。これにより、手操作の労力と誤りが介在する余地を減らすことができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:27
+msgid "Automated Deployment"
+msgstr "自動デプロイメント"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:28
+msgid ""
+"An automated deployment system installs and configures operating systems on "
+"new servers, without intervention, after the absolute minimum amount of "
+"manual work, including physical racking, MAC to IP assignment, power "
+"configuration, and so on. Typically solutions rely on wrappers around PXE "
+"boot and TFTP servers for the basic operating system install, then hand off "
+"to an automated configuration management system."
+msgstr ""
+"自動デプロイメントシステムは、新しいサーバーに対して、物理的なラッキング、"
+"MAC アドレスへの IP アドレスの割り当て、電源設定といった必要最小限の手操作の"
+"後、人手の介在なしに、オペレーティングシステムのインストールと環境設定を行い"
+"ます。典型的な方法では、PXE ブートと TFTP サーバーを使った仕組みを元にしてオ"
+"ペレーティングシステムの基本的なインストールを行い、その後、自動環境設定管理"
+"システムに制御を渡します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:36
+msgid ""
+"Ubuntu and Red Hat Linux both include mechanisms for configuring the "
+"operating system, including preseed and kickstart, that you can use after a "
+"network boot. Typically these are used to bootstrap an automated "
+"configuration system. Alternatively, you can use an image-based approach for "
+"deploying the operating system, such as systemimager. You can use both "
+"approaches with a virtualized infrastructure, such as when you run VMs to "
+"separate your control services and physical infrastructure."
+msgstr ""
+"Ubuntu と Red Hat Linux はどちらも、preseed や kickstart といった、ネットワー"
+"クブートの後に利用できる、オペレーティングシステムを設定するための仕組みを"
+"持っています。これらは、典型的には自動環境設定システムを自力で立ち上げるため"
+"に使われます。他の方法としては、systemimager のようなイメージベースのオペレー"
+"ティングシステムのデプロイメント手法を使うこともできます。これらの手法は、例"
+"えば物理インフラと制御サービスを分離するために仮想マシンを使う時のように、い"
+"ずれも仮想化基盤といっしょに使うことができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:46
+msgid ""
+"When you create a deployment plan, focus on a few vital areas because they "
+"are very hard to modify post-deployment."
+msgstr ""
+"デプロイメントの計画を立てる際には、後から修正するのはとても困難な、いくつか"
+"の重要な領域に集中してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:51
+msgid "Disk Partitioning and RAID"
+msgstr "ディスクのパーティショニングと RAID"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:52
+msgid ""
+"At the very base of any operating system are the hard drives on which the OS "
+"is installed."
+msgstr ""
+"どんなオペレーティングシステムでも、もっとも根本的な部分として、それがインス"
+"トールされるハードディスクがあります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:54
+msgid ""
+"You must complete the following configurations on the server's hard drives:"
+msgstr ""
+"サーバーのハードディスクに対して、以下の環境設定を完了させなければなりませ"
+"ん。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:58
+msgid "Partitioning"
+msgstr "パーティショニング"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:61
+msgid "Adding to a RAID array"
+msgstr "RAID アレイへの追加"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:64
+msgid "The simplest option is to use one hard drive with two partitions:"
+msgstr ""
+"もっとも簡単な選択肢は、1 台のハードディスクを 2 つのパーティションに分割する"
+"ことです。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:68
+msgid "File system"
+msgstr "ファイルシステム"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:71
+msgid "Swap space"
+msgstr "スワップ領域"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:74
+msgid "RAID is not used in this setup."
+msgstr "この場合は RAID は使用しません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:76
+msgid ""
+"This option is not recommended for production because if the hard drive "
+"fails, that entire server is down. Instead, we recommend that you use more "
+"than one disk. The number of disks determine what types of RAID arrays to "
+"build."
+msgstr ""
+"この選択肢は、ハードディスクが故障するとサーバー全体がダウンしてしまうため、"
+"商用環境には推奨されません。代わりに、2 台以上のディスクを使用することを推奨"
+"します。使用するディスクの台数によって、構成する RAID アレイの種類が決まりま"
+"す。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:83
+msgid ""
+"We recommend that you choose one of the following multiple disk options:"
+msgstr "以下に挙げる複数のディスクの選択肢から選ぶことを推奨します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:87
+msgid ""
+"<emphasis role=\"bold\">Option 1:</emphasis> Partition all drives in the "
+"same way in a horizontal fashion, as shown in the following diagram: "
+"<placeholder-1/>"
+msgstr ""
+"<emphasis role=\"bold\">オプション 1:</emphasis> 次の図に示すように、すべての"
+"ハードディスクをまったく同じようにパーティショニングします。 <placeholder-1/>"
+
+#. When image changes, this message will be marked fuzzy or untranslated for
+#. you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:95
+msgid ""
+"@@image: 'figures/os_disk_partition.png'; "
+"md5=2cd7b90349b84b8ef2c97727b9601045"
+msgstr ""
+"@@image: 'figures/os_disk_partition.png'; "
+"md5=2cd7b90349b84b8ef2c97727b9601045"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:99
+msgid ""
+"With this option, you can assign different partitions to different RAID "
+"arrays. You can allocate partition 1 of disk one and two to the <code>/boot</"
+"code> partition mirror. You can make partition 2 of all disks the root "
+"partition mirror. You can use partition 3 of all disks for a <code>cinder-"
+"volumes</code> LVM partition running on a RAID 10 array."
+msgstr ""
+"このオプションでは、パーティションごとに異なる RAID アレイにおくことができま"
+"す。例えば、ディスク 1 とディスク 2 のパーティション 1 を <code>/boot</code> "
+"パーティションのミラーとして、すべてのディスクのパーティション 2 をルートパー"
+"ティションのミラーとして、すべてのディスクのパーティション 3 を RAID10 アレイ"
+"の上の <code>cinder-volumes</code> の LVM パーティションとして割り当てること"
+"ができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:108
+msgid ""
+"While you might end up with unused partitions, such as partition 1 in disk "
+"three and four of this example, it allows for maximum utilization off disk "
+"space. I/O performance might be an issue due to all disks being used for all "
+"tasks."
+msgstr ""
+"この例にあるディスク 3 と 4 のパーティション 1 のように使用しないパーティショ"
+"ンが残ることになるかもしれないとしても、ディスク領域の利用率を最大化すること"
+"ができます。すべてのディスクがすべてのタスクで利用されることにより、I/O 性能"
+"が問題になるかもしれません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:116
+msgid ""
+"<emphasis role=\"bold\">Option 2:</emphasis> Add all raw disks to one large "
+"RAID array, either hardware or software based. You can partition this large "
+"array with the boot, root, swap, and LVM areas. This option is simple to "
+"implement and uses all partitions. However, disk I/O might suffer."
+msgstr ""
+"<emphasis role=\"bold\">オプション 2:</emphasis> すべてのディスクを 1 つの大"
+"きな RAID アレイに追加します。ここでは、ソフトウェア RAID でもハードウェア "
+"RAID でもかまいません。この大きな RAID アレイを boot、root、swap、そして LVM "
+"領域に分割します。この選択肢はシンプルですべてのパーティションを利用すること"
+"ができますが、I/O 性能に悪影響があるかもしれません。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:126
+msgid ""
+"<emphasis role=\"bold\">Option 3:</emphasis> Dedicate entire disks to "
+"certain partitions. For example, you could allocate disk one and two "
+"entirely to the boot, root, and swap partitions under a RAID 1 mirror. Then, "
+"allocate disk 3 and 4 entirely to the LVM partition, also under a RAID 1 "
+"mirror. Disk I/O should be better because I/O is focused on dedicated tasks. "
+"However, the LVM partition is much smaller."
+msgstr ""
+"<emphasis role=\"bold\">オプション 3:</emphasis> 全ディスク領域を特定のパー"
+"ティションで占有させます。例えば、ディスク 1 と 2 を RAID1 ミラーで boot、"
+"root、swap パーティションに割り当て、そしてディスク 3 と 4 は、すべてをやは"
+"り RAID1 ミラーの LVM パーティションに割り当てます。この場合は、I/O を特定の"
+"目的に集中させるため、より良いディスク I/O 性能を得ることができるでしょう。た"
+"だし、LVM パーティションはだいぶ小さくなります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:138
+msgid ""
+"As with most architecture choices, the right answer depends on your "
+"environment."
+msgstr ""
+"ほとんどのアーキテクチャ上の選択のように、正しい答えは環境に依存します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:142
+msgid "Network Configuration"
+msgstr "ネットワーク設定"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:143
+msgid ""
+"Network configuration is a very large topic that spans multiple areas of "
+"this book. For now, make sure that your servers can PXE boot and "
+"successfully communicate with the deployment server."
+msgstr ""
+"ネットワーク設定は、この本の複数の部分にまたがるとても大きな話題です。ここで"
+"は、用意したサーバーが PXE ブートできることと、デプロイメントサーバーと正常に"
+"通信できることを確認しておいてください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:147
+msgid ""
+"For example, you usually cannot configure NICs for VLANs when PXE booting. "
+"Additionally, you usually cannot PXE boot with bonded NICs. If you run into "
+"this scenario, consider using a simple 1 GB switch in a private network on "
+"which only your cloud communicates."
+msgstr ""
+"例えば、PXE ブートの際には、通常は VLAN の設定は行えません。さらに、通常は "
+"bonding された NIC から PXE ブートを行うこともできません。このような状況の場"
+"合、クラウド内でのみ通信できるネットワークで、シンプルな 1Gbps のスイッチを使"
+"うことを検討してください。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:156
+msgid "Automated Configuration"
+msgstr "自動環境設定"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:157
+msgid ""
+"The purpose of automatic configuration management is to establish and "
+"maintain the consistency of a system with no human intervention. You want to "
+"maintain consistency in your deployments so you can have the same cloud "
+"every time, repeatably. Proper use of automatic configuration management "
+"tools ensures that components of the cloud systems are in particular states, "
+"in addition to simplifying deployment, and configuration change propagation."
+msgstr ""
+"自動環境設定管理の目的は、人間の介在なしにシステムの一貫性を確立し、維持する"
+"ことにあります。同じクラウド環境を毎回繰り返し作るために、デプロイメントにお"
+"ける一貫性を維持したいでしょう。自動環境設定管理ツールを正しく利用することに"
+"よって、デプロイメントと環境設定の変更を全体に展開する作業を単純にすることに"
+"加えて、クラウドのシステムを構成するコンポーネントが特定の状態にあるように保"
+"証することができます。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:166
+msgid ""
+"These tools also make it possible to test and roll back changes, as they are "
+"fully repeatable. Conveniently, a large body of work has been done by the "
+"OpenStack community in this space. Puppet – a configuration management tool "
+"– even provides official modules for OpenStack."
+msgstr ""
+"これらのツールは、完全に繰り返して動作可能であるため、変更点のテストやロール"
+"バックを行うことができます。OpenStack コミュニティでは、この手法で多くの作業"
+"が便利に実行されています。設定管理ツールの 1 つである Puppet の場合、"
+"OpenStack 用のモジュールも提供されています。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:172
+msgid ""
+"An integral part of a configuration management system is the items that it "
+"controls. You should carefully consider all of the items that you want, or "
+"do not want, to be automatically managed."
+msgstr ""
+"設定管理システムと、それによって管理する項目は、切っても切れない関係にありま"
+"す。自動的に管理したい項目と管理したくない項目のすべてを注意深く検討するべき"
+"です。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:179
+msgid "Remote Management"
+msgstr "リモート管理"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:180
+msgid ""
+"In our experience, most operators don't sit right next to the servers "
+"running the cloud, and many don't necessarily enjoy visiting the data "
+"center. OpenStack should be entirely remotely configurable, but sometimes "
+"not everything goes according to plan."
+msgstr ""
+"経験上、ほとんどの事業者はクラウドを動かすサーバーのすぐ横に席があるわけでは"
+"ありません。また、多くの人が必ずしもデータセンターに行くことを楽しんでいるわ"
+"けではありません。OpenStack は完全にリモートから環境設定できますが、時にこの"
+"通りにならないこともあります。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:185
+msgid ""
+"In this instance, having an out-of-band access into nodes running OpenStack "
+"components, is a boon. The IPMI protocol is the de-facto standard here, and "
+"acquiring hardware that supports it is highly recommended to achieve that "
+"lights-out data center aim."
+msgstr ""
+"この場合、OpenStack が動くノードに対して外側からアクセスできるようにすること"
+"が重要です。ここでは、IPMI プロトコルがデファクトスタンダードです。完全自動の"
+"データセンタを実現するために、IPMI をサポートしたハードウェアを購入することを"
+"強く推奨します。"
+
+#: doc/src/docbkx/openstack-ops/src/ch_arch_provision.xml:190
+msgid ""
+"In addition, consider remote power control as well. While IPMI usually "
+"controls the server's power state, having remote access to the PDU that the "
+"server is plugged into can really be useful for situations when everything "
+"seems wedged."
+msgstr ""
+"さらに、リモート電源管理装置も検討してください。通常、IPMI はサーバーの電源状"
+"態を制御しますが、サーバーが接続されている PDU にリモートアクセスできれば、す"
+"べてが手詰まりに見えるような状況で非常に役に立ちます。"
