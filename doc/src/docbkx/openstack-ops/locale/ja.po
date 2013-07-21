@@ -14583,7 +14583,7 @@ msgstr "quota_cores=20"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml129(para)
 msgid "(IntOpt) number of instance cores allowed per project (tenant)"
-msgstr "(整数型) プロジェクト (テナント) ごとに許可されるインスタンスのコア数"
+msgstr "(整数型) プロジェクト (テナント) ごとのインスタンスのコア数の最大値"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml135(para)
 msgid "quota_floating_ips=10"
@@ -14591,7 +14591,7 @@ msgstr "quota_floating_ips=10"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml138(para)
 msgid "(IntOpt) number of floating ips allowed per project (tenant)"
-msgstr "(整数型) プロジェクト (テナント) ごとに許可される Floating IP 数"
+msgstr "(整数型) プロジェクト (テナント) ごとの最大 Floating IP 数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml144(para)
 msgid "quota_fixed_ips=-1"
@@ -14602,8 +14602,8 @@ msgid ""
 "(IntOpt) number of floating ips allowed per project (this should be at least "
 "the number of instances allowed). -1 is unlimited"
 msgstr ""
-"(整数型) プロジェクトごとに許可される Fixed IP 数 (少なくとも許可されたインス"
-"タンスの数にすべきです)。-1 は無制限です。"
+"(整数型) プロジェクトごとの最大 Fixed IP 数 (少なくとも最大インスタンス数には"
+"すべきです)。-1 は無制限です。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml15(title)
 msgid "Managing Projects and Users"
@@ -14616,8 +14616,8 @@ msgstr "quota_gigabytes=1000"
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml158(para)
 msgid "(IntOpt) number of volume gigabytes allowed per project (tenant)"
 msgstr ""
-"(整数型) プロジェクト (テナント) ごとに許可されるボリューム容量（単位はギガバ"
-"イト）"
+"(整数型) プロジェクト (テナント) ごとのボリューム容量の最大値（単位はギガバイ"
+"ト）"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml16(para)
 msgid ""
@@ -14649,7 +14649,7 @@ msgstr "quota_injected_files=5"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml185(para)
 msgid "(IntOpt) number of injected files allowed"
-msgstr "(整数型) 許可される injected file 数"
+msgstr "(整数型) injected file の最大数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml191(para)
 msgid "quota_instances=10"
@@ -14657,7 +14657,7 @@ msgstr "quota_instances=10"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml194(para)
 msgid "(IntOpt) number of instances allowed per project (tenant)"
-msgstr "(整数型) プロジェクト (テナント) ごとに許可されるインスタンス数"
+msgstr "(整数型) プロジェクト (テナント) ごとの最大インスタンス数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml20(title)
 msgid "Projects or Tenants?"
@@ -14669,7 +14669,7 @@ msgstr "quota_key_pairs=100"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml203(para)
 msgid "(IntOpt) number of key pairs allowed per user"
-msgstr "(整数型) ユーザーごとに許可されるキーペア数"
+msgstr "(整数型) ユーザーごとの最大キーペア数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml209(para)
 msgid "quota_metadata_items=128"
@@ -14687,7 +14687,7 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml212(para)
 msgid "(IntOpt) number of metadata items allowed per instance"
-msgstr "(整数型) インスタンスごとに許可されるメタデータ項目数"
+msgstr "(整数型) インスタンスごとのメタデータ項目数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml218(para)
 msgid "quota_ram=51200"
@@ -14696,8 +14696,8 @@ msgstr "quota_ram=51200"
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml221(para)
 msgid "(IntOpt) megabytes of instance ram allowed per project (tenant)"
 msgstr ""
-"(整数型) プロジェクト (テナント) ごとに許可されるインスタンスの RAM のメガバ"
-"イト容量"
+"(整数型) プロジェクト (テナント) ごとのインスタンスの最大 RAM 容量（メガバイ"
+"ト単位）"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml227(para)
 msgid "quota_security_group_rules=20"
@@ -14713,8 +14713,7 @@ msgstr "quota_security_groups=10"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml239(para)
 msgid "(IntOpt) number of security groups per project (tenant)"
-msgstr ""
-"(整数型) プロジェクト (テナント) ごとに許可されるセキュリティグループ数"
+msgstr "(整数型) プロジェクト (テナント) ごとのセキュリティグループ数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml245(para)
 msgid "quota_volumes=10"
@@ -14722,7 +14721,7 @@ msgstr "quota_volumes=10"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml248(para)
 msgid "(IntOpt) number of volumes allowed per project (tenant)"
-msgstr "(整数型) プロジェクト (テナント) ごとに許可されるボリューム数"
+msgstr "(整数型) プロジェクト (テナント) ごとのボリューム数"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml254(para)
 msgid ""
@@ -14756,9 +14755,9 @@ msgstr ""
 "OpenStack Compute サービス (Nova) の初期実装は独自の認証システムを持ち、"
 "<literal>プロジェクト</literal>という用語を使用していました。認証が "
 "OpenStack Identity サービス (Keystone) プロジェクトに移行したとき、ユーザーの"
-"グループを参照するために<literal>テナント</literal>という用語が使用されまし"
-"た。このような経緯のため、いくつかの OpenStack ツールはプロジェクトを使用し、"
-"いくつかはテナントを使用します。"
+"グループを意味する用語として<literal>テナント</literal>という用語が使用されま"
+"した。このような経緯のため、いくつかの OpenStack ツールはプロジェクトを使用"
+"し、いくつかはテナントを使用します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml260(para)
 msgid ""
@@ -14773,10 +14772,10 @@ msgstr ""
 "あなたのサイトの実装がこの例のアーキテクチャーと異なるならば、<code>/etc/"
 "nova/nova.conf</code> にあるクォータのデフォルト値に関するオプションに対する"
 "すべての変更が <code>nova-scheduler</code> サービスを実行しているホストに適用"
-"されていることを確認します。一貫性のあるクォータ設定のために、すべてのスケ"
-"ジューラーが同じクォータを持つことが非常に重要です。このガイドにおいて推奨さ"
-"れているベストプラクティスに従った場合、設定管理システムにより、自動的に、す"
-"べてのスケジューラーが一貫した設定を持った状態に保たれます。"
+"されていることを確認して下さい。一貫性のあるクォータ設定のために、すべてのス"
+"ケジューラーが同じクォータを持つことが非常に重要です。このガイドにおいて推奨"
+"されているベストプラクティスに従った場合、設定管理システムにより、自動的に、"
+"すべてのスケジューラーが一貫した設定を持った状態に保たれます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml270(para)
 msgid ""
@@ -14848,9 +14847,9 @@ msgid ""
 "manage</code> does not complain, it just lies."
 msgstr ""
 "ややこしいことに、 <code>nova-manage project quota</code> はコマンドの最後の"
-"引き数にどんな文字列でも受け付け、その場合クォータの規定値が表示されます。と"
-"くに、ID の代わりにプロジェクトの名前を入力しても、<code>nova-manage</code> "
-"は何も警告せず、単に嘘をつきます。"
+"引き数にどんな文字列でも受け付け、その場合クォータの規定値が表示されます。特"
+"に、ID の代わりにプロジェクトの名前を入力しても、<code>nova-manage</code> は"
+"何も警告せず、単に嘘をつきます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml323(para)
 msgid ""
@@ -14886,12 +14885,12 @@ msgid ""
 "packaged tools."
 msgstr ""
 "直接コマンドラインツールを使ってユーザーを管理することは面倒です。一つの作業"
-"を完了するために、複数のコマンドを実行する必要があります。多くの項目に対し"
-"て、シンボル名の代わりに UUID を使用します。現実的に、人間はこれらのツールを"
-"そのまま使用しません。幸運なことに、OpenStack ダッシュボードが便利なインター"
-"フェースを提供しています。さらに、多くのサイトは個別の要求を満たすために独自"
-"ツールを作成し、サイト固有のポリシーを適用し、パッケージツールでは実現できな"
-"いレベルのセルフサービスをユーザーに提供しています。"
+"を完了するために複数のコマンドを実行する必要がありますし、多くの項目でシンボ"
+"ル名の代わりに UUID が使用されています。現実的に、人間はこれらのツールをその"
+"まま使用しません。幸運なことに、OpenStack Dashboardが便利なインターフェースを"
+"提供しています。さらに、多くのサイトは個別の要求を満たすために独自ツールを作"
+"成し、サイト固有のポリシーを適用し、パッケージツールでは実現できないレベルの"
+"セルフサービスをユーザーに提供しています。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml356(title)
 msgid "Creating New Users"
@@ -14938,9 +14937,10 @@ msgstr ""
 "更するには、管理者権限が必要です。Folsom リリースまでは、ユーザーが自分のパス"
 "ワードを変更できません。これは独自のツールを作成する大きな理由になります。ま"
 "た、パスワードを割り当ておよび配布するときに気をつける必要があります。主プロ"
-"ジェクトは単にユーザーが割り当てられる最初のプロジェクトです。ユーザーを作成"
-"する前に存在している必要があります。役割は多くの場合ずっと \"メンバー\" のま"
-"まになります。標準の状態で、OpenStack は次の 2 つの役割が定義されています。"
+"ジェクトは、単にそのユーザーが割り当てられる最初のプロジェクトです。このプロ"
+"ジェクトはユーザーを作成する前に存在している必要があります。役割は多くの場合"
+"ずっと \"メンバー\" のままになります。標準の状態で、OpenStack は次の 2 つの役"
+"割が定義されています。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml389(para)
 msgid "\"member\":  a typical user."
@@ -14969,19 +14969,19 @@ msgid ""
 "the \"Users\" link in the \"Admin\" navigation bar and then clicking the "
 "\"Create User\" button at the top right."
 msgstr ""
-"一度この情報を収集すると、ダッシュボードでのユーザーの作成は、これまでに見て"
-"きた他の Web フォームと同じです。\"管理\" ナビゲーションバーの \"ユーザー\" "
-"リンクにあります。そして、右上にある \"ユーザーの作成\" ボタンをクリックしま"
-"す。"
+"一旦これらの情報が揃ったら、ダッシュボードでのユーザーの作成は、これまでに見"
+"てきた他の Web フォームと同じです。\"管理\" ナビゲーションバーの \"ユーザー"
+"\" リンクにあります。そして、右上にある \"ユーザーの作成\" ボタンをクリックし"
+"ます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml40(para)
 msgid ""
 "Users must be associated with at least one project, though they may belong "
 "to many. Therefore, you should add at least one project before adding users."
 msgstr ""
-"ユーザーは少なくとも一つのプロジェクトに割り当てられる必要があります。複数に"
-"所属することもできます。そのため、ユーザーを追加する前に、少なくとも一つのプ"
-"ロジェクトを追加する必要があります。"
+"ユーザーは少なくとも一つのプロジェクトに所属しなければいけませんが、複数のプ"
+"ロジェクトに所属することもできます。そのため、ユーザーを追加する前に、少なく"
+"とも一つのプロジェクトを追加する必要があります。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml404(para)
 msgid ""
@@ -14992,12 +14992,12 @@ msgid ""
 "from the actions drop down menu at the end of the line for the user you are "
 "modifying."
 msgstr ""
-"ユーザー情報の変更は、この \"ユーザー” ページから実行することもできます。かな"
-"り多くのユーザーがいるならば、このページにはたくさんのユーザーが表示されるこ"
-"とでしょう。ページの上部にある \"フィルター\" 検索ボックスを使うと、表示され"
-"るユーザーの一覧を絞り込むことができます。変更しようとしているユーザーの行末"
-"にあるアクションドロップダウンメニューの ”編集” を選択することにより、ユー"
-"ザー作成ダイアログと非常に似ているフォームを表示できます。"
+"ユーザー情報の変更は、この \"ユーザー” ページから実行することもできます。多数"
+"のユーザーがいる場合、このページにはたくさんのユーザーが表示されてしまいま"
+"す。ページの上部にある \"フィルター\" 検索ボックスを使うと、表示されるユー"
+"ザーの一覧を絞り込むことができます。変更しようとしているユーザーの行末にある"
+"アクションドロップダウンメニューの ”編集” を選択することにより、ユーザー作成"
+"ダイアログと非常に似ているフォームを表示できます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml413(title)
 msgid "Associating Users with Projects"
@@ -15030,9 +15030,9 @@ msgid ""
 "an older project is done from the \"Projects\" page of the Dashboard by "
 "selecting the \"Modify Users\" from the \"Actions\" column:"
 msgstr ""
-"既存のユーザーを追加のプロジェクトに割り当てる、または古いプロジェクトから削"
-"除することは、ダッシュボードの ”プロジェクト” ページから、\"アクション\" 列"
-"の \"ユーザーの変更\" を選択することにより実行できます。"
+"ダッシュボードの \"プロジェクト\" ページから \"アクション\" 列の \"ユーザーの"
+"変更\" を選んで、既存のユーザーへの追加のプロジェクトの割り当てや、古いプロ"
+"ジェクトからのユーザー削除を実行することができます。"
 
 #. When image changes, this message will be marked fuzzy or untranslated for
 #. you.
@@ -15061,9 +15061,9 @@ msgstr ""
 "\"すべてのユーザー (All Users)\" という見出しが付けられた、このフォームの最初"
 "の列に、このプロジェクトにまだ割り当てられていない、クラウドのすべてのユー"
 "ザーが一覧表示されます。2 列目には、すべての割り当て済みユーザーが一覧表示さ"
-"れます。これらは非常に長い可能性があります。しかし、それぞれの列の上部にある"
-"フィルターフィールドに、探しているユーザー名の部分文字列を入力することによ"
-"り、表示を絞り込むことができます。"
+"れます。これらの一覧は非常に長くなる可能性がありますが、それぞれの列の上部に"
+"あるフィルターフィールドに、探しているユーザー名の部分文字列を入力することに"
+"より、表示を絞り込むことができます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml44(title)
 msgid "Adding Projects"
@@ -15084,10 +15084,10 @@ msgid ""
 "In virtually all cases this value should be set to \"Member\". This example "
 "purposefully show and administrative user where this value is \"admin\"."
 msgstr ""
-"危険な点としては、メンバーの役割を変更する機能があることです。これは \"プロ"
-"ジェクトメンバー\" 一覧のユーザー名の後ろにあるドロップダウンリストです。事実"
-"上すべての場合で、この値は \"メンバー\" に設定されています。この例では意図的"
-"に、この値が \"管理者\" になっている管理ユーザーを示しています。"
+"危険な点としては、メンバーの役割を変更する機能があることです。\"プロジェクト"
+"メンバー\" 一覧のユーザー名の後ろにあるドロップダウンリストです。実際すべての"
+"場合で、この値は \"メンバー\" に設定すべきです。この例では意図的に、この値が "
+"\"管理者\" になっている管理ユーザーを示しています。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml45(para)
 msgid "To create a project through the dashboard:"
@@ -15098,9 +15098,9 @@ msgid ""
 "The \"admin\" is global not per project so granting a user the admin role in "
 "any project gives the administrative rights across the whole cloud."
 msgstr ""
-"\"管理者\" はプロジェクトごとではなく、グローバルです。そのため、ユーザーに管"
-"理者の役割を与えることにより、クラウド全体にわたる管理者権限を与えることにな"
-"ります。"
+"\"管理者\" は各プロジェクトの管理者ではなく、システム全体の管理者です。そのた"
+"め、ユーザーに管理者の役割を与えることにより、クラウド全体にわたる管理者権限"
+"を与えることになります。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml457(para)
 msgid ""
@@ -15201,7 +15201,7 @@ msgstr ""
 "る特定の属性に一致する場合、ポリシーが OpenStack ポリシーエンジンにより呼び出"
 "されます。たとえば、ユーザーが <code>POST /v2/{tenant_id}/servers</code> リク"
 "エストを  OpenStack Compute API サーバーに送信したときに必ず、エンジンが "
-"<code>create:compute</code> ポリシーを確認します。ポリシーは特定の "
+"<code>create:compute</code> ポリシーを評価します。ポリシーは特定の "
 "<glossterm>API 拡張</glossterm>に関連づけることもできます。たとえば、ユーザー"
 "が <code>compute_extension:rescue</code> のような拡張に対して要求を行った場"
 "合、プロバイダー拡張により定義された属性は、その操作に対するルールテストを呼"
@@ -15221,11 +15221,11 @@ msgid ""
 "rule, until a terminal rule is reached. These are the rules defined:"
 msgstr ""
 "認可ポリシーは、一つまたは複数のルールにより構成できます。複数のルールを指定"
-"すると、いずれかのルールが成功と評価されれば、評価エンジンが成功になります。"
-"API 操作が複数のポリシーに一致すると、すべてのポリシーが成功と評価される必要"
-"があります。認可ルールは再帰的にもできます。あるルールにマッチした場合、これ"
-"以上展開できないルールに達するまで、そのルールは別のルールに展開されます。以"
-"下のルールが定義できます。"
+"した場合、いずれかのルールが成功と評価されれば、ポリシーの評価は成功となりま"
+"す。API 操作が複数のポリシーに一致すると、すべてのポリシーが成功と評価される"
+"必要があります。また、認可ルールは再帰的にもできます。あるルールにマッチした"
+"場合、これ以上展開できないルールに達するまで、そのルールは別のルールに展開さ"
+"れます。以下のルールが定義できます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml533(para)
 msgid ""
@@ -15330,9 +15330,9 @@ msgid ""
 "could be modified in a scenario where we enable users to create their own "
 "flavors:"
 msgstr ""
-"いくつかの場合では、ある操作が管理者のみに制限されるべきです。そこで、次の例"
-"では、ユーザーが自分のフレーバーを作成できるようにするシナリオの場合に、この"
-"サンプルのポリシーファイルをどのように変更すればよいかを示します。"
+"いくつかの場合では、いくつかの操作を管理者のみに制限すべきです。そこで、次の"
+"例では、ユーザーが自分のフレーバーを作成できるようにするシナリオの場合に、こ"
+"のサンプルのポリシーファイルをどのように変更すればよいかを示します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml613(title)
 msgid "Users that Disrupt Other Users"
@@ -15345,9 +15345,8 @@ msgid ""
 "you to make a better decision on how to handle the disruption."
 msgstr ""
 "クラウドのユーザーは他のユーザーに悪影響を与える場合があります。意図的に悪意"
-"を持って行わる場合もあれば、偶然起こる場合もあります。状況を理解することによ"
-"り、このような混乱に対処する方法について、よりよい判断をできるようになりま"
-"す。"
+"を持って行われる場合もあれば、偶然起こる場合もあります。状況を理解すること"
+"で、このような混乱への対処方法について、よりよい判断ができるようになります。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml619(para)
 msgid ""
@@ -15358,12 +15357,12 @@ msgid ""
 "scenarios are common and should then plan for proper segregation in your "
 "cloud such as host aggregation or regions."
 msgstr ""
-"例えば: あるユーザーのグループが、非常に計算負荷の高い作業用に大量のコン"
-"ピュートリソースを使うインスタンスを持っているとします。これにより、Compute "
-"ノードの負荷が高くなり、他のユーザーに影響を与えます。この状況では、ユーザー"
-"のユースケースを精査する必要があります。計算負荷が高いシナリオがよくあるケー"
-"スだと判明し、ホスト集約やリージョンなど、クラウドを適切に分割することを計画"
-"すべき場合もあるでしょう。"
+"例えば、あるユーザーのグループが、非常に計算負荷の高い作業用に大量のコン"
+"ピュートリソースを使うインスタンスを持っているとします。これにより、コン"
+"ピュートノードの負荷が高くなり、他のユーザーに影響が出ます。この状況では、"
+"ユーザーのユースケースを精査する必要があります。計算負荷が高いシナリオがよく"
+"あるケースだと判明し、ホスト集約やリージョンなど、クラウドを適切に分割するこ"
+"とを計画すべき場合もあるでしょう。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml627(para)
 msgid ""
@@ -15377,14 +15376,14 @@ msgid ""
 "user and give them time to respond. If they don't respond, shut the instance "
 "down."
 msgstr ""
-"別の例は、あるユーザーが非常に多くの帯域を消費することです。繰り返しですが、"
-"ユーザーが実行していることを理解することが重要です。必ず多くの帯域を使用する"
-"必要があれば、他のユーザーに影響を与えないように通信帯域を制限する、または、"
-"より多くの帯域を利用可能な別の場所に移動させる必要があるかもしれません。一"
-"方、ユーザーのインスタンスが侵入され、DDOS 攻撃を行っているボットネットの一部"
-"になっているかもしれません。この問題の解決法は、ネットワークにある他のサー"
-"バーが侵入された場合と同じです。ユーザーに連絡し、対応する時間を与えます。も"
-"し対応しなければ、そのインスタンスを停止します。"
+"別の例は、あるユーザーが非常に多くの帯域を消費する場合です。繰り返しですが、"
+"ユーザーが実行していることを理解することが重要です。多くの帯域を必ず使用する"
+"必要がある場合には、他のユーザーに影響を与えないように通信帯域を制限する、ま"
+"たは、より多くの帯域を利用可能な別の場所に移動させる必要があるかもしれませ"
+"ん。一方、ユーザーのインスタンスが侵入され、DDOS 攻撃を行っているボットネット"
+"の一部になっているかもしれません。この問題の解決法は、ネットワークにある他の"
+"サーバーが侵入された場合と同じです。ユーザーに連絡し、対応する時間を与えま"
+"す。もし対応しなければ、そのインスタンスを停止します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml639(para)
 msgid ""
