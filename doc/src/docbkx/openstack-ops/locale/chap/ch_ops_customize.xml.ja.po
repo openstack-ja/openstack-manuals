@@ -162,8 +162,8 @@ msgid ""
 "sh</code> create the \"stack\" user for you. If your images already have a "
 "user other than root, you can skip this step."
 msgstr ""
-"利用するイメージで root ユーザしか使えない場合、stack ユーザを作成しなければ"
-"なりません。でなければ、<code>stack.sh</code> スクリプトに stack ユーザを作成"
+"利用するイメージで root ユーザしか使えない場合、「stack」ユーザを作成しなければ"
+"なりません。でなければ、<code>stack.sh</code> スクリプトに「stack」ユーザを作成"
 "させる時に、screen に関するパーミッションの問題にぶつかります。利用するイメー"
 "ジに、既に root 以外のユーザがあるのであれば、このステップは省略できます。"
 
@@ -635,7 +635,7 @@ msgid ""
 msgstr ""
 "スケジューラーを作成するには、<code>nova.scheduler.driver.Scheduler</code> ク"
 "ラスを継承しなければなりません。オーバーライド可能な５つのメソッドのうち、以"
-"下の \"*\" で示される２つのメソッドをオーバーライド<emphasis>しなければなりま"
+"下の「*」で示される２つのメソッドをオーバーライド<emphasis>しなければなりま"
 "せん</emphasis>。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:682
@@ -835,7 +835,7 @@ msgstr ""
 "われた時に実行され、必要に応じて他のサービスを呼び出します。プロジェクトのコ"
 "ア・コードは一切修正しません。ドライバ・アーキテクチャを使っているプロジェク"
 "トを確認するには、<code>/etc/&lt;project&gt;</code> に格納されている、プロ"
-"ジェクトの環境定義ファイルの中で　<code>driver</code> 変数を探してください。"
+"ジェクトの環境定義ファイルの中で「driver」変数を探してください。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_customize.xml:991
 msgid ""

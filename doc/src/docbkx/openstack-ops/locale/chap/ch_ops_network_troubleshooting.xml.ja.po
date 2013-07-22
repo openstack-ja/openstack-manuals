@@ -50,7 +50,7 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:25
 msgid "Using \"ip a\" to Check Interface States"
-msgstr "\"ip a\" を使ってインタフェース状態をチェックする"
+msgstr "「ip a」を使ってインタフェース状態をチェックする"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:26
 msgid ""
@@ -570,7 +570,7 @@ msgid ""
 "interfaces are actually up and configured the way that you think that they "
 "are."
 msgstr ""
-"また、\"<code>ip a</code>\" や \"<code>brctl show</code>\"などのコマンドを"
+"また、「<code>ip a</code>」や「<code>brctl show</code>」などのコマンドを"
 "使って、インターフェイスが実際にUPしているか、あなたが考えたとおりに設定され"
 "ているか、正当性を検査をすべきです。"
 
@@ -620,7 +620,7 @@ msgid ""
 "hostname to see if it resolves. If DNS is working, the first line of ping "
 "would be:"
 msgstr ""
-"もしあなたがCirrosイメージを使っているのであれば、\"host\"プログラムはインス"
+"もしあなたがCirrosイメージを使っているのであれば、「host」プログラムはインス"
 "トールされていません。その場合はpingを使い、ホスト名が解決できているか判断で"
 "きます。もしDNSが動いていれば、ping結果の先頭行はこうなるはずです。"
 

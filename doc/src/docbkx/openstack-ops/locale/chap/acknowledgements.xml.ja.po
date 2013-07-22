@@ -79,7 +79,7 @@ msgid ""
 "The Real Estate team at Rackspace in Austin, also known as \"The Victors,\" "
 "were super responsive."
 msgstr ""
-"\"The Victors\" としても知られている、オースチンの Rackspace の不動産チーム"
+"「The Victors」としても知られている、オースチンの Rackspace の不動産チーム"
 "は、素晴らしい応答をしてくれました。"
 
 #: doc/src/docbkx/openstack-ops/src/acknowledgements.xml:49

@@ -3159,7 +3159,7 @@ msgid ""
 "A feature of nova that allows the unprivileged \"nova\" user to run a "
 "specified list of commands as the Linux root user."
 msgstr ""
-"特権を持たない \"nova\" ユーザーが指定されたリストにあるコマンドを Linux "
+"特権を持たない「nova」ユーザーが指定されたリストにあるコマンドを Linux "
 "root ユーザーで実行できるようにする nova の機能。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2435
@@ -3243,7 +3243,7 @@ msgid ""
 "object is called a concatenated object."
 msgstr ""
 "複数に分割された swift のラージオブジェクト。再構成されたオブジェクトは "
-"\"concatenated object\" （連結オブジェクト） と呼ばれる。"
+"「concatenated object」（連結オブジェクト）と呼ばれる。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2493
 msgid "server image"

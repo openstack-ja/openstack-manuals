@@ -114,7 +114,7 @@ msgid ""
 "shuts services down and then automatically reboots. If you want to be very "
 "thorough, run your backup jobs just before you reboot."
 msgstr ""
-"多くの場合、\"reboot\" コマンドを発行するだけです。オペレーティングシステムが"
+"多くの場合、「reboot」コマンドを発行するだけです。オペレーティングシステムが"
 "正常にサービスをシャットダウンし、自動的に再起動します。万全を期したい場合、"
 "再起動する前にバックアップジョブを実行してください。"
 
