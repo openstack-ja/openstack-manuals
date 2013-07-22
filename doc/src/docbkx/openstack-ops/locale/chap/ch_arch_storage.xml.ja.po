@@ -172,7 +172,7 @@ msgstr "容量の指定"
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:79
 msgid ""
 "Administrator configures size settings, known as <emphasis>flavors</emphasis>"
-msgstr "管理者がサイズを設定（<emphasis>flavors</emphasis>）として知られる"
+msgstr "管理者がサイズ設定（<emphasis>フレーバー</emphasis>とも呼ばれる）を用意する"
 
 #: doc/src/docbkx/openstack-ops/src/ch_arch_storage.xml:82
 msgid "Specified by user in initial request"

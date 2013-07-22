@@ -850,7 +850,7 @@ msgid ""
 "[3] Shows a policy restricting the ability of manipulating flavors to "
 "administrators using the Admin API only."
 msgstr ""
-"[3] インスタンスタイプを操作する権限を、管理 API を使用する管理者だけに限定す"
+"[3] フレーバーを操作する権限を、管理 API を使用する管理者だけに限定す"
 "るポリシーを表します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_projects_users.xml:605
