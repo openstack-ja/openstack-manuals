@@ -570,9 +570,9 @@ msgid ""
 "interfaces are actually up and configured the way that you think that they "
 "are."
 msgstr ""
-"また、「<code>ip a</code>」や「<code>brctl show</code>」などのコマンドを"
-"使って、インターフェイスが実際にUPしているか、あなたが考えたとおりに設定され"
-"ているか、正当性を検査をすべきです。"
+"また、「<code>ip a</code>」や「<code>brctl show</code>」などのコマンドを使っ"
+"て、インターフェイスが実際にUPしているか、あなたが考えたとおりに設定されてい"
+"るか、正当性を検査をすべきです。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_network_troubleshooting.xml:376
 msgid "Debugging DNS Issues"

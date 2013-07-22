@@ -3159,8 +3159,8 @@ msgid ""
 "A feature of nova that allows the unprivileged \"nova\" user to run a "
 "specified list of commands as the Linux root user."
 msgstr ""
-"特権を持たない「nova」ユーザーが指定されたリストにあるコマンドを Linux "
-"root ユーザーで実行できるようにする nova の機能。"
+"特権を持たない「nova」ユーザーが指定されたリストにあるコマンドを Linux root "
+"ユーザーで実行できるようにする nova の機能。"
 
 #: doc/src/docbkx/openstack-ops/src/bk_ops_guide.xml:2435
 msgid "RPC driver"
