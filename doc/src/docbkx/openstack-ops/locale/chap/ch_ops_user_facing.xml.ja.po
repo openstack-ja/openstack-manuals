@@ -111,7 +111,7 @@ msgid ""
 msgstr ""
 "いくつかの構築済みイメージが存在します。簡単に Image Service の中にインポート"
 "できます。追加する一般的なイメージは、非常に小さく、テスト目的に使用される "
-"CirrOS イメージです。このイメージを追加するには、単に次のようにします:"
+"CirrOS イメージです。このイメージを追加するには、単に次のようにします。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:41
 msgid ""
@@ -123,7 +123,7 @@ msgstr ""
 "<code>glance image-create</code> コマンドでは、イメージに指定できる多数のオプ"
 "ションが用意されています。たとえば、<code>min-disk</code> オプションは、特定"
 "の容量のルートディスクを必要とするイメージ (例: 大きな Windows イメージ) のた"
-"めに有用です。これらのオプションを表示するには、次のようにします:"
+"めに有用です。これらのオプションを表示するには、次のようにします。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:48
 msgid ""
@@ -150,7 +150,7 @@ msgstr ""
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:59
 msgid "Run the following command to view the properties of existing images:"
 msgstr ""
-"既存のイメージのプロパティを表示するために、以下のコマンドを実行します:"
+"既存のイメージのプロパティを表示するために、以下のコマンドを実行します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:64
 msgid "Deleting Images"
@@ -158,7 +158,7 @@ msgstr "イメージの削除"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:65
 msgid "To delete an image, just execute:"
-msgstr "イメージを削除するには、ただ次のとおり実行します:"
+msgstr "イメージを削除するには、ただ次のとおり実行します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:68
 msgid ""
@@ -174,7 +174,7 @@ msgstr "他の CLI オプション"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:74
 msgid "A full set of options can be found using:"
-msgstr "オプションの完全な一覧は、以下を使用して見つけられます:"
+msgstr "オプションの完全な一覧は、以下を使用して見つけられます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:76
 msgid ""
@@ -196,7 +196,7 @@ msgid ""
 "The Glance database has two main tables:"
 msgstr ""
 "Glance がデータベースに保存しない唯一のものがイメージそのものです。Glance  "
-"データベースは主な 2 つのテーブルを持ちます:"
+"データベースは主な 2 つのテーブルを持ちます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:88
 msgid "images"
@@ -230,12 +230,12 @@ msgid ""
 msgstr ""
 "興味深い例の一つは、イメージとそのイメージの所有者の表の表示内容を変更するこ"
 "とです。これは、所有者のユニーク ID を表示するようにするだけで実現できます。"
-"この例はさらに一歩進め、所有者の読みやすい形式の名前を表示します:"
+"この例はさらに一歩進め、所有者の読みやすい形式の名前を表示します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:108
 msgid "Another example is displaying all properties for a certain image:"
 msgstr ""
-"もう一つの例は、特定のイメージに関するすべてのプロパティを表示することです:"
+"もう一つの例は、特定のイメージに関するすべてのプロパティを表示することです。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:116
 msgid "Flavors"
@@ -257,7 +257,7 @@ msgstr ""
 "は設定可能であり、<code>nova-api</code> サーバーにおいて <code>/etc/nova/"
 "policy.json</code> にある <code>compute_extension:flavormanage</code> に対す"
 "るアクセス制御を再定義することにより権限委譲できます)。お使いのシステムにおい"
-"て利用可能なフレーバーの一覧を取得するには、次のとおり実行します:"
+"て利用可能なフレーバーの一覧を取得するには、次のとおり実行します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:139
 msgid ""
@@ -267,11 +267,11 @@ msgid ""
 msgstr ""
 "<code>nova flavor-create</code> コマンドにより、権限のあるユーザーが新しいフ"
 "レーバーを作成できます。さらなるフレーバーの操作コマンドは次のコマンドを用い"
-"て表示できます: <placeholder-1/>"
+"て表示できます。<placeholder-1/>"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:144
 msgid "Flavors define a number of elements:"
-msgstr "フレーバーは数多くの要素を定義します:"
+msgstr "フレーバーは数多くの要素を定義します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:152
 msgid "Column"
@@ -485,11 +485,11 @@ msgid ""
 "you're acting in using the nova command:"
 msgstr ""
 "コマンドラインからは、以下の nova コマンドを使って、現在のプロジェクトのセ"
-"キュリティグループのリストを取得できます:"
+"キュリティグループのリストを取得できます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:317
 msgid "To view the details of the \"open\" security group:"
-msgstr "「open」セキュリティグループの詳細を表示するには:"
+msgstr "「open」セキュリティグループの詳細を表示する方法:"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:328
 msgid ""
@@ -541,7 +541,7 @@ msgstr ""
 "例のとおり、インターネットのどこからでも Web 通信を許可するセキュリティグルー"
 "プを作成しましょう。このグループを「global_http」と呼ぶことにします。許可され"
 "るものと許可されるところを要約した、明白で簡潔な名前になっています。コマンド"
-"ラインから:"
+"ラインから、"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:355
 msgid ""
@@ -563,12 +563,12 @@ msgstr ""
 "port」の引数は許可されるローカルのポート範囲を指定し、接続の送信元ポートと宛"
 "先ポートではないことに注意してください。nova secgroup-add-rule を複数回呼び出"
 "すことで、より複雑なルールセットを構成できます。たとえば、http と https の通"
-"信を通過させたければ:"
+"信を通過させたい場合、"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:380
 msgid ""
 "Despite only outputting the newly added rule this operation is additive:"
-msgstr "新しく追加されたルールのみが出力されますが、この操作は追加操作です:"
+msgstr "新しく追加されたルールのみが出力されますが、この操作は追加操作です。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:389
 msgid ""
@@ -582,7 +582,7 @@ msgstr ""
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:392
 msgid "To create security group rules for a cluster of instances:"
 msgstr ""
-"インスタンスのクラスター向けにセキュリティグループのルールを作成するには:"
+"インスタンスのクラスター向けにセキュリティグループのルールを作成する方法:"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:394
 msgid ""
@@ -675,7 +675,7 @@ msgid ""
 msgstr ""
 "新しいボリュームを追加する際に必要なのは、名前とギガバイト単位のボリューム容"
 "量だけです。これらを「ボリュームの作成」Web フォームに記入します。または、コ"
-"マンドラインを使用します:"
+"マンドラインを使用します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:441
 msgid ""
@@ -684,7 +684,7 @@ msgid ""
 msgstr ""
 "これは「test-volume」という名前の 10GB のボリュームを作成します。既存のボ"
 "リュームの一覧を表示するには以下のようにします。それらが接続されているインス"
-"タンスがあれば、インスタンス情報も表示されます:"
+"タンスがあれば、インスタンス情報も表示されます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:450
 msgid ""
@@ -710,7 +710,7 @@ msgstr ""
 "することができます。ボリュームのスナップショットを取得するには、ダッシュボー"
 "ドの「ボリューム」ページにおいて、ボリューム名の隣にあるアクション項目から"
 "「スナップショットの作成」を選択します。または、コマンドラインから次のように"
-"します:"
+"します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:473
 msgid "Block Storage Creation Failures"
@@ -726,7 +726,7 @@ msgstr ""
 "ユーザーがボリュームを作成しようとし、すぐにエラー状態になれば、トラブル解決"
 "のために最適な方法は Cinder ログファイルをボリュームの UUID で grep すること"
 "です。まずクラウドコントローラーにあるログファイルを調べます。次に、ボリュー"
-"ムを作成しようとしたストレージノードのログファイルを調べます:"
+"ムを作成しようとしたストレージノードのログファイルを調べます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:486
 msgid ""
@@ -761,7 +761,7 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:501
 msgid "On the command line:"
-msgstr "コマンドラインでは次のようにします:"
+msgstr "コマンドラインでは次のようにします。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:503
 msgid ""
@@ -780,7 +780,7 @@ msgid ""
 msgstr ""
 "ダッシュボードからインスタンスを削除するには、「インスタンス」ページにおいて"
 "インスタンスの隣にある「インスタンスの終了」アクションを選択します。または、"
-"コマンドラインから次のとおり実行します:"
+"コマンドラインから次のとおり実行します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:512
 msgid ""
@@ -892,7 +892,7 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:592
 msgid "Users can generate and register ssh keys using the nova command"
-msgstr "ユーザーが nova コマンドを使用して SSH 鍵を生成および登録できます:"
+msgstr "ユーザーが nova コマンドを使用して SSH 鍵を生成および登録できます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:595
 msgid ""
@@ -907,7 +907,7 @@ msgstr ""
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:600
 msgid ""
 "You can register an existing public key with OpenStack using this command"
-msgstr "このコマンドを使用して、既存の公開鍵を OpenStack に登録できます:"
+msgstr "このコマンドを使用して、既存の公開鍵を OpenStack に登録できます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:603
 msgid ""
@@ -923,7 +923,7 @@ msgid ""
 "command line for example:"
 msgstr ""
 "起動時にインスタンスに鍵を関連付けるには、たとえば、コマンドラインに --"
-"key_name mykey を追加します:"
+"key_name mykey を追加します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:609
 msgid ""
@@ -943,7 +943,7 @@ msgid ""
 "When viewing the server information, you can see the metadata included on "
 "the metadata line:"
 msgstr ""
-"サーバーの情報を表示するとき、メタデータ行に含まれるメタデータを参照できます:"
+"サーバーの情報を表示するとき、メタデータ行に含まれるメタデータを参照できます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:648
 msgid ""
@@ -968,7 +968,7 @@ msgid ""
 "example:"
 msgstr ""
 "このユーザーデータは、ローカルマシンのファイルに保存され、--user-data &lt;"
-"user-data-file&gt; フラグを用いてインスタンスの生成時に渡されます。たとえば:"
+"user-data-file&gt; フラグを用いてインスタンスの生成時に渡されます。例えば、"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:663
 msgid ""
@@ -983,7 +983,7 @@ msgstr ""
 "生成時にインスタンスのファイルシステムの中に置けます。5 ファイルまで保存でき"
 "ます。たとえば、何らかの理由で通常の SSH 鍵の注入ではなく、"
 "special_authorized_keysfile という名前の特別な authorized_keys をインスタンス"
-"に置きたい場合、以下のコマンドを使用できます:"
+"に置きたい場合、以下のコマンドを使用できます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:676
 msgid "Associating Security Groups"
@@ -1035,7 +1035,7 @@ msgstr ""
 "これらは、使用可能になる前にユーザーにより確保する必要があります。Floating "
 "IP をプロジェクトに確保するために、ダッシュボードの「アクセス &amp; セキュリ"
 "ティ」ページにある「プロジェクトへの IP の確保」ボタンがあります。または、コ"
-"マンドラインにおいて次を使用します:"
+"マンドラインにおいて次を使用します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:703
 msgid ""
@@ -1059,7 +1059,7 @@ msgid ""
 "From the command line, enter the following command to complete these tasks:"
 msgstr ""
 "これらの作業を完了するために、コマンドラインの場合、以下のコマンドにより同じ"
-"ことができます:"
+"ことができます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:718
 msgid "Attaching Block Storage"
@@ -1078,7 +1078,7 @@ msgstr ""
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:723
 msgid "To perform this action from command line, run the following command:"
 msgstr ""
-"このアクションをコマンドラインから実行するには、以下のコマンドを実行します"
+"このアクションをコマンドラインから実行するには、以下のコマンドを実行します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:726
 msgid ""
@@ -1086,7 +1086,7 @@ msgid ""
 "nova command-line client, as follows:"
 msgstr ""
 "nova コマンドラインクライアントから以下のように、インスタンスの起動時にブロッ"
-"クストレージのマッピングを指定することもできます:"
+"クストレージのマッピングを指定することもできます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:730
 msgid ""
@@ -1094,7 +1094,7 @@ msgid ""
 "type&gt;:&lt;size(GB)&gt;:&lt;delete-on-terminate&gt;</code>, where:"
 msgstr ""
 "ブロックデバイスのマッピング形式は <code>&lt;dev-name=&lt;id&gt;:&lt;"
-"type&gt;:&lt;size(GB)&gt;:&lt;delete-on-terminate&gt;</code> です。ここで:"
+"type&gt;:&lt;size(GB)&gt;:&lt;delete-on-terminate&gt;</code> です。ここで、"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:735
 msgid "dev-name"
@@ -1174,7 +1174,7 @@ msgstr ""
 "と、永続ブロックストレージからブートすることもできます。以下の例は "
 "ID=<literal>13</literal> のボリュームからブートしようとしています。終了時に削"
 "除されません。<literal>--key-name</literal> を有効なキーペア名で置き換えてく"
-"ださい:"
+"ださい。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:805
 msgid ""
@@ -1210,7 +1210,7 @@ msgstr ""
 "OpenStack のスナップショット機能により、実行中のインスタンスから新しいイメー"
 "ジを作成できます。これは、基本イメージをアップグレードしたり、公開イメージを"
 "取得してローカル向けにカスタマイズしたりする場合に非常に便利です。CLI を利用"
-"して、実行中のインスタンスのスナップショットを取得し、イメージを作成するには:"
+"して、実行中のインスタンスのスナップショットを取得し、イメージを作成する方法:"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:824
 msgid ""
@@ -1241,7 +1241,7 @@ msgstr ""
 "emphasis>。Glance に直接アップロードしたイメージと、スナップショットにより作"
 "成したイメージとの唯一の違いは、スナップショットにより作成されたイメージが "
 "glance データベースにおいて追加のプロパティを持つことです。これらのプロパティ"
-"は image_properties テーブルで確認でき、次の項目を含みます:"
+"は image_properties テーブルで確認でき、次の項目を含みます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:848
 msgid "name"
@@ -1301,7 +1301,7 @@ msgid ""
 msgstr ""
 "スナップショットは、ファイルシステムの状態をキャプチャーしますが、メモリーの"
 "状態をキャプチャーしません。そのため、スナップショットに期待するデータが含ま"
-"れることを確実にするために、次のことを確実にする必要があります:"
+"れることを確実にするために、次のことを確実にする必要があります。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:896
 msgid "Running programs have written their contents to disk"
@@ -1337,7 +1337,7 @@ msgid ""
 "before snapshotting:"
 msgstr ""
 "「ダーティー」バッファーの問題を解決するために、スナップショットの前に sync "
-"コマンドを使用することを推奨します:"
+"コマンドを使用することを推奨します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:916
 msgid ""
@@ -1363,7 +1363,7 @@ msgstr ""
 "ショットに適した安定したイメージをディスクに作成します。fsfreeze は ext3, "
 "ext4 および XFS を含むいくつかのファイルシステムをサポートします。仮想マシン"
 "のインスタンスが Ubuntu において実行されていれば、fsfreeze を取得するために "
-"util-linux パッケージをインストールします:"
+"util-linux パッケージをインストールします。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:929
 msgid ""
@@ -1390,7 +1390,7 @@ msgid ""
 msgstr ""
 "永続ブロックストレージのスナップショットを取得したい例を検討します。ゲストオ"
 "ペレーティングシステムにより /dev/vdb として認識され、/mnt にマウントされてい"
-"るとします。fsfreeze コマンドが 2 つの引数を受け取ります:"
+"るとします。fsfreeze コマンドが 2 つの引数を受け取ります。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:945
 msgid "-f: freeze the system"
@@ -1406,7 +1406,7 @@ msgid ""
 "inside of the instance:"
 msgstr ""
 "スナップショットの準備においてボリュームをフリーズするには、インスタンスの中"
-"で root として次のとおり実行します:"
+"で root として次のとおり実行します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:955
 msgid ""
@@ -1450,7 +1450,7 @@ msgid ""
 msgstr ""
 "fsfreeze コマンドを発行すると、スナップショットを実行しても安全です。たとえ"
 "ば、インスタンスが mon-instance という名前で、mon-snapshot という名前のイメー"
-"ジにスナップショットを取得したければ、以下のとおり実行します:"
+"ジにスナップショットを取得したければ、以下のとおり実行します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:975
 msgid ""
@@ -1458,7 +1458,7 @@ msgid ""
 "command, as root, inside of the instance:"
 msgstr ""
 "スナップショットの作成が終わったら、インスタンスの中で root として以下のコマ"
-"ンドを用いて、ファイルシステムをフリーズ解除できます:"
+"ンドを用いて、ファイルシステムをフリーズ解除できます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:979
 msgid ""
@@ -1468,7 +1468,7 @@ msgid ""
 msgstr ""
 "ルートファイルシステムをバックアップしたければ、プロンプトがフリーズしてしま"
 "すので、上のコマンドを単純に実行できません。代わりに、インスタンスの中で "
-"root として以下の 1 行を実行します:"
+"root として以下の 1 行を実行します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:988
 msgid "Instances in the Database"
@@ -1549,7 +1549,7 @@ msgid ""
 "happened on an instance:"
 msgstr ""
 "多くの時刻関連のフィールドは、いつ状態の変化がインスタンスに起こったかを追跡"
-"する際に役に立ちます:"
+"する際に役に立ちます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_user_facing.xml:1022
 msgid "created_at"

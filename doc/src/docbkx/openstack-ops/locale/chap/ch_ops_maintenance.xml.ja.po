@@ -128,22 +128,22 @@ msgid ""
 "successfully started:"
 msgstr ""
 "クラウドコントローラーを再起動した後、すべての必要なサービスが正常に起動した"
-"ことを確認します:"
+"ことを確認します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:68
 msgid "Also check that all services are functioning:"
-msgstr "また、すべてのサービスが正しく機能していることを確認します:"
+msgstr "また、すべてのサービスが正しく機能していることを確認します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:73
 msgid ""
 "For the storage proxy, ensure that the Object Storage service has resumed:"
 msgstr ""
 "ストレージプロキシの場合、Object Storage サービスが再開していることを確認しま"
-"す:"
+"す。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:76
 msgid "Also check that it is functioning:"
-msgstr "また、正しく機能していることを確認します:"
+msgstr "また、正しく機能していることを確認します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:81
 msgid "Total Cloud Controller Failure"
@@ -224,11 +224,11 @@ msgstr ""
 "ために、コンピュートノードを再起動する必要があれば、まずホストしている全イン"
 "スタンスがノード外に移動していることを確認します。クラウドが共有ストレージを"
 "利用していれば、<code>nova live-migration</code>  コマンドを使用します。初め"
-"に、移動させる必要があるインスタンスの一覧を取得します:"
+"に、移動させる必要があるインスタンスの一覧を取得します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:124
 msgid "Next, migrate them one by one:"
-msgstr "次に、それらを一つずつマイグレーションします"
+msgstr "次に、それらを一つずつマイグレーションします。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:126
 msgid ""
@@ -236,7 +236,7 @@ msgid ""
 "code> option:"
 msgstr ""
 "共有ストレージを使用していない場合、<code>--block-migrate</code> オプションを"
-"使用できます:"
+"使用できます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:129
 msgid ""
@@ -244,7 +244,7 @@ msgid ""
 "service has stopped:"
 msgstr ""
 "すべてのインスタンスをマイグレーションした後、<code>nova-compute</code> サー"
-"ビスが停止していることを確認します:"
+"ビスが停止していることを確認します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:133
 msgid ""
@@ -263,11 +263,11 @@ msgid ""
 msgstr ""
 "続けて、コンピュートノードを停止し、メンテナンスを実行し、ノードを元に戻しま"
 "す。先のコマンドを逆に実行することにより、<code>nova-compute</code> サービス"
-"を再び有効化できます:"
+"を再び有効化できます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:146
 msgid "Then start the <code>nova-compute</code> service:"
-msgstr "そして <code>nova-compute</code> サービスを起動します:"
+msgstr "そして <code>nova-compute</code> サービスを起動します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:149
 msgid ""
@@ -287,11 +287,11 @@ msgid ""
 msgstr ""
 "コンピュートノードを再起動した場合、まず正常に起動したことを確認します。これ"
 "には <code>nova-compute</code> サービスが実行していることを確認することが含ま"
-"れます:"
+"れます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:161
 msgid "Also ensure that it has successfully connected to the AMQP server:"
-msgstr "AMQP サーバーに正常に接続できることも確認します:"
+msgstr "AMQP サーバーに正常に接続できることも確認します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:165
 msgid ""
@@ -317,13 +317,13 @@ msgid ""
 "performing the following command:"
 msgstr ""
 "以下のコマンドを実行することにより、コンピュートノードにおいてホストされてい"
-"るインスタンスの一覧を作成できます:"
+"るインスタンスの一覧を作成できます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:179
 msgid ""
 "After you have the list, you can use the nova command to start each instance:"
 msgstr ""
-"一覧を取得した後、各インスタンスを起動するために nova コマンドを使用できます:"
+"一覧を取得した後、各インスタンスを起動するために nova コマンドを使用できます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:183
 msgid ""
@@ -345,7 +345,7 @@ msgid ""
 msgstr ""
 "インスタンスがブートしなければ、つまりブートしようとしても <code>virsh list</"
 "code> がインスタンスを表示しなければ、コンピュートノードにおいて以下のとおり"
-"実行します:"
+"実行します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:194
 msgid ""
@@ -365,7 +365,7 @@ msgstr ""
 "多くの場合、libvirt の XML ファイル (<code>/etc/libvirt/qemu/instance-"
 "xxxxxxxx.xml</code>) の何かがすでに存在しないことで、エラーが発生する。次のと"
 "おり実行することにより、インスタンスを再起動するのと同時に、強制的に XML ファ"
-"イルを再作成できます:"
+"イルを再作成できます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:207
 msgid "Inspecting and Recovering Data from Failed Instances"
@@ -399,7 +399,7 @@ msgid ""
 "disk), the following steps must be followed:"
 msgstr ""
 "インスタンスのディスク (/var/lib/nova/instances/instance-xxxxxx/disk) にアク"
-"セスするには、以下の手順に従う必要があります:"
+"セスするには、以下の手順に従う必要があります。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:226
 msgid "Suspend the instance using the virsh command"
@@ -502,15 +502,15 @@ msgid ""
 "of instance and volume UUIDs:"
 msgstr ""
 "影響のあったインスタンスがボリュームを接続していれば、まずインスタンスとボ"
-"リュームの UUID 一覧を生成します:"
+"リュームの UUID 一覧を生成します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:355
 msgid "You should see a result like the following:"
-msgstr "以下のような結果を確認できます:"
+msgstr "以下のような結果を確認できます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:362
 msgid "Next, manually detach and reattach the volumes:"
-msgstr "次に、ボリュームを手動で切断し、再接続します:"
+msgstr "次に、ボリュームを手動で切断し、再接続します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:366
 msgid ""
@@ -542,7 +542,7 @@ msgid ""
 msgstr ""
 "これを実行するために、nova データベースにおいて以下のクエリーを実行することに"
 "より、故障したノードにおいてホストされているインスタンスの UUID の一覧を生成"
-"します:"
+"します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:381
 msgid ""
@@ -550,7 +550,7 @@ msgid ""
 "are now hosted on c02.example.com:"
 msgstr ""
 "次に、c01.example.com においてホストされていたすべてのインスタンスが、今度は "
-"c02.example.com でホストされることを Nova に教えます:"
+"c02.example.com でホストされることを Nova に教えます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:385
 msgid ""
@@ -558,7 +558,7 @@ msgid ""
 "example.com while regenerating their XML files at the same time:"
 msgstr ""
 "その後、nova コマンドを使って、c01.example.com にあったすべてのインスタンスを"
-"再起動します。起動する際にインスタンスの XML ファイルを再生成します:"
+"再起動します。起動する際にインスタンスの XML ファイルを再生成します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:389
 msgid ""
@@ -688,7 +688,7 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:464
 msgid "Next, redistribute the ring files to the other nodes:"
-msgstr "次に、ring ファイルを他のノードに再配布します:"
+msgstr "次に、ring ファイルを他のノードに再配布します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:470
 msgid ""
@@ -730,7 +730,7 @@ msgstr "この例では、<code>/dev/sdb</code> が故障したと仮定しま�
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:491
 msgid "First, unmount the disk:"
-msgstr "まず、ディスクをアンマウントします:"
+msgstr "まず、ディスクをアンマウントします。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:493
 msgid ""
@@ -742,7 +742,7 @@ msgstr ""
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:495
 msgid "Ensure that the operating system has recognized the new disk:"
 msgstr ""
-"オペレーティングシステムが新しいディスクを認識していることを確認します:"
+"オペレーティングシステムが新しいディスクを認識していることを確認します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:498
 msgid "You should see a message about /dev/sdb."
@@ -754,11 +754,11 @@ msgid ""
 "format the disk as a whole:"
 msgstr ""
 "Swift ディスクではパーティションを使用しないことが推奨されるので、単にディス"
-"ク全体をフォーマットします:"
+"ク全体をフォーマットします。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:502
 msgid "Finally, mount the disk:"
-msgstr "最後に、ディスクをマウントします:"
+msgstr "最後に、ディスクをマウントします。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:504
 msgid ""
@@ -1119,7 +1119,7 @@ msgid ""
 msgstr ""
 "コンポーネントの設定ファイルを確認して、それぞれの OpenStack コンポーネントが"
 "対応するデータベースにどのようにアクセスするかを把握ください。"
-"<code>sql_connection</code> またはただの <code>connection</code> を探します:"
+"<code>sql_connection</code> またはただの <code>connection</code> を探します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:761
 msgid "The connection strings take this format:"
@@ -1298,7 +1298,7 @@ msgid ""
 msgstr ""
 "最初に確認する場所は、実行しようとしているコマンドに関連するログファイルで"
 "す。たとえば、<code>nova list</code> が失敗していれば、Nova ログファイルを "
-"tail 表示しながら、次のコマンドを再実行してください:"
+"tail 表示しながら、次のコマンドを再実行してください。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:913
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:925
@@ -1326,7 +1326,7 @@ msgid ""
 msgstr ""
 "エラーから問題が他のコンポーネントにあることが分かる場合には、そのコンポーネ"
 "ントのログファイルに表示を切り替えます。nova が glance にアクセスできなけれ"
-"ば、glance-api ログを確認します:"
+"ば、glance-api ログを確認します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:929
 msgid "Wash, rinse, repeat until you find the core cause of the problem."
@@ -1348,7 +1348,7 @@ msgstr ""
 "場合、作戦を変更し、違うコマンドを使用します。おそらくコマンドラインにおいて"
 "直接サービスを実行することです。たとえば、<code>glance-api</code> サービスが"
 "起動しなかったり、実行状態にとどまらない場合は、コマンドラインからデーモンを"
-"起動してみます:"
+"起動してみます。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:944
 msgid "This might print the error and cause of the problem.<placeholder-1/>"
@@ -1426,7 +1426,7 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:981
 msgid "The upgrade process generally follows these steps:"
-msgstr "一般的に、アップグレード作業は以下の手順で行います:"
+msgstr "一般的に、アップグレード作業は以下の手順で行います。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:985
 msgid "Read the release notes and documentation."
@@ -1457,7 +1457,7 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:1003
 msgid "The general order that seems to be most successful is:"
-msgstr "最も成功すると考えられる一般的な順番は次のとおりです:"
+msgstr "最も成功すると考えられる一般的な順番は次のとおりです。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:1007
 msgid "Upgrade the OpenStack Identity service (keystone)."
@@ -1478,7 +1478,7 @@ msgstr ""
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:1023
 msgid "For each of these steps, complete the following sub-steps:"
-msgstr "これらのステップそれぞれに対して、以下のサブステップを完了します:"
+msgstr "これらのステップそれぞれに対して、以下のサブステップを完了します。"
 
 #: doc/src/docbkx/openstack-ops/src/ch_ops_maintenance.xml:1027
 msgid "Stop services."
