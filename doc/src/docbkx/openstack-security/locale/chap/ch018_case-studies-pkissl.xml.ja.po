@@ -1,0 +1,94 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:3
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:3
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:3
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:3
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:3
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:3
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:3
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:3
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:3
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:3
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:3
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:3
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:3
+msgid "Case Studies"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:6
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:19
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:6
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:6
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:6
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:6
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:6
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:6
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:6
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:6
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:6
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:6
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:6
+msgid "Alice's Private Cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:11
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:24
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:10
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:10
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:12
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:10
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:10
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:10
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:23
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:12
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:12
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:10
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:13
+msgid "Bob's Public Cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:4
+msgid ""
+"In this case study we discuss how Alice and Bob would address deployment of "
+"PKI certification authorities (CA) and certificate management."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:7
+msgid ""
+"Alice as a cloud architect within a government agency knows that her agency "
+"operates its own certification authority. Alice contacts the PKI office in "
+"her agency that manages her PKI and certificate issuance. Alice obtains "
+"certificates issued by this CA and configures the services within both the "
+"public and management security domains to use these certificates. Since "
+"Alice's OpenStack deployment exists entirely on a disconnected from the "
+"Internet network, she makes sure to remove all default CA bundles that "
+"contain external public CA providers to ensure the OpenStack services only "
+"accept client certificates issued by her agency's CA."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:11
+msgid ""
+"Bob is architecting a public cloud and needs to ensure that the publicly "
+"facing OpenStack services are using certificates issued by a major public "
+"CA. Bob acquires certificates for his public OpenStack services and "
+"configures the services to use PKI and SSL and includes the public CAs in "
+"his trust bundle for the services. Additionally, Bob also wants to further "
+"isolate the internal communications amongst the services within the "
+"management security domain. Bob contacts the team within his organization "
+"that is responsible for managing his organizations PKI and issuance of "
+"certificates using their own internal CA. Bob obtains certificates issued by "
+"this internal CA and configures the services that communicate within the "
+"management security domain to use these certificates and configures the "
+"services to only accept client certificates issued by his internal CA."
+msgstr ""

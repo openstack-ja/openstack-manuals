@@ -1,0 +1,31 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch001_acknowledgements.xml:3
+msgid "Acknowledgements"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch001_acknowledgements.xml:4
+msgid ""
+"The OpenStack Security Group would like to acknowledge contributions from "
+"the following organizations who were instrumental in making this book "
+"possible. These are:"
+msgstr ""
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: doc/src/docbkx/openstack-security/ch001_acknowledgements.xml:8
+#: doc/src/docbkx/openstack-security/ch001_acknowledgements.xml:11
+msgid ""
+"@@image: 'static/book-sprint-all-logos.png'; "
+"md5=f2d97c3130c32f31412f5af41ad72d39"
+msgstr ""

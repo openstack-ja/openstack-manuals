@@ -1,0 +1,473 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:3
+msgid "Security Services for Instances"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:4
+msgid ""
+"One of the virtues of running instances in a virtualized environments is "
+"that it opens up new opportunities for security controls that are not "
+"typically available when deploying onto bare metal. There are several "
+"technologies that can be applied to the virtualization stack that bring "
+"improved information assurance for cloud tenants."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:5
+msgid ""
+"Deployers or users of OpenStack with strong security requirements may want "
+"to consider deploying these technologies. Not all are applicable in every "
+"situation, indeed in some cases technologies may be ruled out for use in a "
+"cloud because of prescriptive business requirements. Similarly some "
+"technologies inspect instance data such as run state which may be "
+"undesirable to the users of the system."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:6
+msgid ""
+"In this chapter we explore these technologies and describe the situations "
+"where they can be used to enhance security for instances or underlying "
+"instances. We also seek to highlight where privacy concerns may exist. These "
+"include data pass through, introspection, or providing a source of entropy. "
+"In this section we highlight the following additional security services:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:8
+msgid "Entropy to Instances"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:11
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:28
+msgid "Scheduling Instances to Nodes"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:14
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:65
+msgid "Trusted Images"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:17
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:130
+msgid "Instance Migrations"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:21
+msgid "Entropy To Instances"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:22
+msgid ""
+"We consider entropy to refer to the quality and source of random data that "
+"is available to an instance. Cryptographic technologies typically rely "
+"heavily on randomness, requiring a high quality pool of entropy to draw "
+"from. It is typically hard for a virtual machine to get enough entropy to "
+"support these operations. Entropy starvation can manifest in instances as "
+"something seemingly unrelated for example, slow boot times because the "
+"instance is waiting for ssh key generation. Entropy starvation may also "
+"motivate users to employ poor quality entropy sources from within the "
+"instance, making applications running in the cloud less secure overall."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:23
+msgid ""
+"Fortunately, a cloud architect may address these issues by providing a high "
+"quality source of entropy to the cloud instances. This can be done by having "
+"enough hardware random number generators (HRNG) in the cloud to support the "
+"instances. In this case, \"enough\" is somewhat domain specific. For "
+"everyday operations, a modern HRNG is likely to produce enough entropy to "
+"support 50-100 compute nodes. High bandwidth HRNGs, such as the RdRand "
+"instruction available with Intel Ivy Bridge and newer processors could "
+"potentially handle more nodes. For a given cloud, an architect needs to "
+"understand the application requirements to ensure that sufficient entropy is "
+"available."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:24
+msgid ""
+"Once the entropy is available in the cloud, the next step is getting that "
+"entropy into the instances. Tools such as the entropy gathering daemon "
+"(EGD, http://egd.sourceforge.net/) provide a way to fairly and securely "
+"distribute entropy through a distributed system. Support exists for using "
+"the EGD as an entropy source for LibVirt."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:25
+msgid ""
+"Nova support for these features is not generally available, but it would "
+"only require a moderate amount of work for implementors to integrate this "
+"functionality."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:29
+msgid ""
+"Before an instance is created, a host for the image instantiation must be "
+"selected. This selection is performed by the nova-scheduler which determines "
+"how to dispatch compute and volume requests."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:30
+msgid ""
+"The default nova scheduler in Grizzly is the Filter Scheduler, although "
+"other schedulers exist (http://docs.openstack.org/trunk/openstack-compute/"
+"admin/content/other-schedulers.html). The filter scheduler works in "
+"collaboration with 'filters' to decide where an instance should be started. "
+"This process of host selection allows administrators to fulfil many "
+"different security requirements. Depending on the cloud deployment type for "
+"example, one could choose to have tenant instances reside on the same hosts "
+"whenever possible if data isolation was a primary concern, conversely one "
+"could attempt to have instances for a tenant reside on as many different "
+"hosts as possible for availability or fault tolerance reasons. The following "
+"diagram demonstrates how the filter scheduler works:"
+msgstr ""
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:32
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:35
+msgid ""
+"@@image: 'static/filteringWorkflow1.png'; "
+"md5=c144af5cbdee1bd17a7bde0bea5b5fe7"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:38
+msgid ""
+"The use of scheduler filters may be used to segregate customers, data, or "
+"even discard machines of the cloud that cannot be attested as secure. This "
+"generally applies to all OpenStack projects offering a scheduler. When "
+"building a cloud, you may choose to implement scheduling filters for a "
+"variety of security-related purposes."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:39
+msgid ""
+"Below we highlight a few of the filters that may be useful in a security "
+"context, depending on your requirements, the full set of filter "
+"documentation is available here: http://docs.openstack.org/trunk/openstack-"
+"compute/admin/content/scheduler-filters.html"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:40
+msgid "Tenant Driven Whole Host Reservation"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:41
+msgid ""
+"There currently exists a blueprint for whole host reservation - https://"
+"blueprints.launchpad.net/nova/+spec/whole-host-allocation This would allow a "
+"tenant to exclusively reserve hosts for only it's instances, incurring extra "
+"costs."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:43
+msgid "Host Aggregates"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:44
+msgid ""
+"While not a filter in themselves, host aggregates allow administrators to "
+"assign key-value pairs to groups of machines. This allows cloud "
+"administrators, not users, to partition up their compute host resources. "
+"Each node can have multiple aggregates. See http://docs.openstack.org/trunk/"
+"openstack-compute/admin/content/host-aggregates.html for more information on "
+"creating and managing aggregates."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:47
+msgid "AggregateMultiTenancyIsolation"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:48
+msgid ""
+"Isolates tenants to specific host aggregates. If a host is in an aggregate "
+"that has the metadata key <literal>filter_tenant_id</literal> it will only "
+"create instances from that tenant (or list of tenants). A host can be in "
+"multiple aggregates. If a host does not belong to an aggregate with the "
+"metadata key, it can create instances from all tenants."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:51
+msgid "DifferentHostFilter"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:52
+msgid ""
+"Schedule the instance on a different host from a set of instances. To take "
+"advantage of this filter, the requester must pass a scheduler hint, using "
+"<literal>different_host</literal> as the key and a list of instance uuids as "
+"the value. This filter is the opposite of the <literal>SameHostFilter</"
+"literal>."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:55
+msgid "GroupAntiAffinityFilter"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:56
+msgid ""
+"The GroupAntiAffinityFilter ensures that each instance in a group is on a "
+"different host. To take advantage of this filter, the requester must pass a "
+"scheduler hint, using <literal>group</literal> as the key and a list of "
+"instance uuids as the value."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:59
+msgid "Trusted Compute Pools"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:60
+msgid ""
+"There exists a scheduler filter which integrates with the Open Attestation "
+"Project (OATS, https://github.com/OpenAttestation/OpenAttestation) to define "
+"scheduler behavior according to the attestation of PCRs received from a "
+"system using TXT."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:61
+msgid ""
+"It is unclear if this feature is compatible with AMD's similar SEM, although "
+"the OpenAttestation agent relies on the vendor-agnostic TrouSerS library "
+"(http://trousers.sourceforge.net/)."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:66
+msgid ""
+"With regards to images, users will be working with pre-installed images or "
+"images that they upload themselves. In both cases, users will want to ensure "
+"that the image they are ultimately running has not been tampered with. This "
+"requires some source of truth such as a checksum for the known good version "
+"of an image as well as verification of the running image. This section "
+"describes the current best practices around image handling, while also "
+"calling out some of the existing gaps in this space."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:68
+msgid "Image Creation Process"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:69
+msgid ""
+"The OpenStack Documentation provides guidance on how to create and upload an "
+"image to Glance. Additionally it is assumed that you have a process by which "
+"you install and harden operating systems. Thus, the following items will "
+"provide additional guidance on how to ensure your images are built securely "
+"prior to upload. There are a variety of options for obtaining images. Each "
+"has specific steps that help validate the image's provenance."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:70
+msgid "The first option is to obtain boot media from a trusted source."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:80
+msgid ""
+"The second option is to use the OpenStack guide for building images (http://"
+"docs.openstack.org/trunk/openstack-compute/admin/content/creating-custom-"
+"images.html). In this case, you will want to follow your organizations OS "
+"hardening guidelines or those provided by a trusted third-party such as the "
+"RHEL6 STIG (http://iase.disa.mil/stigs/os/unix/red_hat.html)."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:81
+msgid ""
+"The final option is to use an automated image builder. The following example "
+"uses the Oz image builder. The OpenStack community has recently created a "
+"newer tool worth investigating: disk-image-builder. We have not evaluated "
+"this tool from a security perspective."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:82
+msgid ""
+"Example of RHEL 6 CCE-26976-1 which will help implement NIST 800-53 "
+"Section <emphasis>AC-19(d) in</emphasis> Oz."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:119
+msgid ""
+"Note, it is the recommendation of this guide to shy away from the manual "
+"image building process as it is complex and prone to error. Further, using "
+"an automated system like Oz or disk-image-builder for image building, or a "
+"configuration management utility like Chef or Puppet for post boot image "
+"hardening gives you the ability to produce a consistent image as well as "
+"track compliance of your base image to its respective hardening guidelines "
+"over time."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:120
+msgid ""
+"If subscribing to a public cloud service, you should check with the cloud "
+"provider for an outline of the process used to produce their default images. "
+"If the provider allows you to upload your own images, you will want to "
+"ensure that you are able to verify that your image was not modified before "
+"you spin it up. To do this, refer to the following section on Image "
+"Provenance."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:123
+msgid "Image Provenance and Validation"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:124
+msgid ""
+"Unfortunately, it is not currently possible to force Nova to validate an "
+"image hash immediately prior to starting an instance. To understand the "
+"situation, we begin with a brief overview of how images are handled around "
+"the time of image launch."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:125
+msgid ""
+"Images come from the glance service to the nova service on a node. This "
+"transfer should be protected by running over SSL. Once the image is on the "
+"node, it is verified with a basic checksum and then it's disk is expanded "
+"based on the size of the instance being launched. If, at a later time, the "
+"same image is launched with the same instance size on this node, it will be "
+"launched from the same expanded image. Since this expanded image is not re-"
+"verified before launching, it could be tampered with and the user would not "
+"have any way of knowing, beyond a manual inspection of the files in the "
+"resulting image."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:126
+msgid ""
+"We hope that future versions of Nova and/or Glance will offer support for "
+"validating the image hash before each instance launch. An alternative option "
+"that would be even more powerful would be allow users to sign an image and "
+"then have the signature validated when the instance is launched."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:131
+msgid ""
+"OpenStack and the underlying virtualization layers provide for the Live "
+"Migration of images between OpenStack nodes allowing you to seamlessly "
+"perform rolling upgrades of your OpenStack Compute nodes without instance "
+"downtime. However, Live Migrations also come with their fair share of risk. "
+"To understand the risks involved, it is important to first understand how a "
+"live migration works. The following are the high level steps preformed "
+"during a live migration."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:133
+msgid "Start instance on destination host"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:134
+msgid "Transfer memory"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:135
+msgid "Stop the guest &amp; sync disks"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:136
+msgid "Transfer state"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:137
+msgid "Start the guest"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:140
+msgid "Live Migration Risks"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:141
+msgid ""
+"At various stages of the live migration process the contents of an instances "
+"run time memory and disk are transmitted over the network in plain text. "
+"Thus there are several risks that need to be addressed when using live "
+"migration. The following in-exhaustive list details some of these risks:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:143
+msgid ""
+"<emphasis>Denial of Service (DoS)</emphasis> : If something fails during the "
+"migration process, the instance could be lost."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:146
+msgid ""
+"<emphasis>Data Exposure</emphasis> : Memory or disk transfers must be "
+"handled securely."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:149
+msgid ""
+"<emphasis>Data Manipulation</emphasis> : If memory or disk transfers are not "
+"handled securely, then an attacker could manipulate user data during the "
+"migration."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:152
+msgid ""
+"<emphasis>Code Injection</emphasis> : If memory or disk transfers are not "
+"handled securely, then an attacker could manipulate executables, either on "
+"disk or in memory, during the migration."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:157
+msgid "Live Migration Mitigations"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:158
+msgid ""
+"There are several methods to mitigate some of the risk associated with live "
+"migrations, the following list details some of these:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:160
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:170
+msgid "Disable Live Migration"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:163
+msgid "Isolated Migration Network"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:166
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:181
+msgid "Encrypted Live Migration"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:171
+msgid ""
+"At this time, live migration is enabled in OpenStack by default. Live "
+"migrations can be disabled by adding the following lines to the nova policy."
+"json file:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:177
+msgid "Migration Network"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:178
+msgid ""
+"As a general practice, live migration traffic should be restricted to the "
+"management security domain. Indeed live migration traffic, due to its plain "
+"text nature and the fact that you are transferring the contents of disk and "
+"memory of a running instance, it is recommended you further separate live "
+"migration traffic onto a dedicated network. Isolating the traffic to a "
+"dedicated network can reduce the risk of exposure."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch055_security-services-for-instances.xml:182
+msgid ""
+"If your use case involves keeping live migration enabled, then libvirtd can "
+"provide tunneled, encrypted live migrations. That said, this feature is not "
+"currently exposed in OpenStack Dashboard, nor the nova-client commands and "
+"can only be accessed through manual configuration of libvritd. Encrypted "
+"live migration modifies the live migration process by first copying the "
+"instance data from the running hypervisor to libvirtd. From there an "
+"encrypted tunnel is created between the libvirtd processes on both hosts. "
+"Finally, the destination libvirtd process copies the instance back to the "
+"underlying hypervisor."
+msgstr ""

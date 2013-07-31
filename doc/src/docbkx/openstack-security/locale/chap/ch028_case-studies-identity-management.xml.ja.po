@@ -1,0 +1,121 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:3
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:3
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:3
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:3
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:3
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:3
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:3
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:3
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:3
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:3
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:3
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:3
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:3
+msgid "Case Studies"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:6
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:19
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:6
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:6
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:6
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:6
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:6
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:6
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:6
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:6
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:6
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:6
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:6
+msgid "Alice's Private Cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:11
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:24
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:10
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:10
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:12
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:10
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:10
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:10
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:23
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:12
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:12
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:10
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:13
+msgid "Bob's Public Cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:4
+msgid ""
+"In this case study we discuss how Alice and Bob would address configuration "
+"of OpenStack core services. These include the Keystone Identity service, "
+"Dashboard, and Compute services. Alice will be concerned with integration "
+"into the existing government directory services, while Bob will need to "
+"provide access to the public."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:7
+msgid ""
+"Alice's enterprise has a well-established directory service with two-factor "
+"authentication for all users. She configures Keystone to support an external "
+"authentication service supporting authentication with government-issued "
+"access cards. She also uses an external LDAP server to provide role "
+"information for the users that is integrated with the access control policy. "
+"Due to FedRAMP compliance requirements, Alice implements two-factor "
+"authentication on the Management network for all administrator access."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:8
+msgid ""
+"Alice also deploys the Dashboard to manage many aspects of the cloud.  She "
+"deploys the Dashboard with HSTS to ensure that only HTTPS is used.  The "
+"Dashboard resides within an internal subdomain of the private network domain "
+"name system."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:9
+msgid ""
+"Alice decides to use SPICE instead of VNC for the virtual console.  She "
+"wants to take advantage of the emerging capabilities in SPICE."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:13
+msgid ""
+"Bob must support authentication by the general public, so he elects to use "
+"provide for username / password authentication. He has concerns about brute "
+"force attacks attempting to crack user passwords, so he also uses an "
+"external authentication extension that throttles the number of failed login "
+"attempts. Bob's Management network is separate from the other networks "
+"within his cloud, but can be reached from his corporate network via ssh. As "
+"recommended earlier, Bob requires administrators to use two-factor "
+"authentication on the Management network to reduce the risk from compromised "
+"administrator passwords."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:14
+msgid ""
+"Bob also deploys the Dashboard to manage many aspects of the cloud.  He "
+"deploys the Dashboard with HSTS to ensure that only HTTPS is used.  He has "
+"ensured that the Dashboard is deployed on a second-level domain due to the "
+"limitations of the same-origin policy. He also disables "
+"HORIZON_IMAGES_ALLOW_UPLOAD to prevent resource exhaustion."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:15
+msgid ""
+"Bob decides to use VNC for his virtual console for its maturity and security "
+"features."
+msgstr ""

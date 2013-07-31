@@ -1,0 +1,99 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:3
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:3
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:3
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:3
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:3
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:3
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:3
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:3
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:3
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:3
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:3
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:3
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:3
+msgid "Case Studies"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:6
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:19
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:6
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:6
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:6
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:6
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:6
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:6
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:6
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:6
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:6
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:6
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:6
+msgid "Alice's Private Cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:11
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:24
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:10
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:10
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:12
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:10
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:10
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:10
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:23
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:12
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:12
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:10
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:13
+msgid "Bob's Public Cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:4
+msgid ""
+"In this case study we discuss how Alice and Bob would address monitoring and "
+"logging in the public vs a private cloud. In both instances, time "
+"synchronization and a centralized store of logs become extremely important "
+"for performing proper assessments and troubleshooting of anomalies. Just "
+"collecting logs is not very useful, a robust monitoring system must be built "
+"to generate actionable events."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:7
+msgid ""
+"In the private cloud, Alice has a better understanding of the tenants "
+"requirements and accordingly can add appropriate oversight and compliance on "
+"monitoring and logging. Alice should identify critical services and data and "
+"ensure that logging is turned at least on those services and is being "
+"aggregated to a central log server. She should start with simple and known "
+"use cases and implement correlation and alerting to limit the number of "
+"false positives. To implement correlation and alerting, she sends the log "
+"data to her organization's existing SIEM tool. Security monitoring should be "
+"an ongoing process and she should continue to define use cases and alerts as "
+"she has better understanding of the network traffic activity and usage over "
+"time."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:11
+msgid ""
+"When it comes to logging, as a public cloud provider, Bob is interested in "
+"logging both for situational awareness as well as compliance. That is, "
+"compliance that Bob as a provider is subject to as well as his ability to "
+"provide timely and relevant logs or reports on the behalf of his customers "
+"for their compliance audits. With that in mind, Bob configures all of his "
+"instances, nodes, and infrastructure devices to perform time synchronization "
+"with an external, known good time device. Additionally, Bob's team has built "
+"a Django based web applications for his customers to perform self-service "
+"log retrieval from Bob's SIEM tool. Bob also uses this SIEM tool along with "
+"a robust set of alerts and integration with his CMDB to provide operational "
+"awareness to both customers and cloud administrators."
+msgstr ""

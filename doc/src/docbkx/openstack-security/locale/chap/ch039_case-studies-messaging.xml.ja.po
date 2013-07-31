@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:3
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:3
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:3
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:3
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:3
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:3
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:3
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:3
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:3
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:3
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:3
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:3
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:3
+msgid "Case Studies"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:6
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:19
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:6
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:6
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:6
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:6
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:6
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:6
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:6
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:6
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:6
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:6
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:6
+msgid "Alice's Private Cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:11
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:24
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:10
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:10
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:12
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:10
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:10
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:10
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:23
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:12
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:12
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:10
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:13
+msgid "Bob's Public Cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:4
+msgid ""
+"The message queue is a critical piece of infrastructure that supports a "
+"number of OpenStack services but is most strongly associated with the "
+"Compute service. Due to the nature of the message queue service, Alice and "
+"Bob have similar security concerns. One of the larger concerns that remains "
+"is that many systems have access to this queue and there is no way for a "
+"consumer of the queue messages to verify which host or service placed the "
+"messages on the queue. An attacker who is able to successfully place "
+"messages on the queue is able to create and delete VM instances, attach the "
+"block storage of any tenant and a myriad of other malicious actions. There "
+"are a number of solutions on the horizon to fix this, with several proposals "
+"for message signing and encryption making their way through the OpenStack "
+"development process."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:7
+msgid ""
+"In this case Alice's controls mimic those Bob has deployed for the public "
+"cloud."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:11
+msgid ""
+"Bob assumes that at some point infrastructure or networks underpinning the "
+"Compute service may become compromised. Due to this, he recognizes the "
+"importance of locking down access to the message queue. To do this Bob "
+"deploys his RabbitMQ servers with SSL and X.509 client auth for access "
+"control. This in turn limits the capabilities of an attacker who has "
+"compromised a system that does not have queue access."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:12
+msgid ""
+"Additionally, Bob adds strong network ACL rulesets to enforce which "
+"endpoints can communicate with the message servers. This second control "
+"provides some additional assurance should the other protections fail."
+msgstr ""

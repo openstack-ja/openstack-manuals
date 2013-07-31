@@ -1,0 +1,159 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:3
+msgid "Networking Architecture"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:4
+msgid ""
+"Openstack Networking is a standalone service that often involves deploying "
+"several processes across a number of nodes. These processes interact with "
+"each other and with other Openstack services. The main process of the "
+"Openstack Networking service is neutron-server, a Python daemon that exposes "
+"the Openstack Networking API and passes tenant requests to a suite of "
+"plugins for additional processing."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:5
+msgid "Openstack Networking components encompasses the following elements:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:7
+msgid ""
+"<emphasis role=\"bold\">neutron server</emphasis> (<literal>neutron-server</"
+"literal> and <literal>neutron-*-plugin</literal>): This service runs on the "
+"network node to service the Networking API and its extensions. It also "
+"enforces the network model and IP addressing of each port. The neutron-"
+"server and plugin agents require access to a database for persistent storage "
+"and access to a message queue for inter-communication."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:10
+msgid ""
+"<emphasis role=\"bold\">plugin agent</emphasis> (<literal>neutron-*-agent</"
+"literal>): Runs on each Nova compute node to manage local virtual switch "
+"(vswitch) configuration. The agents to be run will depend on which plugin "
+"you are using. This service requires message queue access. "
+"<emphasis>Optional depending on plugin.</emphasis>"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:13
+msgid ""
+"<emphasis role=\"bold\">DHCP agent</emphasis> (<literal>neutron-dhcp-agent</"
+"literal>): Provides DHCP services to tenant networks. This agent is the same "
+"across all plugins and is responsible for maintaining DHCP configuration. "
+"The neutron-dhcp-agent requires message queue access."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:16
+msgid ""
+"<emphasis role=\"bold\">l3 agent</emphasis> (<literal>neutron-l3-agent</"
+"literal>): Provides L3/NAT forwarding for external network access of VMs on "
+"tenant networks. Requires message queue access. <emphasis>Optional depending "
+"on plugin.</emphasis>"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:19
+msgid ""
+"<emphasis role=\"bold\">network provider services</emphasis> (SDN server/"
+"services). Provide additional networking services that are provided to "
+"tenant networks. These SDN services may interact with the neutron-server, "
+"neutron-plugin, and/or plugin-agents via REST APIs or other communication "
+"channels."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:22
+msgid ""
+"The figure that follows provides an architectural and networking flow "
+"diagram of the OpenStack Networking components:"
+msgstr ""
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:24
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:27
+msgid ""
+"@@image: 'static/sdn-connections.png'; md5=3fb0f3e2bea0784fea8832526d2b2832"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:31
+msgid "OS Networking Service placement on Physical Servers"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:32
+msgid ""
+"In this guide, we focus primarily on a standard architecture that includes "
+"a <emphasis>cloud controller</emphasis> host, a <emphasis>network</emphasis> "
+"host, and a set of <emphasis>compute</emphasis> hypervisors for running VMs."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:34
+msgid "Network Connectivity of Physical Servers"
+msgstr ""
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:36
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:39
+msgid ""
+"@@image: 'static/1aa-network-domains-diagram.png'; "
+"md5=57ae4448b05a3852180f75f3995711b9"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:42
+msgid ""
+"A standard OpenStack Networking setup has up to four distinct physical data "
+"center networks:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:44
+msgid ""
+"<emphasis role=\"bold\">Management network</emphasis> Used for internal "
+"communication between OpenStack Components. The IP addresses on this network "
+"should be reachable only within the data center and is considered the "
+"Management Security Domain."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:47
+msgid ""
+"<emphasis role=\"bold\">Guest network</emphasis> Used for VM data "
+"communication within the cloud deployment. The IP addressing requirements of "
+"this network depend on the OpenStack Networking plugin in use and the "
+"network configuration choices of the virtual networks made by the tenant. "
+"This network is considered the Guest Security Domain."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:50
+msgid ""
+"<emphasis role=\"bold\">External network</emphasis> Used to provide VMs with "
+"Internet access in some deployment scenarios. The IP addresses on this "
+"network should be reachable by anyone on the Internet and is considered to "
+"be in the Public Security Domain."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:53
+msgid ""
+"<emphasis role=\"bold\">API network</emphasis> Exposes all OpenStack APIs, "
+"including the OpenStack Networking API, to tenants. The IP addresses on this "
+"network should be reachable by anyone on the Internet. This may be the same "
+"network as the external network, as it is possible to create a subnet for "
+"the external network that uses IP allocation ranges to use only less than "
+"the full range of IP addresses in an IP block. This network is considered "
+"the Public Security Domain."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch031_neutron-architecture.xml:56
+msgid ""
+"For additional information see http://docs.openstack.org/grizzly/openstack-"
+"network/admin/content/arch_overview.html."
+msgstr ""

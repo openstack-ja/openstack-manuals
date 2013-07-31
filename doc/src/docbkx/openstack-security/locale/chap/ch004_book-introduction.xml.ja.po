@@ -1,0 +1,338 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:3
+msgid "Introduction to OpenStack"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:4
+msgid ""
+"This guide provides security insight into OpenStack deployments. The "
+"intended audience includes cloud architects, deployers, and administrators. "
+" In addition, cloud users will find the guide both educational and helpful "
+"in provider selection, while auditors will find it useful as a reference "
+"document to support their compliance certification efforts. This guide is "
+"also recommended for anyone interested in cloud security."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:5
+msgid ""
+"Each OpenStack deployment embraces a wide variety of technologies, spanning "
+"Linux distributions, database systems, messaging queues, OpenStack "
+"components themselves, access control policies, logging services, security "
+"monitoring tools, and much more. It should come as no surprise that the "
+"security issues involved are equally diverse, and their in-depth analysis "
+"would require several guides. We strive to find a balance, providing enough "
+"context to understand OpenStack security issues and their handling, and "
+"provide external references for further information. The guide could be read "
+"from start to finish or sampled as necessary like a reference."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:6
+msgid ""
+"We briefly introduce the kinds of clouds: private, public, and hybrid before "
+"presenting an overview of the OpenStack components and their related "
+"security concerns in the remainder of the chapter."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:8
+msgid "Cloud Types"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:9
+msgid ""
+"OpenStack is a key enabler in adoption of cloud technology and has several "
+"common deployment use cases. These are commonly known as Public, Private, "
+"and Hybrid models. The following sections use the National Institute of "
+"Standards and Technology (NIST) definition of cloud (http://csrc.nist.gov/"
+"publications/nistpubs/800-145/SP800-145.pdf) to introduce these different "
+"types of cloud as they apply to OpenStack."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:11
+msgid "Public Cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:12
+msgid ""
+"According to NIST, a public cloud is one in which the infrastructure is open "
+"to the general public for consumption. OpenStack public clouds are typically "
+"run by a service provider and can be consumed by individuals, corporations, "
+"or any paying customer. A public cloud provider may expose a full set of "
+"features such as software defined networking, block storage, in addition to "
+"multiple instance types. Due to the nature of public clouds, they will be "
+"exposed to a higher degree of risk. As a consumer of a public cloud you "
+"should validate that your selected provider has the necessary "
+"certifications, attestations, and other regulatory considerations. As a "
+"public cloud provider, depending on your target customers, you may be "
+"subject to one or more regulations. Additionally, even if not required to "
+"meet regulatory requirements, a provider should ensure tenant isolation as "
+"well as protecting management infrastructure from external attacks."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:15
+msgid "Private Cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:16
+msgid ""
+"At the opposite end of the spectrum is the private cloud. As NIST defines "
+"it, a private cloud is provisioned for exclusive use by a single "
+"organization comprising multiple consumers (e.g. business units). It may be "
+"owned, managed, and operated by the organization, a third-party, or some "
+"combination of them, and it may exist on or off premises. Private cloud use "
+"cases are diverse, as such, their individual security concerns will vary."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:19
+msgid "Community cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:20
+msgid ""
+"NIST defines a community cloud as one whose  infrastructure is provisioned "
+"for the exclusive use by a specific community of consumers from "
+"organizations that have shared concerns (e.g., mission, security "
+"requirements, policy, and compliance considerations). It may be owned, "
+"managed, and operated by one or more of the organizations in the community, "
+"a third-party, or some combination of them, and it may exist on or off "
+"premises."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:23
+msgid "Hybrid Cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:24
+msgid ""
+"A hybrid cloud is defined by NIST as a composition of two or more distinct "
+"cloud infrastructures (private, community, or public) that remain unique "
+"entities, but are bound together by standardized or proprietary technology "
+"that enables data and application portability (e.g., cloud bursting for load "
+"balancing between clouds).  For example an online retailer may have their "
+"advertising and catalogue presented on a public cloud that allows for "
+"elastic provisioning. This would enable them to handle seasonal loads in a "
+"flexible, cost-effective fashion. Once a customer begins to process their "
+"order, they are transferred to the more secure private cloud backend that is "
+"PCI compliant."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:25
+msgid ""
+"For the purposes of this document, we treat Community and Hybrid similarly, "
+"dealing explicitly only with the extremes of Public and Private clouds from "
+"a security perspective. Your security measures will depend where your "
+"deployment falls upon the private public continuum."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:29
+msgid "OpenStack Service Overview"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:30
+msgid ""
+"OpenStack embraces a modular architecture to provide a set of core services "
+"that facilitates scalability and elasticity as core design tenets. This "
+"chapter briefly reviews OpenStack components, their use cases and security "
+"considerations."
+msgstr ""
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:32
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:35
+msgid ""
+"@@image: 'static/marketecture-diagram.png'; "
+"md5=4ab13a64f80c210be3120abc5c7aee8a"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:39
+msgid "OpenStack Compute"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:40
+msgid ""
+"OpenStack compute (Nova) provides services to support the management of "
+"virtual machine instances at scale, instances that host multi-tiered "
+"applications, dev/test environments, \"Big Data\" crunching Hadoop clusters, "
+"and/or high performance computing."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:41
+msgid ""
+"Nova facilitates this management through an abstraction layer that "
+"interfaces with supported hypervisors, which we address later on in more "
+"detail."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:42
+msgid ""
+"Later in the guide, we will focus generically on the virtualization stack as "
+"it relates to hypervisors."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:43
+msgid ""
+"Also refer to the OpenStack's Hypervisor Support Matrix for the current "
+"state of feature support at https://wiki.openstack.org/wiki/"
+"HypervisorSupportMatrix"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:44
+msgid ""
+"The security of Nova is critical for an OpenStack deployment.  Hardening "
+"techniques should include support for strong instance isolation, secure "
+"communication between Nova sub-components, and resiliency of public facing "
+"API endpoints."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:47
+msgid "OpenStack Object Storage"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:48
+msgid ""
+"OpenStack object storage service (Swift), provides support for storing and "
+"retrieving arbitrary data in the cloud. Swift provides both a native API and "
+"an Amazon Web Services S3 compatible API. The service provides a high degree "
+"of resiliency through data replication and can handle petabytes of data."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:49
+msgid ""
+"It is important to understand that object storage differs from traditional "
+"file system storage. It is best used for static data such as media files "
+"(MP3s, images, videos), virtual machine images, and backup files."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:50
+msgid ""
+"Object security should focus on access control and encryption of data in "
+"transit and at rest. Other concerns may relate to system abuse, illegal or "
+"malicious content storage, and cross authentication attack vectors."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:53
+msgid "OpenStack Block Storage"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:54
+msgid ""
+"OpenStack block storage service (Cinder), provides persistent block storage "
+"for compute instances. Cinder is responsible for managing the life-cycle of "
+"block devices, from the creation and attachment of volumes to instances, to "
+"their release."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:55
+msgid ""
+"Security considerations for block storage are similar to that of object "
+"storage."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:58
+msgid "OpenStack Networking"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:59
+msgid ""
+"The OpenStack networking service (Neutron, previously called Quantum), "
+"provides various networking services to cloud users (tenants) such as IP "
+"address management, DNS, DHCP, load balancing, and security groups (network "
+"access rules, like firewall policies). It provides a framework for software "
+"defined networking (SDN) that allows for pluggable integration with various "
+"networking solutions."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:60
+msgid ""
+"OpenStack Networking allows cloud tenants to manage their guest network "
+"configurations. Security concerns with the networking service include "
+"network traffic isolation, availability, integrity and confidentiality."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:63
+msgid "OpenStack Dashboard"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:64
+msgid ""
+"The OpenStack dashboard service (Horizon) provides a web-based interface for "
+"both cloud administrators and cloud tenants. Through this interface "
+"administrators and tenants can provision, manage, and monitor cloud "
+"resources. Horizon is commonly deployed in a public facing manner with all "
+"the usual security concerns of public web portals."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:67
+msgid "Identity Management"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:68
+msgid ""
+"The identity management service (Keystone), is a <emphasis role=\"bold"
+"\">shared service</emphasis> that provides authentication and authorization "
+"services throughout the entire cloud infrastructure. Keystone has pluggable "
+"support for multiple forms of authentication."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:69
+msgid ""
+"Security concerns here pertain to trust in authentication, management of "
+"authorization tokens, and secure communication."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:72
+msgid "Image Service"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:73
+msgid ""
+"The OpenStack image service (Glance), <emphasis role=\"bold\"> </"
+"emphasis>provides disk image management services. Glance provides image "
+"discovery, registration, and delivery services to Nova, the compute service, "
+"as needed."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:74
+msgid ""
+"Trusted processes for managing the life cycle of disk images are required. "
+"As are all the previously mentioned issues with respect to data security.  "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:77
+msgid "Other Supporting Technology"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:78
+msgid ""
+"OpenStack relies on messaging for internal communication between several of "
+"its services. By default, OpenStack uses message queues based on the "
+"Advanced Message Queue Protocol (AMQP).  Similar to most OpenStack services, "
+"it supports pluggable components. Today the implementation backend could be "
+"either RabbitMQ, Qpid, or ZeroMQ."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:79
+msgid ""
+"As most management commands flow through the message queueing system, it is "
+"a primary security concern for any OpenStack deployment.  Message queueing "
+"security is discussed in detail later in this guide."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch004_book-introduction.xml:80
+msgid ""
+"Several of the components use databases though it is not explicitly called "
+"out. Securing the access to the databases and their contents is yet another "
+"security concern, and consequently discussed in more detail later in this "
+"guide."
+msgstr ""

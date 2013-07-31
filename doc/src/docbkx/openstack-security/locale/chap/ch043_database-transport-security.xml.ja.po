@@ -1,0 +1,127 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:3
+msgid "Database Transport Security"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:4
+msgid ""
+"This chapter covers issues related to network communications to and from the "
+"database server. This includes IP address bindings and encrypting network "
+"traffic with SSL."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:6
+msgid "Database Server IP Address Binding"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:7
+msgid ""
+"To isolate sensitive database communications between the services and the "
+"database, we strongly recommend that the database server(s) be configured to "
+"only allow communications to and from the database over an isolated "
+"management network. This is achieved by restricting the interface or IP "
+"address on which the database server binds a network socket for incoming "
+"client connections."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:9
+msgid "Restricting Bind Address for MySQL"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:10
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:33
+msgid "In my.cnf:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:17
+msgid "Restricting Listen Address for PostgreSQL"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:18
+msgid "In postgresql.conf:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:24
+msgid "Database Transport"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:25
+msgid ""
+"In addition to restricting database communications to the management "
+"network, we also strongly recommend that the cloud administrator configure "
+"their database backend to require SSL. Using SSL for the database client "
+"connections  protects the communications from tampering and eavesdropping. "
+"As will be discussed in the next section, using SSL also provides the "
+"framework for doing database user authentication via X.509 certificates "
+"(commonly referred to as PKI). Below is guidance on how SSL is typically "
+"configured for the two popular database backends MySQL and PostgreSQL."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:27
+msgid ""
+"NOTE: When installing the certificate and key files, ensure that the file "
+"permissions are restricted, for example <literal>chmod 0600</literal>, and "
+"the ownership is restricted to the database daemon user to prevent "
+"unauthorized access by other processes and users on the database server."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:31
+msgid "MySQL SSL Configuration"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:32
+msgid ""
+"The following lines should be added in the system-wide MySQL configuration "
+"file:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:40
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:49
+msgid ""
+"Optionally, if you wish to restrict the set of SSL ciphers used for the "
+"encrypted connection. See http://www.openssl.org/docs/apps/ciphers.html for "
+"a list of ciphers and the syntax for specifying the cipher string:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:45
+msgid "PostgreSQL SSL Configuration"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:46
+msgid ""
+"The following lines should be added in the system-wide PostgreSQL "
+"configuration file, <literal>postgresql.conf</literal>."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:52
+msgid ""
+"The server certificate, key, and certificate authority (CA) files should be "
+"placed in the $PGDATA directory in the following files:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:54
+msgid "$PGDATA/server.crt - Server certificate"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:57
+msgid "$PGDATA/server.key - Private key corresponding to server.crt"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:60
+msgid "$PGDATA/root.crt - Trusted certificate authorities"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch043_database-transport-security.xml:63
+msgid "$PGDATA/root.crl - Certificate revocation list"
+msgstr ""

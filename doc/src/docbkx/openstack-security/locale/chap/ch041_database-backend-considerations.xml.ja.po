@@ -1,0 +1,89 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch041_database-backend-considerations.xml:3
+msgid "Database Backend Considerations"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch041_database-backend-considerations.xml:4
+msgid ""
+"The choice of database server is an important consideration in the security "
+"of an OpenStack deployment. While security considerations are not the only "
+"basis on which a database server must be chosen, security considerations are "
+"the only ones within the scope of this book. In practice, OpenStack only "
+"supports two database types: PostgreSQL and MySQL."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch041_database-backend-considerations.xml:5
+msgid ""
+"PostgreSQL has a number of desirable security features such as Kerberos "
+"authentication, object-level security, and encryption support. The "
+"PostgreSQL community has done well to provide solid guidance, documentation, "
+"and tooling to promote positive security practices."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch041_database-backend-considerations.xml:6
+msgid ""
+"MySQL has a large community, wide-spread adoption, and provides high "
+"availability options. MySQL also has the ability to provide enhanced client "
+"authentication by way of plug-in authentication mechanisms. Forked "
+"distributions in the MySQL community provide many options for consideration. "
+"It is important to choose a specific implementation of MySQL based on a "
+"thorough evaluation of the security posture and the level of support "
+"provided for the given distribution."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch041_database-backend-considerations.xml:8
+msgid "Security References for Database Backends"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch041_database-backend-considerations.xml:9
+msgid ""
+"Those deploying MySQL or PostgreSQL are advised to refer to existing "
+"security guidance. Some references are listed below:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch041_database-backend-considerations.xml:10
+msgid "MySQL:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch041_database-backend-considerations.xml:12
+msgid ""
+"OWASP MySQL Hardening - https://www.owasp.org/index.php/"
+"OWASP_Backend_Security_Project_MySQL_Hardening"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch041_database-backend-considerations.xml:15
+msgid "http://dev.mysql.com/doc/refman/5.5/en/pluggable-authentication.html"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch041_database-backend-considerations.xml:18
+msgid ""
+"Security in MySQL - http://downloads.mysql.com/docs/mysql-security-"
+"excerpt-5.1-en.pdf"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch041_database-backend-considerations.xml:21
+msgid "PostgreSQL:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch041_database-backend-considerations.xml:23
+msgid ""
+"OWASP PostgreSQL Hardening - https://www.owasp.org/index.php/"
+"OWASP_Backend_Security_Project_PostgreSQL_Hardening"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch041_database-backend-considerations.xml:26
+msgid ""
+"Total security in a PostgreSQL database - http://www.ibm.com/developerworks/"
+"opensource/library/os-postgresecurity"
+msgstr ""

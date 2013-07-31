@@ -1,0 +1,324 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:110
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:45
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:82
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:113
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:132
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:23
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:57
+msgid "Security Considerations"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:126
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:64
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:123
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:149
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:33
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:70
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:43
+msgid "References"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:3
+msgid "Management Interfaces"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:4
+msgid ""
+"It is necessary for administrators to perform command and control over the "
+"cloud for various operational functions. It is important these command and "
+"control facilities are understood and secured."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:5
+msgid ""
+"OpenStack provides several management interfaces for operators and tenants:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:7
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:23
+msgid "OpenStack Dashboard (Horizon)"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:10
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:69
+msgid "OpenStack API"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:13
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:93
+msgid "Secure Shell (SSH)"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:16
+msgid "OpenStack Management Utilities (nova-manage, glance-manage, etc.)"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:19
+msgid "Out-of-Band Management Interfaces (IPMI, etc.)"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:24
+msgid ""
+"The OpenStack Dashboard (Horizon) provides administrators and tenants a web-"
+"based graphical interface to provision and access cloud-based resources. "
+"Horizon communicates with the back-end services via calls to the OpenStack "
+"API (discussed above)."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:26
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:72
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:13
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:40
+msgid "Capabilities"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:28
+msgid ""
+"As a cloud administrator, the dashboard provides an overall view of the size "
+"and state of your cloud. You can create users and tenants/projects, assign "
+"users to tenant/projects and set limits on the resources available for them."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:31
+msgid ""
+"The dashboard provides tenant-users a self-service portal to provision their "
+"own resources within the limits set by administrators."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:34
+msgid ""
+"The dashboard provides GUI support for routers and load-balancers. For "
+"example, Horizon now implements all of the main Neutron features."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:37
+msgid ""
+"It is an extensible Django web application that allows easy plug-in of third-"
+"party products and services, such as billing, monitoring, and additional "
+"management tools."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:40
+msgid ""
+"The dashboard can also be branded for service providers and other commercial "
+"vendors."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:47
+msgid ""
+"Horizon requires cookies and JavaScript to be enabled in the web browser."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:50
+msgid ""
+"The web server that hosts Horizon should be configured for SSL to ensure "
+"data is encrypted."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:53
+msgid ""
+"Both the Horizon web service and the OpenStack API it uses to communicate "
+"with the back-end are susceptible to web attack vectors such as denial of "
+"service and must be monitored."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:56
+msgid ""
+"It is now possible (though there are numerous deployment/security "
+"implications) to upload an image file directly from a user’s hard disk to "
+"Glance through Horizon. For multi-GB images it is still strongly recommended "
+"that the upload be done using the Glance CLI"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:59
+msgid ""
+"Create and manage security groups through dashboard. The security groups "
+"allows L3-L4 packet filtering for security policies to protect virtual "
+"machines"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:65
+msgid ""
+"Grizzly Release Notes - https://wiki.openstack.org/wiki/ReleaseNotes/Grizzly"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:70
+msgid ""
+"The OpenStack API is a RESTful web service endpoint to access, provision and "
+"automate cloud-based resources.  Operators and users typically access the "
+"API through command-line utilities (i.e. Nova, Glance, etc.), language-"
+"specific libraries, or third-party tools."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:74
+msgid ""
+"To the cloud administrator the API provides an overall view of the size and "
+"state of the cloud deployment and allows the creation of users, tenants/"
+"projects, assigning users to tenants/projects and specifying resource quotas "
+"on a per tenant/project basis."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:77
+msgid ""
+"The API provides a tenant interface for provisioning, managing, and "
+"accessing their resources."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:84
+msgid ""
+"The API service should be configured for SSL to ensure data is encrypted."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:87
+msgid ""
+"As a web service, OpenStack API is susceptible to familiar web site attack "
+"vectors such as denial of service attacks."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:94
+msgid ""
+"It has become industry practice to use secure shell (SSH) access for the "
+"management of Linux and Unix systems. SSH uses secure cryptographic "
+"primitives for communication. With the scope and importance of SSH in "
+"typical OpenStack deployments, it is important to understand best practices "
+"for deploying SSH."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:96
+msgid "Host Key Fingerprints"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:97
+msgid ""
+"Often overlooked is the need for key management for SSH hosts. As most or "
+"all hosts in an OpenStack deployment will provide an SSH service, it is "
+"important to have confidence in connections to these hosts. It cannot be "
+"understated that failing to provide a reasonably secure and accessible "
+"method to verify SSH host key fingerprints is ripe for abuse and "
+"exploitation."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:98
+msgid ""
+"All SSH daemons have private host keys and, upon connection, offer a host "
+"key fingerprint. This host key fingerprint is the hash of an unsigned public "
+"key. It is important these host key fingerprints are known in advance of "
+"making SSH connections to those hosts. Verification of host key fingerprints "
+"is instrumental in detecting man-in-the-middle attacks."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:99
+msgid ""
+"Typically, when an SSH daemon is installed, host keys will be generated. It "
+"is necessary that the hosts have sufficient entropy during host key "
+"generation. Insufficient entropy during host key generation can result in "
+"the possibility to eavesdrop on SSH sessions."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:100
+msgid ""
+"Once the SSH host key is generated, the host key fingerprint should be "
+"stored in a secure and queriable location. One particularly convenient "
+"solution is DNS using SSHFP resource records as defined in RFC-4255. For "
+"this to be secure, it is necessary that DNSSEC be deployed."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:104
+msgid "OpenStack Management Utilities"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:105
+msgid ""
+"The OpenStack Management Utilities are open-source Python command-line "
+"clients that make API calls. There is a client for each OpenStack service "
+"(nova, glance, etc.). In addition to the standard CLI client, most of the "
+"services have a management command line which makes direct calls to the "
+"database. These dedicated management utilities are slowly being deprecated."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:115
+msgid ""
+"The dedicated management utilities (*-manage) in some cases use the direct "
+"database connection."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:118
+msgid ""
+"Ensure that the .rc file which has your credential information is secured."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:124
+msgid "http://docs.openstack.org/cli/quick-start/content/client_overview.html"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:125
+msgid ""
+"http://docs.openstack.org/cli/quick-start/content/getting_credentials_cli."
+"html"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:129
+msgid "Out-of-Band Management Interface"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:130
+msgid ""
+"OpenStack management relies on out-of-band management interfaces such as the "
+"IPMI protocol to access into nodes running OpenStack components. IPMI is a "
+"very popular specification to remotely manage, diagnose and reboot servers "
+"whether the operating system is running or the system has crashed."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:134
+msgid ""
+"Use strong passwords and safeguard them, or use client-side SSL "
+"authentication."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:137
+msgid ""
+"Ensure that the network interfaces are on their own private(management or a "
+"separate) network. Segregate management domains with firewalls or other "
+"network gear."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:140
+msgid ""
+"If you use a web interface to interact with the BMC/IPMI, always use the SSL "
+"interface (e.g. https or port 443). This SSL interface should <emphasis role="
+"\"bold\">NOT</emphasis> use self-signed certificates, as is often default, "
+"but should have trusted certificates using the correctly defined fully "
+"qualified domain names (FQDNs)."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:143
+msgid ""
+"Monitor the traffic on the management network. The anomalies may be easier "
+"to track than on the busier compute nodes"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:146
+msgid ""
+"Out of band management interfaces also often include graphical machine "
+"console access. It is often possible, although not necessarily default, that "
+"these interfaces are encrypted. Consult with your system software "
+"documentation for encrypting these interfaces."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:150
+msgid ""
+"Hacking servers that are turned off - https://isc.sans.edu/diary/IPMI%3A"
+"+Hacking+servers+that+are+turned+%22off%22/13399"
+msgstr ""

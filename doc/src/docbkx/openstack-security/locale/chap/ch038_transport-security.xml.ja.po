@@ -1,0 +1,288 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:53
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:119
+msgid "Namespaces"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:57
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:124
+msgid "Network Policy"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:63
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:129
+#: doc/src/docbkx/openstack-security/ch052_devices.xml:85
+msgid "Mandatory Access Controls"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:3
+msgid "Messaging Security"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:4
+msgid ""
+"This chapter discusses security hardening approaches for the three most "
+"common message queuing solutions use in OpenStack: RabbitMQ, Qpid, and "
+"ZeroMQ."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:6
+msgid "Messaging Transport Security"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:7
+msgid ""
+"AMQP based solutions (Qpid and RabbitMQ) support transport-level security "
+"using SSL. ZeroMQ messaging does not natively support SSL, but transport-"
+"level security is possible using labelled IPSec or CIPSO network labels."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:8
+msgid ""
+"We highly recommend enabling transport-level cryptography for your message "
+"queue. Using SSL for the messaging client connections provides protection of "
+"the communications from tampering and eavesdropping in-transit to the "
+"messaging server. Below is guidance on how SSL is typically configured for "
+"the two popular messaging servers Qpid and RabbitMQ. When configuring the "
+"trusted certificate authority (CA) bundle that your messaging server uses to "
+"verify client connections, it is recommended that this be limited to only "
+"the CA used for your nodes, preferably an internally managed CA. The bundle "
+"of trusted CAs will determine which client certificates will be authorized "
+"and pass the client-server verification step of the setting up the SSL "
+"connection. Note, when installing the certificate and key files, ensure that "
+"the file permissions are restricted, for example chmod 0600, and the "
+"ownership is restricted to the messaging server daemon user to prevent "
+"unauthorized access by other processes and users on the messaging server."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:10
+msgid "RabbitMQ Server SSL Configuration"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:11
+msgid ""
+"The following lines should be added to the system-wide RabbitMQ "
+"configuration file, typically /etc/rabbitmq/rabbitmq.config:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:24
+msgid ""
+"Note, the 'tcp_listeners' option is set to '[]' to prevent it from listening "
+"an on non-SSL port. 'ssl_listeners' option should be restricted to only "
+"listen on the management network for the services."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:25
+msgid "For more information on RabbitMQ SSL configuration see:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:27
+msgid "RabbitMQ Configuration - http://www.rabbitmq.com/configure.html"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:30
+msgid "RabbitMQ SSL - http://www.rabbitmq.com/ssl.html"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:35
+msgid "Qpid Server SSL Configuration"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:36
+msgid "The Apache Foundation has a messaging security guide for Qpid. See:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:38
+msgid ""
+"Apache Qpid SSL - http://qpid.apache.org/books/0.22/AMQP-Messaging-Broker-"
+"CPP-Book/html/chap-Messaging_User_Guide-Security.html#sect-"
+"Messaging_User_Guide-Security-Encryption_using_SSL"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:44
+msgid "Queue Authentication and Access Control"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:45
+msgid ""
+"RabbitMQ and Qpid offer authentication and access control mechanisms for "
+"controlling access to queues. ZeroMQ offers no such mechanisms."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:46
+msgid ""
+"Simple Authentication and Security Layer (SASL) is a framework for "
+"authentication and data security in Internet protocols. Both RabbitMQ and "
+"Qpid offer SASL and other pluggable authentication mechanisms beyond simple "
+"usernames and passwords that allow for increased authentication security. "
+"While RabbitMQ supports SASL, support in OpenStack does not currently allow "
+"for requesting a specific SASL authentication mechanism. RabbitMQ support in "
+"OpenStack allows for either username and password authentication over an "
+"unencrypted connection or username and password in conjunction with X.509 "
+"client certificates to establish the secure SSL connection."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:47
+msgid ""
+"We recommend configuring X.509 client certificates on all the OpenStack "
+"service nodes for client connections to the messaging queue and where "
+"possible (currently only Qpid) perform authentication with X.509 client "
+"certificates. When using usernames and passwords, accounts should be created "
+"per-service and node for finer grained auditability of access to the queue."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:48
+msgid ""
+"The SSL libraries in use by these queuing servers should also be considered "
+"prior to deployment. Qpid uses Mozilla's NSS library, whereas RabbitMQ uses "
+"Erlang's SSL module which uses OpenSSL."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:50
+msgid "Authentication Configuration Example - RabbitMQ"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:51
+msgid "On the RabbitMQ server, delete the default 'guest' user:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:54
+msgid ""
+"On the RabbitMQ server, for each OpenStack service or node that communicates "
+"with the message queue set up user accounts and privileges:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:58
+msgid "For additional configuration information see:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:60
+msgid "RabbitMQ Access Control - http://www.rabbitmq.com/access-control.html"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:63
+msgid "RabbitMQ Authentication - http://www.rabbitmq.com/authentication.html"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:66
+msgid "RabbitMQ Plugins - http://www.rabbitmq.com/plugins.html"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:69
+msgid ""
+"RabbitMQ SASL External Auth - http://hg.rabbitmq.com/rabbitmq-auth-mechanism-"
+"ssl/file/rabbitmq_v3_1_3/README"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:74
+msgid "OpenStack Service Configuration - RabbitMQ"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:86
+msgid ""
+"NOTE: A bug exists in the current version of OpenStack Grizzly where if "
+"'kombu_ssl_version' is currently specified in the configuration file for any "
+"of the OpenStack services it will cause the following python traceback "
+"error: 'TypeError: an integer is required'. The current workaround is to "
+"remove 'kombu_ssl_version' from the configuration file. Refer to the "
+"following bug report for status: https://bugs.launchpad.net/oslo/+bug/1195431"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:89
+msgid "Authentication Configuration Example - Qpid"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:90
+msgid "For configuration information see:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:92
+msgid ""
+"Apache Qpid Authentication - http://qpid.apache.org/books/0.22/AMQP-"
+"Messaging-Broker-CPP-Book/html/chap-Messaging_User_Guide-Security.html#sect-"
+"Messaging_User_Guide-Security-User_Authentication"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:95
+msgid ""
+"Apache Qpid Authorization - http://qpid.apache.org/books/0.22/AMQP-Messaging-"
+"Broker-CPP-Book/html/chap-Messaging_User_Guide-Security.html#sect-"
+"Messaging_User_Guide-Security-Authorization"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:100
+msgid "OpenStack Service Configuration - Qpid"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:109
+msgid ""
+"Optionally, if using SASL with Qpid specify the SASL mechanisms in use by "
+"adding:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:115
+msgid "Message Queue Process Isolation &amp; Policy"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:116
+msgid ""
+"Each project provides a number of services which send and consume messages. "
+"Each binary which sends a message is expected to consume messages, if only "
+"replies, from the queue."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:117
+msgid ""
+"Message queue service processes should be isolated from each other and other "
+"processes on a machine."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:120
+msgid ""
+"Network namespaces are highly recommended for all services running on "
+"OpenStack Compute Hypervisors. This will help prevent against the bridging "
+"of network traffic between VM guests and the management network."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:121
+msgid ""
+"When using ZeroMQ messaging, each host must run at least one ZeroMQ message "
+"receiver to receive messages from the network and forward messages to local "
+"processes via IPC. It is possible and advisable to run an independent "
+"message receiver per project within an IPC namespace, along with other "
+"services within the same project."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:125
+msgid ""
+"Queue servers should only accept connections from the management network. "
+"This applies to all implementations. This should be implemented through "
+"configuration of services and optionally enforced through global network "
+"policy."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:126
+msgid ""
+"When using ZeroMQ messaging, each project should run a separate ZeroMQ "
+"receiver process on a port dedicated to services belonging to that project. "
+"This is equivalent to the AMQP concept of control exchanges."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:130
+msgid ""
+"The configuration for these processes should be restricted to those "
+"processes, not only by Directory Access Controls, but through Mandatory "
+"Access Controls. The goal of such restrictions is to prevent isolation from "
+"other processes running on the same machine(s)."
+msgstr ""

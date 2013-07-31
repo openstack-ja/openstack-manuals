@@ -1,0 +1,92 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:3
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:3
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:3
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:3
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:3
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:3
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:3
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:3
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:3
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:3
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:3
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:3
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:3
+msgid "Case Studies"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:6
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:19
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:6
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:6
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:6
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:6
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:6
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:6
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:6
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:6
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:6
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:6
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:6
+msgid "Alice's Private Cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:11
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:24
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:10
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:10
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:12
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:10
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:10
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:10
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:23
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:12
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:12
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:10
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:13
+msgid "Bob's Public Cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:4
+msgid ""
+"In this case study we discuss how Alice and Bob would address database "
+"selection and configuration for their respective private and public clouds."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:7
+msgid ""
+"Alice's organization has high availability concerns, so she has elected to "
+"use MySQL for the database. She further places the database on the "
+"Management network and uses SSL with mutual authentication among the "
+"services to ensure secure access. Given there will be no external access of "
+"the database, she uses certificates signed with the organization's self-"
+"signed root certificate on the database and its access endpoints. Alice "
+"creates separate user accounts for each database user, and configures the "
+"database to use both passwords and X.509 certificates for authentication. "
+"She elects not to use the nova-conductor sub-service due to the desire for "
+"fine-grained access control policies and audit support."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:11
+msgid ""
+"Bob is concerned about strong separation of his tenants' data, so he has "
+"elected to use the Postgres database , known for its stronger security "
+"features.  The database resides on the Management network and uses SSL with "
+"mutual authentication with the services. Since the database is on the "
+"Management network, the database uses certificates signed with the company's "
+"self-signed root certificate. Bob creates separate user accounts for each "
+"database user, and configures the database to use both passwords and X.509 "
+"certificates for authentication. He elects not to use the nova-conductor sub-"
+"service due to a desire for fine-grained access control."
+msgstr ""

@@ -1,0 +1,405 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:3
+msgid "Continuous Systems Management"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:4
+msgid ""
+"A cloud will always have bugs. Some of these will be security problems. For "
+"this reason, it is critically important to be prepared to apply security "
+"updates and general software updates. This involves smart use of "
+"configuration management tools, which are discussed below. This also "
+"involves knowing when to an upgrade is necessary."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:6
+#: doc/src/docbkx/openstack-security/ch063_compliance-activities.xml:43
+msgid "Vulnerability Management"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:7
+msgid ""
+"There is a OpenStack Announce mailing list (http://lists.openstack.org/cgi-"
+"bin/mailman/listinfo/openstack-announce) that you should subscribe to for "
+"announcements regarding security relevant changes. The security "
+"notifications are also posted through the downstream packages (e.g., through "
+"Linux distributions) that you may be subscribed to as part of the package "
+"updates."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:8
+msgid ""
+"The OpenStack components are only a small fraction of the software in a "
+"cloud. It is important to keep up to date with all of these other "
+"components, too. While the specific data sources will be deployment "
+"specific, the key idea is to ensure that a cloud administrator subscribes to "
+"the necessary mailing lists for receiving notification of any related "
+"security updates. Often this is as simple as tracking an upstream Linux "
+"distribution."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:9
+msgid ""
+"NOTE: OpenStack releases security information through two channels. "
+"OpenStack Security Advisories (OSSA) are created by the OpenStack "
+"Vulnerability Management Team (VMT). They pertain to security holes in core "
+"OpenStack services. More information on the VMT can be found here: https://"
+"wiki.openstack.org/wiki/Vulnerability_Management"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:10
+msgid ""
+"OpenStack Security Notes (OSSN) were created by the OpenStack Security Group "
+"(OSSG) to support the work of the VMT. OSSN address issues in supporting "
+"software and common deployment configurations. They're referenced throughout "
+"this guide. Security Notes are archived here: https://launchpad.net/ossn/"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:12
+msgid "Triage"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:13
+msgid ""
+"After receiving notification about a security update, the next step is to "
+"determine how critical this update is to a given cloud deployment. In this "
+"case, it is useful to have a pre-defined policy indicating. Existing "
+"vulnerability rating systems such as the common vulnerability scoring system "
+"(CVSS) v2 do not properly account for cloud deployments. The table below "
+"provides an example scoring matrix."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:23
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:27
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:281
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:293
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:302
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:304
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:306
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:307
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:312
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:313
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:314
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:316
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:317
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:318
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:322
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:323
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:324
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:325
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:326
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:327
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:328
+msgid " "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:24
+msgid "Attacker Position / Privilege Level"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:28
+msgid "External"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:29
+msgid "Cloud User"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:30
+msgid "Cloud Admin"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:31
+msgid "Control Plane"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:34
+msgid "Privilege Elevation (3 levels)"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:35
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:42
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:43
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:49
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:50
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:51
+msgid "Critical"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:36
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:37
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:38
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:44
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:45
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:52
+msgid "n/a"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:41
+msgid "Privilege Elevation (2 levels)"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:48
+msgid "Privilege Elevation (1 level)"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:55
+msgid "Denial of Service"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:56
+msgid "High"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:57
+msgid "Medium"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:58
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:59
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:66
+msgid "Low"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:62
+msgid "Information Disclosure"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:63
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:64
+msgid "Critical / High"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:65
+msgid "Medium / Low"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:71
+msgid ""
+"We suggest cloud administrators customize and expand this table to suit "
+"their needs. Then work to define how to handle the various severity levels. "
+"For example, a critical-level security update might require the cloud to be "
+"upgraded on a specified time line, whereas a low-level update might be more "
+"relaxed."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:74
+msgid "Testing the Updates"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:75
+msgid ""
+"Any update should be fully tested before deploying in a production "
+"environment. Typically this requires having a separate test cloud setup that "
+"first receives the update.  This cloud should be as close to the production "
+"cloud as possible, in terms of software and hardware. Updates should be "
+"tested thoroughly in terms of performance impact, stability, application "
+"impact, and more. Especially important is to verify that the problem "
+"theoretically addressed by the update (e.g., a specific vulnerability) is "
+"actually fixed."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:78
+msgid "Deploying the Updates"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:79
+msgid ""
+"Once the updates are fully tested, they can be deployed to the production "
+"environment. This deployment should be fully automated using the "
+"configuration management tools described below."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:83
+msgid "Configuration Management"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:84
+msgid ""
+"A production quality cloud should always use tools to automate configuration "
+"and deployment. This eliminates human error, and allows the cloud to scale "
+"much more rapidly. Automation also helps with continuous integration and "
+"testing."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:85
+msgid ""
+"When building an OpenStack cloud it is strongly recommended to approach your "
+"design and implementation with a configuration management tool or framework "
+"in mind. Configuration management allows you to avoid the many pitfalls "
+"inherent in building, managing, and maintaining an infrastructure as complex "
+"as OpenStack. By producing the manifests, cookbooks, or templates required "
+"for a configuration management utility, you are able to satisfy a number of "
+"documentation and regulatory reporting requirements. Further, configuration "
+"management can also function as part of your BCP and DR plans wherein you "
+"can rebuild a node or service back to a known state in a DR event or given a "
+"compromise."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:86
+msgid ""
+"Additionally, when combined with a version control system such as Git or "
+"SVN, you can track changes to your environment over time and remediate "
+"unauthorized changes that may occur. For example, a nova.conf or other "
+"configuration file falls out of compliance with your standard, your "
+"configuration management tool will be able to revert or replace the file and "
+"bring your configuration back into a known state. Finally a configuration "
+"management tool can also be used to deploy updates; simplifying the security "
+"patch process. These tools have a broad range of capabilities that are "
+"useful in this space. The key point for securing your cloud is to choose a "
+"tool for configuration management and use it."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:87
+msgid ""
+"There are many configuration management solutions, at the time of this "
+"writing there are two in the marketplace that are robust in their support of "
+"OpenStack environments: Chef and Puppet. A non-exhaustive listing of tools "
+"in this space is provided below:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:89
+msgid "Chef"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:92
+msgid "Puppet"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:95
+msgid "Salt Stack"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:98
+msgid "Ansible"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:102
+msgid "Policy Changes"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:103
+msgid ""
+"Whenever a policy or configuration management is changed, it is good "
+"practice to log the activity, and backup a copy of the new set. Often, such "
+"policies and configurations are stored in a version controlled repository "
+"such as git."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:107
+msgid "Secure Backup and Recovery"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:108
+msgid ""
+"It is important to include Backup procedures and policies in overall System "
+"Security Plan. For a good overview of OpenStack's Backup and Recovery "
+"capabilities and procedures, please refer to the OpenStack Operations Guide."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:110
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:45
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:82
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:113
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:132
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:23
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:57
+msgid "Security Considerations"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:112
+msgid ""
+"Ensure only authenticated users and backup clients have access to the backup "
+"server."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:115
+msgid "Use data encryption options for storage and transmission of backups."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:118
+msgid ""
+"Use a dedicated and hardened backup server(s). The backup server's logs "
+"should be monitored daily and should be accessible by only few individuals."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:121
+msgid ""
+"Test data recovery options regularly. One of the things that can be restored "
+"from secured backups is the images. In case of a compromise, the best "
+"practice would be to terminate running instances immediately and then "
+"relaunch the instances from the images in the secured backup repository."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:126
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:64
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:123
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:149
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:33
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:70
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:43
+msgid "References"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:128
+msgid ""
+"http://docs.openstack.org/folsom/openstack-ops/content/backup_and_recovery."
+"html"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:131
+msgid ""
+"http://www.sans.org/reading_room/whitepapers/backup/security-considerations-"
+"enterprise-level-backups_515"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:134
+msgid "http://www.music-piracy.com/?p=494 (OpenStack Security Primer) "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:140
+msgid "Security Auditing Tools"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:141
+msgid ""
+"Security auditing tools can complement the configuration management tools. "
+" Security auditing tools automate the process of verifying that a large "
+"number of security controls are satisfied for a given system configuration. "
+"These tools help to bridge the gap from security configuration guidance "
+"documentation (e.g., the STIG and NSA Guides) to a specific system "
+"installation. For example, SCAP (https://fedorahosted.org/scap-security-"
+"guide/) can compare a running system to a pre-defined profile.  SCAP outputs "
+"a report detailing which controls in the profile were satisfied, which ones "
+"failed, and which ones were not checked."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:142
+msgid ""
+"Combining configuration management and security auditing tools creates a "
+"powerful combination. The auditing tools will highlight deployment concerns. "
+"And the configuration management tools simplify the process of changing each "
+"system to address the audit concerns. Used together in this fashion, these "
+"tools help to maintain a cloud that satisfies security requirements ranging "
+"from basic hardening to compliance validation."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:143
+msgid ""
+"Configuration management and security auditing tools will introduce another "
+"layer of complexity into the cloud.  This complexity brings with it "
+"additional security concerns. We view this as an acceptable risk trade-off, "
+"given their security benefits. Securing the operational use of these tools "
+"is beyond the scope of this guide."
+msgstr ""

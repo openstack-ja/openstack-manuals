@@ -1,0 +1,178 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:126
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:64
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:123
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:149
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:33
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:70
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:43
+msgid "References"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:3
+msgid "Forensics and Incident Response"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:4
+msgid ""
+"A lot of activity goes on within a cloud environment. It is a mix of "
+"hardware, operating systems, virtual machine managers, the OpenStack "
+"services, cloud-user activity such as creating instances and attaching "
+"storage, the network underlying the whole, and finally end-users using the "
+"applications running on the various instances."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:5
+msgid ""
+"The generation and collection of logs is an important component of securely "
+"monitoring an OpenStack infrastructure. Logs provide visibility into the day-"
+"to-day actions of administrators, tenants, and guests, in addition to the "
+"activity in the compute, networking, and storage and other components that "
+"comprise your OpenStack deployment."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:6
+msgid ""
+"The basics of logging: configuration, setting log level, location of the log "
+"files, and how to use and customize logs, as well as how to do centralized "
+"collections of logs is well covered in the OpenStack Operations Guide "
+"(http://docs.openstack.org/ops/)."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:7
+msgid ""
+"Logs are not only valuable for proactive security and continuous compliance "
+"activities, but they are also a valuable information  source for "
+"investigating and responding to incidents."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:8
+msgid ""
+"For instance, analyzing the access logs of Keystone or its replacement "
+"authentication system would alert us to failed logins, their frequency, "
+"origin IP, whether the events are restricted to select accounts etc. Log "
+"analysis supports detection."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:9
+msgid ""
+"On detection, further action may be to black list an IP, or recommend "
+"strengthening user passwords, or even de-activating a user account if it is "
+"deemed dormant."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:11
+msgid "Monitoring Use Cases"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:12
+msgid ""
+"Monitoring events is more pro-active and provides real-time detection and "
+"response.  There are several tools to aid in monitoring."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:13
+msgid ""
+"In the case of a OpenStack cloud instance, we need to monitor the hardware, "
+"the OpenStack services, and the cloud resource usage. The last stems from "
+"wanting to be elastic, to scale to the dynamic needs of the users."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:14
+msgid ""
+"Here are a few important use cases to consider when implementing log "
+"aggregation, analysis and monitoring. These use cases can be implemented and "
+"monitored through various commercial and open source tools, homegrown "
+"scripts, etc. These tools and scripts can generate events that can then be "
+"sent to the administrators through email or integrated dashboard. It is "
+"important to consider additional use cases that may apply to your specific "
+"network and what you may consider anomalous behavior."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:16
+msgid ""
+"Detecting the absence of log generation is an event of high value. Such an "
+"event would indicate a service failure or even an intruder who has "
+"temporarily switched off logging or modified the log level to hide their "
+"tracks."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:20
+msgid ""
+"Application events such as start and/or stop that were unscheduled would "
+"also be events to monitor and examine for possible security implications."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:24
+msgid ""
+"OS events on the OpenStack service machines such as user logins, restarts "
+"also provide valuable insight into use/misuse"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:28
+msgid ""
+"Being able to detect the load on the OpenStack servers also enables "
+"responding by way of introducing additional servers for load balancing to "
+"ensure high availability."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:32
+msgid ""
+"Other events that are actionable are networking bridges going down, ip "
+"tables being flushed on nova compute nodes and consequential loss of access "
+"to instances resulting in unhappy customers. "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:36
+msgid ""
+"To reduce security risks from orphan instances on a user/tenant/domain "
+"deletion in the Identity service there is discussion to generate "
+"notifications in the system and have OpenStack components respond to these "
+"events as appropriate such as terminating instances, disconnecting attached "
+"volumes, reclaiming CPU and storage resources etc. "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:39
+msgid ""
+"A cloud will host many virtual instances, and monitoring these instances "
+"goes beyond hardware monitoring and log files which may just contain CRUD "
+"events."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:40
+msgid ""
+"Security monitoring controls such as intrusion detection software, antivirus "
+"software, and spyware detection and removal utilities can generate logs that "
+"show when and how an attack or intrusion took place. Deploying these tools "
+"on the cloud machines provides value and protection. Cloud users, those "
+"running instances on the cloud may also want to run such tools on their "
+"instances."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:44
+msgid "http://www.mirantis.com/blog/openstack-monitoring/"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:45
+msgid "http://blog.sflow.com/2012/01/host-sflow-distributed-agent.html"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:46
+msgid "http://blog.sflow.com/2009/09/lan-and-wan.html"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:47
+msgid ""
+"http://blog.sflow.com/2013/01/rapidly-detecting-large-flows-sflow-vs.html"
+msgstr ""

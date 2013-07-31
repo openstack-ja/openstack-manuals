@@ -1,0 +1,319 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:0
+msgid "translator-credits"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:3
+msgid "Why and How We Wrote This Book"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:4
+msgid ""
+"As OpenStack adoption continues to grow and mature, security has become a "
+"priority.  The OpenStack Security Group has recognized the need for a "
+"comprehensive and authoritative security guide. The <emphasis role=\"bold"
+"\">OpenStack Security Guide</emphasis> has been written to provide an "
+"overview of security best practices, guidelines, and recommendations for "
+"increasing the security of an OpenStack deployment. The authors bring their "
+"expertise from deploying and securing OpenStack in a variety of environments."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:5
+msgid ""
+"The guide augments the OpenStack Operations Guide (http://docs.openstack.org/"
+"ops/) and can be referenced to harden existing OpenStack deployments or to "
+"evaluate the security controls of OpenStack cloud providers."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:7
+msgid "Objectives"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:9
+msgid "Identify the security domains in OpenStack"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:12
+msgid "Provide guidance to secure your OpenStack deployment"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:15
+msgid ""
+"Highlight security concerns and potential mitigations in present day "
+"OpenStack"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:18
+msgid "Discuss upcoming security features"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:21
+msgid ""
+"To provide a community driven facility for knowledge capture and "
+"dissemination"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:26
+msgid "How"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:27
+msgid ""
+"As with the OpenStack Operations Guide, we followed the book sprint "
+"methodology. The book sprint process allows for rapid development and "
+"production of large bodies of written work.  Coordinators from the OpenStack "
+"Security Group re-enlisted the services of Adam Hyde as facilitator. "
+"Corporate support was obtained and the project was formally announced during "
+"the OpenStack summit in Portland, Oregon."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:28
+msgid ""
+"The team converged in Annapolis, MD due to the close proximately of some key "
+"members of the group.  This was a remarkable collaboration between public "
+"sector intelligence community members, silicon valley startups and some "
+"large, well-known technology companies. The book sprint ran during the last "
+"week in June 2013 and the first edition was created in five days."
+msgstr ""
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:30
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:33
+msgid "@@image: 'static/group.png'; md5=aec1f0af66d29c1a5d1f174df1f12812"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:36
+msgid "The team included:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:39
+msgid "<emphasis role=\"bold\">Bryan D. Payne</emphasis>, Nebula"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:40
+msgid ""
+"Dr. Bryan D. Payne is the Director of Security Research at Nebula and co-"
+"founder of the OpenStack Security Group (OSSG). Prior to joining Nebula, he "
+"worked at Sandia National Labs, the National Security Agency, BAE Systems, "
+"and IBM Research. He graduated with a Ph.D. in Computer Science from the "
+"Georgia Tech College of Computing, specializing in systems security."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:43
+msgid "<emphasis role=\"bold\">Robert Clark</emphasis>, HP"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:44
+msgid ""
+"Robert Clark is the Lead Security Architect for HP Cloud Services and co-"
+"founder of the OpenStack Security Group (OSSG). Prior to being recruited by "
+"HP, he worked in the UK Intelligence Community. Robert has a strong "
+"background in threat modeling, security architecture and virtualization "
+"technology. Robert has a master's degree in Software Engineering from the "
+"University of Wales."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:47
+msgid "<emphasis role=\"bold\">Keith Basil</emphasis>, Red Hat"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:48
+msgid ""
+"Keith Basil is a Principal Product Manager for Red Hat OpenStack and is "
+"focused on Red Hat's OpenStack product management, development and strategy. "
+"Within the US public sector, Basil brings previous experience from the "
+"design of an authorized, secure, high-performance cloud architecture for "
+"Federal civilian agencies and contractors."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:51
+msgid "<emphasis role=\"bold\">Cody Bunch</emphasis>, Rackspace"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:52
+msgid ""
+"Cody Bunch is a Private Cloud architect with Rackspace. Cody has co-authored "
+"an update to \"The OpenStack Cookbook\" as well as books on VMware "
+"automation."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:55
+msgid "<emphasis role=\"bold\">Malini Bhandaru</emphasis>, Intel"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:56
+msgid ""
+"Malini Bhandaru is a security architect at Intel. She has a varied "
+"background, having worked on platform power and performance at Intel, speech "
+"products at Nuance, remote monitoring and management at ComBrio, and web "
+"commerce at Verizon. She has a Ph.D. in Artificial Intelligence from Univ of "
+"Massachusetts, Amherst."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:59
+msgid ""
+"<emphasis role=\"bold\">Gregg Tally</emphasis>, Johns Hopkins University "
+"Applied Physics Laboratory"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:60
+msgid ""
+"Gregg Tally is the Chief Engineer at JHU/APL's Cyber Systems Group within "
+"the Asymmetric Operations Department. He works primarily in systems security "
+"engineering. Previously, he has worked at SPARTA, McAfee, and Trusted "
+"Information Systems where he was involved in cyber security research "
+"projects."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:63
+msgid "<emphasis role=\"bold\">Eric Lopez</emphasis>, Nicira / VMware"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:64
+msgid ""
+"Eric Lopez is Senior Solution Architect at VMware's Networking and Security "
+"Business Unit where he helps customer implement OpenStack and Nicira's "
+"Network Virtualization Platform. Prior to joining Nicira, he worked for Q1 "
+"Labs, Symantec, Vontu, and Brightmail. He has a B.S in Electrical "
+"Engineering/Computer Science and Nuclear Engineering from U.C. Berkeley and "
+"MBA from University of San Francisco."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:67
+msgid "<emphasis role=\"bold\">Shawn Wells</emphasis>, Red Hat"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:68
+msgid ""
+"Shawn Wells is the Director, Innovation Programs at Red Hat, focused on "
+"improving the process of adopting, contributing to, and managing open source "
+"technologies within the U.S. Government. Additionally, Shawn is an upstream "
+"maintainer of the SCAP Security Guide project which forms virtualization and "
+"operating system hardening policy with the U.S. Military, NSA, and DISA. "
+"Formerly an NSA civilian, Shawn developed SIGINT collection systems "
+"utilizing large distributed computing infrastructures."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:71
+msgid "<emphasis role=\"bold\">Ben de Bont</emphasis>, HP"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:72
+msgid ""
+"Ben de Bont is the CSO for HP Cloud Services. Prior to his current role Ben "
+"led the information security group at MySpace and the incident response team "
+"at MSN Security. Ben holds a master's degree in Computer Science from the "
+"Queensland University of Technology."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:75
+msgid ""
+"<emphasis role=\"bold\">Nathanael Burton</emphasis>, National Security Agency"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:76
+msgid ""
+"Nathanael Burton is a Computer Scientist at the National Security Agency. He "
+"has worked for the Agency for over 10 years working on distributed systems, "
+"large-scale hosting, open source initiatives, operating systems, security, "
+"storage, and virtualization technology. He has a B.S. in Computer Science "
+"from Virginia Tech."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:79
+msgid "Vibha Fauver"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:80
+msgid ""
+"Vibha Fauver, GWEB, CISSP, PMP, has over fifteen years of experience in "
+"Information Technology. Her areas of specialization include software "
+"engineering, project management and information security. She has a B.S. in "
+"Computer &amp; Information Science and a M.S. in Engineering Management with "
+"specialization and a certificate in Systems Engineering."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:83
+msgid "<emphasis role=\"bold\">Eric Windisch</emphasis>, Cloudscaling"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:84
+msgid ""
+"Eric Windisch is a Principal Engineer at Cloudscaling where he has been "
+"contributing to OpenStack for over two years. Eric has been in the trenches "
+"of hostile environments, building tenant isolation and infrastructure "
+"security through more than a decade of experience in the web hosting "
+"industry. He has been building cloud computing infrastructure and automation "
+"since 2007."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:87
+msgid "<emphasis role=\"bold\">Andrew Hay</emphasis>, CloudPassage"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:88
+msgid ""
+"Andrew Hay is the Director of Applied Security Research at CloudPassage, "
+"Inc. where he leads the security research efforts for the company and its "
+"server security products purpose-built for dynamic public, private, and "
+"hybrid cloud hosting environments."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:91
+msgid "Adam Hyde"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:92
+msgid ""
+"Adam facilitated this Book Sprint. He also founded the Book Sprint "
+"methodology and is the most experienced Book Sprint facilitator around. Adam "
+"founded FLOSS Manuals—a community of some 3,000 individuals developing Free "
+"Manuals about Free Software. He is also the founder and project manager for "
+"Booktype, an open source project for writing, editing, and publishing books "
+"online and in print."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:95
+msgid ""
+"During the sprint we also had help from Anne Gentle, Warren Wang, Paul "
+"McMillan, Brian Schott and Lorin Hochstein."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:96
+msgid ""
+"This Book was produced in a 5 day book sprint. A book sprint is an intensely "
+"collaborative, facilitated process which brings together a group to produce "
+"a book in 3-5 days. It is a strongly facilitated process with a specific "
+"methodology founded and developed by Adam Hyde. For more information visit "
+"the book sprint web page at http://www.booksprints.net."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:104
+msgid "How to Contribute to This Book"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:105
+msgid ""
+"The initial work on this book was conducted in an overly air-conditioned "
+"room that served as our group office for the entirety of the documentation "
+"sprint."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch002_why-and-how-we-wrote-this-book.xml:108
+msgid ""
+"Learn more about how to contribute to the OpenStack docs: (http://wiki."
+"openstack.org/Documentation/HowTo)."
+msgstr ""

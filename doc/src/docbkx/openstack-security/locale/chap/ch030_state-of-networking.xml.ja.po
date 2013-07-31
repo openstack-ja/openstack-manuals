@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch030_state-of-networking.xml:3
+msgid "State of Networking"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch030_state-of-networking.xml:4
+msgid ""
+"OpenStack Networking in the Grizzly release enables the end-user or tenant "
+"to define, utilize, and consume networking resources in new ways that had "
+"not been possible in previous OpenStack Networking releases. OpenStack "
+"Networking provides a tenant-facing API for defining network connectivity "
+"and IP addressing for instances in the cloud in addition to orchestrating "
+"the network configuration. With the transition to an API-centric networking "
+"service, cloud architects and administrators should take into consideration "
+"best practices to secure physical and virtual network infrastructure and "
+"services."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch030_state-of-networking.xml:5
+msgid ""
+"OpenStack Networking was designed with a plug-in architecture that provides "
+"extensibility of the API via open source community or third-party services. "
+"As you evaluate your architectural design requirements, it is important to "
+"determine what features are available in OpenStack Networking core services, "
+"any additional services that are provided by third-party products, and what "
+"supplemental services are required to be implemented in the physical "
+"infrastructure."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch030_state-of-networking.xml:6
+msgid ""
+"This section is a high-level overview of what processes and best practices "
+"should be considered when implementing OpenStack Networking. We will talk "
+"about the current state of services that are available, what future services "
+"will be implemented, and the current limitations in this project."
+msgstr ""

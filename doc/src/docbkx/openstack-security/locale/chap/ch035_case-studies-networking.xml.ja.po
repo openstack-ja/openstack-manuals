@@ -1,0 +1,103 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:3
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:3
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:3
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:3
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:3
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:3
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:3
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:3
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:3
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:3
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:3
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:3
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:3
+msgid "Case Studies"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:6
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:19
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:6
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:6
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:6
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:6
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:6
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:6
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:6
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:6
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:6
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:6
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:6
+msgid "Alice's Private Cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:11
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:24
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:10
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:10
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:12
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:10
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:10
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:10
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:23
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:12
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:12
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:10
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:13
+msgid "Bob's Public Cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:4
+msgid ""
+"In this case study we discuss how Alice and Bob would address providing "
+"networking services to the user."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:7
+msgid ""
+"A key objective of Alice's cloud is to integrate with the existing auth "
+"services and security resources. The key design parameters for this private "
+"cloud are a limited scope of tenants, networks and workload type. This "
+"environment can be designed to limit what available network resources are "
+"available to the tenant and what are the various default quotas and security "
+"policies are available. The network policy engine can be modified to "
+"restrict creation and changes to network resources. In this environment, "
+"Alice might want to leverage nova-network in the application of security "
+"group polices on a per instance basis vs. neutron's application of security "
+"group polices on a per port basis. L2 isolation in this environment would "
+"leverage VLAN tagging. The use of VLAN tags will allow great visibility of "
+"tenant traffic by leveraging existing features and tools of the physical "
+"infrastructure."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:11
+msgid ""
+"A major business driver for Bob is to provide an advanced networking "
+"services to his customers. Bob's customers would like to deploy multi-tiered "
+"application stacks. This multi-tiered application are either existing "
+"enterprise application or newly deployed applications. Since Bob's Public "
+"cloud is a multi-tenancy enterprise service, the choice to use for L2 "
+"isolation in this environment is to use Overlay networking. Another aspect "
+"of Bob's cloud is the self-service aspect where the customer can provision "
+"available networking services as needed. These networking services encompass "
+"L2 networks, L3 Routing, Network ACL and NAT. It is important that per-"
+"tenant quota's be implemented in this environment."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:12
+msgid ""
+"An added benefit with utilizing Openstack Networking is when new advanced "
+"networking services become available, these new features can be easily "
+"provided to the end customers."
+msgstr ""

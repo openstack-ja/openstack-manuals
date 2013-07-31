@@ -1,0 +1,130 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:3
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:3
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:3
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:3
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:3
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:3
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:3
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:3
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:3
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:3
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:3
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:3
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:3
+msgid "Case Studies"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:6
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:19
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:6
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:6
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:6
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:6
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:6
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:6
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:6
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:6
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:6
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:6
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:6
+msgid "Alice's Private Cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:11
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:24
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:10
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:10
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:12
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:10
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:10
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:10
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:23
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:12
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:12
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:10
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:13
+msgid "Bob's Public Cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:4
+msgid ""
+"Returning to Alice and Bob, we will use this section to dive into their "
+"particular tenant data privacy requirements. Specifically, we will look into "
+"how Alice and Bob both handle tenant data, data destruction, and data "
+"encryption."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:7
+msgid ""
+"As stated during the introduction to Alice's case study, data protection is "
+"of an extremely high priority. She needs to ensure that a compromise of one "
+"tenant's data does not cause loss of other tenant data. She also has strong "
+"regulator requirements that require documentation of data destruction "
+"activities. Alice does this using the following:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:15
+msgid ""
+"Establishing procedures to sanitize tenant data when a program or project "
+"ends"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:16
+msgid ""
+"Track the destruction of both the tenant data and metadata via ticketing in "
+"a CMDB"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:17
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:28
+msgid "For Volume storage:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:18
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:29
+msgid "Physical Server Issues"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:19
+msgid ""
+"To provide secure ephemeral instance storage, Alice implements qcow2 files "
+"on an encrypted filesystem."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:24
+msgid ""
+"As stated during the introduction to Bob's case study, tenant privacy is of "
+"an extremely high priority. In addition to the requirements and actions Bob "
+"will take to isolate tenants from one another at the infrastructure layer, "
+"Bob also needs to provide assurances for tenant data privacy. Bob does this "
+"using the following:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:26
+msgid ""
+"Establishing procedures to sanitize customer data when a customer churns"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:27
+msgid ""
+"Track the destruction of both the customer data and metadata via ticketing "
+"in a CMDB"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:30
+msgid ""
+"To provide secure ephemeral instance storage, Bob implements qcow2 files on "
+"an encrypted filesystems."
+msgstr ""

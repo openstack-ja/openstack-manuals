@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch046_data-residency.xml:18
+#: doc/src/docbkx/openstack-security/ch047_data-encryption.xml:10
+msgid "Swift objects"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch047_data-encryption.xml:3
+msgid "Data Encryption"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch047_data-encryption.xml:4
+msgid ""
+"The option exists for implementors to encrypt tenant data wherever it is "
+"stored on disk or transported over a network. This is above and beyond the "
+"general recommendation that users encrypt their own data before sending it "
+"to their provider."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch047_data-encryption.xml:5
+msgid ""
+"The importance of encrypting data on behalf of tenants is largely related to "
+"the risk assumed by a provider that an attacker could access tenant data. "
+"There may be requirements here in government, as well as requirements per-"
+"policy, in private contract, or even in case law in regard to private "
+"contracts for public cloud providers. It is recommended that a risk "
+"assessment and legal consul advised before choosing tenant encryption "
+"policies."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch047_data-encryption.xml:6
+msgid ""
+"Per-instance or per-object encryption is preferable over, in descending "
+"order, over per-project, per-tenant, per-host, and per-cloud aggregations. "
+"This recommendation is inverse to the complexity and difficulty of "
+"implementation. Presently, in some projects it is difficult or impossible to "
+"implement encryption as loosely granular as even per-tenant. We recommend "
+"implementors make a best-effort in encrypting tenant data."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch047_data-encryption.xml:7
+msgid ""
+"Often, data encryption relates positively to the ability to reliably destroy "
+"tenant and per-instance data, simply by throwing away the keys. It should be "
+"noted that in doing so, it becomes of great importance to destroy those keys "
+"in a reliable and secure manner."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch047_data-encryption.xml:8
+msgid "Opportunities to encrypt data for users are present:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch047_data-encryption.xml:13
+msgid "Cinder volumes &amp; Instance Ephemeral Filesystems"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch047_data-encryption.xml:16
+msgid "Network data"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch047_data-encryption.xml:20
+msgid "Swift Objects"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch047_data-encryption.xml:21
+msgid ""
+"The ability to encrypt objects in Swift is presently limited to disk-level "
+"encryption per node. However, there does exist third-party extensions and "
+"modules for per-object encryption. These modules have been proposed "
+"upstream, but have not per this writing been formally accepted. Below are "
+"some pointers: "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch047_data-encryption.xml:22
+msgid "https://github.com/Mirantis/swift-encrypt"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch047_data-encryption.xml:23
+msgid ""
+"http://www.mirantis.com/blog/on-disk-encryption-prototype-for-openstack-"
+"swift/"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch047_data-encryption.xml:26
+msgid "Cinder Volumes &amp; Instance Ephemeral Filesystems"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch047_data-encryption.xml:27
+msgid ""
+"The ability to encrypt volumes depends on the service backends chosen. Some "
+"backends may not support this at all."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch047_data-encryption.xml:28
+msgid ""
+"As both Cinder block storage and Nova compute support LVM backed storage, we "
+"can easily provide an example applicable to both systems. In deployments "
+"using LVM, encryption may be performed against the backing physical volumes. "
+"An encrypted block device would be created using the standard Linux tools, "
+"with the LVM physical volume (PV) created on top of the decrypted block "
+"device using pvcreate. Then, the vgcreate or vgmodify tool may be used to "
+"add the encrypted physical volume to an LVM volume group (VG)."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch047_data-encryption.xml:29
+msgid ""
+"A feature aimed for the Havana release provides encryption of the VM's data "
+"before it is written to disk. This allows the privacy of data to be "
+"maintained while residing on the storage device. The idea is similar to how "
+"self-encrypting drives work. This feature presents a normal block storage "
+"device to the VM but encrypts the bytes in the virtualization host before "
+"writing them to the disk. The block server operates exactly as it does when "
+"reading and writing unencrypted blocks, except special handling will be "
+"required for Cinder features such as snapshots and live migration.  Note "
+"that this feature uses an independent key manager."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch047_data-encryption.xml:32
+msgid "Network Data"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch047_data-encryption.xml:33
+msgid ""
+"Tenant data for compute could be encrypted over IPSec or other tunnels. This "
+"is not functionality common or standard in OpenStack, but is an option "
+"available to motivated and interested implementors."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch047_data-encryption.xml:37
+msgid ""
+"Cinder block storage supports a variety of mechanisms for supplying "
+"mountable volumes. It is outside the scope of this guide to specify "
+"recommendations for each Cinder backend driver. For the purpose of "
+"performance, many storage protocols are unencrypted. Some protocols such as "
+"iSCSI can provide authentication and encrypted sessions, it is our "
+"recommendation to enable these features."
+msgstr ""

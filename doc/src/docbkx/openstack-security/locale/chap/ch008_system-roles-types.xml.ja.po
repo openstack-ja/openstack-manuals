@@ -1,0 +1,145 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch008_system-roles-types.xml:3
+msgid "System Documentation Requirements"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch008_system-roles-types.xml:4
+msgid ""
+"The system documentation for an OpenStack cloud deployment should follow the "
+"templates and best practices for the Enterprise Information Technology "
+"System in your organization. Organizations often have compliance "
+"requirements which may require an overall System Security Plan to inventory "
+"and document the architecture of a given system. There are common challenges "
+"across the industry related to documenting the dynamic cloud infrastructure "
+"and keeping the information up-to-date."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch008_system-roles-types.xml:6
+msgid "System Roles &amp; Types"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch008_system-roles-types.xml:7
+msgid ""
+"It is necessary to describe the two broadly defined types of nodes that "
+"generally make up an OpenStack installation."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch008_system-roles-types.xml:9
+msgid ""
+"Infrastructure nodes, or the nodes that run the cloud related services such "
+"as the OpenStack Identity service, the message queuing service, storage, "
+"networking, and other services required to support the operation of the "
+"cloud."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch008_system-roles-types.xml:12
+msgid ""
+"The other type of nodes are compute, storage, or other resource nodes, those "
+"that provide storage capacity or virtual machines for your cloud."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch008_system-roles-types.xml:17
+msgid "System Inventory"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch008_system-roles-types.xml:18
+msgid ""
+"Documentation should provide a general description of the OpenStack "
+"environment and cover all systems used (production, development, test, "
+"etc.). Documenting system components, networks, services, and software often "
+"provides the bird's-eye view needed to thoroughly cover and consider "
+"security concerns, attack vectors and possible security domain bridging "
+"points.  A system inventory may need to capture ephemeral resources such as "
+"virtual machines or virtual disk volumes that would otherwise be persistent "
+"resources in a traditional IT system."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch008_system-roles-types.xml:20
+msgid "Hardware Inventory"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch008_system-roles-types.xml:21
+msgid ""
+"Clouds without stringent compliance requirements for written documentation "
+"may at least benefit from having a Configuration Management Database (CMDB). "
+"CMDB's are normally used for hardware asset tracking and overall life-cycle "
+"management. By leveraging a CMDB, an organization can quickly identify cloud "
+"infrastructure hardware (e.g. compute nodes, storage nodes, and network "
+"devices) that exists on the network but may not be adequately protected and/"
+"or forgotten. OpenStack provisioning system may provide some CMDB-like "
+"functions especially if auto-discovery features of hardware attributes are "
+"available."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch008_system-roles-types.xml:24
+msgid "Software Inventory"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch008_system-roles-types.xml:25
+msgid ""
+"Just as with hardware, all software components within the OpenStack "
+"deployment should be documented. Components here should include system "
+"databases; OpenStack software components and supporting sub-components; and, "
+"supporting infrastructure software such as load-balancers, reverse proxies "
+"and network address translators. Having an authoritative list like this may "
+"be critical toward understanding total system impact due to a compromise or "
+"vulnerability of a specific class of software."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch008_system-roles-types.xml:29
+msgid "Network Topology"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch008_system-roles-types.xml:30
+msgid ""
+"A Network Topology should be provided with highlights specifically calling "
+"out the data flows and bridging points between the security domains. Network "
+"ingress and egress points should be identified along with any OpenStack "
+"logical system boundaries. Multiple diagrams may be needed to provide "
+"complete visual coverage of the system.  A network topology document should "
+"include virtual networks created on behalf of tenants by the system along "
+"with virtual machine instances and gateways created by OpenStack."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch008_system-roles-types.xml:33
+msgid "Services, Protocols and Ports"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch008_system-roles-types.xml:34
+msgid ""
+"The Service, Protocols and Ports table provides important additional detail "
+"of an OpenStack deployment. A table view of all services running within the "
+"cloud infrastructure can immediately inform, guide and check security "
+"procedures. Firewall configuration, service port conflicts, security "
+"remediation areas, and compliance requirements become easier to manage when "
+"you have concise information available. E.g. tabular information as shown "
+"below."
+msgstr ""
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: doc/src/docbkx/openstack-security/ch008_system-roles-types.xml:43
+#: doc/src/docbkx/openstack-security/ch008_system-roles-types.xml:46
+msgid ""
+"@@image: 'static/services-protocols-ports.png'; "
+"md5=fb1e9f47d969127b7a5ca683d38cfe20"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch008_system-roles-types.xml:49
+msgid ""
+"Referencing a table of services, protocols and ports can help in "
+"understanding the relationship between OpenStack components. It it highly "
+"suggested that OpenStack deployments have information similar to this on "
+"record."
+msgstr ""

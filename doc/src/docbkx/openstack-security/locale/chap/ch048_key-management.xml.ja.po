@@ -1,0 +1,70 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch048_key-management.xml:3
+msgid "Key Management"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch048_key-management.xml:4
+msgid ""
+"To address the often mentioned concern of tenant data privacy and limiting "
+"cloud provider liability, there is greater interest within the OpenStack "
+"community to make data encryption more ubiquitous. It is relatively easy for "
+"an end-user to encrypt their data prior to saving it to the cloud, and a "
+"this is a viable path for tenant objects such as media files, database "
+"archives among others. However, when client side encryption is used for "
+"virtual machine images, block storage etc, client intervention is necessary "
+"in the form of presenting keys to unlock the data for further use. To "
+"seamlessly secure the data and yet have it accessible without burdening the "
+"client with having to manage their keys and interactively provide them calls "
+"for a key management service within OpenStack. Providing encryption and key "
+"management services as part of OpenStack eases data-at-rest security "
+"adoption, addresses customer concerns about the privacy and misuse of their "
+"data with the added advantage of limiting cloud provider liability. Provider "
+"liability is of concern in multi-tenant public clouds with respect to "
+"handing over tenant data during a misuse investigation."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch048_key-management.xml:5
+msgid ""
+"A key management service is in the early stages of being developed and has a "
+"way to go before becoming an official component of OpenStack. Refer to "
+"https://github.com/cloudkeep/barbican/wiki/_pages for details."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch048_key-management.xml:6
+msgid ""
+"It shall support the creation of keys, and their secure saving (with a "
+"service master-key). Some of the design questions still being debated are "
+"how much of the Key Management Interchange Protocol (KMIP) to support, key "
+"formats, and certificate management.  The key manager will be pluggable to "
+"facilitate deployments that need a third-party Hardware Security Module "
+"(HSM)."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch048_key-management.xml:7
+msgid ""
+"OpenStack Block Storage, Cinder, is the first service looking to integrate "
+"with the key manager to provide volume encryption."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch048_key-management.xml:9
+msgid "References:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch048_key-management.xml:11
+msgid "Barbican - https://github.com/cloudkeep/barbican"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch048_key-management.xml:14
+msgid "KMIP -https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=kmip"
+msgstr ""

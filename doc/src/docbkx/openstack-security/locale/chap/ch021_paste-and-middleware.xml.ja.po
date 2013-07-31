@@ -1,0 +1,183 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:3
+msgid "API Endpoint Configuration Recommendations"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:4
+msgid ""
+"This chapter provides recommendations for improving the security of both "
+"public and internal endpoints."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:6
+msgid "Internal API Communications"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:7
+msgid ""
+"OpenStack provides both public facing and private API endpoints. By default, "
+"OpenStack components use the publicly defined endpoints. The recommendation "
+"is to configure these components to use the API endpoint within the proper "
+"security domain."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:8
+msgid ""
+"Services select their respective API endpoints based on the OpenStack "
+"service catalog.  The issue here is these services may not obey the listed "
+"public or internal API end point values. This can lead to internal "
+"management traffic being routed to external API endpoints."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:10
+msgid "Configure Internal URLs in Keystone Catalog"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:11
+msgid ""
+"The keystone catalog should be aware of your internal URLs. While this "
+"feature is not utilized by default, it may be leveraged through "
+"configuration. Additionally, it should be forward-compatible with expectant "
+"changes once this behavior becomes the default."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:12
+msgid "To register an internal URL for an endpoint:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:22
+msgid "Configure Applications for Internal URLs"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:23
+msgid ""
+"Some services can be forced to use specific API endpoints.  Therefore, it is "
+"recommended that each OpenStack service communicating to the API of another "
+"service must be explicitly configured to access the proper internal API "
+"endpoint."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:24
+msgid ""
+"Each project may present an inconsistent way of defining target API "
+"endpoints. Future releases of OpenStack seek to resolve these "
+"inconsistencies through consistent use of the Keystone catalog."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:26
+msgid "Configuration Example #1: Nova"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:37
+msgid "Configuration Example #2: Cinder"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:44
+msgid "Paste and Middleware"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:45
+msgid ""
+"Most API endpoints and other HTTP services in OpenStack utilize the Python "
+"Paste Deploy library. This is important to understand from a security "
+"perspective as it allows for manipulation of the request filter pipeline "
+"through the application's configuration. Each element in this chain is "
+"referred to as <emphasis>middleware</emphasis>. Changing the order of "
+"filters in the pipeline or adding additional middleware may have "
+"unpredictable security impact."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:46
+msgid ""
+"It is not uncommon that implementors will choose to add additional "
+"middleware to extend OpenStack's base functionality. We recommend "
+"implementors make careful consideration of the potential exposure introduced "
+"by the addition of non-standard software components to their HTTP request "
+"pipeline."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:47
+msgid ""
+"Additional information on Paste Deploy may be found at http://pythonpaste."
+"org/deploy/."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:50
+msgid "API Endpoint Process Isolation &amp; Policy"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:51
+msgid ""
+"API endpoint processes, especially those that reside within the public "
+"security domain should be isolated as much as possible. Where deployments "
+"allow, API endpoints should be deployed on separate hosts for increased "
+"isolation."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:53
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:119
+msgid "Namespaces"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:54
+msgid ""
+"Many operating systems now provide compartmentalization support. Linux "
+"supports namespaces to assign processes into independent domains. System "
+"compartmentalization is covered in more detail in other parts of the guide."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:57
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:124
+msgid "Network Policy"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:58
+msgid ""
+"API endpoints typically bridge multiple security domains, as such particular "
+"attention should be paid to the compartmentalization of the API processes.  "
+"See the <emphasis>Security Domain Bridging</emphasis> section for additional "
+"information in this area."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:59
+msgid ""
+"With careful modeling, network ACLs and IDS technologies can be use to "
+"enforce explicit point to point communication between network services. As "
+"critical cross domain service, this type of explicit enforcement works well "
+"for OpenStack's message queue service."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:60
+msgid ""
+"Policy enforcement can be implemented through the configuration of services, "
+"host-based firewalls (such as IPTables), local policy (SELinux or AppArmor), "
+"and optionally enforced through global network policy."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:63
+#: doc/src/docbkx/openstack-security/ch038_transport-security.xml:129
+#: doc/src/docbkx/openstack-security/ch052_devices.xml:85
+msgid "Mandatory Access Controls"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch021_paste-and-middleware.xml:64
+msgid ""
+"API endpoint processes should be isolated from each other and other "
+"processes on a machine. The configuration for those processes should be "
+"restricted to those processes not only by Discretionary Access Controls, but "
+"through Mandatory Access Controls. The goal of these enhanced access control "
+"is to aid in the containment and escalation of API endpoint security "
+"breaches.  With mandatory access controls, such breaches will severely limit "
+"access to resources and provide earlier alerting on such events."
+msgstr ""

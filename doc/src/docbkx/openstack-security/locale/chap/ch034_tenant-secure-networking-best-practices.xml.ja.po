@@ -1,0 +1,136 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch034_tenant-secure-networking-best-practices.xml:3
+msgid "Networking Services Security Best Practices"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch034_tenant-secure-networking-best-practices.xml:4
+msgid ""
+"This section discusses OpenStack Networking configuration best practices as "
+"they apply to tenant network security within your OpenStack deployment."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch034_tenant-secure-networking-best-practices.xml:6
+msgid "Tenant Network Services Workflow"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch034_tenant-secure-networking-best-practices.xml:7
+msgid ""
+"Openstack Networking provides users real self services of network resources "
+"and configurations. It is important that Cloud Architects and Operators "
+"evaluate the their design use cases in providing users the ability to "
+"create, update, and destroy available network resources."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch034_tenant-secure-networking-best-practices.xml:10
+msgid "Networking Resource Policy Engine"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch034_tenant-secure-networking-best-practices.xml:11
+msgid ""
+"A policy engine and its configuration file, <emphasis>policy.json</"
+"emphasis>, within OpenStack Networking provides a method to provide finer "
+"grained authorization of users on tenant networking methods and objects. It "
+"is important that cloud architects and operators evaluate their design and "
+"use cases in providing users and tenants the ability to create, update, and "
+"destroy available network resources as it has a tangible effect on tenant "
+"network availability, network security, and overall OpenStack security. For "
+"a more detail explanation of Openstack Networking policy definition, please "
+"refer to the Authentication and Authorization chapter in the Openstack "
+"Networking Administration Guide: http://docs.openstack.org/grizzly/openstack-"
+"network/admin/content/ch_auth.html "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch034_tenant-secure-networking-best-practices.xml:12
+msgid ""
+"It is important to review the default networking resource policy and modify "
+"the policy appropriately for your security posture."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch034_tenant-secure-networking-best-practices.xml:13
+msgid ""
+"If your deployment of Openstack provides multiple external access points "
+"into different security domains it is important that you limit the tenant's "
+"ability to attach multiple vNICs to multiple external access points -- this "
+"would bridge these security domains and could lead to unforseen security "
+"compromise. It is possible mitigate this risk by utilizing the host "
+"aggregates functionality provided by Openstack Compute or through splitting "
+"the tenant VMs into multiple tenant projects with different virtual network "
+"configurations."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch034_tenant-secure-networking-best-practices.xml:16
+msgid "Security Groups"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch034_tenant-secure-networking-best-practices.xml:17
+msgid ""
+"The OpenStack Networking Service provides security group functionality using "
+"a mechanism that is more flexible and powerful than the security group "
+"capabilities built into OpenStack Compute. Thus, when using OpenStack "
+"Networking, <emphasis>nova.conf</emphasis> should always disable built-in "
+"security groups and proxy all security group calls to the OpenStack "
+"Networking API. Failure to do so will result in conflicting security "
+"policies being simultaneously applied by both services. To proxy security "
+"groups to OpenStack Networking, use the following configuration values:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch034_tenant-secure-networking-best-practices.xml:19
+msgid ""
+"firewall_driver : must be set to 'nova.virt.firewall.NoopFirewallDriver' so "
+"that nova-compute does not perform iptables-based filtering itself."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch034_tenant-secure-networking-best-practices.xml:22
+msgid ""
+"security_group_api : must be set to 'neutron' so that all security group "
+"requests are proxied to the OpenStack Network Service."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch034_tenant-secure-networking-best-practices.xml:25
+msgid ""
+"Security groups and security group rules allow administrators and tenants "
+"the ability to specify the type of traffic and direction (ingress/egress) "
+"that is allowed to pass through a virtual interface port. A security group "
+"is a container for security group rules. When a virtual interface port is "
+"created in OpenStack Networking it is associated with a security group. If a "
+"security group is not specified, the port will be associated with a "
+"'default' security group. By default this group will drop all ingress "
+"traffic and allow all egress. Rules can be added to this group in order to "
+"change the behaviour."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch034_tenant-secure-networking-best-practices.xml:26
+msgid ""
+"When using the security group API through OpenStack Compute, security groups "
+"are applied to all virtual interface ports on an instance. The reason for "
+"this is that OpenStack Compute security group APIs are instance based and "
+"not virtual interface port based as OpenStack Networking."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch034_tenant-secure-networking-best-practices.xml:29
+msgid "Quotas"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch034_tenant-secure-networking-best-practices.xml:30
+msgid ""
+"Quotas provide the ability to limit the number of network resources "
+"available to tenants. You can enforce default quotas for all tenants."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch034_tenant-secure-networking-best-practices.xml:57
+msgid ""
+"OpenStack Networking also supports per-tenant quotas limit via a quota "
+"extension API. To enable per-tenant quotas, you need to set "
+"<literal>quota_driver</literal> in <literal>neutron.conf</literal>."
+msgstr ""

@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch027_storage.xml:3
+msgid "Storage"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch027_storage.xml:4
+msgid ""
+"In the Protection of Tenant Data section we discuss a variety of issues "
+"related to storage security. However, due to the time constraints with the "
+"book sprint that created the original version of this book, we do not have "
+"specific guidance related to configuration of the storage projects (e.g., "
+"Swift, Cinder, and Glance)."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch027_storage.xml:5
+msgid ""
+"We encourage community contributions to help improve this chapter for a "
+"future version."
+msgstr ""

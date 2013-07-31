@@ -1,0 +1,40 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch011_management-introduction.xml:3
+msgid "Management Introduction"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch011_management-introduction.xml:4
+msgid ""
+"A cloud deployment is a living system. Machines age and fail, software "
+"becomes outdated, vulnerabilities are discovered. When errors or omissions "
+"are made in configuration, or when software fixes must be applied, these "
+"changes must be made in a secure, but convenient, fashion. These changes are "
+"typically solved through configuration management."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch011_management-introduction.xml:5
+msgid ""
+"Likewise, it is important to protect the cloud deployment from being "
+"configured or manipulated by malicious entities. With many systems in a "
+"cloud employing compute and networking virtualization, there are distinct "
+"challenges applicable to OpenStack which must be addressed through integrity "
+"lifecycle management."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch011_management-introduction.xml:6
+msgid ""
+"Finally, administrators must perform command and control over the cloud for "
+"various operational functions. It is important these command and control "
+"facilities are understood and secured."
+msgstr ""

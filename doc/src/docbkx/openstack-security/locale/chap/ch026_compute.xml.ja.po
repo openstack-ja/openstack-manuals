@@ -1,0 +1,175 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:110
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:45
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:82
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:113
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:132
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:23
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:57
+msgid "Security Considerations"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:126
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:64
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:123
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:149
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:33
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:70
+#: doc/src/docbkx/openstack-security/ch058_forensicsincident-response.xml:43
+msgid "References"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:26
+#: doc/src/docbkx/openstack-security/ch014_best-practices-for-operator-mode-access.xml:72
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:13
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:40
+msgid "Capabilities"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:3
+msgid "Compute"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:4
+msgid ""
+"The compute service (Nova) is one of the more complex OpenStack services. "
+" It runs in many locations throughout the cloud and interacts with a variety "
+"of internal services.  For this reason, most of our recommendations "
+"regarding best practices for Nova configuration are distributed throughout "
+"this book. We provide specific details in the sections on Management, API "
+"Endpoints, Messaging, and Database."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:6
+msgid "Virtual Console Selection"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:7
+msgid ""
+"One decision a cloud architect will need to make regarding Nova "
+"configuration is whether to use VNC or SPICE. Below we provide some details "
+"on the differences between these options."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:9
+msgid "Virtual Network Computer (VNC)"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:10
+msgid ""
+"OpenStack can be configured to provide remote desktop console access to "
+"instances for tenants and/or administrators using the Virtual Network "
+"Computer (VNC) protocol.  "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:15
+msgid ""
+"The OpenStack Dashboard (Horizon) can provide a VNC console for instances "
+"directly on the web page using the HTML5 noVNC client.  This requires the "
+"nova-novncproxy service to bridge from the public network to the management "
+"network."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:18
+msgid ""
+"The nova command line utility can return a URL for the VNC console for "
+"access by the nova Java VNC client. This requires the nova-xvpvncproxy "
+"service to bridge from the public network to the management network."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:25
+msgid ""
+"The nova-novncproxy and nova-xvpvncproxy services by default open public-"
+"facing ports that are token authenticated."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:28
+msgid ""
+"By default, the remote desktop traffic is not encrypted. Havana is expected "
+"to have VNC connections secured by Kerberos."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:34
+msgid "Secure Connections to VNC ports - http://blog.malchuk.ru/2013/05/21/47"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:37
+msgid "Simple Protocol for Independent Computing Environments (SPICE)"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:38
+msgid ""
+"As an alternative to VNC, OpenStack provides remote desktop access to guest "
+"virtual machines using the Simple Protocol for Independent Computing "
+"Environments (SPICE) protocol."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:42
+msgid ""
+"SPICE is supported by the OpenStack Dashboard (Horizon) directly on the "
+"instance web page.  This requires the nova-spicehtml5proxy service."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:45
+msgid ""
+"The nova command line utility can return a URL for SPICE console for access "
+"by a SPICE-html client."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:50
+msgid "Limitations"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:52
+msgid ""
+"Although SPICE has many advantages over VNC, the spice-html5 browser "
+"integration currently doesn't really allow admins to take advantage of any "
+"of the benefits. To take advantage of SPICE features like multi-monitor, USB "
+"pass through, etc. admins are recommended to use a standalone SPICE client "
+"within the Management Network."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:59
+msgid ""
+"The nova-spicehtml5proxy service by default opens public-facing ports that "
+"are token authenticated."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:62
+msgid ""
+"The functionality and integration are still evolving. We will access the "
+"features in the next release and make recommendations."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:65
+msgid ""
+"As is the case for VNC, at this time we recommend using SPICE from the "
+"management network in addition to limiting use to few individuals."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:71
+msgid ""
+"SPICE Console - http://docs.openstack.org/trunk/openstack-compute/admin/"
+"content/spice-console.html"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:72
+msgid "https://bugzilla.redhat.com/show_bug.cgi?id=913607"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch026_compute.xml:73
+msgid ""
+"http://openstack.redhat.com/forum/discussion/67/resolved-spice-support-in-"
+"rdo-grizzly/p1 "
+msgstr ""

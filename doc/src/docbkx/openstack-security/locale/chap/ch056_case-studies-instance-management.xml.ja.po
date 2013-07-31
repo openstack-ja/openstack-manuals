@@ -1,0 +1,124 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:3
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:3
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:3
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:3
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:3
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:3
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:3
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:3
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:3
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:3
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:3
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:3
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:3
+msgid "Case Studies"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:6
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:19
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:6
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:6
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:6
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:6
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:6
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:6
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:6
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:6
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:6
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:6
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:6
+msgid "Alice's Private Cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:11
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:24
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:10
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:10
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:12
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:10
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:10
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:10
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:23
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:12
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:12
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:10
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:13
+msgid "Bob's Public Cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:4
+msgid ""
+"In this case study we discuss how Alice and Bob would architect their clouds "
+"with respect to instance entropy, scheduling instances, trusted images, and "
+"instance migrations."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:7
+msgid ""
+"Alice has a need for lots of high quality entropy in the instances. For this "
+"reason, she decides to purchase hardware with Intel Ivy Bridge chip sets "
+"that support the RdRand instruction on each compute node. Using the entropy "
+"gathering daemon (EGD) and LibVirt's EGD support, Alice ensures that this "
+"entropy pool is distributed to the instances on each compute node."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:8
+msgid ""
+"For instance scheduling, Alice uses the trusted compute pools to ensure that "
+"all cloud workloads are deployed to nodes that presented a proper boot time "
+"attestation. Alice decides to disable user permissions for image uploading "
+"to help ensure that the images used in the cloud are generated in a known "
+"and trusted manner by the cloud administrators."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:9
+msgid ""
+"Finally, Alice disables instance migrations as this feature is less critical "
+"for the high performance application workloads expected to run in this "
+"cloud. This helps avoid the various security concerns related to instance "
+"migrations."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:13
+msgid ""
+"Bob is aware that entropy will be a concern for some of his customers, such "
+"as those in the financial industry. However, due to the added cost and "
+"complexity, Bob has decided to forgo integrating hardware entropy into the "
+"first iteration of his cloud. He adds hardware entropy as a fast-follow to "
+"do for a later improvement for the second generation of his cloud "
+"architecture."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:14
+msgid ""
+"Bob is interested in ensuring that customers receive a high quality of "
+"service. He is concerned that providing too much explicit user control over "
+"instance scheduling could negatively impact the quality of service. So he "
+"disables this feature. Bob provides images in the cloud from a known trusted "
+"source for users to use. Additionally, he also allows users to upload their "
+"own images. However, users cannot generally share their images. This helps "
+"prevent a user from sharing a malicious image, which could negatively impact "
+"the security of other users in the cloud."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:15
+msgid ""
+"For migrations, Bob wants to enable secure instance migrations in order to "
+"support rolling upgrades with minimal user downtime. Bob ensures that all "
+"migrations occur on an isolated VLAN. He plans to defer implementing "
+"encrypted migrations until this is better supported in Nova client tools. "
+"However, he makes a note to track this carefully and switch to encryption "
+"migrations as soon as possible."
+msgstr ""

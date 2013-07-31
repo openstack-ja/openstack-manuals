@@ -1,0 +1,113 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:3
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:3
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:3
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:3
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:3
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:3
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:3
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:3
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:3
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:3
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:3
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:3
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:3
+msgid "Case Studies"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:6
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:19
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:6
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:6
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:6
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:6
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:6
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:6
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:6
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:6
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:6
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:6
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:6
+msgid "Alice's Private Cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch009_case-studies.xml:11
+#: doc/src/docbkx/openstack-security/ch015_case-studies-management.xml:24
+#: doc/src/docbkx/openstack-security/ch018_case-studies-pkissl.xml:10
+#: doc/src/docbkx/openstack-security/ch022_case-studies-api-endpoints.xml:10
+#: doc/src/docbkx/openstack-security/ch028_case-studies-identity-management.xml:12
+#: doc/src/docbkx/openstack-security/ch035_case-studies-networking.xml:10
+#: doc/src/docbkx/openstack-security/ch039_case-studies-messaging.xml:10
+#: doc/src/docbkx/openstack-security/ch044_case-studies-database.xml:10
+#: doc/src/docbkx/openstack-security/ch049_case-studies-tenant-data.xml:23
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:12
+#: doc/src/docbkx/openstack-security/ch056_case-studies-instance-management.xml:12
+#: doc/src/docbkx/openstack-security/ch059_case-studies-monitoring-logging.xml:10
+#: doc/src/docbkx/openstack-security/ch066_case-studies-compliance.xml:13
+msgid "Bob's Public Cloud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:4
+msgid ""
+"In this case study we discuss how Alice and Bob would ensure that  their "
+"instances are properly isolated. First we consider hypervisor selection, and "
+"then techniques for hardening QEMU and applying mandatory access controls."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:7
+msgid ""
+"Alice chooses Xen for the hypervisor in her cloud due to a strong internal "
+"knowledge base and a desire to use the Xen security modules (XSM) for fine-"
+"grained policy enforcement."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:8
+msgid ""
+"Alice is willing to apply a relatively large amount of resources to software "
+"packaging and maintenance. She will use these resources to build a highly "
+"customized version of QEMU that has many components removed, thereby "
+"reducing the attack surface. She will also ensure that all compiler "
+"hardening options are enabled for QEMU. Alice accepts that these decisions "
+"will increase long-term maintenance costs."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:9
+msgid ""
+"Alice writes XSM policies (for Xen) and SELinux policies (for Linux domain "
+"0, and device domains) to provide stronger isolation between the instances. "
+"Alice also uses the TXT support in Xen to measure the hypervisor launch in "
+"the TPM."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:13
+msgid ""
+"Bob is very concerned about instance isolation since the users in a public "
+"cloud represent anyone with a credit card, meaning they are inherently "
+"untrusted. Bob has just started hiring the team that will deploy the cloud, "
+"so he can tailor his candidate search for specific areas of expertise. With "
+"this in mind, Bob chooses a hypervisor based on its technical features, "
+"certifications, and community support. KVM has an EAL 4+ common criteria "
+"rating, with a layered security protection profile (LSPP) to provide added "
+"assurance for instance isolation. This, combined with the strong support for "
+"KVM within the OpenStack community drives Bob's decision to use KVM."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch053_case-studies-instance-isolation.xml:14
+msgid ""
+"Bob weighs the added cost of repackaging QEMU and decides that he cannot "
+"commit those resources to the project. Fortunately, his Linux distribution "
+"has already enabled the compiler hardening options. So he decides to use "
+"this QEMU package. Finally, Bob leverages sVirt to manage the SELinux "
+"polices associated with the virtualization stack."
+msgstr ""

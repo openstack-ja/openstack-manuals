@@ -1,0 +1,229 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:3
+msgid "Introduction to SSL/TLS"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:4
+msgid ""
+"OpenStack services receive requests on behalf of users on public networks as "
+"well as from other internal services over management networks. Inter-service "
+"communications can also occur over public networks depending on deployment "
+"and architecture choices."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:5
+msgid ""
+"While it is commonly accepted that data over public networks should be "
+"secured using cryptographic measures, such as Secure Sockets Layer or "
+"Transport Layer Security (SSL/TLS) protocols, it is insufficient to rely on "
+"security domain separation to protect internal traffic. Using a security-in-"
+"depth approach, we recommend securing all domains with SSL/TLS, including "
+"the management domain services. It is important that should a tenant escape "
+"their VM isolation and gain access to the hypervisor or host resources, "
+"compromise an API endpoint, or any other service, they must not be able to "
+"easily inject or capture messages, commands, or otherwise affect or control "
+"management capabilities of the cloud. SSL/TLS provides the mechanisms to "
+"ensure authentication, non-repudiation, confidentiality, and integrity of "
+"user communications to the OpenStack services and between the OpenStack "
+"services themselves."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:6
+msgid ""
+"Public Key Infrastructure (PKI) is the set of hardware, software, and "
+"policies to operate a secure system which provides authentication, non-"
+"repudiation, confidentiality, and integrity. The core components of PKI are:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:8
+msgid ""
+"End Entity - user, process, or system which is the subject of a certificate"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:11
+msgid ""
+"Certification Authority (CA) - defines certificate policies, management, and "
+"issuance of certificates"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:14
+msgid ""
+"Registration Authority (RA) - an optional system to which a CA delegates "
+"certain management functions"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:17
+msgid ""
+"Repository - Where the end entity certificates and certificate revocation "
+"lists are stored and looked up"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:20
+msgid ""
+"PKI builds the framework on which to provide encryption algorithms, cipher "
+"modes, and protocols for securing data and authentication. We strongly "
+"recommend securing all services with Public Key Infrastructure (PKI), "
+"including the use of SSL/TLS for API endpoints. It is impossible for the "
+"encryption or signing of transports or messages alone to solve all these "
+"problems. Hosts themselves must be secure and implement policy, namespaces, "
+"and other controls to protect their private credentials and keys. However, "
+"the challenges of key management and protection do not reduce the necessity "
+"of these controls, or lessen their importance."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:22
+msgid "Certification Authorities"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:23
+msgid ""
+"Many organizations have an established Public Key Infrastructure with their "
+"own certification authority (CA), certificate policies, and management for "
+"which they should use to issue certificates for internal OpenStack users or "
+"services. Organizations in which the public security domain is Internet "
+"facing will additionally need certificates signed by a widely recognized "
+"public CA. For cryptographic communications over the management network, it "
+"is recommended one not use a public CA. Instead, we expect and recommend "
+"most deployments deploy their own internal CA."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:24
+msgid ""
+"It is recommended that the OpenStack cloud architect rely on distinct sets "
+"of CAs -- one or more for the management network and internal service "
+"communications, and the trusted set of public CA providers for allowing "
+"external users to verify the identity of the public cloud endpoints. "
+"Configuring the internal service communications to only rely on an internal "
+"CA can help reduce the risk of accidental authentication of users with valid "
+"certificates issued by public CAs from being trusted by the internal "
+"services."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:25
+msgid ""
+"There are many management, policy, and technical challenges around creating "
+"and signing certificates as such is an area where cloud architects or "
+"operators may wish to seek the advice of industry leaders and vendors in "
+"addition to the guidance recommended here."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:28
+msgid "SSL/TLS Libraries"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:29
+msgid ""
+"Various components, services, and applications within the OpenStack "
+"ecosystem or dependencies of OpenStack are implemented and can be configured "
+"to use SSL/TLS libraries. The SSL/TLS and HTTP services within OpenStack are "
+"typically implemented using OpenSSL which has been proven to be fairly "
+"secure and has a module that has been validated for FIPS 140-2. However, "
+"keep in mind that each application or service can still introduce weaknesses "
+"in how they use the OpenSSL libraries."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:32
+msgid "Cryptographic Algorithms, Cipher Modes, and Protocols"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:33
+msgid ""
+"We recommend only using TLS v1.1 or v1.2, but suggest SSLv3 and TLSv1.0 may "
+"be used for compatibility. Other SSL/TLS versions, explicitly older "
+"versions, should not be used. These older versions include SSLv1 and SSLv2. "
+"As this book does not intend to be a thorough reference on cryptography we "
+"do not wish to be prescriptive about what specific algorithms or cipher "
+"modes you should enable or disable in your OpenStack services. However, "
+"there are some authoritative references we would like to recommend for "
+"further information:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:35
+msgid ""
+"National Security Agency, Suite B Cryptography - http://www.nsa.gov/ia/"
+"programs/suiteb_cryptography/index.shtml"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:38
+msgid ""
+"OWASP Guide to Cryptography - https://www.owasp.org/index.php/"
+"Guide_to_Cryptography"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:41
+msgid ""
+"OWASP Transport Layer Protection Cheat Sheet - https://www.owasp.org/index."
+"php/Transport_Layer_Protection_Cheat_Sheet"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:44
+msgid "http://www.ieee-security.org/TC/SP2013/papers/4977a511.pdf"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:47
+msgid "http://www.cs.utexas.edu/~shmat/shmat_ccs12.pdf"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:50
+msgid "http://www.openssl.org/docs/fips/fipsnotes.html"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:55
+msgid "Summary"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:56
+msgid ""
+"It is important to note given the many components that make up OpenStack and "
+"the different deployment and implementation choices, care should be taken to "
+"look at each component to ensure the appropriate configuration of SSL "
+"certificates, keys, and CAs. The following services will be discussed in "
+"later sections of this book where SSL and PKI is available (either natively "
+"or possible via SSL proxy):"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:58
+msgid "Compute API endpoints"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:61
+msgid "Identity API endpoints"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:64
+msgid "Networking API endpoints"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:67
+msgid "Storage API endpoints"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:70
+msgid "Messaging server"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:73
+msgid "Database server"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:76
+#: doc/src/docbkx/openstack-security/ch025_web-dashboard.xml:3
+msgid "Dashboard"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch017_threat-models-confidence-and-confidentiality.xml:79
+msgid ""
+"Throughout this book we will use SSL as shorthand to refer to these "
+"recommendations for SSL/TLS protocols."
+msgstr ""

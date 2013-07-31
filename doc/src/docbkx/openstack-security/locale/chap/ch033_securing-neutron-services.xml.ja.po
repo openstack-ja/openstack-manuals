@@ -1,0 +1,109 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch033_securing-neutron-services.xml:3
+msgid "Securing Openstack Networking Services"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch033_securing-neutron-services.xml:4
+msgid ""
+"In order to secure OpenStack Networking, an understanding of the workflow "
+"process for tenant instance creation needs to be mapped to security domains. "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch033_securing-neutron-services.xml:5
+msgid ""
+"There are four main services that interact with OpenStack Networking. In a "
+"typical OpenStack deployment these services map to the following security "
+"domains:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch033_securing-neutron-services.xml:7
+msgid "Openstack Dashboard: Public and Management"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch033_securing-neutron-services.xml:10
+msgid "Openstack Identity: Management"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch033_securing-neutron-services.xml:13
+msgid "Openstack Compute Node: Management and Guest"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch033_securing-neutron-services.xml:16
+msgid ""
+"Openstack Network Node: Management, Guest, and possibly Public depending "
+"upon neutron-plugin in use."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch033_securing-neutron-services.xml:19
+msgid ""
+"SDN Services Node: Management, Guest and possibly Public depending upon "
+"product used."
+msgstr ""
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: doc/src/docbkx/openstack-security/ch033_securing-neutron-services.xml:24
+#: doc/src/docbkx/openstack-security/ch033_securing-neutron-services.xml:27
+msgid ""
+"@@image: 'static/1aa-logical-neutron-flow.png'; "
+"md5=40513838896fc05cc1e562024ecc19b1"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch033_securing-neutron-services.xml:30
+msgid ""
+"In order to isolate sensitive data communication between the OpenStack "
+"Networking services and other OpenStack core services, we strongly recommend "
+"that these communication channels be configured to only allow communications "
+"over an isolated management network."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch033_securing-neutron-services.xml:32
+msgid "Openstack Networking Service Configuration"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch033_securing-neutron-services.xml:34
+msgid "Restrict Bind Address of the API server: neutron-server"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch033_securing-neutron-services.xml:35
+msgid ""
+"To restrict the interface or IP address on which the OpenStack Networking "
+"API service binds a network socket for incoming client connections, specify "
+"the bind_host and bind_port in the neutron.conf file as shown:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch033_securing-neutron-services.xml:44
+msgid "Restrict DB and RPC communication of the OpenStack Networking services:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch033_securing-neutron-services.xml:45
+msgid ""
+"Various components of the OpenStack Networking services use either the "
+"messaging queue or database connections to communicate with other components "
+"in OpenStack Networking."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch033_securing-neutron-services.xml:46
+msgid ""
+"It is recommended that you follow the guidelines provided in the Database "
+"Authentication and Access Control chapter in the Database section for all "
+"components that require direct DB connections."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch033_securing-neutron-services.xml:47
+msgid ""
+"It is recommended that you follow the guidelines provided in the Queue "
+"Authentication and Access Control chapter in the Messaging section for all "
+"components that require RPC communication."
+msgstr ""

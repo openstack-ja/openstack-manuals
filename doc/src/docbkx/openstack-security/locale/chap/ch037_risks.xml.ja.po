@@ -1,0 +1,68 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch037_risks.xml:3
+msgid "Message Queuing Architecture"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch037_risks.xml:4
+msgid ""
+"Inter-process communication within OpenStack is facilitated via message "
+"queueing services. Today, three messaging service backends are supported:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch037_risks.xml:6
+msgid "RabbitMQ"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch037_risks.xml:9
+msgid "Qpid"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch037_risks.xml:12
+msgid "ZeroMQ"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch037_risks.xml:15
+msgid ""
+"Both RabbitMQ and Qpid are Advanced Message Queuing Protocol (AMQP) "
+"frameworks which provide message queues for peer-to-peer communication. "
+"Queue implementations are typically deployed as centralized or decentralized "
+"pool of queue servers. ZeroMQ differs by communicating directly using TCP "
+"sockets between peers."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch037_risks.xml:16
+msgid ""
+"Message queues effectively facilitate command and control functions across "
+"OpenStack deployments. Once access to the queue is permitted no further "
+"authorization checks are performed. Services accessible via the queue do "
+"validate the contexts and tokens within the actual message payload. However, "
+"awareness of the token's expiration value should be noted as these tokens "
+"are potentially replayable and may provide authorization for other services "
+"within the infrastructure."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch037_risks.xml:17
+msgid ""
+"OpenStack does not support message-level confidence (i.e., message signing). "
+"Because of this, the message transport itself must be secured and "
+"authentication to the queue server must be performed. For HA configurations, "
+"queue to queue authentication and encryption should to be performed as well."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch037_risks.xml:18
+msgid ""
+"With ZeroMQ messaging, IPC sockets are used on individual machines. These "
+"sockets may be vulnerable to attack for local message injection and snooping "
+"unless secured by an operator."
+msgstr ""

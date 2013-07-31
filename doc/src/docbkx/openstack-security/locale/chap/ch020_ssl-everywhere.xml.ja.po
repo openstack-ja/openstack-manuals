@@ -1,0 +1,126 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch020_ssl-everywhere.xml:3
+msgid "SSL Proxies and HTTP Services"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch020_ssl-everywhere.xml:4
+msgid ""
+"OpenStack endpoints are HTTP services providing APIs to both end-users on "
+"public networks and to other OpenStack services within the same deployment "
+"operating over the management network. It is highly recommended these "
+"requests, both those internal and external, operate over SSL."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch020_ssl-everywhere.xml:5
+msgid ""
+"In order for API requests to be encrypted by SSL it's necessary to position "
+"the API services behind a proxy that will establish and terminate SSL "
+"sessions. The following table offers a non-exhaustive list of software "
+"services that can proxy SSL traffic for API requests:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch020_ssl-everywhere.xml:7
+msgid "Pound (http://www.apsis.ch/pound)"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch020_ssl-everywhere.xml:10
+msgid "Stud (https://github.coapm/bumptech/stud)"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch020_ssl-everywhere.xml:13
+msgid "nginx (http://nginx.org/)"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch020_ssl-everywhere.xml:16
+msgid "Apache httpd (http://www.apache.org/)"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch020_ssl-everywhere.xml:19
+msgid "Hardware appliance SSL acceleration proxies"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch020_ssl-everywhere.xml:22
+msgid ""
+"It is important to be mindful of the size of requests that will be processed "
+"by any chosen SSL proxy."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch020_ssl-everywhere.xml:24
+msgid "Examples"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch020_ssl-everywhere.xml:25
+msgid ""
+"Below we provide some sample configuration setting for enabling SSL in some "
+"of the most popular web servers/SSL terminators with recommended "
+"configurations. Note that we have SSL v3 enabled in some of these examples "
+"as this will be required in many deployments for client compatibility."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch020_ssl-everywhere.xml:27
+msgid "Pound - with AES-NI acceleration"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch020_ssl-everywhere.xml:80
+msgid "Stud"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch020_ssl-everywhere.xml:81
+msgid ""
+"This stud example enables SSL v3 for client compatibility.  The ciphers line "
+"can be tweaked based on your needs, however this is a reasonable starting "
+"place."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch020_ssl-everywhere.xml:119
+msgid "nginx"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch020_ssl-everywhere.xml:120
+msgid ""
+"This nginx example requires TLS v1.1 or v1.2 for maximum security. The "
+"ssl_ciphers line can be tweaked based on your needs, however this is a "
+"reasonable starting place."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch020_ssl-everywhere.xml:137
+msgid "Apache"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch020_ssl-everywhere.xml:159
+msgid ""
+"Compute API SSL endpoint in Apache2, which needs to be paired with a short "
+"WSGI script."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch020_ssl-everywhere.xml:180
+msgid "HTTP Strict Transport Security"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch020_ssl-everywhere.xml:181
+msgid ""
+"We recommend that all production deployments use HSTS. This header prevents "
+"browsers from making insecure connections after they have made a single "
+"secure one. If you have deployed your HTTP services on a public or an "
+"untrusted domain, HSTS is especially important. To enable HSTS, configure "
+"your web server to send a header like this with all requests:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch020_ssl-everywhere.xml:184
+msgid ""
+"Start with a short timeout of 1 day during testing, and raise it to one year "
+"after testing has shown that you haven't introduced problems for users. Note "
+"that once this header is set to a large timeout, it is (by design) very "
+"difficult to disable."
+msgstr ""

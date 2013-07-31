@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/bk_openstack-sec-guide.xml:7
+msgid "OpenStack Security Guide"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/bk_openstack-sec-guide.xml:15
+#: doc/src/docbkx/openstack-security/bk_openstack-sec-guide.xml:20
+msgid "OpenStack Foundation"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/bk_openstack-sec-guide.xml:19
+msgid "2013"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/bk_openstack-sec-guide.xml:22
+msgid "OpenStack"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/bk_openstack-sec-guide.xml:26
+msgid "Copyright details are filled in by the template."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/bk_openstack-sec-guide.xml:31
+msgid ""
+"This book provides best practices and conceptual information about securing "
+"an OpenStack cloud."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/bk_openstack-sec-guide.xml:37
+msgid "2013-07-02"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/bk_openstack-sec-guide.xml:41
+msgid "Initial creation..."
+msgstr ""

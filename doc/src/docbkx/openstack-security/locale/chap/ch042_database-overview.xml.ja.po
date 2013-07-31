@@ -1,0 +1,279 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:3
+msgid "Database Access Control"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:4
+msgid ""
+"Each of the core OpenStack services (Compute, Identity, Networking, Block "
+"Storage) store state and configuration information in databases. In this "
+"chapter, we discuss how databases are used currently in OpenStack. We also "
+"explore security concerns, and the security ramifications of database "
+"backend choices."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:6
+msgid "OpenStack Database Access Model"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:7
+msgid ""
+"All of the services within an OpenStack project access a single database. "
+"There are presently no reference policies for creating table or row based "
+"access restrictions to the database."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:8
+msgid ""
+"There are no general provisions for granular control of database operations "
+"in OpenStack. Access and privileges are granted simply based on whether a "
+"node has access to the database or not.  In this scenario, nodes with access "
+"to the database may have full privileges to DROP, INSERT, or UPDATE "
+"functions."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:10
+msgid "Granular Access Control"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:11
+msgid ""
+"By default, each of the OpenStack services and their processes access the "
+"database using a shared set of credentials. This makes auditing database "
+"operations and revoking access privileges from a service and its processes "
+"to the database particularly difficult."
+msgstr ""
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:13
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:16
+msgid ""
+"@@image: 'static/databaseusername.png'; md5=a6a5dadedbc1517069ca388c7ac5940a"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:21
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:96
+msgid "Nova Conductor"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:22
+msgid ""
+"The compute nodes are the least trusted of the services in OpenStack because "
+"they host tenant instances. The nova-conductor service has been introduced "
+"to serve as a database proxy, acting as an intermediary between the compute "
+"nodes and the database. We discuss its ramifications later in this chapter."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:23
+msgid "We strongly recommend:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:25
+msgid "All database communications be isolated to a management network"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:28
+msgid "Securing communications using SSL"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:31
+msgid ""
+"Creating unique database user accounts per OpenStack service endpoint "
+"(illustrated below)"
+msgstr ""
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:37
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:40
+msgid ""
+"@@image: 'static/databaseusernamessl.png'; "
+"md5=9c43242c47eb159b6f61ac41f3d8bced"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:47
+msgid "Database Authentication and Access Control"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:48
+msgid ""
+"Given the risks around access to the database, we strongly recommend that "
+"unique database user accounts be created per node needing access to the "
+"database. Doing this facilitates better analysis and auditing for ensuring "
+"compliance or in the event of a compromise of a node allows you to isolate "
+"the compromised host by removing access for that node to the database upon "
+"detection. When creating these per service endpoint database user accounts, "
+"care should be taken to ensure that they are configured to require SSL.  "
+"Alternatively, for increased security it is recommended that the database "
+"accounts be configured using X.509 certificate authentication in addition to "
+"usernames and passwords."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:50
+msgid "Privileges"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:51
+msgid ""
+"A separate database administrator (DBA) account should be created and "
+"protected that has full privileges to create/drop databases, create user "
+"accounts, and update user privileges. This simple means of separation of "
+"responsibility helps prevent accidental misconfiguration, lowers risk and "
+"lowers scope of compromise."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:52
+msgid ""
+"The database user accounts created for the OpenStack services and for each "
+"node should have privileges limited to just the database relevant to the "
+"service where the node is a member."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:56
+msgid "Require User Accounts to Require SSL Transport"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:58
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:75
+msgid "Configuration Example #1: (MySQL)"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:63
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:82
+msgid "Configuration Example #2: (PostgreSQL)"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:64
+msgid "In file pg_hba.conf:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:67
+msgid ""
+"Note this command only adds the ability to communicate over SSL and is non-"
+"exclusive. Other access methods that may allow unencrypted transport should "
+"be disabled so that SSL is the sole access method."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:68
+msgid ""
+"The 'md5' parameter defines the authentication method as a hashed password. "
+"We provide a secure authentication example in the section below."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:72
+msgid "Authentication with X.509 Certificates"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:73
+msgid ""
+"Security may be enhanced by requiring X.509 client certificates for "
+"authentication.  Authenticating to the database in this manner provides "
+"greater identity assurance of the client making the connection to the "
+"database and ensures that the communications are encrypted."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:88
+msgid "OpenStack Service Database Configuration"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:89
+msgid ""
+"If your database server is configured to require X.509 certificates for "
+"authentication you will need to specify the appropriate SQLAlchemy query "
+"parameters for the database backend. These parameters specify the "
+"certificate, private key, and certificate authority information for use with "
+"the initial connection string."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:90
+msgid ""
+"Example of an <literal>:sql_connection</literal> string for X.509 "
+"certificate authentication to MySQL:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:97
+msgid ""
+"OpenStack Compute offers a sub-service called nova-conductor which proxies "
+"database connections, with the primary purpose of having the nova compute "
+"nodes interfacing with nova-conductor to meet data persistence needs as "
+"opposed to directly communicating with the database."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:98
+msgid ""
+"Nova-conductor receives requests over RPC and performs actions on behalf of "
+"the calling service without granting granular access to the database, its "
+"tables, or data within. Nova-conductor essentially abstracts direct database "
+"access away from Nova compute nodes."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:99
+msgid ""
+"This abstraction offers the advantage of restricting services to executing "
+"methods with parameters, similar to stored procedures, preventing a large "
+"number of systems from directly accessing or modifying database data. This "
+"is accomplished without having these procedures stored or executed within "
+"the context or scope of the database itself, a frequent criticism of typical "
+"stored procedures."
+msgstr ""
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:101
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:104
+msgid ""
+"@@image: 'static/novaconductor.png'; md5=dbc1ba139bd1af333f0415bb48704843"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:107
+msgid ""
+"Unfortunately, this solution complicates the task of more fine-grained "
+"access control and the ability to audit data access. Because the nova-"
+"conductor service receives requests over RPC, it highlights the importance "
+"of improving the security of messaging. Any node with access to the message "
+"queue may execute these methods provided by the nova-conductor and "
+"effectively modifying the database."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:108
+msgid ""
+"Finally, it should be noted that as of the Grizzly release, gaps exist where "
+"nova-conductor is not used throughout OpenStack Compute. Depending on one's "
+"configuration, the use of nova-conductor may not allow deployers to avoid "
+"the necessity of providing database GRANTs to individual compute host "
+"systems."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:109
+msgid ""
+"Note, as nova-conductor only applies to OpenStack Compute, direct database "
+"access from compute hosts may still be necessary for the operation of other "
+"OpenStack components such as Metering (Ceilometer), Networking, and Block "
+"Storage."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:110
+msgid ""
+"Implementors should weigh the benefits and risks of both configurations "
+"before enabling or disabling the nova-conductor service. We are not yet "
+"prepared to recommend the use of nova-conductor in the Grizzly release. "
+"However, we do believe that this recommendation will change as additional "
+"features are added into OpenStack."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch042_database-overview.xml:111
+msgid ""
+"To disable the nova-conductor, place the following into your nova.conf file:"
+msgstr ""

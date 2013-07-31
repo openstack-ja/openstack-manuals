@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch006_introduction-to-case-studies.xml:3
+msgid "Introduction to Case Studies"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch006_introduction-to-case-studies.xml:4
+msgid ""
+"Throughout this guide we will refer to two running case studies. We "
+"introduce them here and will return to them at the end of each chapter."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch006_introduction-to-case-studies.xml:6
+msgid "Case Study : Alice the private cloud builder"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch006_introduction-to-case-studies.xml:7
+msgid ""
+"Alice is deploying a private cloud for use by a government department in the "
+"US. The cloud must comply with relevant standards such as FedRAMP. The "
+"security paperwork requirements for this cloud are very high. It will have "
+"no direct access to the internet, its API endpoints, compute instances and "
+"other resources will be exposed only to systems within the departments "
+"network which is entirely air-gapped from all other networks. The cloud can "
+"access other network services on the Organization's Intranet e.g. the "
+"authentication and logging services."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch006_introduction-to-case-studies.xml:10
+msgid "Case Study : Bob the public cloud provider"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch006_introduction-to-case-studies.xml:11
+msgid ""
+"Bob is a lead architect for a company deploying a large greenfield public "
+"cloud. This cloud will provide IaaS for the masses, allowing any consumer "
+"with a valid credit-card access to utility computing and storage but the "
+"primary focus is enterprise customers. Data privacy concerns are a big "
+"priority for Bob as they are seen as a major barrier to large-scale adoption "
+"of the cloud by organizations."
+msgstr ""

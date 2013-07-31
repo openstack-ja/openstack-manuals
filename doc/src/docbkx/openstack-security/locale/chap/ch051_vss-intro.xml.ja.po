@@ -1,0 +1,894 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-07-31 10:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:23
+#: doc/src/docbkx/openstack-security/ch012_configuration-management.xml:27
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:281
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:293
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:302
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:304
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:306
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:307
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:312
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:313
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:314
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:316
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:317
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:318
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:322
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:323
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:324
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:325
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:326
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:327
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:328
+msgid " "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:3
+msgid "Hypervisor Selection"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:4
+msgid ""
+"Virtualization provides flexibility and other key benefits that enable cloud "
+"building. However, a virtualization stack also needs to be secured "
+"appropriately to reduce the risks associated with hypervisor breakout "
+"attacks. That is, while a virtualization stack can provide isolation between "
+"instances, or guest virtual machines, there are situations where that "
+"isolation can be less than perfect. Making intelligent selections for "
+"virtualization stack as well as following the best practices outlined in "
+"this chapter can be included in a layered approach to cloud security. "
+"Finally, securing your virtualization stack is critical in order to deliver "
+"on the promise of multitennancy, either between customers in a public cloud, "
+"between business units in a private cloud, or some mixture of the two in a "
+"hybrid cloud."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:5
+msgid ""
+"In this chapter, we discuss the hypervisor selection process.  In the "
+"chapters that follow, we provide the foundational information needed for "
+"securing a virtualization stack."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:7
+msgid "Hypervisors in OpenStack"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:8
+msgid ""
+"Whether OpenStack is deployed within private data centers or as a public "
+"cloud service, the underlying virtualization technology provides enterprise-"
+"level capabilities in the realms of scalability, resource efficiency, and "
+"uptime. While such high-level benefits are generally available across many "
+"OpenStack-supported hypervisor technologies, there are significant "
+"differences in each hypervisor's security architecture and features, "
+"particularly when considering the security threat vectors which are unique "
+"to elastic OpenStack environments. As applications consolidate into single "
+"Infrastructure as a Service (IaaS) platforms, instance isolation at the "
+"hypervisor level becomes paramount. The requirement for secure isolation "
+"holds true across commercial, government, and military communities."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:9
+msgid ""
+"Within the framework of OpenStack you can choose from any number of "
+"hypervisor platforms and corresponding OpenStack plugins to optimize your "
+"cloud environment. In the context of the OpenStack Security guide, we will "
+"be highlighting hypervisor selection considerations as they pertains to "
+"feature sets that are critical to security. However, these considerations "
+"are not meant to be an exhaustive investigation into the pros and cons of "
+"particular hypervisors. NIST provides additional guidance in Special "
+"Publication 800-125, \"<emphasis>Guide to Security for Full Virtualization "
+"Technologies</emphasis>\"."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:12
+msgid "Selection Criteria"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:13
+msgid ""
+"As part of your hypervisor selection process, you will need to consider a "
+"number of important factors to help increase your security posture. "
+"Specifically, we will be looking into the following areas:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:15
+msgid "Team Expertise"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:18
+msgid "Product or Project maturity"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:21
+msgid "Certifications, Attestations"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:24
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:266
+msgid "Additional Security Features"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:27
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:259
+msgid "Hypervisor vs. Baremetal"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:30
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:221
+msgid "Hardware Concerns"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:33
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:67
+msgid "Common Criteria"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:36
+msgid ""
+"Additionally, the following security-related criteria are highly encouraged "
+"to be evaluated when selecting a hypervisor for OpenStack deployments:"
+"<placeholder-1/><bridgehead>Team Expertise</bridgehead> Most likely, the "
+"most important aspect in hypervisor selection is the expertise of your staff "
+"in managing and maintaining a particular hypervisor platform. The more "
+"familiar your team is with a given product, its configuration, and its "
+"eccentricities, the less likely will there be configuration mistakes. "
+"Additionally, having staff expertise spread across an organization on a "
+"given hypervisor will increase availability of your systems, allow for "
+"developing a segregation of duties, and mitigate problems in the event that "
+"a team member is unavailable."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:37
+msgid ""
+"Has the hypervisor undergone Common Criteria certification? If so, to what "
+"levels?"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:40
+msgid "Is the underlying cryptography certified by a third-party?"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:44
+msgid "Product or Project Maturity"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:45
+msgid ""
+"The maturity of a given hypervisor product or project is critical to your "
+"security posture as well. Product maturity will have a number of effects "
+"once you have deployed your cloud, in the context of this security guide we "
+"are interested in the following:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:47
+msgid "Availability of expertise"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:50
+msgid "Active developer and user communities"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:53
+msgid "Timeliness and Availability of updates"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:56
+msgid "Incidence response"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:59
+msgid ""
+"One of the biggest indicators of a hypervisor's maturity is the size and "
+"vibrancy of the community that surrounds it. As this concerns security, the "
+"quality of the community will affect the availability of expertise should "
+"you need additional cloud operators. It is also a sign of how widely "
+"deployed the hypervisor is, in turn leading to the battle readiness of any "
+"reference architectures and best practices."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:60
+msgid ""
+"Further, the quality of community, as it surrounds an open source hypervisor "
+"like KVM or Xen, will have a direct impact on the timeliness of bug fixes "
+"and security updates. When investigating both commercial and open source "
+"hypervisors, you will want to look into their release and support cycles as "
+"well as the time delta between the announcement of a bug or security issue "
+"and a patch or response. Lastly, the supported capabilities of OpenStack "
+"compute vary depending on the hypervisor chosen. Refer to the OpenStack "
+"Hypervisor Support Matrix (https://wiki.openstack.org/wiki/"
+"HypervisorSupportMatrix) for OpenStack compute feature support by hypervisor."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:63
+msgid "Certifications and Attestations"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:64
+msgid ""
+"One additional consideration when selecting a hypervisor is the availability "
+"of various formal certifications and attestations. While they may not be "
+"requirements for your specific organization, these certifications and "
+"attestations speak to the maturity, production readiness, and thoroughness "
+"of the testing a particular hypervisor platform has been subjected to. "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:68
+msgid ""
+"Common Criteria is an internationally standardized software evaluation "
+"process, used by governments and commercial companies to validate software "
+"technologies perform as advertised. In the government sector, NSTISSP No. 11 "
+"mandates that U.S. Government agencies only procure software which has been "
+"Common Criteria certified, a policy which has been in place since July 2002. "
+"It should be specifically noted that OpenStack has not undergone Common "
+"Criteria certification, however many of the available hypervisors have. "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:69
+msgid ""
+"In addition to validating a technologies capabilities, the Common Criteria "
+"process evaluates <emphasis>how</emphasis> technologies are developed."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:71
+msgid "How is source code management performed?"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:74
+msgid "How are users granted access to build systems?"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:77
+msgid "Is the technology cryptographically signed before distribution?"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:80
+msgid ""
+"The KVM hypervisor has been Common Criteria certified through the U.S. "
+"Government and commercial distributions, which have been validated to "
+"separate the runtime environment of virtual machines from each other, "
+"providing foundational technology to enforce instance isolation. In addition "
+"to virtual machine isolation, KVM has been Common Criteria certified to"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:82
+msgid ""
+"\"<emphasis>provide system-inherent separation mechanisms to the resources "
+"of virtual machines. This separation ensures that large software component "
+"used for virtualizing and simulating devices executing for each virtual "
+"machine cannot interfere with each other. Using the SELinux multi-category "
+"mechanism, the virtualization and simulation software instances are "
+"isolated. The virtual machine management framework configures SELinux multi-"
+"category settings transparently to the administrator</emphasis>\""
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:84
+msgid ""
+"While many hypervisor vendors, such as Red Hat, Microsoft, and VMWare have "
+"achieved Common Criteria Certification their underlying certified feature "
+"set differs. It is recommended to evaluate vendor claims to ensure they "
+"minimally satisfy the following requirements:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:91
+msgid "Identification and Authentication"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:92
+msgid ""
+"Identification and authentication using pluggable authentication modules "
+"(PAM) based upon user passwords. The quality of the passwords used can be "
+"enforced through configuration options."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:95
+msgid "Audit"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:96
+msgid "Audit records can be transferred to a remote audit daemon."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:96
+msgid ""
+"The system administrator can define a rule base to restrict auditing to the "
+"events they are interested in. This includes the ability to restrict "
+"auditing to specific events, specific users, specific objects or a "
+"combination of all of this. "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:96
+msgid ""
+"The system provides the capability to audit a large number of events "
+"including individual system calls as well as events generated by trusted "
+"processes. Audit data is collected in regular files in ASCII format. The "
+"system provides a program for the purpose of searching the audit records."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:99
+msgid "Discretionary Access Control"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:100
+msgid ""
+"Discretionary Access Control (DAC) restricts access to file system objects "
+"based on Access Control Lists (ACLs) that include the standard UNIX "
+"permissions for user, group and others. Access control mechanisms also "
+"protect IPC objects from unauthorized access."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:100
+msgid ""
+"The system includes the ext4 file system, which supports POSIX ACLs. This "
+"allows defining access rights to files within this type of file system down "
+"to the granularity of a single user."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:103
+msgid "Mandatory Access Control"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:104
+msgid ""
+"Mandatory Access Control (MAC) restricts access to objects based on labels "
+"assigned to subjects and objects. Sensitivity labels are automatically "
+"attached to processes and objects. The access control policy enforced using "
+"these labels is derived from the BellLaPadula access control model."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:104
+msgid ""
+"SELinux categories are attached to virtual machines and its resources. The "
+"access control policy enforced using these categories grant virtual machines "
+"access to resources if the category of the virtual machine is identical to "
+"the category of the accessed resource."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:104
+msgid ""
+"The TOE implements non-hierarchical categories to control access to virtual "
+"machines."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:107
+msgid "Role-Based Access Control"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:108
+msgid ""
+"Role-based access control (RBAC) allows separation of roles to eliminate the "
+"need for an all-powerful system administrator."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:111
+msgid "Object Reuse"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:112
+msgid ""
+"File system objects as well as memory and IPC objects will be cleared before "
+"they can be reused by a process belonging to a different user."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:115
+msgid "Security Management"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:116
+msgid ""
+"The management of the security critical parameters of the system is "
+"performed by administrative users. A set of commands that require root "
+"privileges (or specific roles when RBAC is used) are used for system "
+"management. Security parameters are stored in specific files that are "
+"protected by the access control mechanisms of the system against "
+"unauthorized access by users that are not administrative users."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:119
+msgid "Secure Communication"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:120
+msgid ""
+"The system supports the definition of trusted channels using SSH. Password "
+"based authentication is supported. Only a restricted number of cipher suites "
+"are supported for those protocols in the evaluated configuration."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:123
+msgid "Storage Encryption"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:124
+msgid ""
+"The system supports encrypted block devices to provide storage "
+"confidentiality via dm_crypt."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:127
+msgid "TSF Protection"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:128
+msgid ""
+"In addition, mechanisms for protection against stack overflow attacks are "
+"provided."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:128
+msgid ""
+"Non-kernel TSF software and data are protected by DAC and process isolation "
+" mechanisms. In the evaluated configuration, the reserved user ID root owns "
+"the directories and files that define the TSF configuration. In general, "
+"files and directories containing internal TSF data (e.g., configuration "
+"files, batch job queues) are also protected from reading by DAC permissions."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:128
+msgid ""
+"The system and the hardware and firmware components are required to be "
+"physically protected from unauthorized access. The system kernel mediates "
+"all access to the hardware mechanisms themselves, other than program visible "
+"CPU instruction functions."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:128
+msgid ""
+"While in operation, the kernel software and data are protected by the "
+"hardware memory protection mechanisms. The memory and process management "
+"components of the kernel ensure a user process cannot access kernel storage "
+"or storage belonging to other processes."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:135
+msgid "Cryptography Standards"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:136
+msgid ""
+"Several cryptography algorithms are available within OpenStack for "
+"identification and authorization, data transfer and protection of data at "
+"rest. When selecting a hypervisor, the following are recommended algorithms "
+"and implementation standards to ensure the virtualization layer supports:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:146
+msgid "Algorithm"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:147
+msgid "Key Length"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:148
+msgid "Intended Purpose"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:149
+msgid "Security Function"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:150
+msgid "implementation Standard"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:153
+msgid "AES"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:154
+msgid "128 bits,192 bits,"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:154
+msgid "256 bits "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:155
+msgid "Encryption / Decryption "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:156
+msgid "Protected Data Transfer,Protection for Data at Rest "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:157
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:164
+msgid "RFC 4253"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:160
+msgid "TDES"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:161
+msgid "168 bits"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:162
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:183
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:190
+msgid "Encryption /Decryption "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:163
+msgid "Protected Data Transfer"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:167
+msgid "RSA"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:168
+msgid "1024 bits,2048 bits,"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:168
+msgid "3072 bits "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:169
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:176
+msgid "Authentication,Key Exchange "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:170
+msgid "identification andAuthentication, ProtectedData Transfer"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:171
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:178
+msgid "U.S. NIST FIPS PUB 186-3"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:174
+msgid "DSA"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:175
+msgid "L=1024,N=160 bits "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:177
+msgid "Identification andAuthentication, ProtectedData Transfer "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:181
+msgid "Serpent"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:182
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:189
+msgid "128, 196, or256 bit "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:184
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:191
+msgid "Protection of Data at Rest"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:185
+msgid "http://www.cl.cam.ac.uk/~rj a14/Papers/serpent.pdf"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:188
+msgid "Twofish"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:192
+msgid "http://www.schneier.com/paper-twofish-paper.html"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:195
+msgid "SHA-1"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:196
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:203
+msgid "-"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:197
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:204
+msgid "MessageDigest "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:198
+msgid "Protection of Data at Rest,Protected Data Transfer "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:199
+msgid " U.S. NIST FIPS 180-3"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:202
+msgid "384-, 512 bit)"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:202
+msgid "SHA-2(224-, 256-,"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:205
+msgid "Protection for Data at Rest,Identification and Authentication "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:206
+msgid "U.S. NIST FIPS 180-3 "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:212
+msgid "FIPS 140-2"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:213
+msgid ""
+"In the United States the National Institute of Science and Technology (NIST) "
+"certifies cryptographic algorithms through a process known the Cryptographic "
+"Module Validation Program. NIST certifies algorithms for conformance against "
+"Federal Information Processing Standard 140-2 (FIPS 140-2), which ensures:"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:215
+msgid ""
+"Products validated as conforming to FIPS 140-2 are accepted by the Federal "
+"agencies of both countries [United States and Canada] for the protection of "
+"sensitive information (United States) or Designated Information (Canada). "
+"The goal of the CMVP is to promote the use of validated cryptographic "
+"modules and provide Federal agencies with a security metric to use in "
+"procuring equipment containing validated cryptographic modules."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:217
+msgid ""
+"When evaluating base hypervisor technologies, consider if the hypervisor has "
+"been certified against FIPS 140-2. Not only is conformance against FIPS "
+"140-2 mandated per U.S. Government policy, formal certification indicates "
+"that a given implementation of a cryptographic algorithm has been reviewed "
+"for conformance against module specification, cryptographic module ports and "
+"interfaces; roles, services, and authentication; finite state model; "
+"physical security; operational environment; cryptographic key management; "
+"electromagnetic interference/electromagnetic compatibility (EMI/EMC); self-"
+"tests; design assurance; and mitigation of other attacks."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:222
+msgid ""
+"Further, when evaluating a hypervisor platform the supportability of the "
+"hardware the hypervisor will run on should be considered. Additionally, "
+"consider the additional features available in the hardware and how those "
+"features are supported by the hypervisor you chose as part of the OpenStack "
+"deployment. To that end, hypervisors will each have their own hardware "
+"compatibility lists (HCLs). When selecting compatible hardware it is "
+"important to know in advance which hardware-based virtualization "
+"technologies are important from a security perspective."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:230
+msgid "Description"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:231
+msgid "Technology"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:232
+msgid "Explanation"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:235
+msgid "I/O MMU"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:236
+msgid "VT-d / AMD-Vi"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:237
+msgid "Required for protecting PCI-passthrough"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:240
+msgid "Trusted Execution Technology"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:241
+msgid "TXT / SEM"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:242
+msgid "Required for dynamic attestation services"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:245
+msgid ""
+"<anchor xml:id=\"PCI-SIG_I.2FO_virtualization_.28IOV.29\"/>PCI-SIG I/O "
+"virtualization"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:246
+msgid "SR-IOV, MR-IOV, ATS"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:247
+msgid "Required to allow secure sharing of PCI Express devices"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:250
+msgid "Network virtualization"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:251
+msgid "VT-c"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:252
+msgid "Improves performance of network I/O on hypervisors"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:260
+msgid ""
+"To wrap up our discussion around hypervisor selection, it is important to "
+"call out the differences between using LXC (Linux Containers) or Baremetal "
+"systems vs using a hypervisor like KVM. Specifically, the focus of this "
+"security guide will be largely based on having a hypervisor and "
+"virtualization platform. However, should your implementation require the use "
+"of a baremetal or LXC environment, you will want to pay attention to the "
+"particular differences in regard to deployment of that environment. In "
+"particular, you will need to provide your end users with assurances that the "
+"node has been properly sanitized of their data prior to re-provisioning. "
+"Additionally, prior to reusing a node, you will need to provide assurances "
+"that the hardware has not been tampered or otherwise compromised."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:261
+msgid ""
+"It should be noted that while OpenStack has a baremetal project, a "
+"discussion of the particular security implications of running baremetal is "
+"beyond the scope of this book."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:262
+msgid ""
+"Finally, due to the time constraints around a book sprint, the team chose to "
+"use KVM as the hypervisor in our example implementations and architectures."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:263
+msgid ""
+"Note: There is an OpenStack Security Note pertaining to the use of LXC in "
+"Nova: https://bugs.launchpad.net/ossn/+bug/1098582"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:267
+msgid ""
+"Another thing to look into when selecting a hypervisor platform is the "
+"availability of specific security features. In particular, we are referring "
+"to features like Xen Server's XSM or Xen Security Modules, sVirt, TXT, and "
+"AppArmor. The presence of these features will help increase your security "
+"profile as well as provide a good foundation."
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:268
+msgid ""
+"The following table calls out these features by common hypervisor platforms. "
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:282
+msgid "KSM"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:283
+msgid "XSM"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:284
+msgid "sVirt"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:285
+msgid "TXT"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:286
+msgid "AppArmor"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:287
+msgid "cGroups"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:288
+msgid "MAC Policy"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:291
+msgid "KVM"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:292
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:294
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:295
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:303
+msgid "X"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:296
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:297
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:298
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:308
+msgid "x"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:301
+msgid "Xen"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:305
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:315
+msgid " X"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:311
+msgid "ESXi"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:321
+msgid "Hyper-V"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:333
+msgid "KSM: Kernel Samepage Merging - http://www.linux-kvm.org/page/KSM"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:334
+msgid ""
+"XSM: Xen Security Modules - http://wiki.xen.org/wiki/Xen_Security_Modules_:"
+"_XSM-FLASK"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:335
+msgid ""
+"xVirt: Mandatory Access Control for Linux-based virtualization - http://"
+"selinuxproject.org/page/SVirt"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:336
+msgid "TXT: Intel Trusted Execution Technology - http://www.intel.com/txt"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:337
+msgid ""
+"AppArmor: Linux security module implementing MAC - http://wiki.apparmor.net/"
+"index.php/Main_Page"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:338
+msgid ""
+"cGroups: Linux kernel feature to control resource usage - https://www.kernel."
+"org/doc/Documentation/cgroups/cgroups.txt"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:339
+msgid ""
+"MAC Policy: Mandatory Access Control; may be implemented with SELinux or "
+"other operating systems"
+msgstr ""
+
+#: doc/src/docbkx/openstack-security/ch051_vss-intro.xml:340
+msgid ""
+"* Features in this table may not be applicable to all hypervisors or "
+"directly mappable between hypervisors."
+msgstr ""
