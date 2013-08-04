@@ -20,4 +20,12 @@ split:
 
 update-pot:
 	cd $(TOPDIR) && ./tools/generatepot openstack-security
-	msgcat -F -o $(POTFILE) $(POTFILE)
+	msgcat -F -o $(TMPFILE) $(POTFILE)
+	mv $(TMPFILE) $(POTFILE)
+
+stats:
+	@for f in chap/*.ja.po; do \
+	  n=`basename $$f .ja.po`; \
+	  echo -n "$$n: "; \
+	  LANG=C msgfmt -o /dev/null --statistics $$f; \
+	done 2>&1 | $(TOOLDIR)/format-po-stats.py
