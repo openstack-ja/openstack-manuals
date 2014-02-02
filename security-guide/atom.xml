@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
+   <title>OpenStack セキュリティガイド havana revision history</title>
+   <link href="http://docs.openstack.org/security-guide/atom.xml" rel="self"/>
+   <link href="http://docs.openstack.org/security-guide/content//index.html"/>
+   <id>os-security-guide</id>
+   <updated>2014-02-03T04:36:34+09:00</updated>
+   <entry>
+      <title>2013-12-02</title>
+      <link href="http://docs.openstack.org/security-guide/content//index.html" type="text/html"/>
+      <id>os-security-guide-2013-12-02</id>
+      <updated>2013-12-02</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" type="disc">
+                  <li class="listitem">
+                     <p>Chapter on Object Storage added.</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2013-10-17</title>
+      <link href="http://docs.openstack.org/security-guide/content//index.html" type="text/html"/>
+      <id>os-security-guide-2013-10-17</id>
+      <updated>2013-10-17</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" type="disc">
+                  <li class="listitem">
+                     <p>Havana リリース。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2013-07-02</title>
+      <link href="http://docs.openstack.org/security-guide/content//index.html" type="text/html"/>
+      <id>os-security-guide-2013-07-02</id>
+      <updated>2013-07-02</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" type="disc">
+                  <li class="listitem">
+                     <p>Initial creation...</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+</feed>
