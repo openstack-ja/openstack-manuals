@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
+   <title>OpenStack インストールガイド Ubuntu 12.04 (LTS) 版 havana revision history</title>
+   <link href="http://docs.openstack.org/local/install-guide/install/apt/atom.xml" rel="self"/>
+   <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html"/>
+   <id>openstack-install-manual-grizzly</id>
+   <updated>2014-02-03T07:04:14+09:00</updated>
+   <entry>
+      <title>2013-10-25</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2013-10-25</id>
+      <updated>2013-10-25</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>Debian の初期サポートの追加。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2013-10-17</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2013-10-17</id>
+      <updated>2013-10-17</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>Havana リリース。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2013-10-16</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2013-10-16</id>
+      <updated>2013-10-16</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>SUSE Linux Enterprise のサポートの追加。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2013-10-08</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2013-10-08</id>
+      <updated>2013-10-08</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>Havana 向け再構成の完了。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2013-09-09</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2013-09-09</id>
+      <updated>2013-09-09</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>openSUSE 版の作成。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2013-08-01</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2013-08-01</id>
+      <updated>2013-08-01</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>Object Storage 検証手順の修正。バグ <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/1207347" target="_top">1207347</a> の修正。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2013-07-25</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2013-07-25</id>
+      <updated>2013-07-25</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>cinder ユーザーの作成と service プロジェクトへの追加。バグ <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/1205057" target="_top">1205057</a> の修正。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2013-05-08</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2013-05-08</id>
+      <updated>2013-05-08</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>一貫性のために文書名の更新。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2013-05-02</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2013-05-02</id>
+      <updated>2013-05-02</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>表紙の更新と付録の小さなミスの修正。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2013-04-30</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2013-04-30</id>
+      <updated>2013-04-30</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>Grizzly リリース。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2013-04-18</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2013-04-18</id>
+      <updated>2013-04-18</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>Object Storage のインストールの更新とクリーンアップ。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2013-04-08</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2013-04-08</id>
+      <updated>2013-04-08</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>Ubuntu と Debian の Grizzly パッケージの取得に関する注意事項を追加。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2013-04-03</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2013-04-03</id>
+      <updated>2013-04-03</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>Grizzly リリース用の RHEL/CentOS/Fedora 情報の更新。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2013-03-26</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2013-03-26</id>
+      <updated>2013-03-26</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>Grizzly リリース向けに Dashboard (Horizon) 情報の更新。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2013-02-12</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2013-02-12</id>
+      <updated>2013-02-12</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>Compute と関連サービス (OpenStack Object Storage (Swift)、OpenStack Networking (Quantum) 以外) の Essex から Folsom へのアップグレードに関する章の追加。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2013-01-16</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2013-01-16</id>
+      <updated>2013-01-16</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>/common/ ディレクトリの図に関するファイルコピー問題の修正。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2012-11-09</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2012-11-09</id>
+      <updated>2012-11-09</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>このドキュメントの Folsom リリース。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2012-10-10</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2012-10-10</id>
+      <updated>2012-10-10</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>ドキュメントバグの修正: <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/1054459" target="_top">1054459</a>
+                        <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/1064745" target="_top">1064745</a>
+                     </p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2012-09-26</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2012-09-26</id>
+      <updated>2012-09-26</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>オールインワンインストールのセクションの追加。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2012-07-23</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2012-07-23</id>
+      <updated>2012-07-23</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>nova-volumes のインストールと設定に関する詳細の追加。</p>
+                  </li>
+                  <li class="listitem">
+                     <p>ドキュメントバグの修正: <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/978510" target="_top">978510</a>
+                        <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/1027230" target="_top">1027230</a>
+                     </p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2012-07-17</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2012-07-17</id>
+      <updated>2012-07-17</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>一意な名前の PDF ファイルが出力されるよう、生成プロセスの更新。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2012-07-13</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2012-07-13</id>
+      <updated>2012-07-13</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>ドキュメントバグの修正: <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/1025840" target="_top">1025840</a>
+                        <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/1025847" target="_top">1025847</a>
+                     </p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2012-06-19</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2012-06-19</id>
+      <updated>2012-06-19</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>PDF リンクの修正。</p>
+                  </li>
+                  <li class="listitem">
+                     <p>ドキュメントバグの修正: <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/967778" target="_top">967778</a>
+                        <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/984959" target="_top">984959</a>, <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/1002294" target="_top">1002294</a>, <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/1010163" target="_top">1010163</a>.</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2012-05-31</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2012-05-31</id>
+      <updated>2012-05-31</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>より多くの Linux ディストリビューションを含めるためにインストールガイドの改版。</p>
+                  </li>
+                  <li class="listitem">
+                     <p>ドキュメントバグの修正: <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/996988" target="_top">996988</a>, <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/998116" target="_top">998116</a>, <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/999005" target="_top">999005</a>.</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2012-05-03</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2012-05-03</id>
+      <updated>2012-05-03</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>
+                        <code class="filename">glance-api-paste.ini</code> と <code class="filename">glance-registry-paste.ini</code> のサンプルと説明に関する問題の修正。</p>
+                  </li>
+                  <li class="listitem">
+                     <p>"DRAFT" 表記の削除。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2012-05-02</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2012-05-02</id>
+      <updated>2012-05-02</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>Essex リリース。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2012-05-01</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2012-05-01</id>
+      <updated>2012-05-01</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>Object Storage と Identity (Keystone) の設定の更新。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2012-04-25</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2012-04-25</id>
+      <updated>2012-04-25</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>EC2 service-create コマンドの service_id コピーアンドペーストのエラーの変更。</p>
+                     <p>Object Storage インストールの検証手順の追加</p>
+                     <p>
+                        <code class="filename">proxy-server.conf</code> ファイルが tempauth ではなく keystone を参照するよう修正。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2012-04-23</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2012-04-23</id>
+      <updated>2012-04-23</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>マルチノード Object Storage サービスのインストールと設定の追加。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2012-04-17</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2012-04-17</id>
+      <updated>2012-04-17</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>ドキュメントバグの修正: <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/983417" target="_top">983417</a>, <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/984106" target="_top">984106</a>, <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/984034" target="_top">984034</a>
+                     </p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2012-04-13</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2012-04-13</id>
+      <updated>2012-04-13</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>ドキュメントバグの修正: <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/977905" target="_top">977905</a>, <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/980882" target="_top">980882</a>, <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/977823" target="_top">977823</a>, Glance データベース準備手順の追加</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2012-04-10</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2012-04-10</id>
+      <updated>2012-04-10</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>ドキュメントバグの修正: <a class="link" href="https://bugs.launchpad.net/openstack-manuals/+bug/977831" target="_top">977831</a>
+                     </p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2012-03-23</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2012-03-23</id>
+      <updated>2012-03-23</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>Xen ハイパーバイザー用の更新。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2012-03-09</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2012-03-09</id>
+      <updated>2012-03-09</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>Essex リリース用の更新。新しい Glance 設定ファイル、新しい Keystone 設定を含む。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2012-01-24</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2012-01-24</id>
+      <updated>2012-01-24</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>Essex 用の初期ドラフト。</p>
+                     <div class="itemizedlist">
+                        <ul class="itemizedlist" type="circle">
+                           <li class="listitem">
+                              <p>Ubuntu 12.04 リポジトリの使用の仮定。</p>
+                           </li>
+                        </ul>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+   <entry>
+      <title>2011-01-24</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2011-01-24</id>
+      <updated>2011-01-24</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>Diablo 用の初期ドラフト。</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
+</feed>
