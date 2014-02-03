@@ -1,5 +1,5 @@
 fil = new Array();
-fil["0"]= "ch055_security-services-for-instances.html@@@第43章 Security Services for Instances - OpenStack セキュリティガイド  - havana@@@null";
+fil["0"]= "ch055_security-services-for-instances.html@@@第43章 インスタンスのセキュリティサービス - OpenStack セキュリティガイド  - havana@@@null";
 fil["1"]= "ch021_paste-and-middleware.html@@@第16章 APIエンドポイント構成に関する推奨事項 - OpenStack セキュリティガイド  - havana@@@null";
 fil["2"]= "ch005_security-domains.html@@@第4章 セキュリティ境界と脅威 - OpenStack セキュリティガイド  - havana@@@null";
 fil["3"]= "ch024_authentication.html@@@第18章 Identity - OpenStack セキュリティガイド  - havana@@@null";
@@ -24,7 +24,7 @@ fil["21"]= "ch009_case-studies.html@@@第7章 Case Studies: System Documentation
 fil["22"]= "ch048_key-management.html@@@第38章 Key Management - OpenStack セキュリティガイド  - havana@@@null";
 fil["23"]= "openstack_user_guide.html@@@はじめに - OpenStack セキュリティガイド  - havana@@@null";
 fil["24"]= "ch039_case-studies-messaging.html@@@第31章 ケーススタディ: メッセージング - OpenStack セキュリティガイド  - havana@@@null";
-fil["25"]= "ch053_case-studies-instance-isolation.html@@@第42章 Case Studies: Instance Isolation - OpenStack セキュリティガイド  - havana@@@null";
+fil["25"]= "ch053_case-studies-instance-isolation.html@@@第42章 ケーススタディ：インスタンス分離 - OpenStack セキュリティガイド  - havana@@@null";
 fil["26"]= "go01.html@@@用語集 - OpenStack セキュリティガイド  - havana@@@null";
 fil["27"]= "ch046_data-residency.html@@@第36章 データプライバシ関連 - OpenStack セキュリティガイド  - havana@@@null";
 fil["28"]= "ch059_case-studies-monitoring-logging.html@@@第46章 Case Studies: Monitoring and Logging - OpenStack セキュリティガイド  - havana@@@null";
