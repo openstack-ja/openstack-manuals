@@ -1,5 +1,4 @@
 //Auto generated index for searching.
-w["コミュニティのサポート"]="112";
 w["コミュニティはopenstackを継続的に改善"]="112";
 w["コレクター"]="67";
 w["コレクターと"]="67";
