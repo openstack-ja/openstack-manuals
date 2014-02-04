@@ -9,7 +9,7 @@
 <title>ストレージノードのインストールと設定 - OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版
    - havana</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版"/><link rel="up" href="ch_swift.html" title="第9章 Object Storage の追加"/><link rel="prev" href="general-installation-steps-swift.html" title="一般的なインストール手順"/><link rel="next" href="installing-and-configuring-the-proxy-node.html" title="プロキシノードのインストールと設定"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
             //The id for tree cookie
-            var treeCookieId = "treeview-9482";
+            var treeCookieId = "treeview-9476";
             var language = "en";
             var w = new Object();
             //Localization
@@ -78,15 +78,14 @@ lock file = /var/lock/container.lock
 max connections = 2
 path = /srv/node/
 read only = false
-lock file = /var/lock/object.lock</pre></li><li class="step"><p>(オプション) rsync と複製の通信を複製ネットワークと分離したい場合、<code class="literal">STORAGE_LOCAL_NET_IP</code> の代わりに <code class="literal">STORAGE_REPLICATION_NET_IP</code> を設定します。</p><pre class="programlisting brush: bash; ">address = <em class="replaceable"><code>STORAGE_REPLICATION_NET_IP</code></em></pre></li><li class="step"><p><code class="filename">/etc/xinetd.d/rsync</code> で以下の行を編集します。</p><pre class="programlisting brush: bash; ">disable = false</pre></li><li class="step"><p><code class="systemitem">xinetd</code> サービスを起動します。</p><pre class="screen"># service xinetd start</pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[注記]" src="../common/images/admon/note.png"/></td><th align="left">注記</th></tr><tr><td align="left" valign="top"><p>rsync サービスは認証を必要としないため、ローカルのプライベートネットワークで実行します。</p></td></tr></table></div></li><li class="step"><p>Create the swift recon cache directory and set its
-                permissions:</p><pre class="screen"># mkdir -p /var/swift/recon
+lock file = /var/lock/object.lock</pre></li><li class="step"><p>(オプション) rsync と複製の通信を複製ネットワークと分離したい場合、<code class="literal">STORAGE_LOCAL_NET_IP</code> の代わりに <code class="literal">STORAGE_REPLICATION_NET_IP</code> を設定します。</p><pre class="programlisting brush: bash; ">address = <em class="replaceable"><code>STORAGE_REPLICATION_NET_IP</code></em></pre></li><li class="step"><p><code class="filename">/etc/xinetd.d/rsync</code> で以下の行を編集します。</p><pre class="programlisting brush: bash; ">disable = false</pre></li><li class="step"><p><code class="systemitem">xinetd</code> サービスを起動します。</p><pre class="screen"># service xinetd start</pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[注記]" src="../common/images/admon/note.png"/></td><th align="left">注記</th></tr><tr><td align="left" valign="top"><p>rsync サービスは認証を必要としないため、ローカルのプライベートネットワークで実行します。</p></td></tr></table></div></li><li class="step"><p>swift recon  キャッシュディレクトリを作成し、そのパーミッションを設定します。</p><pre class="screen"># mkdir -p /var/swift/recon
 # chown -R swift:swift /var/swift/recon</pre></li></ol></div></div><script type="text/javascript" src="../common/main.js"><!----></script><div class="logabug" style="text-align: center"><a id="logABugLink2" href="" target="_blank">Log a bug against this page</a></div><script language="JavaScript">
 	  var sourceFile = "source File: file:/home/openstack/docs/manuals/generated/ja/install-guide/object-storage/section_object-storage-install-config-storage-nodes.xml"
 	  var xmlId = "xml:id: installing-and-configuring-storage-nodes"
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "ストレージノードのインストールと設定 in OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版  - havana";
-	  var buildTime = "Built: 2014-02-04T06:54:50+09:00";
+	  var buildTime = "Built: 2014-02-04T09:54:47+09:00";
 	  var gitSha = "git SHA: 233ddc446dc4f921b372dd0c951b83c333b2ab84";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);

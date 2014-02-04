@@ -9,7 +9,7 @@
 <title>ネットワークノード - OpenStack インストールガイド Ubuntu 12.04 (LTS) 版
    - havana</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Ubuntu 12.04 (LTS) 版"/><link rel="up" href="demo_installions.html" title="インストール"/><link rel="prev" href="controller-install-neutron-server.html" title="コントローラー"/><link rel="next" href="compute-node-install-openvswitch.html" title="コンピュートノード"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
             //The id for tree cookie
-            var treeCookieId = "treeview-9521";
+            var treeCookieId = "treeview-9516";
             var language = "en";
             var w = new Object();
             //Localization
@@ -46,7 +46,7 @@
                                     <a accesskey="n" class="navLinkNext" onclick="_gaq.push(['_trackEvent', 'Header', 'nextLink', 'click', 1]);" tabindex="5" href="compute-node-install-openvswitch.html">次へ</a></td></tr></table></div></div><div id="toolbar" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><div id="toolbar-left"><p class="breadcrumbs"><a href="http://docs.openstack.org/">OpenStack Manuals</a><a href="index.html">OpenStack インストールガイド Ubuntu 12.04 (LTS) 版
    - havana</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../openstack-install-guide-apt-local.pdf"><img src="../common/images/pdf.png"/></a>
        
-      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div class="section"><div xmlns="" class="titlepage"><div><div><h5 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="network-node-install-plugin-openvswitch-agent"> </a>ネットワークノード</h5></div></div></div><div class="procedure"><a id="d6e3728"> </a><p class="title"><strong>ネットワークノードのインストールと設定</strong></p><ol class="procedure" type="1"><li class="step"><p>パッケージをインストールします。</p><pre class="screen"># apt-get install neutron-plugin-openvswitch-agent \
+      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div class="section"><div xmlns="" class="titlepage"><div><div><h5 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="network-node-install-plugin-openvswitch-agent"> </a>ネットワークノード</h5></div></div></div><div class="procedure"><a id="d6e3727"> </a><p class="title"><strong>ネットワークノードのインストールと設定</strong></p><ol class="procedure" type="1"><li class="step"><p>パッケージをインストールします。</p><pre class="screen"># apt-get install neutron-plugin-openvswitch-agent \
 neutron-dhcp-agent neutron-l3-agent</pre></li><li class="step"><p>Open vSwitch を起動します。</p><pre class="screen"># service openvswitch-switch start</pre></li><li class="step"><p>統合ブリッジを Open vSwitch に追加します:</p><pre class="screen"># ovs-vsctl add-br br-int</pre></li><li class="step"><p>OpenStack Networking 設定ファイル <code class="filename">/etc/neutron/neutron.conf</code> を更新します。</p><pre class="programlisting brush: bash; ">rabbit_password = guest
 rabbit_host = <em class="replaceable"><code>controller</code></em>
 rabbit_password = <em class="replaceable"><code>RABBIT_PASS</code></em>
@@ -75,7 +75,7 @@ admin_password = <em class="replaceable"><code>NEUTRON_PASS</code></em></pre></l
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "ネットワークノード in OpenStack インストールガイド Ubuntu 12.04 (LTS) 版  - havana";
-	  var buildTime = "Built: 2014-02-04T06:53:59+09:00";
+	  var buildTime = "Built: 2014-02-04T09:53:43+09:00";
 	  var gitSha = "git SHA: 233ddc446dc4f921b372dd0c951b83c333b2ab84";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);

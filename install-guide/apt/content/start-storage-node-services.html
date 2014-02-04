@@ -6,7 +6,7 @@
 <title>ストレージノードでのサービスの起動 - OpenStack インストールガイド Ubuntu 12.04 (LTS) 版
    - havana</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Ubuntu 12.04 (LTS) 版"/><link rel="up" href="ch_swift.html" title="第9章 Object Storage の追加"/><link rel="prev" href="installing-and-configuring-the-proxy-node.html" title="プロキシノードのインストールと設定"/><link rel="next" href="object-storage-post-install.html" title="Object Storage のインストール後作業"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
             //The id for tree cookie
-            var treeCookieId = "treeview-9521";
+            var treeCookieId = "treeview-9516";
             var language = "en";
             var w = new Object();
             //Localization
@@ -43,9 +43,7 @@
                                     <a accesskey="n" class="navLinkNext" onclick="_gaq.push(['_trackEvent', 'Header', 'nextLink', 'click', 1]);" tabindex="5" href="object-storage-post-install.html">次へ</a></td></tr></table></div></div><div id="toolbar" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><div id="toolbar-left"><p class="breadcrumbs"><a href="http://docs.openstack.org/">OpenStack Manuals</a><a href="index.html">OpenStack インストールガイド Ubuntu 12.04 (LTS) 版
    - havana</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../openstack-install-guide-apt-local.pdf"><img src="../common/images/pdf.png"/></a>
        
-      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="start-storage-node-services"> </a>ストレージノードでのサービスの起動</h2></div></div></div><p>Now that the ring files are on each storage node, you can
-        start the services. On each storage node, run the following
-        command:</p><pre class="screen"># for service in \
+      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="start-storage-node-services"> </a>ストレージノードでのサービスの起動</h2></div></div></div><p>これで、リングファイルが各ストレージノードに存在するので、サービスを起動できます。各ストレージノードで以下のコマンドを実行します。</p><pre class="screen"># for service in \
   swift-object swift-object-replicator swift-object-updater swift-object-auditor \
   swift-container swift-container-replicator swift-container-updater swift-container-auditor \
   swift-account swift-account-replicator swift-account-reaper swift-account-auditor; do \
@@ -55,7 +53,7 @@
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "ストレージノードでのサービスの起動 in OpenStack インストールガイド Ubuntu 12.04 (LTS) 版  - havana";
-	  var buildTime = "Built: 2014-02-04T06:53:55+09:00";
+	  var buildTime = "Built: 2014-02-04T09:53:38+09:00";
 	  var gitSha = "git SHA: 233ddc446dc4f921b372dd0c951b83c333b2ab84";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);

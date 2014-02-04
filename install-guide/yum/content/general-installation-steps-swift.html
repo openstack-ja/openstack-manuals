@@ -9,7 +9,7 @@
 <title>一般的なインストール手順 - OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版
    - havana</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版"/><link rel="up" href="installing-openstack-object-storage.html" title="Object Storage のインストール"/><link rel="prev" href="before-you-begin-swift-install.html" title="始める前に"/><link rel="next" href="installing-and-configuring-storage-nodes.html" title="ストレージノードのインストールと設定"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
             //The id for tree cookie
-            var treeCookieId = "treeview-9482";
+            var treeCookieId = "treeview-9476";
             var language = "en";
             var w = new Object();
             //Localization
@@ -46,12 +46,7 @@
                                     <a accesskey="n" class="navLinkNext" onclick="_gaq.push(['_trackEvent', 'Header', 'nextLink', 'click', 1]);" tabindex="5" href="installing-and-configuring-storage-nodes.html">次へ</a></td></tr></table></div></div><div id="toolbar" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><div id="toolbar-left"><p class="breadcrumbs"><a href="http://docs.openstack.org/">OpenStack Manuals</a><a href="index.html">OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版
    - havana</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../openstack-install-guide-yum-local.pdf"><img src="../common/images/pdf.png"/></a>
        
-      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="general-installation-steps-swift"> </a>一般的なインストール手順</h3></div></div></div><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>Create a <code class="literal">swift</code> user that the Object
-                    Storage Service can use to authenticate with the Identity Service.
-                    Choose a password and specify an email address for the
-                    <code class="literal">swift</code> user. Use the
-                    <code class="literal">service</code> tenant and give the user the
-                    <code class="literal">admin</code> role:</p><pre class="screen"># keystone user-create --name=swift --pass=<em class="replaceable"><code>SWIFT_PASS</code></em> \
+      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="general-installation-steps-swift"> </a>一般的なインストール手順</h3></div></div></div><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>Object Storage Service が Identity Service で認証するために使用する <code class="literal">swift</code> ユーザーを作成します。<code class="literal">swift</code> ユーザー用のパスワードと電子メールアドレスを選択します。<code class="literal">service</code> プロジェクトを使用し、ユーザーに <code class="literal">admin</code> ロールを与えます。</p><pre class="screen"># keystone user-create --name=swift --pass=<em class="replaceable"><code>SWIFT_PASS</code></em> \
   --email=<em class="replaceable"><code>swift@example.com</code></em>
 # keystone user-role-add --user=swift --tenant=service --role=admin</pre></li><li class="step"><p>Object Storage Service のサービスエントリーを作成します。</p><pre class="screen"># keystone service-create --name=swift --type=object-store \
   --description="Object Storage Service"
@@ -62,11 +57,7 @@
 |      id     | eede9296683e4b5ebfa13f5166375ef6 |
 |     name    |              swift               |
 |     type    |           object-store           |
-+-------------+----------------------------------+</pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[注記]" src="../common/images/admon/note.png"/></td><th align="left">注記</th></tr><tr><td align="left" valign="top"><p>サービス ID はランダムに生成され、ここに表示されているものとは異なります。</p></td></tr></table></div></li><li class="step"><p>Specify an API endpoint for the Object Storage Service by using
-                    the returned service ID. When you specify an endpoint, you
-                    provide URLs for the public API, internal API, and admin API.
-                    In this guide, the <code class="literal">controller</code> host name is
-                    used:</p><pre class="screen"># keystone endpoint-create \
++-------------+----------------------------------+</pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[注記]" src="../common/images/admon/note.png"/></td><th align="left">注記</th></tr><tr><td align="left" valign="top"><p>サービス ID はランダムに生成され、ここに表示されているものとは異なります。</p></td></tr></table></div></li><li class="step"><p>返されたサービス ID を使用することにより、Object Storage Service の API エンドポイントを指定します。エンドポイントを指定するとき、パブリック API、内部 API、管理 API の URL を指定します。このガイドでは、<code class="literal">controller</code> というホスト名を使用します。</p><pre class="screen"># keystone endpoint-create \
   --service-id=$(keystone service-list | awk '/ object-store / {print $2}') \
   --publicurl='http://<em class="replaceable"><code>controller</code></em>:8080/v1/AUTH_%(tenant_id)s' \
   --internalurl='http://<em class="replaceable"><code>controller</code></em>:8080/v1/AUTH_%(tenant_id)s' \
@@ -80,22 +71,16 @@
 |  publicurl  | http://controller:8080/v1/AUTH_%(tenant_id)s      |
 |    region   |                     regionOne                     |
 |  service_id |          eede9296683e4b5ebfa13f5166375ef6         |
-+-------------+---------------------------------------------------+</pre></li><li class="step"><p>Create the configuration directory on
-                    all nodes:</p><pre class="screen"># mkdir -p /etc/swift</pre></li><li class="step"><p>すべてのノードで <code class="filename">/etc/swift/swift.conf</code> を作成します。</p><pre class="programlisting brush: bash; ">[swift-hash]
++-------------+---------------------------------------------------+</pre></li><li class="step"><p>すべてのノードに設定用ディレクトリを作成します。</p><pre class="screen"># mkdir -p /etc/swift</pre></li><li class="step"><p>すべてのノードで <code class="filename">/etc/swift/swift.conf</code> を作成します。</p><pre class="programlisting brush: bash; ">[swift-hash]
 # random unique string that can never change (DO NOT LOSE)
 swift_hash_path_suffix = fLIbertYgibbitZ
-</pre></li></ol></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[注記]" src="../common/images/admon/note.png"/></td><th align="left">注記</th></tr><tr><td align="left" valign="top"><p>The suffix value in
-                    <code class="filename">/etc/swift/swift.conf</code> should
-                be set to some random string of text to be used as a
-                salt when hashing to determine mappings in the ring.
-                This file must be the same on every node in the
-                cluster!</p></td></tr></table></div><p>次にストレージノードとプロキシノードをセットアップします。この例では、共通の認証部品として Identity Service を使用します。</p></div><script type="text/javascript" src="../common/main.js"><!----></script><div class="logabug" style="text-align: center"><a id="logABugLink2" href="" target="_blank">Log a bug against this page</a></div><script language="JavaScript">
+</pre></li></ol></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[注記]" src="../common/images/admon/note.png"/></td><th align="left">注記</th></tr><tr><td align="left" valign="top"><p><code class="filename">/etc/swift/swift.conf</code> のサフィックス値は、リングでマッピングを決めるためのハッシュをするときに、ソルトとして使用するために何かランダムな文字列に設定すべきです。このファイルはクラスター上のすべてのノードで同じにする必要があります。</p></td></tr></table></div><p>次にストレージノードとプロキシノードをセットアップします。この例では、共通の認証部品として Identity Service を使用します。</p></div><script type="text/javascript" src="../common/main.js"><!----></script><div class="logabug" style="text-align: center"><a id="logABugLink2" href="" target="_blank">Log a bug against this page</a></div><script language="JavaScript">
 	  var sourceFile = "source File: file:/home/openstack/docs/manuals/generated/ja/install-guide/object-storage/section_object-storage-install.xml"
 	  var xmlId = "xml:id: general-installation-steps-swift"
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "一般的なインストール手順 in OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版  - havana";
-	  var buildTime = "Built: 2014-02-04T06:54:50+09:00";
+	  var buildTime = "Built: 2014-02-04T09:54:46+09:00";
 	  var gitSha = "git SHA: 233ddc446dc4f921b372dd0c951b83c333b2ab84";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);

@@ -6,7 +6,7 @@
 <title>システム要件 - OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版
    - havana</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版"/><link rel="up" href="ch_swift.html" title="第9章 Object Storage の追加"/><link rel="prev" href="object-storage-service.html" title="Object Storage Service"/><link rel="next" href="object-storage-network-planning.html" title="Object Storage 用ネットワークの計画"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
             //The id for tree cookie
-            var treeCookieId = "treeview-9482";
+            var treeCookieId = "treeview-9476";
             var language = "en";
             var w = new Object();
             //Localization
@@ -68,17 +68,13 @@
                     <p>プロセッサー: 4 コア 2 個</p><p>ネットワーク: 1 GB NIC 1 個</p></td>
                 <td><p>より高いネットワークスループットにより、多くの API リクエストをサポートするためのより良いパフォーマンスを提供します。</p>
                     <p>最高の CPU パフォーマンスのためにプロキシサーバーを最適化します。プロキシサービスはより多くの CPU 処理とネットワーク I/O 集中が発生します。10 ギガネットワークをプロキシに使用している場合、または SSL 通信をプロキシで終了している場合、さらに多くの CPU パワーが必要になります。</p></td>
-            </tr></tbody></table><p><span class="bold"><strong>オペレーティングシステム</strong></span>: OpenStack Object Storage は現在 Ubuntu、RHEL、CentOS、Fedora、openSUSE、SLES で動作します。</p><p><span class="bold"><strong>Networking</strong></span>: 1 Gbps or 10
-        Gbps is suggested internally. For OpenStack Object Storage, an
-        external network should connect the outside world to the proxy
-        servers, and the storage network is intended to be isolated on
-        a private network or multiple private networks.</p><p><span class="bold"><strong>データベース</strong></span>: OpenStack Object Storage の場合には、SQLite データベースが OpenStack Object Storage のコンテナーとアカウントの管理プロセスの一部です。</p><p><span class="bold"><strong>権限</strong></span>: OpenStack Object Storage を root としてインストールできます。または、すべての権限を有効化するよう sudoers ファイルを設定する場合、sudo 権限を持つユーザーとしてインストールできます。</p></div><script type="text/javascript" src="../common/main.js"><!----></script><div class="logabug" style="text-align: center"><a id="logABugLink2" href="" target="_blank">Log a bug against this page</a></div><script language="JavaScript">
+            </tr></tbody></table><p><span class="bold"><strong>オペレーティングシステム</strong></span>: OpenStack Object Storage は現在 Ubuntu、RHEL、CentOS、Fedora、openSUSE、SLES で動作します。</p><p><span class="bold"><strong>ネットワーク</strong></span>: 内部的に 1Gpbs か 10 Gbps が推奨されます。OpenStack Object Storage の場合には、外部ネットワークが外部とプロキシサーバーを接続すべきです。また、ストレージネットワークがプライベートネットワークで分離されていることを意図しています。</p><p><span class="bold"><strong>データベース</strong></span>: OpenStack Object Storage の場合には、SQLite データベースが OpenStack Object Storage のコンテナーとアカウントの管理プロセスの一部です。</p><p><span class="bold"><strong>権限</strong></span>: OpenStack Object Storage を root としてインストールできます。または、すべての権限を有効化するよう sudoers ファイルを設定する場合、sudo 権限を持つユーザーとしてインストールできます。</p></div><script type="text/javascript" src="../common/main.js"><!----></script><div class="logabug" style="text-align: center"><a id="logABugLink2" href="" target="_blank">Log a bug against this page</a></div><script language="JavaScript">
 	  var sourceFile = "source File: file:/home/openstack/docs/manuals/generated/ja/install-guide/object-storage/section_object-storage-sys-requirements.xml"
 	  var xmlId = "xml:id: object-storage-system-requirements"
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "システム要件 in OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版  - havana";
-	  var buildTime = "Built: 2014-02-04T06:54:50+09:00";
+	  var buildTime = "Built: 2014-02-04T09:54:46+09:00";
 	  var gitSha = "git SHA: 233ddc446dc4f921b372dd0c951b83c333b2ab84";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);

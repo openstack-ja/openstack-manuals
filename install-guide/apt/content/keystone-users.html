@@ -6,7 +6,7 @@
 <title>ユーザー、プロジェクト、ロールの定義 - OpenStack インストールガイド Ubuntu 12.04 (LTS) 版
    - havana</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Ubuntu 12.04 (LTS) 版"/><link rel="up" href="ch_keystone.html" title="第3章 Identity Service の設定"/><link rel="prev" href="keystone-install.html" title="Identity Service のインストール"/><link rel="next" href="keystone-services.html" title="サービスと API エンドポイントの定義"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
             //The id for tree cookie
-            var treeCookieId = "treeview-9521";
+            var treeCookieId = "treeview-9516";
             var language = "en";
             var w = new Object();
             //Localization
@@ -141,19 +141,13 @@
     with your authorization token.</p><pre class="screen"># export OS_SERVICE_TOKEN=<em class="replaceable"><code>FCAF3E...</code></em>
 # export OS_SERVICE_ENDPOINT=http://controller:35357/v2.0</pre><p>まず、管理ユーザー用のプロジェクトと、他の OpenStack サービスが使用するプロジェクトを作成します。</p><pre class="screen"># keystone tenant-create --name=admin --description="Admin Tenant"
 # keystone tenant-create --name=service --description="Service Tenant"</pre><p>次に、<code class="literal">admin</code> という管理ユーザーを作成します。<code class="literal">admin</code> ユーザーのパスワードを選択し、アカウントの電子メールアドレスを指定します。</p><pre class="screen"># keystone user-create --name=admin --pass=<em class="replaceable"><code>ADMIN_PASS</code></em> \
-   --email=<em class="replaceable"><code>admin@example.com</code></em></pre><p><code class="literal">admin</code> という管理タスクのロールを作成します。作成するすべてのロールは、さまざまな OpenStack サービスの <code class="filename">policy.json</code> ファイルに指定されたロールにマップすべきです。標準のポリシーファイルは多くのサービスへのアクセスを許可するために <code class="literal">admin</code> ロールを使用します。</p><pre class="screen"># keystone role-create --name=admin</pre><p>Now, you have to add roles to users. Users always log in with
-  a tenant, and roles are assigned to users within tenants. Add the
-  <code class="literal">admin</code> role to the <code class="literal">admin</code> user when
-  logging in with the <code class="literal">admin</code> tenant.</p><pre class="screen"># keystone user-role-add --user=admin --tenant=admin --role=admin</pre><p>
-    Add the <code class="literal">_member_</code> role to the <code class="literal">admin</code>
-    user. This is a special role that grants access to the OpenStack Dashboard.
-  </p><pre class="screen"># keystone user-role-add --user=admin --tenant=admin --role=_member_</pre></div><script type="text/javascript" src="../common/main.js"><!----></script><div class="logabug" style="text-align: center"><a id="logABugLink2" href="" target="_blank">Log a bug against this page</a></div><script language="JavaScript">
+   --email=<em class="replaceable"><code>admin@example.com</code></em></pre><p><code class="literal">admin</code> という管理タスクのロールを作成します。作成するすべてのロールは、さまざまな OpenStack サービスの <code class="filename">policy.json</code> ファイルに指定されたロールにマップすべきです。標準のポリシーファイルは多くのサービスへのアクセスを許可するために <code class="literal">admin</code> ロールを使用します。</p><pre class="screen"># keystone role-create --name=admin</pre><p>ここでロールをユーザーに追加する必要があります。ユーザーは常にプロジェクトでログインします。ロールはプロジェクトの中でユーザーに割り当てられます。<code class="literal">admin</code> プロジェクトでログインするときに、<code class="literal">admin</code> ロールを <code class="literal">admin</code> ユーザーに追加します。</p><pre class="screen"># keystone user-role-add --user=admin --tenant=admin --role=admin</pre><p><code class="literal">admin</code> ユーザーに <code class="literal">_member_</code> ロールを追加します。これは OpenStack Dashboard へのアクセス権を与える特別なロールです。</p><pre class="screen"># keystone user-role-add --user=admin --tenant=admin --role=_member_</pre></div><script type="text/javascript" src="../common/main.js"><!----></script><div class="logabug" style="text-align: center"><a id="logABugLink2" href="" target="_blank">Log a bug against this page</a></div><script language="JavaScript">
 	  var sourceFile = "source File: file:/home/openstack/docs/manuals/generated/ja/install-guide/section_keystone-users.xml"
 	  var xmlId = "xml:id: keystone-users"
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "ユーザー、プロジェクト、ロールの定義 in OpenStack インストールガイド Ubuntu 12.04 (LTS) 版  - havana";
-	  var buildTime = "Built: 2014-02-04T06:53:50+09:00";
+	  var buildTime = "Built: 2014-02-04T09:53:33+09:00";
 	  var gitSha = "git SHA: 233ddc446dc4f921b372dd0c951b83c333b2ab84";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);
