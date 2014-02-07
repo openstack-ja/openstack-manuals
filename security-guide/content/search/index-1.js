@@ -2321,4 +2321,6 @@ w["vgcreat"]="7";
 w["vgmodifi"]="7";
 w["via"]="4,14,45";
 w["vibha"]="20";
+w["vibranc"]="14";
+w["vid"]="11";
 
