@@ -46,8 +46,7 @@
                                     <a accesskey="n" class="navLinkNext" onclick="_gaq.push(['_trackEvent', 'Header', 'nextLink', 'click', 1]);" tabindex="5" href="heat-verify.html">次へ</a></td></tr></table></div></div><div id="toolbar" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><div id="toolbar-left"><p class="breadcrumbs"><a href="http://docs.openstack.org/">OpenStack Manuals</a><a href="index.html">OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版
    - havana</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../openstack-install-guide-yum-local.pdf"><img src="../common/images/pdf.png"/></a>
        
-      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="heat-install"> </a>Orchestration Service のインストール</h2></div></div></div><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>Install the Orchestration module on the controller
-        node:</p><pre class="screen"># yum install openstack-heat-api openstack-heat-engine \
+      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="heat-install"> </a>Orchestration Service のインストール</h2></div></div></div><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>コントローラーノードに Orchestration モジュールをインストールします。</p><pre class="screen"># yum install openstack-heat-api openstack-heat-engine \
   openstack-heat-api-cfn</pre></li><li class="step"><p>Orchestration Service がデータを保存するデータベースの場所を設定ファイルで指定します。これらの例はコントローラーノードにユーザー名 <code class="literal">heat</code> で MySQL データベースを使用します。<code class="literal"><em class="replaceable"><code>HEAT_DBPASS</code></em></code> をデータベースのユーザーの適切なパスワードで置き換えます。</p><pre class="screen"># openstack-config --set /etc/heat/heat.conf \
   database connection mysql://heat:<em class="replaceable"><code>HEAT_DBPASS</code></em>@controller/heat</pre></li><li class="step"><p><code class="literal">root</code> としてログインするために前に設定したパスワードを使用し、<code class="literal">heat</code> データベースユーザーを作成します。</p><pre class="screen"># mysql -u root -p
 mysql&gt; CREATE DATABASE heat;
@@ -90,7 +89,7 @@ keystone_ec2_uri = http://<em class="replaceable"><code>controller</code></em>:5
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "Orchestration Service のインストール in OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版  - havana";
-	  var buildTime = "Built: 2014-02-07T18:54:20+09:00";
+	  var buildTime = "Built: 2014-02-07T21:54:12+09:00";
 	  var gitSha = "git SHA: 5a34070a669467a8e6de2e41290a50359df2ddeb";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);
