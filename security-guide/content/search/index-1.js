@@ -1507,7 +1507,7 @@ w["openstackディストリビューション"]="44";
 w["openstackプロジェクトのpast"]="44";
 w["openstackメーリングリストへ質問や問題の状況を投稿することです"]="44";
 w["openstack中のssl"]="49";
-w["openstack内のに鍵管理サービスを求めることです"]="22";
+w["openstack内のに鍵管理サービスを求められます"]="22";
 w["openstack内のほぼ全てのapiエンドポイントと他のhttpサービスはpythonのpast"]="1";
 w["openstack向けのstigが無くとも"]="6";
 w["openstack環境では"]="10";
@@ -2332,4 +2332,7 @@ w["vms"]="51";
 w["vmt"]="47";
 w["vmware"]="14,20";
 w["vmを実行する"]="36";
+w["vnc"]="15,17";
+w["volum"]="1,3,19,41";
+w["volume_extens"]="3";
 
