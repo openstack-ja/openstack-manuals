@@ -139,7 +139,7 @@
                 <td><p>ロールベースアクセス制御</p></td>
                 <td><p>Role-based access control (RBAC) allows separation of roles to eliminate the need for an all-powerful system administrator.</p></td>
               </tr><tr>
-                <td><p>Object Reuse</p></td>
+                <td><p>オブジェクト再利用</p></td>
                 <td><p>File system objects as well as memory and IPC objects will be cleared before they can be reused by a process belonging to a different user.</p></td>
               </tr><tr>
                 <td><p>セキュリティ管理</p></td>
@@ -215,7 +215,7 @@
                 <td><p>Protection for Data at Rest,Identification and Authentication </p></td>
                 <td><p>U.S. NIST FIPS 180-3</p></td>
               </tr></tbody></table><div class="section"><div xmlns="" class="titlepage"><div><div><h4 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="ch051_vss-intro-idp362768"> </a>FIPS 140-2</h4></div></div></div><p>In the United States the National Institute of Science and Technology (NIST) certifies cryptographic algorithms through a process known the Cryptographic Module Validation Program. NIST certifies algorithms for conformance against Federal Information Processing Standard 140-2 (FIPS 140-2), which ensures:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Products validated as conforming to FIPS 140-2 are accepted by the Federal agencies of both countries [United States and Canada] for the protection of sensitive information (United States) or Designated Information (Canada). The goal of the CMVP is to promote the use of validated cryptographic modules and provide Federal agencies with a security metric to use in procuring equipment containing validated cryptographic modules.</em></span></p></blockquote></div><p>When evaluating base hypervisor technologies, consider if the hypervisor has been certified against FIPS 140-2. Not only is conformance against FIPS 140-2 mandated per U.S. Government policy, formal certification indicates that a given implementation of a cryptographic algorithm has been reviewed for conformance against module specification, cryptographic module ports and interfaces; roles, services, and authentication; finite state model; physical security; operational environment; cryptographic key management; electromagnetic interference/electromagnetic compatibility (EMI/EMC); self-tests; design assurance; and mitigation of other attacks.</p></div></div><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="ch051_vss-intro-idp367552"> </a>ハードウェア関連</h3></div></div></div><p>Further, when evaluating a hypervisor platform the supportability of the hardware the hypervisor will run on should be considered. Additionally, consider the additional features available in the hardware and how those features are supported by the hypervisor you chose as part of the OpenStack deployment. To that end, hypervisors will each have their own hardware compatibility lists (HCLs). When selecting compatible hardware it is important to know in advance which hardware-based virtualization technologies are important from a security perspective.</p><table rules="all" width="80%" id="d6e2439"><colgroup><col/><col/><col/></colgroup><tbody><tr>
-                <td><p><span class="bold"><strong>説明</strong></span></p></td>
+                <td><p><span class="bold"><strong>記述</strong></span></p></td>
                 <td><p><span class="bold"><strong>技術</strong></span></p></td>
                 <td><p><span class="bold"><strong>説明</strong></span></p></td>
               </tr><tr>
@@ -227,11 +227,11 @@
                 <td><p>Intel TXT / SEM</p></td>
                 <td><p>Required for dynamic attestation services</p></td>
               </tr><tr>
-                <td><p><a id="PCI-SIG_I.2FO_virtualization_.28IOV.29"> </a>PCI-SIG I/O virtualization</p></td>
+                <td><p><a id="PCI-SIG_I.2FO_virtualization_.28IOV.29"> </a>PCI-SIG I/O 仮想化</p></td>
                 <td><p>SR-IOV, MR-IOV, ATS</p></td>
                 <td><p>Required to allow secure sharing of PCI Express devices</p></td>
               </tr><tr>
-                <td><p>Network virtualization</p></td>
+                <td><p>ネットワーク仮想化</p></td>
                 <td><p>VT-c</p></td>
                 <td><p>Improves performance of network I/O on hypervisors</p></td>
               </tr></tbody></table></div><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="ch051_vss-intro-idp396976"> </a>ハードウェア対ベアメタル</h3></div></div></div><p>To wrap up our discussion around hypervisor selection, it is important to call out the differences between using LXC (Linux Containers) or Baremetal systems vs using a hypervisor like KVM. Specifically, the focus of this security guide will be largely based on having a hypervisor and virtualization platform. However, should your implementation require the use of a baremetal or LXC environment, you will want to pay attention to the particular differences in regard to deployment of that environment. In particular, you will need to provide your end users with assurances that the node has been properly sanitized of their data prior to re-provisioning. Additionally, prior to reusing a node, you will need to provide assurances that the hardware has not been tampered or otherwise compromised.</p><p>It should be noted that while OpenStack has a baremetal project, a discussion of the particular security implications of running baremetal is beyond the scope of this book.</p><p>Finally, due to the time constraints around a book sprint, the team chose to use KVM as the hypervisor in our example implementations and architectures.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[注記]" src="../common/images/admon/note.png"/></td><th align="left">注記</th></tr><tr><td align="left" valign="top"><p>There is an OpenStack Security Note pertaining to the <a class="link" href="https://bugs.launchpad.net/ossn/+bug/1098582" target="_top">use of LXC in Nova</a>.</p></td></tr></table></div></div><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="ch051_vss-intro-idp401408"> </a>追加のセキュリティ機能</h3></div></div></div><p>Another thing to look into when selecting a hypervisor platform is the availability of specific security features. In particular, we are referring to features like Xen Server's XSM or Xen Security Modules, sVirt, Intel TXT, and AppArmor. The presence of these features will help increase your security profile as well as provide a good foundation.</p><p>The following table calls out these features by common hypervisor platforms. </p><table rules="all" width="80%" id="d6e2496"><colgroup><col/><col/><col/><col/><col/><col/><col/><col/></colgroup><tbody><tr>
@@ -285,7 +285,7 @@
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "第40章 ハイパーバイザーの選択 in OpenStack セキュリティガイド  - havana";
-	  var buildTime = "Built: 2014-02-12T12:52:10+09:00";
+	  var buildTime = "Built: 2014-02-12T15:52:09+09:00";
 	  var gitSha = "git SHA: eb6a27bdc45fcce8e6968e52987a647040b6f9c7";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);
