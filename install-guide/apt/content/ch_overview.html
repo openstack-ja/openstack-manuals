@@ -6,7 +6,7 @@
 <title>第1章 アーキテクチャー - OpenStack インストールガイド Ubuntu 12.04 (LTS) 版
    - havana</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Ubuntu 12.04 (LTS) 版"/><link rel="up" href="index.html" title="OpenStack インストールガイド Ubuntu 12.04 (LTS) 版"/><link rel="prev" href="ch_preface.html" title="はじめに"/><link rel="next" href="ch_basics.html" title="第2章 オペレーティングシステムの基本設定"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
             //The id for tree cookie
-            var treeCookieId = "treeview-9681";
+            var treeCookieId = "treeview-9677";
             var language = "en";
             var w = new Object();
             //Localization
@@ -41,8 +41,7 @@
                                     <a accesskey="n" class="navLinkNext" onclick="_gaq.push(['_trackEvent', 'Header', 'nextLink', 'click', 1]);" tabindex="5" href="ch_basics.html">次へ</a></td></tr></table></div></div><div id="toolbar" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><div id="toolbar-left"><p class="breadcrumbs"><a href="http://docs.openstack.org/">OpenStack Manuals</a><a href="index.html">OpenStack インストールガイド Ubuntu 12.04 (LTS) 版
    - havana</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../openstack-install-guide-apt-local.pdf"><img src="../common/images/pdf.png"/></a>
        
-      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="chapter"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="ch_overview"> </a>第1章 アーキテクチャー</h2></div></div></div><div class="toc"><p><strong>目次</strong></p><dl><dt><span class="section"><a href="ch_overview.html#conceptual-architecture">概念アーキテクチャー</a></span></dt><dt><span class="section"><a href="ch_overview.html#logical-architecture">論理アーキテクチャー</a></span></dt><dt><span class="section"><a href="ch_overview.html#overview-architecture">サンプルアーキテクチャー</a></span></dt></dl></div><p>This install guide offers a few of the many ways to install
-    <script>
+      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="chapter"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="ch_overview"> </a>第1章 アーキテクチャー</h2></div></div></div><div class="toc"><p><strong>目次</strong></p><dl><dt><span class="section"><a href="ch_overview.html#conceptual-architecture">概念アーキテクチャー</a></span></dt><dt><span class="section"><a href="ch_overview.html#logical-architecture">論理アーキテクチャー</a></span></dt><dt><span class="section"><a href="ch_overview.html#overview-architecture">サンプルアーキテクチャー</a></span></dt></dl></div><p>このインストールガイドは、<script>
              $(document).ready(function(){
                $("a.gloss#OpenStack").qtip({
                content: '<strong>OpenStack:</strong> <p>                   OpenStack is a cloud operating system that controls                   large pools of compute, storage, and networking                   resources throughout a datacenter, all managed through                   a dashboard that gives administrators control while                   empowering their users to provision resources through                   a web interface. OpenStack is an Open Source project licensed                   under the Apache License 2.0.                 </p>',
@@ -70,13 +69,7 @@
                 }
                });
              });
-             </script><a class="gloss" href="#" id="OpenStack">OpenStack</a> components and have them work together.
-    It is meant as a
-    "choose your own adventure" guide, not a comprehensive guide. The
-      <em class="citetitle">OpenStack Configuration Reference</em> lists
-    every option in all OpenStack services. Before you begin an
-    installation adventure, here are some things you should know about
-    OpenStack concepts.</p><p><a id="para1"> </a>the OpenStack project はあらゆる種類のクラウド向けのオープンソースのクラウドコンピューティングプラットフォームです。シンプルな実装、大規模なスケーラビリティ、豊富な機能を目指しています。世界中の開発者とクラウドコンピューティング技術者が the OpenStack project を作成します。</p><p><a id="para2"> </a>OpenStack provides an Infrastructure as a
+             </script><a class="gloss" href="#" id="OpenStack">OpenStack</a> のコンポーネントをインストールし、一緒に動作させるために、いくつかの方法を提供します。これは「自分自身のやり方を選ぶ」ガイドを意味しますが、包括的なガイドではありません。<em class="citetitle">OpenStack 設定リファレンス</em>はすべての OpenStack サービスにあるすべてのオプションを一覧化します。インストール作業を始める前に、OpenStack のコンポーネントについて知っておくべきいくつかの事項を説明します。</p><p><a id="para1"> </a>the OpenStack project はあらゆる種類のクラウド向けのオープンソースのクラウドコンピューティングプラットフォームです。シンプルな実装、大規模なスケーラビリティ、豊富な機能を目指しています。世界中の開発者とクラウドコンピューティング技術者が the OpenStack project を作成します。</p><p><a id="para2"> </a>OpenStack provides an Infrastructure as a
         Service (<script>
              $(document).ready(function(){
                $("a.gloss#IaaS").qtip({
@@ -728,10 +721,10 @@
                 <td>OpenStack ネイティブの REST API および CloudFormation 互換のクエリー API 経由で、ネイティブの HOT テンプレート形式または AWS CloudFormation テンプレート形式を使用することにより、複数の混合クラウドアプリケーションを統合します。</td>
             </tr></tbody></table><div xml:lang="ja" class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="conceptual-architecture"> </a>概念アーキテクチャー</h2></div></div></div><p>以下の図は OpenStack サービス間の関連性を示します。</p><div class="figure"><a id="concept_arch"> </a><p class="title"><strong>図1.1 OpenStack の概念アーキテクチャー</strong></p><div class="figure-contents"><div class="mediaobject"><img src="figures/1/figures/openstack_havana_conceptual_arch.png"/></div></div></div><br class="figure-break"/></div><div xml:lang="ja" class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="logical-architecture"> </a>論理アーキテクチャー</h2></div></div></div><p>To design, deploy, and configure OpenStack, administrators must understand the logical architecture.</p><p>OpenStack のモジュールは以下の種別のどれかです。</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Daemon. Runs as a background process. On Linux platforms, a daemon is
         usually installed as a service.</p></li><li class="listitem"><p>Script. Installs a virtual environment and runs tests. For
-        example, the <code class="code">run_tests.sh</code> script installs a virtual environment and runs unit tests on a service.</p></li><li class="listitem"><p>コマンドラインインターフェース (CLI)。ユーザーが使いやすいコマンドから OpenStack サービスの API コールを発行できます。</p></li></ul></div><p>以下の図は、最も一般的ですが、唯一のものではない、OpenStack クラウドのアーキテクチャーを示します。</p><div class="figure"><a id="os-logical-arch"> </a><p class="title"><strong>図1.2 論理アーキテクチャー</strong></p><div class="figure-contents"><div class="mediaobject"><img src="figures/2/figures/openstack-arch-havana-logical-v1.jpg"/></div></div></div><br class="figure-break"/><p><a class="xref" href="ch_overview.html#concept_arch" title="図1.1 OpenStack の概念アーキテクチャー">図1.1「OpenStack の概念アーキテクチャー」</a> にあるとおり、エンドユーザーはダッシュボード、CLI、API 経由で操作できます。すべてのサービスは共通の Identity Service 経由で認証されます。個々のサービスは、特権管理コマンドが必要となる場合を除いて、お互いにパブリック API 経由で相互作用します。</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="overview-architecture"> </a>サンプルアーキテクチャー</h2></div></div></div><p>このガイドにより自分自身の OpenStack の使い方を選択できるようになります。OpenStack は、さまざまな要求をコンピュート、ストレージ、ネットワークのさまざまなオプションで満たすために、いろいろと設定することができます。</p><p>このガイドは以下のサンプルアーキテクチャーを使用します。</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>レガシーなネットワークを持つ基本的なアーキテクチャー</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p>The <script>
+        example, the <code class="code">run_tests.sh</code> script installs a virtual environment and runs unit tests on a service.</p></li><li class="listitem"><p>コマンドラインインターフェース (CLI)。ユーザーが使いやすいコマンドから OpenStack サービスの API コールを発行できます。</p></li></ul></div><p>以下の図は、最も一般的ですが、唯一のものではない、OpenStack クラウドのアーキテクチャーを示します。</p><div class="figure"><a id="os-logical-arch"> </a><p class="title"><strong>図1.2 論理アーキテクチャー</strong></p><div class="figure-contents"><div class="mediaobject"><img src="figures/2/figures/openstack-arch-havana-logical-v1.jpg"/></div></div></div><br class="figure-break"/><p><a class="xref" href="ch_overview.html#concept_arch" title="図1.1 OpenStack の概念アーキテクチャー">図1.1「OpenStack の概念アーキテクチャー」</a> にあるとおり、エンドユーザーはダッシュボード、CLI、API 経由で操作できます。すべてのサービスは共通の Identity Service 経由で認証されます。個々のサービスは、特権管理コマンドが必要となる場合を除いて、お互いにパブリック API 経由で相互作用します。</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="overview-architecture"> </a>サンプルアーキテクチャー</h2></div></div></div><p>このガイドにより自分自身の OpenStack の使い方を選択できるようになります。OpenStack は、さまざまな要求をコンピュート、ストレージ、ネットワークのさまざまなオプションで満たすために、いろいろと設定することができます。</p><p>このガイドは以下のサンプルアーキテクチャーを使用します。</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>レガシーなネットワークを持つ基本的なアーキテクチャー</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p><script>
              $(document).ready(function(){
-               $("a.gloss#controller_node").qtip({
-               content: '<strong>controller node:</strong> ',
+               $("a.gloss#コントローラーノード").qtip({
+               content: '<strong>コントローラーノード:</strong> <p>クラウドコントローラーノードの別名。</p>',
                show: {event:'mouseover',delay:500},
                hide: {event:'mouseout',delay:500, fixed:true},
                style: { 
@@ -756,14 +749,10 @@
                 }
                });
              });
-             </script><a class="gloss" href="#" id="controller_node">controller node</a> runs the Identity
-              Service, Image Service,
-              dashboard, and management portion of Compute. It also contains
-              the associated API services, MySQL databases, and messaging
-              system.</p></li><li class="listitem"><p>The <script>
+             </script><a class="gloss" href="#" id="コントローラーノード">コントローラーノード</a>は、Identity Service、Image Service、Dashboard、Compute の管理部分を実行します。また、関連する API サービス、MySQL データベース、メッセージングシステムも含みます。</p></li><li class="listitem"><p><script>
              $(document).ready(function(){
-               $("a.gloss#compute_node").qtip({
-               content: '<strong>compute node:</strong> ',
+               $("a.gloss#コンピュートノード").qtip({
+               content: '<strong>コンピュートノード:</strong> <p>A node that runs the <code class="systemitem">nova-compute</code> daemon, a VM                     instance that provides a wide range of services                     such as a web services and analytics.</p>',
                show: {event:'mouseover',delay:500},
                hide: {event:'mouseout',delay:500, fixed:true},
                style: { 
@@ -788,11 +777,10 @@
                 }
                });
              });
-             </script><a class="gloss" href="#" id="compute_node">compute node</a> runs the
-              <script>
+             </script><a class="gloss" href="#" id="コンピュートノード">コンピュートノード</a>は、<script>
              $(document).ready(function(){
-               $("a.gloss#hypervisor").qtip({
-               content: '<strong>hypervisor:</strong> ',
+               $("a.gloss#プロジェクト").qtip({
+               content: '<strong>プロジェクト:</strong> <p>A logical grouping of users within Compute, used to                     define quotas and access to VM images.</p>',
                show: {event:'mouseover',delay:500},
                hide: {event:'mouseout',delay:500, fixed:true},
                style: { 
@@ -817,11 +805,10 @@
                 }
                });
              });
-             </script><a class="gloss" href="#" id="hypervisor">hypervisor</a> portion of Compute,
-              which operates <script>
+             </script><a class="gloss" href="#" id="プロジェクト">プロジェクト</a>の<script>
              $(document).ready(function(){
-               $("a.gloss#tenant").qtip({
-               content: '<strong>tenant:</strong> ',
+               $("a.gloss#仮想マシン").qtip({
+               content: '<strong>仮想マシン:</strong> ',
                show: {event:'mouseover',delay:500},
                hide: {event:'mouseout',delay:500, fixed:true},
                style: { 
@@ -846,11 +833,10 @@
                 }
                });
              });
-             </script><a class="gloss" href="#" id="tenant">tenant</a>
-              <script>
+             </script><a class="gloss" href="#" id="仮想マシン">仮想マシン</a>を運転する Compute の<script>
              $(document).ready(function(){
-               $("a.gloss#virtual_machines").qtip({
-               content: '<strong>virtual machines:</strong> ',
+               $("a.gloss#ハイパーバイザー").qtip({
+               content: '<strong>ハイパーバイザー:</strong> <p>VM のアクセスを実際の下位ハードウェアに仲介して制御するソフトウェア。</p>',
                show: {event:'mouseover',delay:500},
                hide: {event:'mouseout',delay:500, fixed:true},
                style: { 
@@ -875,12 +861,10 @@
                 }
                });
              });
-             </script><a class="gloss" href="#" id="virtual_machines">virtual machines</a>.
-              By default, Compute uses
-              <script>
+             </script><a class="gloss" href="#" id="ハイパーバイザー">ハイパーバイザー</a>部分を実行します。Compute は<script>
              $(document).ready(function(){
-               $("a.gloss#KVM").qtip({
-               content: '<strong>KVM:</strong> <p>OpenStack がサポートするハイパーバイザーの１つ。</p>',
+               $("a.gloss#ハイパーバイザーとして標準で_KVM_を使用します。Compute_はプロジェクトのネットワークを展開および運転し、セキュリティグループを実装します。複数のコンピュートノードを実行することもできます。").qtip({
+               content: '<strong>ハイパーバイザーとして標準で KVM を使用します。Compute はプロジェクトのネットワークを展開および運転し、セキュリティグループを実装します。複数のコンピュートノードを実行することもできます。:</strong> ',
                show: {event:'mouseover',delay:500},
                hide: {event:'mouseout',delay:500, fixed:true},
                style: { 
@@ -905,11 +889,10 @@
                 }
                });
              });
-             </script><a class="gloss" href="#" id="KVM">KVM</a>
-              as the <script>
+             </script><a class="gloss" href="#" id="ハイパーバイザーとして標準で_KVM_を使用します。Compute_はプロジェクトのネットワークを展開および運転し、セキュリティグループを実装します。複数のコンピュートノードを実行することもできます。">ハイパーバイザーとして標準で KVM を使用します。Compute はプロジェクトのネットワークを展開および運転し、セキュリティグループを実装します。複数のコンピュートノードを実行することもできます。</a></p></li><li class="listitem"><p>このアーキテクチャーを実装しているとき、<a class="xref" href="ch_neutron.html" title="第10章 Networking Service のインストール">10章<em>Networking Service のインストール</em></a> を読み飛ばします。</p></li></ul></div><div class="figure"><a id="basic-architecture-with-legacy-networking"> </a><p class="title"><strong>図1.3 レガシーなネットワークを持つ基本的なアーキテクチャー</strong></p><div class="figure-contents"><div class="mediaobject"><img src="figures/3/figures/basic-architecture.png"/></div></div></div><br class="figure-break"/></li><li class="listitem"><p>OpenStack Networking (Neutron) を持つ基本的なアーキテクチャー</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p><script>
              $(document).ready(function(){
-               $("a.gloss#hypervisor").qtip({
-               content: '<strong>hypervisor:</strong> ',
+               $("a.gloss#コントローラーノード").qtip({
+               content: '<strong>コントローラーノード:</strong> <p>クラウドコントローラーノードの別名。</p>',
                show: {event:'mouseover',delay:500},
                hide: {event:'mouseout',delay:500, fixed:true},
                style: { 
@@ -934,72 +917,7 @@
                 }
                });
              });
-             </script><a class="gloss" href="#" id="hypervisor">hypervisor</a>. Compute also
-              provisions and operates
-              tenant networks and implements
-              <script>
-             $(document).ready(function(){
-               $("a.gloss#security_groups").qtip({
-               content: '<strong>security groups:</strong> ',
-               show: {event:'mouseover',delay:500},
-               hide: {event:'mouseout',delay:500, fixed:true},
-               style: { 
-                        width: 200,
-                        padding: 5,
-                        background: '#FFFFCC',
-                        color: 'black',
-                        textAlign: 'left',
-                        border: {
-                                    width: 1,
-                                    radius: 4,
-                                    color: '#EEEEBB'
-                        },
-                        tip: true,
-                        name: 'cream' // Inherit the rest of the attributes from the preset cream style
-                },
-                position: {
-                    corner: {
-                            target: 'topMiddle',
-                            tooltip: 'bottomLeft'
-                    }
-                }
-               });
-             });
-             </script><a class="gloss" href="#" id="security_groups">security groups</a>.
-              You can run more than one compute node.</p></li><li class="listitem"><p>このアーキテクチャーを実装しているとき、<a class="xref" href="ch_neutron.html" title="第10章 Networking Service のインストール">10章<em>Networking Service のインストール</em></a> を読み飛ばします。</p></li></ul></div><div class="figure"><a id="basic-architecture-with-legacy-networking"> </a><p class="title"><strong>図1.3 レガシーなネットワークを持つ基本的なアーキテクチャー</strong></p><div class="figure-contents"><div class="mediaobject"><img src="figures/3/figures/basic-architecture.png"/></div></div></div><br class="figure-break"/></li><li class="listitem"><p>OpenStack Networking (Neutron) を持つ基本的なアーキテクチャー</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p>The <script>
-             $(document).ready(function(){
-               $("a.gloss#controller_node").qtip({
-               content: '<strong>controller node:</strong> ',
-               show: {event:'mouseover',delay:500},
-               hide: {event:'mouseout',delay:500, fixed:true},
-               style: { 
-                        width: 200,
-                        padding: 5,
-                        background: '#FFFFCC',
-                        color: 'black',
-                        textAlign: 'left',
-                        border: {
-                                    width: 1,
-                                    radius: 4,
-                                    color: '#EEEEBB'
-                        },
-                        tip: true,
-                        name: 'cream' // Inherit the rest of the attributes from the preset cream style
-                },
-                position: {
-                    corner: {
-                            target: 'topMiddle',
-                            tooltip: 'bottomLeft'
-                    }
-                }
-               });
-             });
-             </script><a class="gloss" href="#" id="controller_node">controller node</a>
-              runs the Identity
-              Service, Image Service,
-              dashboard, and management portions of Compute and Networking.
-              It also contains the associated API services, MySQL databases,
-              and messaging system.</p></li><li class="listitem"><p>ネットワークノードは Networking プラグインエージェントといくつかの L3 エージェントを実行します。これらはプロジェクトのネットワークを展開し、ルーティング、<script>
+             </script><a class="gloss" href="#" id="コントローラーノード">コントローラーノード</a>は、Identity Service、Image Service、Dashboard、Compute の管理部分を実行します。また、関連する API サービス、MySQL データベース、メッセージングシステムも含みます。</p></li><li class="listitem"><p>ネットワークノードは Networking プラグインエージェントといくつかの L3 エージェントを実行します。これらはプロジェクトのネットワークを展開し、ルーティング、<script>
              $(document).ready(function(){
                $("a.gloss#NAT").qtip({
                content: '<strong>NAT:</strong> <p>The process of modifying IP address information                     while in-transit. Supported by Compute and                     Networking.</p>',
@@ -1061,7 +979,7 @@
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "第1章 アーキテクチャー in OpenStack インストールガイド Ubuntu 12.04 (LTS) 版  - havana";
-	  var buildTime = "Built: 2014-02-12T03:52:55+09:00";
+	  var buildTime = "Built: 2014-02-12T09:53:00+09:00";
 	  var gitSha = "git SHA: eb6a27bdc45fcce8e6968e52987a647040b6f9c7";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);

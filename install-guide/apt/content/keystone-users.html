@@ -6,7 +6,7 @@
 <title>ユーザー、プロジェクト、ロールの定義 - OpenStack インストールガイド Ubuntu 12.04 (LTS) 版
    - havana</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Ubuntu 12.04 (LTS) 版"/><link rel="up" href="ch_keystone.html" title="第3章 Identity Service の設定"/><link rel="prev" href="keystone-install.html" title="Identity Service のインストール"/><link rel="next" href="keystone-services.html" title="サービスと API エンドポイントの定義"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
             //The id for tree cookie
-            var treeCookieId = "treeview-9681";
+            var treeCookieId = "treeview-9677";
             var language = "en";
             var w = new Object();
             //Localization
@@ -43,11 +43,10 @@
                                     <a accesskey="n" class="navLinkNext" onclick="_gaq.push(['_trackEvent', 'Header', 'nextLink', 'click', 1]);" tabindex="5" href="keystone-services.html">次へ</a></td></tr></table></div></div><div id="toolbar" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><div id="toolbar-left"><p class="breadcrumbs"><a href="http://docs.openstack.org/">OpenStack Manuals</a><a href="index.html">OpenStack インストールガイド Ubuntu 12.04 (LTS) 版
    - havana</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../openstack-install-guide-apt-local.pdf"><img src="../common/images/pdf.png"/></a>
        
-      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="keystone-users"> </a>ユーザー、プロジェクト、ロールの定義</h2></div></div></div><p>After you install the Identity Service, set up
-  <script>
+      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="keystone-users"> </a>ユーザー、プロジェクト、ロールの定義</h2></div></div></div><p>Identity Service をインストールした後、認証する<script>
              $(document).ready(function(){
-               $("a.gloss#users").qtip({
-               content: '<strong>users:</strong> ',
+               $("a.gloss#ユーザー").qtip({
+               content: '<strong>ユーザー:</strong> <p>In Identity Service each user is associated with one or                     more tenants, and in Compute they can be associated                     with roles, projects, or both.</p>',
                show: {event:'mouseover',delay:500},
                hide: {event:'mouseout',delay:500, fixed:true},
                style: { 
@@ -72,11 +71,10 @@
                 }
                });
              });
-             </script><a class="gloss" href="#" id="users">users</a>,
-  <script>
+             </script><a class="gloss" href="#" id="ユーザー">ユーザー</a>、<script>
              $(document).ready(function(){
-               $("a.gloss#tenants").qtip({
-               content: '<strong>tenants:</strong> ',
+               $("a.gloss#プロジェクト").qtip({
+               content: '<strong>プロジェクト:</strong> <p>A logical grouping of users within Compute, used to                     define quotas and access to VM images.</p>',
                show: {event:'mouseover',delay:500},
                hide: {event:'mouseout',delay:500, fixed:true},
                style: { 
@@ -101,11 +99,10 @@
                 }
                });
              });
-             </script><a class="gloss" href="#" id="tenants">tenants</a>, and
-  <script>
+             </script><a class="gloss" href="#" id="プロジェクト">プロジェクト</a>、<script>
              $(document).ready(function(){
-               $("a.gloss#roles").qtip({
-               content: '<strong>roles:</strong> <p>ユーザーが特定の操作の組を実行できると仮定する人格。ロールは一組の権利と権限を含みます。そのロールを仮定しているユーザーは、それらの権利と権限を継承します。</p>',
+               $("a.gloss#ロール").qtip({
+               content: '<strong>ロール:</strong> <p>ユーザーが特定の操作の組を実行できると仮定する人格。ロールは一組の権利と権限を含みます。そのロールを仮定しているユーザーは、それらの権利と権限を継承します。</p>',
                show: {event:'mouseover',delay:500},
                hide: {event:'mouseout',delay:500, fixed:true},
                style: { 
@@ -130,12 +127,10 @@
                 }
                });
              });
-             </script><a class="gloss" href="#" id="roles">roles</a> to authenticate
-  against. These are used to allow access to
-  services and <script>
+             </script><a class="gloss" href="#" id="ロール">ロール</a>をセットアップします。これらは次のセクションに記述されるサービスと<script>
              $(document).ready(function(){
-               $("a.gloss#endpoints").qtip({
-               content: '<strong>endpoints:</strong> ',
+               $("a.gloss#エンドポイント").qtip({
+               content: '<strong>エンドポイント:</strong> <p>API エンドポイントを参照。</p>',
                show: {event:'mouseover',delay:500},
                hide: {event:'mouseout',delay:500, fixed:true},
                style: { 
@@ -160,8 +155,7 @@
                 }
                });
              });
-             </script><a class="gloss" href="#" id="endpoints">endpoints</a>, described
-  in the next section.</p><p>Typically, you would indicate a user and password to
+             </script><a class="gloss" href="#" id="エンドポイント">エンドポイント</a>へのアクセスを許可するために使用されます。</p><p>Typically, you would indicate a user and password to
     authenticate with the Identity Service. At this point, however, we
     have not created any users, so we have to use the authorization
     token created in the previous section. You can pass this with the
@@ -181,7 +175,7 @@
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "ユーザー、プロジェクト、ロールの定義 in OpenStack インストールガイド Ubuntu 12.04 (LTS) 版  - havana";
-	  var buildTime = "Built: 2014-02-12T03:52:56+09:00";
+	  var buildTime = "Built: 2014-02-12T09:53:01+09:00";
 	  var gitSha = "git SHA: eb6a27bdc45fcce8e6968e52987a647040b6f9c7";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);

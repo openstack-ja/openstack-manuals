@@ -6,7 +6,7 @@
 <title>用語集 - OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版
    - havana</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版"/><link rel="up" href="index.html" title="OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版"/><link rel="prev" href="app_community_support.html" title="付録B コミュニティのサポート"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
             //The id for tree cookie
-            var treeCookieId = "treeview-9641";
+            var treeCookieId = "treeview-9637";
             var language = "en";
             var w = new Object();
             //Localization
@@ -42,7 +42,9 @@
       <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div class="glossary"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="d6e4994"> </a>用語集</h2></div></div></div><dl><dt>API</dt><dd><p>アプリケーションプログラミングインターフェース。</p></dd><dt>認証</dt><dd><p>The process that confirms that the user,
                     process, or client is really who they say they are
                     through private key, secret token, password,
-                    fingerprint, or similar method.</p></dd><dt>コントローラーノード</dt><dd><p>クラウドコントローラーノードの別名。</p></dd><dt>クレデンシャル</dt><dd><p>ユーザーだけが知っているデータもしくはユーザーだけがアクセスできるデータで、認証時にサーバーに示され、ユーザーが誰であるかの確認に使用される。例：パスワード、シークレットキー、デジタル認証、フィンガープリントなど。</p></dd><dt>DHCP</dt><dd><p>Dynamic Host Configuration Protocol. A network
+                    fingerprint, or similar method.</p></dd><dt>コンピュートノード</dt><dd><p>A node that runs the <code class="systemitem">nova-compute</code> daemon, a VM
+                    instance that provides a wide range of services
+                    such as a web services and analytics.</p></dd><dt>コントローラーノード</dt><dd><p>クラウドコントローラーノードの別名。</p></dd><dt>クレデンシャル</dt><dd><p>ユーザーだけが知っているデータもしくはユーザーだけがアクセスできるデータで、認証時にサーバーに示され、ユーザーが誰であるかの確認に使用される。例：パスワード、シークレットキー、デジタル認証、フィンガープリントなど。</p></dd><dt>DHCP</dt><dd><p>Dynamic Host Configuration Protocol. A network
                     protocol that configures devices that are
                     connected to a network so they can communicate on
                     that network by using the Internet Protocol (IP).
@@ -52,7 +54,7 @@
                     one or more DNS server addresses from a DHCP
                     server.</p></dd><dt>エンドポイント</dt><dd><p>API エンドポイントを参照。</p></dd><dt>ファイアウォール</dt><dd><p>Used to restrict communications between hosts
                     and/or nodes, implemented in Compute using iptables,
-                    arptables, ip6tables and etables.</p></dd><dt>IaaS</dt><dd><p>Infrastructure as a Service. IaaS is a provision
+                    arptables, ip6tables and etables.</p></dd><dt>ハイパーバイザー</dt><dd><p>VM のアクセスを実際の下位ハードウェアに仲介して制御するソフトウェア。</p></dd><dt>IaaS</dt><dd><p>Infrastructure as a Service. IaaS is a provision
                     model in which an organization outsources the
                     equipment used to support operations, including
                     storage, hardware, servers and networking
@@ -79,7 +81,8 @@
                 orchestrates multiple cloud applications for
                 OpenStack. The project name of Orchestration is
                 heat.</p></dd><dt>ポート</dt><dd><p>A virtual network port within Networking, VIFs /
-                    vNICs are connected to a port.</p></dd><dt>Qpid</dt><dd><p>OpenStackでサポートされているメッセージキューのソフトウェア。RabbitMQの代替品。</p></dd><dt>RabbitMQ</dt><dd><p>OpenStackでデフォルトで採用されているメッセージキューのソフトウェア。</p></dd><dt>RESTful</dt><dd><p>A kind of web service API that uses REST, or
+                    vNICs are connected to a port.</p></dd><dt>プロジェクト</dt><dd><p>A logical grouping of users within Compute, used to
+                    define quotas and access to VM images.</p></dd><dt>Qpid</dt><dd><p>OpenStackでサポートされているメッセージキューのソフトウェア。RabbitMQの代替品。</p></dd><dt>RabbitMQ</dt><dd><p>OpenStackでデフォルトで採用されているメッセージキューのソフトウェア。</p></dd><dt>RESTful</dt><dd><p>A kind of web service API that uses REST, or
                     Representational State Transfer. REST is the style
                     of architecture for hypermedia systems that is
                     used for the World Wide Web.</p></dd><dt>role</dt><dd><p>ユーザーが特定の操作の組を実行できると仮定する人格。ロールは一組の権利と権限を含みます。そのロールを仮定しているユーザーは、それらの権利と権限を継承します。</p></dd><dt>セキュリティグループ</dt><dd><p>A set of network traffic filtering rules that
@@ -97,7 +100,7 @@
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "用語集 in OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版  - havana";
-	  var buildTime = "Built: 2014-02-12T03:54:05+09:00";
+	  var buildTime = "Built: 2014-02-12T09:54:09+09:00";
 	  var gitSha = "git SHA: eb6a27bdc45fcce8e6968e52987a647040b6f9c7";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);

@@ -9,7 +9,7 @@
 <title>第5章 Image Service の設定 - OpenStack インストールガイド Ubuntu 12.04 (LTS) 版
    - havana</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Ubuntu 12.04 (LTS) 版"/><link rel="up" href="index.html" title="OpenStack インストールガイド Ubuntu 12.04 (LTS) 版"/><link rel="prev" href="cli_openrc.html" title="OpenStack RC ファイル"/><link rel="next" href="image-service-overview.html" title="Image Service の概要"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
             //The id for tree cookie
-            var treeCookieId = "treeview-9681";
+            var treeCookieId = "treeview-9677";
             var language = "en";
             var w = new Object();
             //Localization
@@ -44,10 +44,7 @@
                                     <a accesskey="n" class="navLinkNext" onclick="_gaq.push(['_trackEvent', 'Header', 'nextLink', 'click', 1]);" tabindex="5" href="image-service-overview.html">次へ</a></td></tr></table></div></div><div id="toolbar" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><div id="toolbar-left"><p class="breadcrumbs"><a href="http://docs.openstack.org/">OpenStack Manuals</a><a href="index.html">OpenStack インストールガイド Ubuntu 12.04 (LTS) 版
    - havana</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../openstack-install-guide-apt-local.pdf"><img src="../common/images/pdf.png"/></a>
        
-      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="chapter"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="ch_glance"> </a>第5章 Image Service の設定</h2></div></div></div><div class="toc"><p><strong>目次</strong></p><dl><dt><span class="section"><a href="image-service-overview.html">Image Service の概要</a></span></dt><dt><span class="section"><a href="glance-install.html">Image Service のインストール</a></span></dt><dt><span class="section"><a href="glance-verify.html">Image Service のインストールの検証</a></span></dt></dl></div><p>The OpenStack Image Service enables users to discover,
-        register, and retrieve virtual machine images. Also known as
-        the glance project, the Image Service offers a
-        <script>
+      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="chapter"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="ch_glance"> </a>第5章 Image Service の設定</h2></div></div></div><div class="toc"><p><strong>目次</strong></p><dl><dt><span class="section"><a href="image-service-overview.html">Image Service の概要</a></span></dt><dt><span class="section"><a href="glance-install.html">Image Service のインストール</a></span></dt><dt><span class="section"><a href="glance-verify.html">Image Service のインストールの検証</a></span></dt></dl></div><p>OpenStack Image Service により、ユーザーが仮想マシンイメージを検索、登録、取得できるようになります。Glance プロジェクトとしても知られている Image Service は、仮想マシンイメージを問い合わせ、実際のイメージを取得できるよう、<script>
              $(document).ready(function(){
                $("a.gloss#REST").qtip({
                content: '<strong>REST:</strong> <p>A kind of web service API that uses REST, or                     Representational State Transfer. REST is the style                     of architecture for hypermedia systems that is                     used for the World Wide Web.</p>',
@@ -75,18 +72,13 @@
                 }
                });
              });
-             </script><a class="gloss" href="#" id="REST">REST</a> API that
-        enables you to query virtual machine image metadata and
-        retrieve an actual image. Virtual machine images made
-        available through the Image Service can be stored in a variety
-        of locations from simple file systems to object-storage
-        systems like OpenStack Object Storage.</p><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[重要]" src="../common/images/admon/important.png"/></td><th align="left">重要</th></tr><tr><td align="left" valign="top"><p>簡単のため、このガイドは Image Service が <code class="literal">file</code> バックエンドを使用するよう設定します。これは、Image Service にアップロードされたイメージがこのサービスをホストしているシステムにあるディレクトリに保存されることを意味します。このディレクトリはデフォルトで <code class="filename">/var/lib/glance/images/</code> です。</p><p>続行する前に、仮想マシンイメージとスナップショットを保存するために、このディレクトリに十分な空き容量がシステムにあることを確認してください。最小限で、検証環境で Image Service により使用するために、数ギガバイトの容量が利用可能であるべきです。</p></td></tr></table></div></div><script type="text/javascript" src="../common/main.js"><!----></script><div class="logabug" style="text-align: center"><a id="logABugLink2" href="" target="_blank">Log a bug against this page</a></div><script language="JavaScript">
+             </script><a class="gloss" href="#" id="REST">REST</a> API を提供します。Image Service 経由で利用可能な仮想マシンイメージは、単なるファイルシステムから OpenStack Object Storage のようなオブジェクトストレージシステムまで、さまざまな場所に保存できます。</p><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[重要]" src="../common/images/admon/important.png"/></td><th align="left">重要</th></tr><tr><td align="left" valign="top"><p>簡単のため、このガイドは Image Service が <code class="literal">file</code> バックエンドを使用するよう設定します。これは、Image Service にアップロードされたイメージがこのサービスをホストしているシステムにあるディレクトリに保存されることを意味します。このディレクトリはデフォルトで <code class="filename">/var/lib/glance/images/</code> です。</p><p>続行する前に、仮想マシンイメージとスナップショットを保存するために、このディレクトリに十分な空き容量がシステムにあることを確認してください。最小限で、検証環境で Image Service により使用するために、数ギガバイトの容量が利用可能であるべきです。</p></td></tr></table></div></div><script type="text/javascript" src="../common/main.js"><!----></script><div class="logabug" style="text-align: center"><a id="logABugLink2" href="" target="_blank">Log a bug against this page</a></div><script language="JavaScript">
 	  var sourceFile = "source File: file:/home/openstack/docs/manuals/generated/ja/install-guide/ch_glance.xml"
 	  var xmlId = "xml:id: ch_glance"
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "第5章 Image Service の設定 in OpenStack インストールガイド Ubuntu 12.04 (LTS) 版  - havana";
-	  var buildTime = "Built: 2014-02-12T03:52:58+09:00";
+	  var buildTime = "Built: 2014-02-12T09:53:02+09:00";
 	  var gitSha = "git SHA: eb6a27bdc45fcce8e6968e52987a647040b6f9c7";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);
