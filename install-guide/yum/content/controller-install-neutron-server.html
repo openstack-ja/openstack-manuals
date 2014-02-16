@@ -9,7 +9,7 @@
 <title>コントローラー - OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版
    - havana</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版"/><link rel="up" href="demo_installions.html" title="インストール"/><link rel="prev" href="demo_installions.html" title="インストール"/><link rel="next" href="network-node-install-plugin-openvswitch-agent.html" title="ネットワークノード"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
             //The id for tree cookie
-            var treeCookieId = "treeview-9648";
+            var treeCookieId = "treeview-9643";
             var language = "en";
             var w = new Object();
             //Localization
@@ -46,7 +46,7 @@
                                     <a accesskey="n" class="navLinkNext" onclick="_gaq.push(['_trackEvent', 'Header', 'nextLink', 'click', 1]);" tabindex="5" href="network-node-install-plugin-openvswitch-agent.html">次へ</a></td></tr></table></div></div><div id="toolbar" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><div id="toolbar-left"><p class="breadcrumbs"><a href="http://docs.openstack.org/">OpenStack Manuals</a><a href="index.html">OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版
    - havana</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../openstack-install-guide-yum-local.pdf"><img src="../common/images/pdf.png"/></a>
        
-      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div class="section"><div xmlns="" class="titlepage"><div><div><h5 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="controller-install-neutron-server"> </a>コントローラー</h5></div></div></div><div class="procedure"><a id="d6e3825"> </a><p class="title"><strong>コントローラーノードをインストールし、設定する方法</strong></p><ol class="procedure" type="1"><li class="step"><p>このコマンドを実行します。</p><pre class="screen"># yum install openstack-neutron</pre></li><li class="step"><p>Networking サービスを設定します。</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><code class="filename">/etc/neutron/neutron.conf</code> ファイルを編集し、これらの行を追加します。</p><pre class="programlisting brush: bash; ">core_plugin = neutron.plugins.openvswitch.ovs_neutron_plugin.OVSNeutronPluginV2
+      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div class="section"><div xmlns="" class="titlepage"><div><div><h5 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="controller-install-neutron-server"> </a>コントローラー</h5></div></div></div><div class="procedure"><a id="d6e3824"> </a><p class="title"><strong>コントローラーノードをインストールし、設定する方法</strong></p><ol class="procedure" type="1"><li class="step"><p>このコマンドを実行します。</p><pre class="screen"># yum install openstack-neutron</pre></li><li class="step"><p>Networking サービスを設定します。</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><code class="filename">/etc/neutron/neutron.conf</code> ファイルを編集し、これらの行を追加します。</p><pre class="programlisting brush: bash; ">core_plugin = neutron.plugins.openvswitch.ovs_neutron_plugin.OVSNeutronPluginV2
 auth_strategy = keystone
 fake_rabbit = False
 rabbit_password = <em class="replaceable"><code>RABBIT_PASS</code></em>
@@ -62,7 +62,7 @@ admin_password = <em class="replaceable"><code>NEUTRON_PASS</code></em></pre></l
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "コントローラー in OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版  - havana";
-	  var buildTime = "Built: 2014-02-16T06:54:29+09:00";
+	  var buildTime = "Built: 2014-02-16T21:53:59+09:00";
 	  var gitSha = "git SHA: 254befa4824ef2b3f34be2e54eddcfabf082a6d3";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);

@@ -9,7 +9,7 @@
 <title>論理ネットワーク設定 - OpenStack インストールガイド Ubuntu 12.04 (LTS) 版
    - havana</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Ubuntu 12.04 (LTS) 版"/><link rel="up" href="section_networking-provider-router_with-private-networks.html" title="プライベートネットワークを持つプロバイダールーター"/><link rel="prev" href="compute-node-install-openvswitch.html" title="コンピュートノード"/><link rel="next" href="section_use-cases-single-router.html" title="ユースケース: プライベートネットワークを持つプロバイダールーター"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
             //The id for tree cookie
-            var treeCookieId = "treeview-9688";
+            var treeCookieId = "treeview-9683";
             var language = "en";
             var w = new Object();
             //Localization
@@ -50,7 +50,7 @@
 export OS_USERNAME=admin
 export OS_PASSWORD=<em class="replaceable"><code>ADMIN_PASS</code></em>
 export OS_AUTH_URL="http://<em class="replaceable"><code>controller</code></em>:5000/v2.0/"</pre></li><li class="listitem"><p><code class="filename">adminrc</code> ファイルにある環境変数をエクスポートします。</p><pre class="screen"># source adminrc</pre></li></ul></div><p><code class="literal">admin</code> プロジェクトは、他のプロジェクトからアクセスできるが、変更できない
-リソースを定義できます。これらのリソースには、プロバイダーネットワークやそれに関連付けられたルーターがあります。</p><p><code class="literal">admin</code> ユーザーが <code class="literal">tenant_A</code> としてネットワークとサブネットを作成します。</p><p><code class="literal">tenant_A</code> のユーザーもこれらの手順を実行できます。</p><div class="procedure"><a id="d6e3907"> </a><p class="title"><strong>内部ネットワークの設定</strong></p><ol class="procedure" type="1"><li class="step"><p><code class="literal">tenant_A</code> のプロジェクト ID を取得します。</p><pre class="screen"># TENANT_ID=$(keystone tenant-list | awk '/ tenant_A / { print $2 }')</pre></li><li class="step"><p><code class="literal">tenant_A</code> プロジェクト用の内部ネットワーク <code class="literal">net1</code> を作成します。</p><pre class="screen"># neutron net-create --tenant-id $TENANT_ID net1
+リソースを定義できます。これらのリソースには、プロバイダーネットワークやそれに関連付けられたルーターがあります。</p><p><code class="literal">admin</code> ユーザーが <code class="literal">tenant_A</code> としてネットワークとサブネットを作成します。</p><p><code class="literal">tenant_A</code> のユーザーもこれらの手順を実行できます。</p><div class="procedure"><a id="d6e3906"> </a><p class="title"><strong>内部ネットワークの設定</strong></p><ol class="procedure" type="1"><li class="step"><p><code class="literal">tenant_A</code> のプロジェクト ID を取得します。</p><pre class="screen"># TENANT_ID=$(keystone tenant-list | awk '/ tenant_A / { print $2 }')</pre></li><li class="step"><p><code class="literal">tenant_A</code> プロジェクト用の内部ネットワーク <code class="literal">net1</code> を作成します。</p><pre class="screen"># neutron net-create --tenant-id $TENANT_ID net1
 +---------------------------+--------------------------------------+
 | Field                     | Value                                |
 +---------------------------+--------------------------------------+
@@ -83,7 +83,7 @@ export OS_AUTH_URL="http://<em class="replaceable"><code>controller</code></em>:
 | network_id       | e99a361c-0af8-4163-9feb-8554d4c37e4f       |
 | tenant_id        | e40fa60181524f9f9ee7aa1038748f08           |
 +------------------+--------------------------------------------+
-# SUBNET_ID=<em class="replaceable"><code>c395cb5d-ba03-41ee-8a12-7e792d51a167</code></em></pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[注記]" src="../common/images/admon/note.png"/></td><th align="left">注記</th></tr><tr><td align="left" valign="top"><p><code class="literal">id</code> の値はお使いのシステムにより異なります。</p></td></tr></table></div></li></ol></div><p><code class="literal">admin</code> プロジェクトで <code class="literal">admin</code> ロールを持つユーザーがこれらの手順を完了する必要があります。</p><div class="procedure"><a id="d6e3929"> </a><p class="title"><strong>ルーターの外部ネットワークの作成</strong></p><ol class="procedure" type="1"><li class="step"><p>ルーター <code class="literal">router1</code> を作成し、その ID を <code class="literal">ROUTER_ID</code> 変数に保存します。</p><pre class="screen"># neutron router-create router1
+# SUBNET_ID=<em class="replaceable"><code>c395cb5d-ba03-41ee-8a12-7e792d51a167</code></em></pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[注記]" src="../common/images/admon/note.png"/></td><th align="left">注記</th></tr><tr><td align="left" valign="top"><p><code class="literal">id</code> の値はお使いのシステムにより異なります。</p></td></tr></table></div></li></ol></div><p><code class="literal">admin</code> プロジェクトで <code class="literal">admin</code> ロールを持つユーザーがこれらの手順を完了する必要があります。</p><div class="procedure"><a id="d6e3928"> </a><p class="title"><strong>ルーターの外部ネットワークの作成</strong></p><ol class="procedure" type="1"><li class="step"><p>ルーター <code class="literal">router1</code> を作成し、その ID を <code class="literal">ROUTER_ID</code> 変数に保存します。</p><pre class="screen"># neutron router-create router1
 +-----------------------+--------------------------------------+
 | Field                 | Value                                |
 +-----------------------+--------------------------------------+
@@ -131,7 +131,7 @@ Added interface to router 685f64e7-a020-4fdf-a8ad-e41194ae124b</pre><div class="
 | network_id       | 8858732b-0400-41f6-8e5c-25590e67ffeb             |
 | tenant_id        | 48fb81ab2f6b409bafac8961a594980f                 |
 +------------------+--------------------------------------------------+</pre></li><li class="step"><p>ルーターのゲートウェイを外部ネットワークに設定します。</p><pre class="screen"># neutron router-gateway-set $ROUTER_ID $EXTERNAL_NETWORK_ID
-Set gateway for router 685f64e7-a020-4fdf-a8ad-e41194ae124b</pre></li></ol></div><p><code class="literal">tenant_A</code> のユーザーがこれらの手順を完了します。そのため、環境変数のクレデンシャルは前の手順のものと異なります。</p><div class="procedure"><a id="d6e3967"> </a><p class="title"><strong>Floating IP アドレスの確保</strong></p><ol class="procedure" type="1"><li class="step"><p>仮想マシンの起動後に Floating IP アドレスを割り当てられます。仮想マシン用に割り当てられたポートの ID を <code class="literal">PORT_ID</code> 変数に保存します。</p><pre class="screen"># nova list
+Set gateway for router 685f64e7-a020-4fdf-a8ad-e41194ae124b</pre></li></ol></div><p><code class="literal">tenant_A</code> のユーザーがこれらの手順を完了します。そのため、環境変数のクレデンシャルは前の手順のものと異なります。</p><div class="procedure"><a id="d6e3966"> </a><p class="title"><strong>Floating IP アドレスの確保</strong></p><ol class="procedure" type="1"><li class="step"><p>仮想マシンの起動後に Floating IP アドレスを割り当てられます。仮想マシン用に割り当てられたポートの ID を <code class="literal">PORT_ID</code> 変数に保存します。</p><pre class="screen"># nova list
 +--------------------------------------+--------+--------+---------------+
 |                  ID                  |  Name  | Status |    Networks   |
 +--------------------------------------+--------+--------+---------------+
@@ -176,7 +176,7 @@ PING 7.7.7.131 (7.7.7.131) 56(84) bytes of data.
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "論理ネットワーク設定 in OpenStack インストールガイド Ubuntu 12.04 (LTS) 版  - havana";
-	  var buildTime = "Built: 2014-02-16T06:53:32+09:00";
+	  var buildTime = "Built: 2014-02-16T21:53:03+09:00";
 	  var gitSha = "git SHA: 254befa4824ef2b3f34be2e54eddcfabf082a6d3";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);
