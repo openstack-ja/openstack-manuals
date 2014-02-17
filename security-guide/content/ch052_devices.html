@@ -93,8 +93,8 @@ CFLAGS="-arch x86_64 -fstack-protector-all -Wstack-protector --param ssp-buffer-
 system_u:object_r:svirt_image_t:SystemLow image1
 system_u:object_r:svirt_image_t:SystemLow image2
 system_u:object_r:svirt_image_t:SystemLow image3
-system_u:object_r:svirt_image_t:SystemLow image4</pre><p>The svirt_image_t label uniquely identifies image files on disk, allowing for the SELinux policy to restrict access. When a KVM-based Compute image is powered on, sVirt appends a random numerical identifier to the image. sVirt is technically capable of assigning numerical identifiers to 524,288 virtual machines per hypervisor node, however OpenStack deployments are highly unlikely to encounter this limitation.</p><p>This example shows the sVirt category identifier:</p><pre class="screen">system_u:object_r:svirt_image_t:s0:c87,c520 image1
-system_u:object_r:svirt_image_t:s0:419,c172 image2</pre></div><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="ch052_devices-idp527632"> </a>ブーリアン</h3></div></div></div><p>To ease the administrative burden of managing SELinux, many enterprise Linux platforms utilize SELinux Booleans to quickly change the security posture of sVirt.</p><p>Red Hat Enterprise Linux ベースの KVM 環境は以下の sVirt ブーリアンを利用します。</p><table rules="all" width="80%" id="d6e2682"><colgroup><col/><col/></colgroup><tbody><tr>
+system_u:object_r:svirt_image_t:SystemLow image4</pre><p>The svirt_image_t label uniquely identifies image files on disk, allowing for the SELinux policy to restrict access. When a KVM-based Compute image is powered on, sVirt appends a random numerical identifier to the image. sVirt is technically capable of assigning numerical identifiers to 524,288 virtual machines per hypervisor node, however OpenStack deployments are highly unlikely to encounter this limitation.</p><p>この例は sVirt カテゴリー識別子を示します。</p><pre class="screen">system_u:object_r:svirt_image_t:s0:c87,c520 image1
+system_u:object_r:svirt_image_t:s0:419,c172 image2</pre></div><div class="section"><div xmlns="" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="ch052_devices-idp527632"> </a>ブーリアン</h3></div></div></div><p>SELinux の管理負担を減らすために、多くのエンタープライズ Linux プラットフォームは sVirt のセキュリティ設定を簡単に変更するために、SELinux ブーリアンを利用します。</p><p>Red Hat Enterprise Linux ベースの KVM 環境は以下の sVirt ブーリアンを利用します。</p><table rules="all" width="80%" id="d6e2682"><colgroup><col/><col/></colgroup><tbody><tr>
                 <td><p><span class="bold"><strong>sVirt SELinux ブーリアン</strong></span></p></td>
                 <td><p><span class="bold"><strong>説明</strong></span></p></td>
               </tr><tr>
@@ -127,7 +127,7 @@ system_u:object_r:svirt_image_t:s0:419,c172 image2</pre></div><div class="sectio
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "第41章 仮想化層のセキュリティ強化 in OpenStack セキュリティガイド  - havana";
-	  var buildTime = "Built: 2014-02-17T00:52:01+09:00";
+	  var buildTime = "Built: 2014-02-17T09:52:23+09:00";
 	  var gitSha = "git SHA: 254befa4824ef2b3f34be2e54eddcfabf082a6d3";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);
