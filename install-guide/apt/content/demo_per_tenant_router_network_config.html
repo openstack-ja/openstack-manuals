@@ -9,7 +9,7 @@
 <title>論理ネットワークの設定 - OpenStack インストールガイド Ubuntu 12.04 (LTS) 版
    - havana</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Ubuntu 12.04 (LTS) 版"/><link rel="up" href="section_networking-routers-with-private-networks.html" title="プライベートネットワークを持つプロジェクトごとのルーター"/><link rel="prev" href="demo_routers_with_private_networks_installions.html" title="インストール"/><link rel="next" href="section_use-cases-tenant-router.html" title="ユースケース: プライベートネットワークを持つプロジェクトごとのルーター"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
             //The id for tree cookie
-            var treeCookieId = "treeview-9686";
+            var treeCookieId = "treeview-9685";
             var language = "en";
             var w = new Object();
             //Localization
@@ -99,14 +99,7 @@ Created a new subnet:
 | name             |                                            |
 | network_id       | 2c757c9e-d3d6-4154-9a77-336eb99bd573       |
 | tenant_id        | b7445f221cda4f4a8ac7db6b218b1339           |
-+------------------+--------------------------------------------+</pre><p><span class="bold"><strong>
-                        <code class="literal">provider:network_type local</code>
-                        means that Networking does not have to realize
-                        this network through provider network.
-                            <code class="literal">router:external true</code>
-                        means that an external network is created
-                        where you can create the floating IP and router
-                        gateway port.</strong></span></p></li><li class="step"><p>Add an IP on the external network to br-ex.</p><p>br-ex は外部ネットワークブリッジであるので、IP 30.0.0.100/24 を br-ex に追加し、ネットワークノードから仮想マシンの Floating IP に ping します。</p><pre class="screen"># ip addr add 30.0.0.100/24 dev br-ex
++------------------+--------------------------------------------+</pre><p><span class="bold"><strong><code class="literal">provider:network_type local</code> は、Networking がプロバイダーネットワークからこのネットワークを理解する必要がないことを意味します。<code class="literal">router:external true</code> は、Floating IP とルーターゲートウェイポートを作成できる外部ネットワークが作成されることを意味します。</strong></span></p></li><li class="step"><p>br-ex に外部ネットワークの IP を追加します。</p><p>br-ex は外部ネットワークブリッジであるので、IP 30.0.0.100/24 を br-ex に追加し、ネットワークノードから仮想マシンの Floating IP に ping します。</p><pre class="screen"># ip addr add 30.0.0.100/24 dev br-ex
 # ip link set br-ex up</pre></li><li class="step"><p>TenantA を取り扱います。</p><p>TenantA 用にプライベートネットワーク、サブネット、サーバー、ルーター、Floating IP を作成します。</p><ol type="a" class="substeps"><li class="step"><p>TenantA 用のネットワークを作成します。</p><pre class="screen"># neutron --os-tenant-name TenantA --os-username UserA --os-password password \
  --os-auth-url=http://localhost:5000/v2.0 net-create TenantA-Net
 Created a new network:
@@ -216,7 +209,7 @@ PING 192.168.1.1 (192.168.1.1) 56(84) bytes of data.
 --- 192.168.1.1 ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 2003ms
 rtt min/avg/max/mdev = 1.234/1.495/1.745/0.211 ms
-</pre></li><li class="step"><p>Ping the floating IP of TenantA's server:</p><pre class="screen">$ ping 30.0.0.2
+</pre></li><li class="step"><p>TenantA のサーバーの Floating IP に ping します。</p><pre class="screen">$ ping 30.0.0.2
 PING 30.0.0.2 (30.0.0.2) 56(84) bytes of data.
 64 bytes from 30.0.0.2: icmp_req=1 ttl=63 time=45.0 ms
 64 bytes from 30.0.0.2: icmp_req=2 ttl=63 time=0.898 ms
@@ -266,11 +259,7 @@ rtt min/avg/max/mdev = 0.898/15.621/45.027/20.793 ms
 | status                    | ACTIVE                               |
 | subnets                   | 38f0b2f0-9f98-4bf6-9520-f4abede03300 |
 | tenant_id                 | 2b4fec24e62e4ff28a8445ad83150f9d     |
-+---------------------------+--------------------------------------+</pre><p>You can see GRE tunnel IDs (such as,
-                            provider:segmentation_id) 2 and 3. And
-                            also note the network IDs and subnet IDs
-                            because you use them to create VMs and
-                            the router.</p></li><li class="step"><p>TenantC-Net1 に TenantC 用のサーバー TenantC-VM1 を作成します。</p><pre class="screen"># nova --os-tenant-name TenantC --os-username UserC --os-password password  \
++---------------------------+--------------------------------------+</pre><p>(provider:segmentation_id のような) GRE トンネル ID 2 と 3 を参照できます。仮想マシンとルーターを作成するために、それらを使用するので、ネットワーク ID とサブネット ID も記録します。</p></li><li class="step"><p>TenantC-Net1 に TenantC 用のサーバー TenantC-VM1 を作成します。</p><pre class="screen"># nova --os-tenant-name TenantC --os-username UserC --os-password password  \
   --os-auth-url=http://localhost:5000/v2.0 boot --image tty --flavor 1 \
   --nic net-id=91309738-c317-40a3-81bb-bed7a3917a85 TenantC_VM1</pre></li><li class="step"><p>TenantC-Net2 に TenantC 用のサーバー TenantC-VM3 を作成します。</p><pre class="screen"># nova --os-tenant-name TenantC --os-username UserC --os-password password \
   --os-auth-url=http://localhost:5000/v2.0 boot --image tty --flavor 1 \
@@ -295,7 +284,7 @@ rtt min/avg/max/mdev = 0.898/15.621/45.027/20.793 ms
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "論理ネットワークの設定 in OpenStack インストールガイド Ubuntu 12.04 (LTS) 版  - havana";
-	  var buildTime = "Built: 2014-02-20T06:53:31+09:00";
+	  var buildTime = "Built: 2014-02-20T09:53:10+09:00";
 	  var gitSha = "git SHA: 873b4b4c7cc9883fc199e59471dd57be9f1f4a38";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);

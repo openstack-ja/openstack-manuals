@@ -9,7 +9,7 @@
 <title>インストール - OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版
    - havana</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版"/><link rel="up" href="section_networking-routers-with-private-networks.html" title="プライベートネットワークを持つプロジェクトごとのルーター"/><link rel="prev" href="section_networking-routers-with-private-networks.html" title="プライベートネットワークを持つプロジェクトごとのルーター"/><link rel="next" href="demo_per_tenant_router_network_config.html" title="論理ネットワークの設定"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
             //The id for tree cookie
-            var treeCookieId = "treeview-9642";
+            var treeCookieId = "treeview-9641";
             var language = "en";
             var w = new Object();
             //Localization
@@ -86,11 +86,7 @@ local_ip = 9.181.89.202</pre><p>ネットワークノード:</p><pre class="prog
 tenant_network_type = gre
 tunnel_id_ranges = 1:1000
 enable_tunneling = True
-local_ip = 9.181.89.203</pre></li><li class="step"><p>統合ブリッジ <span class="bold"><strong>br-int</strong></span> を作成します。</p><pre class="screen"># ovs-vsctl --may-exist add-br br-int</pre></li><li class="step"><p>etworking L2 エージェントを起動します。</p><p>The Networking Open vSwitch L2 agent can
-                            be a service of the operating system. The
-                            command to start depends on your operating
-                            system. The following command runs the
-                            service directly:</p><pre class="screen"># neutron-openvswitch-agent --config-file /etc/neutron/plugins/openvswitch/ovs_neutron_plugin.ini \
+local_ip = 9.181.89.203</pre></li><li class="step"><p>統合ブリッジ <span class="bold"><strong>br-int</strong></span> を作成します。</p><pre class="screen"># ovs-vsctl --may-exist add-br br-int</pre></li><li class="step"><p>etworking L2 エージェントを起動します。</p><p>Networking Open vSwitch L2 エージェントはオペレーティングシステムのサービスになれます。サービスを起動するコマンドはお使いのオペレーティングシステムに依存します。以下のコマンドはサービスを直接実行します。</p><pre class="screen"># neutron-openvswitch-agent --config-file /etc/neutron/plugins/openvswitch/ovs_neutron_plugin.ini \
   --config-file /etc/neutron/neutron.conf</pre></li></ol></div></li><li class="listitem"><p><span class="bold"><strong>Network ノード DHCP エージェント</strong></span></p><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>DHCP エージェントをインストールします。</p></li><li class="step"><p>Networking の設定ファイル <code class="filename"> /etc/neutron/neutron.conf</code> を更新します。</p><pre class="programlisting brush: bash; ">[DEFAULT]
 core_plugin = neutron.plugins.openvswitch.ovs_neutron_plugin.OVSNeutronPluginV2
 control_exchange = neutron
@@ -100,18 +96,14 @@ notification_driver = neutron.openstack.common.notifier.rabbit_notifier
 allow_overlapping_ips = True</pre><p><span class="bold"><strong>TenantA と TenantC が同じサブネットを使用するため、<code class="literal">allow_overlapping_ips</code> を設定します。</strong></span></p></li><li class="step"><p>DHCP の <code class="filename">/etc/neutron/dhcp_agent.ini</code> 設定ファイルを更新します。</p><pre class="programlisting brush: bash; ">interface_driver = neutron.agent.linux.interface.OVSInterfaceDriver</pre></li><li class="step"><p>DHCP エージェントを起動します。</p><p>Networking DHCP エージェントはオペレーティングシステムのサービスになれます。サービスを起動するコマンドはお使いのオペレーティングシステムに依存します。以下のコマンドはサービスを直接実行します。</p><pre class="screen"># neutron-dhcp-agent --config-file /etc/neutron/neutron.conf \
   --config-file /etc/neutron/dhcp_agent.ini</pre></li></ol></div></li><li class="listitem"><p><span class="bold"><strong>ネットワークノードの L3 エージェント</strong></span></p><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>L3 エージェントをインストールします。</p></li><li class="step"><p>外部ネットワークブリッジの追加</p><pre class="screen"># ovs-vsctl add-br br-ex</pre></li><li class="step"><p>外部ネットワークに接続される物理インターフェース、たとえば eth0 をこのブリッジに追加します。</p><pre class="screen"># ovs-vsctl add-port br-ex eth0</pre></li><li class="step"><p>L3 設定ファイル <code class="filename"> /etc/neutron/l3_agent.ini</code> を更新します。</p><pre class="programlisting brush: bash; ">[DEFAULT]
 interface_driver=neutron.agent.linux.interface.OVSInterfaceDriver
-use_namespaces=True</pre><p><span class="bold"><strong>TenantA と TenantC がオーバーラップするサブネットを持ち、ルーターが 1 つの L3 エージェントのネットワークノードにホストされるので、<code class="literal">use_namespaces</code> オプション (デフォルトは True) を設定します。</strong></span></p></li><li class="step"><p>L3 エージェントを開始します。</p><p>The Networking L3 agent can be a service
-                            of the operating system. The command to start
-                            the service depends on your operating
-                            system. The following command starts the
-                            agent directly:</p><pre class="screen"># neutron-l3-agent --config-file /etc/neutron/neutron.conf \
+use_namespaces=True</pre><p><span class="bold"><strong>TenantA と TenantC がオーバーラップするサブネットを持ち、ルーターが 1 つの L3 エージェントのネットワークノードにホストされるので、<code class="literal">use_namespaces</code> オプション (デフォルトは True) を設定します。</strong></span></p></li><li class="step"><p>L3 エージェントを開始します。</p><p>Networking L3 エージェントはオペレーティングシステムのサービスになれます。サービスを起動するコマンドはお使いのオペレーティングシステムに依存します。以下のコマンドはサービスを直接実行します。</p><pre class="screen"># neutron-l3-agent --config-file /etc/neutron/neutron.conf \
 --config-file /etc/neutron/l3_agent.ini</pre></li></ol></div></li></ul></div></div><script type="text/javascript" src="../common/main.js"><!----></script><div class="logabug" style="text-align: center"><a id="logABugLink2" href="" target="_blank">Log a bug against this page</a></div><script language="JavaScript">
 	  var sourceFile = "source File: file:/home/openstack/docs/manuals/generated/ja/install-guide/section_neutron-per-tenant-routers-with-private-networks.xml"
 	  var xmlId = "xml:id: demo_routers_with_private_networks_installions"
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "インストール in OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版  - havana";
-	  var buildTime = "Built: 2014-02-20T06:54:28+09:00";
+	  var buildTime = "Built: 2014-02-20T09:54:06+09:00";
 	  var gitSha = "git SHA: 873b4b4c7cc9883fc199e59471dd57be9f1f4a38";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);
