@@ -81,11 +81,7 @@ db.addUser({user: "ceilometer",
   --service-id=$(keystone service-list | awk '/ metering / {print $2}') \
   --publicurl=http://<em class="replaceable"><code>controller</code></em>:8777 \
   --internalurl=http://<em class="replaceable"><code>controller</code></em>:8777 \
-  --adminurl=http://<em class="replaceable"><code>controller</code></em>:8777</pre></li><li class="step"><p>Start the <code class="systemitem">openstack-ceilometer-api</code>, <code class="systemitem">openstack-ceilometer-central</code>,
-          <code class="systemitem">openstack-ceilometer-collector</code>,
-          ,
-          and 
-          services and configure them to start when the system boots:</p><pre class="screen"># service openstack-ceilometer-api start
+  --adminurl=http://<em class="replaceable"><code>controller</code></em>:8777</pre></li><li class="step"><p> <code class="systemitem">openstack-ceilometer-api</code>、<code class="systemitem">openstack-ceilometer-central</code>、<code class="systemitem">openstack-ceilometer-collector</code>、、 サービスを起動し、システムの起動時にそれらが起動するよう設定します。</p><pre class="screen"># service openstack-ceilometer-api start
 # service openstack-ceilometer-central start
 # service openstack-ceilometer-collector start
 # chkconfig openstack-ceilometer-api on
@@ -96,7 +92,7 @@ db.addUser({user: "ceilometer",
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "Telemetry モジュールのインストール in OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版  - havana";
-	  var buildTime = "Built: 2014-02-22T06:54:40+09:00";
+	  var buildTime = "Built: 2014-02-22T09:54:07+09:00";
 	  var gitSha = "git SHA: 73f8c4601548a91865bc463c8175e8b9e257a905";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);
