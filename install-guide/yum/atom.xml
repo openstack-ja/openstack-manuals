@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
-   <title>OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版 havana revision history</title>
+   <title>OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版 icehouse revision history</title>
    <link href="http://docs.openstack.org/local/install-guide/install/yum/atom.xml" rel="self"/>
    <link href="http://docs.openstack.org/local/install-guide/install/yum/content//index.html"/>
    <id>openstack-install-manual-grizzly</id>
-   <updated>2014-02-28T03:54:08+09:00</updated>
+   <updated>2014-02-28T06:54:32+09:00</updated>
    <entry>
       <title>2013-10-25</title>
       <link href="http://docs.openstack.org/local/install-guide/install/yum/content//index.html" type="text/html"/>

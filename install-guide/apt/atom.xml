@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
-   <title>OpenStack インストールガイド Ubuntu 12.04 (LTS) 版 havana revision history</title>
+   <title>OpenStack インストールガイド Ubuntu 12.04 (LTS) 版 icehouse revision history</title>
    <link href="http://docs.openstack.org/local/install-guide/install/apt/atom.xml" rel="self"/>
    <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html"/>
    <id>openstack-install-manual-grizzly</id>
-   <updated>2014-02-28T03:53:13+09:00</updated>
+   <updated>2014-02-28T06:53:15+09:00</updated>
    <entry>
       <title>2013-10-25</title>
       <link href="http://docs.openstack.org/local/install-guide/install/apt/content//index.html" type="text/html"/>
