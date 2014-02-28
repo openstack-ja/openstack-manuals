@@ -9,7 +9,7 @@
 <title>Identity Service のインストール - OpenStack インストールガイド Ubuntu 12.04 (LTS) 版
    - icehouse</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Ubuntu 12.04 (LTS) 版"/><link rel="up" href="ch_keystone.html" title="第3章 Identity Service の設定"/><link rel="prev" href="keystone-concepts.html" title="Identity Service の概念"/><link rel="next" href="keystone-users.html" title="ユーザー、プロジェクト、ロールの定義"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
             //The id for tree cookie
-            var treeCookieId = "treeview-9707";
+            var treeCookieId = "treeview-9705";
             var language = "en";
             var w = new Object();
             //Localization
@@ -46,9 +46,7 @@
                                     <a accesskey="n" class="navLinkNext" onclick="_gaq.push(['_trackEvent', 'Header', 'nextLink', 'click', 1]);" tabindex="5" href="keystone-users.html">次へ</a></td></tr></table></div></div><div id="toolbar" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><div id="toolbar-left"><p class="breadcrumbs"><a href="http://docs.openstack.org/">OpenStack Manuals</a><a href="index.html">OpenStack インストールガイド Ubuntu 12.04 (LTS) 版
    - icehouse</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../openstack-install-guide-apt-local.pdf"><img src="../common/images/pdf.png"/></a>
        
-      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="keystone-install"> </a>Identity Service のインストール</h2></div></div></div><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>OpenStack Identity Service と <span class="application">python-keystoneclient</span> (依存関係) をコントローラーノードにインストールします。</p><pre class="screen"># apt-get install keystone</pre></li><li class="step"><p>Identity Service は情報を保存するためにデータベースを使用します。設定ファイルでデータベースの場所を指定します。このガイドでは、コントローラーノードにユーザー名 <code class="literal">keystone</code> で MySQL データベースを使用します。<code class="literal"><em class="replaceable"><code>KEYSTONE_DBPASS</code></em></code> をデータベースのユーザーの適切なパスワードで置き換えます。</p><p>Edit
-          <code class="filename">/etc/keystone/keystone.conf</code> and change
-        the <code class="literal">[database]</code> section.</p><pre class="programlisting brush: bash; ">
+      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="keystone-install"> </a>Identity Service のインストール</h2></div></div></div><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>OpenStack Identity Service と <span class="application">python-keystoneclient</span> (依存関係) をコントローラーノードにインストールします。</p><pre class="screen"># apt-get install keystone</pre></li><li class="step"><p>Identity Service は情報を保存するためにデータベースを使用します。設定ファイルでデータベースの場所を指定します。このガイドでは、コントローラーノードにユーザー名 <code class="literal">keystone</code> で MySQL データベースを使用します。<code class="literal"><em class="replaceable"><code>KEYSTONE_DBPASS</code></em></code> をデータベースのユーザーの適切なパスワードで置き換えます。</p><p><code class="filename">/etc/keystone/keystone.conf</code> を編集し、<code class="literal">[database]</code> セクションを変更します。</p><pre class="programlisting brush: bash; ">
 ...
 [database]
 # The SQLAlchemy connection string used to connect to the database
@@ -71,7 +69,7 @@ admin_token = ADMIN_TOKEN
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "Identity Service のインストール in OpenStack インストールガイド Ubuntu 12.04 (LTS) 版  - icehouse";
-	  var buildTime = "Built: 2014-02-28T18:53:05+09:00";
+	  var buildTime = "Built: 2014-02-28T21:53:08+09:00";
 	  var gitSha = "git SHA: 5154c458a61bcb7e27f5221d4b2ef3b0543d29d6";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);
