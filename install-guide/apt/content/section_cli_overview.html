@@ -43,57 +43,51 @@
                                     <a accesskey="n" class="navLinkNext" onclick="_gaq.push(['_trackEvent', 'Header', 'nextLink', 'click', 1]);" tabindex="5" href="install_clients.html">次へ</a></td></tr></table></div></div><div id="toolbar" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><div id="toolbar-left"><p class="breadcrumbs"><a href="http://docs.openstack.org/">OpenStack Manuals</a><a href="index.html">OpenStack インストールガイド Ubuntu 12.04 (LTS) 版
    - icehouse</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../openstack-install-guide-apt-local.pdf"><img src="../common/images/pdf.png"/></a>
        
-      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="section_cli_overview"> </a>概要</h2></div></div></div><p>API コールを行う簡単なコマンドを実行するために、OpenStack コマンドラインクライアントを使用できます。コマンドラインから、または作業を自動化するためのスクリプトでこれらのコマンドを実行できます。OpenStack クレデンシャルを提供する限り、そのマシンでもこれらのコマンドを実行できます。</p><p>内部的に、各クライアントコマンドは API リクエストを組み込んだ cURL コマンドを実行します。OpenStack API は、メソッド、URI、メディアタイプ、応答コードを含む HTTP プロトコルを使用する RESTful API です。</p><p>これらのオープンソースの Python クライアントは、Linux または Mac OS X システムで実行します。これらは簡単に習得し、使用できます。OpenStack の各サービスは自身のコマンドラインクライアントを持ちます。いくつかのクライアントコマンドでは、コマンドのベースになる API リクエストを表示するために、<code class="parameter">debug</code> パラメーターを指定できます。これは OpenStack API コールに慣れるために良い方法です。</p><p>The following table lists the command-line client for each
-        OpenStack service, together with its
-        package name and description.</p><table rules="all" id="d6e1229"><caption>表4.1 OpenStack services and clients</caption><col width="15%"/><col width="10%"/><col width="20%"/><col width="55%"/><thead><tr>
+      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="section_cli_overview"> </a>概要</h2></div></div></div><p>API コールを行う簡単なコマンドを実行するために、OpenStack コマンドラインクライアントを使用できます。コマンドラインから、または作業を自動化するためのスクリプトでこれらのコマンドを実行できます。OpenStack クレデンシャルを提供する限り、そのマシンでもこれらのコマンドを実行できます。</p><p>内部的に、各クライアントコマンドは API リクエストを組み込んだ cURL コマンドを実行します。OpenStack API は、メソッド、URI、メディアタイプ、応答コードを含む HTTP プロトコルを使用する RESTful API です。</p><p>これらのオープンソースの Python クライアントは、Linux または Mac OS X システムで実行します。これらは簡単に習得し、使用できます。OpenStack の各サービスは自身のコマンドラインクライアントを持ちます。いくつかのクライアントコマンドでは、コマンドのベースになる API リクエストを表示するために、<code class="parameter">debug</code> パラメーターを指定できます。これは OpenStack API コールに慣れるために良い方法です。</p><p>以下の表は、各 OpenStack サービスのコマンドラインクライアント、そのパッケージ名、説明の一覧です。</p><table rules="all" id="d6e1229"><caption>表4.1 OpenStack のサービスとクライアント</caption><col width="15%"/><col width="10%"/><col width="20%"/><col width="55%"/><thead><tr>
                 <th>サービス</th>
-                <th>Client</th>
-                <th>Package</th>
+                <th>クライアント</th>
+                <th>パッケージ</th>
                 <th>説明</th>
             </tr></thead><tbody><tr>
                 <td>Block Storage</td>
                 <td><span class="command"><strong>cinder</strong></span></td>
                 <td><span class="package">python-cinderclient</span></td>
-                <td>Create and manage volumes.</td>
+                <td>ボリュームを作成、管理します。</td>
             </tr><tr>
                 <td>Compute</td>
                 <td><span class="command"><strong>nova</strong></span></td>
                 <td><span class="package">python-novaclient</span></td>
-                <td>Create and manage images, instances, and flavors.</td>
+                <td>イメージ、インスタンス、フレーバーを作成、管理します。</td>
             </tr><tr>
-                <td>認証</td>
+                <td>Identity</td>
                 <td><span class="command"><strong>keystone</strong></span></td>
                 <td><span class="package">python-keystoneclient</span></td>
-                <td>Create and manage users, tenants, roles, endpoints, and credentials.</td>
+                <td>ユーザー、プロジェクト、ロール、エンドポイント、クレデンシャルを作成、管理します。</td>
             </tr><tr>
                 <td>Image Service</td>
                 <td><span class="command"><strong>glance</strong></span></td>
                 <td><span class="package">python-glanceclient</span></td>
-                <td>Create and manage images.</td>
+                <td>イメージを作成、管理します。</td>
             </tr><tr>
                 <td>Networking</td>
                 <td><span class="command"><strong>neutron</strong></span></td>
                 <td><span class="package">python-neutronclient</span></td>
-                <td>Configure networks for guest servers. This client was previously known as
-                    <span class="command"><strong>quantum</strong></span>.</td>
+                <td>ゲストサーバー用のネットワークを設定します。このクライアントは以前 <span class="command"><strong>quantum</strong></span> として知られていました。</td>
             </tr><tr>
                 <td>Object Storage</td>
                 <td><span class="command"><strong>swift</strong></span></td>
                 <td><span class="package">python-swiftclient</span></td>
-                <td>Gather statistics, list items, update metadata, and upload, download, and delete
-                    files stored by the Object Storage service. Gain access to an Object Storage
-                    installation for ad hoc processing.</td>
+                <td>統計情報を収集し、項目を一覧表示し、メタデータを更新し、Object Storage サービスにより保存されたファイルをアップロード、ダウンロード、削除します。</td>
             </tr><tr>
-                <td>オーケストレーション</td>
+                <td>Orchestration</td>
                 <td><span class="command"><strong>heat</strong></span></td>
                 <td><span class="package">python-heatclient</span></td>
-                <td>Launch stacks from templates, view details of running stacks including events
-                    and resources, and update and delete stacks.</td>
+                <td>テンプレートからスタックを起動し、イベントやリソースを含む実行中のスタックの詳細を表示し、スタックを更新、削除します。</td>
             </tr><tr>
                 <td>Telemetry</td>
                 <td><span class="command"><strong>ceilometer</strong></span></td>
                 <td><span class="package">python-ceilometerclient</span></td>
-                <td>Create and collect measurements across OpenStack.</td>
+                <td>OpenStack 全体の測定項目を作成、収集します。</td>
             </tr></tbody></table><p>An OpenStack <span class="command"><strong>common</strong></span> client is in
         development.</p></div><script type="text/javascript" src="../common/main.js"><!----></script><div class="logabug" style="text-align: center"><a id="logABugLink2" href="" target="_blank">Log a bug against this page</a></div><script language="JavaScript">
 	  var sourceFile = "source File: file:/home/openstack/docs/manuals/generated/ja/common/section_cli_overview.xml"
@@ -101,7 +95,7 @@
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "概要 in OpenStack インストールガイド Ubuntu 12.04 (LTS) 版  - icehouse";
-	  var buildTime = "Built: 2014-03-03T18:53:02+09:00";
+	  var buildTime = "Built: 2014-03-03T21:53:04+09:00";
 	  var gitSha = "git SHA: 678657622fb408b2f650546c7a5bbb016e0f0988";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);
