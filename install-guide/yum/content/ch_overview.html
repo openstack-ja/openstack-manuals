@@ -6,7 +6,7 @@
 <title>第1章 アーキテクチャー - OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版
    - icehouse</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版"/><link rel="up" href="index.html" title="OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版"/><link rel="prev" href="ch_preface.html" title="はじめに"/><link rel="next" href="ch_basics.html" title="第2章 オペレーティングシステムの基本設定"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
             //The id for tree cookie
-            var treeCookieId = "treeview-8994";
+            var treeCookieId = "treeview-8992";
             var language = "en";
             var w = new Object();
             //Localization
@@ -69,8 +69,7 @@
                 }
                });
              });
-             </script><a class="gloss" href="#" id="OpenStack">OpenStack</a> のコンポーネントをインストールし、一緒に動作させるために、いくつかの方法を提供します。これは「自分自身のやり方を選ぶ」ガイドを意味しますが、包括的なガイドではありません。<em class="citetitle">OpenStack 設定リファレンス</em>はすべての OpenStack サービスにあるすべてのオプションを一覧化します。インストール作業を始める前に、OpenStack のコンポーネントについて知っておくべきいくつかの事項を説明します。</p><p><a id="para1"> </a>the OpenStack project はあらゆる種類のクラウド向けのオープンソースのクラウドコンピューティングプラットフォームです。シンプルな実装、大規模なスケーラビリティ、豊富な機能を目指しています。世界中の開発者とクラウドコンピューティング技術者が the OpenStack project を作成します。</p><p><a id="para2"> </a>OpenStack provides an Infrastructure as a
-        Service (<script>
+             </script><a class="gloss" href="#" id="OpenStack">OpenStack</a> のコンポーネントをインストールし、一緒に動作させるために、いくつかの方法を提供します。これは「自分自身のやり方を選ぶ」ガイドを意味しますが、包括的なガイドではありません。<em class="citetitle">OpenStack 設定リファレンス</em>はすべての OpenStack サービスにあるすべてのオプションを一覧化します。インストール作業を始める前に、OpenStack のコンポーネントについて知っておくべきいくつかの事項を説明します。</p><p><a id="para1"> </a>the OpenStack project はあらゆる種類のクラウド向けのオープンソースのクラウドコンピューティングプラットフォームです。シンプルな実装、大規模なスケーラビリティ、豊富な機能を目指しています。世界中の開発者とクラウドコンピューティング技術者が the OpenStack project を作成します。</p><p><a id="para2"> </a>OpenStack は一組の相互に関係のあるサービスを通して Infrastructure as a Service (<script>
              $(document).ready(function(){
                $("a.gloss#IaaS").qtip({
                content: '<strong>IaaS:</strong> <p>Infrastructure as a Service. IaaS is a provision                     model in which an organization outsources the                     equipment used to support operations, including                     storage, hardware, servers and networking                     components. The service provider owns the                     equipment and is responsible for housing, running                     and maintaining it. The client typically pays on a                     per-use basis. IaaS is a model for providing cloud                     services.</p>',
@@ -98,9 +97,7 @@
                 }
                });
              });
-             </script><a class="gloss" href="#" id="IaaS">IaaS</a>) solution through a set
-        of interrelated services. Each service offers an application
-        programming interface (<script>
+             </script><a class="gloss" href="#" id="IaaS">IaaS</a>) ソリューションを提供します。各サービスはこの統合を促す application programming interface (<script>
              $(document).ready(function(){
                $("a.gloss#API").qtip({
                content: '<strong>API:</strong> <p>アプリケーションプログラミングインターフェース。</p>',
@@ -128,9 +125,7 @@
                 }
                });
              });
-             </script><a class="gloss" href="#" id="API">API</a>) that
-        facilitates this integration. Depending on your needs, you can
-        install some or all services.</p><p><a id="para3"> </a>以下の表は OpenStack アーキテクチャーを構成する OpenStack のサービスについて記載しています。</p><table rules="all" width="85%" id="table1"><caption>表1.1 OpenStack  のサービス</caption><col width="15%"/><col width="15%"/><col width="70%"/><thead><tr>
+             </script><a class="gloss" href="#" id="API">API</a>) を提供します。必要に応じて、いくつかのサービス、またはすべてのサービスをインストールできます。</p><p><a id="para3"> </a>以下の表は OpenStack アーキテクチャーを構成する OpenStack のサービスについて記載しています。</p><table rules="all" width="85%" id="table1"><caption>表1.1 OpenStack  のサービス</caption><col width="15%"/><col width="15%"/><col width="70%"/><thead><tr>
                 <th>サービス</th>
                 <th>プロジェクト名</th>
                 <th>説明</th>
@@ -719,9 +714,7 @@
              </script></a><a class="gloss" href="#" id="Heat">Heat</a><a class="link" href="http://docs.openstack.org/developer/heat/" target="_top"/>
                 </td>
                 <td>OpenStack ネイティブの REST API および CloudFormation 互換のクエリー API 経由で、ネイティブの HOT テンプレート形式または AWS CloudFormation テンプレート形式を使用することにより、複数の混合クラウドアプリケーションを統合します。</td>
-            </tr></tbody></table><div xml:lang="ja" class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="conceptual-architecture"> </a>概念アーキテクチャー</h2></div></div></div><p>以下の図は OpenStack サービス間の関連性を示します。</p><div class="figure"><a id="concept_arch"> </a><p class="title"><strong>図1.1 OpenStack の概念アーキテクチャー</strong></p><div class="figure-contents"><div class="mediaobject"><img src="figures/1/figures/openstack_havana_conceptual_arch.png"/></div></div></div><br class="figure-break"/></div><div xml:lang="ja" class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="logical-architecture"> </a>論理アーキテクチャー</h2></div></div></div><p>To design, deploy, and configure OpenStack, administrators must understand the logical architecture.</p><p>OpenStack のモジュールは以下の種別のどれかです。</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Daemon. Runs as a background process. On Linux platforms, a daemon is
-        usually installed as a service.</p></li><li class="listitem"><p>Script. Installs a virtual environment and runs tests. For
-        example, the <code class="code">run_tests.sh</code> script installs a virtual environment and runs unit tests on a service.</p></li><li class="listitem"><p>コマンドラインインターフェース (CLI)。ユーザーが使いやすいコマンドから OpenStack サービスの API コールを発行できます。</p></li></ul></div><p>以下の図は、最も一般的ですが、唯一のものではない、OpenStack クラウドのアーキテクチャーを示します。</p><div class="figure"><a id="os-logical-arch"> </a><p class="title"><strong>図1.2 論理アーキテクチャー</strong></p><div class="figure-contents"><div class="mediaobject"><img src="figures/2/figures/openstack-arch-havana-logical-v1.jpg"/></div></div></div><br class="figure-break"/><p><a class="xref" href="ch_overview.html#concept_arch" title="図1.1 OpenStack の概念アーキテクチャー">図1.1「OpenStack の概念アーキテクチャー」</a> にあるとおり、エンドユーザーはダッシュボード、CLI、API 経由で操作できます。すべてのサービスは共通の Identity Service 経由で認証されます。個々のサービスは、特権管理コマンドが必要となる場合を除いて、お互いにパブリック API 経由で相互作用します。</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="overview-architecture"> </a>サンプルアーキテクチャー</h2></div></div></div><p>このガイドにより自分自身の OpenStack の使い方を選択できるようになります。OpenStack は、さまざまな要求をコンピュート、ストレージ、ネットワークのさまざまなオプションで満たすために、いろいろと設定することができます。</p><p>このガイドは以下のサンプルアーキテクチャーを使用します。</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>レガシーなネットワークを持つ基本的なアーキテクチャー</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p><script>
+            </tr></tbody></table><div xml:lang="ja" class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="conceptual-architecture"> </a>概念アーキテクチャー</h2></div></div></div><p>以下の図は OpenStack サービス間の関連性を示します。</p><div class="figure"><a id="concept_arch"> </a><p class="title"><strong>図1.1 OpenStack の概念アーキテクチャー</strong></p><div class="figure-contents"><div class="mediaobject"><img src="figures/1/figures/openstack_havana_conceptual_arch.png"/></div></div></div><br class="figure-break"/></div><div xml:lang="ja" class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="logical-architecture"> </a>論理アーキテクチャー</h2></div></div></div><p>クラウド管理者は、OpenStack を設計、導入、設定するために、論理アーキテクチャーを理解する必要があります。</p><p>OpenStack のモジュールは以下の種別のどれかです。</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>デーモン。バックグラウンドプロセスとして動作します。Linux プラットフォームでは、デーモンは一般的にサービスとしてインストールされます。</p></li><li class="listitem"><p>スクリプト。仮想化環境をインストールし、テストを実行します。たとえば、<code class="code">run_tests.sh</code> スクリプトは、仮想化環境をインストールし、サービスでユニットテストを実行します。</p></li><li class="listitem"><p>コマンドラインインターフェース (CLI)。ユーザーが使いやすいコマンドから OpenStack サービスの API コールを発行できます。</p></li></ul></div><p>以下の図は、最も一般的ですが、唯一のものではない、OpenStack クラウドのアーキテクチャーを示します。</p><div class="figure"><a id="os-logical-arch"> </a><p class="title"><strong>図1.2 論理アーキテクチャー</strong></p><div class="figure-contents"><div class="mediaobject"><img src="figures/2/figures/openstack-arch-havana-logical-v1.jpg"/></div></div></div><br class="figure-break"/><p><a class="xref" href="ch_overview.html#concept_arch" title="図1.1 OpenStack の概念アーキテクチャー">図1.1「OpenStack の概念アーキテクチャー」</a> にあるとおり、エンドユーザーはダッシュボード、CLI、API 経由で操作できます。すべてのサービスは共通の Identity Service 経由で認証されます。個々のサービスは、特権管理コマンドが必要となる場合を除いて、お互いにパブリック API 経由で相互作用します。</p></div><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="overview-architecture"> </a>サンプルアーキテクチャー</h2></div></div></div><p>このガイドにより自分自身の OpenStack の使い方を選択できるようになります。OpenStack は、さまざまな要求をコンピュート、ストレージ、ネットワークのさまざまなオプションで満たすために、いろいろと設定することができます。</p><p>このガイドは以下のサンプルアーキテクチャーを使用します。</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>レガシーなネットワークを持つ基本的なアーキテクチャー</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p><script>
              $(document).ready(function(){
                $("a.gloss#コントローラーノード").qtip({
                content: '<strong>コントローラーノード:</strong> <p>クラウドコントローラーノードの別名。</p>',
@@ -752,7 +745,7 @@
              </script><a class="gloss" href="#" id="コントローラーノード">コントローラーノード</a>は、Identity Service、Image Service、Dashboard、Compute の管理部分を実行します。また、関連する API サービス、MySQL データベース、メッセージングシステムも含みます。</p></li><li class="listitem"><p><script>
              $(document).ready(function(){
                $("a.gloss#コンピュートノード").qtip({
-               content: '<strong>コンピュートノード:</strong> <p>A node that runs the <code class="systemitem">nova-compute</code> daemon, a VM                     instance that provides a wide range of services                     such as a web services and analytics.</p>',
+               content: '<strong>コンピュートノード:</strong> <p><code class="systemitem">nova-compute</code> デーモン、Web サービスや分析のような幅広いサービスを提供する仮想マシンインスタンスを実行するノード。</p>',
                show: {event:'mouseover',delay:500},
                hide: {event:'mouseout',delay:500, fixed:true},
                style: { 
@@ -979,7 +972,7 @@
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "第1章 アーキテクチャー in OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版  - icehouse";
-	  var buildTime = "Built: 2014-03-04T09:53:55+09:00";
+	  var buildTime = "Built: 2014-03-04T15:53:47+09:00";
 	  var gitSha = "git SHA: a13a8a39b6b86d1e1bd1c055b76483e9478affac";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);

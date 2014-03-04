@@ -6,7 +6,7 @@
 <title>Identity Service の概念 - OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版
    - icehouse</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版"/><link rel="up" href="ch_keystone.html" title="第3章 Identity Service の設定"/><link rel="prev" href="ch_keystone.html" title="第3章 Identity Service の設定"/><link rel="next" href="keystone-install.html" title="Identity Service のインストール"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">
             //The id for tree cookie
-            var treeCookieId = "treeview-8994";
+            var treeCookieId = "treeview-8992";
             var language = "en";
             var w = new Object();
             //Localization
@@ -43,7 +43,7 @@
                                     <a accesskey="n" class="navLinkNext" onclick="_gaq.push(['_trackEvent', 'Header', 'nextLink', 'click', 1]);" tabindex="5" href="keystone-install.html">次へ</a></td></tr></table></div></div><div id="toolbar" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><div id="toolbar-left"><p class="breadcrumbs"><a href="http://docs.openstack.org/">OpenStack Manuals</a><a href="index.html">OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版
    - icehouse</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../openstack-install-guide-yum-local.pdf"><img src="../common/images/pdf.png"/></a>
        
-      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="keystone-concepts"> </a>Identity Service の概念</h2></div></div></div><p>The <script>
+      <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="logABugLink1" href="" target="_blank" title="Log a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="keystone-concepts"> </a>Identity Service の概念</h2></div></div></div><p><script>
              $(document).ready(function(){
                $("a.gloss#Identity_Service").qtip({
                content: '<strong>Identity Service:</strong> ',
@@ -71,11 +71,10 @@
                 }
                });
              });
-             </script><a class="gloss" href="#" id="Identity_Service">Identity Service</a> performs the following
-        functions:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc" compact="compact"><li class="listitem"><p>ユーザー管理。ユーザーとその権限を追跡します。</p></li><li class="listitem"><p><script>
+             </script><a class="gloss" href="#" id="Identity_Service">Identity Service</a> は以下の機能を実行します。</p><div class="itemizedlist"><ul class="itemizedlist" type="disc" compact="compact"><li class="listitem"><p>ユーザー管理。ユーザーとその権限を追跡します。</p></li><li class="listitem"><p><script>
              $(document).ready(function(){
-               $("a.gloss#Service_catalog").qtip({
-               content: '<strong>Service catalog:</strong> ',
+               $("a.gloss#サービスカタログ").qtip({
+               content: '<strong>サービスカタログ:</strong> <p>Alternative term for the Identity Service                     catalog.</p>',
                show: {event:'mouseover',delay:500},
                hide: {event:'mouseout',delay:500, fixed:true},
                style: { 
@@ -100,8 +99,7 @@
                 }
                });
              });
-             </script><a class="gloss" href="#" id="Service_catalog">Service catalog</a>. Provides a catalog of available
-                services with their API endpoints.</p></li></ul></div><p>Identity Service を理解するために、以下の概念を理解する必要があります。</p><div class="variablelist"><dl><dt><span class="term"><script>
+             </script><a class="gloss" href="#" id="サービスカタログ">サービスカタログ</a>。利用可能なサービスのカタログとその API エンドポイントを提供します。</p></li></ul></div><p>Identity Service を理解するために、以下の概念を理解する必要があります。</p><div class="variablelist"><dl><dt><span class="term"><script>
              $(document).ready(function(){
                $("a.gloss#ユーザー").qtip({
                content: '<strong>ユーザー:</strong> <p>In Identity Service each user is associated with one or                     more tenants, and in Compute they can be associated                     with roles, projects, or both.</p>',
@@ -162,7 +160,7 @@
             </span></dt><dd><p>ユーザーが誰であるかを証明するために、ユーザーのみにより知られているデータ。Identity Service では、次のようなものがあります。ユーザー名とパスワード、ユーザー名と API キー、Identity Service により発行された認証トークン。</p></dd><dt><span class="term"><script>
              $(document).ready(function(){
                $("a.gloss#認証").qtip({
-               content: '<strong>認証:</strong> <p>The process that confirms that the user,                     process, or client is really who they say they are                     through private key, secret token, password,                     fingerprint, or similar method.</p>',
+               content: '<strong>認証:</strong> <p>ユーザー、プロセスまたはクライアントが、秘密鍵、秘密トークン、パスワード、指紋または同様の方式により示されている主体と本当に同じであることを確認するプロセス。</p>',
                show: {event:'mouseover',delay:500},
                hide: {event:'mouseout',delay:500, fixed:true},
                style: { 
@@ -337,7 +335,7 @@
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "Identity Service の概念 in OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版  - icehouse";
-	  var buildTime = "Built: 2014-03-04T09:53:56+09:00";
+	  var buildTime = "Built: 2014-03-04T15:53:49+09:00";
 	  var gitSha = "git SHA: a13a8a39b6b86d1e1bd1c055b76483e9478affac";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);
