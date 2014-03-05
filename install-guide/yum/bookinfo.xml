@@ -4,7 +4,7 @@
    <pdfoutname>openstack-install-guide-yum-local.pdf</pdfoutname>
    <docname>OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版</docname>
    <productname>OpenStack インストールガイド</productname>
-   <webappname>yum</webappname>
+   <webappname>local/install-guide/install/yum</webappname>
    <pominfo>
       <groupid>org.openstack.docs</groupid>
       <artifactid>openstack-install-guide</artifactid>

@@ -4,7 +4,7 @@
    <pdfoutname>openstack-install-guide-apt-local.pdf</pdfoutname>
    <docname>OpenStack インストールガイド Ubuntu 12.04 (LTS) 版</docname>
    <productname>OpenStack インストールガイド</productname>
-   <webappname>apt</webappname>
+   <webappname>local/install-guide/install/apt</webappname>
    <pominfo>
       <groupid>org.openstack.docs</groupid>
       <artifactid>openstack-install-guide</artifactid>
