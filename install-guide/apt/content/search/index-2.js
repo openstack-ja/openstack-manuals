@@ -1,4 +1,6 @@
 //Auto generated index for searching.
+w["swift-container-updat"]="49";
+w["swift-hash"]="0";
 w["swift-init"]="49";
 w["swift-object"]="49,71";
 w["swift-object-auditor"]="49";
@@ -1581,6 +1583,4 @@ w["コマンドラインクライアントのインストール"]="66,99";
 w["コマンドラインクライアントを使用できます"]="19";
 w["コマンドラインクライアントを実行します"]="102";
 w["コミュニティのサポート"]="111";
-w["コミュニティはopenstackを継続的に改善"]="111";
-w["コレクター"]="67";
 
