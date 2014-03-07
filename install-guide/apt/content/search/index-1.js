@@ -1584,5 +1584,4 @@ w["swift-contain"]="49,71";
 w["swift-container-auditor"]="49";
 w["swift-container-repl"]="49";
 w["swift-container-serv"]="8,90";
-w["swift-container-updat"]="49";
 
