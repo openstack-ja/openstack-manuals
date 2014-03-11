@@ -7,7 +7,7 @@
                SyntaxHighlighter.all();
     </script>
 <title>Identity Service のインストール - OpenStack インストールガイド Ubuntu 12.04 (LTS) 版
-   - icehouse</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Ubuntu 12.04 (LTS) 版"/><link rel="up" href="ch_keystone.html" title="第3章 Identity Service の設定"/><link rel="prev" href="keystone-concepts.html" title="Identity Service の概念"/><link rel="next" href="keystone-users.html" title="ユーザー、プロジェクト、ロールの定義"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="git-sha" content="f4b31857e09dc36fced56198fd5e36b721bd293f"/><meta name="buildTime" content="2014-03-11T18:53:20+09:00"/><script type="text/javascript">
+   - icehouse</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Ubuntu 12.04 (LTS) 版"/><link rel="up" href="ch_keystone.html" title="第3章 Identity Service の設定"/><link rel="prev" href="keystone-concepts.html" title="Identity Service の概念"/><link rel="next" href="keystone-users.html" title="ユーザー、プロジェクト、ロールの定義"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="git-sha" content="f4b31857e09dc36fced56198fd5e36b721bd293f"/><meta name="buildTime" content="2014-03-11T21:53:25+09:00"/><script type="text/javascript">
             //The id for tree cookie
             var treeCookieId = "treeview-9016";
             var language = "en";
@@ -64,23 +64,13 @@ IDENTIFIED BY '<em class="replaceable"><code>KEYSTONE_DBPASS</code></em>';</pre>
         store it in the configuration file:</p><pre class="screen"># openssl rand -hex 10</pre><p><code class="filename">/etc/keystone/keystone.conf</code> を編集し、<code class="literal">[DEFAULT]</code> セクションを変更します。ADMIN_TOKEN をコマンドの結果で置き換えます。</p><pre class="programlisting brush: bash; ">[DEFAULT]
 # A "shared secret" between keystone and other openstack services
 admin_token = ADMIN_TOKEN
-...</pre></li><li class="step"><p>Identity Service を再起動します。</p><pre class="screen"># service keystone restart</pre></li><li class="step"><p>By default, the Identity Service stores expired tokens in
-        the database indefinitely. While potentially useful for auditing
-        in production environments, the accumulation of expired tokens
-        will considerably increase database size and may decrease
-        service performance, particularly in test environments with
-        limited resources. We recommend configuring a periodic task using
-        <code class="systemitem">cron</code> to purge expired
-        tokens hourly.</p><ol type="a" class="substeps"><li class="step"><p>Edit the crontab for the root user:</p><pre class="screen"># crontab -e</pre></li><li class="step"><p>Add the following line to purge expired tokens every
-            hour and log the output to
-            <code class="filename">/var/log/keystone/keystone-tokenflush.log</code>:
-          </p><pre class="programlisting">@hourly /usr/bin/keystone-manage token_flush &gt;/var/log/keystone/keystone-tokenflush.log 2&gt;&amp;1</pre></li></ol></li></ol></div></div><script type="text/javascript" src="../common/main.js"><!----></script><div class="logabug" style="text-align: center"><a id="AskOOLink2" href="http://ask.openstack.org" target="_blank"><i class="icon-question"><!----></i>Questions? Discuss on ask.openstack.org</a><br/><a id="logABugLink2" href="" target="_blank"><i class="icon-bug"><!----></i>Found an error? Report a bug against this page</a></div><script language="JavaScript">
+...</pre></li><li class="step"><p>Identity Service を再起動します。</p><pre class="screen"># service keystone restart</pre></li><li class="step"><p>Identity Service は標準で、期限切れトークンをデータベースに無期限に保存します。本番環境で監査のために有用であるかもしれませんが、期限切れトークンが蓄積すると、データベースの容量がかなり大きくなり、サービスの性能を劣化させるかもしれません。とくにリソースが限られたテスト環境で顕著かもしれません。期限切れトークンを 1 時間おきに削除するために、<code class="systemitem">cron</code> を使用して定期タスクを設定することを推奨します。</p><ol type="a" class="substeps"><li class="step"><p>root ユーザーの crontab を編集します。</p><pre class="screen"># crontab -e</pre></li><li class="step"><p>1 時間ごとに期限切れトークンを削除し、出力を <code class="filename">/var/log/keystone/keystone-tokenflush.log</code> に記録するために、以下の行を追加します。</p><pre class="programlisting">@hourly /usr/bin/keystone-manage token_flush &gt;/var/log/keystone/keystone-tokenflush.log 2&gt;&amp;1</pre></li></ol></li></ol></div></div><script type="text/javascript" src="../common/main.js"><!----></script><div class="logabug" style="text-align: center"><a id="AskOOLink2" href="http://ask.openstack.org" target="_blank"><i class="icon-question"><!----></i>Questions? Discuss on ask.openstack.org</a><br/><a id="logABugLink2" href="" target="_blank"><i class="icon-bug"><!----></i>Found an error? Report a bug against this page</a></div><script language="JavaScript">
 	  var sourceFile = "source File: file:/home/openstack/docs/manuals/generated/ja/install-guide/section_keystone-install.xml"
 	  var xmlId = "xml:id: keystone-install"
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "Identity Service のインストール in OpenStack インストールガイド Ubuntu 12.04 (LTS) 版  - icehouse";
-	  var buildTime = "Built: 2014-03-11T18:53:20+09:00";
+	  var buildTime = "Built: 2014-03-11T21:53:25+09:00";
 	  var gitSha = "git SHA: f4b31857e09dc36fced56198fd5e36b721bd293f";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);
