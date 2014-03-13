@@ -4,9 +4,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:exsl="http://exslt.org/common" xmlns:ng="http://docbook.org/docbook-ng" xmlns:fb="http://ogp.me/ns/fb#"><head>
 <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"/>
 <title>ユーザー、プロジェクト、ロールの定義 - OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版
-   - icehouse</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版"/><link rel="up" href="ch_keystone.html" title="第3章 Identity Service の設定"/><link rel="prev" href="keystone-install.html" title="Identity Service のインストール"/><link rel="next" href="keystone-services.html" title="サービスと API エンドポイントの定義"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="git-sha" content="932e51b4ff3c16e677218cb1dfca33538906e169"/><meta name="buildTime" content="2014-03-13T06:55:08+09:00"/><script type="text/javascript">
+   - icehouse</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版"/><link rel="up" href="ch_keystone.html" title="第3章 Identity Service の設定"/><link rel="prev" href="keystone-install.html" title="Identity Service のインストール"/><link rel="next" href="keystone-services.html" title="サービスと API エンドポイントの定義"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="git-sha" content="932e51b4ff3c16e677218cb1dfca33538906e169"/><meta name="buildTime" content="2014-03-13T09:54:43+09:00"/><script type="text/javascript">
             //The id for tree cookie
-            var treeCookieId = "treeview-9079";
+            var treeCookieId = "treeview-9075";
             var language = "en";
             var w = new Object();
             //Localization
@@ -169,36 +169,7 @@
     Service is running. Replace
         <strong class="userinput"><code><em class="replaceable"><code>ADMIN_TOKEN</code></em></code></strong>
     with your authorization token.</p><pre class="screen">$ export OS_SERVICE_TOKEN=<em class="replaceable"><code>ADMIN_TOKEN</code></em>
-$ export OS_SERVICE_ENDPOINT=http://controller:35357/v2.0</pre><div class="procedure"><a id="d6e759"> </a><p class="title"><strong>Create an administrative user</strong></p><p>
-      Follow these steps to create an administrative user, role, and
-      tenant. You will use this account for administrative interaction
-      with the OpenStack cloud.
-    </p><p>
-      By default, the Identity Service creates a special
-      <code class="literal">_member_</code> role. The OpenStack dashboard
-      automatically grants access to users with this role. You will
-      give the <code class="literal">admin</code> user access to this role in
-      addition to the <code class="literal">admin</code> role.
-    </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[注記]" src="../common/images/admon/note.png"/></td><th align="left">注記</th></tr><tr><td align="left" valign="top"><p>
-        Any role that you create must map to roles specified in the
-        <code class="filename">policy.json</code> file included with each OpenStack
-        service. The default policy file for most services grants
-        administrative access to the <code class="literal">admin</code> role.
-      </p></td></tr></table></div><ol class="procedure" type="1"><li class="step"><p>
-        Create the <code class="literal">admin</code> user:
-      </p><pre class="screen">$ keystone user-create --name=admin --pass=<em class="replaceable"><code>ADMIN_PASS</code></em> --email=<em class="replaceable"><code>ADMIN_EMAIL</code></em></pre><p>
-        Replace <em class="replaceable"><code>ADMIN_PASS</code></em> with a secure password
-        and replace <em class="replaceable"><code>ADMIN_EMAIL</code></em> with an email
-        address to associate with the account.
-      </p></li><li class="step"><p>
-        Create the <code class="literal">admin</code> role:
-      </p><pre class="screen">$ keystone role-create --name=admin</pre></li><li class="step"><p>
-        Create the <code class="literal">admin</code> tenant:
-      </p><pre class="screen">$ keystone tenant-create --name=admin --description="Admin Tenant"</pre></li><li class="step"><p>
-        You must now link the <code class="literal">admin</code> user,
-        <code class="literal">admin</code> role, and <code class="literal">admin</code> tenant
-        together using the <code class="option">user-role-add</code> option:
-      </p><pre class="screen">$ keystone user-role-add --user=admin --tenant=admin --role=admin</pre></li><li class="step"><p>
+$ export OS_SERVICE_ENDPOINT=http://controller:35357/v2.0</pre><div class="procedure"><a id="d6e759"> </a><p class="title"><strong>管理ユーザーの作成</strong></p><p>管理ユーザー、ロール、プロジェクトを作成するために、以下の手順を実行します。OpenStack クラウドの管理操作のために、このアカウントを使用します。</p><p>Identity Service は標準で特別な <code class="literal">_member_</code> ロールを作成します。OpenStack ダッシュボードは自動的にこのロールを持つユーザーにアクセス権を与えます。<code class="literal">admin</code> ユーザーのアクセス権に、このロールに加えて <code class="literal">admin</code> ロールを与えます。</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[注記]" src="../common/images/admon/note.png"/></td><th align="left">注記</th></tr><tr><td align="left" valign="top"><p>作成するすべてのロールは、各 OpenStack サービスに含まれる <code class="filename">policy.json</code> ファイルで指定されたロールにマップすべきです。多くのサービス用の標準ポリシーファイルは、管理アクセスを <code class="literal">admin</code> ロールに許可します。</p></td></tr></table></div><ol class="procedure" type="1"><li class="step"><p><code class="literal">admin</code> ユーザーを作成します。</p><pre class="screen">$ keystone user-create --name=admin --pass=<em class="replaceable"><code>ADMIN_PASS</code></em> --email=<em class="replaceable"><code>ADMIN_EMAIL</code></em></pre><p><em class="replaceable"><code>ADMIN_PASS</code></em> を安全なパスワードに置き換え、<em class="replaceable"><code>ADMIN_EMAIL</code></em> をこのアカウントに関連付ける電子メールアドレスに置き換えます。</p></li><li class="step"><p><code class="literal">admin</code> ロールを作成します。</p><pre class="screen">$ keystone role-create --name=admin</pre></li><li class="step"><p><code class="literal">admin</code> プロジェクトを作成します。</p><pre class="screen">$ keystone tenant-create --name=admin --description="Admin Tenant"</pre></li><li class="step"><p>ここで <code class="option">user-role-add</code> オプションを使用して、<code class="literal">admin</code> ユーザー、<code class="literal">admin</code> ロール、<code class="literal">admin</code> プロジェクトをリンクする必要があります。</p><pre class="screen">$ keystone user-role-add --user=admin --tenant=admin --role=admin</pre></li><li class="step"><p>
         Link the <code class="literal">admin</code> user,
         <code class="literal">_member_</code> role, and <code class="literal">admin</code> tenant:
       </p><pre class="screen">$ keystone user-role-add --user=admin --role=_member_ --tenant=admin</pre></li></ol></div><div class="procedure"><a id="d6e800"> </a><p class="title"><strong>Create a normal user</strong></p><p>
@@ -236,7 +207,7 @@ $ export OS_SERVICE_ENDPOINT=http://controller:35357/v2.0</pre><div class="proce
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "ユーザー、プロジェクト、ロールの定義 in OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版  - icehouse";
-	  var buildTime = "Built: 2014-03-13T06:55:08+09:00";
+	  var buildTime = "Built: 2014-03-13T09:54:43+09:00";
 	  var gitSha = "git SHA: 932e51b4ff3c16e677218cb1dfca33538906e169";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);
