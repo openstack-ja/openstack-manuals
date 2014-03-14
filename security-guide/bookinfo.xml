@@ -2,7 +2,7 @@
 <products xmlns:xlink="http://www.w3.org/1999/xlink">
    <latestpdf>security-guide-latest.pdf</latestpdf>
    <pdfoutname>security-guide.pdf</pdfoutname>
-   <docname>OpenStack セキュリティガイド</docname>
+   <docname>OpenStack Security Guide</docname>
    <productname>OpenStack</productname>
    <webappname>security-guide</webappname>
    <pominfo>
