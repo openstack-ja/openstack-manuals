@@ -2,7 +2,12 @@
 <products xmlns:xlink="http://www.w3.org/1999/xlink">
    <latestpdf>openstack-install-guide-yum-local-latest.pdf</latestpdf>
    <pdfoutname>openstack-install-guide-yum-local.pdf</pdfoutname>
-   <docname>OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版</docname>
+   <docname>OpenStack Installation Guide for Red Hat Enterprise Linux, CentOS, and
+            Fedora
+        
+        
+        
+    </docname>
    <productname>OpenStack インストールガイド</productname>
    <webappname>local/install-guide/install/yum</webappname>
    <pominfo>
