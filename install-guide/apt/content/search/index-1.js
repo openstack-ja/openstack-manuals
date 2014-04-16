@@ -250,7 +250,6 @@ w["`django_session_c25c2c28`"]="100";
 w["`django_session`"]="100";
 w["`expire_date`"]="100";
 w["a0"]="101,114";
-w["a4c2d43f80a549a19864c89d759bb3f"]="118";
 w["a6"]="101,114";
 w["abil"]="59";
 w["abl"]="47,105,116";
@@ -1352,4 +1351,5 @@ w["notify_nova_on_port_data_chang"]="67";
 w["notify_nova_on_port_status_chang"]="67";
 w["notify_on_state_chang"]="14";
 w["nova"]="5,6,11,14,16,27,29,31,32,35,36,37,44,47,52,53,61,67,74,75,78,92,98,101,102,109,110,114,115";
+w["nova-api"]="31,32,44,67,98,100,102,110";
 
