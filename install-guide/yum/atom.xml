@@ -8,7 +8,29 @@
    <link href="http://docs.openstack.org/local/install-guide/install/yum/atom.xml" rel="self"/>
    <link href="http://docs.openstack.org/local/install-guide/install/yum/content/index.html"/>
    <id>openstack-install-manual-grizzly</id>
-   <updated>2014-04-17T03:55:34+09:00</updated>
+   <updated>2014-04-17T06:55:33+09:00</updated>
+   <entry>
+      <title>2014-04-16</title>
+      <link href="http://docs.openstack.org/local/install-guide/install/yum/content/index.html" type="text/html"/>
+      <id>openstack-install-manual-grizzly-2014-04-16</id>
+      <updated>2014-04-16</updated>
+      <content type="xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
+                    
+            <div class="itemizedlist">
+               <ul class="itemizedlist" compact="compact" type="disc">
+                  <li class="listitem">
+                     <p>Update for Icehouse, rework
+                            Networking setup to use ML2 as plugin, add
+                            new chapter for Database Service setup,
+                            improved basic configuration.</p>
+                  </li>
+               </ul>
+            </div>
+                
+         </div>
+      </content>
+   </entry>
    <entry>
       <title>2013-10-25</title>
       <link href="http://docs.openstack.org/local/install-guide/install/yum/content/index.html" type="text/html"/>
