@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:exsl="http://exslt.org/common" xmlns:ng="http://docbook.org/docbook-ng" xmlns:fb="http://ogp.me/ns/fb#"><head>
 <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"/>
 <title>第20章 コンピュート - OpenStack セキュリティガイド
-   - current</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-security-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack セキュリティガイド"/><link rel="up" href="index.html" title="OpenStack セキュリティガイド"/><link rel="prev" href="ch025_web-dashboard.html" title="第19章 Dashboard"/><link rel="next" href="ch027_storage.html" title="第21章 オブジェクトストレージ"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="git-sha" content="77f9b492ccea607a70a90b20488ee03efc757ec0"/><meta name="buildTime" content="2014-04-21T09:53:09+09:00"/><script type="text/javascript">
+   - カレント</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-security-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack セキュリティガイド"/><link rel="up" href="index.html" title="OpenStack セキュリティガイド"/><link rel="prev" href="ch025_web-dashboard.html" title="第19章 Dashboard"/><link rel="next" href="ch027_storage.html" title="第21章 オブジェクトストレージ"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="git-sha" content="77f9b492ccea607a70a90b20488ee03efc757ec0"/><meta name="buildTime" content="2014-04-21T12:52:49+09:00"/><script type="text/javascript">
             //The id for tree cookie
             var treeCookieId = "treeview-6111";
             var language = "en";
@@ -39,7 +39,7 @@
                             </a></td><td><a accesskey="p" class="navLinkPrevious" onclick="_gaq.push(['_trackEvent', 'Header', 'prevLink', 'click', 1]);" tabindex="5" href="ch025_web-dashboard.html">戻る</a> 
 				  |
                                     <a accesskey="n" class="navLinkNext" onclick="_gaq.push(['_trackEvent', 'Header', 'nextLink', 'click', 1]);" tabindex="5" href="ch027_storage.html">次へ</a></td></tr></table></div></div><div id="toolbar" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><div id="toolbar-left"><p class="breadcrumbs"><a href="http://docs.openstack.org/">OpenStack Manuals</a><a href="index.html">OpenStack セキュリティガイド
-   - current</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../security-guide.pdf"><img src="../common/images/pdf.png"/></a>
+   - カレント</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../security-guide.pdf"><img src="../common/images/pdf.png"/></a>
        
       <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="AskOOLink1" href="http://ask.openstack.org" target="_blank" title="Questions? Discuss on ask.openstack.org"><i class="icon-question"><!----></i></a>  
         <a id="logABugLink1" href="" target="_blank" title="Found an error? Report a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="chapter"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="ch026_compute"> </a>第20章 コンピュート</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="ch026_compute.html#ch026_compute-idp45072">仮想コンソールの選択</a></span></dt></dl></div><p>Compute Service (Nova) は最も複雑な OpenStack サービスの一つです。クラウドの隅々まで多くの場所で動作し、さまざまな内部サービスと通信します。この理由により、Compute Service 設定のベストプラクティスに関する推奨事項の多くは、本書を通して配布されます。管理、API エンドポイント、メッセージング、データベースのセクションで具体的な詳細を提供します。</p><div class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="ch026_compute-idp45072"> </a>仮想コンソールの選択</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="ch026_compute.html#ch026_compute-idp46336">Virtual Network Computer (VNC)</a></span></dt><dt><span class="section"><a href="ch026_compute.html#ch026_compute-idp48352">機能</a></span></dt><dt><span class="section"><a href="ch026_compute.html#ch026_compute-idp51760">セキュリティの課題</a></span></dt><dt><span class="section"><a href="ch026_compute.html#ch026_compute-idp54592">参考資料</a></span></dt><dt><span class="section"><a href="ch026_compute.html#ch026_compute-idp55824">Simple Protocol for Independent Computing Environments (SPICE)</a></span></dt></dl></div><p>クラウドアーキテクトが判断する必要があることの一つは、Compute Service の設定が <script>
@@ -108,8 +108,8 @@
 	  var xmlId = "xml:id: ch026_compute"
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
-	  var bugTitle = "第20章 コンピュート in OpenStack セキュリティガイド  - current";
-	  var buildTime = "Built: 2014-04-21T09:53:09+09:00";
+	  var bugTitle = "第20章 コンピュート in OpenStack セキュリティガイド  - カレント";
+	  var buildTime = "Built: 2014-04-21T12:52:49+09:00";
 	  var gitSha = "git SHA: 77f9b492ccea607a70a90b20488ee03efc757ec0";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);

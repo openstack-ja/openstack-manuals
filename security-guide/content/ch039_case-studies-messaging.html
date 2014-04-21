@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:exsl="http://exslt.org/common" xmlns:ng="http://docbook.org/docbook-ng" xmlns:fb="http://ogp.me/ns/fb#"><head>
 <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"/>
 <title>第31章 ケーススタディ: メッセージング - OpenStack セキュリティガイド
-   - current</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-security-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack セキュリティガイド"/><link rel="up" href="index.html" title="OpenStack セキュリティガイド"/><link rel="prev" href="ch038_transport-security.html" title="第30章 メッセージングのセキュリティ"/><link rel="next" href="ch041_database-backend-considerations.html" title="第32章 データベースバックエンドの考慮事項"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="git-sha" content="77f9b492ccea607a70a90b20488ee03efc757ec0"/><meta name="buildTime" content="2014-04-21T09:53:12+09:00"/><script type="text/javascript">
+   - カレント</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-security-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack セキュリティガイド"/><link rel="up" href="index.html" title="OpenStack セキュリティガイド"/><link rel="prev" href="ch038_transport-security.html" title="第30章 メッセージングのセキュリティ"/><link rel="next" href="ch041_database-backend-considerations.html" title="第32章 データベースバックエンドの考慮事項"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="git-sha" content="77f9b492ccea607a70a90b20488ee03efc757ec0"/><meta name="buildTime" content="2014-04-21T12:52:52+09:00"/><script type="text/javascript">
             //The id for tree cookie
             var treeCookieId = "treeview-6111";
             var language = "en";
@@ -39,7 +39,7 @@
                             </a></td><td><a accesskey="p" class="navLinkPrevious" onclick="_gaq.push(['_trackEvent', 'Header', 'prevLink', 'click', 1]);" tabindex="5" href="ch038_transport-security.html">戻る</a> 
 				  |
                                     <a accesskey="n" class="navLinkNext" onclick="_gaq.push(['_trackEvent', 'Header', 'nextLink', 'click', 1]);" tabindex="5" href="ch041_database-backend-considerations.html">次へ</a></td></tr></table></div></div><div id="toolbar" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><div id="toolbar-left"><p class="breadcrumbs"><a href="http://docs.openstack.org/">OpenStack Manuals</a><a href="index.html">OpenStack セキュリティガイド
-   - current</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../security-guide.pdf"><img src="../common/images/pdf.png"/></a>
+   - カレント</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../security-guide.pdf"><img src="../common/images/pdf.png"/></a>
        
       <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="AskOOLink1" href="http://ask.openstack.org" target="_blank" title="Questions? Discuss on ask.openstack.org"><i class="icon-question"><!----></i></a>  
         <a id="logABugLink1" href="" target="_blank" title="Found an error? Report a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="chapter"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="ch039_case-studies-messaging"> </a>第31章 ケーススタディ: メッセージング</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="ch039_case-studies-messaging.html#ch039_case-studies-messaging-idp38416">アリスのプライベートクラウド</a></span></dt><dt><span class="section"><a href="ch039_case-studies-messaging.html#ch039_case-studies-messaging-idp39920">ボブのパブリッククラウド</a></span></dt></dl></div><p>メッセージキューは、多数の OpenStack サービスを支える重要なインフラストラクチャであり、特にコンピュートサービスと強く結びついています。メッセージキューサービスの性質上、アリスとボブが抱えるセキュリティ上の懸念はよく似ています。特に大きな残課題は、数多くのシステムがキューにアクセスしているものの、キューメッセージのコンシューマーには、キューを発行したホストやサービスを確かめる手立てがないことです。攻撃者がキューの発行に成功すると、仮想マシンの作成や削除をしたり、あらゆるテナントのブロックストレージに接続するなど、他にも無数の悪意のある攻撃が可能になってしまいます。
@@ -49,8 +49,8 @@
 	  var xmlId = "xml:id: ch039_case-studies-messaging"
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
-	  var bugTitle = "第31章 ケーススタディ: メッセージング in OpenStack セキュリティガイド  - current";
-	  var buildTime = "Built: 2014-04-21T09:53:12+09:00";
+	  var bugTitle = "第31章 ケーススタディ: メッセージング in OpenStack セキュリティガイド  - カレント";
+	  var buildTime = "Built: 2014-04-21T12:52:52+09:00";
 	  var gitSha = "git SHA: 77f9b492ccea607a70a90b20488ee03efc757ec0";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);

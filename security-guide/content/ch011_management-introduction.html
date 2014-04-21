@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:exsl="http://exslt.org/common" xmlns:ng="http://docbook.org/docbook-ng" xmlns:fb="http://ogp.me/ns/fb#"><head>
 <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"/>
 <title>第8章 管理の概要 - OpenStack セキュリティガイド
-   - current</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-security-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack セキュリティガイド"/><link rel="up" href="index.html" title="OpenStack セキュリティガイド"/><link rel="prev" href="ch009_case-studies.html" title="第7章 ケーススタディ: システムのドキュメント"/><link rel="next" href="ch012_configuration-management.html" title="第9章 継続的なシステム管理"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="git-sha" content="77f9b492ccea607a70a90b20488ee03efc757ec0"/><meta name="buildTime" content="2014-04-21T09:53:07+09:00"/><script type="text/javascript">
+   - カレント</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-security-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack セキュリティガイド"/><link rel="up" href="index.html" title="OpenStack セキュリティガイド"/><link rel="prev" href="ch009_case-studies.html" title="第7章 ケーススタディ: システムのドキュメント"/><link rel="next" href="ch012_configuration-management.html" title="第9章 継続的なシステム管理"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="git-sha" content="77f9b492ccea607a70a90b20488ee03efc757ec0"/><meta name="buildTime" content="2014-04-21T12:52:46+09:00"/><script type="text/javascript">
             //The id for tree cookie
             var treeCookieId = "treeview-6111";
             var language = "en";
@@ -39,7 +39,7 @@
                             </a></td><td><a accesskey="p" class="navLinkPrevious" onclick="_gaq.push(['_trackEvent', 'Header', 'prevLink', 'click', 1]);" tabindex="5" href="ch009_case-studies.html">戻る</a> 
 				  |
                                     <a accesskey="n" class="navLinkNext" onclick="_gaq.push(['_trackEvent', 'Header', 'nextLink', 'click', 1]);" tabindex="5" href="ch012_configuration-management.html">次へ</a></td></tr></table></div></div><div id="toolbar" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><div id="toolbar-left"><p class="breadcrumbs"><a href="http://docs.openstack.org/">OpenStack Manuals</a><a href="index.html">OpenStack セキュリティガイド
-   - current</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../security-guide.pdf"><img src="../common/images/pdf.png"/></a>
+   - カレント</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../security-guide.pdf"><img src="../common/images/pdf.png"/></a>
        
       <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="AskOOLink1" href="http://ask.openstack.org" target="_blank" title="Questions? Discuss on ask.openstack.org"><i class="icon-question"><!----></i></a>  
         <a id="logABugLink1" href="" target="_blank" title="Found an error? Report a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="chapter"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="ch011_management-introduction"> </a>第8章 管理の概要</h2></div></div></div><p>クラウドデプロイメントは生きたシステムです。機械は老朽化して障害が発生し、ソフトウェアは古くなり、脆弱性が発見されます。設定にエラーや抜けがあった場合、ソフトウェアの修正を適用する必要が出た場合、セキュアかつ利便的に、これらの変更を加える必要があります。通常、これらの変更は構成管理などで解決されます。</p><p>同様に、悪意のある組織により設定または操作されないように、クラウドデプロイメントを保護することが重要です。コンピュートやネットワークの仮想化を採用するクラウド内の多くのシステムでは、OpenStack に適用される問題が明らかに存在し、整合性のライフサイクル管理で対応していく必要があります。</p><p>最後に、管理者は様々なオペレーション機能に対してクラウド上で指揮統制を行う必要があります。これらの指揮統制機能を理解、確保することが重要です。</p></div><script type="text/javascript" src="../common/main.js"><!----></script><div class="logabug" style="text-align: center"><a id="AskOOLink2" href="http://ask.openstack.org" target="_blank"><i class="icon-question"><!----></i>Questions? Discuss on ask.openstack.org</a><br/><a id="logABugLink2" href="" target="_blank"><i class="icon-bug"><!----></i>Found an error? Report a bug against this page</a></div><script language="JavaScript">
@@ -47,8 +47,8 @@
 	  var xmlId = "xml:id: ch011_management-introduction"
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
-	  var bugTitle = "第8章 管理の概要 in OpenStack セキュリティガイド  - current";
-	  var buildTime = "Built: 2014-04-21T09:53:07+09:00";
+	  var bugTitle = "第8章 管理の概要 in OpenStack セキュリティガイド  - カレント";
+	  var buildTime = "Built: 2014-04-21T12:52:46+09:00";
 	  var gitSha = "git SHA: 77f9b492ccea607a70a90b20488ee03efc757ec0";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);

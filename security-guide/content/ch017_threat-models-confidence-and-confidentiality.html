@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:exsl="http://exslt.org/common" xmlns:ng="http://docbook.org/docbook-ng" xmlns:fb="http://ogp.me/ns/fb#"><head>
 <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"/>
 <title>第13章 SSL/TLSの導入 - OpenStack セキュリティガイド
-   - current</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-security-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack セキュリティガイド"/><link rel="up" href="index.html" title="OpenStack セキュリティガイド"/><link rel="prev" href="ch015_case-studies-management.html" title="第12章 ケーススタディ: 管理インターフェース"/><link rel="next" href="ch018_case-studies-pkissl.html" title="第14章 ケーススタディ: PKI と証明書管理"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="git-sha" content="77f9b492ccea607a70a90b20488ee03efc757ec0"/><meta name="buildTime" content="2014-04-21T09:53:08+09:00"/><script type="text/javascript">
+   - カレント</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-security-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack セキュリティガイド"/><link rel="up" href="index.html" title="OpenStack セキュリティガイド"/><link rel="prev" href="ch015_case-studies-management.html" title="第12章 ケーススタディ: 管理インターフェース"/><link rel="next" href="ch018_case-studies-pkissl.html" title="第14章 ケーススタディ: PKI と証明書管理"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="git-sha" content="77f9b492ccea607a70a90b20488ee03efc757ec0"/><meta name="buildTime" content="2014-04-21T12:52:48+09:00"/><script type="text/javascript">
             //The id for tree cookie
             var treeCookieId = "treeview-6111";
             var language = "en";
@@ -39,7 +39,7 @@
                             </a></td><td><a accesskey="p" class="navLinkPrevious" onclick="_gaq.push(['_trackEvent', 'Header', 'prevLink', 'click', 1]);" tabindex="5" href="ch015_case-studies-management.html">戻る</a> 
 				  |
                                     <a accesskey="n" class="navLinkNext" onclick="_gaq.push(['_trackEvent', 'Header', 'nextLink', 'click', 1]);" tabindex="5" href="ch018_case-studies-pkissl.html">次へ</a></td></tr></table></div></div><div id="toolbar" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><div id="toolbar-left"><p class="breadcrumbs"><a href="http://docs.openstack.org/">OpenStack Manuals</a><a href="index.html">OpenStack セキュリティガイド
-   - current</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../security-guide.pdf"><img src="../common/images/pdf.png"/></a>
+   - カレント</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../security-guide.pdf"><img src="../common/images/pdf.png"/></a>
        
       <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="AskOOLink1" href="http://ask.openstack.org" target="_blank" title="Questions? Discuss on ask.openstack.org"><i class="icon-question"><!----></i></a>  
         <a id="logABugLink1" href="" target="_blank" title="Found an error? Report a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="chapter"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="ch017_threat-models-confidence-and-confidentiality"> </a>第13章 SSL/TLSの導入</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="ch017_threat-models-confidence-and-confidentiality.html#ch017_threat-models-confidence-and-confidentiality-idp51264">認証局(CA)</a></span></dt><dt><span class="section"><a href="ch017_threat-models-confidence-and-confidentiality.html#ch017_threat-models-confidence-and-confidentiality-idp55136">SSL/TLSライブラリ</a></span></dt><dt><span class="section"><a href="ch017_threat-models-confidence-and-confidentiality.html#ch017_threat-models-confidence-and-confidentiality-idp56784">暗号化アルゴリズム、暗号モード、プロトコル</a></span></dt><dt><span class="section"><a href="ch017_threat-models-confidence-and-confidentiality.html#ch017_threat-models-confidence-and-confidentiality-idp64128">概要</a></span></dt></dl></div><p>OpenStack のサービスは、管理ネットワーク経由の他の内部サービスからのリクエストと同様、パ
@@ -82,8 +82,8 @@
 	  var xmlId = "xml:id: ch017_threat-models-confidence-and-confidentiality"
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
-	  var bugTitle = "第13章 SSL/TLSの導入 in OpenStack セキュリティガイド  - current";
-	  var buildTime = "Built: 2014-04-21T09:53:08+09:00";
+	  var bugTitle = "第13章 SSL/TLSの導入 in OpenStack セキュリティガイド  - カレント";
+	  var buildTime = "Built: 2014-04-21T12:52:48+09:00";
 	  var gitSha = "git SHA: 77f9b492ccea607a70a90b20488ee03efc757ec0";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);
