@@ -2,11 +2,7 @@
 <products xmlns:xlink="http://www.w3.org/1999/xlink">
    <latestpdf>openstack-install-guide-apt-local-latest.pdf</latestpdf>
    <pdfoutname>openstack-install-guide-apt-local.pdf</pdfoutname>
-   <docname>OpenStack Installation Guide
-         for Ubuntu 12.04/14.04 (LTS)
-        
-        
-    </docname>
+   <docname>OpenStack インストールガイド Ubuntu 12.04/14.04 (LTS) 版</docname>
    <productname>OpenStack インストールガイド</productname>
    <webappname>local/install-guide/install/apt</webappname>
    <pominfo>

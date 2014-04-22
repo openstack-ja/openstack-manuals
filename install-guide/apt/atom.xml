@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
-   <title>OpenStack Installation Guide
-         for Ubuntu 12.04/14.04 (LTS)
-        
-        
-     icehouse revision history</title>
+   <title>OpenStack インストールガイド Ubuntu 12.04/14.04 (LTS) 版 icehouse revision history</title>
    <link href="http://docs.openstack.org/local/install-guide/install/apt/atom.xml" rel="self"/>
    <link href="http://docs.openstack.org/local/install-guide/install/apt/content/index.html"/>
    <id>openstack-install-manual-grizzly</id>
-   <updated>2014-04-22T09:53:57+09:00</updated>
+   <updated>2014-04-22T12:54:24+09:00</updated>
    <entry>
       <title>2014-04-16</title>
       <link href="http://docs.openstack.org/local/install-guide/install/apt/content/index.html" type="text/html"/>
