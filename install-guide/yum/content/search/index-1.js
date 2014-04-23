@@ -1260,4 +1260,5 @@ w["network_cidr"]="48";
 w["network_id"]="13,37";
 w["network_label_regex"]="103";
 w["network_manag"]="28";
+w["network_s"]="28";
 

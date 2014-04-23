@@ -1266,4 +1266,5 @@ w["my_ip"]="11,106";
 w["my_memcached_host"]="23,107";
 w["mydb"]="35";
 w["myfil"]="19,32";
+w["mykey"]="45";
 
