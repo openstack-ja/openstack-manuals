@@ -4,9 +4,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:exsl="http://exslt.org/common" xmlns:ng="http://docbook.org/docbook-ng" xmlns:fb="http://ogp.me/ns/fb#"><head>
 <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"/>
 <title>初期ネットワークの作成 - OpenStack インストールガイド Ubuntu 12.04/14.04 (LTS) 版
-   - icehouse</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Ubuntu 12.04/14.04 (LTS) 版"/><link rel="up" href="section_nova-networking.html" title="Legacy networking (nova-network)"/><link rel="prev" href="nova-networking-compute-node.html" title="コンピュートノードの設定"/><link rel="next" href="section_networking_next_steps.html" title="次の手順"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="git-sha" content="7b438463d248fa966a96984a7f73ae1192205b72"/><meta name="buildTime" content="2014-04-23T09:54:03+09:00"/><script type="text/javascript">
+   - icehouse</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Ubuntu 12.04/14.04 (LTS) 版"/><link rel="up" href="section_nova-networking.html" title="Legacy networking (nova-network)"/><link rel="prev" href="nova-networking-compute-node.html" title="コンピュートノードの設定"/><link rel="next" href="section_networking_next_steps.html" title="次の手順"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="git-sha" content="7b438463d248fa966a96984a7f73ae1192205b72"/><meta name="buildTime" content="2014-04-23T12:54:19+09:00"/><script type="text/javascript">
             //The id for tree cookie
-            var treeCookieId = "treeview-9100";
+            var treeCookieId = "treeview-9101";
             var language = "en";
             var w = new Object();
             //Localization
@@ -168,8 +168,7 @@
              });
              </script><a class="gloss" href="#" id="interface">interface</a> on the compute node. You should specify
     an exclusive slice of this subnet to prevent interference with other
-    devices on the external network.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[注記]" src="../common/images/admon/note.png"/></td><th align="left">注記</th></tr><tr><td align="left" valign="top"><p>Perform these commands on the controller node.</p></td></tr></table></div><div class="procedure"><a id="d6e2640"> </a><p class="title"><strong>To create the network</strong></p><ol class="procedure" type="1"><li class="step"><p><code class="literal">admin</code> プロジェクトのクレデンシャルを読み込みます。</p><pre class="screen">$ source admin-openrc.sh</pre></li><li class="step"><p>ネットワークを作成します。</p><p>Replace <em class="replaceable"><code>NETWORK_CIDR</code></em> with the subnet
-        associated with the physical network.</p><pre class="screen">$ nova network-create demo-net --bridge br100 --multi-host T \
+    devices on the external network.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[注記]" src="../common/images/admon/note.png"/></td><th align="left">注記</th></tr><tr><td align="left" valign="top"><p>これらのコマンドをコントローラーノードで実行します。</p></td></tr></table></div><div class="procedure"><a id="d6e2640"> </a><p class="title"><strong>To create the network</strong></p><ol class="procedure" type="1"><li class="step"><p><code class="literal">admin</code> プロジェクトのクレデンシャルを読み込みます。</p><pre class="screen">$ source admin-openrc.sh</pre></li><li class="step"><p>ネットワークを作成します。</p><p><em class="replaceable"><code>NETWORK_CIDR</code></em> を物理ネットワークのサブネットに置き換えます。</p><pre class="screen">$ nova network-create demo-net --bridge br100 --multi-host T \
   --fixed-range-v4 <em class="replaceable"><code>NETWORK_CIDR</code></em></pre><p>For example, using an exclusive slice of
         <code class="literal">203.0.113.0/24</code> with IP address range
         <code class="literal">203.0.113.24</code> to <code class="literal">203.0.113.32</code>:
@@ -185,7 +184,7 @@
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "初期ネットワークの作成 in OpenStack インストールガイド Ubuntu 12.04/14.04 (LTS) 版  - icehouse";
-	  var buildTime = "Built: 2014-04-23T09:54:03+09:00";
+	  var buildTime = "Built: 2014-04-23T12:54:19+09:00";
 	  var gitSha = "git SHA: 7b438463d248fa966a96984a7f73ae1192205b72";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);

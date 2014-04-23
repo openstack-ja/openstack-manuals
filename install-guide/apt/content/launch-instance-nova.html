@@ -4,9 +4,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:exsl="http://exslt.org/common" xmlns:ng="http://docbook.org/docbook-ng" xmlns:fb="http://ogp.me/ns/fb#"><head>
 <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"/>
 <title>Launch an instance with legacy networking (nova-network) - OpenStack インストールガイド Ubuntu 12.04/14.04 (LTS) 版
-   - icehouse</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Ubuntu 12.04/14.04 (LTS) 版"/><link rel="up" href="launch-instance.html" title="第14章 インスタンスの起動"/><link rel="prev" href="launch-instance-neutron.html" title="Launch an instance with OpenStack Networking (neutron)"/><link rel="next" href="reserved_uids.html" title="付録A 予約済みユーザー ID"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="git-sha" content="7b438463d248fa966a96984a7f73ae1192205b72"/><meta name="buildTime" content="2014-04-23T09:54:09+09:00"/><script type="text/javascript">
+   - icehouse</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Ubuntu 12.04/14.04 (LTS) 版"/><link rel="up" href="launch-instance.html" title="第14章 インスタンスの起動"/><link rel="prev" href="launch-instance-neutron.html" title="Launch an instance with OpenStack Networking (neutron)"/><link rel="next" href="reserved_uids.html" title="付録A 予約済みユーザー ID"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="git-sha" content="7b438463d248fa966a96984a7f73ae1192205b72"/><meta name="buildTime" content="2014-04-23T12:54:25+09:00"/><script type="text/javascript">
             //The id for tree cookie
-            var treeCookieId = "treeview-9100";
+            var treeCookieId = "treeview-9101";
             var language = "en";
             var w = new Object();
             //Localization
@@ -44,7 +44,7 @@
    - icehouse</a></p><a onclick="_gaq.push(['_trackEvent', 'Header', 'pdfDownload', 'click', 1]);" alt="Download a pdf of this document" class="pdficon" href="../openstack-install-guide-apt-local.pdf"><img src="../common/images/pdf.png"/></a>
        
       <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="AskOOLink1" href="http://ask.openstack.org" target="_blank" title="Questions? Discuss on ask.openstack.org"><i class="icon-question"><!----></i></a>  
-        <a id="logABugLink1" href="" target="_blank" title="Found an error? Report a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="launch-instance-nova"> </a>Launch an instance with legacy networking (nova-network)</h2></div></div></div><div class="procedure"><a id="d6e4193"> </a><p class="title"><strong>To generate a keypair</strong></p><p>Most cloud images support
+        <a id="logABugLink1" href="" target="_blank" title="Found an error? Report a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="launch-instance-nova"> </a>Launch an instance with legacy networking (nova-network)</h2></div></div></div><div class="procedure"><a id="d6e4194"> </a><p class="title"><strong>To generate a keypair</strong></p><p>Most cloud images support
       <script>
              $(document).ready(function(){
                $("a.gloss#public_key_authentication").qtip({
@@ -81,7 +81,7 @@
 | Name     | Fingerprint                                     |
 +----------+-------------------------------------------------+
 | demo-key | 6c:74:ec:3a:08:05:4e:9e:21:22:a6:dd:b2:62:b8:28 |
-+----------+-------------------------------------------------+</pre></li></ol></div><div class="procedure"><a id="d6e4213"> </a><p class="title"><strong>To launch an instance</strong></p><p>To launch an instance, you must at least specify the flavor, image
++----------+-------------------------------------------------+</pre></li></ol></div><div class="procedure"><a id="d6e4214"> </a><p class="title"><strong>To launch an instance</strong></p><p>To launch an instance, you must at least specify the flavor, image
       name, network, security group, key, and instance name.</p><ol class="procedure" type="1"><li class="step"><p>A flavor specifies a virtual resource allocation profile which
         includes processor, memory, and storage.</p><p>List available flavors:</p><pre class="screen">$ nova flavor-list
 +----+-----------+-----------+------+-----------+------+-------+-------------+-----------+
@@ -157,7 +157,7 @@
 | 45ea195c-c469-43eb-83db-1a663bbad2fc | demo-instance1 | ACTIVE | -          | Running     | demo-net=203.0.113.26  |
 +--------------------------------------+----------------+--------+------------+-------------+------------------------+</pre><p>The status changes from <code class="literal">BUILD</code> to
         <code class="literal">ACTIVE</code> when your instance finishes the build
-        process.</p></li></ol></div><div class="procedure"><a id="d6e4259"> </a><p class="title"><strong>To access your instance using a virtual console</strong></p><ul class="procedure"><li class="step"><p>Obtain a <script>
+        process.</p></li></ol></div><div class="procedure"><a id="d6e4260"> </a><p class="title"><strong>To access your instance using a virtual console</strong></p><ul class="procedure"><li class="step"><p>Obtain a <script>
              $(document).ready(function(){
                $("a.gloss#Virtual_Network_Computing_(VNC)").qtip({
                content: '<strong>Virtual Network Computing (VNC):</strong> <p>Open source GUI and CLI tools used for remote                     console access to VMs. Supported by Compute.</p>',
@@ -273,7 +273,7 @@ $</pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "Launch an instance with legacy networking (nova-network) in OpenStack インストールガイド Ubuntu 12.04/14.04 (LTS) 版  - icehouse";
-	  var buildTime = "Built: 2014-04-23T09:54:09+09:00";
+	  var buildTime = "Built: 2014-04-23T12:54:25+09:00";
 	  var gitSha = "git SHA: 7b438463d248fa966a96984a7f73ae1192205b72";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);
