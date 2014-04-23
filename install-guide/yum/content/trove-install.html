@@ -7,9 +7,9 @@
                SyntaxHighlighter.all();
     </script>
 <title>Database サービスのインストール - OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版
-   - icehouse</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版"/><link rel="up" href="ch_trove.html" title="第13章 Database サービスの追加"/><link rel="prev" href="trove-service.html" title="Database service overview"/><link rel="next" href="trove-verify.html" title="Database サービスのインストールを検証します。"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="git-sha" content="8c9e5f7502db5f2696acf68a638315c1538e5103"/><meta name="buildTime" content="2014-04-24T00:55:25+09:00"/><script type="text/javascript">
+   - icehouse</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"/><meta name="mavenGroupId" content="org.openstack.docs"/><meta name="mavenArtifactId" content="openstack-install-guide"/><meta name="mavenVersionId" content="1.0.0-SNAPSHOT"/><link rel="home" href="index.html" title="OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版"/><link rel="up" href="ch_trove.html" title="第13章 Database サービスの追加"/><link rel="prev" href="trove-service.html" title="Database service overview"/><link rel="next" href="trove-verify.html" title="Database サービスのインストールを検証します。"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="git-sha" content="f95b05d6a3f3e4e183a3d0e6a3c9026ed4819659"/><meta name="buildTime" content="2014-04-24T03:55:41+09:00"/><script type="text/javascript">
             //The id for tree cookie
-            var treeCookieId = "treeview-8528";
+            var treeCookieId = "treeview-8550";
             var language = "en";
             var w = new Object();
             //Localization
@@ -48,13 +48,19 @@
        
       <a href="../atom.xml"><img alt="Atom feed of this document" src="../common/images/feed-icon.png"/></a><div id="gplusone"><a id="AskOOLink1" href="http://ask.openstack.org" target="_blank" title="Questions? Discuss on ask.openstack.org"><i class="icon-question"><!----></i></a>  
         <a id="logABugLink1" href="" target="_blank" title="Found an error? Report a bug against this page"><i class="icon-bug"><!----></i></a></div></div></div><div id="content"><div class="statustext"> </div><div xml:lang="ja" class="section"><div xmlns="" class="titlepage"><div><div><h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both"><a id="trove-install"> </a>Database サービスのインストール</h2></div></div></div><p>この手順は、コントローラーノードに Database モジュールをインストールします。</p><p><strong>前提. </strong>本章は、すでに OpenStack 環境が動作していること、少なくとも Compute、Image Service、Identity がインストールされていることを仮定しています。</p><p>Database モジュールをコントローラーにインストールする方法:</p><div class="procedure"><ol class="procedure" type="1"><li class="step"><p>必要パッケージをインストールします。</p><pre class="screen"># yum install openstack-trove FIXME</pre></li><li class="step"><p>OpenStack を準備します。</p><ol type="a" class="substeps"><li class="step"><p><code class="filename">admin-openrc.sh</code> ファイルを読み込みます。</p><pre class="screen">$ source ~/admin-openrc.sh</pre></li><li class="step"><p>Compute が Identity Service で認証するために使用する <code class="literal">trove</code> ユーザーを作成します。<code class="literal">service</code> プロジェクトを使用し、ユーザーに <code class="literal">admin</code> ロールを与えます。</p><pre class="screen">$ keystone user-create --name=trove --pass=<em class="replaceable"><code>TROVE_PASS</code></em> --email=<em class="replaceable"><code>trove@example.com</code></em>
-$ keystone user-role-add --user=trove --tenant=service --role=admin</pre></li></ol></li><li class="step"><p>以下の設定ファイルを編集します。各ファイルを次のようにします。</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><code class="filename">trove.conf</code></p></li><li class="listitem"><p><code class="filename">trove-taskmanager.conf</code></p></li><li class="listitem"><p><code class="filename">trove-conductor.conf</code></p></li></ul></div><ol type="a" class="substeps"><li class="step"><p>クライアントの URL とログを設定するために、各ファイルの <code class="literal">[DEFAULT]</code> セクションを編集します。</p><pre class="programlisting brush: bash; ">[DEFAULT]
-log_dir=/var/log/trove
-trove_auth_url = http://controller:5000/v2.0
-nova_compute_url = http://controller:8774/v2
-cinder_url = http://controller:8776/v1
-swift_url = http://controller:8080/v1/AUTH_
-        </pre></li><li class="step"><p>Database モジュールが Qpid メッセージブローカーを使用するよう設定するために、これらの設定キーを設定します。</p><pre class="screen"># openstack-config --set /etc/trove/trove-api.conf \
+$ keystone user-role-add --user=trove --tenant=service --role=admin</pre></li></ol></li><li class="step"><p>Edit the following configuration files, taking the below
+      actions for each file:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><code class="filename">trove.conf</code></p></li><li class="listitem"><p><code class="filename">trove-taskmanager.conf</code></p></li><li class="listitem"><p><code class="filename">trove-conductor.conf</code></p></li></ul></div><ol type="a" class="substeps"><li class="step"><p>Edit the <code class="literal">[DEFAULT]</code> section of
+        each file and set appropriate values for the OpenStack service
+        URLs, logging and messaging configuration, and SQL
+        connections:</p><pre class="programlisting brush: bash; ">[DEFAULT]
+log_dir = /var/log/trove
+trove_auth_url = http://<em class="replaceable"><code>controller</code></em>:5000/v2.0
+nova_compute_url = http://<em class="replaceable"><code>controller</code></em>:8774/v2
+cinder_url = http://<em class="replaceable"><code>controller</code></em>:8776/v1
+swift_url = http://<em class="replaceable"><code>controller</code></em>:8080/v1/AUTH_
+sql_connection = trove:TROVE_DBPASS@<em class="replaceable"><code>controller</code></em>/trove
+notifier_queue_hostname = <em class="replaceable"><code>controller</code></em></pre></li><li class="step"><p>Set these configuration keys to configure the Database
+          module to use the Qpid message broker:</p><pre class="screen"># openstack-config --set /etc/trove/trove-api.conf \
   DEFAULT rpc_backend rabbit
 # openstack-config --set /etc/trove/trove-taskmaster.conf \
   DEFAULT rpc_backend rabbit
@@ -63,47 +69,50 @@ swift_url = http://controller:8080/v1/AUTH_
 # openstack-config --set /etc/trove/trove-api.conf DEFAULT qpid_hostname <em class="replaceable"><code>controller</code></em>
 # openstack-config --set /etc/trove/trove-taskmaster.conf DEFAULT qpid_hostname <em class="replaceable"><code>controller</code></em>
 # openstack-config --set /etc/trove/trove-conductor.conf DEFAULT qpid_hostname <em class="replaceable"><code>controller</code></em>
-    </pre></li><li class="step"><p>各ファイルの <code class="literal">[keystone_authtoken]</code> セクションを編集し、以下に示すものと一致するようにします。</p><pre class="programlisting brush: bash; ">
-[keystone_authtoken]
-auth_host = controller
+          </pre></li></ol></li><li class="step"><p>Edit the <code class="literal">[filter:authtoken]</code> section
+      of the <code class="filename">api-paste.ini</code> file so it matches the
+      listing shown below:</p><pre class="programlisting brush: bash; ">[filter:authtoken]
+auth_host = <em class="replaceable"><code>controller</code></em>
 auth_port = 35357
 auth_protocol = http
 admin_user = trove
-admin_password = TROVE_PASS
+admin_password = <em class="replaceable"><code>ADMIN_PASS</code></em>
+admin_token = <em class="replaceable"><code>ADMIN_TOKEN</code></em>
 admin_tenant_name = service
-auth_uri = https://controller:5000/v2.0</pre></li><li class="step"><p>必要に応じて、各ファイルの <code class="literal">[database]</code> セクションを編集し、以下に示すものを追加します。</p><pre class="programlisting brush: bash; ">[database]
-connection = mysql://trove:TROVE_DBPASS@controller/trove
-        </pre></li></ol></li><li class="step"><p><code class="filename">trove.conf</code> ファイルを編集し、以下に示すものと一致するようにします。</p><pre class="programlisting brush: bash; ">[DEFAULT]
+signing_dir = /var/cache/trove</pre></li><li class="step"><p>Edit the <code class="filename">trove.conf</code> file so it includes
+    appropriate values for the default datastore and network label
+    regex as shown below:</p><pre class="programlisting brush: bash; ">[DEFAULT]
 default_datastore = mysql
 ....
 # Config option for showing the IP address that nova doles out
 add_addresses = True
 network_label_regex = ^NETWORK_LABEL$
-....
-# ============ notifer queue kombu connection options ========================
-notifier_queue_hostname = controller</pre></li><li class="step"><p><code class="filename">trove-taskmanager.conf</code> ファイルを編集し、以下に示すものと一致するようにします。</p><pre class="programlisting brush: bash; ">[DEFAULT]
+....</pre></li><li class="step"><p>Edit the <code class="filename">trove-taskmanager.conf</code> file
+      so it includes the appropriate service credentials required to
+      connect to the OpenStack Compute service as shown below:</p><pre class="programlisting brush: bash; ">[DEFAULT]
 ....
 # Configuration options for talking to nova via the novaclient.
 # These options are for an admin user in your keystone config.
 # It proxy's the token received from the user to send to nova via this admin users creds,
 # basically acting like the client via that proxy token.
 nova_proxy_admin_user = admin
-nova_proxy_admin_pass = ADMIN_PASSS
+nova_proxy_admin_pass = <em class="replaceable"><code>ADMIN_PASS</code></em>
 nova_proxy_admin_tenant_name = service
-....
-# ============ notifer queue kombu connection options ========================
-notifier_queue_hostname = controller
-...</pre></li><li class="step"><p><code class="filename">trove_nolog.conf</code> ファイルを作成します。</p><pre class="screen"># cp /etc/trove/trove.conf /etc/trove/trove_nolog.conf</pre><p><code class="filename">trove_nolog.conf</code> ファイルを編集します。</p><pre class="programlisting brush: bash; "># remove line starting with logdir and add
-use_syslog=False</pre></li><li class="step"><p>trove 管理データベースを準備します。</p><pre class="screen">$ mysql -u root -p
+...</pre></li><li class="step"><p>trove 管理データベースを準備します。</p><pre class="screen">$ mysql -u root -p
 mysql&gt; CREATE DATABASE trove;
 mysql&gt; GRANT ALL PRIVILEGES ON trove.* TO trove@'localhost' IDENTIFIED BY 'TROVE_DBPASS';
-mysql&gt; GRANT ALL PRIVILEGES ON trove.* TO trove@'%' IDENTIFIED BY 'TROVE_DBPASS';</pre></li><li class="step"><p>Database サービスを準備します。</p><ol type="a" class="substeps"><li class="step"><p>データベースを初期化します。</p><pre class="screen">$ trove-manage --config-file=/etc/trove/trove_nolog.conf db_sync</pre></li><li class="step"><p>データストアを作成します。使用したいデータベースの種類に応じて、別々のデータストアを作成する必要があります。例えば、MySQL、MongoDB、Cassandra です。この例は、MySQL データベース用のデータストアを作成する方法です。</p><pre class="screen">$ trove-manage --config-file=/etc/trove/trove_nolog.conf datastore_update mysql ""</pre></li></ol></li><li class="step"><p>trove イメージを作成します。</p><p>使用したいデータベースの種類に応じてイメージを作成します。例えば、MySQL、MongoDB、Cassandra です。</p><p>このイメージは trove ゲストエージェントがインストールされている必要があります。お使いの OpenStack 環境に接続するために、<code class="filename">trove-guestagent.conf</code> ファイルを設定する必要があります。<code class="filename">trove-guestagent.conf</code> ファイルを正しく設定するために、イメージ構築用に使用しているゲストインスタンスでこれらの手順を実行します。</p><ol type="a" class="substeps"><li class="step"><p>以下の行を <code class="filename">trove-guestagent.conf</code> に追加します。</p><pre class="programlisting brush: bash; ">rabbit_host = controller
+mysql&gt; GRANT ALL PRIVILEGES ON trove.* TO trove@'%' IDENTIFIED BY 'TROVE_DBPASS';</pre></li><li class="step"><p>Database サービスを準備します。</p><ol type="a" class="substeps"><li class="step"><p>データベースを初期化します。</p><pre class="screen">$ sudo su -s /bin/sh -c "trove-manage db_sync" trove</pre></li><li class="step"><p>データストアを作成します。使用したいデータベースの種類に応じて、別々のデータストアを作成する必要があります。例えば、MySQL、MongoDB、Cassandra です。この例は、MySQL データベース用のデータストアを作成する方法です。</p><pre class="screen">$ sudo su -s /bin/sh -c "trove-manage datastore_update mysql ''" trove</pre></li></ol></li><li class="step"><p>trove イメージを作成します。</p><p>使用したいデータベースの種類に応じてイメージを作成します。例えば、MySQL、MongoDB、Cassandra です。</p><p>This image must have the trove guest agent installed, and
+      it must have the <code class="filename">trove-guestagent.conf</code> file
+      configured to connect to your OpenStack environment. To
+      correctly configure the
+      <code class="filename">trove-guestagent.conf</code> file, follow these steps
+      on the guest instance you are using to build your image:</p><ol type="a" class="substeps"><li class="step"><p>以下の行を <code class="filename">trove-guestagent.conf</code> に追加します。</p><pre class="programlisting brush: bash; ">rabbit_host = <em class="replaceable"><code>controller</code></em>
 rabbit_password = <em class="replaceable"><code>RABBIT_PASS</code></em>
-
 nova_proxy_admin_user = admin
-nova_proxy_admin_pass = ADMIN_PASSS
+nova_proxy_admin_pass = <em class="replaceable"><code>ADMIN_PASS</code></em>
 nova_proxy_admin_tenant_name = service
-trove_auth_url = http://controller:35357/v2.0</pre></li></ol></li><li class="step"><p>Update the datastore to use the new image, using the <span class="command"><strong>trove-manage</strong></span> command.</p><p>この例は MySQL 5.5 データストアを作成する方法です。</p><pre class="screen"># trove-manage --config-file=/etc/trove/trove.conf datastore_version_update \
+trove_auth_url = http://<em class="replaceable"><code>controller</code></em>:35357/v2.0</pre></li></ol></li><li class="step"><p>Update the datastore to use the new image, using the
+      <span class="command"><strong>trove-manage</strong></span> command.</p><p>この例は MySQL 5.5 データストアを作成する方法です。</p><pre class="screen"># trove-manage --config-file=/etc/trove/trove.conf datastore_version_update \
   mysql mysql-5.5 mysql <em class="replaceable"><code>glance_image_ID</code></em> mysql-server-5.5 1</pre></li><li class="step"><p>他の OpenStack サービスから使用できるように、Database モジュールを Identity Service に登録します。サービスを登録し、エンドポイントを指定します。</p><pre class="screen">$ keystone service-create --name=trove --type=database \
   --description="OpenStack Database Service"
 $ keystone endpoint-create \
@@ -121,8 +130,8 @@ $ keystone endpoint-create \
 	  var lineFeed = "%0A";
 	  var docUrl = "URL: " + window.location;
 	  var bugTitle = "Database サービスのインストール in OpenStack インストールガイド Red Hat Enterprise Linux, CentOS, Fedora 版  - icehouse";
-	  var buildTime = "Built: 2014-04-24T00:55:25+09:00";
-	  var gitSha = "git SHA: 8c9e5f7502db5f2696acf68a638315c1538e5103";
+	  var buildTime = "Built: 2014-04-24T03:55:41+09:00";
+	  var gitSha = "git SHA: f95b05d6a3f3e4e183a3d0e6a3c9026ed4819659";
 	  var fieldComment = encodeURI(buildTime) +  lineFeed + encodeURI(gitSha) + lineFeed + encodeURI(docUrl) + lineFeed + encodeURI(sourceFile) + lineFeed + encodeURI(xmlId);
 	  logABug(bugTitle,fieldComment);
 	</script><hr/><div class="legal"><a href="index.html">Legal notices</a></div></div><div><div id="leftnavigation" style="padding-top:3px; background-color:white;"><div id="tabs"><ul><li><a href="#treeDiv" tabindex="1"><span class="contentsTab">目次</span></a></li><li><a href="#searchDiv" tabindex="1"><span class="searchTab">Search</span></a></li></ul><div id="treeDiv"><img src="../common/images/loading.gif" alt="loading table of contents..." id="tocLoading" style="display:block;"/><div id="ulTreeDiv" style="display:none" class="thisisthat"><ul id="tree" class="filetree"><li tabindex="2"><span class="file"><a href="ch_preface.html">はじめに</a></span><ul><li tabindex="2"><span class="file"><a href="ch_preface.html#section_conventions">表記規則</a></span><ul><li tabindex="2"><span class="file"><a href="ch_preface.html#conventions-admonitions">Notices</a></span></li><li tabindex="2"><span class="file"><a href="ch_preface.html#conventions-prompts">コマンドプロンプト</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="ch_preface.html#doc_change_history">ドキュメント変更履歴</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="ch_overview.html">1. アーキテクチャー</a></span><ul><li tabindex="2"><span class="file"><a href="ch_overview.html#architecture_overview">概要</a></span></li><li tabindex="2"><span class="file"><a href="ch_overview.html#architecture_conceptual-architecture">概念アーキテクチャー</a></span></li><li tabindex="2"><span class="file"><a href="ch_overview.html#architecture_example-architectures">サンプルアーキテクチャー</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="ch_basics.html">2. 環境の基本設定</a></span><ul><li tabindex="2"><span class="file"><a href="basics-prerequisites.html">始める前に</a></span></li><li tabindex="2"><span class="file"><a href="basics-networking.html">ネットワーク</a></span><ul><li tabindex="2"><span class="file"><a href="basics-networking-neutron.html">OpenStack Networking (neutron)</a></span><ul><li tabindex="2"><span class="file"><a href="basics-neutron-networking-controller-node.html">コントローラーノード</a></span></li><li tabindex="2"><span class="file"><a href="basics-neutron-networking-network-node.html">ネットワークノード</a></span></li><li tabindex="2"><span class="file"><a href="basics-neutron-networking-compute-node.html">コンピュートノード</a></span></li><li tabindex="2"><span class="file"><a href="basics-neutron-networking-verify.html">接続性の検証</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="basics-networking-nova.html">Legacy networking (nova-network)</a></span><ul><li tabindex="2"><span class="file"><a href="basics-networking-nova-controller-node.html">コントローラーノード</a></span></li><li tabindex="2"><span class="file"><a href="basics-networking-node-compute-node.html">コンピュートノード</a></span></li><li tabindex="2"><span class="file"><a href="basics-networking-nova-verify.html">接続性の検証</a></span></li></ul></li></ul></li><li tabindex="2"><span class="file"><a href="basics-ntp.html">Network Time Protocol (NTP)</a></span></li><li tabindex="2"><span class="file"><a href="basics-passwords.html">パスワード</a></span></li><li tabindex="2"><span class="file"><a href="basics-database.html">データベース</a></span><ul><li tabindex="2"><span class="file"><a href="basics-database-controller.html">コントローラーのセットアップ</a></span></li><li tabindex="2"><span class="file"><a href="basics-database-node.html">ノードのセットアップ</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="basics-packages.html">OpenStack パッケージ</a></span></li><li tabindex="2"><span class="file"><a href="basics-queue.html">メッセージングサーバー</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="ch_keystone.html">3. Identity Service の設定</a></span><ul><li tabindex="2"><span class="file"><a href="keystone-concepts.html">Identity Service の概念</a></span></li><li tabindex="2"><span class="file"><a href="keystone-install.html">Identity Service のインストール</a></span></li><li tabindex="2"><span class="file"><a href="keystone-users.html">ユーザー、プロジェクト、ロールの定義</a></span></li><li tabindex="2"><span class="file"><a href="keystone-services.html">サービスと API エンドポイントの定義</a></span></li><li tabindex="2"><span class="file"><a href="keystone-verify.html">Identity Service のインストールの検証</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="ch_clients.html">4. OpenStack クライアントのインストールと設定</a></span><ul><li tabindex="2"><span class="file"><a href="section_cli_overview.html">概要</a></span></li><li tabindex="2"><span class="file"><a href="install_clients.html">OpenStack コマンドラインクライアントのインストール</a></span><ul><li tabindex="2"><span class="file"><a href="install_clients.html#install_prereq_software">Install the prerequisite software</a></span></li><li tabindex="2"><span class="file"><a href="install_clients.html#cli_clients_install">クライアントのインストール</a></span><ul><li tabindex="2"><span class="file"><a href="install_clients.html#cli_clients_install_pip">Installing with pip</a></span></li><li tabindex="2"><span class="file"><a href="install_clients.html#cli_clients_install_packages">Installing from packages</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="install_clients.html#cli_clients_remove_upgrade">Upgrade or remove clients</a></span></li></ul></li><li tabindex="2"><span class="file"><a href="cli_openrc.html">Set environment variables using the OpenStack RC
