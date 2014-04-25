@@ -3,7 +3,7 @@
    <link href="http://docs.openstack.org/local/install-guide/install/apt/atom.xml" rel="self"/>
    <link href="http://docs.openstack.org/local/install-guide/install/apt/content/index.html"/>
    <id>openstack-install-manual-grizzly</id>
-   <updated>2014-04-25T09:54:47+09:00</updated>
+   <updated>2014-04-25T12:54:31+09:00</updated>
    <entry>
       <title>2014-04-16</title>
       <link href="http://docs.openstack.org/local/install-guide/install/apt/content/index.html" type="text/html"/>
@@ -15,10 +15,7 @@
             <div class="itemizedlist">
                <ul class="itemizedlist" compact="compact" type="disc">
                   <li class="listitem">
-                     <p>Update for Icehouse, rework
-                            Networking setup to use ML2 as plugin, add
-                            new chapter for Database Service setup,
-                            improved basic configuration.</p>
+                     <p>Icehouse 向け更新。Networking のセットアップを ML2 プラグインを使用するよう再構成。Database Service のセットアップに関する章の追加。基本的な設定の改善。</p>
                   </li>
                </ul>
             </div>
