@@ -476,6 +476,7 @@ w["cdn"]="100";
 w["ceilomet"]="5,6,14,16,21,39,54,60,73,76,81,105";
 w["ceilometer-agent-centr"]="54,61";
 w["ceilometer-agent-comput"]="14,61";
+w["ceilometer-agent-notif"]="54";
 w["ceilometer-alarm-evalu"]="54";
 w["ceilometer-alarm-notifi"]="54,61";
 w["ceilometer-api"]="54,61";
@@ -1257,5 +1258,4 @@ w["monitor"]="35";
 w["more"]="5,13,18,22,24,29,31,33,34,38,40,45,51,58,59,61,68,70,76,77,85,87,95,97,98,102,105,109,110";
 w["most"]="27,58,66,69,70,80,97,98,110";
 w["motherboard"]="101";
-w["mount"]="64";
 

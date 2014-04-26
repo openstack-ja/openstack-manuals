@@ -128,6 +128,7 @@ w["openstack-ceilometer-api"]="50";
 w["openstack-ceilometer-centr"]="50";
 w["openstack-ceilometer-collector"]="50";
 w["openstack-ceilometer-comput"]="14";
+w["openstack-ceilometer-notif"]="50";
 w["openstack-cind"]="10,52";
 w["openstack-cinder-api"]="42,52";
 w["openstack-cinder-schedul"]="42,52";
@@ -1249,5 +1250,4 @@ w["のホスト名に変更します"]="67";
 w["のユーザー"]="29";
 w["のユーザーとしてダッシュボードを実行する必要があります"]="29";
 w["のリソースとサービスを管理できるようになるウェブインターフェースです"]="49";
-w["の一覧に対してこのパターンを使用します"]="83";
 
